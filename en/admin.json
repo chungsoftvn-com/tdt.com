@@ -1,0 +1,19 @@
+{
+  "title": "Web Administer",
+  "intro": "The administrative area of todaytourist.com. The features are being built and will soon be released.",
+  "status_title": "System Status",
+  "layout_label": "Layout in operation",
+  "lang_label": "Default language",
+  "site_label": "Web Name",
+  "domain_label": "Domain Name",
+  "ok": "Active",
+  "features_title": "About to deploy",
+  "f1": "Post & Content Management",
+  "f2": "Organisation",
+  "f3": "Configure website",
+  "f4": "layout interface changes",
+  "f5": "Translate content to English",
+  "f6": "Reactivate website",
+  "back_home": "About homepage",
+  "note": "The administrative area supports only Vietnamese."
+}

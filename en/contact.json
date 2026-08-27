@@ -1,0 +1,23 @@
+{
+  "title": "Contact",
+  "hero_kicker": "Contact",
+  "hero_title": "We are always ready to go with you",
+  "hero_text": "Leave your details and the TodayTourist consultation team will get back to you as soon as possible.",
+  "info_title": "Contact information",
+  "info_address": "Số 80 Đặng Nguyên, KP 29, Phường Long Bình, TP. Biên Hòa, Đồng Nai",
+  "info_hotline": "0913.78.76.47 (Mr. Sang)",
+  "info_zalo": "0902.898.726 (Today Tourist)",
+  "info_email": "lesangtravel@gmail.com",
+  "info_website": "todaytourist.com",
+  "info_hours_title": "Working hours",
+  "info_hours": "Mon – Sat: 8:00 – 18:00",
+  "form_title": "Send us a request",
+  "form_note": "Please fill in the form below and we will get back to you as soon as possible.",
+  "form_name": "Full name",
+  "form_phone": "Phone number",
+  "form_email": "Email",
+  "form_message": "Your message",
+  "form_submit": "Send request",
+  "form_required": "Please fill in all required fields.",
+  "form_success": "Thank you! Your request has been received."
+}

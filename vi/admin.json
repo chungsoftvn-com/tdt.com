@@ -1,0 +1,19 @@
+{
+  "title": "Quản trị website",
+  "intro": "Khu vực quản trị của todaytourist.com. Các tính năng đang được xây dựng và sẽ sớm ra mắt.",
+  "status_title": "Trạng thái hệ thống",
+  "layout_label": "Layout đang hoạt động",
+  "lang_label": "Ngôn ngữ mặc định",
+  "site_label": "Tên website",
+  "domain_label": "Tên miền",
+  "ok": "Hoạt động",
+  "features_title": "Tính năng sắp triển khai",
+  "f1": "Đăng bài & quản lý nội dung",
+  "f2": "Thêm / sửa / xóa bài viết",
+  "f3": "Cấu hình website",
+  "f4": "Thay đổi layout giao diện",
+  "f5": "Dịch tự động nội dung sang tiếng Anh",
+  "f6": "Kích hoạt build lại website",
+  "back_home": "Về trang chủ",
+  "note": "Khu vực quản trị chỉ hỗ trợ tiếng Việt."
+}
