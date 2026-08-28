@@ -34,5 +34,21 @@
   "company_slogan_label": "Slogan",
   "company_slogan": "TODAYTOURIST – WITH YOU ACROSS FIVE CONTINENTS",
   "company_method_label": "Motto",
-  "company_method": "With you on every journey – Trust in every step"
+  "company_method": "With you on every journey – Trust in every step",
+  "gallery": [
+    "/content/vi/images/about-01.jpg",
+    "/content/vi/images/about-02.jpg",
+    "/content/vi/images/about-03.jpg",
+    "/content/vi/images/about-04.jpg",
+    "/content/vi/images/about-05.jpg",
+    "/content/vi/images/about-06.jpg",
+    "/content/vi/images/about-07.jpg",
+    "/content/vi/images/about-08.jpg",
+    "/content/vi/images/about-09.jpg",
+    "/content/vi/images/about-10.jpg",
+    "/content/vi/images/about-11.jpg",
+    "/content/vi/images/about-12.jpg",
+    "/content/vi/images/about-13.jpg",
+    "/content/vi/images/about-14.jpg"
+  ]
 }

@@ -75,6 +75,8 @@ SKIP_KEY_EXACT = {
     "src",
     "type",
     "day",
+    # Mảng ảnh (gallery) — đường dẫn /content/vi/images/... không dịch
+    "gallery",
 }
 # Keys (by suffix) that must never be translated (machine-readable data).
 SKIP_KEY_SUFFIX = (

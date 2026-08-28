@@ -71,6 +71,30 @@ const companyRows = [
     </div>
   </section>
 
+  <!-- Gallery ảnh (mỗi ảnh 1 row, responsive) -->
+  {
+    (t.gallery && t.gallery.length > 0) && (
+      <section class="px-5 py-14 sm:py-16">
+        <div class="mx-auto max-w-4xl space-y-8">
+          {t.gallery.map((src) => (
+            <figure
+              data-reveal
+              class="overflow-hidden rounded-2xl bg-paper p-2 shadow-[var(--shadow-lift-1)]"
+            >
+              <img
+                src={src}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                class="block h-auto w-full rounded-xl object-contain"
+              />
+            </figure>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
   <!-- Company info -->
   <section class="bg-sand-deep px-5 py-14 sm:py-16">
     <div class="mx-auto max-w-3xl">
