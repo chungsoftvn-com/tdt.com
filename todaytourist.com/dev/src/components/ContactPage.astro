@@ -1,0 +1,148 @@
+---
+import { getContent } from '@/lib/content.js';
+import BaseLayout from './BaseLayout.astro';
+import PageHero from './PageHero.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = getContent(lang, 'contact');
+
+const info = [
+  { icon: 'map-pin', label: t.info_address },
+  { icon: 'phone', label: t.info_hotline, tel: true },
+  { icon: 'zalo', label: t.info_zalo, zalo: true },
+  { icon: 'mail', label: t.info_email, mail: true },
+  { icon: 'globe', label: t.info_website },
+  { icon: 'clock', label: t.info_hours },
+];
+---
+
+<BaseLayout lang={lang} title={t.title}>
+  <PageHero kicker={t.hero_kicker} title={t.hero_title} text={t.hero_text} />
+
+  <section class="px-5 py-14 sm:py-16">
+    <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-5">
+      <!-- Contact info -->
+      <div class="space-y-5 lg:col-span-2">
+        <h2 data-reveal class="font-display text-2xl text-ink">{t.info_title}</h2>
+        <ul class="space-y-3">
+          {
+            info.map((item, i) => (
+              <li
+                data-reveal
+                style={`--reveal-delay:${i * 0.05}s`}
+                class="flex items-start gap-3 rounded-2xl bg-paper p-4 shadow-[var(--shadow-lift-1)]"
+              >
+                <span class="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sea-pale text-sea">
+                  <Icon name={item.icon} class="h-5 w-5" />
+                </span>
+                <div class="text-sm leading-relaxed text-ink-soft">
+                  {item.tel ? <a href="tel:0913787647" class="hover:text-sea-deep">{item.label}</a> : null}
+                  {item.zalo ? <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="hover:text-sea-deep">{item.label}</a> : null}
+                  {item.mail ? <a href="mailto:lesangtravel@gmail.com" class="hover:text-sea-deep">{item.label}</a> : null}
+                  {!item.tel && !item.zalo && !item.mail ? item.label : null}
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <!-- Form -->
+      <div data-reveal class="rounded-2xl bg-paper p-6 shadow-[var(--shadow-lift-1)] sm:p-8 lg:col-span-3">
+        <h2 class="font-display text-2xl text-ink">{t.form_title}</h2>
+        <p class="mt-2 text-sm text-ink-soft">{t.form_note}</p>
+
+        <form data-contact-form class="mt-6 grid gap-4 sm:grid-cols-2">
+          <label class="block text-sm font-medium text-ink">
+            {t.form_name}
+            <input
+              type="text"
+              name="name"
+              required
+              class="mt-1.5 w-full rounded-xl border border-ink/15 bg-sand px-4 py-2.5 text-sm outline-none focus:border-sea"
+            />
+          </label>
+          <label class="block text-sm font-medium text-ink">
+            {t.form_phone}
+            <input
+              type="tel"
+              name="phone"
+              required
+              class="mt-1.5 w-full rounded-xl border border-ink/15 bg-sand px-4 py-2.5 text-sm outline-none focus:border-sea"
+            />
+          </label>
+          <label class="block text-sm font-medium text-ink sm:col-span-2">
+            {t.form_email}
+            <input
+              type="email"
+              name="email"
+              class="mt-1.5 w-full rounded-xl border border-ink/15 bg-sand px-4 py-2.5 text-sm outline-none focus:border-sea"
+            />
+          </label>
+          <label class="block text-sm font-medium text-ink sm:col-span-2">
+            {t.form_message}
+            <textarea
+              name="message"
+              rows="4"
+              class="mt-1.5 w-full rounded-xl border border-ink/15 bg-sand px-4 py-2.5 text-sm outline-none focus:border-sea"
+            ></textarea>
+          </label>
+
+          <p data-form-required class="hidden text-sm text-red-600 sm:col-span-2">
+            {t.form_required}
+          </p>
+          <p data-form-success class="hidden text-sm font-medium text-sea-deep sm:col-span-2">
+            {t.form_success}
+          </p>
+
+          <div class="sm:col-span-2">
+            <button
+              type="submit"
+              class="inline-flex items-center gap-2 rounded-full bg-sea px-7 py-3 text-sm font-semibold text-white transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              {t.form_submit}
+              <Icon name="arrow-right" class="h-4 w-4" />
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script define:vars={{ t }}>
+    const form = document.querySelector('[data-contact-form]');
+    const required = document.querySelector('[data-form-required]');
+    const success = document.querySelector('[data-form-success]');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.name?.value?.trim();
+      const phone = form.phone?.value?.trim();
+      const email = form.email?.value?.trim();
+      const message = form.message?.value?.trim();
+      required?.classList.toggle('hidden', Boolean(name && phone));
+      if (!name || !phone) return;
+
+      // Mở app mail của khách, điền sẵn nội dung gửi về email nhận
+      const to = t.info_email || 'lesangtravel@gmail.com';
+      const subject = `[TodayTourist] ${t.form_title} - ${name}`;
+      const body = [
+        `${t.form_name}: ${name}`,
+        `${t.form_phone}: ${phone}`,
+        email ? `${t.form_email}: ${email}` : '',
+        message ? `${t.form_message}:\n${message}` : '',
+      ]
+        .filter(Boolean)
+        .join('\n\n');
+      window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      success?.classList.remove('hidden');
+      form.reset();
+      setTimeout(() => success?.classList.add('hidden'), 6000);
+    });
+  </script>
+</BaseLayout>

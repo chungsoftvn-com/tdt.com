@@ -1,0 +1,102 @@
+---
+// /admin — đăng nhập + bảng điều khiển (đa site, gọi Worker admin API).
+import AdminLayout from '@/components/AdminLayout.astro';
+---
+
+<AdminLayout>
+  <section id="login-view">
+    <h1 class="text-center font-display text-3xl text-ink">Đăng nhập quản trị</h1>
+    <form id="login-form" class="mx-auto mt-6 max-w-sm space-y-4 rounded-2xl bg-paper p-6 shadow-[var(--shadow-lift-1)]">
+      <div>
+        <label for="login-email" class="mb-1 block text-sm font-medium text-ink-soft">Email</label>
+        <input id="login-email" type="email" autocomplete="username" required class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
+      </div>
+      <div>
+        <label for="login-pass" class="mb-1 block text-sm font-medium text-ink-soft">Mật khẩu</label>
+        <input id="login-pass" type="password" autocomplete="current-password" required class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
+      </div>
+      <p id="login-error" class="hidden text-sm font-medium text-red-600"></p>
+      <button type="submit" class="w-full rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-deep">Đăng nhập</button>
+    </form>
+  </section>
+
+  <section id="dash-view" class="hidden">
+    <h1 class="text-center font-display text-3xl text-ink">Bảng điều khiển</h1>
+    <p id="dash-email" class="mt-2 text-center text-sm text-ink-soft"></p>
+    <div class="mt-8 grid gap-4 sm:grid-cols-2">
+      <a href="/admin/tours" class="rounded-2xl bg-paper p-6 shadow-[var(--shadow-lift-1)] transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift-2)]">
+        <p class="font-display text-xl text-ink">Quản lý Tour</p>
+        <p class="mt-1 text-sm text-ink-soft">Thêm, sửa, xoá tour du lịch</p>
+      </a>
+      <a href="/admin/news" class="rounded-2xl bg-paper p-6 shadow-[var(--shadow-lift-1)] transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift-2)]">
+        <p class="font-display text-xl text-ink">Quản lý Tin tức</p>
+        <p class="mt-1 text-sm text-ink-soft">Thêm, sửa, xoá bài tin tức</p>
+      </a>
+    </div>
+    <p class="mt-6 text-center text-xs text-ink-soft">
+      Nội dung publish sẽ được commit vào repo
+      <code id="dash-repo" class="rounded bg-sand px-1.5 py-0.5 font-mono text-[11px] text-ink"></code>
+    </p>
+    <div class="mt-10 text-center">
+      <button id="logout-btn" class="rounded-full border border-ink/15 px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-sand">Đăng xuất</button>
+    </div>
+  </section>
+</AdminLayout>
+
+<script>
+  import { api, ADMIN_GITHUB_REPO, setBusy } from '@/lib/admin.js';
+  const $ = (id) => document.getElementById(id);
+  const loginView = $('login-view');
+  const dashView = $('dash-view');
+  const loginError = $('login-error');
+  const loginBtn = $('login-form').querySelector('button[type="submit"]');
+  const logoutBtn = $('logout-btn');
+
+  async function refresh() {
+    const s = await api('GET', '/session');
+    if (s.status === 200) {
+      loginView.classList.add('hidden');
+      dashView.classList.remove('hidden');
+      $('dash-email').textContent = 'Đã đăng nhập thành công.';
+      $('dash-repo').textContent = ADMIN_GITHUB_REPO;
+    } else {
+      loginView.classList.remove('hidden');
+      dashView.classList.add('hidden');
+    }
+  }
+
+  $('login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    loginError.classList.add('hidden');
+    setBusy(loginBtn, true, 'Đang đăng nhập...');
+    try {
+      const r = await api('POST', '/login', {
+        email: $('login-email').value.trim(),
+        password: $('login-pass').value,
+      });
+      if (r.status === 200) {
+        await refresh();
+      } else {
+        loginError.textContent =
+          r.data?.error === 'admin_online'
+            ? 'Đã có admin đang đăng nhập ở nơi khác.'
+            : 'Email hoặc mật khẩu không đúng.';
+        loginError.classList.remove('hidden');
+      }
+    } finally {
+      setBusy(loginBtn, false);
+    }
+  });
+
+  $('logout-btn').addEventListener('click', async () => {
+    setBusy(logoutBtn, true, 'Đang đăng xuất...');
+    try {
+      await api('POST', '/logout');
+      await refresh();
+    } finally {
+      setBusy(logoutBtn, false);
+    }
+  });
+
+  refresh();
+</script>

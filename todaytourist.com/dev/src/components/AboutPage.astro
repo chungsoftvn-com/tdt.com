@@ -1,0 +1,90 @@
+---
+import { getContent } from '@/lib/content.js';
+import BaseLayout from './BaseLayout.astro';
+import PageHero from './PageHero.astro';
+import SectionHeading from './SectionHeading.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = getContent(lang, 'about');
+
+const values = [t.value_1, t.value_2, t.value_3, t.value_4];
+
+const companyRows = [
+  { label: t.company_name_label, value: t.company_name },
+  { label: t.company_address_label, value: t.company_address },
+  { label: t.company_hotline_label, value: t.company_hotline },
+  { label: t.company_consult_label, value: `${t.contact_1}; ${t.contact_2}; ${t.contact_3}; ${t.contact_4}` },
+  { label: t.company_email_label, value: t.company_email },
+  { label: t.company_website_label, value: t.company_website },
+  { label: t.company_slogan_label, value: t.company_slogan },
+  { label: t.company_method_label, value: t.company_method },
+];
+---
+
+<BaseLayout lang={lang} title={t.title}>
+  <PageHero kicker={t.hero_kicker} title={t.hero_title} text={t.slogan} />
+
+  <!-- Story -->
+  <section class="px-5 py-14 sm:py-16">
+    <div data-reveal class="mx-auto max-w-3xl space-y-5 text-lg leading-relaxed text-ink-soft">
+      <p>{t.p1}</p>
+      <p>{t.p2}</p>
+      <p>{t.p3}</p>
+      <p>{t.p4}</p>
+    </div>
+  </section>
+
+  <!-- Core values -->
+  <section class="bg-sand-deep px-5 py-14 sm:py-16">
+    <div class="mx-auto max-w-6xl">
+      <SectionHeading title={t.values_title} />
+      <ul class="mt-8 grid gap-5 sm:grid-cols-2">
+        {
+          values.map((v, i) => (
+            <li
+              data-reveal
+              style={`--reveal-delay:${i * 0.06}s`}
+              class="flex items-start gap-3 rounded-2xl bg-paper p-5 shadow-[var(--shadow-lift-1)]"
+            >
+              <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sea text-white">
+                <Icon name="check" class="h-4 w-4" />
+              </span>
+              <span class="font-medium text-ink">{v}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="px-5 py-14 sm:py-16">
+    <div data-reveal class="mx-auto max-w-3xl rounded-3xl bg-sea-pale p-8 text-center sm:p-10">
+      <h2 class="font-display text-2xl font-semibold text-sea-deep">{t.mission_title}</h2>
+      <p class="mt-4 font-hand text-3xl leading-snug text-sea-deep">{t.mission}</p>
+      <p class="mt-5 text-sm text-ink-soft">{t.thanks}</p>
+    </div>
+  </section>
+
+  <!-- Company info -->
+  <section class="bg-sand-deep px-5 py-14 sm:py-16">
+    <div class="mx-auto max-w-3xl">
+      <SectionHeading title={t.company_title} />
+      <dl data-reveal class="mt-8 overflow-hidden rounded-2xl bg-paper shadow-[var(--shadow-lift-1)]">
+        {
+          companyRows.map((row) => (
+            <div class="grid gap-1 border-b border-ink/5 px-6 py-4 last:border-0 sm:grid-cols-3 sm:gap-4">
+              <dt class="text-sm font-semibold text-sea-deep sm:col-span-1">{row.label}</dt>
+              <dd class="text-sm leading-relaxed text-ink-soft sm:col-span-2">{row.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Build & Deploy (translate vi→en + Astro)
 
 on:
   push:
@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -23,10 +23,34 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: todaytourist.com/dev/package-lock.json
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        working-directory: todaytourist.com/dev
+        run: npm ci
+      - name: Setup Argos Translate (best-effort)
+        working-directory: todaytourist.com/dev
+        run: python scripts/setup-argos.py || echo "Argos unavailable - fallback"
+      - name: Build site (copyLayout + translate chọn lọc + Astro)
+        working-directory: todaytourist.com/dev
+        run: |
+          node scripts/copy-layout.mjs
+          python scripts/translate.py
+          npm run build:astro
+          mkdir -p .astro-dist/admin
+          cp admin/config.json .astro-dist/admin/config.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: todaytourist.com/dev/.astro-dist
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

@@ -1,0 +1,138 @@
+---
+import { getContent, href } from '@/lib/content.js';
+import Icon from './Icon.astro';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = getContent(lang, 'common');
+
+const quickLinks = [
+  { key: 'footer_quick_home', url: href(lang) },
+  { key: 'footer_quick_about', url: href(lang, 'about') },
+  { key: 'footer_quick_tours', url: href(lang, 'tours') },
+  { key: 'footer_quick_news', url: href(lang, 'tin-tuc') },
+  { key: 'footer_quick_tickets', url: href(lang, 've-may-bay') },
+  { key: 'footer_quick_car', url: href(lang, 'cho-thue-xe') },
+  { key: 'footer_quick_contact', url: href(lang, 'contact') },
+];
+---
+
+<footer class="bg-ink text-sand">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
+    <!-- About -->
+    <div>
+      <h3 class="font-display text-lg font-semibold text-white">{t.footer_about_title}</h3>
+      <p class="mt-3 text-sm leading-relaxed text-sand/70">{t.footer_about_text}</p>
+    </div>
+
+    <!-- Quick links -->
+    <div>
+      <h3 class="font-display text-lg font-semibold text-white">{t.footer_quick_title}</h3>
+      <ul class="mt-3 space-y-2 text-sm">
+        {
+          quickLinks.map((item) => (
+            <li>
+              <a
+                href={item.url}
+                class="inline-flex items-center gap-1.5 text-sand/70 transition-colors hover:text-accent-pale"
+              >
+                <span class="text-accent">›</span>
+                {t[item.key]}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h3 class="font-display text-lg font-semibold text-white">{t.footer_contact_title}</h3>
+      <ul class="mt-3 space-y-3 text-sm text-sand/80">
+        <li class="flex items-start gap-2.5">
+          <Icon name="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+          <span>{t.address}</span>
+        </li>
+        <li class="flex items-start gap-2.5">
+          <Icon name="phone" class="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+          <span>
+            {t.hotline_label}:{' '}
+            <a href={`tel:${t.hotline.replace(/[^0-9]/g, '')}`} class="hover:text-accent-pale">
+              {t.hotline}
+            </a>
+          </span>
+        </li>
+        <li class="flex items-start gap-2.5">
+          <Icon name="zalo" class="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+          <span>
+            {t.zalo_label}: {t.zalo}
+          </span>
+        </li>
+        <li class="flex items-start gap-2.5">
+          <Icon name="mail" class="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+          <a href={`mailto:${t.email}`} class="hover:text-accent-pale">
+            {t.email}
+          </a>
+        </li>
+        <li class="flex items-start gap-2.5">
+          <Icon name="globe" class="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+          <span>{t.website}</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div>
+      <h3 class="font-display text-lg font-semibold text-white">{t.footer_social_title}</h3>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li>
+          <a
+            href="https://www.facebook.com/profile.php?id=61563008528761"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sand/70 transition-colors hover:text-accent-pale"
+          >
+            <Icon name="facebook" class="h-4 w-4" />
+            {t.footer_facebook}
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.tiktok.com/@todaytourist"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sand/70 transition-colors hover:text-accent-pale"
+          >
+            <Icon name="tiktok" class="h-4 w-4" />
+            {t.footer_tiktok}
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://zalo.me/0902898726"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sand/70 transition-colors hover:text-accent-pale"
+          >
+            <Icon name="zalo" class="h-4 w-4" />
+            {t.footer_zalo}
+          </a>
+        </li>
+      </ul>
+      <p class="mt-5 rounded-2xl border border-sand/15 p-4 text-xs leading-relaxed text-sand/60">
+        {t.footer_about_text}
+      </p>
+    </div>
+  </div>
+
+  <div class="border-t border-sand/15 px-5 py-6 text-center">
+    <p class="mx-auto max-w-2xl text-sm leading-relaxed text-accent-pale">{t.footer_offer}</p>
+    <p class="mt-1.5 text-xs text-sand/60">{t.footer_credit}</p>
+  </div>
+  <div class="border-t border-sand/15 px-5 py-4 text-center text-xs text-sand/60">
+    {t.copyright} · {t.rights}
+  </div>
+</footer>

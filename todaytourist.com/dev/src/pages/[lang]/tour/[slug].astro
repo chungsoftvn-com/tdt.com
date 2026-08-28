@@ -1,0 +1,15 @@
+---
+// /vi/tour/:slug and /en/tour/:slug — tour detail pages.
+import { LANGS, getTours } from '@/lib/content.js';
+import TourDetailPage from '@/components/TourDetailPage.astro';
+
+export function getStaticPaths() {
+  // Slugs are language-independent, so one set of paths covers both langs.
+  const slugs = getTours('vi').map((t) => t.slug);
+  return LANGS.flatMap((lang) => slugs.map((slug) => ({ params: { lang, slug } })));
+}
+
+const { lang, slug } = Astro.params;
+---
+
+<TourDetailPage lang={lang} slug={slug} />

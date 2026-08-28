@@ -1,0 +1,23 @@
+---
+// /vi/about, /vi/tours, /vi/contact ... and the same for /en.
+// Page slugs come from the shared PAGE_SLUGS registry in src/lib/content.js.
+import { LANGS, PAGE_SLUGS } from '@/lib/content.js';
+import AboutPage from '@/components/AboutPage.astro';
+import ToursPage from '@/components/ToursPage.astro';
+import ContactPage from '@/components/ContactPage.astro';
+import RichPage from '@/components/RichPage.astro';
+
+export function getStaticPaths() {
+  return LANGS.flatMap((lang) =>
+    PAGE_SLUGS.map((page) => ({ params: { lang, page } })),
+  );
+}
+
+const { lang, page } = Astro.params;
+---
+
+{page === 'about' && <AboutPage lang={lang} />}
+{page === 'tours' && <ToursPage lang={lang} />}
+{page === 'contact' && <ContactPage lang={lang} />}
+{page === 've-may-bay' && <RichPage lang={lang} page="ve-may-bay" />}
+{page === 'cho-thue-xe' && <RichPage lang={lang} page="cho-thue-xe" />}

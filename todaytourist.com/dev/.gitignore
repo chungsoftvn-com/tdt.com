@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# astro build artifacts
+.astro/
+.astro-dist/
+
+# content/en được COMMIT (baseline EN) — translate.py chỉ dịch file VI thay đổi
+
+# generated admin/build scratch
+.admin.tmp/
+
+# cloudflare worker local secrets / build
+worker/.dev.vars
+worker/.wrangler/
+
+# misc
+.env
+.env.*
+*.local
+.DS_Store
+Thumbs.db

@@ -1,0 +1,51 @@
+---
+import { getContent, getTours, href } from '@/lib/content.js';
+import BaseLayout from './BaseLayout.astro';
+import Hero from './Hero.astro';
+import Stats from './Stats.astro';
+import SectionHeading from './SectionHeading.astro';
+import ToursGrid from './ToursGrid.astro';
+import Services from './Services.astro';
+import AboutTeaser from './AboutTeaser.astro';
+import Values from './Values.astro';
+import CTABand from './CTABand.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = getContent(lang, 'home');
+const tours = getTours(lang);
+const hotTours = tours.slice(0, 6);
+---
+
+<BaseLayout lang={lang}>
+  <Hero lang={lang} />
+  <Stats lang={lang} />
+
+  <!-- Hot tours -->
+  <section class="px-5 py-16 sm:py-20">
+    <div class="mx-auto max-w-6xl">
+      <SectionHeading kicker={t.hot_tours_kicker} title={t.hot_tours_title} text={t.hot_tours_text} />
+      <div class="mt-10">
+        <ToursGrid lang={lang} tours={hotTours} />
+      </div>
+      <div class="mt-10 text-center">
+        <a
+          href={href(lang, 'tours')}
+          class="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-sea-deep transition-colors hover:bg-sea-pale"
+        >
+          {t.view_all_tours}
+          <Icon name="arrow-right" class="h-4 w-4" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Services lang={lang} />
+  <AboutTeaser lang={lang} />
+  <Values lang={lang} />
+  <CTABand lang={lang} />
+</BaseLayout>

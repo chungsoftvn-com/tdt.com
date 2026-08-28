@@ -1,0 +1,76 @@
+---
+import '@/styles/global.css';
+import { getContent } from '@/lib/content.js';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  lang: string;
+  title?: string;
+  description?: string;
+}
+
+const { lang, title, description } = Astro.props;
+const t = getContent(lang, 'common');
+const fullTitle = title ? `${title} · ${t.brand_name}` : t.meta_title;
+const desc = description ?? t.meta_description;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc} />
+    <meta name="keywords" content={t.meta_keywords} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={canonical} />
+  </head>
+  <body class="flex min-h-dvh flex-col bg-sand text-ink antialiased">
+    <a
+      href="#main"
+      class="sr-only z-[100] rounded-full bg-ink px-4 py-2 text-sand focus:not-sr-only focus:absolute focus:left-4 focus:top-4"
+    >
+      {t.skip_to_content}
+    </a>
+    <Header lang={lang} />
+    <main id="main" class="flex-1">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+
+    <script>
+      // Tiny, dependency-free scroll-reveal.
+      const apply = () => {
+        const els = document.querySelectorAll('[data-reveal]:not(.is-revealed)');
+        if (!els.length) return;
+        if (!('IntersectionObserver' in window)) {
+          els.forEach((el) => el.classList.add('is-revealed'));
+          return;
+        }
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const e of entries) {
+              if (e.isIntersecting) {
+                e.target.classList.add('is-revealed');
+                io.unobserve(e.target);
+              }
+            }
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+        );
+        els.forEach((el) => io.observe(el));
+      };
+      document.readyState !== 'loading'
+        ? apply()
+        : document.addEventListener('DOMContentLoaded', apply);
+    </script>
+  </body>
+</html>

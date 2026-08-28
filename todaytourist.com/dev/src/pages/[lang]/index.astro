@@ -1,0 +1,13 @@
+---
+// /vi and /en — localized home pages.
+import { LANGS } from '@/lib/content.js';
+import Home from '@/components/Home.astro';
+
+export function getStaticPaths() {
+  return LANGS.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+---
+
+<Home lang={lang} />

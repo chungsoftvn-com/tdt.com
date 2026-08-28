@@ -1,0 +1,86 @@
+---
+import '@/styles/global.css';
+import { getContent, href } from '@/lib/content.js';
+import { getSiteConfig } from '@/lib/site.js';
+import Icon from './Icon.astro';
+
+// Admin is Vietnamese-only (per requirements).
+const t = getContent('vi', 'admin');
+const c = getContent('vi', 'common');
+const cfg = getSiteConfig();
+
+const statusRows = [
+  { label: t.layout_label, value: cfg.layout },
+  { label: t.lang_label, value: cfg.defaultLang },
+  { label: t.site_label, value: cfg.site?.name },
+  { label: t.domain_label, value: cfg.site?.domain },
+];
+
+const features = [t.f1, t.f2, t.f3, t.f4, t.f5, t.f6];
+---
+
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{t.title} · {c.brand_name}</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body class="min-h-dvh bg-sand text-ink antialiased">
+    <header class="sticky top-0 z-50 border-b border-ink/10 bg-sand/85 backdrop-blur-md">
+      <div class="mx-auto flex max-w-5xl items-center justify-between gap-3 px-5 py-3">
+        <div class="flex items-center gap-2.5">
+          <img
+            src="/content/vi/images/logo.webp"
+            alt=""
+            width="74"
+            height="80"
+            loading="lazy"
+            decoding="async"
+            class="h-10 w-auto"
+          />
+          <span class="leading-none">
+            <span class="block font-display text-lg font-semibold text-ink">{c.brand_name}</span>
+            <span class="block text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-ink-soft">
+              {t.title}
+            </span>
+          </span>
+        </div>
+        <a
+          href={href('vi')}
+          class="rounded-full border border-ink/15 px-4 py-2 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-sand"
+        >
+          {t.back_home}
+        </a>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-5 py-12">
+      <slot />
+    </main>
+  </body>
+
+  <style>
+    /* Spinner nhỏ hiện cạnh nút khi đang xử lý (nút bị disable để tránh bấm nhiều lần). */
+    .spinner {
+      width: 0.85rem;
+      height: 0.85rem;
+      flex: none;
+      border: 2px solid currentColor;
+      border-top-color: transparent;
+      border-radius: 9999px;
+      display: inline-block;
+      animation: tt-spin 0.7s linear infinite;
+    }
+    @keyframes tt-spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    button:disabled {
+      pointer-events: none;
+    }
+  </style>
+</html>

@@ -1,0 +1,12 @@
+{
+  "layout": "layout1_xugawear.vercel.app",
+  "defaultLang": "vi",
+  "site": {
+    "name": "CÔNG TY DU LỊCH TODAYTOURIST",
+    "domain": "todaytourist.com"
+  },
+  "admin": {
+    "lang": "vi"
+  },
+  "version": 1
+}
