@@ -16,6 +16,14 @@
   "hot_tours_title": "Tour hot",
   "hot_tours_text": "Những hành trình được yêu thích nhất, luôn sẵn sàng cùng bạn khởi hành.",
   "view_all_tours": "Xem tất cả tour",
+  "hot_tours": [
+    "tour-con-dao-2n2d",
+    "tour-chau-doc-rung-tram-tra-su-1n1d",
+    "tour-cha-diep-me-nam-hai-1n1d",
+    "tour-long-hai-phuoc-hai-2-ngay-1-dem",
+    "tour-ninh-chu-vinh-hy-3n2d",
+    "tour-phu-yen-quy-nhon-3-ngay-3-dem"
+  ],
   "services_kicker": "Dịch vụ trọn gói",
   "services_title": "Dịch vụ của chúng tôi",
   "services_text": "Đa dạng dịch vụ trọn gói, đáp ứng mọi nhu cầu của khách lẻ, gia đình, doanh nghiệp và đoàn thể.",
@@ -45,5 +53,42 @@
   "cta_kicker": "Bắt đầu ngay",
   "cta_title": "Sẵn sàng cho chuyến đi tiếp theo?",
   "cta_text": "Liên hệ ngay với đội ngũ TodayTourist để được tư vấn miễn phí và nhận ưu đãi tốt nhất.",
-  "cta_button": "Liên hệ ngay"
+  "cta_button": "Liên hệ ngay",
+  "home_blocks": [
+    {
+      "id": "blk-hero",
+      "type": "hero",
+      "enabled": true
+    },
+    {
+      "id": "blk-about",
+      "type": "about",
+      "enabled": true
+    },
+    {
+      "id": "blk-services",
+      "type": "services",
+      "enabled": true
+    },
+    {
+      "id": "blk-stats",
+      "type": "stats",
+      "enabled": true
+    },
+    {
+      "id": "blk-hot",
+      "type": "hot",
+      "enabled": true
+    },
+    {
+      "id": "blk-values",
+      "type": "values",
+      "enabled": true
+    },
+    {
+      "id": "blk-cta",
+      "type": "cta",
+      "enabled": true
+    }
+  ]
 }

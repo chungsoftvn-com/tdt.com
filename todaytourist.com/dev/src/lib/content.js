@@ -17,7 +17,9 @@ const cache = new Map();
 /** Load a flat JSON content file for a language, e.g. getContent('vi', 'home'). */
 export function getContent(lang, file) {
   const key = `${lang}/${file}`;
-  if (cache.has(key)) return cache.get(key);
+  // Ở DEV: luôn đọc file mới (admin sửa content -> xem được ngay, không cần restart).
+  // Ở PRODUCTION build: cache theo tiến trình (mỗi deploy là tiến trình mới nên vẫn đúng).
+  if (!import.meta.env.DEV && cache.has(key)) return cache.get(key);
   const p = path.join(process.cwd(), 'content', lang, `${file}.json`);
   const raw = fs.readFileSync(p, 'utf-8');
   const data = JSON.parse(raw);

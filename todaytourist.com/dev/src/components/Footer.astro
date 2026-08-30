@@ -1,6 +1,12 @@
 ---
-import { getContent, href } from '@/lib/content.js';
-import Icon from './Icon.astro';
+/**
+ * Footer — 4 cột, mỗi cột là 1 khối nội dung do admin soạn bằng SunEditor riêng
+ * (body_html / footer_quick_body / footer_contact_body / footer_social_body).
+ * Bản EN: link /vi/... được đổi sang /en/...
+ */
+import { getContent } from '@/lib/content.js';
+import { richDoc } from '@/lib/rich.js';
+import { bodyFor } from '@/lib/pagebody.js';
 
 interface Props {
   lang: string;
@@ -8,124 +14,25 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = getContent(lang, 'common');
-
-const quickLinks = [
-  { key: 'footer_quick_home', url: href(lang) },
-  { key: 'footer_quick_about', url: href(lang, 'about') },
-  { key: 'footer_quick_tours', url: href(lang, 'tours') },
-  { key: 'footer_quick_news', url: href(lang, 'tin-tuc') },
-  { key: 'footer_quick_tickets', url: href(lang, 've-may-bay') },
-  { key: 'footer_quick_car', url: href(lang, 'cho-thue-xe') },
-  { key: 'footer_quick_contact', url: href(lang, 'contact') },
-];
+const keys = ['body_html', 'footer_quick_body', 'footer_contact_body', 'footer_social_body'];
+const cols = keys.map((k) => {
+  let h = bodyFor('common', t, k);
+  if (lang !== 'vi') {
+    h = h.replace(/href="\/vi\//g, 'href="/en/').replace(/href="\/vi"/g, 'href="/en"');
+  }
+  return h;
+});
 ---
 
 <footer class="bg-ink text-sand">
   <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4">
-    <!-- About -->
-    <div>
-      <h3 class="font-display text-lg font-semibold text-white">{t.footer_about_title}</h3>
-      <p class="mt-3 text-sm leading-relaxed text-sand/70">{t.footer_about_text}</p>
-    </div>
-
-    <!-- Quick links -->
-    <div>
-      <h3 class="font-display text-lg font-semibold text-white">{t.footer_quick_title}</h3>
-      <ul class="mt-3 space-y-2 text-sm">
-        {
-          quickLinks.map((item) => (
-            <li>
-              <a
-                href={item.url}
-                class="inline-flex items-center gap-1.5 text-sand/70 transition-colors hover:text-accent-pale"
-              >
-                <span class="text-accent">›</span>
-                {t[item.key]}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div>
-      <h3 class="font-display text-lg font-semibold text-white">{t.footer_contact_title}</h3>
-      <ul class="mt-3 space-y-3 text-sm text-sand/80">
-        <li class="flex items-start gap-2.5">
-          <Icon name="map-pin" class="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-          <span>{t.address}</span>
-        </li>
-        <li class="flex items-start gap-2.5">
-          <Icon name="phone" class="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-          <span>
-            {t.hotline_label}:{' '}
-            <a href={`tel:${t.hotline.replace(/[^0-9]/g, '')}`} class="hover:text-accent-pale">
-              {t.hotline}
-            </a>
-          </span>
-        </li>
-        <li class="flex items-start gap-2.5">
-          <Icon name="zalo" class="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-          <span>
-            {t.zalo_label}: {t.zalo}
-          </span>
-        </li>
-        <li class="flex items-start gap-2.5">
-          <Icon name="mail" class="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-          <a href={`mailto:${t.email}`} class="hover:text-accent-pale">
-            {t.email}
-          </a>
-        </li>
-        <li class="flex items-start gap-2.5">
-          <Icon name="globe" class="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-          <span>{t.website}</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Social -->
-    <div>
-      <h3 class="font-display text-lg font-semibold text-white">{t.footer_social_title}</h3>
-      <ul class="mt-3 space-y-2 text-sm">
-        <li>
-          <a
-            href="https://www.facebook.com/profile.php?id=61563008528761"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-sand/70 transition-colors hover:text-accent-pale"
-          >
-            <Icon name="facebook" class="h-4 w-4" />
-            {t.footer_facebook}
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.tiktok.com/@todaytourist"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-sand/70 transition-colors hover:text-accent-pale"
-          >
-            <Icon name="tiktok" class="h-4 w-4" />
-            {t.footer_tiktok}
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://zalo.me/0902898726"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 text-sand/70 transition-colors hover:text-accent-pale"
-          >
-            <Icon name="zalo" class="h-4 w-4" />
-            {t.footer_zalo}
-          </a>
-        </li>
-      </ul>
-      <p class="mt-5 rounded-2xl border border-sand/15 p-4 text-xs leading-relaxed text-sand/60">
-        {t.footer_about_text}
-      </p>
-    </div>
+    {
+      cols.map((h) => (
+        <div>
+          <div class="rich-footer text-sm leading-relaxed text-sand/70" set:html={richDoc(h)} />
+        </div>
+      ))
+    }
   </div>
 
   <div class="border-t border-sand/15 px-5 py-6 text-center">
@@ -136,3 +43,26 @@ const quickLinks = [
     {t.copyright} · {t.rights}
   </div>
 </footer>
+
+<style>
+  .rich-footer h3 {
+    color: #ffffff;
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+  .rich-footer p {
+    margin: 0.4rem 0;
+    line-height: 1.7;
+  }
+  .rich-footer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0;
+  }
+  .rich-footer a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+</style>

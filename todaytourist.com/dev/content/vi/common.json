@@ -68,8 +68,12 @@
   "footer_zalo": "Zalo",
   "copyright": "Bản quyền © 2026 thuộc CÔNG TY DU LỊCH TODAYTOURIST",
   "rights": "Mọi quyền được bảo lưu.",
-  "footer_offer": "Bạn muốn có một trang web như thế này với giá chỉ 5 triệu đồng, chi phí duy trì hàng năm chỉ 500K? Liên hệ ngay!",
-  "footer_credit": "Website được thiết kế & phát triển bởi chungsoftvn — Zalo: +84 394 0321",
+  "footer_offer": "",
+  "footer_credit": "Website được thiết kế & phát triển bởi chungsoftvn — Zalo: +84 36 746 5221",
   "404_title": "Không tìm thấy trang",
-  "404_text": "Trang bạn tìm kiếm không tồn tại hoặc đã được di chuyển."
+  "404_text": "Trang bạn tìm kiếm không tồn tại hoặc đã được di chuyển.",
+  "body_html": "<h3>CÔNG TY DU LỊCH TODAYTOURIST</h3><p>TodayTourist là đơn vị lữ hành chuyên nghiệp tại Đồng Nai, hơn 10 năm kinh nghiệm tổ chức du lịch trong nước &amp; quốc tế, <strong>teambuilding, sự kiện</strong> và tour thiết kế theo yêu cầu.</p>",
+  "footer_quick_body": "<h3>Truy cập nhanh</h3><p><span style=\"color:#f97316\">›</span> <a href=\"/vi\">Trang chủ</a></p><p><span style=\"color:#f97316\">›</span> <a href=\"/vi/about\">Giới thiệu</a></p><p><span style=\"color:#f97316\">›</span> <a href=\"/vi/tours\">Tour du lịch</a></p><p><span style=\"color:#f97316\">›</span> <a href=\"/vi/tin-tuc\">Tin tức</a></p><p><span style=\"color:#f97316\">›</span> <a href=\"/vi/ve-may-bay\">Vé máy bay</a></p><p><span style=\"color:#f97316\">›</span> <a href=\"/vi/cho-thue-xe\">Cho thuê xe</a></p><p><span style=\"color:#f97316\">›</span> <a href=\"/vi/contact\">Liên hệ</a></p>",
+  "footer_contact_body": "<h3>Thông tin liên hệ</h3><p>📍 Số 80 Đặng Nguyên, KP 29, Phường Long Bình, TP. Biên Hòa, Đồng Nai</p><p>📞 <a href=\"tel:0913787647\">0913.78.76.47</a></p><p>💬 Zalo: <a href=\"https://zalo.me/0902898726\">0902.898.726</a></p><p>✉️ <a href=\"mailto:lesangtravel@gmail.com\">lesangtravel@gmail.com</a></p><p>🌐 todaytourist.com</p>",
+  "footer_social_body": "<h3>Kết nối với chúng tôi</h3><p><a href=\"https://www.facebook.com/profile.php?id=61563008528761\" target=\"_blank\" rel=\"noopener noreferrer\">📘 Facebook</a></p><p><a href=\"https://www.tiktok.com/@todaytourist\" target=\"_blank\" rel=\"noopener noreferrer\">🎵 TikTok</a></p><p><a href=\"https://zalo.me/0902898726\" target=\"_blank\" rel=\"noopener noreferrer\">💬 Zalo</a></p>"
 }

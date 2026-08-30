@@ -64,7 +64,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
               }
             }
           },
-          { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+          // threshold 0: reveal khi bất kỳ pixel nào vào viewport — quan trọng cho
+          // khối nội dung CAO HƠN viewport (vd trang Giới thiệu 1 block, ratio không
+          // bao giờ đạt 0.12 nên bị kẹt opacity:0).
+          { threshold: 0, rootMargin: '0px 0px -8% 0px' },
         );
         els.forEach((el) => io.observe(el));
       };

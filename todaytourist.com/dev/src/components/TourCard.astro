@@ -28,7 +28,7 @@ const url = href(lang, `tour/${tour.slug}`);
 >
   <a href={url} class="relative block aspect-[16/10] overflow-hidden" tabindex="-1" aria-hidden="true">
     <img
-      src={`/content/vi/images/${tour.image}`}
+      src={tour.image ? `/content/vi/images/${tour.image}` : '/content/vi/images/placeholder-tour.svg'}
       alt={tour.name}
       loading="lazy"
       decoding="async"

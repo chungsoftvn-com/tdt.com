@@ -18,7 +18,7 @@
  */
 import 'suneditor/dist/css/suneditor.min.css'; // UI editor (v2)
 import suneditor from 'suneditor';
-import { formatBlock, list, link, image } from 'suneditor/src/plugins';
+import { formatBlock, list, link, image, font, fontSize, fontColor, hiliteColor, align, lineHeight, table, horizontalRule, textStyle, blockquote, video } from 'suneditor/src/plugins';
 import { fileToImage } from '@/lib/admin.js';
 
 /* ---------------- escape / sanitize ---------------- */
@@ -185,6 +185,132 @@ const TOOLBAR = [
   ['link', 'image'],
   ['removeFormat'],
 ];
+
+// Toolbar cho từng field trong "Quản lý Trang": không có ảnh (tránh data URL
+// phình to file JSON — worker không xử lý ảnh cho pages).
+const FIELD_TOOLBAR = [
+  ['undo', 'redo'],
+  ['formatBlock'],
+  ['bold', 'underline', 'italic'],
+  ['list'],
+  ['link'],
+  ['removeFormat'],
+];
+
+/**
+ * Tạo một SunEditor v2 độc lập cho một field (dùng trong Quản lý Trang).
+ * Mỗi lần gọi tạo editor riêng gắn vào container #rootId; trả về instance.
+ * KHÔNG được đặt container bên trong <form> (SunEditor tạo form dialog lồng nhau).
+ */
+export function createRichEditor(rootId, initialHtml, opts) {
+  const root = document.getElementById(rootId);
+  if (!root) return null;
+  const ed = suneditor.create(root, {
+    plugins: [formatBlock, list, link],
+    height: (opts && opts.height) || '220px',
+    defaultTag: 'p',
+    formats: ['p', 'h2', 'h3'],
+    buttonList: FIELD_TOOLBAR,
+    placeholder: 'Nhập nội dung — bôi đen để bôi đậm/nghiêng, chọn kiểu tiêu đề, chèn link...',
+  });
+  if (initialHtml) ed.setContents(initialHtml);
+  return ed;
+}
+
+/* ---------------- Full-document editor (trang "Liên hệ 2") ---------------- */
+
+// Toolbar đầy đủ như chế độ soạn tài liệu của SunEditor
+const DOC_TOOLBAR = [
+  ['undo', 'redo'],
+  ['font', 'fontSize', 'formatBlock'],
+  ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript'],
+  ['fontColor', 'hiliteColor', 'textStyle'],
+  ['removeFormat'],
+  ['outdent', 'indent'],
+  ['align', 'list', 'lineHeight'],
+  ['blockquote', 'horizontalRule'],
+  ['table', 'link', 'image', 'video'],
+  ['fullScreen', 'showBlocks', 'codeView'],
+  ['print', 'preview', 'save'],
+];
+
+/**
+ * Tạo SunEditor chế độ document (nhiều button/option) cho trang có `fullEditor`.
+ * Ảnh: onImageUpload nén WebP -> data URL preview; khi lưu collectFullHtmlImages
+ * gom data: -> đẩy vào images[] (worker ghi /content/vi/images/) + thay bằng path.
+ */
+export function createFullEditor(rootId, initialHtml, opts) {
+  const root = document.getElementById(rootId);
+  if (!root) return null;
+  const ed = suneditor.create(root, {
+    plugins: [
+      blockquote, align, font, fontSize, fontColor, hiliteColor, horizontalRule,
+      list, table, formatBlock, lineHeight, textStyle, link, image, video,
+    ],
+    height: (opts && opts.height) || '520px',
+    defaultTag: 'p',
+    formats: ['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'blockquote', 'pre'],
+    buttonList: DOC_TOOLBAR,
+    placeholder: 'Soạn thảo nội dung như một tài liệu — đầy đủ định dạng, bảng, ảnh, video...',
+    image: {
+      accept: 'image/*',
+      imageSizeOnlyPercentage: true,
+      size: '100%',
+    },
+    onImageUpload: async (files) => {
+      const file = files && files[0];
+      if (!file) return null;
+      const img = await fileToImage(file);
+      if (!img) return null;
+      return `data:image/webp;base64,${img.data}`;
+    },
+  });
+  if (initialHtml) ed.setContents(initialHtml);
+  return ed;
+}
+
+/** Thu thập ảnh data: base64 trong HTML full editor -> {name,data} + thay bằng /content/vi/images/<name>. */
+export function collectFullHtmlImages(html) {
+  let images = [];
+  let pasted = 0;
+  const out = String(html || '').replace(
+    /data:image\/([a-zA-Z0-9.+-]+);base64,([A-Za-z0-9+/=]+)/g,
+    (m, ext, data) => {
+      const e = ext === 'jpeg' ? 'jpg' : ext;
+      const name = `lienhe2-${Date.now()}-${pasted++}.${e}`;
+      images.push({ name, data });
+      return `/content/vi/images/${name}`;
+    },
+  );
+  return { html: out, images };
+}
+
+/**
+ * Editor HTML cho "Chỉnh sửa HTML" (nội dung chính trang) — có nút codeView
+ * để xem/sửa mã nguồn HTML. KHÔNG có nút ảnh (tránh data: base64 phình file JSON).
+ */
+export function createHtmlEditor(rootId, initialHtml, opts) {
+  const root = document.getElementById(rootId);
+  if (!root) return null;
+  const ed = suneditor.create(root, {
+    plugins: [formatBlock, list, link],
+    height: (opts && opts.height) || '360px',
+    defaultTag: 'p',
+    formats: ['p', 'h2', 'h3'],
+    buttonList: [
+      ['undo', 'redo'],
+      ['formatBlock'],
+      ['bold', 'underline', 'italic'],
+      ['list'],
+      ['link'],
+      ['removeFormat'],
+      ['codeView'],
+    ],
+    placeholder: 'Chỉnh sửa HTML — bấm nút </> để xem mã nguồn...',
+  });
+  if (initialHtml) ed.setContents(initialHtml);
+  return ed;
+}
 
 export function initSunEditor(rootId) {
   const root = document.getElementById(rootId);

@@ -16,6 +16,14 @@
   "hot_tours_title": "Hot tours",
   "hot_tours_text": "The most-loved journeys, ready to depart with you.",
   "view_all_tours": "View all tours",
+  "hot_tours": [
+    "tour-con-dao-2n2d",
+    "tour-chau-doc-rung-tram-tra-su-1n1d",
+    "tour-cha-diep-me-nam-hai-1n1d",
+    "tour-long-hai-phuoc-hai-2-ngay-1-dem",
+    "tour-ninh-chu-vinh-hy-3n2d",
+    "tour-phu-yen-quy-nhon-3-ngay-3-dem"
+  ],
   "services_kicker": "All-in-one services",
   "services_title": "Our services",
   "services_text": "A full range of packaged services for individuals, families, companies and groups.",
@@ -45,5 +53,42 @@
   "cta_kicker": "Get started",
   "cta_title": "Ready for your next journey?",
   "cta_text": "Contact the TodayTourist team today for free consultation and the best deals.",
-  "cta_button": "Contact now"
+  "cta_button": "Contact now",
+  "home_blocks": [
+    {
+      "id": "blk-hero",
+      "type": "hero",
+      "enabled": true
+    },
+    {
+      "id": "blk-about",
+      "type": "about",
+      "enabled": true
+    },
+    {
+      "id": "blk-services",
+      "type": "services",
+      "enabled": true
+    },
+    {
+      "id": "blk-stats",
+      "type": "stats",
+      "enabled": true
+    },
+    {
+      "id": "blk-hot",
+      "type": "hot",
+      "enabled": true
+    },
+    {
+      "id": "blk-values",
+      "type": "values",
+      "enabled": true
+    },
+    {
+      "id": "blk-cta",
+      "type": "cta",
+      "enabled": true
+    }
+  ]
 }

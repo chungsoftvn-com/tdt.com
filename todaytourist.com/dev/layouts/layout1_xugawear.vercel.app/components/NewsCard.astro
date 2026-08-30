@@ -27,7 +27,7 @@ const url = href(lang, `tin-tuc/${item.slug}`);
     {
       item.image ? (
         <img
-          src={`/content/vi/images/${item.image}`}
+          src={item.image ? `/content/vi/images/${item.image}` : '/content/vi/images/placeholder-tour.svg'}
           alt={item.title}
           loading="lazy"
           decoding="async"

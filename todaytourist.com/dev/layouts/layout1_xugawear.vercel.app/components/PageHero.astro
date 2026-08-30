@@ -1,4 +1,6 @@
 ---
+import { richText } from '@/lib/rich.js';
+
 interface Props {
   kicker?: string;
   title: string;
@@ -21,9 +23,7 @@ const { kicker, title, text } = Astro.props;
       {title}
     </h1>
     {text && (
-      <p data-reveal style="--reveal-delay:0.12s" class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft">
-        {text}
-      </p>
+      <div data-reveal style="--reveal-delay:0.12s" class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-ink-soft" set:html={richText(text)} />
     )}
   </div>
   <span class="wave-edge text-sand" aria-hidden="true">

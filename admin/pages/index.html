@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="vi" data-auth-session-url="https://site-admin-worker.nvtuan1689.workers.dev/todaytourist/api/session" data-astro-cid-hwrjlp2m> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Quản trị website · TODAYTOURIST</title><meta name="robots" content="noindex"><link rel="icon" type="image/x-icon" href="/favicon.ico"><!--
+      Guard đăng nhập (site tĩnh nên không chặn được ở server):
+      trang admin khác /admin yêu cầu phiên hợp lệ, nếu chưa đăng nhập thì chuyển về /admin.
+      /admin (trang đăng nhập) bỏ qua — index.astro tự hiển thị form login.
+    --><script>
+      (function () {
+        var path = (window.location.pathname || '/').replace(/\/+$/, '');
+        if (path === '/admin') return;
+        var root = document.documentElement;
+        var url = root.getAttribute('data-auth-session-url') || '';
+        if (!url) return;
+        root.classList.add('tt-auth-checking'); // ẩn nội dung trong lúc kiểm tra phiên
+        fetch(url, { credentials: 'include', headers: { Accept: 'application/json' } })
+          .then(function (r) {
+            if (r.status !== 200) {
+              window.location.replace('/admin');
+              return;
+            }
+            root.classList.remove('tt-auth-checking');
+          })
+          .catch(function () {
+            window.location.replace('/admin');
+          });
+      })();
+    </script><link rel="stylesheet" href="/_astro/sunblocks.O7R3rrSL.css">
+<link rel="stylesheet" href="/_astro/index.CaNP42MR.css">
+<style>.spinner[data-astro-cid-hwrjlp2m]{width:.85rem;height:.85rem;flex:none;border:2px solid currentColor;border-top-color:transparent;border-radius:9999px;display:inline-block;animation:tt-spin .7s linear infinite}@keyframes tt-spin{to{transform:rotate(360deg)}}button[data-astro-cid-hwrjlp2m]:disabled{pointer-events:none}html.tt-auth-checking body{visibility:hidden}
+</style></head> <body class="min-h-dvh bg-sand text-ink antialiased" data-astro-cid-hwrjlp2m> <header class="sticky top-0 z-50 border-b border-ink/10 bg-sand/85 backdrop-blur-md" data-astro-cid-hwrjlp2m> <div class="mx-auto flex max-w-5xl items-center justify-between gap-3 px-5 py-3" data-astro-cid-hwrjlp2m> <div class="flex items-center gap-2.5" data-astro-cid-hwrjlp2m> <img src="/content/vi/images/logo.webp" alt="" width="74" height="80" loading="lazy" decoding="async" class="h-10 w-auto" data-astro-cid-hwrjlp2m> <span class="leading-none" data-astro-cid-hwrjlp2m> <span class="block font-display text-lg font-semibold text-ink" data-astro-cid-hwrjlp2m>TODAYTOURIST</span> <span class="block text-[0.6rem] font-semibold uppercase tracking-[0.22em] text-ink-soft" data-astro-cid-hwrjlp2m> Quản trị website </span> </span> </div> <a href="/vi" class="rounded-full border border-ink/15 px-4 py-2 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-sand" data-astro-cid-hwrjlp2m> Về trang chủ </a> </div> </header> <main class="mx-auto max-w-5xl px-5 py-12" data-astro-cid-hwrjlp2m>  <section id="list-view"> <div class="flex flex-wrap items-center justify-between gap-3"> <h1 class="font-display text-3xl text-ink">Quản lý Trang</h1> </div> <p id="list-status" class="mt-4 text-sm text-ink-soft"></p> <div id="page-list" class="mt-6 grid gap-3 sm:grid-cols-2"></div> </section> <section id="form-view" class="hidden"> <h1 id="form-title" class="font-display text-3xl text-ink">Sửa trang</h1> <!-- KHÔNG dùng <form>: SunEditor tạo dialog form lồng nhau gây lỗi submit --> <div id="page-form" class="mt-6 space-y-6 rounded-2xl bg-paper p-6 shadow-[var(--shadow-lift-1)]"> <div id="form-fields" class="space-y-6"></div> <p id="form-error" class="hidden text-sm font-medium text-red-600"></p> <div class="flex gap-3"> <button id="btn-save" type="button" class="rounded-full bg-sea px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-sea-deep">Lưu</button> <button id="btn-cancel" type="button" class="rounded-full border border-ink/15 px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink/5">Huỷ</button> </div> </div> </section>  </main>   </body></html> <script type="module" src="/_astro/pages.astro_astro_type_script_index_0_lang.Dx4nB7ZM.js"></script>

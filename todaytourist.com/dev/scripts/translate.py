@@ -77,6 +77,8 @@ SKIP_KEY_EXACT = {
     "day",
     # Mảng ảnh (gallery) — đường dẫn /content/vi/images/... không dịch
     "gallery",
+    # Danh sách slug tour hot (máy, không dịch)
+    "hot_tours",
 }
 # Keys (by suffix) that must never be translated (machine-readable data).
 SKIP_KEY_SUFFIX = (
@@ -106,6 +108,48 @@ def should_translate(key: str, value: str) -> bool:
     if NON_TEXT_RE.match(value.strip()):
         return False
     return True
+
+
+# Khối HTML đầy đủ (body_html của trang) — tách thẻ/tag khỏi text, chỉ dịch phần
+# text (giữ nguyên cấu trúc HTML + inline style/attr). Đây là nền tảng để admin
+# soạn 1 khối nội dung phong phú bằng SunEditor và tự động có bản EN.
+HTML_SPLIT_RE = re.compile(r"(</?[a-zA-Z][^>]*>)")
+
+# Danh từ riêng / thương hiệu phải GIỮ NGUYÊN khi dịch body_html (không để Argos bẻ hỏng).
+PROPER_NOUNS = [
+    "CÔNG TY DU LỊCH TODAYTOURIST",
+    "TODAYTOURIST",
+]
+
+
+def translate_html(translator, html: str) -> str:
+    if not isinstance(html, str) or not html.strip():
+        return html
+    if translator is None or getattr(translator, "available", False) is False:
+        return html
+    # Che danh từ riêng bằng placeholder trước khi dịch (giống email/URL/phone)
+    tokens: list[str] = []
+
+    def _protect_proper(match):
+        tokens.append(match.group(0))
+        return f"QQ{len(tokens) - 1}QQ"
+
+    protected = html
+    for noun in PROPER_NOUNS:
+        protected = re.sub(re.escape(noun), _protect_proper, protected, flags=re.IGNORECASE)
+    parts = HTML_SPLIT_RE.split(protected)
+    out = []
+    for part in parts:
+        if HTML_SPLIT_RE.fullmatch(part):
+            out.append(part)  # giữ nguyên thẻ/tag (kèm inline style)
+        elif part.strip():
+            out.append(translator.translate(part))
+        else:
+            out.append(part)
+    result = "".join(out)
+    for i, tok in enumerate(tokens):
+        result = result.replace(f"QQ{i}QQ", tok)
+    return result
 
 
 class Translator:
@@ -177,6 +221,9 @@ def apply_override(overrides, file_key: str, key: str, value):
 
 
 def walk(obj, key, translator, overrides, file_key):
+    # Mảng cấu hình khối trang chủ (id/type/enabled) — dữ liệu máy, KHÔNG dịch.
+    if key == "home_blocks":
+        return obj
     if isinstance(obj, dict):
         return {
             k: walk(v, k, translator, overrides, file_key)
@@ -185,9 +232,10 @@ def walk(obj, key, translator, overrides, file_key):
     if isinstance(obj, list):
         return [walk(v, key, translator, overrides, file_key) for v in obj]
     if isinstance(obj, str):
-        # Overrides can correct ANY value (including protected proper nouns),
-        # so they are applied even when the machine step is skipped.
-        if should_translate(key, obj):
+        # body_html + mọi khối HTML (block_*, footer_*_body): dịch text, giữ tag/style
+        if key == "body_html" or re.search(r"<[a-zA-Z][^>]*>", obj):
+            translated = translate_html(translator, obj)
+        elif should_translate(key, obj):
             translated = translator.translate(obj)
         else:
             translated = obj

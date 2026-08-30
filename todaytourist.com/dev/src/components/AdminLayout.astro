@@ -2,12 +2,16 @@
 import '@/styles/global.css';
 import { getContent, href } from '@/lib/content.js';
 import { getSiteConfig } from '@/lib/site.js';
+import { ADMIN_SITE_ID, ADMIN_WORKER_ORIGIN } from '@/lib/admin.js';
 import Icon from './Icon.astro';
 
 // Admin is Vietnamese-only (per requirements).
 const t = getContent('vi', 'admin');
 const c = getContent('vi', 'common');
 const cfg = getSiteConfig();
+
+// URL kiểm tra phiên đăng nhập trên Worker (dùng cho guard chặn vào trang admin khi chưa login).
+const authSessionUrl = `${ADMIN_WORKER_ORIGIN}/${ADMIN_SITE_ID}/api/session`;
 
 const statusRows = [
   { label: t.layout_label, value: cfg.layout },
@@ -20,13 +24,39 @@ const features = [t.f1, t.f2, t.f3, t.f4, t.f5, t.f6];
 ---
 
 <!doctype html>
-<html lang="vi">
+<html lang="vi" data-auth-session-url={authSessionUrl}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{t.title} · {c.brand_name}</title>
     <meta name="robots" content="noindex" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!--
+      Guard đăng nhập (site tĩnh nên không chặn được ở server):
+      trang admin khác /admin yêu cầu phiên hợp lệ, nếu chưa đăng nhập thì chuyển về /admin.
+      /admin (trang đăng nhập) bỏ qua — index.astro tự hiển thị form login.
+    -->
+    <script is:inline>
+      (function () {
+        var path = (window.location.pathname || '/').replace(/\/+$/, '');
+        if (path === '/admin') return;
+        var root = document.documentElement;
+        var url = root.getAttribute('data-auth-session-url') || '';
+        if (!url) return;
+        root.classList.add('tt-auth-checking'); // ẩn nội dung trong lúc kiểm tra phiên
+        fetch(url, { credentials: 'include', headers: { Accept: 'application/json' } })
+          .then(function (r) {
+            if (r.status !== 200) {
+              window.location.replace('/admin');
+              return;
+            }
+            root.classList.remove('tt-auth-checking');
+          })
+          .catch(function () {
+            window.location.replace('/admin');
+          });
+      })();
+    </script>
   </head>
   <body class="min-h-dvh bg-sand text-ink antialiased">
     <header class="sticky top-0 z-50 border-b border-ink/10 bg-sand/85 backdrop-blur-md">
@@ -61,6 +91,13 @@ const features = [t.f1, t.f2, t.f3, t.f4, t.f5, t.f6];
       <slot />
     </main>
   </body>
+
+  <style is:global>
+    /* Ẩn nội dung trang admin cho tới khi xác nhận phiên đăng nhập (tránh lộ form khi chưa login). */
+    html.tt-auth-checking body {
+      visibility: hidden;
+    }
+  </style>
 
   <style>
     /* Spinner nhỏ hiện cạnh nút khi đang xử lý (nút bị disable để tránh bấm nhiều lần). */

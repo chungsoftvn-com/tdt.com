@@ -1,9 +1,13 @@
 ---
+/**
+ * AboutPage — trang "Giới thiệu": toàn bộ nội dung nằm trong MỘT block duy nhất
+ * (body_html) do admin soạn bằng SunEditor full-document (nhiều button/option),
+ * + gallery ảnh công ty (admin thêm / bớt ảnh riêng).
+ */
 import { getContent } from '@/lib/content.js';
+import { richDoc } from '@/lib/rich.js';
+import { bodyFor } from '@/lib/pagebody.js';
 import BaseLayout from './BaseLayout.astro';
-import PageHero from './PageHero.astro';
-import SectionHeading from './SectionHeading.astro';
-import Icon from './Icon.astro';
 
 interface Props {
   lang: string;
@@ -11,104 +15,110 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = getContent(lang, 'about');
-
-const values = [t.value_1, t.value_2, t.value_3, t.value_4];
-
-const companyRows = [
-  { label: t.company_name_label, value: t.company_name },
-  { label: t.company_address_label, value: t.company_address },
-  { label: t.company_hotline_label, value: t.company_hotline },
-  { label: t.company_consult_label, value: `${t.contact_1}; ${t.contact_2}; ${t.contact_3}; ${t.contact_4}` },
-  { label: t.company_email_label, value: t.company_email },
-  { label: t.company_website_label, value: t.company_website },
-  { label: t.company_slogan_label, value: t.company_slogan },
-  { label: t.company_method_label, value: t.company_method },
-];
+const body = bodyFor('about', t);
 ---
 
 <BaseLayout lang={lang} title={t.title}>
-  <PageHero kicker={t.hero_kicker} title={t.hero_title} text={t.slogan} />
-
-  <!-- Story -->
+  <!-- Toàn bộ nội dung (một ô soạn thảo full-document) — text + ảnh đan xen.
+       KHÔNG data-reveal: block cao hơn viewport nên IntersectionObserver không reveal
+       (kẹt opacity:0 -> trang rỗng). -->
   <section class="px-5 py-14 sm:py-16">
-    <div data-reveal class="mx-auto max-w-3xl space-y-5 text-lg leading-relaxed text-ink-soft">
-      <p>{t.p1}</p>
-      <p>{t.p2}</p>
-      <p>{t.p3}</p>
-      <p>{t.p4}</p>
-    </div>
-  </section>
-
-  <!-- Core values -->
-  <section class="bg-sand-deep px-5 py-14 sm:py-16">
-    <div class="mx-auto max-w-6xl">
-      <SectionHeading title={t.values_title} />
-      <ul class="mt-8 grid gap-5 sm:grid-cols-2">
-        {
-          values.map((v, i) => (
-            <li
-              data-reveal
-              style={`--reveal-delay:${i * 0.06}s`}
-              class="flex items-start gap-3 rounded-2xl bg-paper p-5 shadow-[var(--shadow-lift-1)]"
-            >
-              <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sea text-white">
-                <Icon name="check" class="h-4 w-4" />
-              </span>
-              <span class="font-medium text-ink">{v}</span>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  </section>
-
-  <!-- Mission -->
-  <section class="px-5 py-14 sm:py-16">
-    <div data-reveal class="mx-auto max-w-3xl rounded-3xl bg-sea-pale p-8 text-center sm:p-10">
-      <h2 class="font-display text-2xl font-semibold text-sea-deep">{t.mission_title}</h2>
-      <p class="mt-4 font-hand text-3xl leading-snug text-sea-deep">{t.mission}</p>
-      <p class="mt-5 text-sm text-ink-soft">{t.thanks}</p>
-    </div>
-  </section>
-
-  <!-- Gallery ảnh (mỗi ảnh 1 row, responsive) -->
-  {
-    (t.gallery && t.gallery.length > 0) && (
-      <section class="px-5 py-14 sm:py-16">
-        <div class="mx-auto max-w-4xl space-y-8">
-          {t.gallery.map((src) => (
-            <figure
-              data-reveal
-              class="overflow-hidden rounded-2xl bg-paper p-2 shadow-[var(--shadow-lift-1)]"
-            >
-              <img
-                src={src}
-                alt=""
-                loading="lazy"
-                decoding="async"
-                class="block h-auto w-full rounded-xl object-contain"
-              />
-            </figure>
-          ))}
-        </div>
-      </section>
-    )
-  }
-
-  <!-- Company info -->
-  <section class="bg-sand-deep px-5 py-14 sm:py-16">
-    <div class="mx-auto max-w-3xl">
-      <SectionHeading title={t.company_title} />
-      <dl data-reveal class="mt-8 overflow-hidden rounded-2xl bg-paper shadow-[var(--shadow-lift-1)]">
-        {
-          companyRows.map((row) => (
-            <div class="grid gap-1 border-b border-ink/5 px-6 py-4 last:border-0 sm:grid-cols-3 sm:gap-4">
-              <dt class="text-sm font-semibold text-sea-deep sm:col-span-1">{row.label}</dt>
-              <dd class="text-sm leading-relaxed text-ink-soft sm:col-span-2">{row.value}</dd>
-            </div>
-          ))
-        }
-      </dl>
-    </div>
+    <div class="rich-doc mx-auto max-w-4xl" set:html={richDoc(body)} />
   </section>
 </BaseLayout>
+
+<style>
+  .rich-doc {
+    color: var(--color-ink-soft);
+  }
+  .rich-doc h1 {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    line-height: 1.25;
+    color: var(--color-ink);
+    margin: 0 0 1rem;
+  }
+  .rich-doc h2 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    line-height: 1.3;
+    color: var(--color-ink);
+    margin: 1.75rem 0 0.75rem;
+  }
+  .rich-doc h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    line-height: 1.35;
+    color: var(--color-ink);
+    margin: 1.25rem 0 0.6rem;
+  }
+  .rich-doc h4,
+  .rich-doc h5,
+  .rich-doc h6 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    margin: 1rem 0 0.5rem;
+  }
+  .rich-doc p {
+    margin: 0.75rem 0;
+    line-height: 1.85;
+  }
+  .rich-doc ul,
+  .rich-doc ol {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+  }
+  .rich-doc ul {
+    list-style: disc;
+  }
+  .rich-doc ol {
+    list-style: decimal;
+  }
+  .rich-doc li {
+    margin: 0.3rem 0;
+    line-height: 1.7;
+  }
+  .rich-doc a {
+    color: var(--color-sea);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .rich-doc img {
+    margin: 1rem 0;
+    border-radius: 1rem;
+    height: auto;
+    max-width: 100%;
+  }
+  .rich-doc blockquote {
+    margin: 1rem 0;
+    border-left: 3px solid var(--color-sea);
+    padding: 0.25rem 0 0.25rem 1rem;
+    font-style: italic;
+  }
+  .rich-doc table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  .rich-doc th,
+  .rich-doc td {
+    border: 1px solid var(--color-ink-soft);
+    padding: 0.5rem 0.75rem;
+  }
+  .rich-doc th {
+    background: var(--color-sand-deep);
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  .rich-doc hr {
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid var(--color-ink-soft);
+  }
+  .rich-doc pre {
+    background: var(--color-sand-deep);
+    padding: 1rem;
+    border-radius: 0.75rem;
+    overflow-x: auto;
+  }
+</style>
