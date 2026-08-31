@@ -1,0 +1,199 @@
+{
+  "count": 27,
+  "order": [
+    "song-ngu-lac-hong",
+    "formosa",
+    "bv-da-khoa-dong-nai",
+    "cong-ty-le-tuyen",
+    "giay-sai-gon",
+    "viettel",
+    "truong-chinh-tri-tinh-dong-nai",
+    "cong-ty-thach-hien",
+    "fc-viet-nam",
+    "chuyenweb-net",
+    "towa",
+    "igc",
+    "great-veca",
+    "san-lim-furniture",
+    "posco-vst",
+    "vnpt",
+    "ocb",
+    "dragon",
+    "dongjin-textile-vina",
+    "gonsa",
+    "ba-loc-dong-nai",
+    "vietnam-rubber",
+    "kat",
+    "daifuco",
+    "mcredit",
+    "azenca",
+    "lhu"
+  ],
+  "items": {
+    "song-ngu-lac-hong": {
+      "name": "SONG NGỮ LẠC HỒNG",
+      "website": "https://lhbs.edu.vn/",
+      "image": "/content/vi/images/partners/song-ngu-lac-hong.png",
+      "slug": "song-ngu-lac-hong"
+    },
+    "formosa": {
+      "name": "FORMOSA",
+      "website": "https://www.fic.com.vn/",
+      "image": "/content/vi/images/partners/formosa.png",
+      "slug": "formosa"
+    },
+    "bv-da-khoa-dong-nai": {
+      "name": "BV ĐA KHOA ĐỒNG NAI",
+      "website": "https://benhviendakhoadongnai.com/",
+      "image": "/content/vi/images/partners/bv-da-khoa-dong-nai.png",
+      "slug": "bv-da-khoa-dong-nai"
+    },
+    "cong-ty-le-tuyen": {
+      "name": "CÔNG TY LÊ TUYÊN",
+      "website": "https://cokhiletuyen.com/",
+      "image": "/content/vi/images/partners/cong-ty-le-tuyen.png",
+      "slug": "cong-ty-le-tuyen"
+    },
+    "giay-sai-gon": {
+      "name": "GIẤY SÀI GÒN",
+      "website": "https://saigonpaper.com/",
+      "image": "/content/vi/images/partners/giay-sai-gon.png",
+      "slug": "giay-sai-gon"
+    },
+    "viettel": {
+      "name": "VIETTEL",
+      "website": "https://vietteltelecom.vn/vx/",
+      "image": "/content/vi/images/partners/viettel.png",
+      "slug": "viettel"
+    },
+    "truong-chinh-tri-tinh-dong-nai": {
+      "name": "TRƯỜNG CHÍNH TRỊ TỈNH ĐỒNG NAI",
+      "website": "https://truongchinhtri.dongnai.gov.vn/Pages/home.aspx",
+      "image": "/content/vi/images/partners/truong-chinh-tri-tinh-dong-nai.png",
+      "slug": "truong-chinh-tri-tinh-dong-nai"
+    },
+    "cong-ty-thach-hien": {
+      "name": "CÔNG TY THẠCH HIỂN",
+      "website": "https://thachhien.com/",
+      "image": "/content/vi/images/partners/cong-ty-thach-hien.png",
+      "slug": "cong-ty-thach-hien"
+    },
+    "fc-viet-nam": {
+      "name": "FC VIỆT NAM",
+      "website": "https://thuvienphapluat.vn/ma-so-thue/cong-ty-trach-nhiem-huu-han-fc-viet-nam-mst-3600240432.html",
+      "image": "/content/vi/images/partners/fc-viet-nam.png",
+      "slug": "fc-viet-nam"
+    },
+    "chuyenweb-net": {
+      "name": "ChuyenWeb.Net",
+      "website": "http://chuyenweb.net/",
+      "image": "/content/vi/images/partners/chuyenweb-net.jpg",
+      "slug": "chuyenweb-net"
+    },
+    "towa": {
+      "name": "TOWA",
+      "website": "https://towa.com.vn/",
+      "image": "/content/vi/images/partners/towa.png",
+      "slug": "towa"
+    },
+    "igc": {
+      "name": "IGC",
+      "website": "https://igc.edu.vn/",
+      "image": "/content/vi/images/partners/igc.png",
+      "slug": "igc"
+    },
+    "great-veca": {
+      "name": "Công Ty TNHH Great Veca",
+      "website": "https://www.yellowpages.vn/lgs/709956/great-veca-cong-ty-tnhh-great-veca.html",
+      "image": "",
+      "slug": "great-veca"
+    },
+    "san-lim-furniture": {
+      "name": "Công ty TNHH San Lim Furniture",
+      "website": "",
+      "image": "/content/vi/images/partners/san-lim-furniture.png",
+      "slug": "san-lim-furniture"
+    },
+    "posco-vst": {
+      "name": "Công ty POSCO VST",
+      "website": "",
+      "image": "/content/vi/images/partners/posco-vst.jpeg",
+      "slug": "posco-vst"
+    },
+    "vnpt": {
+      "name": "VNPT",
+      "website": "",
+      "image": "/content/vi/images/partners/vnpt.png",
+      "slug": "vnpt"
+    },
+    "ocb": {
+      "name": "OCB",
+      "website": "",
+      "image": "/content/vi/images/partners/ocb.png",
+      "slug": "ocb"
+    },
+    "dragon": {
+      "name": "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ DRAGON",
+      "website": "",
+      "image": "/content/vi/images/partners/dragon.png",
+      "slug": "dragon"
+    },
+    "dongjin-textile-vina": {
+      "name": "Công ty TNHH DongJin Textile Vina",
+      "website": "",
+      "image": "/content/vi/images/partners/dongjin-textile-vina.jpg",
+      "slug": "dongjin-textile-vina"
+    },
+    "gonsa": {
+      "name": "CÔNG TY CỔ PHẦN GONSA",
+      "website": "",
+      "image": "/content/vi/images/partners/gonsa.png",
+      "slug": "gonsa"
+    },
+    "ba-loc-dong-nai": {
+      "name": "Công ty Bá Lộc Đồng Nai",
+      "website": "",
+      "image": "/content/vi/images/partners/ba-loc-dong-nai.jpeg",
+      "slug": "ba-loc-dong-nai"
+    },
+    "vietnam-rubber": {
+      "name": "Công ty Vietnam Rubber",
+      "website": "",
+      "image": "/content/vi/images/partners/vietnam-rubber.png",
+      "slug": "vietnam-rubber"
+    },
+    "kat": {
+      "name": "KAT",
+      "website": "",
+      "image": "/content/vi/images/partners/kat.png",
+      "slug": "kat"
+    },
+    "daifuco": {
+      "name": "DAIFUCO",
+      "website": "",
+      "image": "/content/vi/images/partners/daifuco.png",
+      "slug": "daifuco"
+    },
+    "mcredit": {
+      "name": "MCREDIT",
+      "website": "",
+      "image": "/content/vi/images/partners/mcredit.png",
+      "slug": "mcredit"
+    },
+    "azenca": {
+      "name": "Azenca",
+      "website": "",
+      "image": "/content/vi/images/partners/azenca.png",
+      "slug": "azenca"
+    },
+    "lhu": {
+      "name": "LHU",
+      "website": "",
+      "image": "/content/vi/images/partners/lhu.png",
+      "slug": "lhu"
+    }
+  },
+  "list_title": "Đối tác của chúng tôi",
+  "list_text": "Những đơn vị, tổ chức tin tưởng đồng hành cùng TodayTourist trên mọi hành trình.",
+  "body_html": "<p>Các đơn vị, tổ chức tin tưởng lựa chọn và đồng hành cùng TodayTourist.</p>"
+}

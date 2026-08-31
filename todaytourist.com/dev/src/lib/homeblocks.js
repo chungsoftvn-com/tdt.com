@@ -60,14 +60,18 @@ export const HOME_BLOCK_TYPES = {
     label: 'Kêu gọi hành động (CTA)',
     fields: ['cta_kicker', 'cta_title', 'cta_text', 'cta_button'],
   },
+  partners: {
+    label: 'Đối tác (slider logo tự chạy)',
+    fields: ['partners_title', 'partners_text'],
+  },
   custom: {
-    label: 'Khối tự do (SunEditor)',
+    label: 'Khối tự do',
     fields: [],
   },
 };
 
 /** Thứ tự mặc định của các khối chuẩn. */
-export const HOME_BLOCK_ORDER = ['hero', 'about', 'services', 'stats', 'hot', 'values', 'cta'];
+export const HOME_BLOCK_ORDER = ['hero', 'about', 'services', 'stats', 'hot', 'values', 'partners', 'cta'];
 
 /** Danh sách khối mặc định (dùng khi home.json chưa có home_blocks). */
 export const DEFAULT_HOME_BLOCKS = HOME_BLOCK_ORDER.map((type, i) => ({
@@ -137,4 +141,7 @@ export const HOME_BLOCK_FIELD_LABELS = {
   cta_title: 'Tiêu đề',
   cta_text: 'Mô tả',
   cta_button: 'Nhãn nút',
+
+  partners_title: 'Tiêu đề (mặc định: Đối tác)',
+  partners_text: 'Mô tả nhỏ (để trống nếu không cần)',
 };

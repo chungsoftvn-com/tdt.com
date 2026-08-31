@@ -1,5 +1,5 @@
 /**
- * sunblocks.js — WYSIWYG (SunEditor) <-> content[] blocks converter.
+ * sunblocks.js — WYSIWYG <-> content[] blocks converter.
  *
  * Lưu trữ VẪN là mảng block `content[]` ({type: p|h2|h3|img|list}) để worker,
  * translate.py, RichContent và bản EN giữ nguyên. SunEditor chỉ là mặt nạ

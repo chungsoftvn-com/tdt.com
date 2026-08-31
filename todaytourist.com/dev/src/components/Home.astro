@@ -15,6 +15,7 @@ import Services from './Services.astro';
 import Stats from './Stats.astro';
 import Values from './Values.astro';
 import CTABand from './CTABand.astro';
+import PartnersSlider from './PartnersSlider.astro';
 import ToursGrid from './ToursGrid.astro';
 import SectionHeading from './SectionHeading.astro';
 import Icon from './Icon.astro';
@@ -25,6 +26,7 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = getContent(lang, 'home');
+const c = getContent(lang, 'common');
 const tours = getTours(lang);
 const hotSlugs = Array.isArray(t.hot_tours) ? t.hot_tours : [];
 const hotTours = hotSlugs.length ? tours.filter((x) => hotSlugs.includes(x.slug)) : tours.slice(0, 6);
@@ -73,6 +75,8 @@ const blocks = (Array.isArray(t.home_blocks) && t.home_blocks.length
           );
         case 'values':
           return <Values lang={lang} />;
+        case 'partners':
+          return <PartnersSlider lang={lang} />;
         case 'cta':
           return <CTABand lang={lang} />;
         case 'custom':
@@ -85,6 +89,18 @@ const blocks = (Array.isArray(t.home_blocks) && t.home_blocks.length
           return null;
       }
     })
+  }
+
+  <!-- Tư vấn & Kinh doanh (như web cũ) -->
+  {
+    c.sales_title && (
+      <section class="border-t border-ink/5 bg-sand px-5 py-12">
+        <div class="mx-auto max-w-6xl text-center">
+          <h2 class="font-display text-2xl text-ink">{c.sales_title}</h2>
+          <div class="rich-doc mx-auto mt-4 max-w-2xl" set:html={richDoc(c.sales_body_html)} />
+        </div>
+      </section>
+    )
   }
 </BaseLayout>
 

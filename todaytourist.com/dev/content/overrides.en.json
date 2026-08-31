@@ -105,6 +105,8 @@
   "home/cta_title": "Ready for your next journey?",
   "home/cta_text": "Contact the TodayTourist team today for free consultation and the best deals.",
   "home/cta_button": "Contact now",
+  "home/partners_title": "Our partners",
+  "home/partners_text": "Trusted partners traveling with TodayTourist.",
 
   "about/title": "About us",
   "about/hero_kicker": "About us",
@@ -198,6 +200,32 @@
   "tours/tour_11_name": "China Tour 5D4N",
   "tours/tour_11_desc": "The vast Middle Kingdom — glittering Shanghai, classical Suzhou gardens and grand Chinese cuisine.",
   "tours/tour_11_highlights": "Shanghai Lujiazui|Suzhou classical gardens|Chinese cuisine|Round-trip flights",
+
+  "common/nav_recruit": "Careers",
+  "common/nav_directions": "Directions",
+  "common/tour_terms_title": "Terms & Notes",
+  "common/tour_terms_body": "<p>🔹 Prices apply to Vietnamese national guests, groups of 20 guests or more.<br/>🔹 A deposit of 30–50% is required at registration; the balance is due before departure.<br/>🔹 Itineraries may be adjusted flexibly according to actual conditions.<br/>🔹 Please take care of your personal belongings.<br/>🔹 In case of force majeure, the company will arrange the most suitable alternative.</p>",
+  "common/sales_title": "Consulting & Sales",
+  "common/sales_body_html": "<p><strong>Domestic &amp; international travel sales desk:</strong><br/>Mr. Sang – 0913.787.647<br/>Mr. Hoang Linh – 0933.92.49.79<br/>Mr. Quoc Hao – 0835.082.129<br/>Mr. Anh Van – 0902.898.726<br/>Ms. Thanh Thuy – 0937.001.448</p>",
+
+  "testimonials/back_label": "Back to list",
+  "testimonials/read_more": "Read more",
+
+  "tim-tour/title": "Find tour",
+  "tim-tour/kind_all": "Tour type",
+  "tim-tour/kind_domestic": "Domestic tour",
+  "tim-tour/kind_international": "International tour",
+  "tim-tour/region_all": "Region",
+  "tim-tour/departure_all": "Departure point",
+  "dat-tour/title": "Book a tour",
+  "dat-tour/sec_contact": "Contact information",
+  "dat-tour/kind_domestic": "Domestic tour",
+  "dat-tour/kind_international": "International tour",
+  "tuyen-dung/title": "Careers",
+  "chi-duong/title": "Directions",
+  "chi-duong/body_html": "<h2>TODAYTOURIST TRAVEL COMPANY</h2><p><strong>Address:</strong> No. 80 Dang Nguyen, Quarter 29, Long Binh Ward, Bien Hoa City, Dong Nai, Vietnam<br/><strong>Phone:</strong> 0913.78.76.47<br/><strong>Email:</strong> lesangtravel@gmail.com</p><h2>Location on the map</h2><p>Below is the map showing the location of the TodayTourist office. We are always happy to welcome you.</p><div class=\"map-wrap\"><iframe src=\"https://www.google.com/maps/embed/v1/search?key=AIzaSyAV7CTt-PBV4OUvHpexeytB-vbtGKG-OaE&amp;q=C%C3%B4ng%20ty%20TNHH%20Du%20l%E1%BB%8Bch%20Ng%C3%A0y%20H%C3%B4m%20Nay%20(Todaytourist)&amp;zoom=16\" width=\"100%\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" title=\"TodayTourist office map\"></iframe></div>",
+  "tuyen-dung/body_html": "<h2>Work at TodayTourist</h2><p>TodayTourist is regularly hiring for the following positions: travel sales staff, tour guide, tour operator, and travel driver.</p><p>Interested candidates please send your CV by email or contact us directly:</p><p><strong>📧 Email:</strong> lesangtravel@gmail.com<br/><strong>📞 Phone:</strong> 0913.78.76.47</p><p>Office address: No. 80 Dang Nguyen, Quarter 29, Long Binh Ward, Bien Hoa City, Dong Nai, Vietnam.</p>",
+
   "common/footer_offer": "",
   "common/footer_credit": "Website designed & developed by chungsoftvn — Zalo: +84 36 746 5221"
 }

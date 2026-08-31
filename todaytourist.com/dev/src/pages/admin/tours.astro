@@ -37,6 +37,10 @@ import AdminLayout from '@/components/AdminLayout.astro';
           <input id="f-region-name" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" placeholder="Miền Tây" />
         </div>
         <div>
+          <label class="mb-1 block text-sm font-medium text-ink-soft" for="f-departure">Nơi khởi hành</label>
+          <input id="f-departure" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" placeholder="Biên Hòa / TP.HCM" />
+        </div>
+        <div>
           <label class="mb-1 block text-sm font-medium text-ink-soft" for="f-duration">Thời gian</label>
           <input id="f-duration" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" placeholder="2 ngày 2 đêm" />
         </div>
@@ -117,6 +121,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
     $('f-slug').value = t?.slug || '';
     $('f-region').value = t?.region || 'domestic';
     $('f-region-name').value = t?.region_name || '';
+    $('f-departure').value = t?.departure || '';
     $('f-duration').value = t?.duration || '';
     $('f-price').value = t?.price || '';
     $('f-desc').value = t?.desc || '';
@@ -167,6 +172,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
         slug: $('f-slug').value.trim() || undefined,
         region: $('f-region').value,
         region_name: $('f-region-name').value.trim(),
+        departure: $('f-departure').value.trim(),
         duration: $('f-duration').value.trim(),
         price: $('f-price').value.trim(),
         desc: $('f-desc').value.trim(),

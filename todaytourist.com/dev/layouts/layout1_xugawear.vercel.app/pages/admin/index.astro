@@ -36,6 +36,22 @@ import AdminLayout from '@/components/AdminLayout.astro';
         <p class="font-display text-xl text-ink">Quản lý Trang</p>
         <p class="mt-1 text-sm text-ink-soft">Sửa trang chủ, giới thiệu, liên hệ + menu + header/footer</p>
       </a>
+      <a href="/admin/testimonials" class="rounded-2xl bg-paper p-6 shadow-[var(--shadow-lift-1)] transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift-2)]">
+        <p class="font-display text-xl text-ink">Ý kiến khách hàng</p>
+        <p class="mt-1 text-sm text-ink-soft">Thêm, sửa, xoá ảnh + cảm nhận khách hàng</p>
+      </a>
+      <a href="/admin/partners" class="rounded-2xl bg-paper p-6 shadow-[var(--shadow-lift-1)] transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift-2)]">
+        <p class="font-display text-xl text-ink">Đối tác</p>
+        <p class="mt-1 text-sm text-ink-soft">Thêm, sửa, xoá đối tác</p>
+      </a>
+      <a href="/admin/bookings" class="rounded-2xl bg-paper p-6 shadow-[var(--shadow-lift-1)] transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift-2)]">
+        <p class="font-display text-xl text-ink">Yêu cầu đặt tour</p>
+        <p class="mt-1 text-sm text-ink-soft">Danh sách khách đặt tour trên website</p>
+      </a>
+    </div>
+    <div id="booking-alert" class="mt-6 hidden rounded-2xl border border-sea/40 bg-sea-pale/50 p-4">
+      <p id="booking-alert-text" class="text-sm font-semibold text-sea-deep"></p>
+      <a href="/admin/bookings" class="mt-2 inline-block text-sm font-semibold text-sea underline underline-offset-2">Xem yêu cầu đặt tour</a>
     </div>
     <p class="mt-6 text-center text-xs text-ink-soft">
       Nội dung publish sẽ được commit vào repo
@@ -63,9 +79,28 @@ import AdminLayout from '@/components/AdminLayout.astro';
       dashView.classList.remove('hidden');
       $('dash-email').textContent = 'Đã đăng nhập thành công.';
       $('dash-repo').textContent = ADMIN_GITHUB_REPO;
+      await refreshBookingsAlert();
     } else {
       loginView.classList.remove('hidden');
       dashView.classList.add('hidden');
+    }
+  }
+
+  // Thông báo cho admin khi có khách đặt tour: đếm yêu cầu chưa xem.
+  async function refreshBookingsAlert() {
+    const alert = $('booking-alert');
+    try {
+      const r = await api('GET', '/bookings');
+      if (!r.data?.ok) return;
+      const unread = (r.data.bookings || []).filter((b) => b.status !== 'read').length;
+      if (unread > 0) {
+        $('booking-alert-text').textContent = `📩 Có ${unread} yêu cầu đặt tour mới từ khách hàng.`;
+        alert.classList.remove('hidden');
+      } else {
+        alert.classList.add('hidden');
+      }
+    } catch {
+      alert.classList.add('hidden');
     }
   }
 

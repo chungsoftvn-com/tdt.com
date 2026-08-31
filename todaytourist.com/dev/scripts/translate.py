@@ -232,6 +232,9 @@ def walk(obj, key, translator, overrides, file_key):
     if isinstance(obj, list):
         return [walk(v, key, translator, overrides, file_key) for v in obj]
     if isinstance(obj, str):
+        # Tên đối tác / khách hàng / org / website là danh từ riêng — giữ nguyên.
+        if file_key in ("testimonials", "partners") and key in ("name", "org", "website"):
+            return obj
         # body_html + mọi khối HTML (block_*, footer_*_body): dịch text, giữ tag/style
         if key == "body_html" or re.search(r"<[a-zA-Z][^>]*>", obj):
             translated = translate_html(translator, obj)

@@ -1,0 +1,17 @@
+{
+  "title": "Find tour",
+  "text": "Search for suitable tours after name, type of tour and departure.",
+  "search_placeholder": "Enter tour name, destination...",
+  "type_label": "Tour Type",
+  "type_all": "All Kind of Tour",
+  "departure_label": "Launch site",
+  "departure_all": "Departure point",
+  "no_result": "No matching tour was found.",
+  "result_count": "Tour",
+  "body_html": "<p>Enter the key word, select the type of tour, area or starting site for a journey that suits you.</p>",
+  "kind_all": "Tour type",
+  "kind_domestic": "Domestic tour",
+  "kind_international": "International tour",
+  "region_all": "Region",
+  "dest_placeholder": "Destination"
+}

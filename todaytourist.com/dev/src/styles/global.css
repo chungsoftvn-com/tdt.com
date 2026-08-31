@@ -116,4 +116,67 @@
   .filter-chip.is-active span {
     @apply bg-white/20 text-white;
   }
+
+  /* Header: item menu bị ẩn khi quá dài (gom vào nút "•••") */
+  .tt-hidden {
+    display: none !important;
+  }
+
+  /* Slider logo đối tác (trang chủ) — ẩn scrollbar, 6/5/3/2 ảnh mỗi màn hình */
+  .tt-partners-viewport {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .tt-partners-viewport::-webkit-scrollbar {
+    display: none;
+  }
+  .tt-partners-track {
+    display: flex;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+  .tt-partners-item {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  @media (min-width: 640px) {
+    .tt-partners-item { width: 33.3333%; }
+  }
+  @media (min-width: 900px) {
+    .tt-partners-item { width: 25%; }
+  }
+  @media (min-width: 1024px) {
+    .tt-partners-item { width: 20%; }
+  }
+  @media (min-width: 1280px) {
+    .tt-partners-item { width: 16.6667%; }
+  }
+  .tt-partners-logo {
+    filter: grayscale(35%);
+    transition: filter 0.3s;
+  }
+  .tt-partners-item:hover .tt-partners-logo {
+    filter: grayscale(0%);
+  }
+
+  /* Nội dung HTML admin soạn (rich text từ SunEditor) */
+  .rich-doc {
+    @apply leading-relaxed text-ink;
+  }
+  .rich-doc h1, .rich-doc h2, .rich-doc h3, .rich-doc h4 {
+    @apply mt-4 mb-2 font-display text-ink;
+  }
+  .rich-doc h1 { @apply text-2xl; }
+  .rich-doc h2 { @apply text-xl; }
+  .rich-doc h3 { @apply text-lg; }
+  .rich-doc p { @apply my-2; }
+  .rich-doc ul { @apply my-2 list-disc pl-6; }
+  .rich-doc ol { @apply my-2 list-decimal pl-6; }
+  .rich-doc a { @apply text-sea-deep underline; }
+  .rich-doc img { @apply mx-auto my-3 max-w-full rounded-xl; }
+  .rich-doc iframe { @apply my-3 w-full rounded-xl; aspect-ratio: 16/9; border: 0; }
+  .rich-doc table { @apply my-3 w-full border-collapse; }
+  .rich-doc table td, .rich-doc table th { @apply border border-ink/15 px-3 py-2; }
+  .rich-doc blockquote { @apply my-3 border-l-4 border-sea px-4 py-2 text-ink-soft italic; }
 }

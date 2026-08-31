@@ -1,5 +1,5 @@
 /**
- * rich.js — sanitize HTML an toàn cho render WYSIWYG (SunEditor) qua set:html.
+ * rich.js — sanitize HTML an toàn cho render WYSIWYG qua set:html.
  * Dùng cho các field "wysiwyg" ở Quản lý Trang (footer/header/giới thiệu/liên hệ).
  *
  * Module nằm trong src/lib/ nên KHÔNG bị copyLayout ghi đè (an toàn).
@@ -33,11 +33,12 @@ export function richDoc(html) {
       'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
       'blockquote', 'pre', 'hr',
       'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td',
-      'img', 'div',
+      'img', 'div', 'iframe',
     ],
     allowedAttributes: {
       a: ['href', 'target', 'rel', 'style'],
       img: ['src', 'alt', 'style'],
+      iframe: ['src', 'width', 'height', 'style', 'loading', 'title', 'frameborder', 'allowfullscreen'],
       span: ['style'],
       div: ['style'],
       p: ['style'],

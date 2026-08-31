@@ -15,8 +15,14 @@ const nav = [
   { key: 'nav_home', url: href(lang) },
   { key: 'nav_about', url: href(lang, 'about') },
   { key: 'nav_tours', url: href(lang, 'tours') },
+  { key: 'nav_find_tour', url: href(lang, 'tim-tour') },
+  { key: 'nav_book', url: href(lang, 'dat-tour') },
+  { key: 'nav_testimonials', url: href(lang, 'y-kien-khach-hang') },
+  { key: 'nav_partners', url: href(lang, 'doi-tac') },
   { key: 'nav_news', url: href(lang, 'tin-tuc') },
   { key: 'nav_contact', url: href(lang, 'contact') },
+  { key: 'nav_recruit', url: href(lang, 'tuyen-dung') },
+  { key: 'nav_directions', url: href(lang, 'chi-duong') },
 ];
 
 const isActive = (url: string) => {
@@ -36,101 +42,123 @@ const viLink = langHref('vi', current);
 const enLink = langHref('en', current);
 ---
 
-<header class="sticky top-0 z-50 border-b border-ink/10 bg-sand/85 backdrop-blur-md">
-  <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3">
-    <!-- Brand -->
-    <a href={href(lang)} class="group flex shrink-0 items-center gap-2.5" aria-label={t.brand_name}>
-      <img
-        src="/content/vi/images/logo.webp"
-        alt={t.brand_name}
-        width="74"
-        height="80"
-        loading="lazy"
-        decoding="async"
-        class="h-11 w-auto transition-transform duration-300 group-hover:scale-105"
-      />
-      <span class="leading-none">
-        <span class="block font-display text-lg font-semibold tracking-wide text-ink">
-          {t.brand_name}
+<header class="sticky top-0 z-50 bg-sand/90 backdrop-blur-md">
+  <!-- Hàng 1: chỉ còn brand + nút VI/EN + nút menu mobile -->
+  <div class="border-b border-ink/10">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3">
+      <a href={href(lang)} class="group flex shrink-0 items-center gap-2.5" aria-label={t.brand_name}>
+        <img
+          src="/content/vi/images/logo.webp"
+          alt={t.brand_name}
+          width="74"
+          height="80"
+          loading="lazy"
+          decoding="async"
+          class="h-11 w-auto transition-transform duration-300 group-hover:scale-105"
+        />
+        <span class="leading-none">
+          <span class="block font-display text-lg font-semibold tracking-wide text-ink">
+            {t.brand_name}
+          </span>
+          <span class="block text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-ink-soft">
+            {t.brand_tagline}
+          </span>
         </span>
-        <span class="block text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-ink-soft">
-          {t.brand_tagline}
-        </span>
-      </span>
-    </a>
+      </a>
 
-    <!-- Desktop nav -->
-    <nav aria-label="Primary" class="hidden lg:block">
-      <ul class="flex items-center gap-1">
-        {
-          nav.map((item) => (
-            <li>
-              <a
-                href={item.url}
-                aria-current={isActive(item.url) ? 'page' : undefined}
-                class="relative rounded-full px-3.5 py-2 text-sm font-medium text-ink-soft transition-colors duration-200 hover:text-ink aria-[current=page]:text-ink"
-              >
-                {t[item.key]}
-                {
-                  isActive(item.url) && (
-                    <span class="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent" />
-                  )
-                }
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
+      <div class="flex items-center gap-2">
+        <!-- Language switcher (keeps you on the same page) -->
+        <div class="flex items-center rounded-full border border-ink/10 bg-paper p-1 text-xs font-bold">
+          <a
+            href={viLink}
+            lang="vi"
+            title={t.lang_vi}
+            class={
+              lang === 'vi'
+                ? 'rounded-full bg-sea px-2.5 py-1 text-white'
+                : 'rounded-full px-2.5 py-1 text-ink-soft transition-colors hover:text-ink'
+            }
+          >
+            {t.lang_code_vi}
+          </a>
+          <a
+            href={enLink}
+            lang="en"
+            title={t.lang_en}
+            class={
+              lang === 'en'
+                ? 'rounded-full bg-sea px-2.5 py-1 text-white'
+                : 'rounded-full px-2.5 py-1 text-ink-soft transition-colors hover:text-ink'
+            }
+          >
+            {t.lang_code_en}
+          </a>
+        </div>
 
-    <div class="flex items-center gap-2">
-      <!-- Language switcher (keeps you on the same page) -->
-      <div class="flex items-center rounded-full border border-ink/10 bg-paper p-1 text-xs font-bold">
-        <a
-          href={viLink}
-          lang="vi"
-          title={t.lang_vi}
-          class={
-            lang === 'vi'
-              ? 'rounded-full bg-sea px-2.5 py-1 text-white'
-              : 'rounded-full px-2.5 py-1 text-ink-soft transition-colors hover:text-ink'
-          }
+        <!-- Mobile menu button -->
+        <button
+          type="button"
+          data-mobile-toggle
+          aria-label={t.nav_home}
+          aria-expanded="false"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 bg-paper text-ink lg:hidden"
         >
-          {t.lang_code_vi}
-        </a>
-        <a
-          href={enLink}
-          lang="en"
-          title={t.lang_en}
-          class={
-            lang === 'en'
-              ? 'rounded-full bg-sea px-2.5 py-1 text-white'
-              : 'rounded-full px-2.5 py-1 text-ink-soft transition-colors hover:text-ink'
-          }
-        >
-          {t.lang_code_en}
-        </a>
+          <span data-menu-icon-open><Icon name="menu" class="h-5 w-5" /></span>
+          <span data-menu-icon-close class="hidden"><Icon name="close" class="h-5 w-5" /></span>
+        </button>
       </div>
+    </div>
+  </div>
+
+  <!-- Hàng 2: thanh menu desktop (nằm DƯỚI header) — 1 hàng, tràn thì gom vào "..." -->
+  <div class="hidden border-b border-ink/10 bg-sand-deep/70 lg:block">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5">
+      <nav data-nav aria-label="Primary" class="min-w-0 flex-1 overflow-hidden">
+        <ul data-nav-list class="flex items-center">
+          {
+            nav.map((item) => (
+              <li class="tt-nav-item shrink-0">
+                <a
+                  href={item.url}
+                  aria-current={isActive(item.url) ? 'page' : undefined}
+                  class="relative block whitespace-nowrap px-3 py-3 text-[0.82rem] font-medium leading-none text-ink-soft transition-colors duration-200 hover:text-ink aria-[current=page]:text-ink"
+                >
+                  {t[item.key]}
+                  {
+                    isActive(item.url) && (
+                      <span class="absolute inset-x-3 bottom-0 h-0.5 rounded-full bg-accent" />
+                    )
+                  }
+                </a>
+              </li>
+            ))
+          }
+          <!-- Nút "..." khi menu quá dài -->
+          <li data-nav-more-item class="tt-nav-more relative shrink-0">
+            <button
+              type="button"
+              data-nav-more
+              aria-label="Xem thêm menu"
+              aria-expanded="false"
+              class="tt-hidden block px-3 py-3 text-sm font-bold tracking-widest text-ink-soft hover:text-ink"
+            >
+              •••
+            </button>
+            <div
+              data-nav-more-menu
+              class="tt-hidden absolute right-0 top-full z-50 w-60 rounded-2xl border border-ink/10 bg-paper p-2 shadow-[var(--shadow-lift-2)]"
+            ></div>
+          </li>
+        </ul>
+      </nav>
 
       <a
         href={`tel:${t.hotline.replace(/[^0-9]/g, '')}`}
-        class="hidden items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white shadow-[3px_3px_0_rgba(194,65,12,.25)] transition-transform duration-200 hover:scale-[1.03] active:scale-[0.97] md:inline-flex"
+        class="inline-flex shrink-0 items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-semibold text-white transition-transform duration-200 hover:scale-[1.03]"
       >
-        <Icon name="phone" class="h-4 w-4" />
+        <Icon name="phone" class="h-3.5 w-3.5" />
         {t.hotline}
       </a>
-
-      <!-- Mobile menu button -->
-      <button
-        type="button"
-        data-mobile-toggle
-        aria-label={t.nav_home}
-        aria-expanded="false"
-        class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 bg-paper text-ink lg:hidden"
-      >
-        <span data-menu-icon-open><Icon name="menu" class="h-5 w-5" /></span>
-        <span data-menu-icon-close class="hidden"><Icon name="close" class="h-5 w-5" /></span>
-      </button>
     </div>
   </div>
 
@@ -143,7 +171,7 @@ const enLink = langHref('en', current);
             <li>
               <a
                 href={item.url}
-                class={`block rounded-xl px-4 py-2.5 text-base font-medium ${
+                class={`block whitespace-nowrap rounded-xl px-4 py-2.5 text-base font-medium ${
                   isActive(item.url) ? 'bg-sea-pale text-sea-deep' : 'text-ink-soft'
                 }`}
               >
@@ -183,4 +211,67 @@ const enLink = langHref('en', current);
       iconClose?.classList.add('hidden');
     }),
   );
+
+  // Menu desktop 1 hàng: item quá dài bị gom vào nút "•••" -> drop down.
+  const navList = document.querySelector('[data-nav-list]');
+  const moreItem = document.querySelector('[data-nav-more-item]');
+  const moreBtn = document.querySelector('[data-nav-more]');
+  const moreMenu = document.querySelector('[data-nav-more-menu]');
+
+  function layoutNav() {
+    if (!navList || !moreBtn || !moreMenu || !moreItem) return;
+    const lis = Array.from(navList.children).filter((li) => li !== moreItem);
+    lis.forEach((li) => li.classList.remove('tt-hidden'));
+    moreBtn.classList.add('tt-hidden');
+    moreMenu.classList.add('tt-hidden');
+    moreMenu.innerHTML = '';
+    moreBtn.setAttribute('aria-expanded', 'false');
+    const gap = 4;
+    const avail = navList.clientWidth - 52; // dành chỗ cho nút •••
+    let used = 0;
+    const hidden = [];
+    for (const li of lis) {
+      used += li.offsetWidth + gap;
+      if (used > avail) {
+        hidden.push(li);
+        li.classList.add('tt-hidden');
+      }
+    }
+    if (hidden.length) {
+      moreBtn.classList.remove('tt-hidden');
+      hidden.forEach((li) => {
+        const a = li.querySelector('a');
+        if (!a) return;
+        const clone = a.cloneNode(true);
+        clone.classList.add('block', 'rounded-xl', 'px-3', 'py-2', 'text-sm', 'text-ink-soft');
+        clone.addEventListener('click', () => {
+          moreMenu.classList.add('tt-hidden');
+          moreBtn.setAttribute('aria-expanded', 'false');
+        });
+        moreMenu.appendChild(clone);
+      });
+    }
+  }
+
+  moreBtn?.addEventListener('click', () => {
+    const hidden = moreMenu.classList.toggle('tt-hidden');
+    moreBtn.setAttribute('aria-expanded', String(!hidden));
+  });
+  // Click ngoài thì đóng drop down
+  document.addEventListener('click', (e) => {
+    if (moreItem && !moreItem.contains(e.target)) {
+      moreMenu?.classList.add('tt-hidden');
+      moreBtn?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  window.addEventListener('resize', layoutNav);
+  layoutNav();
 </script>
+
+<style>
+  /* Item menu bị ẩn khi quá dài (gom vào nút "•••"). */
+  .tt-hidden {
+    display: none !important;
+  }
+</style>

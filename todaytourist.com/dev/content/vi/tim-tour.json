@@ -1,0 +1,17 @@
+{
+  "title": "Tìm tour",
+  "text": "Tìm kiếm tour phù hợp theo tên, loại tour và nơi khởi hành.",
+  "search_placeholder": "Nhập tên tour, điểm đến...",
+  "type_label": "Loại tour",
+  "type_all": "Tất cả loại tour",
+  "departure_label": "Nơi khởi hành",
+  "departure_all": "Điểm khởi hành",
+  "no_result": "Không tìm thấy tour phù hợp.",
+  "result_count": "tour",
+  "body_html": "<p>Nhập từ khóa, chọn loại tour, khu vực hoặc nơi khởi hành để tìm hành trình phù hợp với bạn.</p>",
+  "kind_all": "Loại tour",
+  "kind_domestic": "Tour trong nước",
+  "kind_international": "Tour nước ngoài",
+  "region_all": "Khu vực",
+  "dest_placeholder": "Điểm đến (nhập tên)"
+}

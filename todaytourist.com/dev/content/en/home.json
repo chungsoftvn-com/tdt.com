@@ -86,9 +86,16 @@
       "enabled": true
     },
     {
+      "id": "blk-partners",
+      "type": "partners",
+      "enabled": true
+    },
+    {
       "id": "blk-cta",
       "type": "cta",
       "enabled": true
     }
-  ]
+  ],
+  "partners_title": "Our partners",
+  "partners_text": "Trusted partners traveling with TodayTourist."
 }

@@ -10,7 +10,19 @@ import path from 'node:path';
 export const LANGS = ['vi', 'en'];
 export const DEFAULT_LANG = 'vi';
 /** Static sub-page slugs rendered by `[lang]/[page].astro`. */
-export const PAGE_SLUGS = ['about', 'tours', 'contact', 've-may-bay', 'cho-thue-xe'];
+export const PAGE_SLUGS = [
+  'about',
+  'tours',
+  'contact',
+  've-may-bay',
+  'cho-thue-xe',
+  'y-kien-khach-hang',
+  'doi-tac',
+  'dat-tour',
+  'tim-tour',
+  'tuyen-dung',
+  'chi-duong',
+];
 
 const cache = new Map();
 
@@ -59,6 +71,7 @@ function normalizeTour(t, slug) {
     name: t.name ?? '',
     region: t.region ?? 'domestic',
     regionName: t.region_name ?? '',
+    departure: t.departure ?? '',
     duration: t.duration ?? '',
     price: t.price ?? '',
     image: t.image ?? '',
@@ -126,4 +139,26 @@ export function getNewsItem(lang, slug) {
   const n = readArticle(lang, 'news', slug);
   if (!n) return null;
   return { ...n, content: Array.isArray(n.content) ? n.content : [] };
+}
+
+/** Ý kiến khách hàng: index { count, order, items }. Trả mảng theo thứ tự (kèm slug). */
+export function getTestimonials(lang) {
+  const d = getContent(lang, 'testimonials');
+  const order = Array.isArray(d.order) ? d.order : [];
+  const items = d.items && typeof d.items === 'object' ? d.items : {};
+  return order.map((slug) => (items[slug] ? { ...items[slug], slug } : null)).filter(Boolean);
+}
+
+/** Đọc 1 ý kiến khách hàng theo slug (null nếu không có). */
+export function getTestimonial(lang, slug) {
+  const items = getTestimonials(lang);
+  return items.find((x) => x.slug === slug) || null;
+}
+
+/** Đối tác: index { count, order, items }. Trả mảng theo thứ tự (kèm slug). */
+export function getPartners(lang) {
+  const d = getContent(lang, 'partners');
+  const order = Array.isArray(d.order) ? d.order : [];
+  const items = d.items && typeof d.items === 'object' ? d.items : {};
+  return order.map((slug) => (items[slug] ? { ...items[slug], slug } : null)).filter(Boolean);
 }

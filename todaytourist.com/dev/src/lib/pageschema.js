@@ -9,7 +9,7 @@ export const PAGE_SCHEMAS = {
     label: 'Trang chủ',
     file: 'home',
     // Trang chủ = danh sách khối (block). Admin thêm/xoá/ẩn/sắp xếp từng khối
-    // (blockManager) + tickbox chọn tour hot + khối tự do (SunEditor) chèn
+    // (blockManager) + tickbox chọn tour hot + khối tự do chèn
     // ở vị trí bất kỳ. Không còn "Chỉnh sửa HTML" nội dung chính.
     mode: 'homeBlocks',
     blockManager: true,
@@ -33,6 +33,55 @@ export const PAGE_SCHEMAS = {
     // Toàn bộ nội dung (ngoại trừ form) trong MỘT ô soạn thảo full-document duy nhất
     bodyKey: 'body_html',
     bodyLabel: 'Toàn bộ nội dung (một ô soạn thảo đầy đủ — như soạn tài liệu; không gồm form)',
+    fullEditor: true,
+    sections: [{ title: 'Toàn bộ nội dung', body: true }],
+  },
+
+  'tim-tour': {
+    label: 'Trang Tìm tour',
+    file: 'tim-tour',
+    bodyKey: 'body_html',
+    bodyLabel: 'Toàn bộ nội dung (một ô soạn thảo — text + ảnh)',
+    fullEditor: true,
+    sections: [{ title: 'Toàn bộ nội dung', body: true }],
+  },
+  'dat-tour': {
+    label: 'Trang Đặt tour',
+    file: 'dat-tour',
+    bodyKey: 'body_html',
+    bodyLabel: 'Toàn bộ nội dung (một ô soạn thảo — text + ảnh)',
+    fullEditor: true,
+    sections: [{ title: 'Toàn bộ nội dung', body: true }],
+  },
+  'y-kien-khach-hang': {
+    label: 'Trang Ý kiến khách hàng',
+    file: 'testimonials',
+    bodyKey: 'body_html',
+    bodyLabel: 'Toàn bộ nội dung (một ô soạn thảo — text + ảnh)',
+    fullEditor: true,
+    sections: [{ title: 'Toàn bộ nội dung', body: true }],
+  },
+  'doi-tac': {
+    label: 'Trang Đối tác',
+    file: 'partners',
+    bodyKey: 'body_html',
+    bodyLabel: 'Toàn bộ nội dung (một ô soạn thảo — text + ảnh)',
+    fullEditor: true,
+    sections: [{ title: 'Toàn bộ nội dung', body: true }],
+  },
+  'tuyen-dung': {
+    label: 'Trang Tuyển dụng',
+    file: 'tuyen-dung',
+    bodyKey: 'body_html',
+    bodyLabel: 'Toàn bộ nội dung (một ô soạn thảo — text + ảnh)',
+    fullEditor: true,
+    sections: [{ title: 'Toàn bộ nội dung', body: true }],
+  },
+  'chi-duong': {
+    label: 'Trang Chỉ đường',
+    file: 'chi-duong',
+    bodyKey: 'body_html',
+    bodyLabel: 'Toàn bộ nội dung (một ô soạn thảo — text + ảnh + bản đồ)',
     fullEditor: true,
     sections: [{ title: 'Toàn bộ nội dung', body: true }],
   },
@@ -68,6 +117,8 @@ export const PAGE_SCHEMAS = {
       { title: 'Cột truy cập nhanh', body: { key: 'footer_quick_body', label: 'Nội dung cột truy cập nhanh' } },
       { title: 'Cột liên hệ', body: { key: 'footer_contact_body', label: 'Nội dung cột liên hệ' } },
       { title: 'Cột mạng xã hội', body: { key: 'footer_social_body', label: 'Nội dung cột mạng xã hội' } },
+      { title: 'Điều khoản & Lưu ý tour', body: { key: 'tour_terms_body', label: 'Nội dung Điều khoản & Lưu ý (hiện ở trang chi tiết tour)' } },
+      { title: 'Tư vấn & Kinh doanh (trang chủ)', body: { key: 'sales_body_html', label: 'Nội dung mục Tư vấn & Kinh doanh' } },
     ],
   },
 };

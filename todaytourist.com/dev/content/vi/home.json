@@ -86,9 +86,16 @@
       "enabled": true
     },
     {
+      "id": "blk-partners",
+      "type": "partners",
+      "enabled": true
+    },
+    {
       "id": "blk-cta",
       "type": "cta",
       "enabled": true
     }
-  ]
+  ],
+  "partners_title": "Đối tác của chúng tôi",
+  "partners_text": "Những đơn vị đồng hành tin cậy cùng TodayTourist."
 }
