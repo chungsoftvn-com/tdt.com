@@ -1,7 +1,15 @@
 {
   "slug": "tour-phu-yen-quy-nhon-3-ngay-3-dem",
-  "name": "Thực đơn Set menu 6 món mặn + cơm trắng + tráng miệng + trà đá. Nhà hàng sang trọng, đảm bảo vệ sinh an toàn thực phẩm. (Set menu 10 người/ bàn).",
+  "name": "TOUR PHÚ YÊN - QUY NHƠN 3 NGÀY 3 ĐÊM",
+  "region": "domestic",
+  "region_name": "",
+  "departure": "Biên Hòa / TP.HCM",
+  "duration": "",
+  "price": "",
+  "image": "phu-yen-quy-nhon.png",
   "desc": "🚍 ĐƯA RƯỚC TẬN NƠI NỘI Ô TP. BIÊN HÒA 👨‍👩‍👧‍👦 Tour ghép đoàn hàng tuần – Khởi hành từ 10 khách",
+  "highlights": [],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -219,34 +227,5 @@
       "type": "p",
       "text": "❌ Chi phí cá nhân, café, mua sắm ngoài chương trình ❌ Thuế VAT (nếu xuất hóa đơn)"
     }
-  ],
-  "itinerary": [
-    {
-      "day": 1,
-      "title": "🌙 ĐÊM NGÀY 01: ĐỒNG NAI / TP.HCM – PHÚ YÊN",
-      "body": "⏰ 20h30 : Đội xe và HDV Todaytourist có mặt tại điểm đón làm quen với Trưởng đoàn và Quý khách\nXe đời mới Universe đời mới: ghế bật, cửa bung, máy lạnh suốt tuyến, Tivi LCD+DVD chuyên phục vụ du lịch…\n⏰ 21h00 : Khởi hành chuyến tham quan\n⏰ 20h30 : Đội xe và HDV Todaytourist có mặt tại điểm đón làm quen với Trưởng đoàn và Quý khách\nXe đời mới Universe đời mới: ghế bật, cửa bung, máy lạnh suốt tuyến, Tivi LCD+DVD chuyên phục vụ du lịch…\n⏰ 21h00 : Khởi hành chuyến tham quan\nMiền Đất Võ Bình Định – Quy Nhơn -Phú Yên Xứ sở của hoa vàng trên cỏ xanh\nQuý khách được nghe HDV giới thiệu và thuyết minh về các danh lam thắng cảnh trên đường đi.\nQuý khách tham gia chương trình đố vui & xổ số trên xe (có quà thưởng).\nQuà tặng của Todaytourist: Nón du lịch, nước suối 1 chai 1 ngày 550 ml, khăn lạnh."
-    },
-    {
-      "day": 2,
-      "title": "🌅 NGÀY 01: KHÁM PHÁ PHÚ YÊN",
-      "body": "⏰ 06h30: Quý khách đến với Phú Yên quý khách ghé nhà hàng vệ sinh cá nhân và dùng điểm tâm sáng .\nSau đó tiếp tục hành trình đi khám phá những địa điểm nổi tiếng tại Phú Yên\n⏰ 07h00 : Xe và HDV đưa đoàn đi tham quan địa điểm nổi tiếng không thể bỏ qua khi tới Phú Yên :\n⏰ 11h30 : Xe đưa đoàn về nhà hàng dùng cơm trưa. Sau đó xe tiếp tục đưa đoàn di chuyển tới TP. Quy Nhơn\n⏰ 14h00 : Xe và HDV đưa đoàn về khách sạn nhận phòng . Nghỉ ngơi và tự do tắm biển tại TP Quy Nhơn\n⏰ 16h00 : Xe và HDV đưa đoàn đi tham quan\n⏰ 18h00 : Đoàn di chuyển dung cơm tối tại nhà hàng .\n⏰ 20h00 : Xe và HDV đưa đoàn về khách sạn nghỉ ngơi. Qúy khách tự do khám phá Tp. Quy Nhơn về đêm"
-    },
-    {
-      "day": 3,
-      "title": "🌅 NGÀY 02: KỲ CO - EO GIÓ - TỊNH XÁ NGỌC HOÀNG",
-      "body": "⏰ 06h30 : Quý khách dùng điểm tâm sáng tại nhà hàng khách sạn buffee với các món Á – Âu tự chọn.\n⏰ 08h00 : Xe và HDV đưa đoàn đi tham quan\n⏰ 11h30 : Xe và HDV đưa đoàn đến với nhà hàng để dùng cơm trưa.\n⏰ 13h00 : Xe đưa đoàn di chuyển tham quan :\n⏰ 16h00 : Đoàn về khách sạn nghỉ ngơi, tự do tắm biển\n⏰ 18h00 : Xe đưa đoàn dùng cơm tối tại nhà hàng\n⏰ 20h00 : Xe và HDV đưa đoàn về khách sạn nghỉ ngơi. Qúy khách tự do khám phá Tp. Quy Nhơn về đêm"
-    },
-    {
-      "day": 4,
-      "title": "🌤️ NGÀY 03: GHỀNH RÁNG - ĐỒNG NAI.",
-      "body": "⏰ 06h30 : Quý khách dùng điểm tâm sáng tại nhà hàng khách sạn buffee với các món Á – Âu tự chọn.\n⏰ 08h00 : Đoàn di chuyển tham quan\n⏰ 11h30 : Xe đưa đoàn về nhà hàng dùng cơm trưa Trên đường về đoàn ghé mua sắm đặc sản\n⏰ 13h00: Trên đường về đoàn ghé mua sắm đặc sản làm quà cho người thân .\n⏰ 22h00 : Về đến ĐIỂM ĐÓN Chia tay Quý khách, hẹn ngày tái ngộ. Todaytourist xin chân thành cảm ơn sự quan tâm và hợp tác của Quý khách. Kính chúc Quý khách sức khỏe và thịnh vượng 👋"
-    }
-  ],
-  "region": "domestic",
-  "region_name": "",
-  "duration": "",
-  "price": "",
-  "image": "phu-yen-quy-nhon.png",
-  "highlights": [],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
