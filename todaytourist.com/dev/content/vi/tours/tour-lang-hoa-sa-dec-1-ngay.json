@@ -3,6 +3,7 @@
   "name": "Tour Làng Hoa Sa Đéc 1 Ngày",
   "region": "domestic",
   "region_name": "Miền Tây",
+  "departure": "Biên Hòa / TP.HCM",
   "duration": "1 ngày",
   "price": "780.000đ/khách",
   "image": "sa-dec.webp",
@@ -162,6 +163,5 @@
       "type": "p",
       "text": "❌ Chi phí cá nhân, mua sắm ngoài chương trình ❌ Thuế VAT (nếu xuất hóa đơn)"
     }
-  ],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
