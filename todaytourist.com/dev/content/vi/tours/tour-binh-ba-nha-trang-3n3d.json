@@ -1,7 +1,15 @@
 {
   "slug": "tour-binh-ba-nha-trang-3n3d",
   "name": "TOUR BÌNH BA – NHA TRANG 3 NGÀY 3 ĐÊM   ĐẢO TÔM HÙM BÌNH BA – BIỂN XANH NHA TRANG",
+  "region": "domestic",
+  "region_name": "",
+  "departure": "Biên Hòa / TP.HCM",
+  "duration": "3 ngày 3 đêm",
+  "price": "3390000",
+  "image": "binh-ba-nha-trang.png",
   "desc": "👨‍👩‍👧‍👦 Tour ghép đoàn hàng tuần – Khởi hành từ 10 khách 👉 Áp dụng cho khách lẻ | Gia đình | Nhóm bạn 👉 Nhận thiết kế tour riêng cho đoàn – doanh nghiệp – trường học - Cơ quan - Đoàn thể....",
+  "highlights": [],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -172,34 +180,5 @@
       "type": "p",
       "text": "❌ Chi phí cá nhân (ăn uống ngoài chương trình, giặt ủi, điện thoại…) ❌ Vé VinWonders / tour 3-4 đảo (Ngoài chương trình) ❌ Thuế VAT (nếu xuất hóa đơn)"
     }
-  ],
-  "itinerary": [
-    {
-      "day": 1,
-      "title": "🌙 ĐÊM 01 | BIÊN HÒA – CAM RANH",
-      "body": "🕘 21h00: Xe & HDV TodayTourist đón quý khách tại điểm hẹn 🚍 Khởi hành đi Cam Ranh 😴 Nghỉ đêm trên xe giường nằm/ghế ngả đời mới , máy lạnh suốt tuyến"
-    },
-    {
-      "day": 2,
-      "title": "🌅 NGÀY 01 | CAM RANH – ĐẢO BÌNH BA – BBQ HẢI SẢN",
-      "body": "🍜 Sáng: Đến Cam Ranh, vệ sinh cá nhân – ăn sáng đặc sản địa phương\n🚤 Di chuyển ra cảng Ba Ngòi , lên tàu sang Đảo Bình Ba\n🏨 Nhận phòng homestay/nhà nghỉ (hoặc gửi hành lý nếu chưa đến giờ)\n📍 Tham quan – trải nghiệm: 🌊 Bãi Nồm: Tắm biển nước trong xanh, sóng êm, bãi cát mịn\n🐠 Bãi Chướng / Bãi Nhà Cũ: Check-in, ngắm cảnh biển hoang sơ\n🍽️ 11h30: Dùng cơm trưa hải sản trên đảo 🌤️ Chiều: Tự do tắm biển – nghỉ ngơi – chụp hình\n🔥 TỐI: TIỆC BBQ HẢI SẢN ĐẢO 🦞 Tôm hùm Bình Ba – mực – nhum – ốc các loại\n🌙 Tự do dạo biển đêm, tận hưởng không khí yên bình của đảo"
-    },
-    {
-      "day": 3,
-      "title": "🌿 NGÀY 02 | BÌNH BA – NHA TRANG – CITY TOUR",
-      "body": "🌄 Sáng: Ngắm bình minh – ăn sáng – làm thủ tục trả phòng\n🚤 Tàu đưa đoàn về lại đất liền\n🚍 Khởi hành đi TP. Nha Trang 🍽️ Trưa: Ăn trưa tại nhà hàng\n🏨 Nhận phòng khách sạn – nghỉ ngơi 🌊 Tự do tắm biển Trần Phú\n📍 Tham quan : 🎭 NHÀ HÁT ĐÓ (Đó Theatre): Công trình kiến trúc tre độc đáo – biểu tượng văn hóa mới của Nha Trang (tham quan, check-in bên ngoài)\n🌙 Tối: Dùng bữa tối tại nhà hàng. Tự do tham quan chợ đêm Nha Trang , thưởng thức ẩm thực địa phương"
-    },
-    {
-      "day": 4,
-      "title": "🌞 NGÀY 03 | NHA TRANG – BIÊN HÒA",
-      "body": "🍽️ Sáng: Ăn sáng tại khách sạn ⏰ Tự do tắm biển – nghỉ ngơi\n📍 Tham quan Nha Trang: 🏛️ Tháp Bà Ponagar\n🗼 Nhà thờ Đá Nha Trang/Chùa Long Sơn\n🍽️ Trưa: Trả phòng – ăn trưa 🚍 Khởi hành về lại Biên Hòa 🕘 18h00 – 19h00: Về đến Biên Hòa – kết thúc chương trình"
-    }
-  ],
-  "region": "domestic",
-  "region_name": "",
-  "duration": "",
-  "price": "",
-  "image": "binh-ba-nha-trang.png",
-  "highlights": [],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
