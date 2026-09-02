@@ -1,7 +1,15 @@
 {
   "slug": "tour-cha-diep-me-nam-hai-1n1d",
   "name": "TOUR HÀNH HƯƠNG BẠC LIÊU – SÓC TRĂNG (1N1Đ)   Nhà thờ Cha Diệp –  Mẹ Nam Hải",
+  "region": "domestic",
+  "region_name": "Hành hương",
+  "departure": "Biên Hòa / TP.HCM",
+  "duration": "1 ngày 1 đêm",
+  "price": "990.000 vnd",
+  "image": "cha-diep-me-nam-hai.png",
   "desc": "🚍 Đưa rước tận nơi nội ô TP. Biên Hòa 👨‍👩‍👧‍👦 Tour ghép đoàn hàng tuần – khởi hành từ 10 khách",
+  "highlights": [],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -123,39 +131,5 @@
       "type": "p",
       "text": "❌ Chi phí cá nhân ngoài chương trình ❌ Ăn chiều nhẹ tự túc ❌ VAT (nếu xuất hóa đơn)"
     }
-  ],
-  "itinerary": [
-    {
-      "day": 1,
-      "title": "📍 ĐƯA ĐÓN LINH HOẠT – TIỆN LỢI",
-      "body": "🚐 Xe du lịch đời mới TodayTourist đón khách tận nơi nội ô TP. Biên Hòa:\n🟢 Tuyến 1: Ngã 4 Tân Phong → Quảng Trường Tỉnh → Bến xe Biên Hòa → Ngã 4 Vũng Tàu 🟢 Tuyến 2: Cổng 11 → Cây xăng Suối Linh → Ngã 4 AMATA → BV Đồng Nai 🟢 Tuyến 3: QL51 → Long Thành → Cao tốc Long Thành – Trung Lương"
-    },
-    {
-      "day": 2,
-      "title": "🌙 ĐÊM 01 | BIÊN HÒA – BẠC LIÊU",
-      "body": "⏰ 21:00 | Đón khách – khởi hành đi Bạc Liêu HDV TodayTourist làm quen đoàn, phổ biến chương trình. Nghỉ đêm trên xe."
-    },
-    {
-      "day": 3,
-      "title": "🌅 BUỔI SÁNG | HÀNH HƯƠNG – THAM QUAN",
-      "body": "⏰ 04:00 | Nhà thờ Tắc Sậy (Cha Diệp) Hành hương, cầu bình an – sức khỏe – công việc thuận lợi.\n⏰ 06:00 | Nhà Công Tử Bạc Liêu Ăn sáng tại nhà hàng. Tham quan, check-in ngôi nhà kiến trúc Pháp nổi tiếng gắn với “Hắc Công Tử”.\n⏰ 08:30 | Quán Âm Phật Đài (Mẹ Nam Hải) Viếng Phật Bà hướng biển, cầu tài lộc và bình an.\n⏰ 10:00 | Chùa Chén Kiểu – Sóc Trăng Chiêm ngưỡng kiến trúc Khmer độc đáo ghép từ hàng ngàn mảnh sành sứ."
-    },
-    {
-      "day": 4,
-      "title": "🍽️ BUỔI TRƯA",
-      "body": "⏰ 11:30 | Dùng bữa trưa tại nhà hàng TP. Sóc Trăng – nghỉ ngơi."
-    },
-    {
-      "day": 5,
-      "title": "🪷 BUỔI CHIỀU | SÓC TRĂNG – BIÊN HÒA",
-      "body": "⏰ 13:00 | Chùa Som Rong Check-in tượng Phật Thích Ca nhập Niết Bàn dài 63m – điểm chụp hình nổi bật nhất Sóc Trăng.\n⏰ 14:30 | Mua sắm đặc sản Bánh Pía, lạp xưởng, bánh phồng tôm làm quà.\n⏰ 15:00 | Khởi hành về Biên Hòa Dừng chân Tiền Giang vệ sinh, ăn nhẹ (chi phí tự túc).\n⏰ 21:00 – 22:00 | Về đến Biên Hòa – kết thúc chương trình."
-    }
-  ],
-  "region": "domestic",
-  "region_name": "",
-  "duration": "",
-  "price": "",
-  "image": "cha-diep-me-nam-hai.png",
-  "highlights": [],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
