@@ -1,7 +1,15 @@
 {
   "slug": "tour-ho-coc-ho-tram-2n1d",
   "name": "TOUR HỒ CỐC/HỒ TRÀM 2 NGÀY 1 ĐÊM  Biển hoang sơ – Nghỉ dưỡng – Check-in – Thư giãn khoáng nóng",
+  "region": "domestic",
+  "region_name": "Miền Nam",
+  "departure": "Biên Hòa / TP.HCM",
+  "duration": "2 ngày 1 đêm",
+  "price": "1.490.000đ/khách",
+  "image": "ho-coc-ho-tram.png",
   "desc": "🗓 Thời gian: 2 ngày 1 đêm 📍 Khởi hành: Theo yêu cầu (Biên Hòa / TP.HCM & khu vực lân cận) 🚍 Phương tiện: Xe du lịch đời mới 16–45 chỗ 👥 Đối tượng: Gia đình – Nhóm bạn – Doanh nghiệp – Đoàn thể",
+  "highlights": [],
+  "itinerary": [],
   "content": [
     {
       "type": "h2",
@@ -162,24 +170,5 @@
       "type": "p",
       "text": "✖ Chi phí cá nhân, đồ uống ngoài chương trình ✖ Thuế VAT"
     }
-  ],
-  "itinerary": [
-    {
-      "day": 1,
-      "title": "🌅 NGÀY 01 | ĐÓN KHÁCH – HỒ CỐC/HỒ TRÀM",
-      "body": "06h00: Xe và HDV TodayTourist đón đoàn tại điểm hẹn, khởi hành đi Hồ Cốc/Hồ Tràm.\n07h30: Đoàn dùng bữa sáng tại nhà hàng khu vực Long Thành / Bà Rịa .\n08h30: Tham quan, check-in:\n🐑 Đồi cừu Suối Nghệ – chụp ảnh cùng đàn cừu, không gian đồng quê thoáng đãng.\n🌉 Cầu đi bộ The Hamptons Hồ Tràm – công trình ven biển hiện đại, điểm check-in nổi bật.\n12h00: Đoàn dùng bữa trưa tại nhà hàng địa phương.\n14h00: Nhận phòng resort Hồ Cốc /Hồ Tràm , nghỉ ngơi.\n🏖 Buổi chiều:\nTự do tắm biển Hồ Cốc/Hồ Tràm\nDạo biển, thư giãn, chụp ảnh bãi đá – bờ biển hoang sơ\n18h00: Đoàn dùng bữa tối tại nhà hàng. 🌙 Buổi tối: Tự do nghỉ ngơi, dạo biển hoặc sinh hoạt riêng đoàn."
-    },
-    {
-      "day": 2,
-      "title": "🌞 NGÀY 02 | HỒ CỐC/HỒ TRÀM – ĐIỂM ĐÓN BAN ĐẦU",
-      "body": "07h00: Quý khách dùng điểm tâm sáng tại resort / khách sạn.\n🏖 Buổi sáng tự do – linh hoạt lựa chọn:\n♨ Suối khoáng nóng Bình Châu Trải nghiệm ngâm chân khoáng nóng, tắm khoáng, tắm bùn… (chi phí tự túc) .\n🌊 Nghỉ ngơi tại resort Tự do tắm biển, thư giãn, tận hưởng tiện ích và dịch vụ tại resort.\n11h00: Quý khách làm thủ tục trả phòng .\n11h30: Đoàn dùng bữa trưa tại nhà hàng .\n13h00: Xe đưa đoàn khởi hành về lại điểm đón ban đầu . ☕ Dừng chân mua sắm đặc sản Bò Sữa Long Thành.\n17h30 – 18h00: Về đến nơi, kết thúc chương trình. HDV chia tay và hẹn gặp lại Quý khách.\n🏢 Đối với doanh nghiệp, đoàn thể có nhu cầu tổ chức 🎯 Teambuilding bãi biển – Gala Dinner , Các điểm tham quan khác ...\nVui lòng liên hệ để được tư vấn: 📞 Mr. Anh Văn – 0902 898 726"
-    }
-  ],
-  "region": "domestic",
-  "region_name": "",
-  "duration": "",
-  "price": "",
-  "image": "ho-coc-ho-tram.png",
-  "highlights": [],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
