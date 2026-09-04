@@ -1,7 +1,15 @@
 {
   "slug": "tour-dao-binh-ba-2n2d",
   "name": "TOUR ĐẢO BÌNH BA 2 NGÀY 2 ĐÊM   ĐẢO TÔM HÙM – BIỂN TRONG – HẢI SẢN TƯƠI SỐNG",
+  "region": "domestic",
+  "region_name": "Biển đảo",
+  "departure": "Biên Hòa / TP.HCM",
+  "duration": "2 ngày 2 đêm",
+  "price": "2.090.000đ/khách",
+  "image": "dao-binh-ba.png",
   "desc": "👨‍👩‍👧‍👦 Tour ghép đoàn hàng tuần – Khởi hành từ 10 khách 👉 Áp dụng cho khách lẻ – gia đình – nhóm bạn 👉 Nhận thiết kế tour riêng cho đoàn, công ty, trường học",
+  "highlights": [],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -134,29 +142,5 @@
       "type": "p",
       "text": "🚫 KHÔNG BAO GỒM ❌ Chi phí cá nhân ❌ Thuế VAT (nếu xuất hóa đơn)"
     }
-  ],
-  "itinerary": [
-    {
-      "day": 1,
-      "title": "🌙 ĐÊM 01 | BIÊN HÒA – CAM RANH",
-      "body": "🕘 21h00: Xe & HDV đón quý khách tại điểm hẹn 🚍 Khởi hành đi Cam Ranh 😴 Nghỉ đêm trên xe"
-    },
-    {
-      "day": 2,
-      "title": "🌅 NGÀY 01 | CAM RANH – ĐẢO BÌNH BA – TẮM BIỂN – BBQ",
-      "body": "🍜 Sáng: Đến Cam Ranh, vệ sinh cá nhân – ăn sáng đặc sản địa phương\n🚤 Di chuyển ra cảng Ba Ngòi , lên tàu sang Đảo Bình Ba 🏝️ Nhận phòng homestay / nhà nghỉ (gửi hành lý nếu chưa đến giờ)\n📍 Tham quan – trải nghiệm: 🌊 Bãi Nồm: Tắm biển nước trong xanh, sóng êm, bãi cát mịn\n🐠 Bãi Chướng / Bãi Nhà Cũ: Check-in, ngắm cảnh biển hoang sơ\n🍽️ Trưa: Dùng cơm trưa hải sản trên đảo 🌤️ Chiều: Tự do tắm biển – nghỉ ngơi – chụp hình\n🔥 Tối: TIỆC BBQ HẢI SẢN ĐẢO 🦞 Tôm hùm Bình Ba – mực – nhum – ốc các loại\n🌙 Tự do dạo biển đêm, tận hưởng không khí yên bình của đảo"
-    },
-    {
-      "day": 3,
-      "title": "🌿 NGÀY 02 | BÌNH BA – CAM RANH – BIÊN HÒA",
-      "body": "🌄 Sáng: Ngắm bình minh trên đảo – ăn sáng & Tự do tắm biển\n🧳 Làm thủ tục trả phòng\n🚤 Tàu đưa đoàn về lại đất liền 🛍️ Tham quan – mua sắm đặc sản địa phương\n🍽️ Trưa: Ăn trưa tại nhà hàng khu vực Phan Rang/Cà Ná 🚍 Khởi hành về lại Biên Hòa\n🕗 18h00 – 19h00: Về đến Biên Hòa, xe đưa khách về điểm đón ban đầu 🎉 Kết thúc hành trình – hẹn gặp lại!"
-    }
-  ],
-  "region": "domestic",
-  "region_name": "",
-  "duration": "",
-  "price": "",
-  "image": "dao-binh-ba.png",
-  "highlights": [],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
