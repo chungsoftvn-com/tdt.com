@@ -1,7 +1,15 @@
 {
   "slug": "tour-dao-binh-hung-2n2d",
   "name": "TOUR ĐẢO BÌNH HƯNG 2 NGÀY 2 ĐÊM   VỊNH CAM RANH – THIÊN ĐƯỜNG BIỂN TRONG XANH",
+  "region": "domestic",
+  "region_name": "Biển đảo",
+  "departure": "Biên Hòa / TP.HCM",
+  "duration": "2 ngày 2 đêm",
+  "price": "2.190.000đ/khách",
+  "image": "dao-binh-hung.png",
   "desc": "👨‍👩‍👧‍👦 Tour ghép đoàn hàng tuần – Khởi hành từ 10 khách 👉 Phù hợp khách lẻ | Gia đình | Nhóm bạn 👉 Nhận thiết kế tour riêng cho đoàn – doanh nghiệp",
+  "highlights": [],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -136,10 +144,6 @@
     },
     {
       "type": "h2",
-      "text": ""
-    },
-    {
-      "type": "h2",
       "text": "💰 GIÁ TOUR TRỌN GÓI"
     },
     {
@@ -158,29 +162,5 @@
       "type": "p",
       "text": "🚫 KHÔNG BAO GỒM: ❌ Chi phí cá nhân | ❌ Thuế VAT (nếu xuất hóa đơn)"
     }
-  ],
-  "itinerary": [
-    {
-      "day": 1,
-      "title": "🌙 ĐÊM 01 | BIÊN HÒA – PHAN RANG – CAM RANH",
-      "body": "🕘 21h00: Xe & HDV đón khách, khởi hành đi Cam Ranh 😴 Nghỉ đêm trên xe."
-    },
-    {
-      "day": 2,
-      "title": "🌅 NGÀY 01 | KHÁM PHÁ ĐẢO BÌNH HƯNG – LẶN SAN HÔ",
-      "body": "🍜 Sáng: Ăn sáng đặc sản địa phương (Bánh căn / Bún chả cá)\n🛣️ 08h00: Di chuyển theo cung đường biển Vĩnh Hy – một trong những cung đường đẹp nhất Việt Nam 🚤 Từ Bãi Kinh , lên tàu ra Đảo Bình Hưng\n📍 Tham quan – trải nghiệm: 🏝️ Bãi Me: Tắm biển nước trong xanh, thấy đáy 🐠 Bãi Lớn / Bãi San Hô: Lặn ngắm san hô bằng kính lặn\n🍽️ 11h30: Ăn trưa hải sản tại nhà bè trên biển 🏨 Nhận phòng khách sạn/homestay – nghỉ ngơi\n🌤️ Chiều: 🚐 Xe điện tham quan đảo 🗼 Hải Đăng Hòn Chút: Ngắm toàn cảnh Vịnh Cam Ranh\n🌈 An Hill: Check-in cầu vồng ven biển – điểm sống ảo nổi tiếng\n🔥 Tối: 🦞 TIỆC BBQ HẢI SẢN – CÓ TÔM HÙM, NHUM, ỐC ĐẶC SẢN\n🌙 Tự do dạo biển, thư giãn không khí đảo đêm"
-    },
-    {
-      "day": 3,
-      "title": "🌿 NGÀY 02 | VƯỜN NHO – ĐỒNG CỪU – BIÊN HÒA",
-      "body": "🌄 Sáng: Ngắm bình minh – ăn sáng tự do 🚤 Trả phòng – tàu đưa đoàn về đất liền\n📍 Tham quan: 🍇 Vườn Nho Ninh Thuận: Hái nho, thưởng thức mật nho – rượu nho\n🐑 Đồng Cừu Suối Tiên: Chụp ảnh cùng đàn cừu giữa thảo nguyên xanh\n🍽️ 12h00: Ăn trưa tại nhà hàng Phan Rang / Cà Ná 🛍️ Dừng chân mua đặc sản Phan Thiết\n🕗 20h00: Về đến Biên Hòa – đưa khách về điểm đón ban đầu 🎉 Kết thúc hành trình – hẹn gặp lại!"
-    }
-  ],
-  "region": "domestic",
-  "region_name": "",
-  "duration": "",
-  "price": "",
-  "image": "dao-binh-hung.png",
-  "highlights": [],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
