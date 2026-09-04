@@ -1,7 +1,15 @@
 {
   "slug": "tour-vung-tau-1-ngay",
   "name": "TOUR VŨNG TÀU 1 NGÀY  Phố biển năng động – Check-in biểu tượng – Thư giãn trọn vẹn",
+  "region": "domestic",
+  "region_name": "Miền Nam",
+  "departure": "Biên Hòa / TP.HCM",
+  "duration": "1 ngày",
+  "price": "790.000 vnđ/khách",
+  "image": "vung-tau-1-ngay.png",
   "desc": "🗓 Thời gian: 1 ngày 📍 Khởi hành: Theo yêu cầu (Biên Hòa / TP.HCM & khu vực lân cận) 🚍 Phương tiện: Xe du lịch đời mới 16–45 chỗ 👥 Đối tượng: Gia đình – Doanh nghiệp – Đoàn thể – Nhóm bạn",
+  "highlights": [],
+  "itinerary": [],
   "content": [
     {
       "type": "h2",
@@ -121,29 +129,5 @@
       "type": "p",
       "text": "✖ Chi phí cá nhân (ăn uống ngoài chương trình…) ✖ Thuế VAT"
     }
-  ],
-  "itinerary": [
-    {
-      "day": 1,
-      "title": "🌅 SÁNG | BIÊN HÒA – VŨNG TÀU",
-      "body": "06h00: Xe và HDV TodayTourist đón đoàn tại điểm hẹn, khởi hành đi Vũng Tàu. 07h30: Đoàn dùng bữa sáng tại nhà hàng khu vực Đồng Nai hoặc Bà Rịa.\nTham quan buổi sáng:\n⛪ Giáo xứ Song Vĩnh – check-in nhà thờ mang kiến trúc Gothic phương Tây ấn tượng.\n✝ Tượng Chúa Kitô Vua – chinh phục núi Tao Phùng, ngắm toàn cảnh thành phố biển từ trên cao.\n🛕 Niết Bàn Tịnh Xá – ngôi chùa thanh tịnh, kiến trúc hài hòa hướng biển."
-    },
-    {
-      "day": 2,
-      "title": "🍽 TRƯA | ẨM THỰC BIỂN",
-      "body": "11h30: Đoàn dùng bữa trưa tại nhà hàng địa phương với thực đơn hải sản phong phú . Nghỉ ngơi, thư giãn tại nhà hàng hoặc quán café ven biển."
-    },
-    {
-      "day": 3,
-      "title": "🏖 CHIỀU | BIỂN XANH – CHECK-IN",
-      "body": "🌊 Bãi Sau (Thùy Vân): Tự do tắm biển, dạo biển, thư giãn và thưởng thức hải sản.\n📸 Bến tàu Marina (hoặc Tháp Tam Thắng) – check-in cùng những cánh buồm rực rỡ, khung hình “đậm chất Vũng Tàu”.\n16h00: Đoàn tập trung lên xe, khởi hành về lại điểm đón ban đầu. ☕ Dừng chân mua sắm đặc sản Bò Sữa Long Thành .\n18h00: Về đến nơi – HDV chia tay và hẹn gặp lại Quý khách.\n✔ Lịch trình gọn nhẹ – phù hợp đi trong ngày ✔ Kết hợp tâm linh – nghỉ dưỡng – check-in ✔ Linh hoạt điều chỉnh theo nhu cầu đoàn ✔ Phù hợp tổ chức teambuilding bãi biển – gala lunch"
-    }
-  ],
-  "region": "domestic",
-  "region_name": "",
-  "duration": "",
-  "price": "",
-  "image": "vung-tau-1-ngay.png",
-  "highlights": [],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
