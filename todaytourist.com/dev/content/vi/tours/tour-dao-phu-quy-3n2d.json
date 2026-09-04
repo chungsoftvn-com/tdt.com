@@ -1,7 +1,15 @@
 {
   "slug": "tour-dao-phu-quy-3n2d",
   "name": "TOUR ĐẢO PHÚ QUÝ 3 NGÀY 2 ĐÊM  Thiên đường biển xanh – Trải nghiệm đảo ngọc hoang sơ Bình Thuận",
+  "region": "domestic",
+  "region_name": "Biển đảo",
+  "departure": "Biên Hòa / TP.HCM",
+  "duration": "3 ngày 2 đêm",
+  "price": "2.990.000",
+  "image": "dao-phu-quy.png",
   "desc": "📌 THÔNG TIN CHƯƠNG TRÌNH 🗓 Thời gian: 3 ngày 2 đêm 📍 Khởi hành: Theo yêu cầu 🚍🚢 Phương tiện: Xe du lịch đời mới + Tàu cao tốc ra đảo 🏨 Lưu trú: Khách sạn / Nhà nghỉ tiêu chuẩn đảo Phú Quý 👥 Đối tượng: Gia đình – Nhóm bạn – Doanh nghiệp – Đoàn thể",
+  "highlights": [],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -123,13 +131,5 @@
       "type": "p",
       "text": "❌ GIÁ TOUR KHÔNG BAO GỒM ✖️ Chi phí cá nhân ngoài chương trình ✖️ Dịch vụ vui chơi tự chọn (cano, lặn ngắm san hô…) ✖️ Thuế VAT"
     }
-  ],
-  "itinerary": [],
-  "region": "domestic",
-  "region_name": "",
-  "duration": "",
-  "price": "",
-  "image": "dao-phu-quy.png",
-  "highlights": [],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
