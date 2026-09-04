@@ -3,6 +3,7 @@
   "name": "Tour Nha Trang - Biển Đảo 3N2Đ",
   "region": "domestic",
   "region_name": "Miền Trung",
+  "departure": "Biên Hòa / TP.HCM",
   "duration": "3 ngày 2 đêm",
   "price": "2.890.000đ/khách",
   "image": "nha-trang.webp",
@@ -13,23 +14,7 @@
     "Tháp Bà Ponagar",
     "Khách sạn tiêu chuẩn 3 sao"
   ],
-  "itinerary": [
-    {
-      "day": 1,
-      "title": "🌅 NGÀY 01: BIÊN HÒA – DẦU GIÂY – NHA TRANG",
-      "body": "⏰ 05:00 | ĐÓN KHÁCH – KHỞI HÀNH Xe và HDV TodayTourist đón Quý khách tại điểm hẹn. Đoàn ổn định chỗ ngồi, nghe HDV giới thiệu chương trình và khởi hành đi Nha Trang.\n🍽️ Ăn sáng tại Dầu Giây Quý khách dùng bữa sáng (tô/ly) theo chương trình, nghỉ ngơi trước khi tiếp tục hành trình.\n🎤 Sinh hoạt trên xe HDV tổ chức giao lưu, đố vui, đuổi hình bắt chữ, karaoke văn nghệ… tạo không khí vui tươi, gắn kết đoàn.\n🍽️ Ăn trưa tại nhà hàng khu vực Phan Rang / Cam Ranh\n🚐 Tiếp tục hành trình đi Nha Trang ⏰ Khoảng 14:00 đoàn đến Nha Trang, xe đưa Quý khách về khách sạn nhận phòng – nghỉ ngơi .\n🌊 Buổi chiều: Tự do tắm biển Trần Phú, thư giãn.\n🍽️ Ăn tối tại nhà hàng 🌙 Tự do khám phá Nha Trang về đêm.\n🛏️ Nghỉ đêm tại khách sạn Nha Trang"
-    },
-    {
-      "day": 2,
-      "title": "🌤️ NGÀY 02: DU NGOẠN BIỂN ĐẢO – CITY NHA TRANG",
-      "body": "🍽️ Ăn sáng buffet tại khách sạn\n🚤 DU NGOẠN BIỂN ĐẢO NHA TRANG\nCa nô đưa đoàn đến Hòn Sỏi : tắm biển, tham gia các trò chơi biển (SUP, kayak, mô tô nước, dù lượn… chi phí tự túc)\nTiếp tục đến Vịnh San Hô : tắm biển/hồ bơi, nghỉ ngơi\n🍽️ Ăn trưa tại nhà hàng Vịnh San Hô\n🏨 Về khách sạn nghỉ ngơi\n🌆 Buổi chiều – City Nha Trang\n🕌 Chùa Long Sơn\n🗼 Nhà Thờ Đá Nha Trang\n🏛️ Tháp Bà Ponagar\n👉 Quý khách không tham gia City có thể đăng ký tour tự chọn: VinWonders, Đảo Khỉ, Bãi Dài, Dốc Lết, Điệp Sơn… (chi phí tự túc)\n🍽️ Ăn tối tại nhà hàng 🌙 Tự do dạo phố, café view biển.\n🛏️ Nghỉ đêm tại khách sạn"
-    },
-    {
-      "day": 3,
-      "title": "🌿 NGÀY 03: NHA TRANG – BIÊN HÒA",
-      "body": "🍽️ Ăn sáng buffet – Trả phòng khách sạn\n🛍️ Mua sắm đặc sản Nha Trang Yến sào, nem chua, hải sản khô…\n🍽️ Ăn trưa tại nhà hàng\n🚍 Khởi hành về Biên Hòa ⏰ Khoảng 18:00 – 19:00 , xe đưa Quý khách về điểm đón ban đầu.\n👋 Kết thúc chương trình – hẹn gặp lại Quý khách"
-    }
-  ],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -217,6 +202,5 @@
       "type": "p",
       "text": "❌ Chi phí cá nhân, café, mua sắm ngoài chương trình ❌ Các dịch vụ vui chơi biển ngoài chương trình ❌ Thuế VAT (nếu xuất hóa đơn)"
     }
-  ],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
