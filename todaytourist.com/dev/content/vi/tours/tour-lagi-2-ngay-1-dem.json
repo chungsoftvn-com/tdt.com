@@ -1,7 +1,15 @@
 {
   "slug": "tour-lagi-2-ngay-1-dem",
   "name": "TOUR LA GI 2 NGÀY 1 ĐÊM  Biển xanh – Check-in nổi tiếng – Nghỉ dưỡng cuối tuần lý tưởng",
+  "region": "domestic",
+  "region_name": "Miền Nam",
+  "departure": "Biên Hòa / TP.HCM",
+  "duration": "2 ngày 1 đêm",
+  "price": "1.490.000đ/khách",
+  "image": "lagi.png",
   "desc": "📌 THÔNG TIN CHƯƠNG TRÌNH 🗓 Thời gian: 2 ngày 1 đêm 📍 Khởi hành: Theo yêu cầu 🚍 Phương tiện: Xe du lịch đời mới (16–45 chỗ) 🏨 Lưu trú: Resort / Khách sạn 2–4★ ven biển La Gi 👥 Đối tượng: Gia đình – Nhóm bạn – Doanh nghiệp – Đoàn thể",
+  "highlights": [],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -102,13 +110,5 @@
       "type": "p",
       "text": "❌ GIÁ TOUR KHÔNG BAO GỒM ✖️ Chi phí cá nhân ngoài chương trình ✖️ Dịch vụ vui chơi giải trí tự chọn ✖️ Thuế VAT"
     }
-  ],
-  "itinerary": [],
-  "region": "domestic",
-  "region_name": "",
-  "duration": "",
-  "price": "",
-  "image": "lagi.png",
-  "highlights": [],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
