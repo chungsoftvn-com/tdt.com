@@ -1,30 +1,20 @@
 {
   "slug": "tour-phan-thiet-2n1d",
-  "name": "Tour Phan Thiết 2N1Đ",
+  "name": "Tour Phan Thiết 2N1Đ - Giá 1.690.000đ",
   "region": "domestic",
-  "region_name": "Miền Trung",
+  "region_name": "Nam Trung Bộ",
+  "departure": "Biên Hòa / TP.HCM",
   "duration": "2 ngày 1 đêm",
   "price": "1.690.000đ/khách",
   "image": "phan-thiet.webp",
-  "desc": "Mũi Né - thiên đường biển với đồi cát vàng, suối Tiên và những resort đẹp bậc nhất Việt Nam.",
+  "desc": "Mũi Né - đồi cát vàng, suối Tiên, resort đẹp bậc nhất trong hành trình 2 ngày 1 đêm giá 1.690.000đ, khởi hành hàng tuần từ Biên Hòa.",
   "highlights": [
     "Đồi cát bay Mũi Né",
     "Suối Tiên - Lầu Ông Hoàng",
     "Hải sản tươi ngon",
     "Khách sạn gần biển"
   ],
-  "itinerary": [
-    {
-      "day": 1,
-      "title": "🌅 NGÀY 01: BIÊN HÒA / TP.HCM – PHAN THIẾT – MŨI NÉ",
-      "body": "⏰ 05:00 – 05:30 | 🚍 ĐÓN KHÁCH – KHỞI HÀNH Xe và Hướng dẫn viên TodayTourist đón Quý khách tại điểm hẹn. Đoàn ổn định chỗ ngồi, HDV giới thiệu chương trình, lộ trình và khởi hành đi Phan Thiết .\n🍽️ Dừng chân ăn sáng tại Dầu Giây Quý khách dùng bữa sáng tại nhà hàng (theo chương trình).\n⏰ 10:00 | ĐẾN PHAN THIẾT – THAM QUAN\n🚐 Xe đưa đoàn tham quan: 🏖️ Bikini Beach Phan Thiết Quý khách tự do tham quan, chụp ảnh check-in tại điểm đến mới mẻ, hiện đại ven biển.\n🍽️ 12:00 | ĂN TRƯA – NHẬN PHÒNG KHÁCH SẠN / RESORT Đoàn dùng bữa trưa tại nhà hàng địa phương. Sau đó về khách sạn/resort nhận phòng, nghỉ ngơi.\n🌴 BUỔI CHIỀU | TỰ DO NGHỈ DƯỠNG – TẮM BIỂN Quý khách tự do tắm biển Mũi Né, thư giãn tại hồ bơi hoặc dạo biển.\n🍽️ 18:00 | ĂN TỐI Đoàn dùng bữa tối tại nhà hàng. Sau bữa tối, Quý khách tự do dạo biển, khám phá Phan Thiết về đêm .\n🛏️ Nghỉ đêm tại khách sạn / resort Phan Thiết"
-    },
-    {
-      "day": 2,
-      "title": "🌤️ NGÀY 02: PHAN THIẾT – BIÊN HÒA / TP.HCM",
-      "body": "🌄 SÁNG SỚM | THAM QUAN ĐỒI CÁT TRẮNG (BÀU TRẮNG) Quý khách dậy sớm, xe đưa đoàn tham quan Đồi Cát Trắng – Bàu Trắng , chiêm ngưỡng cảnh quan cát trắng mênh mông, chụp ảnh lưu niệm. (Các dịch vụ xe jeep, mô tô địa hình tự túc chi phí nếu có nhu cầu)\n🍽️ 07:00 | ĂN SÁNG TẠI KHÁCH SẠN Quý khách dùng buffet sáng, nghỉ ngơi.\n⏰ 10:30 | THAM QUAN – MUA SẮM\n🚐 Xe đưa đoàn tham quan: 🗼 Tháp Poshanu (Chăm Pa) – công trình kiến trúc Chăm cổ mang giá trị lịch sử – văn hóa.\n🛍️ Mua sắm đặc sản Phan Thiết : thanh long, mực một nắng, hải sản khô…\n🍽️ 11:30 | ĂN TRƯA – KHỞI HÀNH VỀ Sau bữa trưa, đoàn khởi hành về lại Biên Hòa / TP.HCM . Trên đường về, xe dừng chân cho Quý khách nghỉ ngơi, mua sắm dọc tuyến.\n⏰ 17:30 – 18:30 | VỀ ĐẾN BIÊN HÒA / TP.HCM Xe đưa đoàn về điểm đón ban đầu. 🤝 Kết thúc chương trình – HDV chia tay và hẹn gặp lại Quý khách."
-    }
-  ],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -84,8 +74,8 @@
     },
     {
       "type": "img",
-      "src": "/content/vi/images/0324-1-3.png",
-      "alt": "NOVAWORLD PHAN THIET ĐƯỢC LÒNG GIỚI ĐẦU TƯ DU LỊCH NGHỈ DƯỠNG - Công ty Cổ phần Tập đoàn Đầu tư Địa ốc No Va (Mã CK: NVL)"
+      "src": "https://todaytourist.com/content/vi/images/0324-1-3.png",
+      "alt": "Bikini Beach Phan Thiết - tour Phan Thiết 2N1Đ TodayTourist"
     },
     {
       "type": "p",
@@ -126,7 +116,7 @@
     },
     {
       "type": "p",
-      "text": "🚐 Xe đưa đoàn tham quan: 🗼 Tháp Poshanu (Chăm Pa) – công trình kiến trúc Chăm cổ mang giá trị lịch sử – văn hóa."
+      "text": "🚐 Xe đưa đoàn tham quan: <br>🗼 Tháp Poshanu (Chăm Pa) – công trình kiến trúc Chăm cổ mang giá trị lịch sử – văn hóa."
     },
     {
       "type": "img",
@@ -143,7 +133,7 @@
     },
     {
       "type": "p",
-      "text": "⏰ 17:30 – 18:30 | VỀ ĐẾN BIÊN HÒA / TP.HCM Xe đưa đoàn về điểm đón ban đầu. 🤝 Kết thúc chương trình – HDV chia tay và hẹn gặp lại Quý khách."
+      "text": "⏰ 17:30 – 18:30 | VỀ ĐẾN BIÊN HÒA / TP.HCM Xe đưa đoàn về điểm đón ban đầu. <br>🤝 Kết thúc chương trình – HDV chia tay và hẹn gặp lại Quý khách."
     },
     {
       "type": "h2",
@@ -151,7 +141,7 @@
     },
     {
       "type": "p",
-      "text": "💵 1.690.000 VNĐ/khách (Người lớn) 💵 1.180.000 VNĐ/khách (Trẻ em từ 05 – dưới 10 tuổi) 👶 Trẻ em dưới 05 tuổi: MIỄN PHÍ (Gia đình tự lo cho bé)"
+      "text": "💵 1.690.000 VNĐ/khách (Người lớn)<br> 💵 1.180.000 VNĐ/khách (Trẻ em từ 05 – dưới 10 tuổi) <br>👶 Trẻ em dưới 05 tuổi: MIỄN PHÍ (Gia đình tự lo cho bé)"
     },
     {
       "type": "p",
@@ -163,19 +153,7 @@
     },
     {
       "type": "p",
-      "text": "✅ Xe du lịch đời mới, đưa rước tận nơi nội ô Biên Hòa ✅ Khách sạn / Resort tiêu chuẩn 3 sao (2–4 khách/phòng) ✅ Ăn uống theo chương trình:"
-    },
-    {
-      "type": "p",
-      "text": "01 bữa sáng buffet khách sạn"
-    },
-    {
-      "type": "p",
-      "text": "01 bữa sáng Dầu Giây (Tô/ly)"
-    },
-    {
-      "type": "p",
-      "text": "03 bữa chính (Set menu 150.000đ/khách) ✅ Vé tham quan các điểm trong chương trình ✅ Hướng dẫn viên du lịch chuyên nghiệp ✅ Bảo hiểm du lịch theo quy định ✅ Nước suối, khăn lạnh phục vụ đoàn"
+      "text": "✅ Xe du lịch đời mới, đưa rước tận nơi nội ô Biên Hòa <br>✅ Khách sạn / Resort tiêu chuẩn 3 sao (2–4 khách/phòng) <br>✅ Ăn uống theo chương trình: 01 bữa sáng buffet khách sạn, 01 bữa sáng Dầu Giây (Tô/ly), 03 bữa chính (Set menu 150.000đ/khách)<br>✅ Vé tham quan các điểm trong chương trình <br>✅ Hướng dẫn viên du lịch chuyên nghiệp <br>✅ Bảo hiểm du lịch theo quy định <br>✅ Nước suối, khăn lạnh phục vụ đoàn"
     },
     {
       "type": "h2",
@@ -185,6 +163,5 @@
       "type": "p",
       "text": "❌ Chi phí cá nhân, café, mua sắm ngoài chương trình ❌ Thuế VAT (nếu xuất hóa đơn)"
     }
-  ],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
