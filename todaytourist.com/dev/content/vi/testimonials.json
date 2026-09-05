@@ -1,20 +1,7 @@
 {
-  "count": 1,
-  "order": [
-    "hoi-lhpn-kp3-long-binh"
-  ],
-  "items": {
-    "hoi-lhpn-kp3-long-binh": {
-      "slug": "hoi-lhpn-kp3-long-binh",
-      "name": "HỘI LH PN KP3 LONG BÌNH",
-      "org": "Hội LHPN KP3 Long Bình",
-      "tour": "Tour tham quan cho hội đoàn",
-      "destination": "",
-      "feeling": "",
-      "images": [],
-      "date": "2017-05-09"
-    }
-  },
+  "count": 0,
+  "order": [],
+  "items": {},
   "list_title": "Ý kiến khách hàng",
   "list_text": "Hình ảnh và cảm nhận của khách hàng, trường học, doanh nghiệp sau mỗi chuyến đi cùng TodayTourist.",
   "body_html": "<p>Những hình ảnh và cảm nhận chân thật của khách hàng, trường học, doanh nghiệp sau mỗi chuyến đi cùng TodayTourist.</p>",
