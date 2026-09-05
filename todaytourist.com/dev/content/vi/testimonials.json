@@ -1,22 +1,11 @@
 {
-  "count": 4,
+  "count": 3,
   "order": [
-    "benh-vien-da-khoa-dong-nai",
     "cong-ty-tnhh-mtv-thach-hien",
     "hoi-lhpn-kp3-long-binh",
     "formosa-2025"
   ],
   "items": {
-    "benh-vien-da-khoa-dong-nai": {
-      "slug": "benh-vien-da-khoa-dong-nai",
-      "name": "BỆNH VIỆN ĐA KHOA ĐỒNG NAI",
-      "org": "Bệnh viện Đa khoa Đồng Nai",
-      "tour": "Tour teambuilding / nghỉ dưỡng",
-      "destination": "",
-      "feeling": "",
-      "images": [],
-      "date": "2017-05-09"
-    },
     "cong-ty-tnhh-mtv-thach-hien": {
       "slug": "cong-ty-tnhh-mtv-thach-hien",
       "name": "CÔNG TY TNHH MTV THẠCH HIỂN",
