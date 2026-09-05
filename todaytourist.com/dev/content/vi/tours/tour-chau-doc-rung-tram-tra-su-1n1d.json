@@ -1,34 +1,24 @@
 {
   "slug": "tour-chau-doc-rung-tram-tra-su-1n1d",
-  "name": "Tour Châu Đốc - Rừng Tràm Trà Sư 1N1Đ",
+  "name": "Tour Châu Đốc An Giang - Rừng Tràm Trà Sư 1N1Đ",
   "region": "domestic",
   "region_name": "Miền Tây",
+  "departure": "Biên Hòa / TP.HCM",
   "duration": "1 ngày 1 đêm",
   "price": "950.000đ/khách",
   "image": "chau-doc.webp",
-  "desc": "Hành trình về miền biên giới Châu Đốc, chèo thuyền len lỏi rừng tràm Trà Sư ngập nước tuyệt đẹp.",
+  "desc": "Tour Châu Đốc - Rừng Tràm Trà Sư 1N1Đ giá 950.000đ, viếng Miếu Bà Chúa Xứ, khởi hành hàng tuần từ Biên Hòa. Đặt ngay 0902.898.726 - TodayTourist.",
   "highlights": [
-    "Chèo thuyền rừng tràm Trà Sư",
-    "Miếu Bà Chúa Xứ",
-    "Điện thoại di động theo tour",
-    "Xe đưa đón"
+    "Chèo thuyền, tắc ráng xuyên Rừng Tràm Trà Sư",
+    "Viếng Miếu Bà Chúa Xứ Núi Sam linh thiêng",
+    "Check-in Cầu Tre Vạn Bước giữa thảm bèo xanh",
+    "Đưa đón tận nơi nội ô Biên Hòa, khởi hành hàng tuần"
   ],
-  "itinerary": [
-    {
-      "day": 1,
-      "title": "🌙 ĐÊM 01 | BIÊN HÒA – AN GIANG",
-      "body": "⏰ 22:00 | Xe & HDV TodayTourist đón khách tận nơi, khởi hành đi Châu Đốc. 💤 Nghỉ đêm trên xe."
-    },
-    {
-      "day": 2,
-      "title": "🌅 NGÀY 01 | CHÂU ĐỐC – RỪNG TRÀM TRÀ SƯ – BIÊN HÒA",
-      "body": "⏰ 04:00 | Đến Châu Đốc – vệ sinh cá nhân, bắt đầu hành trình tâm linh: 🔹 Viếng Miếu Bà Chúa Xứ Núi Sam 🔹 Tham quan Lăng Thoại Ngọc Hầu & Chùa Tây An\n🍜 Ăn sáng đặc sản Châu Đốc (bún cá / hủ tiếu / cơm tấm).\n⏰ 08:30 | Tham quan Rừng Tràm Trà Sư – hệ sinh thái đặc trưng vùng Thất Sơn: 🌿 Trải nghiệm tắc ráng & xuồng chèo xuyên rừng tràm 📸 Check-in Cầu Tre Vạn Bước , thảm bèo xanh mướt 🔭 Ngắm toàn cảnh rừng tràm từ đài quan sát\n🍽️ 12:00 | Ăn trưa nhà hàng – đậm chất miền Tây (cá lóc nướng, lẩu mắm…). 🛌 Nghỉ ngơi ngắn.\n⏰ 13:30 | Tham quan Chùa Hang (Phước Điền Tự) 📸 Check-in view cánh đồng thốt nốt từ trên cao.\n⏰ 15:00 | Khởi hành về Biên Hòa 🛍️ Dừng chân dọc đường cho du khách mua đặc sản, ăn nhẹ buổi chiều tối tại Đồng Tháp/Tiền Giang (tự túc)\n⏰ 20:00 – 21:00 | Về đến Biên Hòa – trả khách tận nơi. 👋 Kết thúc chương trình, hẹn gặp lại quý khách."
-    }
-  ],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
-      "text": "🚍 Đưa đón tận nơi nội ô TP. Biên Hòa 👨‍👩‍👧‍👦 Tour ghép đoàn hàng tuần – Khởi hành từ 10 khách Phù hợp khách lẻ, gia đình, nhóm bạn. Nhận thiết kế tour riêng cho cơ quan, doanh nghiệp, đoàn thể theo yêu cầu. 📞 Mr. Anh Văn – Phòng Kinh Doanh: 0902 898 726"
+      "text": "🚍 Đưa đón tận nơi nội ô TP. Biên Hòa <br>👨‍👩‍👧‍👦 Tour ghép đoàn hàng tuần – Khởi hành từ 10 khách. Phù hợp với gia đình, nhóm bạn.<br>Nhận thiết kế tour riêng cho cơ quan, doanh nghiệp, đoàn thể theo yêu cầu. 📞 Mr. Anh Văn – Phòng Kinh Doanh: 0902 898 726"
     },
     {
       "type": "h2",
@@ -40,7 +30,7 @@
     },
     {
       "type": "p",
-      "text": "🟢 Tuyến 1: Ngã 4 Tân Phong → Quảng Trường Tỉnh → Bến xe Biên Hòa → Ngã 4 Vũng Tàu 🟢 Tuyến 2: Cổng 11 → Cây xăng Suối Linh (Tam Hiệp) → Ngã 4 AMATA → BV Đồng Nai 🟢 Tuyến 3: QL51 → Thị trấn Long Thành → Cao tốc Long Thành – Trung Lương"
+      "text": "🟢 Tuyến 1: Ngã 4 Tân Phong → Quảng Trường Tỉnh → Bến xe Biên Hòa → Ngã 4 Vũng Tàu <br>🟢 Tuyến 2: Cổng 11 → Cây xăng Suối Linh (Tam Hiệp) → Ngã 4 AMATA → BV Đồng Nai <br>🟢 Tuyến 3: QL51 → Thị trấn Long Thành → Cao tốc Long Thành – Trung Lương"
     },
     {
       "type": "h2",
@@ -60,7 +50,7 @@
     },
     {
       "type": "p",
-      "text": "⏰ 04:00 | Đến Châu Đốc – vệ sinh cá nhân, bắt đầu hành trình tâm linh: 🔹 Viếng Miếu Bà Chúa Xứ Núi Sam 🔹 Tham quan Lăng Thoại Ngọc Hầu & Chùa Tây An"
+      "text": "⏰ 04:00 | Đến Châu Đốc – vệ sinh cá nhân, bắt đầu hành trình tâm linh: <br>🔹 Viếng Miếu Bà Chúa Xứ Núi Sam <br>🔹 Tham quan Lăng Thoại Ngọc Hầu & Chùa Tây An"
     },
     {
       "type": "img",
@@ -78,7 +68,7 @@
     },
     {
       "type": "p",
-      "text": "⏰ 08:30 | Tham quan Rừng Tràm Trà Sư – hệ sinh thái đặc trưng vùng Thất Sơn: 🌿 Trải nghiệm tắc ráng & xuồng chèo xuyên rừng tràm 📸 Check-in Cầu Tre Vạn Bước , thảm bèo xanh mướt 🔭 Ngắm toàn cảnh rừng tràm từ đài quan sát"
+      "text": "⏰ 08:30 | Tham quan Rừng Tràm Trà Sư – hệ sinh thái đặc trưng vùng Thất Sơn: <br>🌿 Trải nghiệm tắc ráng & xuồng chèo xuyên rừng tràm <br>📸 Check-in Cầu Tre Vạn Bước , thảm bèo xanh mướt <br>🔭 Ngắm toàn cảnh rừng tràm từ đài quan sát"
     },
     {
       "type": "img",
@@ -96,7 +86,7 @@
     },
     {
       "type": "p",
-      "text": "⏰ 13:30 | Tham quan Chùa Hang (Phước Điền Tự) 📸 Check-in view cánh đồng thốt nốt từ trên cao."
+      "text": "⏰ 13:30 | Tham quan Chùa Hang (Phước Điền Tự) <br>📸 Check-in view cánh đồng thốt nốt từ trên cao."
     },
     {
       "type": "img",
@@ -105,11 +95,11 @@
     },
     {
       "type": "p",
-      "text": "⏰ 15:00 | Khởi hành về Biên Hòa 🛍️ Dừng chân dọc đường cho du khách mua đặc sản, ăn nhẹ buổi chiều tối tại Đồng Tháp/Tiền Giang (tự túc)"
+      "text": "⏰ 15:00 | Khởi hành về Biên Hòa <br>🛍️ Dừng chân dọc đường cho du khách mua đặc sản, ăn nhẹ buổi chiều tối tại Đồng Tháp/Tiền Giang (tự túc)"
     },
     {
       "type": "p",
-      "text": "⏰ 20:00 – 21:00 | Về đến Biên Hòa – trả khách tận nơi. 👋 Kết thúc chương trình, hẹn gặp lại quý khách."
+      "text": "⏰ 20:00 – 21:00 | Về đến Biên Hòa – trả khách tận nơi. <br>👋 Kết thúc chương trình, hẹn gặp lại quý khách."
     },
     {
       "type": "h2",
@@ -117,7 +107,7 @@
     },
     {
       "type": "p",
-      "text": "💵 950.000 VNĐ / KHÁCH 📍 Áp dụng tour ghép – khởi hành từ TP. Biên Hòa"
+      "text": "💵 950.000 VNĐ / KHÁCH <br>📍 Áp dụng tour ghép – khởi hành từ TP. Biên Hòa"
     },
     {
       "type": "h2",
@@ -125,7 +115,7 @@
     },
     {
       "type": "p",
-      "text": "✅ Xe du lịch đời mới đưa đón tận nơi ✅ 01 bữa ăn sáng (Tô/ly) – 01 bữa trưa (Set menu 150.000đ) ✅ Vé tham quan & dịch vụ Trà Sư (xuồng chèo – tắc ráng) ✅ Hướng dẫn viên chuyên nghiệp ✅ Bảo hiểm du lịch ✅ Nón du lịch – nước suối – khăn lạnh"
+      "text": "✅ Xe du lịch đời mới đưa đón tận nơi <br>✅ 01 bữa ăn sáng (Tô/ly) – 01 bữa trưa (Set menu 150.000đ) <br>✅ Vé tham quan & dịch vụ Trà Sư (xuồng chèo/tắc ráng) <br>✅ Hướng dẫn viên chuyên nghiệp <br>✅ Bảo hiểm du lịch <br>✅ Nón du lịch – nước suối – khăn lạnh"
     },
     {
       "type": "h2",
@@ -135,6 +125,5 @@
       "type": "p",
       "text": "❌ Chi phí cá nhân ❌ Thuế VAT (nếu xuất hóa đơn)"
     }
-  ],
-  "departure": "Biên Hòa / TP.HCM"
+  ]
 }
