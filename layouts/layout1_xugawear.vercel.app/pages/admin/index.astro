@@ -66,10 +66,6 @@ import AdminLayout from '@/components/AdminLayout.astro';
       </p>
       <div id="deploy-list" class="mt-4 space-y-3"></div>
     </div>
-    <p class="mt-6 text-center text-xs text-ink-soft">
-      Nội dung publish sẽ được commit vào repo
-      <code id="dash-repo" class="rounded bg-sand px-1.5 py-0.5 font-mono text-[11px] text-ink"></code>
-    </p>
     <div class="mt-10 text-center">
       <button id="logout-btn" class="rounded-full border border-ink/15 px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink hover:text-sand">Đăng xuất</button>
     </div>
@@ -179,7 +175,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
 </style>
 
 <script>
-  import { api, ADMIN_GITHUB_REPO, setBusy } from '@/lib/admin.js';
+  import { api, setBusy } from '@/lib/admin.js';
   const $ = (id) => document.getElementById(id);
   const loginView = $('login-view');
   const dashView = $('dash-view');
@@ -193,8 +189,6 @@ import AdminLayout from '@/components/AdminLayout.astro';
       loginView.classList.add('hidden');
       dashView.classList.remove('hidden');
       $('dash-email').textContent = 'Đã đăng nhập thành công.';
-      const dashRepo = $('dash-repo');
-      if (dashRepo) dashRepo.textContent = ADMIN_GITHUB_REPO;
       await refreshBookingsAlert();
       startDeployPolling();
     } else {
