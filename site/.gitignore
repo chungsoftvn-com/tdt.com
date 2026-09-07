@@ -30,3 +30,7 @@ Thumbs.db
 # python
 __pycache__/
 *.pyc
+
+# junction local: site/public/content -> ../../content (de dev server phục vụ /content).
+# KHÔNG commit — nội dung /content là nguồn đã commit ở repo root.
+/public/content
