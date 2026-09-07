@@ -1,0 +1,35 @@
+{
+  "name": "todaytourist-dev",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Source project for todaytourist.com — Astro + TailwindCSS + JSON content + Argos Translate + GitHub CI. Builds the static site into ../dist.",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "npm run build:astro",
+    "build:astro": "astro build",
+    "preview": "npm run build:astro && wrangler dev",
+    "translate": "python scripts/translate.py",
+    "translate:setup": "python scripts/setup-argos.py",
+    "optimize:images": "python scripts/optimize-images.py",
+    "check": "astro check",
+    "deploy": "npm run build:astro && wrangler deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "12",
+    "astro": "^5.5.0",
+    "sanitize-html": "^2.17.7",
+    "suneditor": "^2.47.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.6.3",
+    "wrangler": "^4.127.1"
+  }
+}
