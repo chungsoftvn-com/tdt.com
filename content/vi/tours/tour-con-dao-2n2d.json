@@ -70,7 +70,7 @@
     },
     {
       "type": "h3",
-      "text": "🌙 ĐÊM 01: ĐỒNG NAI / TP.HCM – TRẦN ĐỀ (SÓC TRĂNG)"
+      "text": "🌙 ĐÊM 01: TP. ĐỒNG NAI / TP.HCM – TRẦN ĐỀ (SÓC TRĂNG)"
     },
     {
       "type": "p",
@@ -109,11 +109,12 @@
       "text": "🚐 Xe đón đoàn bắt đầu chương trình tham quan:"
     },
     {
-      "type": "list",
-      "items": [
-        "🛕 Miếu Bà Phi Yến (An Sơn Miếu) — Ngôi miếu linh thiêng gắn liền với lịch sử hình thành và đời sống tâm linh của người dân Côn Đảo.",
-        "🕍 Chùa Núi Một (Vân Sơn Tự) — Đoàn tham quan, chiêm bái và ngắm toàn cảnh Côn Đảo từ trên cao, không gian thanh tịnh giữa trời biển bao la."
-      ]
+      "type": "p",
+      "text": "🛕 Miếu Bà Phi Yến (An Sơn Miếu) — Ngôi miếu linh thiêng gắn liền với lịch sử hình thành và đời sống tâm linh của người dân Côn Đảo."
+    },
+    {
+      "type": "p",
+      "text": "🕍 Chùa Núi Một (Vân Sơn Tự) — Đoàn tham quan, chiêm bái và ngắm toàn cảnh Côn Đảo từ trên cao, không gian thanh tịnh giữa trời biển bao la."
     },
     {
       "type": "p",
@@ -132,11 +133,12 @@
       "text": "🚐 Xe đưa đoàn tiếp tục tham quan:"
     },
     {
-      "type": "list",
-      "items": [
-        "⛩️ Miếu Hoàng Tử Cải",
-        "🏖️ Tắm biển Đầm Trầu — Quý khách tự do tắm biển, thư giãn tại một trong những bãi biển đẹp nhất Côn Đảo."
-      ]
+      "type": "p",
+      "text": "⛩️ Miếu Hoàng Tử Cải"
+    },
+    {
+      "type": "p",
+      "text": "🏖️ Tắm biển Đầm Trầu — Quý khách tự do tắm biển, thư giãn tại một trong những bãi biển đẹp nhất Côn Đảo."
     },
     {
       "type": "h3",
@@ -156,7 +158,7 @@
     },
     {
       "type": "h3",
-      "text": "🌤️ NGÀY 02: CÔN ĐẢO – TRẦN ĐỀ – BIÊN HÒA / TP.HCM"
+      "text": "🌤️ NGÀY 02: CÔN ĐẢO – TRẦN ĐỀ – TP. ĐỒNG NAI / TP.HCM"
     },
     {
       "type": "p",
@@ -167,11 +169,8 @@
       "text": "🚐 Xe đưa đoàn tham quan:"
     },
     {
-      "type": "list",
-      "items": [
-        "🏛️ Bảo tàng Côn Đảo — Tìm hiểu lịch sử hình thành, những giai đoạn đấu tranh hào hùng của vùng đất linh thiêng.",
-        "🏚️ Trại Phú Hải – Chuồng Cọp Pháp – Chuồng Cọp Mỹ – Trại Phú Bình — Tham quan hệ thống nhà tù nổi tiếng, nơi ghi dấu tinh thần kiên cường, bất khuất của các chiến sĩ cách mạng."
-      ]
+      "type": "p",
+      "text": "🏛️ Bảo tàng Côn Đảo — Tìm hiểu lịch sử hình thành, những giai đoạn đấu tranh hào hùng của vùng đất linh thiêng.🏚️ Trại Phú Hải – Chuồng Cọp Pháp – Chuồng Cọp Mỹ – Trại Phú Bình — Tham quan hệ thống nhà tù nổi tiếng, nơi ghi dấu tinh thần kiên cường, bất khuất của các chiến sĩ cách mạng."
     },
     {
       "type": "p",
@@ -191,7 +190,7 @@
     },
     {
       "type": "p",
-      "text": "🚍 Xe đón đoàn tiếp tục đưa quý khách về lại Biên Hòa / TP.HCM."
+      "text": "🚍 Xe đón đoàn tiếp tục đưa quý khách về lại TP. Đồng Nai / TP.HCM."
     },
     {
       "type": "p",
