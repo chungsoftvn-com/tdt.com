@@ -5,6 +5,16 @@ Translate Vietnamese JSON content files to English using Argos Translate.
 Usage:
     python scripts/translate.py                 # vi -> en for all files under content/
     python scripts/translate.py --source vi --target en --lang-dir content
+    python scripts/translate.py --files content/vi/tours/x.json     # chỉ dịch file này
+    python scripts/translate.py --scope-file /tmp/scope.json        # phạm vi do CI sinh
+
+Phạm vi dịch (tránh dịch lại toàn bộ mỗi lần build — rất tốn thời gian):
+  * `--files A B …`  : CHỈ dịch các file này (file thiếu bản EN vẫn được dịch).
+  * `--scope-file F` : F là JSON {"mode":"all|files|skip","reason":"…","files":[…]}
+    do workflow sinh ra. `skip` -> thoát ngay, KHÔNG load model Argos.
+  * Không truyền gì (chạy tay): giữ hành vi cũ — dịch mọi file thiếu bản EN hoặc
+    có bản VI mới hơn bản EN (so theo mtime; lưu ý mtime KHÔNG đáng tin trong CI
+    vì checkout ghi mọi file cùng lúc → CI luôn dùng --scope-file/--files).
 
 Behaviour:
   * Reads every *.json file in <lang-dir>/<source>/ and writes a translated
@@ -253,24 +263,75 @@ def main() -> int:
     parser.add_argument("--lang-dir", default="../content")
     parser.add_argument("--force", action="store_true",
                         help="translate even if target already exists")
+    parser.add_argument("--files", nargs="*", default=None,
+                        help="CHỈ dịch các file này (đường dẫn tương đối repo như "
+                             "'content/vi/tours/x.json' hoặc tương đối trong <source> như "
+                             "'tours/x.json'). Dùng cho CI: chỉ dịch nội dung vừa đổi.")
+    parser.add_argument("--scope-file", default=None,
+                        help="JSON do CI sinh: {\"mode\":\"all|files|skip\",\"reason\":\"…\","
+                             "\"files\":[\"content/vi/…\"]}. mode=skip -> thoát ngay "
+                             "(không load model, không dịch).")
     args = parser.parse_args()
+
+    # Console Windows (cp1252) làm crash khi in ký tự có dấu / tên file tiếng Việt -> ép UTF-8.
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
 
     root = Path(args.lang_dir)
     src_dir = root / args.source
     out_dir = root / args.target
+    # repo root = <lang-dir>/../.. (content -> repo root) — để hiểu đường dẫn kiểu 'content/vi/…'
+    repo_root = root.resolve().parent.parent
+
+    scope_reason = ""
+    if args.scope_file:
+        try:
+            scope = json.loads(Path(args.scope_file).read_text(encoding="utf-8"))
+        except Exception as exc:
+            print(f"[translate] WARNING: cannot read scope file ({exc}) - translate everything")
+            scope = {"mode": "all"}
+        scope_reason = str(scope.get("reason") or "")
+        mode = scope.get("mode") or "all"
+        if mode == "skip":
+            print(f"[translate] SKIP ({scope_reason or 'no content to translate'})")
+            return 0
+        if mode == "files":
+            args.files = list(scope.get("files") or [])
+            print(f"[translate] scope: {len(args.files)} changed file(s) ({scope_reason})")
+        if mode == "all":
+            # Không xác định được phạm vi (hoặc đổi script dịch/overrides) -> dịch lại hết,
+            # không phụ thuộc mtime (mtime không đáng tin trong CI).
+            args.force = True
+            print(f"[translate] scope: ALL ({scope_reason})")
+
+    # Tập file cần dịch (nếu CI chỉ định) — chuẩn hoá về đường dẫn tương đối trong <source>.
+    # Chấp nhận: 'content/vi/tours/x.json', 'vi/tours/x.json', 'tours/x.json', đường dẫn tuyệt đối.
+    only: set | None = None
+    if args.files is not None:
+        scope_re = re.compile(rf"(?:^|/)(?:content/)?{re.escape(src_dir.name)}/(.+)$")
+        content_re = re.compile(r"(?:^|/)content/(.+)$")
+        only = set()
+        for raw in args.files:
+            s = str(raw).replace("\\", "/").strip()
+            m = scope_re.search(s) or content_re.search(s)
+            rel = (m.group(1) if m else s).strip("/")
+            while rel.startswith("./"):
+                rel = rel[2:]
+            if rel and not rel.startswith(".."):
+                only.add(rel)
+            else:
+                print(f"[translate] WARNING: ignoring unknown path: {raw}")
+        print(f"[translate] scope paths ({len(only)}): {sorted(only)}")
+
     overrides = load_overrides(root / f"overrides.{args.target}.json")
     if not src_dir.is_dir():
         print(f"[translate] ERROR: source dir not found: {src_dir}", file=sys.stderr)
         return 2
 
     out_dir.mkdir(parents=True, exist_ok=True)
-    translator = Translator(args.source, args.target)
-    if translator.available:
-        print(f"[translate] Argos Translate ready: {args.source} -> {args.target}")
-    else:
-        print("[translate] WARNING: Argos Translate not available "
-              f"({args.source}->{args.target}). Falling back.")
-    print(f"[translate] QA overrides loaded: {len(overrides)} key(s)")
 
     # Đệ quy (rglob) để dịch cả file trong thư mục con (tours/, news/).
     files = sorted(src_dir.rglob("*.json"))
@@ -278,22 +339,47 @@ def main() -> int:
         print(f"[translate] No JSON files found in {src_dir}")
         return 2
 
+    # Xác định trước file nào thực sự cần dịch — chưa load model (Argos load rất tốn).
+    todo: list[tuple[Path, Path, Path, str]] = []
+    n_manual = n_unchanged = 0
     for src_file in files:
         rel = src_file.relative_to(src_dir)
-        file_key = rel.with_suffix("").as_posix()  # vd: "tours/tour-x" hoặc "tours"
+        rel_key = rel.as_posix()
+        file_key = rel.with_suffix("").as_posix()  # vd: "tours/tour-x"
         out_file = out_dir / rel
-        if out_file.exists() and file_key in MANUAL_EN:
-            print(f"[translate] keep manual EN {rel.as_posix()}")
+        # CI: bỏ qua file không nằm trong danh sách vừa thay đổi (và đã có bản EN).
+        if only is not None and rel_key not in only and out_file.exists():
+            n_unchanged += 1
             continue
-        # DỊCH CHỌN LỌC: bản EN đã có và mới hơn (hoặc bằng) bản VI -> không dịch lại.
-        # Chỉ dịch những file VI thay đổi / bản EN còn thiếu (trừ khi --force).
-        if out_file.exists() and not args.force:
+        if out_file.exists() and file_key in MANUAL_EN:
+            n_manual += 1
+            continue
+        # Chạy tay (không --files): bản EN mới hơn bản VI thì không dịch lại.
+        if out_file.exists() and not args.force and only is None:
             try:
                 if out_file.stat().st_mtime >= src_file.stat().st_mtime:
-                    print(f"[translate] skip (en up-to-date) {rel.as_posix()}")
+                    n_unchanged += 1
                     continue
             except Exception:
                 pass
+        todo.append((src_file, rel, out_file, file_key))
+
+    if not todo:
+        print(f"[translate] nothing to do ({n_unchanged} skipped, {n_manual} manual EN kept)")
+        return 0
+
+    translator = Translator(args.source, args.target)
+    if translator.available:
+        print(f"[translate] Argos Translate ready: {args.source} -> {args.target}")
+    else:
+        print("[translate] WARNING: Argos Translate not available "
+              f"({args.source}->{args.target}). Falling back.")
+    print(f"[translate] QA overrides loaded: {len(overrides)} key(s)")
+    print(f"[translate] to translate: {len(todo)} file(s) "
+          f"(skipped {n_unchanged}, manual EN kept {n_manual})")
+
+    done = 0
+    for src_file, rel, out_file, file_key in todo:
         if out_file.exists() and not args.force and not translator.available:
             print(f"[translate] keep existing {rel.as_posix()}")
             continue
@@ -308,8 +394,11 @@ def main() -> int:
             json.dumps(translated, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
+        done += 1
         print(f"[translate] {rel.as_posix()} -> {out_dir.name}/{rel.as_posix()}")
 
+    print(f"[translate] done: translated {done}, skipped {n_unchanged}, "
+          f"manual EN kept {n_manual}")
     if not translator.available:
         print("[translate] NOTE: ran in fallback mode. Run "
               "'npm run translate:setup' to enable real translation.")

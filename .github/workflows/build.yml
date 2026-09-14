@@ -4,9 +4,15 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      full_translate:
+        description: 'Dịch lại toàn bộ nội dung (bỏ qua bước chọn lọc phạm vi)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
+  actions: read # để đọc run THÀNH CÔNG gần nhất -> mốc tính phạm vi dịch
   pages: write
   id-token: write
 
@@ -23,6 +29,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Cần lịch sử để `git diff <mốc> HEAD` tính đúng phạm vi cần dịch.
+          fetch-depth: 0
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -36,19 +45,112 @@ jobs:
       - name: Install dependencies
         working-directory: site
         run: npm ci
+
+      # ------------------------------------------------------------------
+      # (A) "Cửa chặn nhanh" + (B) phạm vi cần dịch:
+      #   mode=skip  : không có file content/vi/**/*.json nào đổi -> không dịch,
+      #                không cần cài Argos (tiết kiệm ~10 phút)
+      #   mode=files : chỉ dịch đúng những file vừa đổi
+      #   mode=all   : chưa có mốc / đổi script dịch / overrides / chọn full
+      # Mốc so sánh = commit của run THÀNH CÔNG gần nhất (bản đang deploy) nên run bị
+      # cancel vẫn không làm mất phần cần dịch của lần trước.
+      # ------------------------------------------------------------------
+      - name: Detect translate scope
+        id: scope
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BEFORE_SHA: ${{ github.event.before }}
+          HEAD_SHA: ${{ github.sha }}
+          FULL: ${{ inputs.full_translate }}
+        run: |
+          set -euo pipefail
+          SCOPE_FILE="$RUNNER_TEMP/translate-scope.json"
+          MODE=all
+          REASON="không xác định được phạm vi -> dịch toàn bộ"
+          FILES_JSON="[]"
+
+          if [ "${FULL:-false}" = "true" ]; then
+            REASON="chọn dịch lại toàn bộ"
+          else
+            PREV=$(curl -fsSL \
+                -H "Authorization: Bearer $GH_TOKEN" \
+                -H "Accept: application/vnd.github+json" \
+                "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/build.yml/runs?branch=main&status=success&per_page=1" \
+                | jq -r '.workflow_runs[0].head_sha // empty' 2>/dev/null || true)
+
+            if [ -z "$PREV" ] || ! git cat-file -e "${PREV}^{commit}" 2>/dev/null; then
+              PREV="${BEFORE_SHA:-}"   # fallback: commit trước của lần push này
+            fi
+
+            if [ -z "$PREV" ] || [ "$PREV" = "0000000000000000000000000000000000000000" ] \
+               || ! git cat-file -e "${PREV}^{commit}" 2>/dev/null; then
+              REASON="chưa có mốc so sánh -> dịch toàn bộ"
+            else
+              CHANGED=$(git diff --name-only "$PREV" "$HEAD_SHA")
+              echo "[scope] mốc ${PREV:0:7} -> ${HEAD_SHA:0:7}"
+              echo "$CHANGED" | sed 's/^/    /'
+              if grep -qx 'site/scripts/translate.py' <<<"$CHANGED" \
+                 || grep -qx 'content/overrides.en.json' <<<"$CHANGED"; then
+                REASON="đổi script dịch / file overrides -> dịch toàn bộ"
+              else
+                FILES=$(grep -E '^content/vi/.*\.json$' <<<"$CHANGED" || true)
+                if [ -z "$FILES" ]; then
+                  MODE=skip
+                  REASON="không có file content/vi/**/*.json nào thay đổi"
+                else
+                  MODE=files
+                  REASON="$(grep -c . <<<"$FILES") file nội dung (vi) thay đổi"
+                  FILES_JSON=$(printf '%s\n' "$FILES" | jq -R . | jq -s .)
+                fi
+              fi
+            fi
+          fi
+
+          printf '{"mode":"%s","reason":"%s","files":%s}\n' "$MODE" "$REASON" "$FILES_JSON" > "$SCOPE_FILE"
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          echo "reason=$REASON" >> "$GITHUB_OUTPUT"
+          echo "[scope] mode=$MODE — $REASON"
+
+      # (D) Cache Argos (pip + model): lần đầu ~2-4 phút, các lần sau vài giây.
+      - name: Cache Argos Translate
+        if: steps.scope.outputs.mode != 'skip'
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.local/share/argos-translate
+          key: argos-${{ runner.os }}-py311-${{ hashFiles('site/scripts/setup-argos.py') }}
+
       - name: Setup Argos Translate (best-effort)
+        if: steps.scope.outputs.mode != 'skip'
         working-directory: site
         run: python scripts/setup-argos.py || echo "Argos unavailable - fallback"
-      - name: Build site (copyLayout + translate chọn lọc + Astro)
+
+      - name: Copy layout
+        working-directory: site
+        run: node scripts/copy-layout.mjs
+
+      - name: Translate vi→en (chỉ nội dung thay đổi)
         working-directory: site
         run: |
-          node scripts/copy-layout.mjs
-          python scripts/translate.py
-          npm run build:astro
+          if [ "${{ steps.scope.outputs.mode }}" = "skip" ]; then
+            echo "[translate] BỎ QUA: ${{ steps.scope.outputs.reason }}"
+          else
+            python scripts/translate.py --scope-file "$RUNNER_TEMP/translate-scope.json"
+          fi
+
+      - name: Build Astro
+        working-directory: site
+        run: npm run build:astro
+
+      - name: Copy extra assets
+        working-directory: site
+        run: |
           mkdir -p .astro-dist/admin
           cp admin/config.json .astro-dist/admin/config.json
           cp -r ../content .astro-dist/content
           cp -r ../layouts .astro-dist/layouts
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
