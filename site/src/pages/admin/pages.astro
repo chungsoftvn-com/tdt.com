@@ -25,7 +25,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
 </AdminLayout>
 
 <script>
-  import { api, setBusy, fileToImage } from '@/lib/admin.js';
+  import { api, setBusy, fileToImage, describeSaveError } from '@/lib/admin.js';
   import { PAGE_LIST, PAGE_SCHEMAS } from '@/lib/pageschema.js';
   import { createRichEditor, createHtmlEditor, createFullEditor, collectFullHtmlImages } from '@/lib/sunblocks.js';
   import { bodyFor } from '@/lib/pagebody.js';
@@ -207,8 +207,16 @@ import AdminLayout from '@/components/AdminLayout.astro';
   async function onGalleryFiles(files) {
     const list = files ? [...files] : [];
     let added = 0;
+    formError.classList.add('hidden');
     for (const file of list) {
-      const im = await fileToImage(file);
+      let im;
+      try {
+        im = await fileToImage(file);
+      } catch (err) {
+        formError.textContent = err?.message || 'Lỗi xử lý ảnh.';
+        formError.classList.remove('hidden');
+        continue;
+      }
       if (!im) continue;
       const ext = (im.name.split('.').pop() || 'webp').toLowerCase();
       const name = `about-gallery-${Date.now()}-${galleryItems.length}-${added}.${ext}`;
@@ -698,7 +706,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
         renderList();
         listStatus.textContent = `Đã lưu "${current.label}". Nội dung sẽ lên trang sau khi build + deploy.`;
       } else {
-        formError.textContent = r.data?.error === 'forbidden_origin' ? 'Origin không được phép.' : 'Lưu thất bại.';
+        formError.textContent = describeSaveError(r);
         formError.classList.remove('hidden');
       }
     } finally {

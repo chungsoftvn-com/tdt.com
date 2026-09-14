@@ -19,7 +19,33 @@
 import 'suneditor/dist/css/suneditor.min.css'; // UI editor (v2)
 import suneditor from 'suneditor';
 import { formatBlock, list, link, image, font, fontSize, fontColor, hiliteColor, align, lineHeight, table, horizontalRule, textStyle, blockquote, video } from 'suneditor/src/plugins';
-import { fileToImage } from '@/lib/admin.js';
+import { fileToImage, MAX_IMAGE_BYTES } from '@/lib/admin.js';
+
+/**
+ * Nén + chuyển file (kéo thả/dán) thành data URL để preview trong editor.
+ * Lỗi (ảnh quá lớn / định dạng không hỗ trợ) hiện thông báo cho admin thay vì
+ * im lặng không chèn được ảnh (trước đây lỗi bị nuốt).
+ */
+async function fileToDataUrl(file) {
+  try {
+    const img = await fileToImage(file);
+    if (!img) return null;
+    const ext = (img.name.split('.').pop() || 'webp').toLowerCase();
+    const mime =
+      ext === 'jpg' || ext === 'jpeg'
+        ? 'image/jpeg'
+        : ext === 'png'
+          ? 'image/png'
+          : ext === 'gif'
+            ? 'image/gif'
+            : 'image/webp';
+    return `data:${mime};base64,${img.data}`;
+  } catch (err) {
+    const msg = err && err.message ? err.message : 'Lỗi xử lý ảnh.';
+    if (typeof window !== 'undefined' && window.alert) window.alert(msg);
+    return null;
+  }
+}
 
 /* ---------------- escape / sanitize ---------------- */
 
@@ -260,9 +286,7 @@ export function createFullEditor(rootId, initialHtml, opts) {
     onImageUpload: async (files) => {
       const file = files && files[0];
       if (!file) return null;
-      const img = await fileToImage(file);
-      if (!img) return null;
-      return `data:image/webp;base64,${img.data}`;
+      return fileToDataUrl(file);
     },
   });
   if (initialHtml) ed.setContents(initialHtml);
@@ -327,14 +351,12 @@ export function initSunEditor(rootId) {
       imageSizeOnlyPercentage: true,
       size: '100%',
     },
-    // v2: trả về URL string -> SunEditor chèn <img src=URL>. Dùng data URL WebP
-    // (đã nén) để preview hiện ngay; khi lưu sunCollectBlocks đọc data: -> đẩy vào images[].
+    // v2: trả về URL string -> SunEditor chèn <img src=URL>. Dùng data URL (đã nén)
+    // để preview hiện ngay; khi lưu sunCollectBlocks đọc data: -> đẩy vào images[].
     onImageUpload: async (files) => {
       const file = files && files[0];
       if (!file) return null;
-      const img = await fileToImage(file);
-      if (!img) return null;
-      return `data:image/webp;base64,${img.data}`;
+      return fileToDataUrl(file);
     },
   });
   return editor;
@@ -352,25 +374,43 @@ export function sunGetHtml() {
  * Thu thập từ WYSIWYG: parse HTML -> blocks[] + gom ảnh mới vào images[].
  *  - src data:image/... (ảnh vừa kéo thả/đánh dán) -> tạo tên + đẩy base64 vào images[]
  *  - src bắt đầu bằng / hoặc http (ảnh cũ) -> giữ nguyên, không tải lại
+ * Ảnh dán vào quá lớn (không đi qua onImageUpload) sẽ bị bỏ kèm cảnh báo, thay vì
+ * để server trả lỗi làm hỏng cả lần lưu.
  */
 export async function sunCollectBlocks() {
   const blocks = htmlToBlocks(sunGetHtml());
   const images = [];
+  const kept = [];
+  const skipped = [];
   let pasted = 0;
   for (const b of blocks) {
-    if (b.type !== 'img') continue;
-    const src = b.src || '';
-    if (/^data:image\//i.test(src)) {
-      const m = src.match(/^data:image\/([a-zA-Z0-9.+-]+);base64,(.+)$/s);
-      if (m) {
-        const ext = m[1] === 'jpeg' ? 'jpg' : m[1];
-        const name = `pasted-${Date.now()}-${pasted++}.${ext}`;
-        images.push({ name, data: m[2] });
-        b.src = name;
-      } else {
-        b.src = '';
-      }
+    if (b.type !== 'img') {
+      kept.push(b);
+      continue;
     }
+    const src = b.src || '';
+    if (!/^data:image\//i.test(src)) {
+      kept.push(b);
+      continue;
+    }
+    const m = src.match(/^data:image\/([a-zA-Z0-9.+-]+);base64,(.+)$/s);
+    if (!m) continue; // data URL lỗi -> bỏ block ảnh rỗng
+    const bytes = Math.floor((m[2].length * 3) / 4);
+    if (bytes > MAX_IMAGE_BYTES) {
+      skipped.push(Math.round((bytes / 1024 / 1024) * 10) / 10);
+      continue;
+    }
+    const ext = m[1] === 'jpeg' ? 'jpg' : m[1];
+    const name = `pasted-${Date.now()}-${pasted++}.${ext}`;
+    images.push({ name, data: m[2] });
+    b.src = name;
+    kept.push(b);
   }
-  return { content: blocks, images };
+  if (skipped.length && typeof window !== 'undefined' && window.alert) {
+    window.alert(
+      `Đã bỏ ${skipped.length} ảnh quá lớn trong nội dung (${skipped.join('MB, ')}MB — tối đa ` +
+        `${Math.round(MAX_IMAGE_BYTES / 1024 / 1024)}MB/ảnh). Các nội dung khác vẫn được lưu.`,
+    );
+  }
+  return { content: kept, images };
 }

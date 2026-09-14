@@ -60,7 +60,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
 </AdminLayout>
 
 <script>
-  import { api, fileToImage, setBusy } from '@/lib/admin.js';
+  import { api, fileToImage, setBusy, describeSaveError } from '@/lib/admin.js';
   import { createFullEditor, collectFullHtmlImages } from '@/lib/sunblocks.js';
   const $ = (id) => document.getElementById(id);
   const listView = $('list-view');
@@ -169,8 +169,16 @@ import AdminLayout from '@/components/AdminLayout.astro';
 
   $('f-images').addEventListener('change', async (e) => {
     const files = [...e.target.files];
+    formError.classList.add('hidden');
     for (const file of files) {
-      const im = await fileToImage(file);
+      let im;
+      try {
+        im = await fileToImage(file);
+      } catch (err) {
+        formError.textContent = err?.message || 'Lỗi xử lý ảnh.';
+        formError.classList.remove('hidden');
+        continue;
+      }
       if (!im) continue;
       const ext = (im.name.split('.').pop() || 'webp').toLowerCase();
       const name = `testimonial-${Date.now()}-${gallery.length}.${ext}`;
@@ -215,7 +223,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
         listView.classList.remove('hidden');
         load();
       } else {
-        formError.textContent = 'Lưu thất bại.';
+        formError.textContent = describeSaveError(r);
         formError.classList.remove('hidden');
       }
     } finally {
