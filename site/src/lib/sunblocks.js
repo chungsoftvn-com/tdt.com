@@ -19,7 +19,7 @@
 import 'suneditor/dist/css/suneditor.min.css'; // UI editor (v2)
 import suneditor from 'suneditor';
 import { formatBlock, list, link, image, font, fontSize, fontColor, hiliteColor, align, lineHeight, table, horizontalRule, textStyle, blockquote, video } from 'suneditor/src/plugins';
-import { fileToImage, MAX_IMAGE_BYTES } from '@/lib/admin.js';
+import { fileToImage, shrinkImageDataUrl, IMAGE_TARGET_BYTES } from '@/lib/admin.js';
 
 /**
  * Nén + chuyển file (kéo thả/dán) thành data URL để preview trong editor.
@@ -374,14 +374,16 @@ export function sunGetHtml() {
  * Thu thập từ WYSIWYG: parse HTML -> blocks[] + gom ảnh mới vào images[].
  *  - src data:image/... (ảnh vừa kéo thả/đánh dán) -> tạo tên + đẩy base64 vào images[]
  *  - src bắt đầu bằng / hoặc http (ảnh cũ) -> giữ nguyên, không tải lại
- * Ảnh dán vào quá lớn (không đi qua onImageUpload) sẽ bị bỏ kèm cảnh báo, thay vì
- * để server trả lỗi làm hỏng cả lần lưu.
+ * Ảnh dán vào quá lớn được TỰ ĐỘNG nén lại về mức an toàn (shrinkImageDataUrl);
+ * chỉ bỏ khi trình duyệt không giải mã/nén được (kèm cảnh báo) — thay vì để server
+ * trả lỗi làm hỏng cả lần lưu.
  */
 export async function sunCollectBlocks() {
   const blocks = htmlToBlocks(sunGetHtml());
   const images = [];
   const kept = [];
   const skipped = [];
+  const shrunk = [];
   let pasted = 0;
   for (const b of blocks) {
     if (b.type !== 'img') {
@@ -395,21 +397,33 @@ export async function sunCollectBlocks() {
     }
     const m = src.match(/^data:image\/([a-zA-Z0-9.+-]+);base64,(.+)$/s);
     if (!m) continue; // data URL lỗi -> bỏ block ảnh rỗng
-    const bytes = Math.floor((m[2].length * 3) / 4);
-    if (bytes > MAX_IMAGE_BYTES) {
-      skipped.push(Math.round((bytes / 1024 / 1024) * 10) / 10);
-      continue;
+    let data = m[2];
+    let ext = m[1] === 'jpeg' ? 'jpg' : m[1];
+    const bytes = Math.floor((data.length * 3) / 4);
+    if (bytes > IMAGE_TARGET_BYTES) {
+      try {
+        const small = await shrinkImageDataUrl(src);
+        if (!small?.data) throw new Error('shrink failed');
+        data = small.data;
+        ext = (small.name?.split('.').pop() || ext).toLowerCase();
+        shrunk.push(Math.round((bytes / 1024 / 1024) * 10) / 10);
+      } catch {
+        skipped.push(Math.round((bytes / 1024 / 1024) * 10) / 10);
+        continue;
+      }
     }
-    const ext = m[1] === 'jpeg' ? 'jpg' : m[1];
     const name = `pasted-${Date.now()}-${pasted++}.${ext}`;
-    images.push({ name, data: m[2] });
+    images.push({ name, data });
     b.src = name;
     kept.push(b);
   }
+  if (shrunk.length) {
+    console.info(`[admin] tự giảm ${shrunk.length} ảnh lớn trong nội dung: ${shrunk.join('MB, ')}MB`);
+  }
   if (skipped.length && typeof window !== 'undefined' && window.alert) {
     window.alert(
-      `Đã bỏ ${skipped.length} ảnh quá lớn trong nội dung (${skipped.join('MB, ')}MB — tối đa ` +
-        `${Math.round(MAX_IMAGE_BYTES / 1024 / 1024)}MB/ảnh). Các nội dung khác vẫn được lưu.`,
+      `Đã bỏ ${skipped.length} ảnh trong nội dung vì không nén được (${skipped.join('MB, ')}MB). ` +
+        'Các nội dung khác vẫn được lưu.',
     );
   }
   return { content: kept, images };

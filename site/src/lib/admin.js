@@ -83,30 +83,30 @@ export function setBusy(btn, busy, loadingText = 'Đang xử lý...') {
     if (btn.dataset._orig) btn.innerHTML = btn.dataset._orig;
   }
 }
-
 /** Hạn mỗi ảnh phía server — phải KHỚP `MAX_IMAGE_BYTES` trong dev/worker/src/image.ts. */
 export const MAX_IMAGE_BYTES = 8 * 1024 * 1024;
-/** Đích nhắm sau khi nén: nhỏ hơn hạn server để gửi được nhiều ảnh trong 1 lần lưu. */
-const TARGET_IMAGE_BYTES = 1200 * 1024;
-/** Các mức thử khi nén: giảm dần cạnh dài rồi giảm chất lượng cho tới khi đạt đích. */
-const EDGE_STEPS = [1600, 1280, 1024, 800, 640];
-const QUALITY_STEPS = [0.82, 0.7, 0.6, 0.5];
+/** Đích AN TOÀN sau khi nén: mọi ảnh gửi lên đều được tự động giảm về mức này. */
+export const IMAGE_TARGET_BYTES = 1200 * 1024;
+/** Thang giảm dần khi nén: hạ cạnh dài rồi hạ chất lượng cho tới khi đạt đích. */
+const SIZE_LADDER = [1600, 1280, 1024, 800, 640, 480];
+const QUALITY_LADDER = [0.82, 0.7, 0.6, 0.5, 0.42, 0.35];
 /** Định dạng gửi nguyên file gốc cũng hiển thị được trên web. */
 const RAW_OK_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+/** Định dạng gửi lên server (suy từ tên file sau khi nén). */
+const EXT_BY_MIME = {
+  'image/webp': 'webp',
+  'image/jpeg': 'jpg',
+  'image/png': 'png',
+  'image/gif': 'gif',
+  'image/avif': 'avif',
+};
 
 function mb(bytes) {
   return `${(bytes / 1024 / 1024).toFixed(1)}MB`;
 }
 
 function extForBlob(blob, fallbackName) {
-  const BY_MIME = {
-    'image/webp': 'webp',
-    'image/jpeg': 'jpg',
-    'image/png': 'png',
-    'image/gif': 'gif',
-    'image/avif': 'avif',
-  };
-  if (BY_MIME[blob.type]) return BY_MIME[blob.type];
+  if (EXT_BY_MIME[blob.type]) return EXT_BY_MIME[blob.type];
   const m = String(fallbackName || '').match(/\.([a-z0-9]+)$/i);
   return m ? m[1].toLowerCase() : 'webp';
 }
@@ -126,75 +126,169 @@ async function blobToBase64(blob) {
 }
 
 /**
- * Nén 1 ảnh về WebP (hoặc JPEG nếu trình duyệt không encode được WebP),
- * hạ dần kích thước/chất lượng cho tới khi ≤ TARGET_IMAGE_BYTES.
- * Trả blob nhỏ nhất đạt được, hoặc null nếu không giải mã được file.
+ * Giải mã file ảnh thành nguồn vẽ được lên canvas.
+ * Thử `createImageBitmap` trước (nhanh, tôn trọng EXIF), nếu không được thì
+ * fallback qua thẻ <img> + objectURL (một số máy/định dạng chỉ <img> đọc được).
+ * Ném lỗi nếu trình duyệt không giải mã được file nào cả (HEIC/TIFF/RAW...).
  */
-async function compressImage(file) {
-  let bmp;
+async function decodeSource(file) {
   try {
-    bmp = await createImageBitmap(file);
+    const bmp = await createImageBitmap(file, { imageOrientation: 'from-image' });
+    return { image: bmp, width: bmp.width, height: bmp.height, dispose: () => bmp.close?.() };
   } catch {
-    return null; // sai định dạng / trình duyệt không hỗ trợ (HEIC, TIFF, RAW...)
+    /* thử tiếp bằng <img> */
   }
+  const url = URL.createObjectURL(file);
   try {
-    let best = null;
-    for (const edge of EDGE_STEPS) {
-      const scale = Math.min(1, edge / Math.max(bmp.width, bmp.height));
-      const canvas = document.createElement('canvas');
-      canvas.width = Math.max(1, Math.round(bmp.width * scale));
-      canvas.height = Math.max(1, Math.round(bmp.height * scale));
-      const ctx = canvas.getContext('2d');
-      if (!ctx) break;
-      ctx.drawImage(bmp, 0, 0, canvas.width, canvas.height);
-      for (const quality of QUALITY_STEPS) {
-        let blob = await canvasToBlob(canvas, 'image/webp', quality);
-        // Trình duyệt không encode được WebP -> toBlob trả PNG (nặng) -> chuyển sang JPEG.
-        if (!blob || blob.type !== 'image/webp') {
-          const jpeg = await canvasToBlob(canvas, 'image/jpeg', quality);
-          if (jpeg && (!blob || jpeg.size < blob.size)) blob = jpeg;
-        }
-        if (!blob) continue;
-        if (!best || blob.size < best.size) best = blob;
-        if (blob.size <= TARGET_IMAGE_BYTES) return best;
-      }
-    }
-    return best;
-  } finally {
-    bmp.close?.();
+    const img = await new Promise((resolve, reject) => {
+      const el = new Image();
+      el.onload = () => resolve(el);
+      el.onerror = () => reject(new Error('decode failed'));
+      el.src = url;
+    });
+    const width = img.naturalWidth || img.width || 0;
+    const height = img.naturalHeight || img.height || 0;
+    if (!width || !height) throw new Error('image has no intrinsic size');
+    return { image: img, width, height, dispose: () => URL.revokeObjectURL(url) };
+  } catch (err) {
+    URL.revokeObjectURL(url);
+    throw err;
   }
 }
 
 /**
- * Chuyển file ảnh -> { name, data } base64.
+ * Nén ảnh (WebP, fallback JPEG nếu trình duyệt không encode được WebP) xuống
+ * ≤ `budget`: đi qua thang kích thước × chất lượng, sau đó nếu vẫn quá lớn thì
+ * thu nhỏ tiếp từng bước 75% cho tới khi đạt — nên ảnh giải mã được LUÔN có kết
+ * quả nằm trong mức an toàn.
+ */
+async function compressToBudget(source, budget) {
+  const dims = (edge) => {
+    const scale = Math.min(1, edge / Math.max(source.width, source.height));
+    return [Math.max(1, Math.round(source.width * scale)), Math.max(1, Math.round(source.height * scale))];
+  };
+  const encode = async (w, h, quality) => {
+    const canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return null;
+    ctx.drawImage(source.image, 0, 0, w, h);
+    let blob = await canvasToBlob(canvas, 'image/webp', quality);
+    // Trình duyệt không encode được WebP -> toBlob trả PNG (nặng) -> chuyển sang JPEG.
+    if (!blob || blob.type !== 'image/webp') {
+      const jpeg = await canvasToBlob(canvas, 'image/jpeg', quality);
+      if (jpeg && (!blob || jpeg.size < blob.size)) blob = jpeg;
+    }
+    return blob;
+  };
+
+  let best = null;
+  for (const edge of SIZE_LADDER) {
+    const [w, h] = dims(edge);
+    for (const quality of QUALITY_LADDER) {
+      const blob = await encode(w, h, quality);
+      if (!blob) continue;
+      if (!best || blob.size < best.size) best = blob;
+      if (best.size <= budget) return best;
+    }
+  }
+
+  // Vẫn quá lớn (ảnh rất chi tiết): thu nhỏ tiếp cho tới khi đạt mức an toàn.
+  let [w, h] = dims(SIZE_LADDER[SIZE_LADDER.length - 1]);
+  for (let i = 0; best && best.size > budget && Math.max(w, h) > 64 && i < 12; i++) {
+    w = Math.max(64, Math.round(w * 0.75));
+    h = Math.max(64, Math.round(h * 0.75));
+    for (const quality of [0.6, 0.5]) {
+      const blob = await encode(w, h, quality);
+      if (!blob) continue;
+      if (blob.size < best.size) best = blob;
+      if (best.size <= budget) return best;
+    }
+  }
+  return best;
+}
+
+/**
+ * Chuyển file ảnh -> { name, data } base64, ĐÃ TỰ ĐỘNG GIẢM về ≤ IMAGE_TARGET_BYTES.
  *
- * Ảnh được nén WebP (≤ ~1.2MB) trước khi gửi. Nếu trình duyệt không xử lý được
- * file (HEIC/TIFF từ điện thoại, file lỗi) thì chỉ gửi nguyên file khi đó là
- * định dạng web an toàn và vẫn dưới hạn server; ngược lại NÉM lỗi có thông báo
- * tiếng Việt để UI hiển thị (trước đây gửi ầm thầm → server trả 400 → admin chỉ
- * thấy "Lưu thất bại.").
+ * Quy tắc:
+ *  1. File đã đúng định dạng web và đã đủ nhỏ → dùng luôn (khỏi nén lại, giữ chất lượng gốc).
+ *  2. Còn lại → tự nén, hạ dần kích thước + chất lượng tới mức an toàn (kể cả ảnh
+ *     HEIC/AVIF nếu trình duyệt giải mã được → tự chuyển sang WebP/JPEG).
+ *  3. Chỉ khi trình duyệt KHÔNG giải mã được file (HEIC/TIFF/RAW trên Chrome/Edge)
+ *     mới báo lỗi rõ ràng — vì JS không thể nén thứ mình không đọc được.
  */
 export async function fileToImage(file) {
   if (!file) return undefined;
   const originalName = file.name || 'image.webp';
   const stem = (originalName.replace(/\.[^.]+$/, '') || 'image').toLowerCase().slice(0, 80);
+  const webSafe = RAW_OK_TYPES.includes(file.type);
 
-  const compressed = await compressImage(file);
-  let blob = file;
-  if (compressed && compressed.size < file.size) {
-    blob = compressed;
-  } else if (!RAW_OK_TYPES.includes(file.type)) {
-    throw new Error(
-      `Ảnh "${originalName}" không xử lý được trên trình duyệt này. ` +
-        'Vui lòng chọn ảnh JPG/PNG/WebP (ảnh HEIC từ iPhone nên được lưu sang JPG trước khi tải lên).',
-    );
+  // (1) Ảnh đã đủ nhỏ & đúng định dạng web → không cần nén.
+  if (webSafe && file.size <= IMAGE_TARGET_BYTES) {
+    return { name: `${stem}.${extForBlob(file, originalName)}`, data: await blobToBase64(file) };
   }
 
+  // (2) Tự động nén xuống mức an toàn.
+  let source = null;
+  try {
+    source = await decodeSource(file);
+  } catch {
+    source = null;
+  }
+  let compressed = null;
+  if (source) {
+    try {
+      compressed = await compressToBudget(source, IMAGE_TARGET_BYTES);
+    } finally {
+      source.dispose();
+    }
+  }
+
+  let blob = compressed;
+  if (!blob) {
+    if (!webSafe || file.size > MAX_IMAGE_BYTES) {
+      throw new Error(
+        `Ảnh "${originalName}" (${mb(file.size)}) không xử lý/nén được trên trình duyệt này. ` +
+          'Vui lòng chọn ảnh JPG/PNG/WebP (ảnh HEIC từ iPhone nên được lưu sang JPG trước khi tải lên).',
+      );
+    }
+    blob = file; // nén lỗi nhưng file gốc đúng định dạng web và vẫn dưới hạn server
+  }
+
+  // Chốt chặn cuối — gần như không bao giờ tới đây.
   if (blob.size > MAX_IMAGE_BYTES) {
     throw new Error(
       `Ảnh "${originalName}" quá lớn (${mb(blob.size)} — tối đa ${mb(MAX_IMAGE_BYTES)}). ` +
         'Vui lòng chọn ảnh nhỏ hơn.',
     );
   }
+  if (blob !== file && file.size > blob.size) {
+    console.info(`[admin] tự giảm ảnh "${originalName}": ${mb(file.size)} → ${mb(blob.size)}`);
+  }
   return { name: `${stem}.${extForBlob(blob, originalName)}`, data: await blobToBase64(blob) };
+}
+
+/**
+ * Nén 1 data URL ảnh (ảnh dán/kéo thả vào editor) về ≤ IMAGE_TARGET_BYTES.
+ * Trả { name, data } hoặc null nếu chuỗi không phải data URL ảnh.
+ * Ném lỗi nếu ảnh quá lớn mà trình duyệt không giải mã/nén được.
+ */
+export async function shrinkImageDataUrl(dataUrl) {
+  const m = String(dataUrl || '').match(/^data:(image\/[a-zA-Z0-9.+-]+);base64,(.+)$/s);
+  if (!m) return null;
+  const mime = m[1].toLowerCase();
+  const base64 = m[2];
+
+  if (RAW_OK_TYPES.includes(mime) && base64.length <= Math.ceil(IMAGE_TARGET_BYTES / 3) * 4) {
+    return { name: null, data: base64 }; // đã đủ nhỏ
+  }
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  const ext = (mime.split('/')[1] || 'png').replace('jpeg', 'jpg');
+  const file = new File([bytes], `pasted.${ext}`, { type: mime });
+  const im = await fileToImage(file);
+  return { name: im?.name || null, data: im?.data || '' };
 }
