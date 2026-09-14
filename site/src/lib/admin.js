@@ -83,6 +83,35 @@ export function setBusy(btn, busy, loadingText = 'Đang xử lý...') {
     if (btn.dataset._orig) btn.innerHTML = btn.dataset._orig;
   }
 }
+/**
+ * "Nhịp tim" giữ phiên đăng nhập admin không hết hạn giữa chừng.
+ *
+ * Cơ chế: gửi NGẦM một request vô nghĩa `POST /session/refresh` (không mang dữ
+ * liệu, không thay đổi nội dung) — server gia hạn phiên thêm 1 TTL và cấp lại
+ * cookie với Max-Age mới. Nhờ vậy admin soạn tour dài (kèm ảnh) không bị hết
+ * phiên lúc bấm Lưu.
+ *
+ * Chỉ chạy khi tab admin đang hiển thị; đóng tab thì hết nhịp tim => phiên vẫn
+ * tự hết hạn như cũ. Mọi lỗi (chưa đăng nhập, mất mạng) đều bỏ qua im lặng.
+ */
+export function startSessionKeepAlive({ intervalMs = 10 * 60 * 1000 } = {}) {
+  if (typeof window === 'undefined' || window.__ttKeepAlive) return;
+  window.__ttKeepAlive = true;
+
+  const ping = () => {
+    if (document.visibilityState !== 'visible') return;
+    api('POST', '/session/refresh'); // api() không ném — lỗi thì bỏ qua
+  };
+
+  // Nhịp đầu tiên sau 1 phút (trang vừa mở thường đã vừa kiểm tra phiên rồi).
+  setTimeout(ping, 60 * 1000);
+  setInterval(ping, intervalMs);
+  // Quay lại tab sau khi đi làm việc khác => gia hạn ngay.
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') ping();
+  });
+}
+
 /** Hạn mỗi ảnh phía server — phải KHỚP `MAX_IMAGE_BYTES` trong dev/worker/src/image.ts. */
 export const MAX_IMAGE_BYTES = 8 * 1024 * 1024;
 /** Đích AN TOÀN sau khi nén: mọi ảnh gửi lên đều được tự động giảm về mức này. */

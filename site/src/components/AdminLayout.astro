@@ -92,6 +92,16 @@ const features = [t.f1, t.f2, t.f3, t.f4, t.f5, t.f6];
     </main>
   </body>
 
+  <!--
+    "Nhịp tim" giữ phiên: gửi ngầm request vô nghĩa POST /session/refresh theo chu kỳ
+    để server gia hạn phiên (sliding) — admin soạn tour/tin lâu không bị hết phiên
+    khi bấm Lưu. Chỉ chạy khi tab đang hiển thị; xem startSessionKeepAlive().
+  -->
+  <script>
+    import { startSessionKeepAlive } from '@/lib/admin.js';
+    startSessionKeepAlive();
+  </script>
+
   <style is:global>
     /* Ẩn nội dung trang admin cho tới khi xác nhận phiên đăng nhập (tránh lộ form khi chưa login). */
     html.tt-auth-checking body {
