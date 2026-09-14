@@ -2,6 +2,7 @@
 // /vi/about, /vi/tours, /vi/contact ... and the same for /en.
 // Page slugs come from the shared PAGE_SLUGS registry in src/lib/content.js.
 import { LANGS, PAGE_SLUGS, getContent } from '@/lib/content.js';
+import { normalizeInternalLinks } from '@/lib/rich.js';
 import BaseLayout from '@/components/BaseLayout.astro';
 import AboutPage from '@/components/AboutPage.astro';
 import ToursPage from '@/components/ToursPage.astro';
@@ -40,7 +41,7 @@ const override =
 
 {override ? (
   <BaseLayout lang={lang}>
-    <div class="html-override" set:html={override} />
+    <div class="html-override" set:html={normalizeInternalLinks(override)} />
   </BaseLayout>
 ) : (
   <>

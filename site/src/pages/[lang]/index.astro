@@ -1,6 +1,7 @@
 ---
 // /vi and /en — localized home pages.
 import { LANGS, getContent } from '@/lib/content.js';
+import { normalizeInternalLinks } from '@/lib/rich.js';
 import BaseLayout from '@/components/BaseLayout.astro';
 import Home from '@/components/Home.astro';
 
@@ -19,7 +20,7 @@ const override =
 
 {override ? (
   <BaseLayout lang={lang}>
-    <div class="html-override" set:html={override} />
+    <div class="html-override" set:html={normalizeInternalLinks(override)} />
   </BaseLayout>
 ) : (
   <Home lang={lang} />

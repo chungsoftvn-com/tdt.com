@@ -1,0 +1,55 @@
+{
+  "_comment": "Hand-written English SEO metadata (kept as-is by the translate script — see MANUAL_EN in site/scripts/translate.py). Keys mirror content/vi/seo.json.",
+  "home": {
+    "title": "TodayTourist – Tours in Vietnam & abroad from Dong Nai",
+    "description": "TodayTourist is a travel company in Dong Nai, Vietnam: domestic and international tours, plane tickets, car rental and teambuilding. Hotline +84 913 78 76 47 – quotes within the day."
+  },
+  "about": {
+    "title": "About TodayTourist – 10+ years of travel expertise",
+    "description": "Learn about TodayTourist: more than 10 years organising domestic and international tours, teambuilding and events for families, schools and companies in Dong Nai."
+  },
+  "tours": {
+    "title": "Vietnam & international tours – TodayTourist",
+    "description": "Browse TodayTourist tours: islands and beaches, Mekong Delta, Korea, Japan, China, Thailand and more. Departures from Dong Nai, clear prices, door-to-door pick-up."
+  },
+  "contact": {
+    "title": "Contact TodayTourist – Hotline +84 913 78 76 47",
+    "description": "Address: 80 Dang Nguyen, KP 29, Long Binh Ward, Dong Nai City, Vietnam. Hotline +84 913 78 76 47, Zalo +84 902 898 726, email lesangtravel@gmail.com."
+  },
+  "ve-may-bay": {
+    "title": "Cheap flight tickets – TodayTourist travel agency",
+    "description": "Book Vietnam Airlines, Vietjet Air, Bamboo Airways and international flights with TodayTourist. We compare fares, flight times and baggage, and handle rebooking and refunds."
+  },
+  "cho-thue-xe": {
+    "title": "Car rental in Dong Nai – TodayTourist",
+    "description": "TodayTourist rents tourist cars, group coaches and airport transfer vehicles in Dong Nai and Ho Chi Minh City. New vehicles, experienced drivers, route-based quotes."
+  },
+  "y-kien-khach-hang": {
+    "title": "Customer reviews – TodayTourist",
+    "description": "Photos and feedback from travellers, schools and companies after their trips with TodayTourist."
+  },
+  "doi-tac": {
+    "title": "TodayTourist partners – Growing together",
+    "description": "Travel agencies, hotels, transport providers and organisations that have worked with TodayTourist for more than 10 years."
+  },
+  "dat-tour": {
+    "title": "Book a tour online – TodayTourist",
+    "description": "Send your request and get advice and a quote from TodayTourist the same day. Pick a destination, departure date and group size in under a minute."
+  },
+  "tim-tour": {
+    "title": "Find the right tour – TodayTourist",
+    "description": "Filter tours by type, departure point, region and keyword to quickly find the right itinerary for your family, friends or company."
+  },
+  "tuyen-dung": {
+    "title": "Careers – Join TodayTourist",
+    "description": "Job openings at TodayTourist: tour guides, travel sales consultants and tour operations staff. Send your CV to lesangtravel@gmail.com."
+  },
+  "chi-duong": {
+    "title": "Directions to TodayTourist – 80 Dang Nguyen, Dong Nai",
+    "description": "Map and driving directions to the TodayTourist office: 80 Dang Nguyen, KP 29, Long Binh Ward, Dong Nai City, Vietnam."
+  },
+  "tin-tuc": {
+    "title": "Travel news & deals – TodayTourist",
+    "description": "Travel news, festivals, trip tips and the latest tour deals from TodayTourist in Dong Nai."
+  }
+}

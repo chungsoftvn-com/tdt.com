@@ -1,0 +1,17 @@
+{
+  "name": "TodayTourist",
+  "short_name": "TodayTourist",
+  "description": "Công ty du lịch TodayTourist tại Đồng Nai: tour trong nước, tour nước ngoài, vé máy bay, cho thuê xe, teambuilding.",
+  "lang": "vi",
+  "dir": "ltr",
+  "start_url": "/vi/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#faf6ee",
+  "theme_color": "#0f766e",
+  "icons": [
+    { "src": "/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

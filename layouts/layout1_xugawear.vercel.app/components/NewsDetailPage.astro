@@ -1,5 +1,6 @@
 ---
 import { getContent, getNews, getNewsItem, href } from '@/lib/content.js';
+import { newsLd } from '@/lib/seo.js';
 import BaseLayout from './BaseLayout.astro';
 import NewsCard from './NewsCard.astro';
 import RichContent from './RichContent.astro';
@@ -47,7 +48,15 @@ function renderBody(body: string): string {
 }
 ---
 
-<BaseLayout lang={lang} title={item.title} description={item.summary}>
+<BaseLayout
+  lang={lang}
+  title={item.title}
+  description={item.summary}
+  image={item.image}
+  type="article"
+  publishedTime={item.published_at}
+  jsonLd={[newsLd(lang, item)]}
+>
   <!-- Hero -->
   <section class="bg-ink px-5 py-16 text-sand sm:py-20">
     <div class="mx-auto max-w-3xl text-center">

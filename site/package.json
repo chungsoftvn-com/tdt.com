@@ -15,6 +15,7 @@
     "translate": "python scripts/translate.py",
     "translate:setup": "python scripts/setup-argos.py",
     "optimize:images": "python scripts/optimize-images.py",
+    "brand:assets": "python scripts/make-brand-assets.py",
     "check": "astro check",
     "deploy": "npm run build:astro && wrangler deploy",
     "cf-typegen": "wrangler types"

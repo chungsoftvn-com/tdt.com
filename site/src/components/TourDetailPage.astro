@@ -1,6 +1,7 @@
 ---
 import { getContent, getTour, getTours, href } from '@/lib/content.js';
 import { richDoc } from '@/lib/rich.js';
+import { tourLd } from '@/lib/seo.js';
 import BaseLayout from './BaseLayout.astro';
 import SectionHeading from './SectionHeading.astro';
 import ToursGrid from './ToursGrid.astro';
@@ -24,7 +25,14 @@ const zaloHref = `https://zalo.me/${c.zalo.replace(/[^0-9]/g, '')}`;
 const bookLink = href(lang, 'dat-tour');
 ---
 
-<BaseLayout lang={lang} title={tour.name} description={tour.desc}>
+<BaseLayout
+  lang={lang}
+  title={tour.name}
+  description={tour.desc}
+  image={tour.image}
+  type="product"
+  jsonLd={[tourLd(lang, tour)]}
+>
   <!-- Tour hero -->
   <section class="relative overflow-hidden bg-ink px-5 py-20 text-sand sm:py-28">
     <div class="absolute inset-0" aria-hidden="true">

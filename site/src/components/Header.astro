@@ -35,7 +35,9 @@ const isActive = (url: string) => {
       current === '/en'
     );
   }
-  return current === url || current.startsWith(`${url}/`);
+  // href()/langHref() luôn trả URL có '/' cuối (build format: 'directory'),
+  // nên chỉ cần so tiền tố — nhờ vậy trang chi tiết vẫn sáng đúng mục menu.
+  return current === url || current.startsWith(url);
 };
 
 const viLink = langHref('vi', current);

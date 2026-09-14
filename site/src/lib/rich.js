@@ -6,8 +6,29 @@
  */
 import sanitizeHtml from 'sanitize-html';
 
+/**
+ * Chuẩn hoá link nội bộ do admin nhập trong SunEditor: thêm '/' vào cuối.
+ *
+ * Vì sao cần: build dùng `build.format: 'directory'` nên '/vi/about' bị GitHub
+ * Pages trả 301 → '/vi/about/'. Link do admin gõ tay trong content JSON KHÔNG
+ * đi qua `href()` (lib/content.js) nên phải chuẩn hoá ở đây — nếu không mỗi link
+ * footer tốn 1 redirect.
+ *
+ * Bỏ qua: link ngoài, protocol-relative ('//cdn...'), '/', link đã có '/' cuối,
+ * và file tĩnh (segment cuối chứa '.' — vd .jpg, .pdf, .html).
+ */
+const INTERNAL_HREF_RE = /(href=")(\/[^"?#]*)([?#][^"]*)?(")/g;
+
+export function normalizeInternalLinks(html) {
+  return String(html || '').replace(INTERNAL_HREF_RE, (match, pre, path, suffix = '', post) => {
+    if (path.startsWith('//') || path.length <= 1 || path.endsWith('/')) return match;
+    if (path.split('/').pop().includes('.')) return match;
+    return `${pre}${path}/${suffix}${post}`;
+  });
+}
+
 export function richText(html) {
-  return sanitizeHtml(html || '', {
+  return normalizeInternalLinks(sanitizeHtml(html || '', {
     allowedTags: [
       'p', 'br', 'b', 'strong', 'i', 'em', 'u', 'span', 'a',
       'ul', 'ol', 'li', 'h2', 'h3',
@@ -19,7 +40,7 @@ export function richText(html) {
     transformTags: {
       a: sanitizeHtml.simpleTransform('a', { rel: 'noopener nofollow', target: '_blank' }),
     },
-  });
+  }));
 }
 
 /**
@@ -27,7 +48,7 @@ export function richText(html) {
  * h1-h6, blockquote, pre, hr, bảng, ảnh, màu chữ (span style), v.v.
  */
 export function richDoc(html) {
-  return sanitizeHtml(html || '', {
+  return normalizeInternalLinks(sanitizeHtml(html || '', {
     allowedTags: [
       'p', 'br', 'b', 'strong', 'i', 'em', 'u', 's', 'sub', 'sup', 'span', 'a',
       'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
@@ -54,5 +75,5 @@ export function richDoc(html) {
     transformTags: {
       a: sanitizeHtml.simpleTransform('a', { rel: 'noopener nofollow', target: '_blank' }),
     },
-  });
+  }));
 }

@@ -10,6 +10,11 @@ export default defineConfig({
   site: 'https://todaytourist.com',
   outDir: './.astro-dist',
 
+  // Mọi URL công khai đều kết thúc bằng '/'. Cùng với build.format='directory'
+  // điều này loại bỏ các redirect 301 khi click link nội bộ
+  // (vd '/vi/tours' -> '/vi/tours/') và giữ canonical khớp với URL thật.
+  trailingSlash: 'always',
+
   build: {
     format: 'directory',
   },

@@ -45,7 +45,7 @@ import sys
 from pathlib import Path
 
 # Các file có bản EN biên soạn THỦ CÔNG — không ghi đè khi file đích đã tồn tại.
-MANUAL_EN = {"ve-may-bay", "cho-thue-xe"}
+MANUAL_EN = {"ve-may-bay", "cho-thue-xe", "seo"}
 
 # Keys (by exact name) that must never be translated (proper nouns / codes).
 SKIP_KEY_EXACT = {

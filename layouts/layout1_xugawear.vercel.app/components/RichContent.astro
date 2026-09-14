@@ -1,5 +1,6 @@
 ---
 import sanitizeHtml from 'sanitize-html';
+import { normalizeInternalLinks } from '@/lib/rich.js';
 /**
  * RichContent — render mảng khối nội dung phong phú (ảnh + chữ đan xen).
  * Block types: p (đoạn văn), h2/h3 (tiêu đề), img (ảnh), list (danh sách).
@@ -19,14 +20,16 @@ const blocks = Array.isArray(content) ? content : [];
 
 /** Render text an toàn (inline HTML allowlist) — hỗ trợ đậm/nghiêng/link trong đoạn. */
 const rich = (html) =>
-  sanitizeHtml(html || '', {
-    allowedTags: ['b', 'strong', 'i', 'em', 'u', 'a', 'br', 'span'],
-    allowedAttributes: { a: ['href', 'target', 'rel'] },
-    allowedSchemes: ['http', 'https', 'mailto', 'tel'],
-    transformTags: {
-      a: sanitizeHtml.simpleTransform('a', { rel: 'noopener nofollow', target: '_blank' }),
-    },
-  });
+  normalizeInternalLinks(
+    sanitizeHtml(html || '', {
+      allowedTags: ['b', 'strong', 'i', 'em', 'u', 'a', 'br', 'span'],
+      allowedAttributes: { a: ['href', 'target', 'rel'] },
+      allowedSchemes: ['http', 'https', 'mailto', 'tel'],
+      transformTags: {
+        a: sanitizeHtml.simpleTransform('a', { rel: 'noopener nofollow', target: '_blank' }),
+      },
+    }),
+  );
 ---
 
 <div class="rich-content">

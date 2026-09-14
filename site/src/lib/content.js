@@ -39,21 +39,27 @@ export function getContent(lang, file) {
   return data;
 }
 
-/** Build a localized internal link: '/vi', '/vi/tours', '/en/tour/slug'. */
+/** Build a localized internal link: '/vi/', '/vi/tours/', '/en/tour/slug/'.
+ *
+ * LUÔN có '/' ở cuối: `astro.config.mjs` dùng `build.format: 'directory'`, nên
+ * '/vi/tours' bị GitHub Pages trả 301 → '/vi/tours/'. Link thiếu '/' khiến mỗi
+ * lượt click nội bộ tốn 1 redirect (hại crawl budget + tốc độ). */
 export function href(lang, slug = '') {
-  return slug ? `/${lang}/${slug}` : `/${lang}`;
+  return slug ? `/${lang}/${String(slug).replace(/^\/+|\/+$/g, '')}/` : `/${lang}/`;
 }
 
 /**
  * Alternate-language URL for the current path, so the VI/EN switch keeps
- * the visitor on the same page. e.g. '/vi/tour/x' -> '/en/tour/x'.
+ * the visitor on the same page. e.g. '/vi/tour/x/' -> '/en/tour/x/'.
+ *
+ * Cũng phải có '/' cuối (xem `href()`): thiếu '/' thì mỗi lần bấm nút đổi ngôn
+ * ngữ tốn 1 redirect 301.
  */
 export function langHref(lang, current) {
-  if (!current || current === '/') return `/${lang}`;
-  const seg = current.split('/').filter(Boolean);
+  const seg = String(current || '/').split('/').filter(Boolean);
   if (seg[0] === 'vi' || seg[0] === 'en') seg[0] = lang;
   else seg.unshift(lang);
-  return `/${seg.join('/')}`;
+  return `/${seg.join('/')}/`;
 }
 
 /** Đọc 1 file bài viết dạng `content/<lang>/<kind>/<slug>.json` (null nếu thiếu). */
