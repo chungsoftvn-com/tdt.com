@@ -2,11 +2,10 @@
 import '@/styles/global.css';
 import { getContent } from '@/lib/content.js';
 import {
-  DEFAULT_LANG,
   DEFAULT_OG_IMAGE,
   LANGS,
   absUrl,
-  altPath,
+  alternates,
   breadcrumbLd,
   breadcrumbs,
   canonicalPath,
@@ -15,6 +14,8 @@ import {
   pageSeo,
   travelAgencyLd,
   websiteLd,
+  viOnlyRootSlug,
+  xDefaultPath,
 } from '@/lib/seo.js';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
@@ -67,10 +68,14 @@ const isSync = Astro.url.searchParams.get('__sync') === '1';
 const isHidden = noindex || isSync || isNoindexPath(pathname);
 const robots = isHidden ? 'noindex, follow' : 'index, follow';
 
-const alternates = LANGS.map((l) => ({ lang: l, href: absUrl(altPath(pathname, l)) }));
+// Các bản ngôn ngữ THỰC SỰ tồn tại (trang VI-only ở cấp gốc không có bản /en/).
+const altLinks = alternates(pathname);
 const OG_LOCALES = { vi: 'vi_VN', en: 'en_US' };
 const ogLocale = OG_LOCALES[lang] ?? 'vi_VN';
-const ogLocaleAlt = LANGS.filter((l) => l !== lang).map((l) => OG_LOCALES[l]);
+// Trang VI-only ở cấp gốc không có bản dịch nào khác → không quảng bá locale thừa.
+const ogLocaleAlt = viOnlyRootSlug(pathname)
+  ? []
+  : LANGS.filter((l) => l !== lang).map((l) => OG_LOCALES[l]);
 
 const ogImage = image ? absUrl(imageUrl(image)) : absUrl(DEFAULT_OG_IMAGE);
 const hasCustomImage = Boolean(image);
@@ -95,8 +100,8 @@ const graph = [travelAgencyLd(lang), websiteLd(lang), breadcrumbLd(crumbs), ...j
       !isHidden && (
         <>
           <link rel="canonical" href={canonical} />
-          {alternates.map((a) => <link rel="alternate" hreflang={a.lang} href={a.href} />)}
-          <link rel="alternate" hreflang="x-default" href={absUrl(`/${DEFAULT_LANG}/`)} />
+          {altLinks.map((a) => <link rel="alternate" hreflang={a.lang} href={a.href} />)}
+          <link rel="alternate" hreflang="x-default" href={absUrl(xDefaultPath(pathname))} />
         </>
       )
     }

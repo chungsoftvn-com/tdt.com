@@ -24,6 +24,35 @@ export const PAGE_SLUGS = [
   'chi-duong',
 ];
 
+/**
+ * Trang CHỈ có bản VI và nằm ở CẤP GỐC: '/<slug>/' (KHÔNG có tiền tố ngôn ngữ,
+ * cũng không có URL '/vi/<slug>/' hay '/en/<slug>/').
+ *
+ *   key   = slug trên URL cấp gốc
+ *   value = slug trang tương đương trong PAGE_SLUGS (nguồn nội dung + bản dịch EN)
+ *
+ * Một trang cấp gốc là file `pages/<slug>.astro` dùng lại component của trang
+ * tương đương (thường đọc cùng file content) nên nội dung luôn khớp nhau.
+ *
+ * Registry này là nguồn duy nhất để biết "cấp gốc", dùng ở 3 chỗ:
+ *  - hreflang (lib/seo.js `alternates()`): KHÔNG phát '/en/<slug>/' → URL 404.
+ *  - nút đổi ngôn ngữ ở header (langHref): đưa khách sang bản tương đương
+ *    ('/vi/cho-thue-xe/', '/en/cho-thue-xe/') thay vì URL không tồn tại.
+ *  - sitemap.xml.ts: thêm chính URL cấp gốc đó vào sitemap (chỉ 1 hreflang).
+ */
+export const ROOT_PAGE_EQUIV = {
+  'dich-vu-cho-thue-xe-gia-tot-tai-dong-nai-tp-hcm': 'cho-thue-xe',
+};
+
+/**
+ * Nếu pathname chỉ là MỘT trang VI-only ở cấp gốc → trả slug cấp gốc, ngược lại null.
+ * '/dich-vu-a-b-c/' → 'dich-vu-a-b-c';  '/vi/dich-vu-a-b-c/' → null.
+ */
+export function viOnlyRootSlug(pathname) {
+  const seg = String(pathname || '/').split('/').filter(Boolean);
+  return seg.length === 1 && ROOT_PAGE_EQUIV[seg[0]] ? seg[0] : null;
+}
+
 const cache = new Map();
 
 /** Load a flat JSON content file for a language, e.g. getContent('vi', 'home'). */
@@ -56,6 +85,10 @@ export function href(lang, slug = '') {
  * ngữ tốn 1 redirect 301.
  */
 export function langHref(lang, current) {
+  // Trang VI-only ở cấp gốc không có '/<lang>/<slug>/' → trỏ sang trang tương đương
+  // (xem ROOT_PAGE_EQUIV), tránh link 404 khi khách bấm nút đổi ngôn ngữ.
+  const root = viOnlyRootSlug(current);
+  if (root) return href(lang, ROOT_PAGE_EQUIV[root]);
   const seg = String(current || '/').split('/').filter(Boolean);
   if (seg[0] === 'vi' || seg[0] === 'en') seg[0] = lang;
   else seg.unshift(lang);

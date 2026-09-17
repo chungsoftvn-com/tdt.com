@@ -13,9 +13,9 @@
  *  - Đọc file thiếu/ lỗi KHÔNG được làm sập build → mọi truy cập đi qua `safeContent()`.
  *  - Mọi thứ trả về chỉ là dữ liệu thuần (object/string) để BaseLayout tự render.
  */
-import { DEFAULT_LANG, LANGS, getContent } from './content.js';
+import { DEFAULT_LANG, LANGS, ROOT_PAGE_EQUIV, getContent, viOnlyRootSlug } from './content.js';
 
-export { DEFAULT_LANG, LANGS };
+export { DEFAULT_LANG, LANGS, viOnlyRootSlug };
 
 /** Domain chính — phải khớp `site` trong astro.config.mjs và file CNAME. */
 export const SITE_URL = 'https://todaytourist.com';
@@ -74,6 +74,28 @@ export function altPath(pathname, lang) {
   if (seg[0] === 'vi' || seg[0] === 'en') seg[0] = lang;
   else seg.unshift(lang);
   return `/${seg.join('/')}/`;
+}
+
+/**
+ * Các bản ngôn ngữ THỰC SỰ tồn tại của 1 path → [{ lang, href }] (href tuyệt đối).
+ *
+ * Khác `LANGS.map(altPath)`: trang VI-only ở cấp gốc ('/<slug>/' — xem
+ * ROOT_PAGE_EQUIV trong lib/content.js) KHÔNG có URL '/en/<slug>/'. Nếu vẫn map
+ * qua LANGS thì HTML sẽ phát hreflang `en` trỏ tới URL 404 (đúng loại lỗi đã
+ * từng gặp khi sitemap lấy slug theo từng ngôn ngữ). Vì vậy MỌI nơi phát
+ * alternate (BaseLayout, sitemap.xml.ts) phải đi qua hàm này.
+ */
+export function alternates(pathname) {
+  if (viOnlyRootSlug(pathname)) {
+    // Trang cấp gốc chỉ có 1 bản tiếng Việt → trỏ về chính nó.
+    return [{ lang: DEFAULT_LANG, href: absUrl(canonicalPath(pathname)) }];
+  }
+  return LANGS.map((lang) => ({ lang, href: absUrl(altPath(pathname, lang)) }));
+}
+
+/** Path cho hreflang="x-default" (mặc định: trang chủ VI; trang cấp gốc: chính nó). */
+export function xDefaultPath(pathname) {
+  return viOnlyRootSlug(pathname) ? canonicalPath(pathname) : homePath(DEFAULT_LANG);
 }
 
 /**
@@ -171,7 +193,8 @@ export function breadcrumbs(lang, pathname, leafLabel) {
   }
 
   items.push({
-    name: c[CRUMB_LABELS[section]] || leafLabel || section,
+    // Trang cấp gốc ('/<slug>/') lấy nhãn của trang tương đương trong PAGE_SLUGS.
+    name: c[CRUMB_LABELS[ROOT_PAGE_EQUIV[section] ?? section]] || leafLabel || section,
     url: canonicalPath(pathname),
   });
   return items;

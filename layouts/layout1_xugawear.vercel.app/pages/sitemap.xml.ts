@@ -8,8 +8,15 @@
 // Không phát <lastmod>: CI checkout ghi mọi file cùng một mtime nên lastmod sẽ
 // SAI (Google bỏ qua hoặc giảm tin cậy nếu lastmod không chính xác).
 import type { APIRoute } from 'astro';
-import { LANGS, PAGE_SLUGS, getNews, getTestimonials, getTours } from '@/lib/content.js';
-import { DEFAULT_LANG, absUrl, altPath } from '@/lib/seo.js';
+import {
+  LANGS,
+  PAGE_SLUGS,
+  ROOT_PAGE_EQUIV,
+  getNews,
+  getTestimonials,
+  getTours,
+} from '@/lib/content.js';
+import { DEFAULT_LANG, absUrl, altPath, alternates, viOnlyRootSlug } from '@/lib/seo.js';
 
 export const prerender = true;
 
@@ -45,19 +52,26 @@ function collectPaths() {
     for (const slug of newsSlugs) paths.add(`/${lang}/tin-tuc/${slug}/`);
     for (const slug of testimonialSlugs) paths.add(`/${lang}/y-kien-khach-hang/${slug}/`);
   }
+
+  // Trang VI-only ở CẤP GỐC ('/<slug>/'): chỉ 1 ngôn ngữ, không nằm dưới /vi/ hay /en/.
+  for (const slug of Object.keys(ROOT_PAGE_EQUIV)) paths.add(`/${slug}/`);
+
   return [...paths].sort();
 }
 
 export const GET: APIRoute = () => {
   const urls = collectPaths().map((path) => {
     const lines = [`    <loc>${escapeXml(absUrl(path))}</loc>`];
-    for (const lang of LANGS) {
+    // Chỉ phát alternate cho bản ngôn ngữ THỰC SỰ tồn tại: trang VI-only ở cấp gốc
+    // không có '/en/<slug>/' → phát vào sẽ khiến Google nhận 404 từ sitemap.
+    for (const a of alternates(path)) {
       lines.push(
-        `    <xhtml:link rel="alternate" hreflang="${lang}" href="${escapeXml(absUrl(altPath(path, lang)))}"/>`,
+        `    <xhtml:link rel="alternate" hreflang="${a.lang}" href="${escapeXml(a.href)}"/>`,
       );
     }
+    const xDefault = viOnlyRootSlug(path) ? path : altPath(path, DEFAULT_LANG);
     lines.push(
-      `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(absUrl(altPath(path, DEFAULT_LANG)))}"/>`,
+      `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(absUrl(xDefault))}"/>`,
     );
     return ['  <url>', ...lines, '  </url>'].join('\n');
   });
