@@ -143,6 +143,14 @@ jobs:
         working-directory: site
         run: npm run build:astro
 
+      # Bản sao cấp gốc: copy .astro-dist/vi/** lên root để các URL cũ không có
+      # tiền tố ngôn ngữ ('/tim-tour/', '/tours/<slug>/', '/tours/khu-vuc/<region>/')
+      # tồn tại thật (GitHub Pages không có redirect server-side). Canonical của
+      # bản sao đã trỏ về '/vi/…' sẵn nên không sinh duplicate content.
+      - name: Copy /vi/* lên root (bản sao không tiền tố ngôn ngữ)
+        working-directory: site
+        run: node scripts/copy-vi-to-root.mjs
+
       - name: Copy extra assets
         working-directory: site
         run: |

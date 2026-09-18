@@ -9,15 +9,15 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run build:astro",
+    "build": "npm run build:astro && node scripts/copy-vi-to-root.mjs",
     "build:astro": "astro build",
-    "preview": "npm run build:astro && wrangler dev",
+    "preview": "npm run build && wrangler dev",
     "translate": "python scripts/translate.py",
     "translate:setup": "python scripts/setup-argos.py",
     "optimize:images": "python scripts/optimize-images.py",
     "brand:assets": "python scripts/make-brand-assets.py",
     "check": "astro check",
-    "deploy": "npm run build:astro && wrangler deploy",
+    "deploy": "npm run build && wrangler deploy",
     "cf-typegen": "wrangler types"
   },
   "dependencies": {

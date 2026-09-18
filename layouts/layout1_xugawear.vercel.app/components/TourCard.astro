@@ -19,7 +19,7 @@ interface Props {
 
 const { lang, tour } = Astro.props;
 const t = getContent(lang, 'common');
-const url = href(lang, `tour/${tour.slug}`);
+const url = href(lang, `tours/${tour.slug}`);
 ---
 
 <article

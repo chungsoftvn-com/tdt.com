@@ -54,33 +54,107 @@ export function viOnlyRootSlug(pathname) {
 }
 
 /**
- * BẢN SAO ở CẤP GỐC của một trang CHI TIẾT — URL cũ do site trước để lại, dạng
- * '/tours/<slug>/' (KHÔNG có tiền tố ngôn ngữ, cũng không nằm trong PAGE_SLUGS).
+ * BẢN SAO ở CẤP GỐC (KHÔNG có tiền tố ngôn ngữ) của mọi trang tiếng Việt.
  *
- *   key   = path cấp gốc, không có '/' đầu/cuối   ('tours/<slug>')
- *   value = path của trang THẬT, phần sau tiền tố ngôn ngữ ('tour/<slug>')
+ * GitHub Pages KHÔNG có redirect server-side, nên các URL cũ kiểu
+ * 'todaytourist.com/tim-tour/' phải tồn tại thật. CI sinh chúng bằng cách copy
+ * `.astro-dist/vi/**` lên root (`site/scripts/copy-vi-to-root.mjs`); ở đây chỉ
+ * cần biết "path này là bản sao của path nào" để SEO trỏ đúng URL.
  *
- * Trang bản sao dùng LẠI đúng component của trang thật → phần thân HTML giống
- * hệt nhau, và vẫn đọc chung `content/<lang>/...` nên sửa nội dung là cả hai
- * đổi theo (không có bản JSON trùng để lệch nhau về sau).
+ * Đây là tập "mục đầu tiên" của các đường dẫn công khai: 'tours' phủ cả
+ * '/tours/', '/tours/<slug>/' và '/tours/khu-vuc/<region>/'.
  *
- * Phần SEO được QUY VỀ TRANG THẬT qua `rootAliasPath()`: canonical, hreflang,
- * breadcrumb và og:url đều trỏ tới '/<lang>/<value>/' → Google chỉ index 1 URL
- * duy nhất, bản sao không tạo duplicate content. Vì vậy các path trong registry
- * này KHÔNG được thêm vào sitemap.xml.
+ * KHÔNG gồm 'home' (trang công cụ /vi/home/generated/ — không được lộ ra root)
+ * và không tính các slug trong ROOT_PAGE_EQUIV (trang VI cấp gốc viết riêng,
+ * canonical = chính nó).
  */
-export const ROOT_ALIASES = {
-  'tours/tour-trung-quoc-5-ngay-4-dem': 'tour/tour-trung-quoc-5-ngay-4-dem',
-};
+const VI_MIRROR_HEADS = new Set([...PAGE_SLUGS, 'tin-tuc']);
 
 /**
- * Nếu pathname là 1 bản sao cấp gốc → trả path TRANG THẬT (không tiền tố ngôn ngữ);
- * ngược lại null.  '/tours/tour-x/' → 'tour/tour-x';  '/vi/tours/tour-x/' → null.
+ * Path cấp gốc là bản sao của 1 trang tiếng Việt → trả path đó (giữ dạng
+ * '<seg>/<seg>/'); '/' (trang chủ) → '/'; không phải bản sao → null.
+ *   '/tim-tour/'          → '/tim-tour/'
+ *   '/tours/<slug>/'     → '/tours/<slug>/'
+ *   '/vi/tim-tour/'       → null   (đã có tiền tố ngôn ngữ)
  */
-export function rootAliasPath(pathname) {
-  const seg = String(pathname || '/').split('/').filter(Boolean);
-  if (!seg.length || seg[0] === 'vi' || seg[0] === 'en') return null;
-  return ROOT_ALIASES[seg.join('/')] ?? null;
+export function viMirrorPath(pathname) {
+  const seg = String(pathname || '/')
+    .split('#')[0]
+    .split('?')[0]
+    .split('/')
+    .filter(Boolean);
+  if (!seg.length) return '/';
+  if (seg[0] === 'vi' || seg[0] === 'en') return null;
+  if (ROOT_PAGE_EQUIV[seg[0]]) return null;
+  return VI_MIRROR_HEADS.has(seg[0]) ? `/${seg.join('/')}/` : null;
+}
+
+/**
+ * Path của TRANG THẬT (có tiền tố ngôn ngữ) mà bản sao cấp gốc trỏ về:
+ *   '/' → '/vi/',  '/tim-tour/' → '/vi/tim-tour/',  '/vi/tim-tour/' → null.
+ */
+export function viMirrorTarget(pathname) {
+  const p = viMirrorPath(pathname);
+  if (p === null) return null;
+  return p === '/' ? `/${DEFAULT_LANG}/` : `/${DEFAULT_LANG}${p}`;
+}
+
+/**
+ * Mục đã ĐỔI TÊN (path cũ vẫn được build để không 404, nhưng canonical/hreflang/
+ * nút đổi ngôn ngữ phải trỏ về path mới).
+ *   '/vi/tour/<slug>/' → '/vi/tours/<slug>/'
+ *   '/en/tour/<slug>/' → '/en/tours/<slug>/'
+ * (Trước 2026-09 chi tiết tour nằm ở '<lang>/tour/', nay là '<lang>/tours/'.)
+ */
+const MOVED_SEGMENTS = { tour: 'tours' };
+
+/** Đổi tên mục đầu tiên (sau tiền tố ngôn ngữ nếu có); path khác giữ nguyên dạng. */
+export function resolveMovedPath(pathname) {
+  const seg = String(pathname || '/')
+    .split('#')[0]
+    .split('?')[0]
+    .split('/')
+    .filter(Boolean);
+  const lang = seg[0] === 'vi' || seg[0] === 'en' ? seg.shift() : '';
+  const renamed = MOVED_SEGMENTS[seg[0]];
+  if (renamed) seg[0] = renamed;
+  return `/${[lang, ...seg].filter(Boolean).join('/')}${seg.length ? '/' : ''}`;
+}
+
+/**
+ * Slug hoá chuỗi tiếng Việt dùng cho URL khu vực:
+ *   'Châu Á' → 'chau-a',  'Miền Tây' → 'mien-tay',  'Biển đảo' → 'bien-dao'.
+ */
+export function slugifyVi(value) {
+  return String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd').replace(/Đ/g, 'D')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+/**
+ * Danh sách KHU VỰC cho '/<lang>/tours/khu-vuc/<region>/'.
+ *
+ * Suy ra từ chính `region_name` của các tour bản VI — không có bảng cứng nào để
+ * lệch với content. Slug lấy từ bản VI cho CẢ 2 ngôn ngữ (giống slug tour) vì
+ * bản EN dịch máy đang để `region_name` rỗng (xem ghi chú trong README/translate).
+ *
+ * Trả về: [{ slug, name, tourSlugs }] — đã sắp xếp theo tên (tiếng Việt).
+ */
+export function getTourRegions() {
+  const map = new Map();
+  for (const tour of getTours(DEFAULT_LANG)) {
+    const name = String(tour.regionName || '').trim();
+    if (!name) continue;
+    const slug = slugifyVi(name);
+    if (!slug) continue;
+    if (!map.has(slug)) map.set(slug, { slug, name, tourSlugs: [] });
+    map.get(slug).tourSlugs.push(tour.slug);
+  }
+  return [...map.values()].sort((a, b) => a.name.localeCompare(b.name, 'vi'));
 }
 
 const cache = new Map();
@@ -98,7 +172,7 @@ export function getContent(lang, file) {
   return data;
 }
 
-/** Build a localized internal link: '/vi/', '/vi/tours/', '/en/tour/slug/'.
+/** Build a localized internal link: '/vi/', '/vi/tours/', '/en/tours/slug/'.
  *
  * LUÔN có '/' ở cuối: `astro.config.mjs` dùng `build.format: 'directory'`, nên
  * '/vi/tours' bị GitHub Pages trả 301 → '/vi/tours/'. Link thiếu '/' khiến mỗi
@@ -109,7 +183,7 @@ export function href(lang, slug = '') {
 
 /**
  * Alternate-language URL for the current path, so the VI/EN switch keeps
- * the visitor on the same page. e.g. '/vi/tour/x/' -> '/en/tour/x/'.
+ * the visitor on the same page. e.g. '/vi/tours/x/' -> '/en/tours/x/'.
  *
  * Cũng phải có '/' cuối (xem `href()`): thiếu '/' thì mỗi lần bấm nút đổi ngôn
  * ngữ tốn 1 redirect 301.
@@ -119,10 +193,10 @@ export function langHref(lang, current) {
   // (xem ROOT_PAGE_EQUIV), tránh link 404 khi khách bấm nút đổi ngôn ngữ.
   const root = viOnlyRootSlug(current);
   if (root) return href(lang, ROOT_PAGE_EQUIV[root]);
-  // Bản sao cấp gốc ('/tours/<slug>/'): bản thật nằm ở '/<lang>/tour/<slug>/'.
-  const alias = rootAliasPath(current);
-  if (alias) return href(lang, alias);
-  const seg = String(current || '/').split('/').filter(Boolean);
+  // Bản sao cấp gốc ('/tim-tour/', '/tours/<slug>/') → bản thật '/vi/<path>/'.
+  // Mục đổi tên ('/vi/tour/<slug>/') → '/vi/tours/<slug>/'. Cả hai đều quy về
+  // URL thật trước khi đổi tiền tố ngôn ngữ.
+  const seg = (viMirrorTarget(current) ?? resolveMovedPath(current)).split('/').filter(Boolean);
   if (seg[0] === 'vi' || seg[0] === 'en') seg[0] = lang;
   else seg.unshift(lang);
   return `/${seg.join('/')}/`;

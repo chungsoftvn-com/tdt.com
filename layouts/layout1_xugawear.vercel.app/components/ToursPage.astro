@@ -1,5 +1,5 @@
 ---
-import { getContent, getTours } from '@/lib/content.js';
+import { getContent, getTourRegions, getTours, href } from '@/lib/content.js';
 import BaseLayout from './BaseLayout.astro';
 import PageHero from './PageHero.astro';
 import ToursGrid from './ToursGrid.astro';
@@ -15,6 +15,14 @@ const tours = getTours(lang);
 const domestic = tours.filter((x) => x.region === 'domestic');
 const international = tours.filter((x) => x.region === 'international');
 
+// KHU VỰC = các trang thật '/<lang>/tours/khu-vuc/<slug>/' (khác bộ lọc client-side
+// bên dưới chỉ lọc trong trang này). Slug lấy từ region_name bản VI — xem
+// `getTourRegions()` trong lib/content.js.
+const regions = getTourRegions().map((r) => ({
+  ...r,
+  count: tours.filter((x) => r.tourSlugs.includes(x.slug)).length,
+}));
+
 const filters = [
   { key: 'all', label: c.region_all, list: tours },
   { key: 'domestic', label: c.region_domestic, list: domestic },
@@ -27,6 +35,23 @@ const filters = [
 
   <section class="px-5 py-14 sm:py-16">
     <div class="mx-auto max-w-6xl">
+      <!-- Danh sách theo KHU VỰC (link sang trang riêng, có URL để SEO) -->
+      <nav class="mb-8 flex flex-wrap justify-center gap-2" aria-label={t.list_title}>
+        {
+          regions.map((r) => (
+            <a
+              href={href(lang, `tours/khu-vuc/${r.slug}`)}
+              class="inline-flex min-h-10 items-center rounded-full border border-ink/15 bg-paper px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-sea hover:text-sea"
+            >
+              {r.name}
+              <span class="ml-1.5 rounded-full bg-ink/10 px-2 py-0.5 text-xs tabular-nums">
+                {r.count}
+              </span>
+            </a>
+          ))
+        }
+      </nav>
+
       <!-- Region filter -->
       <div data-tour-filters class="mb-10 flex flex-wrap justify-center gap-2" role="tablist" aria-label={t.list_title}>
         {
