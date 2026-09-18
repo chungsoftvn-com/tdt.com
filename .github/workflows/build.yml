@@ -151,6 +151,12 @@ jobs:
         working-directory: site
         run: node scripts/copy-vi-to-root.mjs
 
+      # URL cũ (site ASP.NET trước) đang được Google index: sinh trang 200 có
+      # canonical + đếm giờ JS chuyển sang địa chỉ mới (thay cho 404).
+      - name: Sinh trang chuyển hướng cho URL cũ
+        working-directory: site
+        run: node scripts/build-legacy-redirects.mjs
+
       - name: Copy extra assets
         working-directory: site
         run: |

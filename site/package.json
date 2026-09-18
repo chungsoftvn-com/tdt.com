@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run build:astro && node scripts/copy-vi-to-root.mjs",
+    "build": "npm run build:astro && node scripts/copy-vi-to-root.mjs && node scripts/build-legacy-redirects.mjs",
     "build:astro": "astro build",
     "preview": "npm run build && wrangler dev",
     "translate": "python scripts/translate.py",
