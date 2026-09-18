@@ -13,7 +13,14 @@
  *  - Đọc file thiếu/ lỗi KHÔNG được làm sập build → mọi truy cập đi qua `safeContent()`.
  *  - Mọi thứ trả về chỉ là dữ liệu thuần (object/string) để BaseLayout tự render.
  */
-import { DEFAULT_LANG, LANGS, ROOT_PAGE_EQUIV, getContent, viOnlyRootSlug } from './content.js';
+import {
+  DEFAULT_LANG,
+  LANGS,
+  ROOT_PAGE_EQUIV,
+  getContent,
+  rootAliasPath,
+  viOnlyRootSlug,
+} from './content.js';
 
 export { DEFAULT_LANG, LANGS, viOnlyRootSlug };
 
@@ -65,6 +72,10 @@ export function homePath(lang) {
 export function canonicalPath(pathname) {
   const clean = String(pathname || '/').split('#')[0].split('?')[0];
   if (clean === '' || clean === '/') return homePath(DEFAULT_LANG);
+  // Bản sao cấp gốc ('/tours/<slug>/') → canonical trỏ về TRANG THẬT có tiền tố ngôn ngữ
+  // (xem ROOT_ALIASES trong lib/content.js) nên không sinh duplicate content.
+  const alias = rootAliasPath(clean);
+  if (alias) return `/${DEFAULT_LANG}/${alias}/`;
   return clean.endsWith('/') ? clean : `${clean}/`;
 }
 
@@ -86,6 +97,12 @@ export function altPath(pathname, lang) {
  * alternate (BaseLayout, sitemap.xml.ts) phải đi qua hàm này.
  */
 export function alternates(pathname) {
+  // Bản sao cấp gốc ('/tours/<slug>/'): các bản ngôn ngữ THẬT nằm ở
+  // '/<lang>/<path trang thật>/' → phát đúng 2 URL tồn tại, không phát 404.
+  const alias = rootAliasPath(pathname);
+  if (alias) {
+    return LANGS.map((lang) => ({ lang, href: absUrl(`/${lang}/${alias}/`) }));
+  }
   if (viOnlyRootSlug(pathname)) {
     // Trang cấp gốc chỉ có 1 bản tiếng Việt → trỏ về chính nó.
     return [{ lang: DEFAULT_LANG, href: absUrl(canonicalPath(pathname)) }];
@@ -112,7 +129,12 @@ export function isNoindexPath(pathname) {
 
 /** Key trong `content/<lang>/seo.json` tương ứng với pathname hiện tại. */
 export function seoKey(pathname) {
-  const seg = String(pathname || '/').split('/').filter(Boolean);
+  // Bản sao cấp gốc phải dùng CHUNG key với trang thật ('tour-detail'), nếu không
+  // sẽ lấy nhầm title/description của trang danh sách '/vi/tours/'.
+  const alias = rootAliasPath(pathname);
+  const seg = String(alias ? `/${DEFAULT_LANG}/${alias}/` : pathname || '/')
+    .split('/')
+    .filter(Boolean);
   if (seg[0] === 'vi' || seg[0] === 'en') seg.shift();
   if (!seg.length) return 'home';
   // Trang chi tiết không khai báo trong seo.json — tự sinh từ nội dung bài.
@@ -171,7 +193,12 @@ const CRUMB_LABELS = {
  */
 export function breadcrumbs(lang, pathname, leafLabel) {
   const c = commonOf(lang);
-  const seg = String(pathname || '/').split('/').filter(Boolean);
+  // Bản sao cấp gốc: dùng lại CHÍNH breadcrumb của trang thật (giống hệt nhau,
+  // không sinh ra crumb lạ tên 'Tours').
+  const alias = rootAliasPath(pathname);
+  const seg = String(alias ? `/${lang}/${alias}/` : pathname || '/')
+    .split('/')
+    .filter(Boolean);
   if (seg[0] === 'vi' || seg[0] === 'en') seg.shift();
   if (!seg.length) return [];
 

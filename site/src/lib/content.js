@@ -53,6 +53,36 @@ export function viOnlyRootSlug(pathname) {
   return seg.length === 1 && ROOT_PAGE_EQUIV[seg[0]] ? seg[0] : null;
 }
 
+/**
+ * BẢN SAO ở CẤP GỐC của một trang CHI TIẾT — URL cũ do site trước để lại, dạng
+ * '/tours/<slug>/' (KHÔNG có tiền tố ngôn ngữ, cũng không nằm trong PAGE_SLUGS).
+ *
+ *   key   = path cấp gốc, không có '/' đầu/cuối   ('tours/<slug>')
+ *   value = path của trang THẬT, phần sau tiền tố ngôn ngữ ('tour/<slug>')
+ *
+ * Trang bản sao dùng LẠI đúng component của trang thật → phần thân HTML giống
+ * hệt nhau, và vẫn đọc chung `content/<lang>/...` nên sửa nội dung là cả hai
+ * đổi theo (không có bản JSON trùng để lệch nhau về sau).
+ *
+ * Phần SEO được QUY VỀ TRANG THẬT qua `rootAliasPath()`: canonical, hreflang,
+ * breadcrumb và og:url đều trỏ tới '/<lang>/<value>/' → Google chỉ index 1 URL
+ * duy nhất, bản sao không tạo duplicate content. Vì vậy các path trong registry
+ * này KHÔNG được thêm vào sitemap.xml.
+ */
+export const ROOT_ALIASES = {
+  'tours/tour-trung-quoc-5-ngay-4-dem': 'tour/tour-trung-quoc-5-ngay-4-dem',
+};
+
+/**
+ * Nếu pathname là 1 bản sao cấp gốc → trả path TRANG THẬT (không tiền tố ngôn ngữ);
+ * ngược lại null.  '/tours/tour-x/' → 'tour/tour-x';  '/vi/tours/tour-x/' → null.
+ */
+export function rootAliasPath(pathname) {
+  const seg = String(pathname || '/').split('/').filter(Boolean);
+  if (!seg.length || seg[0] === 'vi' || seg[0] === 'en') return null;
+  return ROOT_ALIASES[seg.join('/')] ?? null;
+}
+
 const cache = new Map();
 
 /** Load a flat JSON content file for a language, e.g. getContent('vi', 'home'). */
@@ -89,6 +119,9 @@ export function langHref(lang, current) {
   // (xem ROOT_PAGE_EQUIV), tránh link 404 khi khách bấm nút đổi ngôn ngữ.
   const root = viOnlyRootSlug(current);
   if (root) return href(lang, ROOT_PAGE_EQUIV[root]);
+  // Bản sao cấp gốc ('/tours/<slug>/'): bản thật nằm ở '/<lang>/tour/<slug>/'.
+  const alias = rootAliasPath(current);
+  if (alias) return href(lang, alias);
   const seg = String(current || '/').split('/').filter(Boolean);
   if (seg[0] === 'vi' || seg[0] === 'en') seg[0] = lang;
   else seg.unshift(lang);
