@@ -30,6 +30,22 @@ const c = getContent(lang, 'common');
 const tours = getTours(lang);
 const hotSlugs = Array.isArray(t.hot_tours) ? t.hot_tours : [];
 const hotTours = hotSlugs.length ? tours.filter((x) => hotSlugs.includes(x.slug)) : tours.slice(0, 6);
+
+/** 4 tour đầu = mosaic "Điểm đến nổi bật"; lưới "Tour hot" lấy các tour KHÁC (tránh lặp ảnh). */
+const featuredTours = (hotTours.length ? hotTours : tours).slice(0, 4);
+const featuredSlugs = new Set(featuredTours.map((x) => x.slug));
+const gridTours = tours.filter((x) => !featuredSlugs.has(x.slug)).slice(0, 8);
+
+/** Dải ảnh "Khoảnh khắc hành trình" — ảnh thư viện + ảnh tour. */
+const photoStrip = [
+  'about-07.jpg',
+  'about-09.jpg',
+  'about-11.jpg',
+  'about-12.jpg',
+  'about-13.jpg',
+  'about-14.jpg',
+  ...tours.filter((x) => x && x.image).slice(0, 2).map((x) => x.image),
+].slice(0, 8);
 const read = (k) => (typeof t[k] === 'string' ? t[k] : '');
 const blocks = (Array.isArray(t.home_blocks) && t.home_blocks.length
   ? t.home_blocks
@@ -42,7 +58,41 @@ const blocks = (Array.isArray(t.home_blocks) && t.home_blocks.length
     blocks.map((b) => {
       switch (b.type) {
         case 'hero':
-          return <Hero lang={lang} />;
+          return (
+            <>
+              <Hero lang={lang} />
+              {/* Mosaic "Điểm đến nổi bật" — khối ảnh lớn ngay đầu trang */}
+              {featuredTours.length > 0 && (
+                <section class="bg-sand px-5 py-10">
+                  <div class="mx-auto max-w-6xl">
+                    <div class="dv-head">
+                      <h2>{lang === 'vi' ? 'Điểm đến nổi bật' : 'Featured destinations'}</h2>
+                      <a href={href(lang, 'tours')}>{t.view_all_tours}</a>
+                    </div>
+                    <div class="dv-mosaic">
+                      {featuredTours.map((tour, i) => (
+                        <a
+                          class={`dv-mosaic-item ${i === 0 ? 'dv-mosaic-big' : ''}`}
+                          href={href(lang, `tours/${tour.slug}`)}
+                        >
+                          <img
+                            src={`/content/vi/images/${tour.image}`}
+                            alt={tour.name}
+                            loading={i === 0 ? 'eager' : 'lazy'}
+                            decoding="async"
+                          />
+                          <span class="dv-mosaic-cap">
+                            <strong>{tour.name}</strong>
+                            {tour.duration && <em>{tour.duration}</em>}
+                          </span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+              )}
+            </>
+          );
         case 'about':
           return <AboutTeaser lang={lang} />;
         case 'services':
@@ -59,7 +109,7 @@ const blocks = (Array.isArray(t.home_blocks) && t.home_blocks.length
                   text={t.hot_tours_text}
                 />
                 <div class="mt-10">
-                  <ToursGrid lang={lang} tours={hotTours} />
+                  <ToursGrid lang={lang} tours={gridTours} />
                 </div>
                 <div class="mt-10 text-center">
                   <a
@@ -89,6 +139,27 @@ const blocks = (Array.isArray(t.home_blocks) && t.home_blocks.length
           return null;
       }
     })
+  }
+
+  {/* Dải ảnh "Khoảnh khắc hành trình" — thêm hình, bớt chữ */}
+  {
+    photoStrip.length >= 4 && (
+      <section class="border-t border-ink/5 bg-sand px-5 py-14">
+        <div class="mx-auto max-w-6xl">
+          <div class="dv-head">
+            <h2>{lang === 'vi' ? 'Khoảnh khắc hành trình' : 'Trip moments'}</h2>
+            <a href={href(lang, 'tours')}>{t.view_all_tours}</a>
+          </div>
+          <div class="dv-strip">
+            {photoStrip.map((p) => (
+              <a class="dv-strip-item" href={href(lang, 'tours')}>
+                <img src={`/content/vi/images/${p}`} alt="" loading="lazy" decoding="async" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
   }
 
   <!-- Tư vấn & Kinh doanh (như web cũ) -->

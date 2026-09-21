@@ -1,0 +1,197 @@
+/* ============================================================================
+   Khối HÌNH ẢNH cho trang chủ (thêm 2026-09, sau phản hồi "trang chủ toàn chữ")
+   ----------------------------------------------------------------------------
+   Gồm 4 khối: mosaic "Điểm đến nổi bật", thẻ DỊCH VỤ có ảnh, collage GIỚI THIỆU,
+   dải ảnh "Khoảnh khắc hành trình".
+   Bán kính ghi giá trị cứng (10px/4px) để không phụ thuộc token của theme.
+   ========================================================================== */
+
+/* Tiêu đề mục: chữ in hoa + vạch xanh bên trái + link "Xem tất cả" bên phải */
+.dv-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.15rem;
+  border-bottom: 1px solid rgb(0 0 0 / 0.08);
+  padding-bottom: 0.6rem;
+}
+.dv-head h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-sea-deep);
+  letter-spacing: 0.01em;
+}
+.dv-head h2::before {
+  content: '';
+  width: 5px;
+  height: 20px;
+  border-radius: 3px;
+  background: var(--color-sea);
+}
+.dv-head a {
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+  white-space: nowrap;
+}
+.dv-head a:hover {
+  color: var(--color-sea);
+  text-decoration: underline;
+}
+
+/* ---------------------------- Mosaic điểm đến ---------------------------- */
+.dv-mosaic {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.dv-mosaic-item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 4 / 3;
+  box-shadow: var(--shadow-lift-1);
+}
+.dv-mosaic-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.dv-mosaic-item:hover img {
+  transform: scale(1.06);
+}
+.dv-mosaic-cap {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1.6rem 0.8rem 0.7rem;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.75), transparent);
+  color: #fff;
+}
+.dv-mosaic-cap strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.dv-mosaic-cap em {
+  font-style: normal;
+  font-size: 0.74rem;
+  opacity: 0.9;
+}
+@media (min-width: 640px) {
+  .dv-mosaic {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 10.5rem;
+  }
+  .dv-mosaic-item {
+    aspect-ratio: auto;
+  }
+  .dv-mosaic-big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+/* ---------------------------- Thẻ dịch vụ có ảnh ------------------------- */
+.dv-svc {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--shadow-lift-1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.dv-svc:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift-2);
+}
+.dv-svc img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.dv-svc-body {
+  position: relative;
+  margin-top: -1.7rem;
+  padding: 0 1rem 1.1rem;
+}
+.dv-svc-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--color-sea);
+  box-shadow: var(--shadow-lift-1);
+}
+.dv-svc h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+.dv-svc p {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-ink-soft);
+}
+
+/* ---------------------------- Collage giới thiệu ------------------------- */
+.dv-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+.dv-collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: var(--shadow-lift-1);
+}
+.dv-collage img:first-child {
+  grid-row: span 2;
+  aspect-ratio: 3 / 4;
+}
+.dv-collage img:not(:first-child) {
+  aspect-ratio: 4 / 3;
+}
+
+/* ---------------------------- Dải ảnh khoảnh khắc ----------------------- */
+.dv-strip {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 640px) {
+  .dv-strip {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.dv-strip-item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 4 / 3;
+  box-shadow: var(--shadow-lift-1);
+}
+.dv-strip-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.dv-strip-item:hover img {
+  transform: scale(1.07);
+}
