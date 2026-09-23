@@ -82,7 +82,7 @@ const seoSeed = readRepoJson('content/vi/seo.json');
 </AdminLayout>
 
 <script>
-  import { api, describeSaveError } from '@/lib/admin.js';
+  import { api, describeSaveError, setLoadingStatus } from '@/lib/admin.js';
 
   const textEl = document.getElementById('seo-text') as HTMLTextAreaElement | null;
   const statusEl = document.getElementById('seo-status');
@@ -136,6 +136,7 @@ const seoSeed = readRepoJson('content/vi/seo.json');
     if (statusEl) statusEl.textContent = `${seedN} trang (dữ liệu hiện có của website).`;
 
     // 2) Thử lấy bản mới nhất từ worker; nếu chưa có thì giữ bản ở bước 1.
+    if (statusEl) setLoadingStatus(statusEl, `${seedN} trang (dữ liệu hiện có) — đang lấy bản mới nhất...`);
     const r = await api('GET', '/pages/seo');
     if (r.data?.ok && r.data.page) {
       const n = Object.keys(r.data.page).filter((k) => !k.startsWith('_')).length;

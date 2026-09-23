@@ -84,7 +84,7 @@ const redirectSeed = readRepoJson('site/legacy-redirects.json');
 </AdminLayout>
 
 <script>
-  import { api, describeSaveError } from '@/lib/admin.js';
+  import { api, describeSaveError, setLoadingStatus } from '@/lib/admin.js';
 
   const textEl = document.getElementById('rd-text') as HTMLTextAreaElement | null;
   const statusEl = document.getElementById('rd-status');
@@ -137,6 +137,7 @@ const redirectSeed = readRepoJson('site/legacy-redirects.json');
     if (statusEl) statusEl.textContent = `${seedN} quy tắc (dữ liệu hiện có của website).`;
 
     // 2) Thử lấy bản mới nhất từ worker; nếu chưa có thì giữ bản ở bước 1.
+    if (statusEl) setLoadingStatus(statusEl, `${seedN} quy tắc (dữ liệu hiện có) — đang lấy bản mới nhất...`);
     const r = await api('GET', '/pages/redirects');
     if (r.data?.ok && r.data.page) {
       const n = Object.keys(r.data.page).filter((k) => !k.startsWith('_')).length;

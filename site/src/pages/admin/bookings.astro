@@ -10,7 +10,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
 </AdminLayout>
 
 <script>
-  import { api, setBusy } from '@/lib/admin.js';
+  import { api, setBusy, setLoadingStatus, setErrorStatus, describeLoadError } from '@/lib/admin.js';
   const $ = (id) => document.getElementById(id);
 
   function esc(s) {
@@ -27,12 +27,13 @@ import AdminLayout from '@/components/AdminLayout.astro';
   }
 
   async function load() {
+    setLoadingStatus($('list-status'), 'Đang tải danh sách yêu cầu...');
     const r = await api('GET', '/bookings');
     if (r.status === 401) {
       $('list-status').innerHTML = 'Chưa đăng nhập — <a href="/admin" class="underline">Đăng nhập tại đây</a>.';
       return;
     }
-    if (!r.data?.ok) { $('list-status').textContent = 'Không tải được danh sách.'; return; }
+    if (!r.data?.ok) { setErrorStatus($('list-status'), describeLoadError(r, 'danh sách yêu cầu'), load); return; }
     const items = r.data.bookings || [];
     const unread = items.filter((b) => b.status !== 'read').length;
     $('list-status').textContent = `${items.length} yêu cầu · ${unread} chưa xem.`;

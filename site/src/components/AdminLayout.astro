@@ -59,6 +59,19 @@ const features = [t.f1, t.f2, t.f3, t.f4, t.f5, t.f6];
     </script>
   </head>
   <body class="min-h-dvh bg-sand text-ink antialiased">
+    <!--
+      Chỉ báo "đang tải" toàn cục: do admin.js bật/tắt khi có request /api/... đang bay
+      (mọi trang admin đều đi qua api() nên không phải sửa từng trang).
+      pointer-events:none -> chỉ để báo, KHÔNG chặn thao tác.
+    -->
+    <div id="admin-loading" class="tt-loading" hidden role="status" aria-live="polite">
+      <span class="tt-loading-bar"></span>
+      <span class="tt-loading-pill">
+        <span class="spinner"></span>
+        <span id="admin-loading-text">Đang tải nội dung...</span>
+      </span>
+    </div>
+
     <header class="sticky top-0 z-50 border-b border-ink/10 bg-sand/85 backdrop-blur-md">
       <div class="mx-auto flex max-w-5xl items-center justify-between gap-3 px-5 py-3">
         <a href="/admin/" class="flex items-center gap-2.5" title="Về trang quản trị">
@@ -144,6 +157,72 @@ const features = [t.f1, t.f2, t.f3, t.f4, t.f5, t.f6];
     @keyframes tt-spin {
       to {
         transform: rotate(360deg);
+      }
+    }
+
+    /* ---------- Chỉ báo "đang tải" toàn cục (xem api() trong @/lib/admin.js) ---------- */
+    .tt-loading {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      pointer-events: none; /* chỉ báo, không chặn click */
+    }
+    .tt-loading[hidden] {
+      display: none;
+    }
+    /* Vạch chạy ở mép trên: dễ thấy nhưng không che nội dung. */
+    .tt-loading-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-image: linear-gradient(90deg, transparent, var(--color-sea, #0f766e), transparent);
+      background-size: 45% 100%;
+      background-repeat: no-repeat;
+      animation: tt-loading-bar 1.1s ease-in-out infinite;
+    }
+    @keyframes tt-loading-bar {
+      0% {
+        background-position: -45% 0;
+      }
+      100% {
+        background-position: 145% 0;
+      }
+    }
+    /* Nhãn nổi dưới đáy: "Đang tải nội dung..." + vòng xoay. */
+    .tt-loading-pill {
+      position: absolute;
+      left: 50%;
+      bottom: 1.25rem;
+      transform: translateX(-50%);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      max-width: 90vw;
+      border-radius: 9999px;
+      background: rgb(31 42 55 / 0.94);
+      color: #fff;
+      padding: 0.55rem 1.1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 12px 32px rgb(0 0 0 / 0.28);
+      animation: tt-loading-pill 0.22s ease-out;
+    }
+    @keyframes tt-loading-pill {
+      from {
+        opacity: 0;
+        transform: translate(-50%, 0.6rem);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .tt-loading-bar,
+      .tt-loading-pill {
+        animation: none;
       }
     }
     button:disabled {

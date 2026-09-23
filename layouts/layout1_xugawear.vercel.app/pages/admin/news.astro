@@ -69,7 +69,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
 </AdminLayout>
 
 <script>
-  import { api, fileToImage, setBusy, describeSaveError } from '@/lib/admin.js';
+  import { api, fileToImage, setBusy, describeSaveError, setLoadingStatus, setErrorStatus, describeLoadError } from '@/lib/admin.js';
   import { initSunEditor, sunSetBlocks, sunCollectBlocks } from '@/lib/sunblocks.js';
   const $ = (id) => document.getElementById(id);
   const listView = $('list-view');
@@ -85,12 +85,13 @@ import AdminLayout from '@/components/AdminLayout.astro';
   }
 
   async function load() {
+    setLoadingStatus(listStatus, 'Đang tải danh sách tin...');
     const r = await api('GET', '/news');
     if (r.status === 401) {
       listStatus.innerHTML = 'Chưa đăng nhập — <a href="/admin" class="underline">Đăng nhập tại đây</a>.';
       return;
     }
-    if (!r.data?.ok) { listStatus.textContent = 'Không tải được danh sách.'; return; }
+    if (!r.data?.ok) { setErrorStatus(listStatus, describeLoadError(r, 'danh sách tin'), load); return; }
     const news = r.data.news || [];
     newsCache = news;
     listStatus.textContent = `${news.length} bài tin.`;

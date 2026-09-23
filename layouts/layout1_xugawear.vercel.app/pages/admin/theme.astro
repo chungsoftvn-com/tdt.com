@@ -44,7 +44,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
 </AdminLayout>
 
 <script>
-  import { api, describeSaveError } from '@/lib/admin.js';
+  import { api, describeSaveError, setLoadingStatus, setErrorStatus, describeLoadError } from '@/lib/admin.js';
 
   interface ThemeOption {
     id: string;
@@ -93,9 +93,10 @@ import AdminLayout from '@/components/AdminLayout.astro';
   }
 
   async function load() {
+    if (statusEl) setLoadingStatus(statusEl, 'Đang tải cấu hình giao diện...');
     const r = await api('GET', '/theme');
     if (!r.data || !r.data.ok) {
-      if (statusEl) statusEl.textContent = 'Không tải được cấu hình giao diện.';
+      if (statusEl) setErrorStatus(statusEl, describeLoadError(r, 'cấu hình giao diện'), load);
       showError(describeSaveError(r));
       return;
     }

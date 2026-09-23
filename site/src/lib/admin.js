@@ -21,8 +21,14 @@ export function adminApi(path) {
  * Gọi API worker với credentials (cookie httpOnly được gửi tự động).
  * Trả { status, data }. Lỗi mạng/timeout trả status 0 (KHÔNG ném) để UI hiển
  * thị thông báo thay vì "đứng im" — hay gặp khi payload có ảnh nặng.
+ *
+ * Mọi request đi qua đây đều được ĐẾM để bật/tắt chỉ báo "đang tải" toàn cục
+ * (xem beginLoading/endLoading) — nhờ vậy mọi trang admin tự có hiệu ứng quay
+ * mà không phải sửa từng trang.
  */
 export async function api(method, path, body) {
+  const label = `${method} ${path}`;
+  beginLoading(label);
   try {
     const res = await fetch(adminApi(path), {
       method,
@@ -39,7 +45,157 @@ export async function api(method, path, body) {
     return { status: res.status, data };
   } catch (err) {
     return { status: 0, data: null, networkError: err instanceof Error ? err.message : String(err) };
+  } finally {
+    endLoading(label);
   }
+}
+
+/**
+ * Chỉ báo "đang tải" TOÀN CỤC cho mọi trang admin.
+ *
+ * Vì sao cần: các trang admin đều tải dữ liệu bằng fetch (worker + GitHub API),
+ * mất từ vài trăm ms tới vài giây. Trước đây trang trống trơn, không biết là
+ * đang tải hay đã hỏng.
+ *
+ * Cách chạy: đếm số request đang bay; hiện sau 200ms (bỏ qua request nhanh cho
+ * khỏi nhấp nháy) và ẩn sau 300ms khi đã xong hết. Phần tử #admin-loading do
+ * AdminLayout.astro render; không có thì im lặng bỏ qua.
+ */
+let pendingRequests = 0;
+let showTimer = null;
+let hideTimer = null;
+let slowTimer = null;
+/** Nhãn các request đang chờ (để gỡ lỗi khi chỉ báo tải bị kẹt). */
+const pendingLabels = new Map();
+
+const DEFAULT_LOADING_TEXT = 'Đang tải nội dung...';
+
+function loadingOverlay() {
+  return typeof document === 'undefined' ? null : document.getElementById('admin-loading');
+}
+
+function syncLoadingOverlay() {
+  if (typeof document === 'undefined') return;
+  const el = loadingOverlay();
+  if (!el) return;
+  if (pendingRequests > 0) {
+    if (hideTimer) {
+      clearTimeout(hideTimer);
+      hideTimer = null;
+    }
+    if (!showTimer && el.hidden) {
+      showTimer = setTimeout(() => {
+        showTimer = null;
+        const node = loadingOverlay();
+        if (node && pendingRequests > 0) {
+          node.hidden = false;
+          document.documentElement.setAttribute('data-admin-loading', '1');
+          setLoadingText(DEFAULT_LOADING_TEXT);
+          // Tải quá lâu (mạng chậm / máy chủ đang build): nói rõ để admin không
+          // tưởng web bị treo.
+          slowTimer = setTimeout(() => {
+            slowTimer = null;
+            if (pendingRequests > 0) setLoadingText('Vẫn đang tải — mạng hoặc máy chủ đang chậm...');
+          }, 15000);
+        }
+      }, 200);
+    }
+    return;
+  }
+  if (showTimer) {
+    clearTimeout(showTimer);
+    showTimer = null;
+  }
+  if (slowTimer) {
+    clearTimeout(slowTimer);
+    slowTimer = null;
+  }
+  if (!el.hidden && !hideTimer) {
+    hideTimer = setTimeout(() => {
+      hideTimer = null;
+      const node = loadingOverlay();
+      if (node && pendingRequests === 0) {
+        node.hidden = true;
+        document.documentElement.removeAttribute('data-admin-loading');
+        setLoadingText(DEFAULT_LOADING_TEXT);
+      }
+    }, 300);
+  }
+}
+
+/** Bắt đầu 1 việc cần hiện chỉ báo tải (dùng khi không đi qua api(), ví dụ đọc file). */
+export function beginLoading(label = '') {
+  pendingRequests++;
+  if (label) pendingLabels.set(label, (pendingLabels.get(label) || 0) + 1);
+  exposePending();
+  syncLoadingOverlay();
+}
+
+/** Kết thúc 1 việc (luôn gọi trong finally). */
+export function endLoading(label = '') {
+  pendingRequests = Math.max(0, pendingRequests - 1);
+  if (label) {
+    const n = (pendingLabels.get(label) || 0) - 1;
+    if (n > 0) pendingLabels.set(label, n);
+    else pendingLabels.delete(label);
+  }
+  exposePending();
+  syncLoadingOverlay();
+}
+
+/** Cho phép gỡ lỗi nhanh trong console: __ttPending / __ttInflight(). */
+function exposePending() {
+  if (typeof window === 'undefined') return;
+  window.__ttPending = pendingRequests;
+  window.__ttInflight = () => [...pendingLabels.entries()].map(([k, n]) => (n > 1 ? `${k} x${n}` : k));
+}
+
+/** Đổi chữ trên chỉ báo tải, ví dụ setLoadingText('Đang lưu tour...'). */
+export function setLoadingText(text) {
+  if (typeof document === 'undefined') return;
+  const el = document.getElementById('admin-loading-text');
+  if (el) el.textContent = text || DEFAULT_LOADING_TEXT;
+}
+
+/**
+ * Ghi trạng thái "đang tải" vào 1 ô chữ trong trang (kèm spinner nhỏ).
+ * Dùng cho các dòng kiểu "<n> tour." ở đầu danh sách.
+ */
+export function setLoadingStatus(el, text = 'Đang tải...') {
+  if (!el) return;
+  el.innerHTML = `<span class="inline-flex items-center gap-2 text-ink-soft"><span class="spinner"></span>${text}</span>`;
+}
+
+/**
+ * Ghi trạng thái LỖI + nút "Thử lại" vào ô trạng thái (thay vì chỉ 1 câu chung
+ * chung "Không tải được danh sách." khiến admin không biết vì sao).
+ */
+export function setErrorStatus(el, message, onRetry) {
+  if (!el) return;
+  el.textContent = '';
+  const text = document.createElement('span');
+  text.className = 'text-red-600';
+  text.textContent = `${message} `;
+  el.append(text);
+  if (typeof onRetry === 'function') {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className =
+      'rounded-full border border-ink/15 px-3 py-1 text-xs font-semibold text-ink transition-colors hover:border-sea hover:text-sea-deep';
+    btn.textContent = 'Thử lại';
+    btn.addEventListener('click', () => onRetry());
+    el.append(btn);
+  }
+}
+
+/** Câu mô tả ngắn vì sao không tải được (dùng cho setErrorStatus). */
+export function describeLoadError(r, what = 'dữ liệu') {
+  if (!r || r.status === 0) return `Không kết nối được máy chủ (mạng chậm hoặc bị ngắt) — chưa tải được ${what}.`;
+  if (r.status === 401) return 'Phiên đăng nhập đã hết hạn.';
+  if (r.status === 502 || r.status === 504 || r.status === 524) {
+    return `Máy chủ phản hồi quá chậm (HTTP ${r.status}) — chưa tải được ${what}.`;
+  }
+  return `Không tải được ${what} (HTTP ${r.status}).`;
 }
 
 /** Thông báo lỗi đọc được cho admin (dùng chung mọi trang admin). */
