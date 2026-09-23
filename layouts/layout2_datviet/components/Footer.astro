@@ -34,11 +34,26 @@ const infos = [
   { label: t.nav_contact, url: href(lang, 'contact') },
 ];
 
+const asUrl = (v: unknown) =>
+  /^https?:\/\//i.test(String(v || '').trim()) ? String(v).trim() : '';
 const socials = [
-  { label: 'Facebook', url: t.footer_facebook, color: '#1877f2' },
-  { label: 'TikTok', url: t.footer_tiktok, color: '#111111' },
-  { label: 'Zalo', url: t.footer_zalo, color: '#0068ff' },
-].filter((s) => !!s.url);
+  {
+    label: t.footer_facebook || 'Facebook',
+    url:
+      asUrl(t.social_facebook) ||
+      asUrl(getContent('vi', 'facebook')?.page_url) ||
+      'https://www.facebook.com/profile.php?id=61563008528761',
+    color: '#1877f2',
+  },
+  { label: t.footer_tiktok || 'TikTok', url: asUrl(t.social_tiktok), color: '#111111' },
+  {
+    label: t.footer_zalo || 'Zalo',
+    url:
+      asUrl(t.social_zalo) ||
+      `https://zalo.me/${String(t.zalo || t.hotline || '').replace(/[^0-9]/g, '')}`,
+    color: '#0068ff',
+  },
+].filter((s) => s.url);
 
 const hasExtraBodies = !!(t.footer_quick_body || t.footer_contact_body || t.footer_social_body);
 ---

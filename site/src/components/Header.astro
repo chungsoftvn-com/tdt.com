@@ -98,6 +98,29 @@ const isActive = (url: string) => {
 const tel = String(t.hotline || '').replace(/[^0-9+]/g, '');
 const viLink = langHref('vi', current);
 const enLink = langHref('en', current);
+/**
+ * Link mạng xã hội: `social_*` là URL thật; `footer_*` chỉ là NHÃN ("Facebook").
+ * Kiểm tra phải bắt đầu bằng http(s) nếu không thì bỏ — tránh lỗi trước đây
+ * header trỏ thành /vi/Facebook.
+ */
+const asUrl = (v: unknown) =>
+  /^https?:\/\//i.test(String(v || '').trim()) ? String(v).trim() : '';
+const socials = [
+  {
+    label: t.footer_facebook || 'Facebook',
+    url:
+      asUrl(t.social_facebook) ||
+      asUrl(getContent('vi', 'facebook')?.page_url) ||
+      'https://www.facebook.com/profile.php?id=61563008528761',
+  },
+  { label: t.footer_tiktok || 'TikTok', url: asUrl(t.social_tiktok) },
+  {
+    label: t.footer_zalo || 'Zalo',
+    url:
+      asUrl(t.social_zalo) ||
+      `https://zalo.me/${String(t.zalo || t.hotline || '').replace(/[^0-9]/g, '')}`,
+  },
+].filter((s) => s.url);
 const searchPlaceholder =
   lang === 'vi' ? 'Tìm tour, điểm đến, khách sạn…' : 'Search tours, destinations…';
 ---
@@ -113,25 +136,11 @@ const searchPlaceholder =
       </div>
       <div class="flex items-center gap-3">
         {
-          t.footer_facebook && (
-            <a href={t.footer_facebook} target="_blank" rel="noopener noreferrer">
-              Facebook
+          socials.map((s) => (
+            <a href={s.url} target="_blank" rel="noopener noreferrer">
+              {s.label}
             </a>
-          )
-        }
-        {
-          t.footer_tiktok && (
-            <a href={t.footer_tiktok} target="_blank" rel="noopener noreferrer">
-              TikTok
-            </a>
-          )
-        }
-        {
-          t.footer_zalo && (
-            <a href={t.footer_zalo} target="_blank" rel="noopener noreferrer">
-              Zalo
-            </a>
-          )
+          ))
         }
         <span class="dv-topbar-sep">|</span>
         <span class="flex items-center gap-1">

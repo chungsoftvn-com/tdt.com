@@ -29,9 +29,26 @@ const t = getContent(lang, 'chi-duong') as Record<string, string>;
 const mapUrl = String(t.map_url || '').trim();
 const mapNote = String(t.map_note || '').trim();
 
-const coords =
-  /@(-?\d+\.\d+),(-?\d+\.\d+)/.exec(mapUrl) || /!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/.exec(mapUrl);
-const target = coords ? `${coords[1]},${coords[2]}` : mapUrl;
+const coordsOf = (url: string) =>
+  /@(-?\d+\.\d+),(-?\d+\.\d+)/.exec(url) || /!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/.exec(url);
+
+let mapTarget = mapUrl;
+let coords = coordsOf(mapUrl);
+
+// Link rút gọn (maps.app.goo.gl/…, g.co/maps/…) không chứa toạ độ → mở ra lấy URL
+// thật (chạy lúc BUILD nên không ảnh hưởng tốc độ tải trang của khách).
+if (mapUrl && !coords && /(goo\.gl|g\.co\/maps)/i.test(mapUrl)) {
+  try {
+    const res = await fetch(mapUrl, { redirect: 'follow' });
+    const finalUrl = res.url || mapUrl;
+    coords = coordsOf(finalUrl);
+    if (finalUrl !== mapUrl) mapTarget = finalUrl;
+  } catch {
+    // Không mở được link (mất mạng lúc build) → vẫn dùng link gốc
+  }
+}
+
+const target = coords ? `${coords[1]},${coords[2]}` : mapTarget;
 const embedSrc = mapUrl
   ? `https://www.google.com/maps?q=${encodeURIComponent(target)}&z=17&output=embed`
   : '';

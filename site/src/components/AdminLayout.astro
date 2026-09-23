@@ -61,7 +61,7 @@ const features = [t.f1, t.f2, t.f3, t.f4, t.f5, t.f6];
   <body class="min-h-dvh bg-sand text-ink antialiased">
     <header class="sticky top-0 z-50 border-b border-ink/10 bg-sand/85 backdrop-blur-md">
       <div class="mx-auto flex max-w-5xl items-center justify-between gap-3 px-5 py-3">
-        <div class="flex items-center gap-2.5">
+        <a href="/admin/" class="flex items-center gap-2.5" title="Về trang quản trị">
           <img
             src="/content/vi/images/logo.webp"
             alt=""
@@ -77,8 +77,20 @@ const features = [t.f1, t.f2, t.f3, t.f4, t.f5, t.f6];
               {t.title}
             </span>
           </span>
-        </div>
-        <div class="flex items-center gap-2">
+        </a>
+        <div class="flex flex-wrap items-center gap-2">
+          <a
+            href="/admin/seo/"
+            class="rounded-full border border-ink/15 px-4 py-2 text-sm font-semibold text-ink transition-colors hover:bg-sea hover:text-white"
+          >
+            SEO
+          </a>
+          <a
+            href="/admin/redirects/"
+            class="rounded-full border border-ink/15 px-4 py-2 text-sm font-semibold text-ink transition-colors hover:bg-sea hover:text-white"
+          >
+            Redirect
+          </a>
           <a
             href="/admin/theme/"
             class="rounded-full border border-ink/15 px-4 py-2 text-sm font-semibold text-ink transition-colors hover:bg-sea hover:text-white"

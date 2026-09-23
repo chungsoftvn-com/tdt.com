@@ -102,6 +102,26 @@ export const PAGE_SCHEMAS = {
     ],
   },
 
+  support: {
+    label: 'Liên hệ nhanh (sidebar)',
+    file: 'support',
+    // Sidebar bám mép trái ở mọi trang (đại diện = icon điện thoại).
+    sections: [
+      {
+        title: 'Sidebar hỗ trợ',
+        fields: [
+          { key: 'title', label: 'Tiêu đề sidebar', type: 'text' },
+          { key: 'note', label: 'Ghi chú nhỏ dưới tiêu đề', type: 'text' },
+          {
+            key: 'items_text',
+            label: 'Danh sách liên hệ — mỗi dòng: Chức danh | Tên | Số điện thoại',
+            type: 'textarea',
+          },
+        ],
+      },
+    ],
+  },
+
   common: {
     label: 'Footer',
     file: 'common',

@@ -1,0 +1,138 @@
+---
+/**
+ * /admin/seo — sửa SEO cơ bản của từng trang (title + description).
+ *
+ * Dữ liệu thật: `content/vi/seo.json` = { "<slug>": { title, description }, "_comment": … }
+ * (key `home` áp cho cả '/' và '/vi/'; trang chi tiết tour/tin tự sinh nên không có ở đây).
+ *
+ * Trang này hiển thị dạng văn bản cho dễ sửa: mỗi dòng
+ *     <slug> | <title> | <description>
+ * rồi chuyển ngược lại JSON khi lưu (giữ nguyên các key `_comment`).
+ */
+import AdminLayout from '@/components/AdminLayout.astro';
+---
+
+<AdminLayout>
+  <section>
+    <h1 class="font-display text-3xl text-ink">SEO cơ bản</h1>
+    <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">
+      Mỗi dòng một trang, theo dạng <code class="rounded bg-sand px-1">slug | tiêu đề | mô tả</code>.
+      Ví dụ: <code class="rounded bg-sand px-1">home | TodayTourist – Tour du lịch… | Công ty du lịch…</code>.
+      Dòng bắt đầu bằng <code class="rounded bg-sand px-1">#</code> là ghi chú (bỏ qua).
+      Slug để trống nghĩa là trang chủ. Sau khi lưu, website build lại (1–2 phút) là Google thấy nội dung mới.
+    </p>
+
+    <div class="mt-6 rounded-2xl bg-paper p-6 shadow-[var(--shadow-lift-1)]">
+      <p id="seo-status" class="text-sm text-ink-soft">Đang tải…</p>
+      <textarea
+        id="seo-text"
+        rows="22"
+        class="mt-4 w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 font-mono text-xs leading-relaxed text-ink outline-none focus:border-sea"
+      ></textarea>
+      <p id="seo-error" class="mt-3 hidden text-sm font-medium text-red-600"></p>
+      <p id="seo-ok" class="mt-3 hidden text-sm font-medium text-sea-deep"></p>
+      <div class="mt-4 flex items-center gap-3">
+        <button
+          id="btn-save-seo"
+          type="button"
+          class="rounded-full bg-sea px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-sea-deep"
+        >
+          Lưu SEO
+        </button>
+        <button
+          id="btn-reload-seo"
+          type="button"
+          class="rounded-full border border-ink/15 px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink/5"
+        >
+          Tải lại
+        </button>
+      </div>
+    </div>
+  </section>
+</AdminLayout>
+
+<script>
+  import { api, describeSaveError } from '@/lib/admin.js';
+
+  const textEl = document.getElementById('seo-text') as HTMLTextAreaElement | null;
+  const statusEl = document.getElementById('seo-status');
+  const errEl = document.getElementById('seo-error');
+  const okEl = document.getElementById('seo-ok');
+  const saveBtn = document.getElementById('btn-save-seo') as HTMLButtonElement | null;
+  const reloadBtn = document.getElementById('btn-reload-seo') as HTMLButtonElement | null;
+
+  let meta: Record<string, unknown> = {};
+
+  const show = (el: HTMLElement | null, msg: string | null) => {
+    if (!el) return;
+    el.textContent = msg || '';
+    el.classList.toggle('hidden', !msg);
+  };
+
+  function toText(data: Record<string, any>): string {
+    meta = { _comment: data._comment, _comment_targets: data._comment_targets };
+    return Object.entries(data)
+      .filter(([k]) => !k.startsWith('_'))
+      .map(([slug, v]: [string, any]) =>
+        [slug, v?.title ?? '', (v?.description ?? '').replace(/\s*\|\s*/g, ' / ')].join(' | '),
+      )
+      .join('\n');
+  }
+
+  function toJson(text: string): Record<string, unknown> {
+    const out: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(meta)) if (v) out[k] = v;
+    for (const raw of text.split('\n')) {
+      const line = raw.trim();
+      if (!line || line.startsWith('#')) continue;
+      const parts = line.split('|').map((s) => s.trim());
+      const slug = parts[0] || '';
+      const title = parts[1] || '';
+      const description = parts.slice(2).join(' | ').trim();
+      if (!slug && !title && !description) continue;
+      out[slug || 'home'] = { title, description };
+    }
+    return out;
+  }
+
+  async function load() {
+    show(errEl, null);
+    show(okEl, null);
+    if (statusEl) statusEl.textContent = 'Đang tải…';
+    const r = await api('GET', '/pages/seo');
+    if (!r.data?.ok || !r.data.page) {
+      if (statusEl) statusEl.textContent = 'Không tải được dữ liệu SEO.';
+      show(errEl, describeSaveError(r));
+      return;
+    }
+    const n = Object.keys(r.data.page).filter((k) => !k.startsWith('_')).length;
+    if (statusEl) statusEl.textContent = `${n} trang có SEO riêng.`;
+    if (textEl) textEl.value = toText(r.data.page);
+  }
+
+  saveBtn?.addEventListener('click', async () => {
+    show(errEl, null);
+    show(okEl, null);
+    const body = toJson(textEl?.value || '');
+    const n = Object.keys(body).filter((k) => !k.startsWith('_')).length;
+    if (!n) {
+      show(errEl, 'Chưa có dòng nào hợp lệ — định dạng: slug | tiêu đề | mô tả');
+      return;
+    }
+    saveBtn.disabled = true;
+    const prev = saveBtn.textContent;
+    saveBtn.textContent = 'Đang lưu…';
+    const r = await api('PUT', '/pages/seo', body);
+    saveBtn.textContent = prev || 'Lưu SEO';
+    saveBtn.disabled = false;
+    if (!r.data?.ok) {
+      show(errEl, describeSaveError(r));
+      return;
+    }
+    show(okEl, `Đã lưu ${n} trang. Website sẽ tự build lại trong 1–2 phút.`);
+    load();
+  });
+
+  reloadBtn?.addEventListener('click', load);
+  load();
+</script>

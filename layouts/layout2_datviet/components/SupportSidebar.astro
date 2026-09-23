@@ -1,0 +1,227 @@
+---
+/**
+ * SupportSidebar — sidebar "Hỗ trợ" bám mép TRÁI màn hình (đại diện = icon điện thoại).
+ * Bấm vào tab thì panel trượt ra, liệt kê các số liên hệ.
+ *
+ * Dữ liệu: `content/vi/support.json` → `items_text`, mỗi dòng:
+ *     Chức danh | Tên | Số điện thoại
+ * Admin sửa ở: admin → Trang → "Liên hệ nhanh (sidebar)".
+ */
+import { getContent } from '@/lib/content.js';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+
+const readSupport = (l: string) => {
+  try {
+    return getContent(l, 'support') ?? {};
+  } catch {
+    return {};
+  }
+};
+const own = readSupport(lang);
+const t = own && String(own.items_text || '').trim() ? own : readSupport('vi');
+
+const items = String(t.items_text || '')
+  .split('\n')
+  .map((line) => line.trim())
+  .filter((line) => line && !line.startsWith('#'))
+  .map((line) => {
+    const [role = '', name = '', phone = ''] = line.split('|').map((s) => s.trim());
+    return { role, name, phone, tel: phone.replace(/[^0-9+]/g, '') };
+  })
+  .filter((x) => x.phone || x.name);
+
+const title = t.title || (lang === 'vi' ? 'Hỗ trợ trực tuyến' : 'Live support');
+const note = t.note || '';
+---
+
+{
+  items.length > 0 && (
+    <div class="dv-support" data-support>
+      <button
+        type="button"
+        class="dv-support-tab"
+        data-support-toggle
+        aria-expanded="false"
+        aria-controls="dv-support-panel"
+        title={title}
+      >
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+          <path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l2-2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.5 20 4 13.5 4 5.5c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2 1.8Z" />
+        </svg>
+        <span class="dv-support-tab-text">{title}</span>
+      </button>
+
+      <aside id="dv-support-panel" class="dv-support-panel" data-support-panel aria-hidden="true">
+        <header class="dv-support-head">
+          <strong>{title}</strong>
+          <button type="button" class="dv-support-close" data-support-close aria-label="Đóng">×</button>
+        </header>
+        {note && <p class="dv-support-note">{note}</p>}
+        <ul class="dv-support-list">
+          {items.map((it) => (
+            <li>
+              <span class="dv-support-role">{it.role}</span>
+              <span class="dv-support-name">{it.name}</span>
+              <span class="dv-support-actions">
+                {it.tel && (
+                  <a class="dv-support-call" href={`tel:${it.tel}`}>
+                    {it.phone}
+                  </a>
+                )}
+                {it.tel && (
+                  <a
+                    class="dv-support-zalo"
+                    href={`https://zalo.me/${it.tel.replace(/^\+/, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Zalo
+                  </a>
+                )}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    </div>
+  )
+}
+
+<style is:global>
+  /* Sidebar hỗ trợ — dùng token của theme nên hợp cả layout1 và layout2. */
+  .dv-support {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 60;
+  }
+  .dv-support-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    writing-mode: vertical-rl;
+    padding: 0.7rem 0.45rem;
+    border-radius: 0 8px 8px 0;
+    background: var(--color-sea);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: var(--shadow-lift-2);
+  }
+  .dv-support-tab svg {
+    writing-mode: horizontal-tb;
+    transform: rotate(90deg);
+  }
+  .dv-support-tab-text {
+    white-space: nowrap;
+  }
+  .dv-support-tab:hover {
+    background: var(--color-sea-deep);
+  }
+  .dv-support-panel {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translate(-105%, -50%);
+    width: min(19rem, 88vw);
+    max-height: 70vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 0 12px 12px 0;
+    box-shadow: var(--shadow-lift-2);
+    padding: 0.9rem 1rem 1rem;
+    transition: transform 0.28s ease;
+  }
+  .dv-support[data-open='true'] .dv-support-panel {
+    transform: translate(0, -50%);
+  }
+  .dv-support-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgb(0 0 0 / 0.08);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
+    color: var(--color-sea-deep);
+  }
+  .dv-support-close {
+    font-size: 1.2rem;
+    line-height: 1;
+    color: var(--color-ink-soft);
+  }
+  .dv-support-note {
+    font-size: 0.78rem;
+    color: var(--color-ink-soft);
+    margin-bottom: 0.6rem;
+  }
+  .dv-support-list {
+    display: grid;
+    gap: 0.55rem;
+  }
+  .dv-support-list li {
+    border-left: 3px solid var(--color-sea);
+    padding: 0.15rem 0 0.15rem 0.55rem;
+  }
+  .dv-support-role {
+    display: block;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-ink-soft);
+  }
+  .dv-support-name {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  .dv-support-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.2rem;
+  }
+  .dv-support-call {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-hot, #ff3c00);
+    text-decoration: none;
+  }
+  .dv-support-zalo {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: #fff;
+    background: #0068ff;
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    text-decoration: none;
+  }
+</style>
+
+<script>
+  const root = document.querySelector('[data-support]');
+  const toggle = document.querySelector('[data-support-toggle]');
+  const closeBtn = document.querySelector('[data-support-close]');
+  const panel = document.querySelector('[data-support-panel]');
+
+  const setOpen = (open: boolean) => {
+    if (!root) return;
+    root.setAttribute('data-open', String(open));
+    toggle?.setAttribute('aria-expanded', String(open));
+    panel?.setAttribute('aria-hidden', String(!open));
+  };
+
+  toggle?.addEventListener('click', () => setOpen(root?.getAttribute('data-open') !== 'true'));
+  closeBtn?.addEventListener('click', () => setOpen(false));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
+  });
+</script>

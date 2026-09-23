@@ -1,0 +1,139 @@
+---
+/**
+ * /admin/redirects — sửa danh sách chuyển hướng URL cũ → URL mới.
+ *
+ * Dữ liệu thật: `site/legacy-redirects.json` = { "<đường-dẫn-cũ>": "<đích-mới>", "_comment": … }
+ * `site/scripts/build-legacy-redirects.mjs` đọc file này lúc build và sinh 1 trang tĩnh cho
+ * mỗi đường dẫn cũ: HTTP 200 + canonical + meta refresh + JS chuyển hướng (GitHub Pages
+ * không có 301 server-side).
+ *
+ * Trang này cho sửa dạng văn bản: mỗi dòng `đường-dẫn-cũ -> đích-mới`.
+ */
+import AdminLayout from '@/components/AdminLayout.astro';
+---
+
+<AdminLayout>
+  <section>
+    <h1 class="font-display text-3xl text-ink">Chuyển hướng URL cũ</h1>
+    <p class="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">
+      Mỗi dòng một quy tắc: <code class="rounded bg-sand px-1">/đường-dẫn-cũ/ -> /vi/trang-mới/</code>.
+      Đường dẫn cũ phải bắt đầu bằng <code class="rounded bg-sand px-1">/</code> và <strong>không</strong>
+      có tên miền (ví dụ <code class="rounded bg-sand px-1">/tours/tim-tour/ -> /vi/tim-tour/</code> —
+      khách vào <code class="rounded bg-sand px-1">https://todaytourist.com/tours/tim-tour/</code> sẽ được
+      đưa sang trang mới). Đích nên là URL thật đang tồn tại (<code class="rounded bg-sand px-1">/vi/…</code>).
+      Dòng bắt đầu bằng <code class="rounded bg-sand px-1">#</code> là ghi chú (bỏ qua).
+    </p>
+
+    <div class="mt-6 rounded-2xl bg-paper p-6 shadow-[var(--shadow-lift-1)]">
+      <p id="rd-status" class="text-sm text-ink-soft">Đang tải…</p>
+      <textarea
+        id="rd-text"
+        rows="22"
+        class="mt-4 w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 font-mono text-xs leading-relaxed text-ink outline-none focus:border-sea"
+      ></textarea>
+      <p id="rd-error" class="mt-3 hidden text-sm font-medium text-red-600"></p>
+      <p id="rd-ok" class="mt-3 hidden text-sm font-medium text-sea-deep"></p>
+      <div class="mt-4 flex items-center gap-3">
+        <button
+          id="btn-save-rd"
+          type="button"
+          class="rounded-full bg-sea px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-sea-deep"
+        >
+          Lưu chuyển hướng
+        </button>
+        <button
+          id="btn-reload-rd"
+          type="button"
+          class="rounded-full border border-ink/15 px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-ink/5"
+        >
+          Tải lại
+        </button>
+      </div>
+    </div>
+  </section>
+</AdminLayout>
+
+<script>
+  import { api, describeSaveError } from '@/lib/admin.js';
+
+  const textEl = document.getElementById('rd-text') as HTMLTextAreaElement | null;
+  const statusEl = document.getElementById('rd-status');
+  const errEl = document.getElementById('rd-error');
+  const okEl = document.getElementById('rd-ok');
+  const saveBtn = document.getElementById('btn-save-rd') as HTMLButtonElement | null;
+  const reloadBtn = document.getElementById('btn-reload-rd') as HTMLButtonElement | null;
+
+  let meta: Record<string, unknown> = {};
+
+  const show = (el: HTMLElement | null, msg: string | null) => {
+    if (!el) return;
+    el.textContent = msg || '';
+    el.classList.toggle('hidden', !msg);
+  };
+
+  const toText = (data: Record<string, unknown>) => {
+    meta = {};
+    for (const [k, v] of Object.entries(data)) if (k.startsWith('_')) meta[k] = v;
+    return Object.entries(data)
+      .filter(([k]) => !k.startsWith('_'))
+      .map(([from, to]) => `${from} -> ${to}`)
+      .join('\n');
+  };
+
+  function toJson(text: string): Record<string, unknown> {
+    const out: Record<string, unknown> = { ...meta };
+    for (const raw of text.split('\n')) {
+      const line = raw.trim();
+      if (!line || line.startsWith('#')) continue;
+      const m = line.match(/^(\S+)\s*(?:->|=>|→)\s*(.+)$/);
+      if (!m) continue;
+      let from = m[1].trim();
+      let to = m[2].trim();
+      if (!from.startsWith('/')) from = `/${from}`;
+      if (!to.startsWith('/') && !/^https?:/i.test(to)) to = `/${to}`;
+      out[from] = to;
+    }
+    return out;
+  }
+
+  async function load() {
+    show(errEl, null);
+    show(okEl, null);
+    if (statusEl) statusEl.textContent = 'Đang tải…';
+    const r = await api('GET', '/pages/redirects');
+    if (!r.data?.ok || !r.data.page) {
+      if (statusEl) statusEl.textContent = 'Không tải được danh sách chuyển hướng.';
+      show(errEl, describeSaveError(r));
+      return;
+    }
+    const n = Object.keys(r.data.page).filter((k) => !k.startsWith('_')).length;
+    if (statusEl) statusEl.textContent = `${n} quy tắc chuyển hướng.`;
+    if (textEl) textEl.value = toText(r.data.page);
+  }
+
+  saveBtn?.addEventListener('click', async () => {
+    show(errEl, null);
+    show(okEl, null);
+    const body = toJson(textEl?.value || '');
+    const n = Object.keys(body).filter((k) => !k.startsWith('_')).length;
+    if (!n) {
+      show(errEl, 'Chưa có dòng nào hợp lệ — định dạng: /đường-dẫn-cũ/ -> /vi/trang-mới/');
+      return;
+    }
+    saveBtn.disabled = true;
+    const prev = saveBtn.textContent;
+    saveBtn.textContent = 'Đang lưu…';
+    const r = await api('PUT', '/pages/redirects', body);
+    saveBtn.textContent = prev || 'Lưu chuyển hướng';
+    saveBtn.disabled = false;
+    if (!r.data?.ok) {
+      show(errEl, describeSaveError(r));
+      return;
+    }
+    show(okEl, `Đã lưu ${n} quy tắc. Website sẽ build lại và tạo trang chuyển hướng trong 1–2 phút.`);
+    load();
+  });
+
+  reloadBtn?.addEventListener('click', load);
+  load();
+</script>

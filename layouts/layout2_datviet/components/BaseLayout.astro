@@ -21,6 +21,7 @@ import {
 } from '@/lib/seo.js';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
+import SupportSidebar from './SupportSidebar.astro';
 
 interface Props {
   /** Ngôn ngữ trang. */
@@ -163,6 +164,9 @@ const graph = [travelAgencyLd(lang), websiteLd(lang), breadcrumbLd(crumbs), ...j
       <slot />
     </main>
     <Footer lang={lang} />
+
+    <!-- Sidebar hỗ trợ (bám mép trái, bấm icon điện thoại để trượt ra) -->
+    <SupportSidebar lang={lang} />
 
     <!-- Nút nổi: chỉ đường Google Maps + chat Zalo (thói quen người dùng du lịch) -->
     <div class="dv-sticky-actions">

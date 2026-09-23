@@ -9,7 +9,6 @@
 import {
   getContent,
   getNews,
-  getPartners,
   getTours,
   href,
   slugifyVi,
@@ -37,7 +36,6 @@ const c = getContent(lang, 'common');
 const tours = getTours(lang);
 const allNews = getNews(lang);
 const news = allNews.slice(0, 3);
-const partners = getPartners(lang);
 
 /** Ảnh dùng cho các khối hình (mosaic/collage/dải ảnh): bìa các bài tin gần đây. */
 const imgOf = (name?: string) =>
@@ -315,34 +313,6 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
           </div>
         </section>
       ))
-  }
-
-  {/* Logo khách hàng / đối tác */}
-  {
-    partners.length > 0 && (
-      <section class="bg-sand px-5 py-12">
-        <div class="mx-auto max-w-6xl">
-          <div class="dv-head">
-            <h2>{t.partners_title || c.nav_partners}</h2>
-            <a href={href(lang, 'doi-tac')}>{c.read_more}</a>
-          </div>
-          {t.partners_text && <p class="dv-head-sub">{t.partners_text}</p>}
-          <div class="dv-logo-wall">
-            {partners.slice(0, 12).map((p) => (
-              <a
-                class="dv-logo-cell"
-                href={p.website || href(lang, 'doi-tac')}
-                target={p.website ? '_blank' : undefined}
-                rel={p.website ? 'noopener noreferrer' : undefined}
-                title={p.name}
-              >
-                <img src={`/content/vi/images/${p.image}`} alt={p.name} loading="lazy" decoding="async" />
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-    )
   }
 
   {/* Dải ảnh hành trình — ảnh thật từ các chuyến đi (lấy từ bài tin gần đây) */}
