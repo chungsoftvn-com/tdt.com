@@ -1,11 +1,19 @@
 {
-  "slug": "hanh-huong-cha-diep-duc-me-fatima-vinh-long",
-  "title": "HÀNH HƯƠNG CHA DIỆP – ĐỨC MẸ FATIMA VĨNH LONG",
-  "category": "Hành trình khách đoàn",
+  "slug": "tour-hanh-huong-cha-diep-duc-me-fatima-vinh-long",
+  "name": "HÀNH HƯƠNG CHA DIỆP – ĐỨC MẸ FATIMA VĨNH LONG",
+  "region": "domestic",
+  "region_name": "Miền Tây",
+  "departure": "Khởi hành tối Thứ 7 hằng tuần",
+  "duration": "",
+  "price": "650.000đ/khách",
   "image": "news/hanh-huong-cha-diep-duc-me-fatima-vinh-long-1.jpg",
-  "summary": "Có những chuyến đi không phải để tham quan, mà để tìm sự bình an, để dâng lời cầu nguyện, để đặt những lo toan đời sống vào vòng tay yêu thương của Cha Diệp & Đức Mẹ.",
-  "body": "",
-  "published_at": "2026-09-21",
+  "desc": "Có những chuyến đi không phải để tham quan, mà để tìm sự bình an, để dâng lời cầu nguyện, để đặt những lo toan đời sống vào vòng tay yêu thương của Cha Diệp & Đức Mẹ.",
+  "highlights": [
+    "Chi phí cá nhân ngoài chương trình",
+    "Mua sắm đặc sản tự nguyện",
+    "Chi phí phát sinh ngoài lịch trình (nếu có)"
+  ],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -259,11 +267,7 @@
     {
       "type": "p",
       "text": "Website: www.todaytourist.com"
-    },
-    {
-      "type": "p",
-      "text": "Nguồn: fanpage Facebook “Du Lịch TodayTourist”."
     }
   ],
-  "hidden": true
+  "hidden": false
 }

@@ -1,5 +1,19 @@
 ---
-// /vi/chi-duong — Chỉ đường (địa chỉ + bản đồ; nội dung admin soạn 1 ô editor).
+/**
+ * /vi/chi-duong — Chỉ đường (địa chỉ + bản đồ).
+ *
+ * Bản đồ KHÔNG hardcode nữa: admin dán link Google Maps vào ô "Link Google Maps"
+ * (admin → Trang → Trang Chỉ đường → mục "Bản đồ Google Maps"). Component tự
+ * chuyển link đó thành bản đồ nhúng + link "Mở chỉ đường".
+ *
+ * Nhận mọi dạng link admin hay copy từ Google Maps:
+ *   - https://maps.app.goo.gl/xxxxx                       (link chia sẻ ngắn)
+ *   - https://www.google.com/maps/place/.../@10.94,106.87,17z/...
+ *   - https://www.google.com/maps/@10.94,106.87,17z
+ *   - https://www.google.com/maps/dir/?api=1&destination=...
+ *   - hoặc gõ thẳng địa chỉ / tên địa điểm (không phải link)
+ * Nếu link có toạ độ (@lat,lng hoặc !3d…!4d…) thì dùng toạ độ cho chính xác.
+ */
 import { getContent } from '@/lib/content.js';
 import { richDoc } from '@/lib/rich.js';
 import BaseLayout from './BaseLayout.astro';
@@ -10,13 +24,52 @@ interface Props {
 }
 
 const { lang } = Astro.props;
-const t = getContent(lang, 'chi-duong');
+const t = getContent(lang, 'chi-duong') as Record<string, string>;
+
+const mapUrl = String(t.map_url || '').trim();
+const mapNote = String(t.map_note || '').trim();
+
+const coords =
+  /@(-?\d+\.\d+),(-?\d+\.\d+)/.exec(mapUrl) || /!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/.exec(mapUrl);
+const target = coords ? `${coords[1]},${coords[2]}` : mapUrl;
+const embedSrc = mapUrl
+  ? `https://www.google.com/maps?q=${encodeURIComponent(target)}&z=17&output=embed`
+  : '';
+const directionsHref = mapUrl
+  ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(target)}`
+  : '';
+const labelOpen =
+  lang === 'vi' ? 'Mở chỉ đường trên Google Maps' : 'Open directions in Google Maps';
 ---
 
 <BaseLayout lang={lang} title={t.title}>
   <PageHero kicker={t.title} title={t.title} text={t.text} />
   <section class="px-5 py-14 sm:py-16">
     <div class="rich-doc mx-auto max-w-4xl" set:html={richDoc(t.body_html)} />
+
+    {
+      /* Bản đồ: admin dán link vào là có (không cần sửa code) */
+      mapUrl && (
+        <div class="mx-auto mt-8 max-w-4xl">
+          <iframe
+            src={embedSrc}
+            width="100%"
+            height="420"
+            style="border:0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+            title={t.title}
+          />
+          {mapNote && <p class="mt-3 text-sm text-ink-soft">{mapNote}</p>}
+          <p class="mt-3">
+            <a href={directionsHref} target="_blank" rel="noopener">
+              {labelOpen}
+            </a>
+          </p>
+        </div>
+      )
+    }
   </section>
 </BaseLayout>
 
@@ -41,6 +94,18 @@ const t = getContent(lang, 'chi-duong');
     border: 0;
   }
   .rich-doc a {
+    color: var(--color-sea);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  /* Bản đồ do component render (ngoài .rich-doc) */
+  iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lift-1);
+  }
+  a {
     color: var(--color-sea);
     text-decoration: underline;
     text-underline-offset: 2px;

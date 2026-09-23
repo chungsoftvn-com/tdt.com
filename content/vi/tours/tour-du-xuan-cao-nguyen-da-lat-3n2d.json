@@ -1,11 +1,22 @@
 {
-  "slug": "du-xuan-cao-nguyen-da-lat-3n2d-02-19",
-  "title": "DU XUÂN CAO NGUYÊN – ĐÀ LẠT 3N2Đ",
-  "category": "Hành trình khách đoàn",
+  "slug": "tour-du-xuan-cao-nguyen-da-lat-3n2d",
+  "name": "DU XUÂN CAO NGUYÊN – ĐÀ LẠT 3N2Đ",
+  "region": "domestic",
+  "region_name": "Miền Nam",
+  "departure": "Khởi hành: Tết Âm Lịch (19/02/2026) - Sáng Mùng 3",
+  "duration": "3 ngày 2 đêm",
+  "price": "2.990.000đ/khách",
   "image": "news/du-xuan-cao-nguyen-da-lat-3n2d-02-19-1.jpg",
-  "summary": "Có những chuyến đi không cần đi xa, chỉ cần đi đúng nơi để lòng nhẹ lại.",
-  "body": "",
-  "published_at": "2026-02-19",
+  "desc": "Có những chuyến đi không cần đi xa, chỉ cần đi đúng nơi để lòng nhẹ lại.",
+  "highlights": [
+    "Xe đưa đón theo chương trình",
+    "Khách sạn tiêu chuẩn 3* tại Đà Lạt",
+    "Các bữa ăn theo lịch trình",
+    "Vé tham quan các điểm trong tour",
+    "Hướng dẫn viên nhiệt tình, kinh nghiệm",
+    "Bảo hiểm du lịch trọn tour"
+  ],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -114,11 +125,7 @@
     {
       "type": "p",
       "text": "Liên hệ đặt tour ngay:"
-    },
-    {
-      "type": "p",
-      "text": "Nguồn: fanpage Facebook “Du Lịch TodayTourist” — 2026-02-19."
     }
   ],
-  "hidden": true
+  "hidden": false
 }

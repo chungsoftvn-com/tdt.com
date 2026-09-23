@@ -1,11 +1,19 @@
 {
-  "slug": "hanh-trinh-bien-xanh-nha-trang-3n2d",
-  "title": "TRIVING GRIVING – ← PAGE 3N2",
-  "category": "Guest's Journey",
+  "slug": "tour-hanh-trinh-bien-xanh-nha-trang-3n2d",
+  "name": "TRIVING GRIVING – ← PAGE 3N2",
+  "region": "domestic",
+  "region_name": "Island Sea",
+  "departure": "Borders / TP.HCM",
+  "duration": "3 days and nights",
+  "price": "2.890.000 d.",
   "image": "news/hanh-trinh-bien-xanh-nha-trang-3n2d-1.jpg",
-  "summary": "There are trips that don't take too long, just the right sea – the right amount of sunshine – the right pace is enough to refuel.",
-  "body": "",
-  "published_at": "2026-09-21",
+  "desc": "There are trips that don't take too long, just the right sea – the right amount of sunshine – the right pace is enough to refuel.",
+  "highlights": [
+    "Family, group you want to hang out short",
+    "You need a ride to relax, not too fast.",
+    "Guests want to go to sea but still have a light tour"
+  ],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -94,11 +102,7 @@
     {
       "type": "p",
       "text": "Contact set tour now:"
-    },
-    {
-      "type": "p",
-      "text": "Source: fanpage Facebook “The TodayTourist Calendar."
     }
   ],
-  "hidden": true
+  "hidden": false
 }

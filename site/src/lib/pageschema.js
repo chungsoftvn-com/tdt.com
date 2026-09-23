@@ -81,9 +81,25 @@ export const PAGE_SCHEMAS = {
     label: 'Trang Chỉ đường',
     file: 'chi-duong',
     bodyKey: 'body_html',
-    bodyLabel: 'Toàn bộ nội dung (một ô soạn thảo — text + ảnh + bản đồ)',
+    bodyLabel: 'Toàn bộ nội dung (một ô soạn thảo — text + ảnh)',
     fullEditor: true,
-    sections: [{ title: 'Toàn bộ nội dung', body: true }],
+    sections: [
+      {
+        title: 'Bản đồ Google Maps — dán link vào đây',
+        // Admin chỉ cần mở Google Maps → Chia sẻ → Sao chép link → dán vào ô dưới.
+        // Nhận mọi dạng link: maps.app.goo.gl/…, google.com/maps/place/…,
+        // google.com/maps/@lat,lng…, link chỉ đường /maps/dir/…
+        fields: [
+          {
+            key: 'map_url',
+            label: 'Link Google Maps (link bản đồ hoặc link chỉ đường)',
+            type: 'text',
+          },
+          { key: 'map_note', label: 'Ghi chú dưới bản đồ (tuỳ chọn)', type: 'text' },
+        ],
+      },
+      { title: 'Toàn bộ nội dung', body: true },
+    ],
   },
 
   common: {

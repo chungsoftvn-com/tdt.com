@@ -1,11 +1,19 @@
 {
-  "slug": "hanh-trinh-tam-linh-con-dao-2n2d-01-24",
-  "title": "HÀNH TRÌNH TÂM LINH – CÔN ĐẢO 2N2Đ",
-  "category": "Hành trình khách đoàn",
+  "slug": "tour-hanh-trinh-tam-linh-con-dao-2n2d",
+  "name": "HÀNH TRÌNH TÂM LINH – CÔN ĐẢO 2N2Đ",
+  "region": "domestic",
+  "region_name": "Biển đảo",
+  "departure": "Biên Hòa / TP.HCM",
+  "duration": "2 ngày 2 đêm",
+  "price": "2.800.000đ/khách",
   "image": "news/hanh-trinh-tam-linh-con-dao-2n2d-01-24-1.jpg",
-  "summary": "Đi Côn Đảo những ngày này, không chỉ là du lịch – mà là một cuộc trở về.",
-  "body": "",
-  "published_at": "2026-01-24",
+  "desc": "Đi Côn Đảo những ngày này, không chỉ là du lịch – mà là một cuộc trở về.",
+  "highlights": [
+    "Người đi lễ, cầu bình an – sức khỏe – công việc",
+    "Gia đình muốn chuyến đi đầu năm ý nghĩa",
+    "Những ai muốn khởi đầu năm mới bằng sự biết ơn và an yên"
+  ],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -103,11 +111,7 @@
     {
       "type": "p",
       "text": "Liên hệ đặt tour ngay:"
-    },
-    {
-      "type": "p",
-      "text": "Nguồn: fanpage Facebook “Du Lịch TodayTourist” — 2026-01-24."
     }
   ],
-  "hidden": true
+  "hidden": false
 }

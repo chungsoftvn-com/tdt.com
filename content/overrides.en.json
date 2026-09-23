@@ -1,6 +1,5 @@
 {
   "_comment": "Curated QA layer applied ON TOP of Argos Translate output. Keys are '<file>/<key>' (unambiguous). A plain '<key>' also works as a fallback. Delete an entry to fall back to the machine translation.",
-
   "common/brand_name": "TODAYTOURIST",
   "common/brand_tagline": "With you across five continents",
   "common/meta_title": "TODAYTOURIST TRAVEL COMPANY",
@@ -61,7 +60,6 @@
   "common/rights": "All rights reserved.",
   "common/404_title": "Page not found",
   "common/404_text": "The page you are looking for does not exist or has been moved.",
-
   "home/hero_kicker": "TodayTourist · Professional travel",
   "home/hero_title": "With you across five continents",
   "home/hero_text": "A professional travel company in Dong Nai with more than 10 years of experience organizing domestic & international tours, teambuilding – gala – events and tailor-made itineraries.",
@@ -107,7 +105,6 @@
   "home/cta_button": "Contact now",
   "home/partners_title": "Our partners",
   "home/partners_text": "Trusted partners traveling with TodayTourist.",
-
   "about/title": "About us",
   "about/hero_kicker": "About us",
   "about/hero_title": "TodayTourist – With you on every journey",
@@ -136,7 +133,6 @@
   "about/company_slogan": "TODAYTOURIST – WITH YOU ACROSS FIVE CONTINENTS",
   "about/company_method_label": "Motto",
   "about/company_method": "With you on every journey – Trust in every step",
-
   "contact/title": "Contact",
   "contact/hero_kicker": "Contact",
   "contact/hero_title": "We are always ready to go with you",
@@ -153,7 +149,6 @@
   "contact/form_submit": "Send request",
   "contact/form_required": "Please fill in all required fields.",
   "contact/form_success": "Thank you! Your request has been received.",
-
   "tours/list_title": "Tours",
   "tours/list_text": "Discover attractive domestic and international journeys, carefully designed for every kind of traveler.",
   "tours/tour_1_region_name": "Mekong Delta",
@@ -200,17 +195,14 @@
   "tours/tour_11_name": "China Tour 5D4N",
   "tours/tour_11_desc": "The vast Middle Kingdom — glittering Shanghai, classical Suzhou gardens and grand Chinese cuisine.",
   "tours/tour_11_highlights": "Shanghai Lujiazui|Suzhou classical gardens|Chinese cuisine|Round-trip flights",
-
   "common/nav_recruit": "Careers",
   "common/nav_directions": "Directions",
   "common/tour_terms_title": "Terms & Notes",
   "common/tour_terms_body": "<p>🔹 Prices apply to Vietnamese national guests, groups of 20 guests or more.<br/>🔹 A deposit of 30–50% is required at registration; the balance is due before departure.<br/>🔹 Itineraries may be adjusted flexibly according to actual conditions.<br/>🔹 Please take care of your personal belongings.<br/>🔹 In case of force majeure, the company will arrange the most suitable alternative.</p>",
   "common/sales_title": "Consulting & Sales",
   "common/sales_body_html": "<p><strong>Domestic &amp; international travel sales desk:</strong><br/>Mr. Sang – 0913.787.647<br/>Mr. Hoang Linh – 0933.92.49.79<br/>Mr. Quoc Hao – 0835.082.129<br/>Mr. Anh Van – 0902.898.726<br/>Ms. Thanh Thuy – 0937.001.448</p>",
-
   "testimonials/back_label": "Back to list",
   "testimonials/read_more": "Read more",
-
   "tim-tour/title": "Find tour",
   "tim-tour/kind_all": "Tour type",
   "tim-tour/kind_domestic": "Domestic tour",
@@ -223,9 +215,10 @@
   "dat-tour/kind_international": "International tour",
   "tuyen-dung/title": "Careers",
   "chi-duong/title": "Directions",
-  "chi-duong/body_html": "<h2>TODAYTOURIST TRAVEL COMPANY</h2><p><strong>Address:</strong> No. 80 Dang Nguyen, Quarter 3, Long Binh, Dong Nai, Vietnam<br/><strong>Phone:</strong> 0913.78.76.47<br/><strong>Email:</strong> lesangtravel@gmail.com</p><h2>Location on the map</h2><p>Below is the map showing the location of the TodayTourist office. We are always happy to welcome you.</p><div class=\"map-wrap\"><iframe src=\"https://www.google.com/maps/place/80+%C4%90%E1%BA%B7ng+Nguy%C3%AAn,+khu+ph%E1%BB%91+3,+Long+B%C3%ACnh,+%C4%90%E1%BB%93ng+Nai,+Vietnam/@10.9451586,106.8694872,17z/data=!3m1!4b1!4m6!3m5!1s0x3174de7b7226c479:0x5d4a4d9394d7edb7!8m2!3d10.9451586!4d106.8720621!16s%2Fg%2F11xt043twd?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D&amp;zoom=17\" width=\"100%\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" title=\"TodayTourist office map\"></iframe></div><p><a href='https://www.google.com/maps/place/80+%C4%90%E1%BA%B7ng+Nguy%C3%AAn,+khu+ph%E1%BB%91+3,+Long+B%C3%ACnh,+%C4%90%E1%BB%93ng+Nai,+Vietnam/@10.9451586,106.8694872,17z/data=!3m1!4b1!4m6!3m5!1s0x3174de7b7226c479:0x5d4a4d9394d7edb7!8m2!3d10.9451586!4d106.8720621!16s%2Fg%2F11xt043twd?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D' target='_blank' rel='noopener'>Open directions in Google Maps</a></p>",
+  "chi-duong/body_html": "<h2>TODAYTOURIST TRAVEL COMPANY</h2><p><strong>Address:</strong> No. 80 Dang Nguyen, Quarter 3, Long Binh, Dong Nai, Vietnam<br/><strong>Phone:</strong> 0913.78.76.47<br/><strong>Email:</strong> lesangtravel@gmail.com</p><h2>Location on the map</h2><p>Below is the map showing the location of the TodayTourist office. We are always happy to welcome you.</p>",
   "tuyen-dung/body_html": "<h2>Work at TodayTourist</h2><p>TodayTourist is regularly hiring for the following positions: travel sales staff, tour guide, tour operator, and travel driver.</p><p>Interested candidates please send your CV by email or contact us directly:</p><p><strong>📧 Email:</strong> lesangtravel@gmail.com<br/><strong>📞 Phone:</strong> 0913.78.76.47</p><p>Office address: No. 80 Dang Nguyen, Quarter 3, Long Binh, Dong Nai, Vietnam.</p>",
-
   "common/footer_offer": "",
-  "common/footer_credit": "Website designed & developed by chungsoftvn — Zalo: +84 36 746 5221"
+  "common/footer_credit": "Website designed & developed by chungsoftvn — Zalo: +84 36 746 5221",
+  "chi-duong/map_url": "https://www.google.com/maps/place/80+%C4%90%E1%BA%B7ng+Nguy%C3%AAn,+khu+ph%E1%BB%91+3,+Long+B%C3%ACnh,+%C4%90%E1%BB%93ng+Nai,+Vietnam/@10.9451586,106.8694872,17z/data=!3m1!4b1!4m6!3m5!1s0x3174de7b7226c479:0x5d4a4d9394d7edb7!8m2!3d10.9451586!4d106.8720621!16s%2Fg%2F11xt043twd?entry=ttu",
+  "chi-duong/map_note": "TodayTourist office — No. 80 Dang Nguyen, Quarter 3, Long Binh, Dong Nai, Vietnam."
 }

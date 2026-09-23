@@ -1,11 +1,19 @@
 {
-  "slug": "hanh-trinh-bien-xanh-nha-trang-3n2d",
-  "title": "HÀNH TRÌNH BIỂN XANH – NHA TRANG 3N2Đ",
-  "category": "Hành trình khách đoàn",
+  "slug": "tour-hanh-trinh-bien-xanh-nha-trang-3n2d",
+  "name": "HÀNH TRÌNH BIỂN XANH – NHA TRANG 3N2Đ",
+  "region": "domestic",
+  "region_name": "Biển đảo",
+  "departure": "Biên Hòa / TP.HCM",
+  "duration": "3 ngày 2 đêm",
+  "price": "2.890.000đ/khách",
   "image": "news/hanh-trinh-bien-xanh-nha-trang-3n2d-1.jpg",
-  "summary": "Có những chuyến đi không cần quá dài, chỉ cần đúng biển – đúng nắng – đúng nhịp nghỉ ngơi là đủ để nạp lại năng lượng.",
-  "body": "",
-  "published_at": "2026-09-21",
+  "desc": "Có những chuyến đi không cần quá dài, chỉ cần đúng biển – đúng nắng – đúng nhịp nghỉ ngơi là đủ để nạp lại năng lượng.",
+  "highlights": [
+    "Gia đình, nhóm bạn muốn đi chơi ngắn ngày",
+    "Người cần chuyến đi thư giãn, không quá gấp gáp",
+    "Khách muốn đi biển nhưng vẫn có tham quan nhẹ nhàng"
+  ],
+  "itinerary": [],
   "content": [
     {
       "type": "p",
@@ -94,11 +102,7 @@
     {
       "type": "p",
       "text": "Liên hệ đặt tour ngay:"
-    },
-    {
-      "type": "p",
-      "text": "Nguồn: fanpage Facebook “Du Lịch TodayTourist”."
     }
   ],
-  "hidden": true
+  "hidden": false
 }
