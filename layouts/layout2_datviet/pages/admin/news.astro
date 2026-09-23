@@ -48,6 +48,13 @@ import AdminLayout from '@/components/AdminLayout.astro';
         </label>
         <textarea id="f-body" rows="10" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea"></textarea>
       </div>
+      <label class="flex items-start gap-2.5 rounded-xl border border-ink/10 bg-sand px-3 py-2.5">
+        <input id="f-hidden" type="checkbox" class="mt-0.5 h-4 w-4" />
+        <span class="text-sm text-ink">
+          <strong class="font-semibold">Ẩn khỏi website</strong>
+          <span class="block text-xs text-ink-soft">Không hiện ở trang chủ, danh sách tin, sitemap. Bài vẫn còn trong admin để bật lại.</span>
+        </span>
+      </label>
       <p id="form-error" class="hidden text-sm font-medium text-red-600"></p>
       <div class="flex gap-3">
         <button type="submit" class="rounded-full bg-sea px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-sea-deep">Lưu</button>
@@ -70,6 +77,8 @@ import AdminLayout from '@/components/AdminLayout.astro';
   const listStatus = $('list-status');
   const formError = $('form-error');
   let editingSlug = null;
+  /** Cache danh sách bài tin đang hiển thị (dùng cho nút Ẩn/Hiện nhanh). */
+  let newsCache = [];
 
   function esc(s) {
     return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -83,22 +92,42 @@ import AdminLayout from '@/components/AdminLayout.astro';
     }
     if (!r.data?.ok) { listStatus.textContent = 'Không tải được danh sách.'; return; }
     const news = r.data.news || [];
+    newsCache = news;
     listStatus.textContent = `${news.length} bài tin.`;
     $('news-list').innerHTML = news
       .map((n) => `
-        <li class="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-paper p-4 shadow-[var(--shadow-lift-1)]">
+        <li class="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-paper p-4 shadow-[var(--shadow-lift-1)] ${n.hidden ? 'opacity-70 ring-1 ring-amber-300' : ''}">
           <div>
-            <p class="font-semibold text-ink">${esc(n.title)}</p>
+            <p class="font-semibold text-ink">${esc(n.title)}${n.hidden ? '<span class="ml-2 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700">Đang ẩn</span>' : ''}</p>
             <p class="text-xs text-ink-soft">${esc(n.slug)} · ${esc(n.category)} · ${esc(n.published_at)}</p>
           </div>
           <div class="flex gap-2">
+            <button data-toggle="${esc(n.slug)}" class="rounded-full border border-ink/15 px-4 py-1.5 text-sm font-semibold text-ink hover:border-sea hover:text-sea-deep">${n.hidden ? 'Hiện' : 'Ẩn'}</button>
             <button data-edit="${esc(n.slug)}" class="rounded-full border border-ink/15 px-4 py-1.5 text-sm font-semibold text-ink hover:border-sea hover:text-sea-deep">Sửa</button>
             <button data-del="${esc(n.slug)}" class="rounded-full border border-red-200 px-4 py-1.5 text-sm font-semibold text-red-600 hover:bg-red-50">Xoá</button>
           </div>
         </li>`)
       .join('');
+    $('news-list').querySelectorAll('[data-toggle]').forEach((b) => b.addEventListener('click', () => toggleHidden(b.dataset.toggle, b)));
     $('news-list').querySelectorAll('[data-edit]').forEach((b) => b.addEventListener('click', () => edit(b.dataset.edit, b)));
     $('news-list').querySelectorAll('[data-del]').forEach((b) => b.addEventListener('click', () => remove(b.dataset.del, b)));
+  }
+
+  /** Ẩn / hiện nhanh 1 bài tin ngay ở danh sách (không cần mở form). */
+  async function toggleHidden(slug, btn) {
+    const item = newsCache.find((x) => x.slug === slug);
+    if (!item) return;
+    setBusy(btn, true, 'Đang lưu...');
+    try {
+      const r = await api('PUT', `/news/${slug}`, { ...item, hidden: !item.hidden });
+      if (!r.data?.ok) {
+        alert(describeSaveError(r));
+        return;
+      }
+      load();
+    } finally {
+      setBusy(btn, false);
+    }
   }
 
   function showForm(n) {
@@ -110,6 +139,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
     $('f-published').value = n?.published_at || '';
     $('f-summary').value = n?.summary || '';
     $('f-body').value = n?.body || '';
+    $('f-hidden').checked = !!n?.hidden;
     sunSetBlocks(n?.content || []);
     $('f-image').value = '';
     formError.classList.add('hidden');
@@ -158,6 +188,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
         summary: $('f-summary').value.trim(),
         body: $('f-body').value,
         published_at: $('f-published').value || undefined,
+        hidden: $('f-hidden').checked,
       };
       const { content: rich, images } = await sunCollectBlocks();
       body.content = rich;

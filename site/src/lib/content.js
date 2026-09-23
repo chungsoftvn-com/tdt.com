@@ -225,7 +225,17 @@ function normalizeTour(t, slug) {
     highlights: Array.isArray(t.highlights) ? t.highlights : [],
     itinerary: Array.isArray(t.itinerary) ? t.itinerary : [],
     content: Array.isArray(t.content) ? t.content : [],
+    // Giữ cờ ẩn/hiện — thiếu dòng này thì getTours() không lọc được tour đang ẩn.
+    hidden: t.hidden === true,
   };
+}
+
+/**
+ * Mục bị admin ẩn (`hidden: true`) không xuất hiện ở website: trang chủ, danh sách,
+ * trang khu vực, sitemap… nhưng VẪN còn trong admin để bật lại.
+ */
+export function isVisible(item) {
+  return !!item && item.hidden !== true;
 }
 
 /** All tours for a language — index.order + 1 file/article (cấu trúc mới). */
@@ -237,7 +247,7 @@ export function getTours(lang) {
         const article = readArticle(lang, 'tours', slug);
         return article ? normalizeTour(article, slug) : null;
       })
-      .filter(Boolean);
+      .filter((x) => isVisible(x));
   }
   // Legacy fallback (chưa migrate): index phẳng tour_N_*
   const count = Number(t.count) || 0;
@@ -261,13 +271,15 @@ export function getTours(lang) {
       itinerary: [],
     });
   }
-  return tours;
+  return tours.filter((x) => isVisible(x));
 }
 
 /** Find a single tour by slug for a language (null if not found). */
 export function getTour(lang, slug) {
   const article = readArticle(lang, 'tours', slug);
-  return article ? normalizeTour(article, slug) : getTours(lang).find((x) => x.slug === slug) ?? null;
+  return article && isVisible(article)
+    ? normalizeTour(article, slug)
+    : getTours(lang).find((x) => x.slug === slug) ?? null;
 }
 
 /** All news for a language (mới nhất trước). */
@@ -276,14 +288,14 @@ export function getNews(lang) {
   const order = Array.isArray(n.order) ? n.order : [];
   return order
     .map((slug) => readArticle(lang, 'news', slug))
-    .filter(Boolean)
+    .filter((x) => isVisible(x))
     .sort((a, b) => String(b.published_at || '').localeCompare(String(a.published_at || '')));
 }
 
 /** Một bài tin (title, category, image, summary, body, published_at, content[]). */
 export function getNewsItem(lang, slug) {
   const n = readArticle(lang, 'news', slug);
-  if (!n) return null;
+  if (!n || !isVisible(n)) return null;
   return { ...n, content: Array.isArray(n.content) ? n.content : [] };
 }
 

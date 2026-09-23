@@ -1,0 +1,45 @@
+{
+  "_comment": "Curated QA layer applied ON TOP of Argos Translate output. Keys are '<file>/<key>' (unambiguous). A plain '<key>' also works as a fallback. Delete an entry to fall back to the machine translation.",
+  "page_name": "TodayTourist Tour",
+  "page_url": "https://www.facebook.com/profile.php?id=61563008528761",
+  "followers": "2 KK",
+  "followers_label": "Tracker",
+  "category": "Travel Company",
+  "locality": "Border Line",
+  "hours": "Always open the door",
+  "fb_address": "80 springs, District 29, 1770 Long Ping",
+  "bio": "INTERVIECY TOURIST INTERVIEW National and International Tour Organization - Caring - Team Building - Convention",
+  "synced_at": "2026-09-18",
+  "section_title": "Latest Image from Facebook",
+  "section_text": "Updates TodayTourist's latest images, videos, and activities on Facebook.",
+  "cta_label": "Monitor on Facebook",
+  "cover": "Facebook/fb-01.jpg",
+  "cover_alt": "DateTourist Facebook Cover",
+  "photos": [
+    {
+      "image": "facebook/fb-02.jpg",
+      "alt": "TodayTourist Tour - Facebook post-show",
+      "url": "https://www.facebook.com/profile.php?id=61563008528761"
+    },
+    {
+      "image": "facebook/fb-03.jpg",
+      "alt": "TodayTourist Tour",
+      "url": "https://www.facebook.com/profile.php?id=61563008528761"
+    },
+    {
+      "image": "facebook/fb-04.jpg",
+      "alt": "Teambuilding - gala organized by TodayTourist",
+      "url": "https://www.facebook.com/profile.php?id=61563008528761"
+    },
+    {
+      "image": "facebook/fb-05.jpg",
+      "alt": "TodayTourist Tour at destination",
+      "url": "https://www.facebook.com/profile.php?id=61563008528761"
+    },
+    {
+      "image": "facebook/fb-06.jpg",
+      "alt": "TodayTourist Tour Activity",
+      "url": "https://www.facebook.com/profile.php?id=61563008528761"
+    }
+  ]
+}

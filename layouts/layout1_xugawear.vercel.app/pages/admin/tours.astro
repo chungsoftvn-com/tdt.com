@@ -61,6 +61,13 @@ import AdminLayout from '@/components/AdminLayout.astro';
         <label class="mb-1 block text-sm font-medium text-ink-soft" for="f-highlights">Điểm nổi bật (mỗi dòng 1 mục)</label>
         <textarea id="f-highlights" rows="4" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea"></textarea>
       </div>
+      <label class="flex items-start gap-2.5 rounded-xl border border-ink/10 bg-sand px-3 py-2.5">
+        <input id="f-hidden" type="checkbox" class="mt-0.5 h-4 w-4" />
+        <span class="text-sm text-ink">
+          <strong class="font-semibold">Ẩn khỏi website</strong>
+          <span class="block text-xs text-ink-soft">Không hiện ở trang chủ, danh sách tour, tìm tour, khu vực và sitemap. Bài vẫn còn trong admin để bật lại.</span>
+        </span>
+      </label>
       <p id="form-error" class="hidden text-sm font-medium text-red-600"></p>
       <div class="flex gap-3">
         <button type="submit" class="rounded-full bg-sea px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-sea-deep">Lưu</button>
@@ -83,6 +90,8 @@ import AdminLayout from '@/components/AdminLayout.astro';
   const listStatus = $('list-status');
   const formError = $('form-error');
   let editingSlug = null;
+  /** Cache danh sách tour đang hiển thị (dùng cho nút Ẩn/Hiện nhanh). */
+  let toursCache = [];
 
   function esc(s) {
     return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -96,22 +105,42 @@ import AdminLayout from '@/components/AdminLayout.astro';
     }
     if (!r.data?.ok) { listStatus.textContent = 'Không tải được danh sách.'; return; }
     const tours = r.data.tours || [];
+    toursCache = tours;
     listStatus.textContent = `${tours.length} tour.`;
     $('tour-list').innerHTML = tours
       .map((t) => `
-        <li class="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-paper p-4 shadow-[var(--shadow-lift-1)]">
+        <li class="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-paper p-4 shadow-[var(--shadow-lift-1)] ${t.hidden ? 'opacity-70 ring-1 ring-amber-300' : ''}">
           <div>
-            <p class="font-semibold text-ink">${esc(t.name)}</p>
+            <p class="font-semibold text-ink">${esc(t.name)}${t.hidden ? '<span class="ml-2 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-semibold text-amber-700">Đang ẩn</span>' : ''}</p>
             <p class="text-xs text-ink-soft">${esc(t.slug)} · ${esc(t.region_name)} · ${esc(t.price)}</p>
           </div>
           <div class="flex gap-2">
+            <button data-toggle="${esc(t.slug)}" class="rounded-full border border-ink/15 px-4 py-1.5 text-sm font-semibold text-ink hover:border-sea hover:text-sea-deep">${t.hidden ? 'Hiện' : 'Ẩn'}</button>
             <button data-edit="${esc(t.slug)}" class="rounded-full border border-ink/15 px-4 py-1.5 text-sm font-semibold text-ink hover:border-sea hover:text-sea-deep">Sửa</button>
             <button data-del="${esc(t.slug)}" class="rounded-full border border-red-200 px-4 py-1.5 text-sm font-semibold text-red-600 hover:bg-red-50">Xoá</button>
           </div>
         </li>`)
       .join('');
+    $('tour-list').querySelectorAll('[data-toggle]').forEach((b) => b.addEventListener('click', () => toggleHidden(b.dataset.toggle, b)));
     $('tour-list').querySelectorAll('[data-edit]').forEach((b) => b.addEventListener('click', () => edit(b.dataset.edit, b)));
     $('tour-list').querySelectorAll('[data-del]').forEach((b) => b.addEventListener('click', () => remove(b.dataset.del, b)));
+  }
+
+  /** Áº¨n / hiá»‡n nhanh 1 tour ngay á»Ÿ danh sÃ¡ch (khÃ´ng cáº§n má»Ÿ form). */
+  async function toggleHidden(slug, btn) {
+    const tour = toursCache.find((x) => x.slug === slug);
+    if (!tour) return;
+    setBusy(btn, true, 'Đang lưu...');
+    try {
+      const r = await api('PUT', `/tours/${slug}`, { ...tour, hidden: !tour.hidden });
+      if (!r.data?.ok) {
+        alert(describeSaveError(r));
+        return;
+      }
+      load();
+    } finally {
+      setBusy(btn, false);
+    }
   }
 
   function showForm(t) {
@@ -126,6 +155,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
     $('f-price').value = t?.price || '';
     $('f-desc').value = t?.desc || '';
     $('f-highlights').value = (t?.highlights || []).join('\n');
+    $('f-hidden').checked = !!t?.hidden;
     sunSetBlocks(t?.content || []);
     $('f-image').value = '';
     formError.classList.add('hidden');
@@ -177,6 +207,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
         price: $('f-price').value.trim(),
         desc: $('f-desc').value.trim(),
         highlights: $('f-highlights').value.split('\n').map((s) => s.trim()).filter(Boolean),
+        hidden: $('f-hidden').checked,
       };
       const { content: rich, images } = await sunCollectBlocks();
       body.content = rich;

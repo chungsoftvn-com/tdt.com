@@ -15,79 +15,208 @@
     "Standard hotel + meals included"
   ],
   "content": [
-    { "type": "p", "text": "🌸 CON DAO TOUR 2 DAYS 2 NIGHTS 🌸" },
-    { "type": "p", "text": "🕯️ A SPIRITUAL - HISTORICAL - SACRED ISLAND JOURNEY" },
-    { "type": "p", "text": "🚍 PICK-UP ANYWHERE IN BIEN HOA CITY CENTER" },
-    { "type": "p", "text": "👨‍👩‍👧‍👦 Weekly group tours - departures from 10 guests" },
-    { "type": "p", "text": "Ideal for individual travelers, families and friend groups. We also design private tours for agencies, companies and organizations on request." },
-    { "type": "p", "text": "📞 Mr. Anh Van - Sales: 0902 898 726" },
-    { "type": "h3", "text": "📍 FLEXIBLE PICK-UP ROUTES" },
-    { "type": "p", "text": "🚐 New model TodayTourist coaches pick you up at your door inside Bien Hoa city along fixed routes:" },
-    { "type": "list", "items": [
-      "🟢 Route 1: Tan Phong 4-way → Province Square → Bien Hoa Bus Station → Vung Tau 4-way",
-      "🟢 Route 2: Gate 11 → Suoi Linh Gas Station (Tam Hiep) → AMATA 4-way → Dong Nai Hospital",
-      "🟢 Route 3: Along National Road 51 → Long Thanh town → Expressway (Long Thanh - Cho Dem - Trung Luong)"
-    ] },
-    { "type": "h2", "text": "🗓️ DETAILED TOUR ITINERARY" },
-    { "type": "h3", "text": "🌙 NIGHT 01: BIEN HOA / HCMC - TRAN DE (SOC TRANG)" },
-    { "type": "p", "text": "⏰ 21:00 - 22:00 | 🚍 PICK-UP & DEPARTURE" },
-    { "type": "p", "text": "TodayTourist coach and guide pick you up at the meeting point in Bien Hoa / HCMC, then head to Tran De (Soc Trang). Guests rest overnight on the coach." },
-    { "type": "h3", "text": "🌅 DAY 01: TRAN DE - CON DAO | SPIRITUAL & ISLAND JOURNEY" },
-    { "type": "p", "text": "⏰ 05:00 | ARRIVE TRAN DE PORT - light breakfast at a local restaurant, then board the high-speed ferry to Con Dao." },
-    { "type": "p", "text": "🚢 Around 10:00 arrive Con Dao. Coach picks up the group for sightseeing:" },
-    { "type": "list", "items": [
-      "🛕 Ba Phi Yen Temple (An Son Mieu) - a sacred temple tied to Con Dao history and local spiritual life.",
-      "🕍 Nui Mot Pagoda (Van Son Tu) - visit, pray and enjoy a panoramic view of Con Dao from above."
-    ] },
-    { "type": "p", "text": "🍽️ Lunch at a local restaurant - 🏨 check in hotel & rest" },
-    { "type": "h3", "text": "🌊 AFTERNOON: SIGHTSEEING & BEACH SWIMMING" },
-    { "type": "list", "items": [
-      "⛩️ Tho Than Shrine",
-      "⛩️ Hoang Tu Cai Shrine",
-      "🏖️ Dam Trau beach - free time to swim and relax at one of Con Dao's most beautiful beaches."
-    ] },
-    { "type": "h3", "text": "🌙 EVENING: VISIT CO SAU'S GRAVE - HANG DUONG CEMETERY" },
-    { "type": "p", "text": "🍲 Dinner at a restaurant. 🕯️ Night visit to Hang Duong Cemetery - in the sacred space, pay respects to national heroes and especially to Co Sau (Vo Thi Sau)." },
-    { "type": "p", "text": "🛏️ Overnight at Con Dao hotel." },
-    { "type": "h3", "text": "🌤️ DAY 02: CON DAO - TRAN DE - BIEN HOA / HCMC" },
-    { "type": "p", "text": "🥐 Breakfast at the hotel, then sightseeing:" },
-    { "type": "list", "items": [
-      "🏛️ Con Dao Museum - learn about the formation and heroic struggles of this sacred land.",
-      "🏚️ Phu Hai Camp - French & American Tiger Cages - Phu Binh Camp - explore the famous prison system and the resilient spirit of the revolutionaries."
-    ] },
-    { "type": "p", "text": "🚐 Back to the hotel to check out. 🛍️ Con Dao Market - free time to buy local specialties and dried seafood as gifts." },
-    { "type": "p", "text": "🍽️ Lunch, then take the high-speed ferry back to Tran De and the coach back to Bien Hoa / HCMC. 👋 End of tour." },
-    { "type": "h2", "text": "💰 PACKAGE TOUR PRICE" },
-    { "type": "p", "text": "💵 2,790,000 VND/person" },
-    { "type": "p", "text": "💵 1,950,000 VND/person (Children 5 - under 10 years old)" },
-    { "type": "p", "text": "👶 Children under 5: FREE (family to look after the child)" },
-    { "type": "p", "text": "👨‍👩‍👧‍👦 Group tours - minimum 4 guests - departing from Bien Hoa" },
-    { "type": "h2", "text": "🎁 PRICE INCLUDES" },
-    { "type": "list", "items": [
-      "✅ Coach pick-up/drop-off as per itinerary",
-      "✅ Round-trip high-speed ferry Tran De - Con Dao",
-      "✅ Standard 2-star hotel (2-4 guests/room)",
-      "✅ Meals as per itinerary (02 breakfasts, 03 main set-menu meals)",
-      "✅ Entrance tickets to sites in the itinerary",
-      "✅ Professional tour guide",
-      "✅ Travel insurance",
-      "✅ Tourist hat, cold towel and bottled water"
-    ] },
-    { "type": "h2", "text": "🚫 PRICE EXCLUDES" },
-    { "type": "list", "items": [
-      "❌ Personal expenses and shopping outside the itinerary",
-      "❌ Offering costs to Co Sau",
-      "❌ VAT (if invoice required)"
-    ] },
-    { "type": "h2", "text": "📜 TERMS & NOTES" },
-    { "type": "list", "items": [
-      "📌 Price applies to Vietnamese guests, not applicable on public holidays",
-      "⚠️ Order of sightseeing may be adjusted flexibly depending on actual conditions while all sites remain guaranteed"
-    ] },
-    { "type": "h2", "text": "📞 CONTACT & BOOKING" },
-    { "type": "p", "text": "🏢 TODAYTOURIST TRAVEL COMPANY - 📍 80 Dang Nguyen, KP3, Long Binh Ward, Bien Hoa City, Dong Nai" },
-    { "type": "p", "text": "📞 Mr Anh Van - Sales: 0902 898 726 | ☎️ Hotline: 0913 78 76 47 (Le Sang)" },
-    { "type": "p", "text": "✉️ lesangtravel@gmail.com | 🌐 todaytourist.com" }
+    {
+      "type": "p",
+      "text": "🌸 CON DAO TOUR 2 DAYS 2 NIGHTS 🌸"
+    },
+    {
+      "type": "p",
+      "text": "🕯️ A SPIRITUAL - HISTORICAL - SACRED ISLAND JOURNEY"
+    },
+    {
+      "type": "p",
+      "text": "🚍 PICK-UP ANYWHERE IN BIEN HOA CITY CENTER"
+    },
+    {
+      "type": "p",
+      "text": "👨‍👩‍👧‍👦 Weekly group tours - departures from 10 guests"
+    },
+    {
+      "type": "p",
+      "text": "Ideal for individual travelers, families and friend groups. We also design private tours for agencies, companies and organizations on request."
+    },
+    {
+      "type": "p",
+      "text": "📞 Mr. Anh Van - Sales: 0902 898 726"
+    },
+    {
+      "type": "h3",
+      "text": "📍 FLEXIBLE PICK-UP ROUTES"
+    },
+    {
+      "type": "p",
+      "text": "🚐 New model TodayTourist coaches pick you up at your door inside Bien Hoa city along fixed routes:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "🟢 Route 1: Tan Phong 4-way → Province Square → Bien Hoa Bus Station → Vung Tau 4-way",
+        "🟢 Route 2: Gate 11 → Suoi Linh Gas Station (Tam Hiep) → AMATA 4-way → Dong Nai Hospital",
+        "🟢 Route 3: Along National Road 51 → Long Thanh town → Expressway (Long Thanh - Cho Dem - Trung Luong)"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "🗓️ DETAILED TOUR ITINERARY"
+    },
+    {
+      "type": "h3",
+      "text": "🌙 NIGHT 01: BIEN HOA / HCMC - TRAN DE (SOC TRANG)"
+    },
+    {
+      "type": "p",
+      "text": "⏰ 21:00 - 22:00 | 🚍 PICK-UP & DEPARTURE"
+    },
+    {
+      "type": "p",
+      "text": "TodayTourist coach and guide pick you up at the meeting point in Bien Hoa / HCMC, then head to Tran De (Soc Trang). Guests rest overnight on the coach."
+    },
+    {
+      "type": "h3",
+      "text": "🌅 DAY 01: TRAN DE - CON DAO | SPIRITUAL & ISLAND JOURNEY"
+    },
+    {
+      "type": "p",
+      "text": "⏰ 05:00 | ARRIVE TRAN DE PORT - light breakfast at a local restaurant, then board the high-speed ferry to Con Dao."
+    },
+    {
+      "type": "p",
+      "text": "🚢 Around 10:00 arrive Con Dao. Coach picks up the group for sightseeing:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "🛕 Ba Phi Yen Temple (An Son Mieu) - a sacred temple tied to Con Dao history and local spiritual life.",
+        "🕍 Nui Mot Pagoda (Van Son Tu) - visit, pray and enjoy a panoramic view of Con Dao from above."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "🍽️ Lunch at a local restaurant - 🏨 check in hotel & rest"
+    },
+    {
+      "type": "h3",
+      "text": "🌊 AFTERNOON: SIGHTSEEING & BEACH SWIMMING"
+    },
+    {
+      "type": "list",
+      "items": [
+        "⛩️ Tho Than Shrine",
+        "⛩️ Hoang Tu Cai Shrine",
+        "🏖️ Dam Trau beach - free time to swim and relax at one of Con Dao's most beautiful beaches."
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "🌙 EVENING: VISIT CO SAU'S GRAVE - HANG DUONG CEMETERY"
+    },
+    {
+      "type": "p",
+      "text": "🍲 Dinner at a restaurant. 🕯️ Night visit to Hang Duong Cemetery - in the sacred space, pay respects to national heroes and especially to Co Sau (Vo Thi Sau)."
+    },
+    {
+      "type": "p",
+      "text": "🛏️ Overnight at Con Dao hotel."
+    },
+    {
+      "type": "h3",
+      "text": "🌤️ DAY 02: CON DAO - TRAN DE - BIEN HOA / HCMC"
+    },
+    {
+      "type": "p",
+      "text": "🥐 Breakfast at the hotel, then sightseeing:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "🏛️ Con Dao Museum - learn about the formation and heroic struggles of this sacred land.",
+        "🏚️ Phu Hai Camp - French & American Tiger Cages - Phu Binh Camp - explore the famous prison system and the resilient spirit of the revolutionaries."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "🚐 Back to the hotel to check out. 🛍️ Con Dao Market - free time to buy local specialties and dried seafood as gifts."
+    },
+    {
+      "type": "p",
+      "text": "🍽️ Lunch, then take the high-speed ferry back to Tran De and the coach back to Bien Hoa / HCMC. 👋 End of tour."
+    },
+    {
+      "type": "h2",
+      "text": "💰 PACKAGE TOUR PRICE"
+    },
+    {
+      "type": "p",
+      "text": "💵 2,790,000 VND/person"
+    },
+    {
+      "type": "p",
+      "text": "💵 1,950,000 VND/person (Children 5 - under 10 years old)"
+    },
+    {
+      "type": "p",
+      "text": "👶 Children under 5: FREE (family to look after the child)"
+    },
+    {
+      "type": "p",
+      "text": "👨‍👩‍👧‍👦 Group tours - minimum 4 guests - departing from Bien Hoa"
+    },
+    {
+      "type": "h2",
+      "text": "🎁 PRICE INCLUDES"
+    },
+    {
+      "type": "list",
+      "items": [
+        "✅ Coach pick-up/drop-off as per itinerary",
+        "✅ Round-trip high-speed ferry Tran De - Con Dao",
+        "✅ Standard 2-star hotel (2-4 guests/room)",
+        "✅ Meals as per itinerary (02 breakfasts, 03 main set-menu meals)",
+        "✅ Entrance tickets to sites in the itinerary",
+        "✅ Professional tour guide",
+        "✅ Travel insurance",
+        "✅ Tourist hat, cold towel and bottled water"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "🚫 PRICE EXCLUDES"
+    },
+    {
+      "type": "list",
+      "items": [
+        "❌ Personal expenses and shopping outside the itinerary",
+        "❌ Offering costs to Co Sau",
+        "❌ VAT (if invoice required)"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "📜 TERMS & NOTES"
+    },
+    {
+      "type": "list",
+      "items": [
+        "📌 Price applies to Vietnamese guests, not applicable on public holidays",
+        "⚠️ Order of sightseeing may be adjusted flexibly depending on actual conditions while all sites remain guaranteed"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "📞 CONTACT & BOOKING"
+    },
+    {
+      "type": "p",
+      "text": "🏢 TODAYTOURIST TRAVEL COMPANY - 📍 80 Dang Nguyen, KP3, Long Binh Ward, Bien Hoa City, Dong Nai"
+    },
+    {
+      "type": "p",
+      "text": "📞 Mr Anh Van - Sales: 0902 898 726 | ☎️ Hotline: 0913 78 76 47 (Le Sang)"
+    },
+    {
+      "type": "p",
+      "text": "✉️ lesangtravel@gmail.com | 🌐 todaytourist.com"
+    }
   ],
   "itinerary": [],
   "departure": "Bien Hoa / Ho Chi Minh City"
