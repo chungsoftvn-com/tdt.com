@@ -1,7 +1,7 @@
 ---
 /**
- * SupportSidebar — sidebar "Hỗ trợ" bám mép TRÁI màn hình (đại diện = icon điện thoại).
- * Bấm vào tab thì panel trượt ra, liệt kê các số liên hệ.
+ * SupportSidebar — nút liên hệ nổi ở mép PHẢI (chỉ 1 icon điện thoại, không chữ),
+ * nằm NGAY TRÊN nút bản đồ; bấm vào thì panel trượt ra từ phải, liệt kê các số liên hệ.
  *
  * Dữ liệu: `content/vi/support.json` → `items_text`, mỗi dòng:
  *     Chức danh | Tên | Số điện thoại
@@ -37,23 +37,25 @@ const items = String(t.items_text || '')
 
 const title = t.title || (lang === 'vi' ? 'Hỗ trợ trực tuyến' : 'Live support');
 const note = t.note || '';
+const fabTitle = lang === 'vi' ? 'Gọi tư vấn / đặt tour' : 'Call for advice / booking';
 ---
 
 {
   items.length > 0 && (
     <div class="dv-support" data-support>
+      {/* Nút nổi: CHỈ icon điện thoại, đặt trên nút bản đồ (--dv-support-bottom) */}
       <button
         type="button"
-        class="dv-support-tab"
+        class="dv-support-fab"
         data-support-toggle
         aria-expanded="false"
         aria-controls="dv-support-panel"
-        title={title}
+        title={fabTitle}
+        aria-label={fabTitle}
       >
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true">
           <path d="M6.6 10.8c1.2 2.4 3.2 4.4 5.6 5.6l2-2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.5 20 4 13.5 4 5.5c0-.6.4-1 1-1h3.2c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2 1.8Z" />
         </svg>
-        <span class="dv-support-tab-text">{title}</span>
       </button>
 
       <aside id="dv-support-panel" class="dv-support-panel" data-support-panel aria-hidden="true">
@@ -93,48 +95,37 @@ const note = t.note || '';
 }
 
 <style is:global>
-  /* Sidebar hỗ trợ — dùng token của theme nên hợp cả layout1 và layout2. */
-  .dv-support {
+  /* Nút liên hệ: mép PHẢI, nằm trên cụm nút nổi (mặc định 8.05rem ≈ ngay trên nút bản đồ). */
+  .dv-support-fab {
     position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 60;
-  }
-  .dv-support-tab {
+    right: 0.75rem;
+    bottom: var(--dv-support-bottom, 8.05rem);
+    z-index: 70;
     display: flex;
     align-items: center;
-    gap: 0.4rem;
-    writing-mode: vertical-rl;
-    padding: 0.7rem 0.45rem;
-    border-radius: 0 8px 8px 0;
-    background: var(--color-sea);
+    justify-content: center;
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    background: var(--color-sea-deep, #1c6b1f);
     color: #fff;
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
     box-shadow: var(--shadow-lift-2);
+    transition: transform 0.2s ease;
   }
-  .dv-support-tab svg {
-    writing-mode: horizontal-tb;
-    transform: rotate(90deg);
-  }
-  .dv-support-tab-text {
-    white-space: nowrap;
-  }
-  .dv-support-tab:hover {
-    background: var(--color-sea-deep);
+  .dv-support-fab:hover {
+    transform: scale(1.06);
   }
   .dv-support-panel {
     position: fixed;
-    left: 0;
+    right: 0;
     top: 50%;
-    transform: translate(-105%, -50%);
+    transform: translate(105%, -50%);
+    z-index: 70;
     width: min(19rem, 88vw);
     max-height: 70vh;
     overflow-y: auto;
     background: #fff;
-    border-radius: 0 12px 12px 0;
+    border-radius: 12px 0 0 12px;
     box-shadow: var(--shadow-lift-2);
     padding: 0.9rem 1rem 1rem;
     transition: transform 0.28s ease;
@@ -150,16 +141,16 @@ const note = t.note || '';
     border-bottom: 1px solid rgb(0 0 0 / 0.08);
     padding-bottom: 0.5rem;
     margin-bottom: 0.6rem;
-    color: var(--color-sea-deep);
+    color: var(--color-sea-deep, #1c6b1f);
   }
   .dv-support-close {
     font-size: 1.2rem;
     line-height: 1;
-    color: var(--color-ink-soft);
+    color: var(--color-ink-soft, #6d6d6d);
   }
   .dv-support-note {
     font-size: 0.78rem;
-    color: var(--color-ink-soft);
+    color: var(--color-ink-soft, #6d6d6d);
     margin-bottom: 0.6rem;
   }
   .dv-support-list {
@@ -167,7 +158,7 @@ const note = t.note || '';
     gap: 0.55rem;
   }
   .dv-support-list li {
-    border-left: 3px solid var(--color-sea);
+    border-left: 3px solid var(--color-sea, #27822a);
     padding: 0.15rem 0 0.15rem 0.55rem;
   }
   .dv-support-role {
@@ -175,13 +166,13 @@ const note = t.note || '';
     font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    color: var(--color-ink-soft);
+    color: var(--color-ink-soft, #6d6d6d);
   }
   .dv-support-name {
     display: block;
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--color-ink);
+    color: var(--color-ink, #333);
   }
   .dv-support-actions {
     display: flex;

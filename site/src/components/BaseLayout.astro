@@ -54,6 +54,12 @@ const {
 } = Astro.props;
 
 const t = getContent(lang, 'common');
+
+/** Nút bản đồ: dùng đúng link Google Maps admin dán ở trang Chỉ đường (map_url). */
+const chiDuong = getContent(lang, 'chi-duong') as Record<string, string>;
+const mapHref =
+  String(chiDuong?.map_url || '').trim() ||
+  `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(t.address || '')}`;
 const pathname = Astro.url.pathname;
 const seo = pageSeo(lang, pathname);
 
@@ -165,14 +171,14 @@ const graph = [travelAgencyLd(lang), websiteLd(lang), breadcrumbLd(crumbs), ...j
     </main>
     <Footer lang={lang} />
 
-    <!-- Sidebar hỗ trợ (bám mép trái, bấm icon điện thoại để trượt ra) -->
+    <!-- Sidebar hỗ trợ: nút icon duy nhất ở mép phải, nằm TRÊN nút bản đồ -->
     <SupportSidebar lang={lang} />
 
     <!-- Nút nổi: chỉ đường Google Maps + chat Zalo (thói quen người dùng du lịch) -->
     <div class="dv-sticky-actions">
       <a
         class="dv-fab-maps"
-        href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(t.address || '')}`}
+        href={mapHref}
         target="_blank"
         rel="noopener noreferrer"
         title={t.address_label}

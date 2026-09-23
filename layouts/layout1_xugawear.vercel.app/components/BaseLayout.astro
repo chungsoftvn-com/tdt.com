@@ -146,7 +146,7 @@ const graph = [travelAgencyLd(lang), websiteLd(lang), breadcrumbLd(crumbs), ...j
       set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })}
     />
   </head>
-  <body class="flex min-h-dvh flex-col bg-sand text-ink antialiased">
+  <body class="flex min-h-dvh flex-col bg-sand text-ink antialiased" style="--dv-support-bottom: 1.25rem">
     <a
       href="#main"
       class="sr-only z-[100] rounded-full bg-ink px-4 py-2 text-sand focus:not-sr-only focus:absolute focus:left-4 focus:top-4"

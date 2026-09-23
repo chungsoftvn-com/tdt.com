@@ -8,8 +8,35 @@
  * Trang này hiển thị dạng văn bản cho dễ sửa: mỗi dòng
  *     <slug> | <title> | <description>
  * rồi chuyển ngược lại JSON khi lưu (giữ nguyên các key `_comment`).
+ *
+ * Ô soạn thảo được ĐỔ SẴN dữ liệu SEO hiện có của website (đọc `content/vi/seo.json`
+ * lúc build) — kể cả khi chưa kết nối được worker thì vẫn thấy đủ dữ liệu để sửa.
  */
+import fs from 'node:fs';
+import path from 'node:path';
 import AdminLayout from '@/components/AdminLayout.astro';
+
+/**
+ * Đọc 1 file JSON trong repo lúc BUILD. Thử vài gốc vì lúc build cwd có thể là
+ * `site/` (thường gặp) hoặc gốc repo — tránh trường hợp ô soạn thảo bị trống.
+ */
+function readRepoJson(rel: string) {
+  const roots = [
+    path.resolve(process.cwd(), '..'),
+    process.cwd(),
+    path.resolve(process.cwd(), '..', '..'),
+  ];
+  for (const root of roots) {
+    try {
+      const file = path.join(root, rel);
+      if (fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, 'utf8'));
+    } catch {
+      /* thử gốc kế tiếp */
+    }
+  }
+  return {};
+}
+const seoSeed = readRepoJson('content/vi/seo.json');
 ---
 
 <AdminLayout>
@@ -49,6 +76,9 @@ import AdminLayout from '@/components/AdminLayout.astro';
       </div>
     </div>
   </section>
+
+  <!-- Dữ liệu SEO hiện có của website, đổ sẵn vào ô soạn thảo -->
+  <script type="application/json" id="seo-seed" set:html={JSON.stringify(seoSeed)} />
 </AdminLayout>
 
 <script>
@@ -98,16 +128,26 @@ import AdminLayout from '@/components/AdminLayout.astro';
   async function load() {
     show(errEl, null);
     show(okEl, null);
-    if (statusEl) statusEl.textContent = 'Đang tải…';
+
+    // 1) Luôn hiện dữ liệu SEO hiện có của website (nhúng lúc build) — không bao giờ trống.
+    const seed = JSON.parse(document.getElementById('seo-seed')?.textContent || '{}');
+    const seedN = Object.keys(seed).filter((k) => !k.startsWith('_')).length;
+    if (textEl) textEl.value = toText(seed);
+    if (statusEl) statusEl.textContent = `${seedN} trang (dữ liệu hiện có của website).`;
+
+    // 2) Thử lấy bản mới nhất từ worker; nếu chưa có thì giữ bản ở bước 1.
     const r = await api('GET', '/pages/seo');
-    if (!r.data?.ok || !r.data.page) {
-      if (statusEl) statusEl.textContent = 'Không tải được dữ liệu SEO.';
-      show(errEl, describeSaveError(r));
+    if (r.data?.ok && r.data.page) {
+      const n = Object.keys(r.data.page).filter((k) => !k.startsWith('_')).length;
+      if (textEl) textEl.value = toText(r.data.page);
+      if (statusEl) statusEl.textContent = `${n} trang (bản mới nhất từ máy chủ).`;
       return;
     }
-    const n = Object.keys(r.data.page).filter((k) => !k.startsWith('_')).length;
-    if (statusEl) statusEl.textContent = `${n} trang có SEO riêng.`;
-    if (textEl) textEl.value = toText(r.data.page);
+    if (r.status === 401) {
+      show(errEl, 'Chưa đăng nhập — đang hiện bản SEO có sẵn trong website; đăng nhập rồi tải lại để lấy bản mới nhất.');
+    } else if (r.status !== 0 || !statusEl) {
+      show(errEl, 'Không lấy được bản mới nhất từ máy chủ — đang hiện bản có sẵn trong website.');
+    }
   }
 
   saveBtn?.addEventListener('click', async () => {

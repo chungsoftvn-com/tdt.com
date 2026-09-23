@@ -8,8 +8,35 @@
  * không có 301 server-side).
  *
  * Trang này cho sửa dạng văn bản: mỗi dòng `đường-dẫn-cũ -> đích-mới`.
+ *
+ * Ô soạn thảo được ĐỔ SẴN danh sách chuyển hướng hiện có (đọc `site/legacy-redirects.json`
+ * lúc build) — kể cả khi chưa kết nối được worker thì vẫn thấy đủ dữ liệu để sửa.
  */
+import fs from 'node:fs';
+import path from 'node:path';
 import AdminLayout from '@/components/AdminLayout.astro';
+
+/**
+ * Đọc 1 file JSON trong repo lúc BUILD. Thử vài gốc vì lúc build cwd có thể là
+ * `site/` (thường gặp) hoặc gốc repo — tránh trường hợp ô soạn thảo bị trống.
+ */
+function readRepoJson(rel: string) {
+  const roots = [
+    path.resolve(process.cwd(), '..'),
+    process.cwd(),
+    path.resolve(process.cwd(), '..', '..'),
+  ];
+  for (const root of roots) {
+    try {
+      const file = path.join(root, rel);
+      if (fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, 'utf8'));
+    } catch {
+      /* thử gốc kế tiếp */
+    }
+  }
+  return {};
+}
+const redirectSeed = readRepoJson('site/legacy-redirects.json');
 ---
 
 <AdminLayout>
@@ -51,6 +78,9 @@ import AdminLayout from '@/components/AdminLayout.astro';
       </div>
     </div>
   </section>
+
+  <!-- Danh sách chuyển hướng hiện có của website, đổ sẵn vào ô soạn thảo -->
+  <script type="application/json" id="rd-seed" set:html={JSON.stringify(redirectSeed)} />
 </AdminLayout>
 
 <script>
@@ -99,16 +129,26 @@ import AdminLayout from '@/components/AdminLayout.astro';
   async function load() {
     show(errEl, null);
     show(okEl, null);
-    if (statusEl) statusEl.textContent = 'Đang tải…';
+
+    // 1) Luôn hiện danh sách hiện có của website (nhúng lúc build) — không bao giờ trống.
+    const seed = JSON.parse(document.getElementById('rd-seed')?.textContent || '{}');
+    const seedN = Object.keys(seed).filter((k) => !k.startsWith('_')).length;
+    if (textEl) textEl.value = toText(seed);
+    if (statusEl) statusEl.textContent = `${seedN} quy tắc (dữ liệu hiện có của website).`;
+
+    // 2) Thử lấy bản mới nhất từ worker; nếu chưa có thì giữ bản ở bước 1.
     const r = await api('GET', '/pages/redirects');
-    if (!r.data?.ok || !r.data.page) {
-      if (statusEl) statusEl.textContent = 'Không tải được danh sách chuyển hướng.';
-      show(errEl, describeSaveError(r));
+    if (r.data?.ok && r.data.page) {
+      const n = Object.keys(r.data.page).filter((k) => !k.startsWith('_')).length;
+      if (textEl) textEl.value = toText(r.data.page);
+      if (statusEl) statusEl.textContent = `${n} quy tắc (bản mới nhất từ máy chủ).`;
       return;
     }
-    const n = Object.keys(r.data.page).filter((k) => !k.startsWith('_')).length;
-    if (statusEl) statusEl.textContent = `${n} quy tắc chuyển hướng.`;
-    if (textEl) textEl.value = toText(r.data.page);
+    if (r.status === 401) {
+      show(errEl, 'Chưa đăng nhập — đang hiện danh sách có sẵn trong website; đăng nhập rồi tải lại để lấy bản mới nhất.');
+    } else if (r.status !== 0 || !statusEl) {
+      show(errEl, 'Không lấy được bản mới nhất từ máy chủ — đang hiện danh sách có sẵn trong website.');
+    }
   }
 
   saveBtn?.addEventListener('click', async () => {
