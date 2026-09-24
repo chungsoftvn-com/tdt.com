@@ -61,6 +61,11 @@
       "enabled": true
     },
     {
+      "id": "blk-hot",
+      "type": "hot",
+      "enabled": true
+    },
+    {
       "id": "blk-services",
       "type": "services",
       "enabled": true
@@ -73,11 +78,6 @@
     {
       "id": "blk-stats",
       "type": "stats",
-      "enabled": true
-    },
-    {
-      "id": "blk-hot",
-      "type": "hot",
       "enabled": true
     },
     {
