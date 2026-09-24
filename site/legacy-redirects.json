@@ -1,7 +1,6 @@
 {
   "_comment": "URL CŨ của todaytourist.com (site ASP.NET/CMS trước) -> đích MỚI. GitHub Pages không có 301 server-side nên site/scripts/build-legacy-redirects.mjs sinh 1 trang tĩnh tại mỗi path cũ: trả HTTP 200, có canonical + meta refresh + đếm giờ JS rồi location.replace() sang đích. Nguồn danh sách: Wayback CDX (86 path), dev/statics_old (97 URL), dev/google.manual.copy (SERP Google thật) — xem lịch sử commit để biết cách lập. Đích luôn là URL canonical '/vi/...' (xem docstring script).",
   "_comment_targets": "Chọn đích: trang tương đương nếu site mới ĐÃ có; nếu bài/nội dung cũ không còn (đã xoá) thì về trang danh sách gần nhất (/vi/tin-tuc/ cho bài viết, /vi/tours/ cho tour/khu vực). KHÔNG trỏ vào URL không tồn tại.",
-
   "/10-khu-cho-am-thuc-o-madrid": "/vi/tin-tuc/",
   "/benh-vien-da-khoa-dong-nai": "/vi/y-kien-khach-hang/",
   "/cam-on-ve-chuyen-di-tuyet-voi": "/vi/tin-tuc/",
@@ -69,5 +68,7 @@
   "/tours/tour-nuoc-ngoai": "/vi/tours/",
   "/tours/tour-trong-nuoc": "/vi/tours/",
   "/truong-th-thcs-thpt-tan-hoa": "/vi/y-kien-khach-hang/",
-  "/vien-ngoc-vung-danube": "/vi/tin-tuc/"
+  "/vien-ngoc-vung-danube": "/vi/tin-tuc/",
+  "/dich-vu-cho-thue-xe-gia-tot-tai-dong-nai-tp-hcm/": "/vi/cho-thue-xe/",
+  "/vi/dich-vu-cho-thue-xe-gia-tot-tai-dong-nai-tp-hcm/": "/vi/cho-thue-xe/"
 }
