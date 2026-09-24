@@ -56,13 +56,18 @@
   "cta_button": "Liên hệ ngay",
   "home_blocks": [
     {
-      "id": "blk-about",
-      "type": "about",
+      "id": "blk-hero",
+      "type": "hero",
       "enabled": true
     },
     {
       "id": "blk-services",
       "type": "services",
+      "enabled": true
+    },
+    {
+      "id": "blk-about",
+      "type": "about",
       "enabled": true
     },
     {
@@ -88,11 +93,6 @@
     {
       "id": "blk-cta",
       "type": "cta",
-      "enabled": true
-    },
-    {
-      "id": "blk-hero",
-      "type": "hero",
       "enabled": true
     }
   ],
