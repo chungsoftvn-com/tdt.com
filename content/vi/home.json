@@ -1,7 +1,7 @@
 {
-  "hero_kicker": "TodayTourist · Du lịch chuyên nghiệp",
-  "hero_title": "Cùng bạn đi khắp năm châu",
-  "hero_text": "Công ty du lịch chuyên nghiệp tại Đồng Nai, hơn 15 năm kinh nghiệm tổ chức du lịch trong nước & quốc tế, teambuilding – gala – sự kiện và tour thiết kế theo yêu cầu.",
+  "hero_kicker": "Cùng bạn đi khắp năm châu",
+  "hero_title": "Công ty du lịch Đồng Nai – Tour trong nước, quốc tế & Teambuilding",
+  "hero_text": "Hơn 15 năm tổ chức tour trọn gói, teambuilding – gala dinner cho khách lẻ, gia đình, doanh nghiệp, trường học, cơ quan và đoàn thể. Khởi hành từ Biên Hòa – TP.HCM, thiết kế chương trình theo yêu cầu, báo giá trong ngày.",
   "hero_cta_primary": "Khám phá tour",
   "hero_cta_secondary": "Đặt tour ngay",
   "stats_years": "15+",
@@ -56,11 +56,6 @@
   "cta_button": "Liên hệ ngay",
   "home_blocks": [
     {
-      "id": "blk-hero",
-      "type": "hero",
-      "enabled": true
-    },
-    {
       "id": "blk-about",
       "type": "about",
       "enabled": true
@@ -93,6 +88,11 @@
     {
       "id": "blk-cta",
       "type": "cta",
+      "enabled": true
+    },
+    {
+      "id": "blk-hero",
+      "type": "hero",
       "enabled": true
     }
   ],
