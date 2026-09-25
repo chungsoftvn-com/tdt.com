@@ -2,27 +2,27 @@
   "_comment": "SEO metadata theo từng trang (title/description hiển thị trên Google). Key = slug trên URL; 'home' áp cho cả '/' và '/vi/'. Trang chi tiết (tour, tin tức) tự sinh title/description từ chính nội dung của bài nên KHÔNG khai báo ở đây. File này được biên soạn thủ công cho cả 2 ngôn ngữ (xem MANUAL_EN trong site/scripts/translate.py) nên sửa content/en/seo.json trực tiếp.",
   "home": {
     "title": "Công ty du lịch Đồng Nai – Tour trọn gói từ Biên Hòa · TodayTourist",
-    "description": "TodayTourist – công ty du lịch tại Biên Hòa, Đồng Nai: tour trong nước, nước ngoài, teambuilding, thuê xe, vé máy bay. Hotline 0913.78.76.47, báo giá trong ngày."
+    "description": "TodayTourist – công ty du lịch TP. Đồng Nai, đón khách khu vực Biên Hòa: tour trọn gói, teambuilding, gala dinner cho doanh nghiệp, trường học, gia đình. Hotline 0913.78.76.47."
   },
   "about": {
-    "title": "Giới thiệu TodayTourist – Công ty du lịch Biên Hòa, Đồng Nai",
-    "description": "Hơn 15 năm tổ chức tour, teambuilding, gala dinner cho khách lẻ, gia đình, trường học và doanh nghiệp tại Đồng Nai. Tìm hiểu đội ngũ và năng lực TodayTourist."
+    "title": "Giới thiệu TodayTourist – Công ty du lịch Đồng Nai",
+    "description": "Hơn 15 năm tổ chức tour, teambuilding, gala dinner cho khách lẻ, gia đình, trường học và doanh nghiệp tại TP. Đồng Nai. Tìm hiểu đội ngũ và năng lực TodayTourist."
   },
   "tours": {
-    "title": "Tour du lịch từ Biên Hòa, Đồng Nai – Trong nước & quốc tế",
-    "description": "Tour khởi hành từ Biên Hòa – TP.HCM: Phan Thiết, Đà Lạt, Côn Đảo, Nha Trang, miền Tây, Thái Lan, Hàn Quốc, Nhật Bản. Giá rõ ràng, đưa đón tận nơi."
+    "title": "Tour du lịch từ Đồng Nai – Tour trọn gói trong nước & quốc tế",
+    "description": "Tour khởi hành từ TP. Đồng Nai – TP.HCM, đón tận nơi khu vực Biên Hòa: Phan Thiết, Đà Lạt, Côn Đảo, Nha Trang, miền Tây. Giá rõ ràng, báo giá trong ngày."
   },
   "contact": {
-    "title": "Liên hệ TodayTourist – Công ty du lịch tại Biên Hòa, Đồng Nai",
-    "description": "Số 80 Đặng Nguyên, Khu phố 3, P. Long Bình, TP. Đồng Nai. Hotline 0913.78.76.47, Zalo 0902.898.726. Tư vấn tour, báo giá trong ngày."
+    "title": "Liên hệ TodayTourist – Công ty du lịch tại TP. Đồng Nai",
+    "description": "Số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai. Hotline 0913.78.76.47, Zalo 0902.898.726. Tư vấn tour, báo giá trong ngày."
   },
   "ve-may-bay": {
-    "title": "Vé máy bay giá tốt tại Biên Hòa, Đồng Nai · TodayTourist",
-    "description": "Đại lý vé máy bay nội địa và quốc tế tại Biên Hòa. So sánh giá, giờ bay, hỗ trợ hành lý, đổi vé, hoàn vé nhanh. Gọi 0913.78.76.47 để được giữ chỗ."
+    "title": "Vé máy bay giá tốt tại Đồng Nai · TodayTourist",
+    "description": "Đại lý vé máy bay nội địa và quốc tế tại TP. Đồng Nai, khu vực Biên Hòa. So sánh giá, giờ bay, hỗ trợ hành lý, đổi vé, hoàn vé nhanh. Gọi 0913.78.76.47 để giữ chỗ."
   },
   "cho-thue-xe": {
-    "title": "Cho thuê xe du lịch Biên Hòa, Đồng Nai 4–45 chỗ · TodayTourist",
-    "description": "Cho thuê xe 4, 7, 16, 29, 45 chỗ và giường nằm tại Biên Hòa, Đồng Nai đi TP.HCM và các tỉnh: du lịch, công tác, đưa đón sân bay. Xe đời mới, báo giá theo lộ trình."
+    "title": "Cho thuê xe du lịch Đồng Nai 4–45 chỗ · TodayTourist",
+    "description": "Cho thuê xe 4, 7, 16, 29, 45 chỗ và giường nằm tại TP. Đồng Nai, đón khu vực Biên Hòa đi TP.HCM và các tỉnh: du lịch, công tác, đưa đón sân bay. Báo giá theo lộ trình."
   },
   "y-kien-khach-hang": {
     "title": "Ý kiến khách hàng về TodayTourist – Hình ảnh đoàn thực tế",
@@ -30,7 +30,7 @@
   },
   "doi-tac": {
     "title": "Đối tác và khách hàng doanh nghiệp của TodayTourist",
-    "description": "Các doanh nghiệp, trường học, cơ quan tại Đồng Nai đã tin chọn TodayTourist tổ chức tour, teambuilding và sự kiện trong hơn 15 năm qua."
+    "description": "Các doanh nghiệp, trường học, cơ quan tại TP. Đồng Nai đã tin chọn TodayTourist tổ chức tour, teambuilding và sự kiện trong hơn 15 năm qua."
   },
   "dat-tour": {
     "title": "Đặt tour du lịch trực tuyến – Báo giá trong ngày · TodayTourist",
@@ -45,11 +45,11 @@
     "description": "Hình ảnh, nhật ký các đoàn khách, teambuilding và sự kiện do TodayTourist tổ chức, cùng kinh nghiệm du lịch hữu ích cho chuyến đi của bạn."
   },
   "tuyen-dung": {
-    "title": "Tuyển dụng TodayTourist – Việc làm du lịch tại Biên Hòa",
-    "description": "Cơ hội làm việc trong ngành du lịch lữ hành tại TodayTourist – môi trường trẻ, năng động tại Biên Hòa, Đồng Nai. Xem vị trí đang tuyển."
+    "title": "Tuyển dụng TodayTourist – Việc làm du lịch tại Đồng Nai",
+    "description": "Cơ hội làm việc trong ngành du lịch lữ hành tại TodayTourist – môi trường trẻ, năng động tại TP. Đồng Nai. Xem vị trí đang tuyển."
   },
   "chi-duong": {
-    "title": "Chỉ đường đến văn phòng TodayTourist – Long Bình, Đồng Nai",
-    "description": "Đường đến văn phòng TodayTourist tại số 80 Đặng Nguyên, Khu phố 3, P. Long Bình, TP. Đồng Nai. Xem bản đồ và gọi 0913.78.76.47 khi cần hỗ trợ."
+    "title": "Chỉ đường đến văn phòng TodayTourist – Long Bình, TP. Đồng Nai",
+    "description": "Đường đến văn phòng TodayTourist tại số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai. Xem bản đồ và gọi 0913.78.76.47 khi cần hỗ trợ."
   }
 }
