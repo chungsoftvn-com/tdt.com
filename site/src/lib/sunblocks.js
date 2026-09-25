@@ -70,6 +70,77 @@ function decodeEntities(s) {
 /** Chỉ cho phép inline tag an toàn; bỏ tag/attr khác (chỉ admin dùng, nhưng chặn chắc). */
 const ALLOWED_INLINE = new Set(['B', 'STRONG', 'I', 'EM', 'U', 'A', 'BR', 'SPAN']);
 
+/** Thuộc tính style được phép giữ lại trên chữ INLINE (đậm/màu/cỡ chữ...). */
+const INLINE_STYLE_PROPS = new Set([
+  'color',
+  'background-color',
+  'font-size',
+  'font-weight',
+  'font-style',
+  'font-family',
+  'text-decoration',
+]);
+
+/** Thuộc tính style được phép trong KHỐI HTML giàu (bảng, khung nổi bật...). */
+const BLOCK_STYLE_PROPS = new Set([
+  ...INLINE_STYLE_PROPS,
+  'background',
+  'text-align',
+  'line-height',
+  'letter-spacing',
+  'vertical-align',
+  'white-space',
+  'list-style-type',
+  'width',
+  'max-width',
+  'min-width',
+  'height',
+  'margin',
+  'margin-top',
+  'margin-right',
+  'margin-bottom',
+  'margin-left',
+  'padding',
+  'padding-top',
+  'padding-right',
+  'padding-bottom',
+  'padding-left',
+  'border',
+  'border-top',
+  'border-right',
+  'border-bottom',
+  'border-left',
+  'border-color',
+  'border-width',
+  'border-style',
+  'border-radius',
+  'border-collapse',
+  'border-spacing',
+  'table-layout',
+]);
+
+/**
+ * Lọc 1 chuỗi style: chỉ giữ thuộc tính trong `allowed` và bỏ giá trị nguy hiểm
+ * (url(...), expression(...), javascript:) — tránh admin dán HTML lạ làm hỏng trang.
+ */
+function cleanStyle(value, allowed) {
+  const out = [];
+  String(value || '')
+    .split(';')
+    .forEach((decl) => {
+      const i = decl.indexOf(':');
+      if (i < 0) return;
+      const prop = decl.slice(0, i).trim().toLowerCase();
+      const val = decl.slice(i + 1).trim();
+      if (!prop || !val || !allowed.has(prop)) return;
+      if (/url\s*\(|expression\s*\(|javascript:|\\/i.test(val)) return;
+      out.push(`${prop}:${val}`);
+    });
+  return out.join(';');
+}
+
+const cleanInlineStyle = (v) => cleanStyle(v, INLINE_STYLE_PROPS);
+
 function sanitizeInline(html) {
   if (!html) return '';
   const doc = new DOMParser().parseFromString(html, 'text/html');
@@ -92,13 +163,111 @@ function sanitizeInline(html) {
           }
         }
       } else {
+        // Giữ màu chữ / cỡ chữ admin chọn (nút fontColor, fontSize trong thanh công cụ).
+        const style = cleanInlineStyle(node.getAttribute('style'));
         [...node.attributes].forEach((a) => node.removeAttribute(a.name));
+        if (style) node.setAttribute('style', style);
       }
       walk(node);
     });
   };
   walk(doc.body);
   return decodeEntities(doc.body.innerHTML);
+}
+
+/* ---------------- sanitize khối HTML giàu (bảng, khung, video) ---------------- */
+
+/** Tag được giữ trong block `{type:'html'}` — bảng, tiêu đề, khung, video nhúng. */
+const RICH_ALLOWED = new Set([
+  'P', 'DIV', 'SPAN', 'BR', 'HR',
+  'B', 'STRONG', 'I', 'EM', 'U', 'S', 'STRIKE', 'SUB', 'SUP', 'MARK', 'SMALL',
+  'H1', 'H2', 'H3', 'H4', 'H5', 'H6',
+  'UL', 'OL', 'LI', 'DL', 'DT', 'DD',
+  'BLOCKQUOTE', 'PRE', 'CODE',
+  'A', 'IMG', 'FIGURE', 'FIGCAPTION',
+  'TABLE', 'THEAD', 'TBODY', 'TFOOT', 'TR', 'TD', 'TH', 'CAPTION', 'COLGROUP', 'COL',
+  'IFRAME', 'VIDEO', 'SOURCE',
+]);
+
+/** Thuộc tính được giữ theo từng tag (ngoài `style` đã lọc riêng). */
+const RICH_ATTRS = {
+  A: ['href', 'target', 'rel'],
+  IMG: ['src', 'alt', 'width', 'height', 'loading'],
+  IFRAME: ['src', 'width', 'height', 'allow', 'allowfullscreen', 'frameborder', 'loading', 'title'],
+  VIDEO: ['src', 'width', 'height', 'controls', 'poster', 'preload', 'playsinline', 'muted', 'loop'],
+  SOURCE: ['src', 'type'],
+  TD: ['colspan', 'rowspan', 'align', 'valign', 'width', 'height'],
+  TH: ['colspan', 'rowspan', 'align', 'valign', 'width', 'height', 'scope'],
+  TABLE: ['width', 'align'],
+  OL: ['type', 'start'],
+  COL: ['span', 'width'],
+  COLGROUP: ['span', 'width'],
+};
+
+/** URL an toàn: http(s), mailto, tel, đường dẫn nội bộ, ảnh data URL. */
+function safeUrl(value, allowData) {
+  const v = String(value || '').trim();
+  if (!v) return '';
+  if (/^\s*javascript:/i.test(v)) return '';
+  if (/^(https?:|mailto:|tel:)/i.test(v)) return v;
+  if (allowData && /^data:image\//i.test(v)) return v;
+  if (/^(\/|#|\.)/.test(v)) return v; // '/content/...', '#anchor', './x.png'
+  if (!/^[a-z][a-z0-9+.-]*:/i.test(v)) return v; // tên file tương đối (vd 'pasted-1.webp')
+  return '';
+}
+
+/**
+ * Lọc HTML giàu trước khi lưu: bảng, màu chữ, khung... được giữ; tag/attr lạ bị bỏ
+ * (bỏ cả nội dung với script/style). Chỉ admin soạn nhưng vẫn chặn cho chắc.
+ */
+export function sanitizeRichHtml(html) {
+  if (!html) return '';
+  const doc = new DOMParser().parseFromString(`<div id="tt-rich-root">${html}</div>`, 'text/html');
+  const root = doc.getElementById('tt-rich-root');
+  if (!root) return '';
+
+  const sanitizeNode = (node) => {
+    const tag = node.tagName.toUpperCase();
+    if (!RICH_ALLOWED.has(tag)) {
+      if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'LINK' || tag === 'META' || tag === 'OBJECT' || tag === 'EMBED') {
+        node.remove();
+        return;
+      }
+      const kids = [...node.childNodes];
+      node.replaceWith(...kids);
+      kids.forEach((k) => {
+        if (k.nodeType === 1) sanitizeNode(k);
+      });
+      return;
+    }
+    const allowed = RICH_ATTRS[tag] || [];
+    [...node.attributes].forEach((a) => {
+      const name = a.name.toLowerCase();
+      if (name === 'style') {
+        const style = cleanStyle(a.value, BLOCK_STYLE_PROPS);
+        if (style) node.setAttribute('style', style);
+        else node.removeAttribute(a.name);
+        return;
+      }
+      if (!allowed.includes(name)) {
+        node.removeAttribute(a.name);
+        return;
+      }
+      if (name === 'src' || name === 'href' || name === 'poster') {
+        const url = safeUrl(a.value, tag === 'IMG');
+        if (url) node.setAttribute(name, url);
+        else node.removeAttribute(a.name);
+      }
+    });
+    if (tag === 'A' && node.getAttribute('href') && !/^#/.test(node.getAttribute('href'))) {
+      node.setAttribute('target', '_blank');
+      node.setAttribute('rel', 'noopener nofollow');
+    }
+    [...node.children].forEach(sanitizeNode);
+  };
+
+  [...root.children].forEach(sanitizeNode);
+  return root.innerHTML;
 }
 
 /* ---------------- blocks -> HTML (loader) ---------------- */
@@ -121,6 +290,10 @@ export function blocksToHtml(blocks) {
         parts.push(
           `<${b.type}>${b.text && b.text.includes('<') ? sanitizeInline(b.text) : esc(b.text)}</${b.type}>`,
         );
+        break;
+      case 'html':
+        // Khối HTML giàu (bảng, khung, video...) — giữ nguyên để sửa tiếp trong editor.
+        if (b.html) parts.push(b.html);
         break;
       case 'p':
         parts.push(
@@ -183,6 +356,11 @@ function walk(node, out) {
     return;
   }
   // wrapper khác (DIV, FIGURE, SECTION, BLOCKQUOTE...) -> đệ quy
+  if (needsRichBlock(node)) {
+    const html = sanitizeRichHtml(node.outerHTML);
+    if (html) out.push({ type: 'html', html });
+    return;
+  }
   [...node.childNodes].forEach((c) => {
     if (c.nodeType === 1) walk(c, out);
     else if (c.nodeType === 3 && c.textContent.trim()) out.push({ type: 'p', text: c.textContent.trim() });
@@ -199,18 +377,23 @@ export function htmlToBlocks(html) {
   return out;
 }
 
+/**
+ * Phần tử cần giữ dạng HTML giàu thay vì quy về block chữ?
+ *  - TABLE và mọi thứ chứa bảng (bảng, khung, video nhúng, blockquote, code...) đều
+ *    KHÔNG biểu diễn được bằng block {p,h2,h3,img,list} nên nếu ép về chữ sẽ mất
+ *    cấu trúc (đã từng bị: bảng thành 1 loạt đoạn văn rời).
+ */
+const RICH_KEEP = new Set(['TABLE', 'BLOCKQUOTE', 'PRE', 'IFRAME', 'VIDEO', 'FIGURE', 'DL']);
+
+function needsRichBlock(node) {
+  const tag = node.tagName ? node.tagName.toUpperCase() : '';
+  if (RICH_KEEP.has(tag)) return true;
+  return !!node.querySelector && !!node.querySelector('table, iframe, video');
+}
+
 /* ---------------- SunEditor instance ---------------- */
 
 let editor = null;
-
-const TOOLBAR = [
-  ['undo', 'redo'],
-  ['formatBlock'],
-  ['bold', 'underline', 'italic'],
-  ['list'],
-  ['link', 'image'],
-  ['removeFormat'],
-];
 
 // Toolbar cho từng field trong "Quản lý Trang": không có ảnh (tránh data URL
 // phình to file JSON — worker không xử lý ảnh cho pages).
@@ -245,8 +428,12 @@ export function createRichEditor(rootId, initialHtml, opts) {
 
 /* ---------------- Full-document editor (trang "Liên hệ 2") ---------------- */
 
-// Toolbar đầy đủ như chế độ soạn tài liệu của SunEditor
-const DOC_TOOLBAR = [
+/**
+ * Toolbar đầy đủ như chế độ soạn tài liệu của SunEditor.
+ * DÙNG CHUNG cho mọi editor "nội dung phong phú": ô soạn thảo của Trang (vd Trang Tìm tour)
+ * và ô "Nội dung phong phú" của Tour/Tin tức — để admin có cùng bộ nút (màu chữ, bảng...).
+ */
+const RICH_TOOLBAR = [
   ['undo', 'redo'],
   ['font', 'fontSize', 'formatBlock'],
   ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript'],
@@ -260,6 +447,64 @@ const DOC_TOOLBAR = [
   ['print', 'preview', 'save'],
 ];
 
+/** Plugin dùng cho editor nội dung phong phú (khớp RICH_TOOLBAR). */
+const RICH_PLUGINS = [
+  blockquote, align, font, fontSize, fontColor, hiliteColor, horizontalRule,
+  list, table, formatBlock, lineHeight, textStyle, link, image, video,
+];
+
+const RICH_FORMATS = ['p', 'div', 'h2', 'h3', 'h4', 'blockquote', 'pre'];
+
+/**
+ * CSS dùng chung cho editor nội dung phong phú: nền vàng nhạt + kiểu Heading 3
+ * (xanh thương hiệu, lớn hơn, kẻ mảnh bên dưới) để admin thấy đúng như ngoài trang.
+ * Tiêm 1 lần cho cả trang (nhiều editor trên cùng trang vẫn chỉ có 1 thẻ style).
+ */
+function injectRichEditorCss() {
+  if (typeof document === 'undefined' || document.getElementById('tt-rich-editor-css')) return;
+  const style = document.createElement('style');
+  style.id = 'tt-rich-editor-css';
+  style.textContent = `
+    /* Vùng soạn thảo nền vàng nhạt để dễ nhận biết ô "Nội dung phong phú". */
+    .sun-editor.tt-rich-editor {
+      background: #fffdf2;
+      border: 1px solid #f0e3b8;
+      border-radius: 0.9rem;
+      overflow: hidden;
+    }
+    .sun-editor.tt-rich-editor .se-container,
+    .sun-editor.tt-rich-editor .se-wrapper-inner,
+    .sun-editor.tt-rich-editor .se-wrapper {
+      background: #fffdf2;
+    }
+    /* Heading 3 cài sẵn kiểu: chữ xanh thương hiệu + lớn hơn + kẻ mảnh bên dưới,
+       hiển thị như 1 khung nền vàng nhạt cho nổi bật (khớp trang ngoài). */
+    .sun-editor.tt-rich-editor .se-wrapper-inner h3 {
+      font-family: var(--font-display, inherit);
+      font-size: 1.32rem !important;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #1c6b1f !important;
+      background: #fdf6d3;
+      border-bottom: 1px solid rgba(28, 107, 31, 0.35);
+      border-radius: 6px 6px 0 0;
+      padding: 0.5rem 0.75rem;
+      margin: 1.5rem 0 0.75rem;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+/**
+ * SunEditor tạo DOM trong phần tử ANH EM có id `suneditor_<id gốc>` (container gốc
+ * ở lại rỗng) → phải gắn class vào phần tử được tạo đó thì CSS mới áp dụng.
+ */
+function tagEditorShell(rootId) {
+  if (typeof document === 'undefined') return;
+  const shell = document.getElementById(`suneditor_${rootId}`);
+  if (shell) shell.classList.add('tt-rich-editor');
+}
+
 /**
  * Tạo SunEditor chế độ document (nhiều button/option) cho trang có `fullEditor`.
  * Ảnh: onImageUpload nén WebP -> data URL preview; khi lưu collectFullHtmlImages
@@ -269,14 +514,11 @@ export function createFullEditor(rootId, initialHtml, opts) {
   const root = document.getElementById(rootId);
   if (!root) return null;
   const ed = suneditor.create(root, {
-    plugins: [
-      blockquote, align, font, fontSize, fontColor, hiliteColor, horizontalRule,
-      list, table, formatBlock, lineHeight, textStyle, link, image, video,
-    ],
+    plugins: RICH_PLUGINS,
     height: (opts && opts.height) || '520px',
     defaultTag: 'p',
-    formats: ['p', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'blockquote', 'pre'],
-    buttonList: DOC_TOOLBAR,
+    formats: RICH_FORMATS,
+    buttonList: RICH_TOOLBAR,
     placeholder: 'Soạn thảo nội dung như một tài liệu — đầy đủ định dạng, bảng, ảnh, video...',
     image: {
       accept: 'image/*',
@@ -293,8 +535,7 @@ export function createFullEditor(rootId, initialHtml, opts) {
   return ed;
 }
 
-/** Thu thập ảnh data: base64 trong HTML full editor -> {name,data} + thay bằng /content/vi/images/<name>. */
-export function collectFullHtmlImages(html) {
+/** Thu thập ảnh data: base64 trong HTML full editor -> {name,data} + thay bằng /content/vi/images/<name>. */export function collectFullHtmlImages(html) {
   let images = [];
   let pasted = 0;
   const out = String(html || '').replace(
@@ -339,13 +580,17 @@ export function createHtmlEditor(rootId, initialHtml, opts) {
 export function initSunEditor(rootId) {
   const root = document.getElementById(rootId);
   if (!root || editor) return editor;
+  injectRichEditorCss();
   editor = suneditor.create(root, {
-    plugins: [formatBlock, list, link, image],
+    // DÙNG CHUNG toolbar với ô soạn thảo của Trang (vd Trang Tìm tour): có màu chữ,
+    // tô nền, bảng, căn lề, blockquote... để 2 nơi soạn giống nhau.
+    plugins: RICH_PLUGINS,
     height: '460px',
     defaultTag: 'p',
-    formats: ['p', 'h2', 'h3'],
-    buttonList: TOOLBAR,
-    placeholder: 'Nhập nội dung — bôi đen để bôi đậm/nghiêng, chọn kiểu tiêu đề, kéo thả ảnh...',
+    formats: RICH_FORMATS,
+    buttonList: RICH_TOOLBAR,
+    placeholder:
+      'Nhập nội dung — bôi đen để định dạng, chọn Heading 3 để có khung nổi bật, kéo thả ảnh...',
     image: {
       accept: 'image/*',
       imageSizeOnlyPercentage: true,
@@ -359,6 +604,8 @@ export function initSunEditor(rootId) {
       return fileToDataUrl(file);
     },
   });
+  // SunEditor gắn DOM vào phần tử anh em `suneditor_<id>` → gắn class vào đó.
+  tagEditorShell(rootId);
   return editor;
 }
 
@@ -371,9 +618,61 @@ export function sunGetHtml() {
 }
 
 /**
+ * Đổi 1 data URL ảnh thành file gửi kèm worker: nén nếu quá lớn, trả {name,data}
+ * hoặc null nếu bỏ (kèm ghi nhận để báo admin).
+ */
+async function dataUrlToImage(dataUrl, prefix, stats) {
+  const m = dataUrl.match(/^data:image\/([a-zA-Z0-9.+-]+);base64,(.+)$/s);
+  if (!m) return null;
+  let data = m[2];
+  let ext = m[1] === 'jpeg' ? 'jpg' : m[1];
+  const bytes = Math.floor((data.length * 3) / 4);
+  if (bytes > IMAGE_TARGET_BYTES) {
+    try {
+      const small = await shrinkImageDataUrl(dataUrl);
+      if (!small?.data) throw new Error('shrink failed');
+      data = small.data;
+      ext = (small.name?.split('.').pop() || ext).toLowerCase();
+      stats.shrunk.push(Math.round((bytes / 1024 / 1024) * 10) / 10);
+    } catch {
+      stats.skipped.push(Math.round((bytes / 1024 / 1024) * 10) / 10);
+      return null;
+    }
+  }
+  const name = `${prefix}-${Date.now()}-${stats.count++}.${ext}`;
+  return { name, data };
+}
+
+/**
+ * Gom ảnh data: nằm BÊN TRONG block HTML giàu (bảng, khung...) — thay bằng đường dẫn
+ * ĐẦY ĐỦ `/content/vi/images/<tên>`.
+ *
+ * ⚠️ Khác với block `img`: worker tự đổi `src` tương đối -> `/content/vi/images/...`
+ * khi lưu, còn chuỗi HTML thì worker KHÔNG sửa (giữ nguyên) — nên phải ghi sẵn
+ * đường dẫn đầy đủ ngay ở đây, nếu không ảnh trong bảng sẽ hỏng ngoài trang.
+ */
+async function extractBlockImages(html, stats) {
+  const out = [];
+  let result = '';
+  let rest = String(html || '');
+  for (;;) {
+    const m = rest.match(/src="(data:image\/[^"]+)"/i);
+    if (!m) break;
+    const idx = m.index ?? 0;
+    result += rest.slice(0, idx);
+    const img = await dataUrlToImage(m[1], 'pasted', stats);
+    result += img ? `src="/content/vi/images/${img.name}"` : 'src=""';
+    if (img) out.push(img);
+    rest = rest.slice(idx + m[0].length);
+  }
+  return { html: result + rest, images: out };
+}
+
+/**
  * Thu thập từ WYSIWYG: parse HTML -> blocks[] + gom ảnh mới vào images[].
  *  - src data:image/... (ảnh vừa kéo thả/đánh dán) -> tạo tên + đẩy base64 vào images[]
  *  - src bắt đầu bằng / hoặc http (ảnh cũ) -> giữ nguyên, không tải lại
+ *  - ảnh nằm trong khối HTML giàu (bảng...) cũng được gom theo
  * Ảnh dán vào quá lớn được TỰ ĐỘNG nén lại về mức an toàn (shrinkImageDataUrl);
  * chỉ bỏ khi trình duyệt không giải mã/nén được (kèm cảnh báo) — thay vì để server
  * trả lỗi làm hỏng cả lần lưu.
@@ -382,10 +681,16 @@ export async function sunCollectBlocks() {
   const blocks = htmlToBlocks(sunGetHtml());
   const images = [];
   const kept = [];
-  const skipped = [];
-  const shrunk = [];
-  let pasted = 0;
+  const stats = { shrunk: [], skipped: [], count: 0 };
+
   for (const b of blocks) {
+    if (b.type === 'html') {
+      // Ảnh dán vào BÊN TRONG bảng/khung cũng phải được đẩy lên worker.
+      const res = await extractBlockImages(b.html, stats);
+      images.push(...res.images);
+      kept.push({ ...b, html: res.html });
+      continue;
+    }
     if (b.type !== 'img') {
       kept.push(b);
       continue;
@@ -395,34 +700,19 @@ export async function sunCollectBlocks() {
       kept.push(b);
       continue;
     }
-    const m = src.match(/^data:image\/([a-zA-Z0-9.+-]+);base64,(.+)$/s);
-    if (!m) continue; // data URL lỗi -> bỏ block ảnh rỗng
-    let data = m[2];
-    let ext = m[1] === 'jpeg' ? 'jpg' : m[1];
-    const bytes = Math.floor((data.length * 3) / 4);
-    if (bytes > IMAGE_TARGET_BYTES) {
-      try {
-        const small = await shrinkImageDataUrl(src);
-        if (!small?.data) throw new Error('shrink failed');
-        data = small.data;
-        ext = (small.name?.split('.').pop() || ext).toLowerCase();
-        shrunk.push(Math.round((bytes / 1024 / 1024) * 10) / 10);
-      } catch {
-        skipped.push(Math.round((bytes / 1024 / 1024) * 10) / 10);
-        continue;
-      }
-    }
-    const name = `pasted-${Date.now()}-${pasted++}.${ext}`;
-    images.push({ name, data });
-    b.src = name;
+    const img = await dataUrlToImage(src, 'pasted', stats);
+    if (!img) continue; // data URL lỗi / ảnh quá lớn không nén được -> bỏ block ảnh rỗng
+    images.push(img);
+    b.src = img.name;
     kept.push(b);
   }
-  if (shrunk.length) {
-    console.info(`[admin] tự giảm ${shrunk.length} ảnh lớn trong nội dung: ${shrunk.join('MB, ')}MB`);
+
+  if (stats.shrunk.length) {
+    console.info(`[admin] tự giảm ${stats.shrunk.length} ảnh lớn trong nội dung: ${stats.shrunk.join('MB, ')}MB`);
   }
-  if (skipped.length && typeof window !== 'undefined' && window.alert) {
+  if (stats.skipped.length && typeof window !== 'undefined' && window.alert) {
     window.alert(
-      `Đã bỏ ${skipped.length} ảnh trong nội dung vì không nén được (${skipped.join('MB, ')}MB). ` +
+      `Đã bỏ ${stats.skipped.length} ảnh trong nội dung vì không nén được (${stats.skipped.join('MB, ')}MB). ` +
         'Các nội dung khác vẫn được lưu.',
     );
   }

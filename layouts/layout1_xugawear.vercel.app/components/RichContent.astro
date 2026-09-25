@@ -11,6 +11,8 @@ interface Block {
   src?: string;
   alt?: string;
   items?: string[];
+  /** Khối HTML giàu (bảng, khung nổi bật, video...) do editor tạo ra. */
+  html?: string;
 }
 interface Props {
   content?: Block[];
@@ -23,8 +25,99 @@ const rich = (html) =>
   normalizeInternalLinks(
     sanitizeHtml(html || '', {
       allowedTags: ['b', 'strong', 'i', 'em', 'u', 'a', 'br', 'span'],
-      allowedAttributes: { a: ['href', 'target', 'rel'] },
+      allowedAttributes: { a: ['href', 'target', 'rel'], span: ['style'] },
+      allowedStyles: {
+        span: {
+          color: [/^.*$/],
+          'background-color': [/^.*$/],
+          'font-size': [/^.*$/],
+          'font-weight': [/^.*$/],
+          'font-style': [/^.*$/],
+          'text-decoration': [/^.*$/],
+        },
+      },
       allowedSchemes: ['http', 'https', 'mailto', 'tel'],
+      transformTags: {
+        a: sanitizeHtml.simpleTransform('a', { rel: 'noopener nofollow', target: '_blank' }),
+      },
+    }),
+  );
+
+/**
+ * Render khối HTML giàu (bảng, khung, video nhúng...).
+ * Đây là nội dung do ADMIN soạn trong editor (đã được lọc allowlist lúc lưu ở
+ * sunblocks.sanitizeRichHtml) — ở đây lọc lại lần nữa trước khi xuất ra trang.
+ */
+const richHtml = (html) =>
+  normalizeInternalLinks(
+    sanitizeHtml(html || '', {
+      allowedTags: [
+        'p', 'div', 'span', 'br', 'hr',
+        'b', 'strong', 'i', 'em', 'u', 's', 'strike', 'sub', 'sup', 'mark', 'small',
+        'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+        'ul', 'ol', 'li', 'dl', 'dt', 'dd',
+        'blockquote', 'pre', 'code',
+        'a', 'img', 'figure', 'figcaption',
+        'table', 'thead', 'tbody', 'tfoot', 'tr', 'td', 'th', 'caption', 'colgroup', 'col',
+        'iframe',
+      ],
+      allowedAttributes: {
+        '*': ['style', 'class'],
+        a: ['href', 'target', 'rel'],
+        img: ['src', 'alt', 'width', 'height', 'loading'],
+        iframe: ['src', 'width', 'height', 'allow', 'allowfullscreen', 'frameborder', 'loading', 'title'],
+        td: ['colspan', 'rowspan', 'align', 'valign', 'width', 'height'],
+        th: ['colspan', 'rowspan', 'align', 'valign', 'width', 'height', 'scope'],
+        table: ['width', 'align'],
+        ol: ['type', 'start'],
+        col: ['span', 'width'],
+        colgroup: ['span', 'width'],
+      },
+      allowedStyles: {
+        '*': {
+          color: [/^.*$/],
+          'background-color': [/^.*$/],
+          'font-size': [/^.*$/],
+          'font-family': [/^.*$/],
+          'font-weight': [/^.*$/],
+          'font-style': [/^.*$/],
+          'text-align': [/^.*$/],
+          'text-decoration': [/^.*$/],
+          'line-height': [/^.*$/],
+          'letter-spacing': [/^.*$/],
+          'vertical-align': [/^.*$/],
+          'white-space': [/^.*$/],
+          'list-style-type': [/^.*$/],
+          width: [/^.*$/],
+          display: [/^.*$/],
+          'max-width': [/^.*$/],
+          'min-width': [/^.*$/],
+          height: [/^.*$/],
+          margin: [/^.*$/],
+          'margin-top': [/^.*$/],
+          'margin-right': [/^.*$/],
+          'margin-bottom': [/^.*$/],
+          'margin-left': [/^.*$/],
+          padding: [/^.*$/],
+          'padding-top': [/^.*$/],
+          'padding-right': [/^.*$/],
+          'padding-bottom': [/^.*$/],
+          'padding-left': [/^.*$/],
+          border: [/^.*$/],
+          'border-top': [/^.*$/],
+          'border-right': [/^.*$/],
+          'border-bottom': [/^.*$/],
+          'border-left': [/^.*$/],
+          'border-color': [/^.*$/],
+          'border-width': [/^.*$/],
+          'border-style': [/^.*$/],
+          'border-radius': [/^.*$/],
+          'border-collapse': [/^.*$/],
+          'border-spacing': [/^.*$/],
+        },
+      },
+      allowedSchemes: ['http', 'https', 'mailto', 'tel'],
+      allowedIframeHostnames: ['www.youtube.com', 'youtube.com', 'www.google.com', 'maps.google.com', 'player.vimeo.com'],
       transformTags: {
         a: sanitizeHtml.simpleTransform('a', { rel: 'noopener nofollow', target: '_blank' }),
       },
@@ -57,6 +150,9 @@ const rich = (html) =>
               ))}
             </ul>
           );
+        case 'html':
+          // Bảng / khối HTML giàu admin dựng trong editor — render nguyên khối.
+          return <div class="rich-html" set:html={richHtml(b.html)} />;
         default:
           return null;
       }
@@ -77,10 +173,17 @@ const rich = (html) =>
   }
   .rich-h3 {
     font-family: var(--font-display);
-    font-size: 1.15rem;
+    font-size: 1.32rem;
+    font-weight: 700;
     line-height: 1.35;
-    color: var(--color-ink);
-    margin: 1.25rem 0 0.6rem;
+    /* Kiểu Heading 3 cài sẵn: chữ xanh thương hiệu + lớn hơn + kẻ mảnh bên dưới,
+       hiển thị như 1 khung nền vàng nhạt cho nổi bật (khớp với bản xem trước trong admin). */
+    color: var(--color-sea-deep);
+    background: #fdf6d3;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-sea) 35%, transparent);
+    border-radius: 6px 6px 0 0;
+    padding: 0.5rem 0.75rem;
+    margin: 1.75rem 0 0.75rem;
   }
   .rich-p {
     margin: 0.75rem 0;
@@ -108,5 +211,43 @@ const rich = (html) =>
     color: var(--color-sea);
     text-decoration: underline;
     text-underline-offset: 2px;
+  }
+  /* Bảng admin chèn từ editor: kẻ ô rõ ràng, cuộn ngang khi quá rộng. */
+  .rich-html {
+    margin: 1rem 0;
+    overflow-x: auto;
+  }
+  .rich-html table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  .rich-html th,
+  .rich-html td {
+    border: 1px solid color-mix(in srgb, var(--color-ink) 15%, transparent);
+    padding: 0.5rem 0.65rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .rich-html th {
+    background: var(--color-sea-pale);
+    color: var(--color-sea-deep);
+  }
+  .rich-html iframe {
+    max-width: 100%;
+    border-radius: 0.75rem;
+  }
+  /* Heading 3 nằm trong khối HTML giàu cũng dùng chung kiểu đã cài sẵn. */
+  .rich-html h3 {
+    font-family: var(--font-display);
+    font-size: 1.32rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--color-sea-deep);
+    background: #fdf6d3;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-sea) 35%, transparent);
+    border-radius: 6px 6px 0 0;
+    padding: 0.5rem 0.75rem;
+    margin: 1.75rem 0 0.75rem;
   }
 </style>
