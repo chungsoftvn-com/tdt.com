@@ -66,6 +66,11 @@
       "enabled": true
     },
     {
+      "id": "custom-muga04l7",
+      "type": "custom",
+      "enabled": true
+    },
+    {
       "id": "blk-services",
       "type": "services",
       "enabled": true
@@ -97,5 +102,6 @@
     }
   ],
   "partners_title": "Đối tác của chúng tôi",
-  "partners_text": "Những đơn vị đồng hành tin cậy cùng TodayTourist."
+  "partners_text": "Những đơn vị đồng hành tin cậy cùng TodayTourist.",
+  "home_custom_custom-muga04l7": "<p><br></p>"
 }
