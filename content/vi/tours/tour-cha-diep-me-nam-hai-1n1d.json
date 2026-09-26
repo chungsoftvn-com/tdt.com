@@ -1,135 +1,339 @@
 {
   "slug": "tour-cha-diep-me-nam-hai-1n1d",
-  "name": "TOUR HÀNH HƯƠNG BẠC LIÊU – SÓC TRĂNG (1N1Đ)   Nhà thờ Cha Diệp –  Mẹ Nam Hải",
+  "name": "Tour Cha Diệp – Mẹ Nam Hải 1 Ngày 1 Đêm từ Đồng Nai",
   "region": "domestic",
   "region_name": "Miền Tây",
-  "departure": "Biên Hòa / TP.HCM",
+  "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "1 ngày 1 đêm",
-  "price": "990.000đ/khách",
-  "image": "cha-diep-me-nam-hai.png",
-  "desc": "🚍 Đưa rước tận nơi nội ô TP. Biên Hòa 👨‍👩‍👧‍👦 Tour ghép đoàn hàng tuần – khởi hành từ 10 khách",
-  "highlights": [],
+  "price": "750.000đ/khách",
+  "image": "tour-cha-diep-me-nam-hai-bac-lieu-chua-som-rong-soc-trang-1n1d-todaytourist.webp",
+  "desc": "Tour Cha Diệp – Mẹ Nam Hải 1 ngày 1 đêm từ TP. Đồng Nai, đón tận nơi Biên Hòa: nhà thờ Tắc Sậy, Quán Âm Phật Đài. Giá 750.000đ. Hotline 0902 898 726.",
+  "highlights": [
+    "Hành hương Nhà thờ Tắc Sậy, cầu nguyện bên mộ Cha Diệp",
+    "Viếng Quán Âm Phật Đài – Mẹ Nam Hải hướng ra biển Đông",
+    "Tham quan Nhà Công Tử Bạc Liêu",
+    "Chiêm ngưỡng Chùa Chén Kiểu ghép từ hàng ngàn mảnh sành sứ",
+    "Check-in tượng Phật nằm 63 m tại Chùa Som Rong"
+  ],
   "itinerary": [],
   "content": [
     {
       "type": "p",
-      "text": "🚍 Đưa rước tận nơi nội ô TP. Biên Hòa 👨‍👩‍👧‍👦 Tour ghép đoàn hàng tuần – khởi hành từ 10 khách"
+      "text": "🙏 <strong>Một ngày hành hương – trọn vẹn bình an cho cả gia đình.</strong>"
     },
     {
       "type": "p",
-      "text": "Phù hợp khách lẻ, gia đình, nhóm bạn. Nhận thiết kế tour riêng cho cơ quan – doanh nghiệp – đoàn thể theo yêu cầu."
+      "text": "Từ nhà thờ Tắc Sậy nơi hàng triệu người tìm về cầu nguyện bên mộ Cha Diệp, đến tượng Mẹ Nam Hải uy nghi hướng ra biển Đông, rồi những ngôi chùa Khmer rực rỡ sắc màu của Sóc Trăng – hành trình kết nối nhiều tín ngưỡng, phù hợp với mọi du khách."
     },
     {
       "type": "p",
-      "text": "📞 Mr Anh Văn – Phòng Kinh Doanh: 0902 898 726"
+      "text": "📅 <strong>Thời gian:</strong> 1 ngày 1 đêm (đi đêm, về tối cùng ngày)"
+    },
+    {
+      "type": "p",
+      "text": "🚍 <strong>Phương tiện:</strong> xe du lịch đưa đón suốt tuyến"
+    },
+    {
+      "type": "p",
+      "text": "🍽️ <strong>Ăn uống:</strong> 01 bữa sáng, 01 bữa trưa set menu tại Sóc Trăng"
+    },
+    {
+      "type": "p",
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+    },
+    {
+      "type": "p",
+      "text": "📞 <strong>Tư vấn:</strong> Mr. Anh Văn (Phòng Kinh Doanh) – 0902 898 726"
     },
     {
       "type": "h3",
-      "text": "📍 ĐƯA ĐÓN LINH HOẠT – TIỆN LỢI"
+      "text": "🚐 PHƯƠNG ÁN ĐƯA ĐÓN KHÁCH LINH HOẠT – TIỆN LỢI"
     },
     {
       "type": "p",
-      "text": "🚐 Xe du lịch đời mới TodayTourist đón khách tận nơi nội ô TP. Biên Hòa:"
+      "text": "Xe du lịch TodayTourist đưa đón tận nơi trong nội ô trung tâm Biên Hòa (TP. Đồng Nai), đón quý khách về điểm tập kết tại trụ sở công ty (80 Đặng Nguyên, KP 29, P. Long Bình) trước khi khởi hành."
     },
     {
       "type": "p",
-      "text": "🟢 Tuyến 1: Ngã 4 Tân Phong → Quảng Trường Tỉnh → Bến xe Biên Hòa → Ngã 4 Vũng Tàu 🟢 Tuyến 2: Cổng 11 → Cây xăng Suối Linh → Ngã 4 AMATA → BV Đồng Nai 🟢 Tuyến 3: QL51 → Long Thành → Cao tốc Long Thành – Trung Lương"
-    },
-    {
-      "type": "h2",
-      "text": "🗓️ CHƯƠNG TRÌNH CHI TIẾT"
+      "text": "📌 Quý khách ở dọc tuyến đường đoàn đi qua sẽ được đón ngay trên đường, không cần về điểm tập kết."
     },
     {
       "type": "h3",
-      "text": "🌙 ĐÊM 01 | BIÊN HÒA – BẠC LIÊU"
+      "text": "🌙 ĐÊM 01: TP. ĐỒNG NAI / TP.HCM – BẠC LIÊU"
     },
     {
       "type": "p",
-      "text": "⏰ 21:00 | Đón khách – khởi hành đi Bạc Liêu HDV TodayTourist làm quen đoàn, phổ biến chương trình. Nghỉ đêm trên xe."
+      "text": "🕘 <strong>21h00:</strong> Xe và hướng dẫn viên TodayTourist đón quý khách tại điểm tập kết, khởi hành đi Bạc Liêu. HDV làm quen đoàn, phổ biến chương trình. Quý khách nghỉ đêm trên xe."
     },
     {
       "type": "h3",
-      "text": "🌅 BUỔI SÁNG | HÀNH HƯƠNG – THAM QUAN"
+      "text": "⛪ NGÀY 01: NHÀ THỜ CHA DIỆP – MẸ NAM HẢI – SÓC TRĂNG – TP. ĐỒNG NAI / TP.HCM"
     },
     {
       "type": "p",
-      "text": "⏰ 04:00 | Nhà thờ Tắc Sậy (Cha Diệp) Hành hương, cầu bình an – sức khỏe – công việc thuận lợi."
+      "text": "🌅 <strong>Rạng sáng:</strong>"
     },
     {
-      "type": "img",
-      "src": "/content/vi/images/Nha tho Tac Say, gan voi noi an nghi cua cha Fx_Truong Buu Diep.jpg",
-      "alt": "Tắc Sậy trong tôi - Báo Công giáo và Dân tộc"
+      "type": "list",
+      "items": [
+        "Hành hương Nhà thờ Tắc Sậy – cầu nguyện bên mộ Cha Diệp, xin ơn bình an, sức khỏe và công việc thuận lợi"
+      ]
     },
     {
-      "type": "p",
-      "text": "⏰ 06:00 | Nhà Công Tử Bạc Liêu Ăn sáng tại nhà hàng. Tham quan, check-in ngôi nhà kiến trúc Pháp nổi tiếng gắn với “Hắc Công Tử”."
-    },
-    {
-      "type": "p",
-      "text": "⏰ 08:30 | Quán Âm Phật Đài (Mẹ Nam Hải) Viếng Phật Bà hướng biển, cầu tài lộc và bình an."
-    },
-    {
-      "type": "img",
-      "src": "/content/vi/images/2-895-2390.jpg",
-      "alt": "Quan Âm Phật Đài Bạc Liêu - Phật Bà Nam Hải"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790428895822-0.jpg\" alt=\" Nhà thờ Tắc Sậy, nơi an nghỉ của Cha Diệp – tour Cha Diệp 1N1Đ\"></figure>"
     },
     {
       "type": "p",
-      "text": "⏰ 10:00 | Chùa Chén Kiểu – Sóc Trăng Chiêm ngưỡng kiến trúc Khmer độc đáo ghép từ hàng ngàn mảnh sành sứ."
+      "text": "🍳 <strong>Buổi sáng:</strong> Ăn sáng tại nhà hàng với món ăn đặc trưng miền Tây, tiếp tục hành trình:"
     },
     {
-      "type": "img",
-      "src": "/content/vi/images/chuachenkieu-1.jpg",
-      "alt": "Chùa Chén Kiểu - Ngôi chùa Khmer độc đáo ở Sóc Trăng"
+      "type": "list",
+      "items": [
+        "Tham quan Nhà Công Tử Bạc Liêu – dinh thự kiến trúc Pháp của công tử Trần Trinh Huy, một trong những nhân vật giàu có bậc nhất Nam Kỳ Lục Tỉnh",
+        "Viếng Quán Âm Phật Đài (Mẹ Nam Hải) – tượng Phật Bà Quan Âm cao 11 m hướng mặt ra biển Đông, nơi du khách đến cầu tài lộc, bình an",
+        "Chiêm ngưỡng Chùa Chén Kiểu – ngôi chùa Khmer độc đáo với tường và tháp ghép từ hàng ngàn mảnh sành sứ"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "💡 <em>Bạn có biết: Công tử Bạc Liêu nổi tiếng với giai thoại \"đốt tiền nấu trứng\" và lối sống chịu chơi bậc nhất Sài Gòn xưa. Ngôi nhà của ông được xây dựng năm 1919 với vật liệu nhập từ Pháp.</em>"
+    },
+    {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790428895823-1.jpg\" alt=\" Nhà Công Tử Bạc Liêu kiến trúc Pháp – tour Cha Diệp 1N1Đ\"></figure>"
+    },
+    {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790428895823-2.jpg\" alt=\"Quán Âm Phật Đài – Mẹ Nam Hải Bạc Liêu – tour Cha Diệp 1N1Đ\"></figure>"
+    },
+    {
+      "type": "p",
+      "text": "🍽️ <strong>Buổi trưa:</strong> Ăn trưa tại nhà hàng ở Sóc Trăng, nghỉ ngơi."
+    },
+    {
+      "type": "p",
+      "text": "🛕 <strong>Buổi chiều:</strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Check-in Chùa Som Rong – tượng Phật Thích Ca nhập Niết Bàn dài 63 m, điểm chụp hình nổi bật nhất Sóc Trăng",
+        "Mua đặc sản Sóc Trăng: bánh pía, lạp xưởng, bánh phồng tôm"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "💡 <em>Bạn có biết: Vùng đất Sóc Trăng có hơn 90 ngôi chùa Khmer. Mỗi ngôi chùa mang một nét kiến trúc riêng, rực rỡ vàng đỏ giữa nắng miền Tây.</em>"
+    },
+    {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790428895823-3.jpg\" alt=\"Tượng Phật nằm Chùa Som Rong, Sóc Trăng – tour Cha Diệp 1N1Đ\"></figure>"
+    },
+    {
+      "type": "p",
+      "text": "🏠 <strong>Buổi tối:</strong> Khởi hành về TP. Đồng Nai / TP.HCM, dừng chân tại Tiền Giang cho quý khách nghỉ ngơi, ăn nhẹ (tự túc). Về đến điểm tập kết, HDV chia tay đoàn, kết thúc chương trình."
     },
     {
       "type": "h3",
-      "text": "🍽️ BUỔI TRƯA"
+      "text": "💰 GIÁ TOUR"
     },
     {
       "type": "p",
-      "text": "⏰ 11:30 | Dùng bữa trưa tại nhà hàng TP. Sóc Trăng – nghỉ ngơi."
+      "text": "💵 <strong>Người lớn và trẻ em từ 5 tuổi:</strong> 750.000đ/khách"
+    },
+    {
+      "type": "p",
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 375.000đ nếu có ghế riêng"
     },
     {
       "type": "h3",
-      "text": "🪷 BUỔI CHIỀU | SÓC TRĂNG – BIÊN HÒA"
+      "text": "✅ GIÁ TOUR BAO GỒM"
     },
     {
       "type": "p",
-      "text": "⏰ 13:00 | Chùa Som Rong Check-in tượng Phật Thích Ca nhập Niết Bàn dài 63m – điểm chụp hình nổi bật nhất Sóc Trăng."
-    },
-    {
-      "type": "img",
-      "src": "/content/vi/images/depositphotos665652438xl-1734918714404.jpg",
-      "alt": "Chùa Som Rong ở đâu? Đường đi và kinh nghiệm di chuyển | Vietjet Air"
+      "text": "✅ Xe du lịch đưa đón tận nơi"
     },
     {
       "type": "p",
-      "text": "⏰ 14:30 | Mua sắm đặc sản Bánh Pía, lạp xưởng, bánh phồng tôm làm quà."
+      "text": "✅ 01 bữa sáng (tô/ly), 01 bữa trưa (set menu 150.000đ/khách)"
     },
     {
       "type": "p",
-      "text": "⏰ 15:00 | Khởi hành về Biên Hòa Dừng chân Tiền Giang vệ sinh, ăn nhẹ (chi phí tự túc)."
+      "text": "✅ Vé tham quan theo chương trình"
     },
     {
       "type": "p",
-      "text": "⏰ 21:00 – 22:00 | Về đến Biên Hòa – kết thúc chương trình."
-    },
-    {
-      "type": "h2",
-      "text": "💰 GIÁ TOUR TRỌN GÓI"
+      "text": "✅ Hướng dẫn viên chuyên nghiệp, nhiệt tình"
     },
     {
       "type": "p",
-      "text": "💵 990.000 VNĐ / KHÁCH (Áp dụng tour ghép đoàn – khởi hành từ TP. Biên Hòa)"
+      "text": "✅ Bảo hiểm du lịch theo quy định"
     },
     {
       "type": "p",
-      "text": "✅ Xe du lịch đời mới đưa đón tận nơi ✅ 01 bữa sáng (Tô/ly) – 01 bữa trưa (150.000đ/khách) ✅ Vé tham quan theo chương trình ✅ HDV chuyên nghiệp – nhiệt tình ✅ Bảo hiểm du lịch ✅ Nón du lịch, nước suối, khăn lạnh"
+      "text": "✅ Nón du lịch, nước suối, khăn lạnh phục vụ đoàn"
+    },
+    {
+      "type": "h3",
+      "text": "❌ GIÁ TOUR KHÔNG BAO GỒM"
     },
     {
       "type": "p",
-      "text": "❌ Chi phí cá nhân ngoài chương trình ❌ Ăn chiều nhẹ tự túc ❌ VAT (nếu xuất hóa đơn)"
+      "text": "❌ Chi phí cá nhân ngoài chương trình"
+    },
+    {
+      "type": "p",
+      "text": "❌ Ăn nhẹ dọc đường tại Tiền Giang (tự túc)"
+    },
+    {
+      "type": "p",
+      "text": "❌ Thuế VAT (nếu xuất hóa đơn)"
+    },
+    {
+      "type": "h3",
+      "text": "📌 ĐIỀU KHOẢN & LƯU Ý"
+    },
+    {
+      "type": "p",
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+    },
+    {
+      "type": "p",
+      "text": "📌 Đặt cọc 30–50% khi đăng ký, thanh toán trước ngày khởi hành"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trẻ dưới 5 tuổi ngồi cùng bố mẹ: mỗi người lớn kèm tối đa 1 bé, bé thứ 2 trở lên mua ghế riêng"
+    },
+    {
+      "type": "p",
+      "text": "📌 Bé ngồi cùng bố mẹ vẫn được tính vào tổng số người trên xe theo Luật Trật tự, an toàn giao thông đường bộ 2024, công ty chỉ nhận khi xe còn đủ chỗ. Trường hợp đặc biệt về trẻ em, vui lòng liên hệ tư vấn"
+    },
+    {
+      "type": "p",
+      "text": "📌 Lịch trình, thứ tự tham quan có thể điều chỉnh theo điều kiện thực tế nhưng đảm bảo đầy đủ điểm"
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách tự bảo quản tài sản cá nhân"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trường hợp bất khả kháng, công ty sẽ sắp xếp phương án phù hợp"
+    },
+    {
+      "type": "h3",
+      "text": "🏢 ĐI ĐOÀN RIÊNG – GIÁO XỨ, HỘI ĐOÀN, CƠ QUAN?"
+    },
+    {
+      "type": "p",
+      "text": "TodayTourist thiết kế riêng chương trình hành hương theo nhu cầu của từng đoàn:"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Đoàn giáo xứ, hội đoàn:</strong> sắp xếp giờ khởi hành để đoàn kịp tham dự thánh lễ tại nhà thờ Tắc Sậy"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Kéo dài 2 ngày 1 đêm:</strong> nghỉ đêm tại Bạc Liêu, thêm các điểm tham quan theo yêu cầu"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Công đoàn, hội nhóm:</strong> sinh hoạt tập thể, hoạt náo trên xe, quà tặng riêng cho đoàn"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Tùy chọn</strong> loại xe, thực đơn, giờ khởi hành"
+    },
+    {
+      "type": "p",
+      "text": "📞 Nhận báo giá đoàn: <strong>Mr. Anh Văn – 0902 898 726</strong>"
+    },
+    {
+      "type": "h3",
+      "text": "❓ CÂU HỎI THƯỜNG GẶP"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Tour Cha Diệp khởi hành lúc mấy giờ?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Xe đón khách lúc 21h00 tối hôm trước, quý khách nghỉ đêm trên xe và đến nhà thờ Tắc Sậy vào rạng sáng."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Có kịp tham dự thánh lễ không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Đoàn đến nhà thờ vào rạng sáng. Quý khách có thể tham dự thánh lễ nếu trùng giờ lễ của giáo xứ."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Không theo Công giáo có nên đi tour này không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Nên. Hành trình kết hợp nhà thờ Công giáo, Quán Âm Phật Đài và các ngôi chùa Khmer nổi tiếng của Sóc Trăng."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Bữa tối tính thế nào?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Trên đường về, xe dừng tại Tiền Giang để quý khách ăn nhẹ, chi phí tự túc."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Bé dưới 5 tuổi có cần mua vé không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Không bắt buộc. Bé ngồi cùng bố mẹ được miễn phí; nếu muốn bé có ghế riêng, phụ thu 50% giá người lớn. Tour đi xe đêm khá dài, công ty khuyên nên mua ghế riêng để bé và gia đình thoải mái hơn."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Công ty có xuất hóa đơn VAT không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Có. Giá tour chưa bao gồm VAT, quý khách cần hóa đơn vui lòng báo khi đăng ký."
+    },
+    {
+      "type": "h3",
+      "text": "📞 THÔNG TIN LIÊN HỆ ĐẶT TOUR"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Công ty TNHH Du Lịch Ngày Hôm Nay (Today Tourist)</strong>"
+    },
+    {
+      "type": "p",
+      "text": "📍 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai"
+    },
+    {
+      "type": "p",
+      "text": "📞 Mr. Anh Văn – Phòng Kinh Doanh: 0902 898 726"
+    },
+    {
+      "type": "p",
+      "text": "☎️ Hotline: 0913 78 76 47 (Lê Sang)"
+    },
+    {
+      "type": "p",
+      "text": "✉️ lesangtravel@gmail.com"
+    },
+    {
+      "type": "p",
+      "text": "🌐 todaytourist.com"
+    },
+    {
+      "type": "p",
+      "text": "👉 <strong>Tour ghép đoàn hàng tuần, số chỗ có hạn – nhắn Zalo 0902 898 726 để giữ chỗ sớm!</strong>"
     }
-  ]
+  ],
+  "hidden": false
 }
