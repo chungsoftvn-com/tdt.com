@@ -1,167 +1,324 @@
 {
   "slug": "tour-lang-hoa-sa-dec-1-ngay",
-  "name": "Tour Làng Hoa Sa Đéc 1 Ngày - Giá 780.000đ",
+  "name": "Tour Làng Hoa Sa Đéc 1 Ngày từ Đồng Nai – Vườn Quýt Hồng Lai Vung",
   "region": "domestic",
   "region_name": "Miền Tây",
-  "departure": "Tp.Đồng Nai/Tp.HCM",
+  "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "1 ngày",
   "price": "780.000đ/khách",
   "image": "tour-sa-dec-today-tourist.webp",
-  "desc": "Làng hoa Sa Đéc rực rỡ quanh năm - ghé vườn quýt hồng Lai Vung, chùa Lá Sen trong hành trình 1 ngày giá 780.000đ, khởi hành hàng tuần từ Đồng Nai.",
+  "desc": "Tour Làng Hoa Sa Đéc 1 ngày từ TP. Đồng Nai, đón tận nơi Biên Hòa: vườn quýt hồng Lai Vung, làng hoa trăm năm, Chùa Lá Sen. Giá 690.000đ. Hotline 0902 898 726.",
   "highlights": [
-    "Tham quan Làng hoa Sa Đéc hơn 100 năm tuổi",
-    "Check-in Vườn Quýt Hồng Lai Vung mùa trĩu quả",
-    "Khám phá Chùa Lá Sen với ao sen lá khổng lồ",
-    "Đưa đón tận nơi nội ô Biên Hòa, khởi hành hàng tuần"
+    "Tham quan làng hoa Sa Đéc hơn 100 năm tuổi",
+    "Dạo vườn quýt hồng Lai Vung trĩu quả (theo mùa)",
+    "Chiêm bái Chùa Lá Sen, check-in ao sen lá khổng lồ",
+    "Chụp ảnh giữa những giàn hoa trên kênh rạch",
+    "Mua đặc sản nem Lai Vung, bánh phồng tôm Sa Giang",
+    "Đón tận nơi khu vực Biên Hòa"
   ],
   "itinerary": [],
   "content": [
     {
       "type": "p",
-      "text": "🚍 ĐƯA RƯỚC TẬN NƠI NỘI Ô BIÊN HÒA <br>👨‍👩‍👧‍👦 Tour ghép đoàn hàng tuần – Khởi hành từ 10 khách"
+      "text": "🌸 <strong>Sa Đéc – nơi hàng ngàn loài hoa khoe sắc quanh năm.</strong>"
     },
     {
       "type": "p",
-      "text": "Chương trình áp dụng cho khách lẻ, gia đình, nhóm bạn đăng ký ghép đoàn. Đối với đoàn riêng, gia đình, cơ quan, doanh nghiệp, đoàn thể có nhu cầu thiết kế chương trình theo yêu cầu (thời gian, điểm tham quan, tiêu chuẩn dịch vụ), vui lòng liên hệ để được tư vấn chi tiết."
+      "text": "Một ngày rời xa phố thị, dạo bước giữa những vườn hoa rực rỡ trải dài trên kênh rạch, ghé vườn quýt hồng trĩu cành và check-in ao sen lá khổng lồ độc nhất vô nhị. Tour trong ngày, đi lại nhẹ nhàng – phù hợp cho cả gia đình từ ông bà đến các bé."
+    },
+    {
+      "type": "p",
+      "text": "📅 <strong>Thời gian:</strong> 1 ngày (đi sáng sớm, về tối cùng ngày)"
+    },
+    {
+      "type": "p",
+      "text": "🚍 <strong>Phương tiện:</strong> xe du lịch đưa đón suốt tuyến"
+    },
+    {
+      "type": "p",
+      "text": "🍽️ <strong>Ăn uống:</strong> 01 bữa sáng, 01 bữa trưa set menu miền Tây"
+    },
+    {
+      "type": "p",
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+    },
+    {
+      "type": "p",
+      "text": "📞 <strong>Tư vấn:</strong> Mr. Anh Văn (Phòng Kinh Doanh) – 0902 898 726"
+    },
+    {
+      "type": "h3",
+      "text": "🚐 PHƯƠNG ÁN ĐƯA ĐÓN KHÁCH LINH HOẠT – TIỆN LỢI"
+    },
+    {
+      "type": "p",
+      "text": "Xe du lịch TodayTourist đưa đón tận nơi trong nội ô trung tâm Biên Hòa (TP. Đồng Nai), đón quý khách về điểm tập kết tại trụ sở công ty (80 Đặng Nguyên, KP 29, P. Long Bình) trước khi khởi hành."
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách ở dọc tuyến đường đoàn đi qua sẽ được đón ngay trên đường, không cần về điểm tập kết."
+    },
+    {
+      "type": "h3",
+      "text": "🌼 NGÀY 01: TP. ĐỒNG NAI / TP.HCM – VƯỜN QUÝT LAI VUNG – LÀNG HOA SA ĐÉC – CHÙA LÁ SEN"
+    },
+    {
+      "type": "p",
+      "text": "🕓 <strong>Dự kiến 04h00:</strong> Xe và hướng dẫn viên TodayTourist đón quý khách tại điểm tập kết, khởi hành đi Đồng Tháp. Dừng chân ăn sáng tại Trung Lương (Tiền Giang) hoặc Sa Đéc."
+    },
+    {
+      "type": "p",
+      "text": "🍊 <strong>Buổi sáng:</strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Dạo Vườn Quýt Hồng Lai Vung – tìm hiểu cách trồng, chăm sóc, tự do chụp ảnh miệt vườn và thưởng thức quýt tại vườn (theo mùa)",
+        "Tham quan Làng Hoa Sa Đéc – làng hoa truyền thống hơn 100 năm tuổi, một trong những vựa hoa kiểng lớn nhất miền Tây với hàng nghìn loại hoa, cây kiểng"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "💡 <em>Bạn có biết: Người Sa Đéc trồng hoa trên những giàn tre, giàn gỗ kê cao dọc kênh rạch để tránh ngập nước – vừa độc đáo, vừa tạo nên những khung hình \"đẹp như tranh\" được giới trẻ săn lùng.</em>"
+    },
+    {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790416391617-0.jpg\" alt=\"Vườn quýt hồng Lai Vung trĩu quả – tour Làng Hoa Sa Đéc 1 ngày\"></figure>"
+    },
+    {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790416391617-1.jpg\" alt=\"Làng hoa Sa Đéc với giàn hoa trên kênh rạch – tour Làng Hoa Sa Đéc 1 ngày\"></figure>"
+    },
+    {
+      "type": "p",
+      "text": "🍽️ <strong>Buổi trưa:</strong> Ăn trưa tại nhà hàng địa phương với thực đơn miền Tây, nghỉ ngơi ngắn."
+    },
+    {
+      "type": "p",
+      "text": "🪷 <strong>Buổi chiều:</strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Chiêm bái Chùa Lá Sen (Phước Kiển Tự) – ngôi chùa nổi tiếng với ao sen lá khổng lồ, không gian tâm linh yên bình, điểm check-in được yêu thích",
+        "Mua đặc sản Đồng Tháp: nem Lai Vung, quýt hồng, bánh phồng tôm Sa Giang..."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "💡 <em>Bạn có biết: Sa Đéc là nơi nữ văn sĩ Pháp Marguerite Duras từng sống thời thơ ấu, và cũng là bối cảnh của tiểu thuyết nổi tiếng \"Người tình\".</em>"
+    },
+    {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790416391618-2.jpg\" alt=\" Ao sen lá khổng lồ tại Chùa Lá Sen – tour Làng Hoa Sa Đéc 1 ngày\"></figure>"
+    },
+    {
+      "type": "p",
+      "text": "🏠 <strong>Buổi tối:</strong> Khởi hành về TP. Đồng Nai / TP.HCM. Về đến điểm tập kết, HDV chia tay đoàn, kết thúc chương trình."
+    },
+    {
+      "type": "h3",
+      "text": "💰 GIÁ TOUR"
+    },
+    {
+      "type": "p",
+      "text": "💵 <strong>Người lớn và trẻ em từ 5 tuổi:</strong> 690.000đ/khách"
+    },
+    {
+      "type": "p",
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 345.000đ nếu có ghế riêng"
+    },
+    {
+      "type": "h3",
+      "text": "✅ GIÁ TOUR BAO GỒM"
+    },
+    {
+      "type": "p",
+      "text": "✅ Xe du lịch đưa đón tận nơi"
+    },
+    {
+      "type": "p",
+      "text": "✅ 01 bữa sáng (tô/ly), 01 bữa trưa (set menu 150.000đ/khách)"
+    },
+    {
+      "type": "p",
+      "text": "✅ Vé tham quan theo chương trình"
+    },
+    {
+      "type": "p",
+      "text": "✅ Hướng dẫn viên chuyên nghiệp, nhiệt tình"
+    },
+    {
+      "type": "p",
+      "text": "✅ Bảo hiểm du lịch theo quy định"
+    },
+    {
+      "type": "p",
+      "text": "✅ Nón du lịch, khăn lạnh, nước suối phục vụ đoàn"
+    },
+    {
+      "type": "h3",
+      "text": "❌ GIÁ TOUR KHÔNG BAO GỒM"
+    },
+    {
+      "type": "p",
+      "text": "❌ Chi phí cá nhân, mua sắm ngoài chương trình"
+    },
+    {
+      "type": "p",
+      "text": "❌ Quýt mua mang về (tự túc theo giá nhà vườn)"
+    },
+    {
+      "type": "p",
+      "text": "❌ Thuế VAT (nếu xuất hóa đơn)"
+    },
+    {
+      "type": "h3",
+      "text": "📌 ĐIỀU KHOẢN & LƯU Ý"
+    },
+    {
+      "type": "p",
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+    },
+    {
+      "type": "p",
+      "text": "📌 Đặt cọc 30–50% khi đăng ký, thanh toán trước ngày khởi hành"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trẻ dưới 5 tuổi ngồi cùng bố mẹ: mỗi người lớn kèm tối đa 1 bé, bé thứ 2 trở lên mua ghế riêng"
+    },
+    {
+      "type": "p",
+      "text": "📌 Bé ngồi cùng bố mẹ vẫn được tính vào tổng số người trên xe theo Luật Trật tự, an toàn giao thông đường bộ 2024, công ty chỉ nhận khi xe còn đủ chỗ. Trường hợp đặc biệt về trẻ em, vui lòng liên hệ tư vấn"
+    },
+    {
+      "type": "p",
+      "text": "📌 Vườn quýt có trái chín theo mùa; ngoài mùa quýt, đoàn vẫn tham quan vườn và tìm hiểu cách trồng"
+    },
+    {
+      "type": "p",
+      "text": "📌 Lịch trình, thứ tự tham quan có thể điều chỉnh theo điều kiện thực tế nhưng đảm bảo đầy đủ điểm"
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách tự bảo quản tài sản cá nhân"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trường hợp bất khả kháng, công ty sẽ sắp xếp phương án phù hợp"
+    },
+    {
+      "type": "h3",
+      "text": "🏢 ĐI ĐOÀN RIÊNG – TRƯỜNG HỌC, CÔNG ĐOÀN, DOANH NGHIỆP?"
+    },
+    {
+      "type": "p",
+      "text": "Tour trong ngày, đi lại nhẹ nhàng, phù hợp nhiều đối tượng. TodayTourist thiết kế riêng chương trình cho từng đoàn:"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Học sinh – sinh viên:</strong> trải nghiệm nông nghiệp miệt vườn, tìm hiểu nghề trồng hoa truyền thống"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Công đoàn, hội người cao tuổi:</strong> hành trình du xuân cuối năm, kết hợp mua quà Tết"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Doanh nghiệp:</strong> hoạt động gắn kết nhẹ và hoạt náo trên xe cho đoàn ngắn ngày"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Tùy chọn</strong> loại xe, thực đơn, điểm tham quan"
+    },
+    {
+      "type": "p",
+      "text": "📞 Nhận báo giá đoàn: <strong>Mr. Anh Văn – 0902 898 726</strong>"
+    },
+    {
+      "type": "h3",
+      "text": "❓ CÂU HỎI THƯỜNG GẶP"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Tour Sa Đéc khởi hành lúc mấy giờ?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Dự kiến 04h00 sáng, đoàn ăn sáng trên đường và về đến điểm tập kết vào buổi tối cùng ngày."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Đi Sa Đéc mùa nào đẹp nhất?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Làng hoa có hoa quanh năm và rực rỡ nhất vào những tháng cuối năm chuẩn bị cho Tết, cũng là lúc vườn quýt hồng vào mùa chín."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Có được mua quýt mang về không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Có. Quý khách trao đổi trực tiếp với nhà vườn, chi phí tự túc."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Người lớn tuổi, trẻ nhỏ đi được không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Được. Tour trong ngày, các điểm tham quan đi bộ nhẹ nhàng, phù hợp cho gia đình nhiều thế hệ."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Bé dưới 5 tuổi có cần mua vé không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Không bắt buộc. Bé ngồi cùng bố mẹ được miễn phí; nếu muốn bé có ghế riêng, phụ thu 50% giá người lớn."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Công ty có xuất hóa đơn VAT không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Có. Giá tour chưa bao gồm VAT, quý khách cần hóa đơn vui lòng báo khi đăng ký."
+    },
+    {
+      "type": "h3",
+      "text": "📞 THÔNG TIN LIÊN HỆ ĐẶT TOUR"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Công ty TNHH Du Lịch Ngày Hôm Nay (Today Tourist)</strong>"
+    },
+    {
+      "type": "p",
+      "text": "📍 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai"
     },
     {
       "type": "p",
       "text": "📞 Mr. Anh Văn – Phòng Kinh Doanh: 0902 898 726"
     },
     {
-      "type": "h2",
-      "text": "📍 PHƯƠNG ÁN ĐƯA ĐÓN KHÁCH LINH HOẠT – TIỆN LỢI"
+      "type": "p",
+      "text": "☎️ Hotline: 0913 78 76 47 (Lê Sang)"
     },
     {
       "type": "p",
-      "text": "🚐 Xe du lịch đời mới TodayTourist đưa đón quý khách tận nơi trong nội ô TP. Biên Hòa theo các tuyến cố định:"
+      "text": "✉️ lesangtravel@gmail.com"
     },
     {
       "type": "p",
-      "text": "🟢 Tuyến 1: 📌 Ngã 4 Tân Phong → Quảng Trường Tỉnh → Bến xe Biên Hòa → Ngã 4 Vũng Tàu"
+      "text": "🌐 todaytourist.com"
     },
     {
       "type": "p",
-      "text": "🟢 Tuyến 2: 📌 Cổng 11 → Cây xăng Suối Linh (Tam Hiệp) → Ngã 4 AMATA → Bệnh viện Đồng Nai"
-    },
-    {
-      "type": "p",
-      "text": "🟢 Tuyến 3: 📌 Dọc tuyến Quốc lộ 51 → Thị trấn Long Thành → Cao tốc (Long Thành - Chợ Đệm - Trung Lương)"
-    },
-    {
-      "type": "h2",
-      "text": "🗓️ CHƯƠNG TRÌNH TOUR CHI TIẾT"
-    },
-    {
-      "type": "h3",
-      "text": "🌅 BUỔI SÁNG: BIÊN HÒA – ĐỒNG THÁP"
-    },
-    {
-      "type": "p",
-      "text": "⏰ 05:00 | 🚍 ĐÓN KHÁCH – KHỞI HÀNH"
-    },
-    {
-      "type": "p",
-      "text": "Xe và Hướng dẫn viên TodayTourist đón quý khách tận nơi trong nội ô Biên Hòa. Đoàn làm quen, nghe HDV phổ biến chương trình và khởi hành đi Đồng Tháp."
-    },
-    {
-      "type": "p",
-      "text": "🍽️ Dừng chân ăn sáng tại Trung Lương (Tiền Giang) /Sa Đéc (Đồng Tháp) Quý khách ăn sáng, nghỉ ngơi."
-    },
-    {
-      "type": "h3",
-      "text": "🍊 08:30 | VƯỜN QUÝT HỒNG LAI VUNG"
-    },
-    {
-      "type": "p",
-      "text": "Đoàn đến Lai Vung – Đồng Tháp, tham quan vườn quýt hồng trĩu quả."
-    },
-    {
-      "type": "p",
-      "text": "🔹 Tham quan vườn quýt, tìm hiểu quy trình trồng & chăm sóc 🔹<br> 📸 Chụp ảnh miệt vườn 🔹 <br>🍊 Thưởng thức quýt tại vườn"
-    },
-    {
-      "type": "img",
-      "src": "https://todaytourist.com/content/vi/images/vuon-quyt-hong-lai-vung-3.jpg",
-      "alt": "Vườn Quýt Hồng Lai Vung Đồng Tháp - tour Sa Đéc TodayTourist"
-    },
-    {
-      "type": "h3",
-      "text": "🌺 10:00 | LÀNG HOA SA ĐÉC"
-    },
-    {
-      "type": "p",
-      "text": "Tham quan Làng hoa Sa Đéc, làng hoa truyền thống hơn 100 năm tuổi."
-    },
-    {
-      "type": "p",
-      "text": "🔹 Chiêm ngưỡng hàng nghìn loại hoa, cây kiểng 🔹<br> 📸 Tự do chụp ảnh tại các khu trồng hoa"
-    },
-    {
-      "type": "img",
-      "src": "https://todaytourist.com/content/vi/images/anh-4-105849_333-105850-095906.jpg",
-      "alt": "Làng hoa Sa Đéc rực rỡ quanh năm - tour TodayTourist"
-    },
-    {
-      "type": "h3",
-      "text": "🍽️ 12:00 | ĂN TRƯA – NGHỈ NGƠI"
-    },
-    {
-      "type": "p",
-      "text": "Đoàn dùng bữa trưa tại nhà hàng địa phương với thực đơn miền Tây. Sau bữa trưa, quý khách nghỉ ngơi ngắn."
-    },
-    {
-      "type": "h3",
-      "text": "🪷 13:30 | CHÙA LÁ SEN (PHƯỚC KIỂN TỰ)"
-    },
-    {
-      "type": "p",
-      "text": "Tham quan ngôi chùa nổi tiếng với những lá sen khổng lồ."
-    },
-    {
-      "type": "p",
-      "text": "🔹 Tham quan khuôn viên chùa 🔹 <br>📸 Chụp ảnh ao sen độc đáo <br>🔹 Tìm hiểu sinh hoạt văn hóa – tâm linh địa phương"
-    },
-    {
-      "type": "img",
-      "src": "https://todaytourist.com/content/vi/images/2-1507019594.jpg",
-      "alt": "Chùa Lá Sen (Phước Kiển Tự) Đồng Tháp - tour TodayTourist"
-    },
-    {
-      "type": "h3",
-      "text": "🚍 15:00 | KHỞI HÀNH VỀ BIÊN HÒA"
-    },
-    {
-      "type": "p",
-      "text": "Trên đường về, đoàn dừng chân mua sắm đặc sản Đồng Tháp (nếu có)."
-    },
-    {
-      "type": "p",
-      "text": "⏰ 18:00 – 19:00 | VỀ ĐẾN BIÊN HÒA Xe đưa khách về đúng điểm đón ban đầu. <br>👋 Kết thúc chương trình – hẹn gặp lại quý khách."
-    },
-    {
-      "type": "h2",
-      "text": "💰 GIÁ TOUR TRỌN GÓI"
-    },
-    {
-      "type": "p",
-      "text": "💵 780.000 VNĐ / KHÁCH <br>👨‍👩‍👧‍👦 Áp dụng tour ghép đoàn – khởi hành từ TP. Biên Hòa"
-    },
-    {
-      "type": "h2",
-      "text": "🎁 GIÁ TOUR BAO GỒM"
-    },
-    {
-      "type": "p",
-      "text": "✅ Xe du lịch đời mới đưa đón tận nơi nội ô TP. Biên Hòa <br>✅ 01 bữa ăn sáng tại nhà hàng (Tô/ly) <br>✅ 01 bữa trưa nhà hàng theo chương trình (Set Menu 150k/khách) <br>✅ Vé tham quan các điểm theo chương trình <br>✅ Hướng dẫn viên du lịch chuyên nghiệp, nhiệt tình <br>✅ Bảo hiểm du lịch theo quy định <br>✅ Nón du lịch, Khăn lạnh, Nước suối phục vụ trên xe <br>✅Xe điện tham quan (nếu có)"
-    },
-    {
-      "type": "h2",
-      "text": "🚫 GIÁ TOUR KHÔNG BAO GỒM"
-    },
-    {
-      "type": "p",
-      "text": "❌ Chi phí cá nhân, mua sắm ngoài chương trình ❌ Thuế VAT (nếu xuất hóa đơn)"
+      "text": "👉 <strong>Tour ghép đoàn hàng tuần, số chỗ có hạn – nhắn Zalo 0902 898 726 để giữ chỗ sớm!</strong>"
     }
   ],
   "hidden": false
