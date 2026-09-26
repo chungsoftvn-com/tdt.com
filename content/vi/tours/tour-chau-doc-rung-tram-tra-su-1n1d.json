@@ -1,129 +1,341 @@
 {
   "slug": "tour-chau-doc-rung-tram-tra-su-1n1d",
-  "name": "Tour Châu Đốc - Rừng Tràm Trà Sư 1N1Đ - Giá 950.000đ",
+  "name": "Tour Châu Đốc 1 Ngày 1 Đêm từ Đồng Nai – Bà Chúa Xứ, Rừng Tràm Trà Sư",
   "region": "domestic",
   "region_name": "Miền Tây",
-  "departure": "Biên Hòa / TP.HCM",
+  "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "1 ngày 1 đêm",
   "price": "950.000đ/khách",
   "image": "chau-doc.webp",
-  "desc": "Chèo thuyền Rừng Tràm Trà Sư, viếng Miếu Bà Chúa Xứ Núi Sam trong hành trình 1 ngày 1 đêm giá 950.000đ, khởi hành hàng tuần từ Biên Hòa.",
+  "desc": "Tour Châu Đốc 1 ngày 1 đêm từ TP. Đồng Nai, đón tận nơi Biên Hòa: viếng Bà Chúa Xứ Núi Sam, đi xuồng Trà Sư. Giá 790.000đ. Hotline 0902 898 726.",
   "highlights": [
-    "Chèo thuyền, tắc ráng xuyên Rừng Tràm Trà Sư",
-    "Viếng Miếu Bà Chúa Xứ Núi Sam linh thiêng",
-    "Check-in Cầu Tre Vạn Bước giữa thảm bèo xanh",
-    "Đưa đón tận nơi nội ô Biên Hòa, khởi hành hàng tuần"
+    "Viếng Miếu Bà Chúa Xứ Núi Sam, cầu bình an, tài lộc",
+    "Tham quan Lăng Thoại Ngọc Hầu và Chùa Tây An",
+    "Ngồi tắc ráng, xuồng chèo xuyên rừng tràm Trà Sư",
+    "Dạo Cầu Tre Vạn Bước giữa thảm bèo xanh",
+    "Mua sắm đặc sản miền Tây hấp dẫn",
+    "Thưởng thức đặc sản miền Tây"
   ],
   "itinerary": [],
   "content": [
     {
       "type": "p",
-      "text": "🚍 Đưa đón tận nơi nội ô TP. Biên Hòa <br>👨‍👩‍👧‍👦 Tour ghép đoàn hàng tuần – Khởi hành từ 10 khách. Phù hợp với gia đình, nhóm bạn.<br>Nhận thiết kế tour riêng cho cơ quan, doanh nghiệp, đoàn thể theo yêu cầu. 📞 Mr. Anh Văn – Phòng Kinh Doanh: 0902 898 726"
-    },
-    {
-      "type": "h2",
-      "text": "📍 PHƯƠNG ÁN ĐƯA ĐÓN LINH HOẠT – TIỆN LỢI"
+      "text": "🙏 <strong>Châu Đốc – vùng đất linh thiêng nơi đầu nguồn sông Hậu.</strong>"
     },
     {
       "type": "p",
-      "text": "🚐 Xe du lịch đời mới TodayTourist đón khách tận nơi nội ô TP. Biên Hòa theo các tuyến cố định:"
+      "text": "Tối lên xe ngủ một giấc, sáng ra đã đứng trước Miếu Bà Chúa Xứ Núi Sam – nơi hàng triệu người về cầu an mỗi năm. Rồi ngồi xuồng len lỏi giữa rừng tràm Trà Sư xanh ngát, nơi mặt nước phủ kín bèo như tấm thảm nhung. Chỉ một ngày, trọn vẹn cả tâm linh lẫn thiên nhiên miền Tây."
     },
     {
       "type": "p",
-      "text": "🟢 Tuyến 1: Ngã 4 Tân Phong → Quảng Trường Tỉnh → Bến xe Biên Hòa → Ngã 4 Vũng Tàu <br>🟢 Tuyến 2: Cổng 11 → Cây xăng Suối Linh (Tam Hiệp) → Ngã 4 AMATA → BV Đồng Nai <br>🟢 Tuyến 3: QL51 → Thị trấn Long Thành → Cao tốc Long Thành – Trung Lương"
+      "text": "📅 <strong>Thời gian:</strong> 1 ngày 1 đêm (đi đêm, về tối cùng ngày)"
     },
     {
-      "type": "h2",
-      "text": "🗓️ CHƯƠNG TRÌNH TOUR CHI TIẾT"
+      "type": "p",
+      "text": "🚍 <strong>Phương tiện:</strong> xe du lịch đưa đón suốt tuyến"
+    },
+    {
+      "type": "p",
+      "text": "🍽️ <strong>Ăn uống:</strong> 01 bữa sáng đặc sản Châu Đốc, 01 bữa trưa set menu miền Tây"
+    },
+    {
+      "type": "p",
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+    },
+    {
+      "type": "p",
+      "text": "📞 <strong>Tư vấn:</strong> Mr. Anh Văn (Phòng Kinh Doanh) – 0902 898 726"
     },
     {
       "type": "h3",
-      "text": "🌙 ĐÊM 01 | BIÊN HÒA – AN GIANG"
+      "text": "🚐 PHƯƠNG ÁN ĐƯA ĐÓN KHÁCH LINH HOẠT – TIỆN LỢI"
     },
     {
       "type": "p",
-      "text": "⏰ 22:00 | Xe & HDV TodayTourist đón khách tận nơi, khởi hành đi Châu Đốc. 💤 Nghỉ đêm trên xe."
+      "text": "Xe du lịch TodayTourist đưa đón tận nơi trong nội ô trung tâm Biên Hòa (TP. Đồng Nai), đón quý khách về điểm tập kết tại trụ sở công ty (80 Đặng Nguyên, KP 29, P. Long Bình) trước khi khởi hành."
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách ở dọc tuyến đường đoàn đi qua sẽ được đón ngay trên đường, không cần về điểm tập kết."
     },
     {
       "type": "h3",
-      "text": "🌅 NGÀY 01 | CHÂU ĐỐC – RỪNG TRÀM TRÀ SƯ – BIÊN HÒA"
+      "text": "🌙 ĐÊM 01: TP. ĐỒNG NAI / TP.HCM – CHÂU ĐỐC (AN GIANG)"
     },
     {
       "type": "p",
-      "text": "⏰ 04:00 | Đến Châu Đốc – vệ sinh cá nhân, bắt đầu hành trình tâm linh: <br>🔹 Viếng Miếu Bà Chúa Xứ Núi Sam <br>🔹 Tham quan Lăng Thoại Ngọc Hầu & Chùa Tây An"
+      "text": "🕘 <strong>21h00 – 22h00:</strong> Xe và hướng dẫn viên TodayTourist đón quý khách tại điểm tập kết, khởi hành đi Châu Đốc. Quý khách nghỉ đêm trên xe – mở mắt ra đã đến vùng núi Sam."
     },
     {
-      "type": "img",
-      "src": "/content/vi/images/thoi-diem-di-mieu-ba-chua-xu-nui-sam.jpg",
-      "alt": "Miếu Bà Chúa Xứ Núi Sam An Giang: Cẩm nang chiêm bái A-Z"
-    },
-    {
-      "type": "img",
-      "src": "/content/vi/images/lang-thoai-ngoc-hau-an-giang-5.jpg",
-      "alt": "Lăng Thoại Ngọc Hầu ở Châu Đốc: Lịch sử & Kinh nghiệm tham quan"
+      "type": "h3",
+      "text": "☀️ NGÀY 01: MIẾU BÀ CHÚA XỨ – RỪNG TRÀM TRÀ SƯ – CHÙA HANG – TP. ĐỒNG NAI / TP.HCM"
     },
     {
       "type": "p",
-      "text": "🍜 Ăn sáng đặc sản Châu Đốc (bún cá / hủ tiếu / cơm tấm)."
+      "text": "🌅 <strong>Rạng sáng:</strong> Đoàn đến Châu Đốc, vệ sinh cá nhân, bắt đầu hành trình tâm linh:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Viếng Miếu Bà Chúa Xứ Núi Sam – ngôi miếu linh thiêng bậc nhất An Giang, nơi người dân khắp nơi về cầu bình an, tài lộc",
+        "Tham quan Lăng Thoại Ngọc Hầu – khu lăng mộ danh tướng Nguyễn Văn Thoại, người có công khai hoang, mở mang vùng đất An Giang",
+        "Viếng Chùa Tây An – ngôi chùa cổ với kiến trúc kết hợp Việt – Ấn – Hồi độc đáo"
+      ]
     },
     {
       "type": "p",
-      "text": "⏰ 08:30 | Tham quan Rừng Tràm Trà Sư – hệ sinh thái đặc trưng vùng Thất Sơn: <br>🌿 Trải nghiệm tắc ráng & xuồng chèo xuyên rừng tràm <br>📸 Check-in Cầu Tre Vạn Bước , thảm bèo xanh mướt <br>🔭 Ngắm toàn cảnh rừng tràm từ đài quan sát"
+      "text": "💡 <em>Bạn có biết: Lễ hội Vía Bà Chúa Xứ Núi Sam đã được UNESCO ghi danh là Di sản văn hóa phi vật thể đại diện của nhân loại năm 2024.</em>"
     },
     {
-      "type": "img",
-      "src": "/content/vi/images/san-chim-bo-cau-rung-tram.jpg",
-      "alt": "Rừng tràm Trà Sư An Giang: Hướng dẫn tham quan chi tiết"
-    },
-    {
-      "type": "p",
-      "text": "🍽️ 12:00 | Ăn trưa nhà hàng – đậm chất miền Tây (cá lóc nướng, lẩu mắm…). 🛌 Nghỉ ngơi ngắn."
-    },
-    {
-      "type": "img",
-      "src": "/content/vi/images/kinh-nghiem-du-lich-rung-tram-tra-su-an-giang.png",
-      "alt": "Kinh nghiệm du lịch rừng tràm Trà Sư Tết: Điểm đến thu hút du khách nhất nhì An Giang"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790417230561-0.jpg\" alt=\"Miếu Bà Chúa Xứ Núi Sam, Châu Đốc – tour Châu Đốc 1N1Đ\"></figure>"
     },
     {
       "type": "p",
-      "text": "⏰ 13:30 | Tham quan Chùa Hang (Phước Điền Tự) <br>📸 Check-in view cánh đồng thốt nốt từ trên cao."
+      "text": "🍜 <strong>Buổi sáng:</strong> Ăn sáng đặc sản Châu Đốc (bún cá / hủ tiếu / cơm tấm). Xe đưa đoàn đến <strong>Rừng Tràm Trà Sư</strong> – khu rừng ngập nước đặc trưng vùng Thất Sơn với hệ sinh thái chim, cò phong phú:"
     },
     {
-      "type": "img",
-      "src": "/content/vi/images/chua-hang-11.jpg",
-      "alt": "Một lần viếng Phước Điền Tự (Chùa Hang)"
-    },
-    {
-      "type": "p",
-      "text": "⏰ 15:00 | Khởi hành về Biên Hòa <br>🛍️ Dừng chân dọc đường cho du khách mua đặc sản, ăn nhẹ buổi chiều tối tại Đồng Tháp/Tiền Giang (tự túc)"
-    },
-    {
-      "type": "p",
-      "text": "⏰ 20:00 – 21:00 | Về đến Biên Hòa – trả khách tận nơi. <br>👋 Kết thúc chương trình, hẹn gặp lại quý khách."
-    },
-    {
-      "type": "h2",
-      "text": "💰 GIÁ TOUR TRỌN GÓI"
+      "type": "list",
+      "items": [
+        "Ngồi tắc ráng và xuồng chèo len lỏi xuyên rừng tràm",
+        "Dạo Cầu Tre Vạn Bước giữa thảm bèo xanh mướt",
+        "Ngắm toàn cảnh rừng tràm từ đài quan sát"
+      ]
     },
     {
       "type": "p",
-      "text": "💵 950.000 VNĐ / KHÁCH <br>📍 Áp dụng tour ghép – khởi hành từ TP. Biên Hòa"
+      "text": "💡 <em>Bạn có biết: Trà Sư đẹp nhất vào mùa nước nổi, khi nước dâng cao và thảm bèo phủ kín mặt rừng, tạo nên màu xanh mướt hiếm thấy.</em>"
     },
     {
-      "type": "h2",
-      "text": "🎁 GIÁ TOUR BAO GỒM"
-    },
-    {
-      "type": "p",
-      "text": "✅ Xe du lịch đời mới đưa đón tận nơi <br>✅ 01 bữa ăn sáng (Tô/ly) – 01 bữa trưa (Set menu 150.000đ) <br>✅ Vé tham quan & dịch vụ Trà Sư (xuồng chèo/tắc ráng) <br>✅ Hướng dẫn viên chuyên nghiệp <br>✅ Bảo hiểm du lịch <br>✅ Nón du lịch – nước suối – khăn lạnh"
-    },
-    {
-      "type": "h2",
-      "text": "🚫 GIÁ TOUR KHÔNG BAO GỒM"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790417230562-1.jpg\" alt=\"Xuồng chèo xuyên rừng tràm Trà Sư – tour Châu Đốc 1N1Đ\"></figure>"
     },
     {
       "type": "p",
-      "text": "❌ Chi phí cá nhân ❌ Thuế VAT (nếu xuất hóa đơn)"
+      "text": "🍽️ <strong>Buổi trưa:</strong> Ăn trưa tại nhà hàng với thực đơn đậm chất miền Tây (cá lóc nướng, lẩu mắm...). Nghỉ ngơi ngắn."
+    },
+    {
+      "type": "p",
+      "text": "⛰️ <strong>Buổi chiều: </strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Mua đặc sản An Giang/Đồng Tháp: mắm Châu Đốc, khô cá tra phồng, đường thốt nốt..."
+      ]
+    },
+    {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790417230562-2.jpg\" alt=\"Đặc sản Miền Tây – tour Châu Đốc 1N1Đ\"></figure>"
+    },
+    {
+      "type": "p",
+      "text": "💡 <em>Bạn có biết: Kênh Vĩnh Tế nối Châu Đốc với Hà Tiên do Thoại Ngọc Hầu chỉ huy đào, được vua Minh Mạng lấy tên phu nhân của ông – bà Châu Thị Tế – đặt tên cho con kênh.</em>"
+    },
+    {
+      "type": "p",
+      "text": "🏠 <strong>Buổi tối:</strong> Khởi hành về TP. Đồng Nai / TP.HCM, dừng chân dùng bữa nhẹ tại Tiền Giang (tự túc). Về đến điểm tập kết, trả khách tận nơi. HDV chia tay đoàn, kết thúc chương trình."
+    },
+    {
+      "type": "h3",
+      "text": "💰 GIÁ TOUR"
+    },
+    {
+      "type": "p",
+      "text": "💵 <strong>Người lớn và trẻ em từ 5 tuổi:</strong> 790.000đ/khách"
+    },
+    {
+      "type": "p",
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 395.000đ nếu có ghế riêng"
+    },
+    {
+      "type": "h3",
+      "text": "✅ GIÁ TOUR BAO GỒM"
+    },
+    {
+      "type": "p",
+      "text": "✅ Xe du lịch đưa đón theo chương trình"
+    },
+    {
+      "type": "p",
+      "text": "✅ 01 bữa sáng (tô/ly), 01 bữa trưa (set menu 150.000đ/khách)"
+    },
+    {
+      "type": "p",
+      "text": "✅ Vé tham quan và dịch vụ Trà Sư (xuồng chèo, tắc ráng)"
+    },
+    {
+      "type": "p",
+      "text": "✅ Hướng dẫn viên du lịch chuyên nghiệp"
+    },
+    {
+      "type": "p",
+      "text": "✅ Bảo hiểm du lịch theo quy định"
+    },
+    {
+      "type": "p",
+      "text": "✅ Nón du lịch, khăn lạnh, nước suối phục vụ đoàn"
+    },
+    {
+      "type": "h3",
+      "text": "❌ GIÁ TOUR KHÔNG BAO GỒM"
+    },
+    {
+      "type": "p",
+      "text": "❌ Chi phí cá nhân, mua sắm ngoài chương trình"
+    },
+    {
+      "type": "p",
+      "text": "❌ Bữa ăn nhẹ dọc đường tại Tiền Giang (tự túc)"
+    },
+    {
+      "type": "p",
+      "text": "❌ Thuế VAT (nếu xuất hóa đơn)"
+    },
+    {
+      "type": "h3",
+      "text": "📌 ĐIỀU KHOẢN & LƯU Ý"
+    },
+    {
+      "type": "p",
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+    },
+    {
+      "type": "p",
+      "text": "📌 Đặt cọc 30–50% khi đăng ký, thanh toán trước ngày khởi hành"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trẻ dưới 5 tuổi ngồi cùng bố mẹ: mỗi người lớn kèm tối đa 1 bé, bé thứ 2 trở lên mua ghế riêng"
+    },
+    {
+      "type": "p",
+      "text": "📌 Bé ngồi cùng bố mẹ vẫn được tính vào tổng số người trên xe theo Luật Trật tự, an toàn giao thông đường bộ 2024, công ty chỉ nhận khi xe còn đủ chỗ. Trường hợp đặc biệt về trẻ em, vui lòng liên hệ tư vấn"
+    },
+    {
+      "type": "p",
+      "text": "📌 Lịch trình, thứ tự tham quan có thể điều chỉnh theo điều kiện thực tế nhưng đảm bảo đầy đủ điểm"
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách tự bảo quản tài sản cá nhân"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trường hợp bất khả kháng, công ty sẽ sắp xếp phương án phù hợp"
+    },
+    {
+      "type": "h3",
+      "text": "🏢 ĐI ĐOÀN RIÊNG – HỘI NHÓM, CÔNG ĐOÀN, TRƯỜNG HỌC?"
+    },
+    {
+      "type": "p",
+      "text": "TodayTourist thiết kế riêng chương trình Châu Đốc theo nhu cầu của từng đoàn:"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Đoàn hành hương:</strong> kéo dài 2 ngày 1 đêm, nghỉ đêm tại Châu Đốc, kết hợp thêm Núi Cấm theo yêu cầu"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Học sinh – sinh viên:</strong> tìm hiểu hệ sinh thái rừng ngập nước Trà Sư và lịch sử khai khẩn vùng đất An Giang"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Công đoàn, doanh nghiệp:</strong> sinh hoạt tập thể, hoạt náo trên xe, quà tặng riêng cho đoàn"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Tùy chọn</strong> loại xe, thực đơn, giờ khởi hành"
+    },
+    {
+      "type": "p",
+      "text": "📞 Nhận báo giá đoàn: <strong>Mr. Anh Văn – 0902 898 726</strong>"
+    },
+    {
+      "type": "h3",
+      "text": "❓ CÂU HỎI THƯỜNG GẶP"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Tour Châu Đốc khởi hành lúc mấy giờ?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Xe đón khách từ 21h00 – 22h00 tối hôm trước, quý khách nghỉ đêm trên xe và đến Châu Đốc vào rạng sáng."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Tour về đến Biên Hòa lúc nào?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Đoàn về đến điểm tập kết vào buổi tối cùng ngày và trả khách tận nơi."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Vé rừng tràm Trà Sư đã bao gồm chưa?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Đã bao gồm vé tham quan và dịch vụ xuồng chèo, tắc ráng trong rừng tràm."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Bữa tối tính thế nào?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Trên đường về, xe dừng tại Tiền Giang để quý khách dùng bữa nhẹ, chi phí tự túc."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Bé dưới 5 tuổi có cần mua vé không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Không bắt buộc. Bé ngồi cùng bố mẹ được miễn phí; nếu muốn bé có ghế riêng, phụ thu 50% giá người lớn. Tour đi xe đêm khoảng 5–6 tiếng, công ty khuyên nên mua ghế riêng để bé và gia đình thoải mái hơn."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Công ty có xuất hóa đơn VAT không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Có. Giá tour chưa bao gồm VAT, quý khách cần hóa đơn vui lòng báo khi đăng ký."
+    },
+    {
+      "type": "h3",
+      "text": "📞 THÔNG TIN LIÊN HỆ ĐẶT TOUR"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Công ty TNHH Du Lịch Ngày Hôm Nay (Today Tourist)</strong>"
+    },
+    {
+      "type": "p",
+      "text": "📍 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai"
+    },
+    {
+      "type": "p",
+      "text": "📞 Mr. Anh Văn – Phòng Kinh Doanh: 0902 898 726"
+    },
+    {
+      "type": "p",
+      "text": "☎️ Hotline: 0913 78 76 47 (Lê Sang)"
+    },
+    {
+      "type": "p",
+      "text": "✉️ lesangtravel@gmail.com"
+    },
+    {
+      "type": "p",
+      "text": "🌐 todaytourist.com"
+    },
+    {
+      "type": "p",
+      "text": "👉 <strong>Tour ghép đoàn hàng tuần, số chỗ có hạn – nhắn Zalo 0902 898 726 để giữ chỗ sớm!</strong>"
     }
-  ]
+  ],
+  "hidden": false
 }
