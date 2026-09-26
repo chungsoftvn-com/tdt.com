@@ -90,14 +90,12 @@
       "text": "💡 <em>Bạn có biết: Theo truyền thuyết, Bà Phi Yến là thứ phi của chúa Nguyễn Ánh, bị giam ở Côn Đảo vì can ngăn chúa cầu viện ngoại bang. Người dân trên đảo lập miếu thờ bà để tưởng nhớ tấm lòng trung trinh.</em>"
     },
     {
-      "type": "img",
-      "src": "/content/vi/images/pasted-1790353668122-0.jpg",
-      "alt": "Miếu Bà Phi Yến (An Sơn Miếu) – tour Côn Đảo 2N2Đ"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790353668122-0.jpg\" alt=\"Miếu Bà Phi Yến (An Sơn Miếu) – tour Côn Đảo 2N2Đ\"></figure>"
     },
     {
-      "type": "img",
-      "src": "/content/vi/images/pasted-1790353668122-1.jpg",
-      "alt": "Chùa Núi Một (Vân Sơn Tự) nhìn ra vịnh Côn Sơn – tour Côn Đảo 2N2Đ"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790353668122-1.jpg\" alt=\"Chùa Núi Một (Vân Sơn Tự) nhìn ra vịnh Côn Sơn – tour Côn Đảo 2N2Đ\"></figure>"
     },
     {
       "type": "p",
@@ -119,9 +117,8 @@
       "text": "💡 <em>Bạn có biết: Đầm Trầu nằm ngay cạnh đường băng sân bay Côn Đảo. Đang tắm biển mà ngẩng lên thấy máy bay hạ cánh sát trên đầu là trải nghiệm hiếm nơi nào có.</em>"
     },
     {
-      "type": "img",
-      "src": "/content/vi/images/pasted-1790353668122-2.jpg",
-      "alt": "Bãi biển Đầm Trầu hoang sơ – tour Côn Đảo 2N2Đ"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790353668122-2.jpg\" alt=\"Bãi biển Đầm Trầu hoang sơ – tour Côn Đảo 2N2Đ\"></figure>"
     },
     {
       "type": "p",
@@ -132,9 +129,8 @@
       "text": "💡 <em>Bạn có biết: Chị Võ Thị Sáu hy sinh tại Côn Đảo năm 1952 khi mới 19 tuổi. Mộ chị lúc nào cũng ngát hương hoa và những lễ vật giản dị như gương, lược, nón lá do du khách khắp nơi mang đến.</em>"
     },
     {
-      "type": "img",
-      "src": "/content/vi/images/pasted-1790353668122-3.jpg",
-      "alt": "Viếng mộ Cô Sáu tại Nghĩa trang Hàng Dương – tour Côn Đảo 2N2Đ"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790353668122-3.jpg\" alt=\"Viếng mộ Cô Sáu tại Nghĩa trang Hàng Dương – tour Côn Đảo 2N2Đ\"></figure>"
     },
     {
       "type": "h3",
@@ -158,9 +154,8 @@
       "text": "💡 <em>Bạn có biết: Chuồng Cọp Pháp từng được giữ bí mật suốt nhiều năm, đến năm 1970 mới bị báo chí quốc tế phanh phui, gây chấn động dư luận thế giới.</em>"
     },
     {
-      "type": "img",
-      "src": "/content/vi/images/pasted-1790353668122-4.jpg",
-      "alt": "Chuồng Cọp, nhà tù Côn Đảo – tour Côn Đảo 2N2Đ"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790353668122-4.jpg\" alt=\"Chuồng Cọp, nhà tù Côn Đảo – tour Côn Đảo 2N2Đ\"></figure>"
     },
     {
       "type": "p",
