@@ -1,167 +1,354 @@
 {
   "slug": "tour-phan-thiet-2n1d",
-  "name": "Tour Phan Thiết 2N1Đ - Giá 1.690.000đ",
+  "name": "Tour Phan Thiết 2 Ngày 1 Đêm từ Đồng Nai – Mũi Né, Bàu Trắng",
   "region": "domestic",
   "region_name": "Nam Trung Bộ",
-  "departure": "Biên Hòa / TP.HCM",
+  "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "2 ngày 1 đêm",
   "price": "1.690.000đ/khách",
   "image": "phan-thiết---today-tourist.webp",
-  "desc": "Mũi Né - đồi cát vàng, suối Tiên, resort đẹp bậc nhất trong hành trình 2 ngày 1 đêm giá 1.690.000đ, khởi hành hàng tuần từ Biên Hòa.",
+  "desc": "Tour Phan Thiết 2 ngày 1 đêm từ TP. Đồng Nai, đón tận nơi Biên Hòa: Bikini Beach, đồi cát Bàu Trắng, khách sạn 3 sao. Giá 1.690.000đ. Hotline 0902 898 726.",
   "highlights": [
-    "Đồi cát bay Mũi Né",
-    "Suối Tiên - Lầu Ông Hoàng",
-    "Hải sản tươi ngon",
-    "Khách sạn gần biển"
+    "Check-in Bikini Beach Mũi Né",
+    "Ngắm bình minh trên đồi cát Bàu Trắng",
+    "Viếng chùa Thiện Quang giữa vùng đồi cát",
+    "Nghỉ khách sạn/resort 3 sao, tự do tắm biển, hồ bơi",
+    "Mua đặc sản thanh long, mực một nắng Phan Thiết",
+    "Đón tận nơi khu vực Biên Hòa"
   ],
   "itinerary": [],
   "content": [
     {
       "type": "p",
-      "text": "🚍 ĐƯA RƯỚC TẬN NƠI NỘI Ô TP. BIÊN HÒA 👨‍👩‍👧‍👦 Tour ghép đoàn hàng tuần – Khởi hành từ 10 khách"
+      "text": "🏖️ <strong>Phan Thiết – Mũi Né: biển xanh, cát trắng và nắng vàng chỉ cách vài giờ xe.</strong>"
     },
     {
       "type": "p",
-      "text": "Chương trình áp dụng cho khách lẻ, gia đình, nhóm bạn đăng ký ghép đoàn. Đối với đoàn riêng, gia đình, cơ quan, doanh nghiệp, đoàn thể có nhu cầu thiết kế chương trình theo yêu cầu (thời gian, điểm tham quan, tiêu chuẩn dịch vụ), vui lòng liên hệ để được tư vấn chi tiết."
+      "text": "Cuối tuần này, thay vì ở nhà, hãy để TodayTourist đưa bạn đến \"thủ đô resort\" của miền Nam: check-in Bikini Beach, ngắm bình minh trên đồi cát trắng mênh mông, tắm biển thỏa thích và mang về cả giỏ đặc sản. Xe đón tận nơi, bạn chỉ việc nghỉ ngơi."
+    },
+    {
+      "type": "p",
+      "text": "📅 <strong>Thời gian:</strong> 2 ngày 1 đêm"
+    },
+    {
+      "type": "p",
+      "text": "🚍 <strong>Phương tiện:</strong> xe du lịch đưa đón suốt tuyến"
+    },
+    {
+      "type": "p",
+      "text": "🏨 <strong>Lưu trú:</strong> khách sạn/resort tiêu chuẩn 3 sao gần biển"
+    },
+    {
+      "type": "p",
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+    },
+    {
+      "type": "p",
+      "text": "📞 <strong>Tư vấn:</strong> Mr. Anh Văn (Phòng Kinh Doanh) – 0902 898 726"
+    },
+    {
+      "type": "h3",
+      "text": "🚐 PHƯƠNG ÁN ĐƯA ĐÓN KHÁCH LINH HOẠT – TIỆN LỢI"
+    },
+    {
+      "type": "p",
+      "text": "Xe du lịch TodayTourist đưa đón tận nơi trong nội ô trung tâm Biên Hòa (TP. Đồng Nai), đón quý khách về điểm tập kết tại trụ sở công ty (80 Đặng Nguyên, KP 29, P. Long Bình) trước khi khởi hành."
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách ở dọc tuyến đường đoàn đi qua sẽ được đón ngay trên đường, không cần về điểm tập kết."
+    },
+    {
+      "type": "h3",
+      "text": "☀️ NGÀY 01: TP. ĐỒNG NAI / TP.HCM – BIKINI BEACH – MŨI NÉ"
+    },
+    {
+      "type": "p",
+      "text": "🌅 <strong>Buổi sáng:</strong> Xe và hướng dẫn viên TodayTourist đón quý khách tại điểm tập kết, khởi hành đi Mũi Né. Dừng chân dùng bữa sáng tại nhà hàng ở Dầu Giây."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Check-in Bikini Beach – khu bãi biển công cộng được đầu tư mới với các tiểu cảnh và khu nghỉ chân view biển hiện đại, điểm sống ảo được giới trẻ yêu thích khi đến Mũi Né"
+      ]
+    },
+    {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790428338266-0.jpg\" alt=\" Bikini Beach Mũi Né – tour Phan Thiết 2N1Đ\"></figure>"
+    },
+    {
+      "type": "p",
+      "text": "🍽️ <strong>Buổi trưa:</strong> Về trung tâm Phan Thiết dùng bữa trưa tại nhà hàng. Sau đó về khách sạn/resort: nếu phòng đã sẵn sàng, HDV hỗ trợ nhận phòng sớm; nếu chưa đến giờ (sau 14h), quý khách gửi hành lý và nghỉ tại khu vực chung."
+    },
+    {
+      "type": "p",
+      "text": "🏊 <strong>Buổi chiều:</strong> Tự do nghỉ dưỡng, <strong>tắm biển, thư giãn tại hồ bơi</strong> hoặc dạo biển ngắm hoàng hôn."
+    },
+    {
+      "type": "p",
+      "text": "💡 <em>Bạn có biết: Mũi Né được mệnh danh là \"thủ đô resort\" với hàng trăm khu nghỉ dưỡng nằm dọc bờ biển, đặc biệt hấp dẫn với những người yêu thích thể thao lướt ván diều.</em>"
+    },
+    {
+      "type": "p",
+      "text": "🌙 <strong>Buổi tối:</strong> Ăn tối tại nhà hàng. Tự do dạo biển, khám phá Mũi Né – Phan Thiết về đêm. Nghỉ đêm tại khách sạn/resort."
+    },
+    {
+      "type": "h3",
+      "text": "🏜️ NGÀY 02: ĐỒI CÁT BÀU TRẮNG – CHÙA THIỆN QUANG – TP. ĐỒNG NAI / TP.HCM"
+    },
+    {
+      "type": "p",
+      "text": "🌄 <strong>Dự kiến 05h00:</strong> Quý khách chọn 1 trong 2 phương án:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Lựa chọn 1 – Ngắm bình minh trên Đồi Cát Trắng (Bàu Trắng): đồi cát trắng tự nhiên rộng lớn hiếm có ở Việt Nam, những đụn cát uốn lượn xen kẽ hồ nước ngọt quanh năm. Xe jeep, mô tô địa hình tự túc nếu có nhu cầu",
+        "Lựa chọn 2 – Nghỉ ngơi tại resort: tự do tắm biển, thư giãn hồ bơi"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "💡 <em>Bạn có biết: Bàu Trắng được du khách ví như \"tiểu sa mạc Sahara\" của Việt Nam. Đến lúc bình minh, cát trắng ánh hồng và gió nhẹ là thời điểm đẹp nhất để chụp ảnh.</em>"
+    },
+    {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790428338266-1.jpg\" alt=\"Đồi cát Bàu Trắng lúc bình minh – tour Phan Thiết 2N1Đ\"></figure>"
+    },
+    {
+      "type": "p",
+      "text": "🍳 <strong>Buổi sáng:</strong> Ăn sáng buffet tại khách sạn, tự do tắm biển và sử dụng tiện ích nơi lưu trú."
+    },
+    {
+      "type": "p",
+      "text": "🕯️ <strong>Dự kiến 10h30:</strong> Trả phòng, tiếp tục hành trình:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Viếng Chùa Thiện Quang – ngôi chùa kiến trúc đẹp, không gian thanh tịnh giữa vùng đồi cát",
+        "Mua đặc sản Phan Thiết: thanh long, mực một nắng, hải sản khô..."
+      ]
+    },
+    {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790428338267-2.jpg\" alt=\"Chùa Thiện Quang giữa vùng đồi cát – tour Phan Thiết 2N1Đ\"></figure>"
+    },
+    {
+      "type": "p",
+      "text": "🍽️ <strong>Buổi trưa:</strong> Ăn trưa tại nhà hàng, khởi hành về TP. Đồng Nai / TP.HCM. Xe dừng chân cho quý khách nghỉ ngơi, mua sắm dọc tuyến."
+    },
+    {
+      "type": "p",
+      "text": "🏠 <strong>Buổi chiều:</strong> Về đến điểm tập kết. HDV chia tay đoàn, kết thúc chương trình."
+    },
+    {
+      "type": "h3",
+      "text": "💰 GIÁ TOUR"
+    },
+    {
+      "type": "p",
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 1.590.000đ/khách"
+    },
+    {
+      "type": "p",
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 1.190.000đ/khách (ngủ chung với bố mẹ)"
+    },
+    {
+      "type": "p",
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 795.000đ nếu có ghế riêng"
+    },
+    {
+      "type": "h3",
+      "text": "✅ GIÁ TOUR BAO GỒM"
+    },
+    {
+      "type": "p",
+      "text": "✅ Xe du lịch đưa đón tận nơi khu vực Biên Hòa"
+    },
+    {
+      "type": "p",
+      "text": "✅ Khách sạn/resort tiêu chuẩn 3 sao (2–4 khách/phòng)"
+    },
+    {
+      "type": "p",
+      "text": "✅ Ăn uống theo chương trình: 01 bữa sáng buffet khách sạn, 01 bữa sáng Dầu Giây (tô/ly), 03 bữa chính (set menu 150.000đ/khách)"
+    },
+    {
+      "type": "p",
+      "text": "✅ Vé tham quan các điểm trong chương trình"
+    },
+    {
+      "type": "p",
+      "text": "✅ Hướng dẫn viên du lịch chuyên nghiệp"
+    },
+    {
+      "type": "p",
+      "text": "✅ Bảo hiểm du lịch theo quy định"
+    },
+    {
+      "type": "p",
+      "text": "✅ Nước suối, khăn lạnh phục vụ đoàn"
+    },
+    {
+      "type": "h3",
+      "text": "❌ GIÁ TOUR KHÔNG BAO GỒM"
+    },
+    {
+      "type": "p",
+      "text": "❌ Chi phí cá nhân, cà phê, mua sắm ngoài chương trình"
+    },
+    {
+      "type": "p",
+      "text": "❌ Xe jeep, mô tô địa hình tại Bàu Trắng"
+    },
+    {
+      "type": "p",
+      "text": "❌ Thuế VAT (nếu xuất hóa đơn)"
+    },
+    {
+      "type": "h3",
+      "text": "📌 ĐIỀU KHOẢN & LƯU Ý"
+    },
+    {
+      "type": "p",
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+    },
+    {
+      "type": "p",
+      "text": "📌 Đặt cọc 30–50% khi đăng ký, thanh toán trước ngày khởi hành"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trẻ dưới 5 tuổi ngồi cùng bố mẹ: mỗi người lớn kèm tối đa 1 bé, bé thứ 2 trở lên mua ghế riêng"
+    },
+    {
+      "type": "p",
+      "text": "📌 Bé ngồi cùng bố mẹ vẫn được tính vào tổng số người trên xe theo Luật Trật tự, an toàn giao thông đường bộ 2024, công ty chỉ nhận khi xe còn đủ chỗ. Trường hợp đặc biệt về trẻ em, vui lòng liên hệ tư vấn"
+    },
+    {
+      "type": "p",
+      "text": "📌 Lịch trình, thứ tự tham quan có thể điều chỉnh theo điều kiện thực tế nhưng đảm bảo đầy đủ điểm"
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách tự bảo quản tài sản cá nhân"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trường hợp bất khả kháng, công ty sẽ sắp xếp phương án phù hợp"
+    },
+    {
+      "type": "h3",
+      "text": "🏢 ĐI ĐOÀN RIÊNG – DOANH NGHIỆP, TRƯỜNG HỌC, CƠ QUAN?"
+    },
+    {
+      "type": "p",
+      "text": "TodayTourist thiết kế riêng chương trình Phan Thiết theo mục tiêu và ngân sách của từng đơn vị:"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Teambuilding trên bãi biển Mũi Né:</strong> chương trình theo chủ đề và thông điệp của doanh nghiệp"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Gala dinner, tiệc tối tại resort:</strong> sân khấu, âm thanh, ánh sáng, MC và hoạt náo viên chuyên nghiệp"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Lửa trại, BBQ bãi biển:</strong> gắn kết tập thể buổi tối"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Học tập trải nghiệm</strong> dành cho đoàn học sinh – sinh viên"
+    },
+    {
+      "type": "p",
+      "text": "📞 Nhận báo giá đoàn: <strong>Mr. Anh Văn – 0902 898 726</strong>"
+    },
+    {
+      "type": "h3",
+      "text": "❓ CÂU HỎI THƯỜNG GẶP"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Tour Phan Thiết đón khách ở đâu?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Xe đón tận nơi trong nội ô trung tâm Biên Hòa. Khách ở dọc tuyến đường đi Phan Thiết được đón ngay trên đường."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Bao nhiêu khách thì tour khởi hành?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Tour ghép đoàn khởi hành hàng tuần, từ 10 khách trở lên."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Không muốn dậy sớm đi Bàu Trắng thì sao?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Quý khách có thể ở lại khách sạn/resort nghỉ ngơi, tắm biển. Buổi sáng ngày 2 có sẵn 2 lựa chọn."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Bé dưới 5 tuổi có cần mua vé không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Không bắt buộc. Bé ngồi cùng bố mẹ được miễn phí; nếu muốn bé có ghế riêng, phụ thu 50% giá người lớn. Quãng đường đi Phan Thiết khá dài, công ty khuyên nên mua ghế riêng để bé và gia đình thoải mái hơn."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Công ty có xuất hóa đơn VAT không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Có. Giá tour chưa bao gồm VAT, quý khách cần hóa đơn vui lòng báo khi đăng ký."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Đoàn công ty muốn kết hợp teambuilding, gala dinner được không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Được. Đoàn riêng được thiết kế chương trình theo yêu cầu, liên hệ Mr. Anh Văn – 0902 898 726 để nhận báo giá."
+    },
+    {
+      "type": "h3",
+      "text": "📞 THÔNG TIN LIÊN HỆ ĐẶT TOUR"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Công ty TNHH Du Lịch Ngày Hôm Nay (Today Tourist)</strong>"
+    },
+    {
+      "type": "p",
+      "text": "📍 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai"
     },
     {
       "type": "p",
       "text": "📞 Mr. Anh Văn – Phòng Kinh Doanh: 0902 898 726"
     },
     {
-      "type": "h2",
-      "text": "📍 PHƯƠNG ÁN ĐƯA ĐÓN KHÁCH LINH HOẠT – TIỆN LỢI"
+      "type": "p",
+      "text": "☎️ Hotline: 0913 78 76 47 (Lê Sang)"
     },
     {
       "type": "p",
-      "text": "🚐 Xe du lịch đời mới TodayTourist đưa đón tận nơi trong nội ô TP. Biên Hòa theo các tuyến cố định:"
+      "text": "✉️ lesangtravel@gmail.com"
     },
     {
       "type": "p",
-      "text": "🟢 Tuyến 1: Ngã 4 Tân Phong → Quảng Trường Tỉnh → Bến xe Biên Hòa → Ngã 4 Vũng Tàu"
+      "text": "🌐 todaytourist.com"
     },
     {
       "type": "p",
-      "text": "🟢 Tuyến 2: Cổng 11 → Cây xăng Suối Linh (Tam Hiệp) → Ngã 4 AMATA → Bệnh viện Đồng Nai"
-    },
-    {
-      "type": "p",
-      "text": "🟢 Tuyến 3 – Dọc QL1A: BV Thống Nhất → Ngã 3 Trị An → Trảng Bom → Dầu Giây"
-    },
-    {
-      "type": "h2",
-      "text": "🗓️ CHƯƠNG TRÌNH TOUR CHI TIẾT"
-    },
-    {
-      "type": "h3",
-      "text": "🌅 NGÀY 01: BIÊN HÒA / TP.HCM – PHAN THIẾT – MŨI NÉ"
-    },
-    {
-      "type": "p",
-      "text": "⏰ 05:00 – 05:30 | 🚍 ĐÓN KHÁCH – KHỞI HÀNH Xe và Hướng dẫn viên TodayTourist đón Quý khách tại điểm hẹn. Đoàn ổn định chỗ ngồi, HDV giới thiệu chương trình, lộ trình và khởi hành đi Phan Thiết ."
-    },
-    {
-      "type": "p",
-      "text": "🍽️ Dừng chân ăn sáng tại Dầu Giây Quý khách dùng bữa sáng tại nhà hàng (theo chương trình)."
-    },
-    {
-      "type": "p",
-      "text": "⏰ 10:00 | ĐẾN PHAN THIẾT – THAM QUAN"
-    },
-    {
-      "type": "p",
-      "text": "🚐 Xe đưa đoàn tham quan: 🏖️ Bikini Beach Phan Thiết Quý khách tự do tham quan, chụp ảnh check-in tại điểm đến mới mẻ, hiện đại ven biển."
-    },
-    {
-      "type": "img",
-      "src": "https://todaytourist.com/content/vi/images/0324-1-3.png",
-      "alt": "Bikini Beach Phan Thiết - tour Phan Thiết 2N1Đ TodayTourist"
-    },
-    {
-      "type": "p",
-      "text": "🍽️ 12:00 | ĂN TRƯA – NHẬN PHÒNG KHÁCH SẠN / RESORT Đoàn dùng bữa trưa tại nhà hàng địa phương. Sau đó về khách sạn/resort nhận phòng, nghỉ ngơi."
-    },
-    {
-      "type": "p",
-      "text": "🌴 BUỔI CHIỀU | TỰ DO NGHỈ DƯỠNG – TẮM BIỂN Quý khách tự do tắm biển Mũi Né, thư giãn tại hồ bơi hoặc dạo biển."
-    },
-    {
-      "type": "p",
-      "text": "🍽️ 18:00 | ĂN TỐI Đoàn dùng bữa tối tại nhà hàng. Sau bữa tối, Quý khách tự do dạo biển, khám phá Phan Thiết về đêm ."
-    },
-    {
-      "type": "p",
-      "text": "🛏️ Nghỉ đêm tại khách sạn / resort Phan Thiết"
-    },
-    {
-      "type": "h3",
-      "text": "🌤️ NGÀY 02: PHAN THIẾT – BIÊN HÒA / TP.HCM"
-    },
-    {
-      "type": "p",
-      "text": "🌄 SÁNG SỚM | THAM QUAN ĐỒI CÁT TRẮNG (BÀU TRẮNG) Quý khách dậy sớm, xe đưa đoàn tham quan Đồi Cát Trắng – Bàu Trắng , chiêm ngưỡng cảnh quan cát trắng mênh mông, chụp ảnh lưu niệm. (Các dịch vụ xe jeep, mô tô địa hình tự túc chi phí nếu có nhu cầu)"
-    },
-    {
-      "type": "p",
-      "text": "🍽️ 07:00 | ĂN SÁNG TẠI KHÁCH SẠN Quý khách dùng buffet sáng, nghỉ ngơi."
-    },
-    {
-      "type": "img",
-      "src": "/content/vi/images/tour-xe-jeep-mui-ne-voi-anh-nhiep-anh-chuyen-nghiep-de-thuong-2.jpg",
-      "alt": "Tour xe jeep Mũi Né với anh nhiếp ảnh chuyên nghiệp dễ thương"
-    },
-    {
-      "type": "p",
-      "text": "⏰ 10:30 | THAM QUAN – MUA SẮM"
-    },
-    {
-      "type": "p",
-      "text": "🚐 Xe đưa đoàn tham quan: <br>🗼 Tháp Poshanu (Chăm Pa) – công trình kiến trúc Chăm cổ mang giá trị lịch sử – văn hóa."
-    },
-    {
-      "type": "img",
-      "src": "/content/vi/images/69966-thap-poshanu-phan-thiet-lich-su.jpg",
-      "alt": "Tháp Chàm Poshanu Phan Thiết: Tinh hoa kiến trúc người Chăm Pa xưa"
-    },
-    {
-      "type": "p",
-      "text": "🛍️ Mua sắm đặc sản Phan Thiết : thanh long, mực một nắng, hải sản khô…"
-    },
-    {
-      "type": "p",
-      "text": "🍽️ 11:30 | ĂN TRƯA – KHỞI HÀNH VỀ Sau bữa trưa, đoàn khởi hành về lại Biên Hòa / TP.HCM . Trên đường về, xe dừng chân cho Quý khách nghỉ ngơi, mua sắm dọc tuyến."
-    },
-    {
-      "type": "p",
-      "text": "⏰ 17:30 – 18:30 | VỀ ĐẾN BIÊN HÒA / TP.HCM Xe đưa đoàn về điểm đón ban đầu. <br>🤝 Kết thúc chương trình – HDV chia tay và hẹn gặp lại Quý khách."
-    },
-    {
-      "type": "h2",
-      "text": "💰 GIÁ TOUR TRỌN GÓI"
-    },
-    {
-      "type": "p",
-      "text": "💵 1.690.000 VNĐ/khách (Người lớn)<br> 💵 1.180.000 VNĐ/khách (Trẻ em từ 05 – dưới 10 tuổi) <br>👶 Trẻ em dưới 05 tuổi: MIỄN PHÍ (Gia đình tự lo cho bé)"
-    },
-    {
-      "type": "p",
-      "text": "👨‍👩‍👧‍👦 Áp dụng tour ghép đoàn 🚍 Khởi hành từ TP. Biên Hòa"
-    },
-    {
-      "type": "h2",
-      "text": "🎁 GIÁ TOUR BAO GỒM"
-    },
-    {
-      "type": "p",
-      "text": "✅ Xe du lịch đời mới, đưa rước tận nơi nội ô Biên Hòa <br>✅ Khách sạn / Resort tiêu chuẩn 3 sao (2–4 khách/phòng) <br>✅ Ăn uống theo chương trình: 01 bữa sáng buffet khách sạn, 01 bữa sáng Dầu Giây (Tô/ly), 03 bữa chính (Set menu 150.000đ/khách)<br>✅ Vé tham quan các điểm trong chương trình <br>✅ Hướng dẫn viên du lịch chuyên nghiệp <br>✅ Bảo hiểm du lịch theo quy định <br>✅ Nước suối, khăn lạnh phục vụ đoàn"
-    },
-    {
-      "type": "h2",
-      "text": "🚫 GIÁ TOUR KHÔNG BAO GỒM"
-    },
-    {
-      "type": "p",
-      "text": "❌ Chi phí cá nhân, café, mua sắm ngoài chương trình ❌ Thuế VAT (nếu xuất hóa đơn)"
+      "text": "👉 <strong>Tour ghép đoàn hàng tuần, số chỗ có hạn – nhắn Zalo 0902 898 726 để giữ chỗ sớm!</strong>"
     }
   ],
   "hidden": false
