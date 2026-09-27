@@ -1,7 +1,7 @@
 {
   "hero_kicker": "Cùng bạn đi khắp năm châu",
   "hero_title": "Công ty du lịch Đồng Nai – Tour trong nước, quốc tế & Teambuilding",
-  "hero_text": "Hơn 15 năm tổ chức tour trọn gói, teambuilding – gala dinner cho khách lẻ, gia đình, doanh nghiệp, trường học, cơ quan và đoàn thể. Khởi hành từ Biên Hòa – TP.HCM, thiết kế chương trình theo yêu cầu, báo giá trong ngày.",
+  "hero_text": "Hơn 15 năm tổ chức tour trọn gói, teambuilding – gala dinner cho khách lẻ, gia đình, doanh nghiệp, trường học, cơ quan và đoàn thể. Khởi hành từ Biên Hòa / TP. Đồng Nai – TP.HCM và các tỉnh, thiết kế chương trình theo yêu cầu, báo giá trong ngày.",
   "hero_cta_primary": "Khám phá tour",
   "hero_cta_secondary": "Đặt tour ngay",
   "stats_years": "15+",
@@ -63,11 +63,6 @@
     {
       "id": "blk-hot",
       "type": "hot",
-      "enabled": true
-    },
-    {
-      "id": "custom-muga04l7",
-      "type": "custom",
       "enabled": true
     },
     {
