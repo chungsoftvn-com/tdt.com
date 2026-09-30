@@ -3,6 +3,7 @@
   "name": "Tour Hàn Quốc 5 Ngày 4 Đêm",
   "region": "international",
   "region_name": "Châu Á",
+  "departure": "Biên Hòa / TP.HCM",
   "duration": "5 ngày 4 đêm",
   "price": "15.990.000đ/khách",
   "image": "han-quoc.webp",
@@ -195,5 +196,5 @@
       "text": "✖️ Phí visa Hàn Quốc ✖️ Hộ chiếu còn hạn trên 6 tháng ✖️ Chi phí cá nhân ngoài chương trình ✖️ Vé tham quan ngoài chương trình ✖️ Thuế VAT"
     }
   ],
-  "departure": "Biên Hòa / TP.HCM"
+  "hidden": true
 }
