@@ -3,6 +3,7 @@
   "name": "Tour Thái Lan 5 Ngày 4 Đêm",
   "region": "international",
   "region_name": "Châu Á",
+  "departure": "Biên Hòa / TP.HCM",
   "duration": "5 ngày 4 đêm",
   "price": "7.990.000đ/khách",
   "image": "thai-lan.webp",
@@ -185,5 +186,5 @@
       "text": "✖️ Hộ chiếu còn hạn trên 6 tháng ✖️ Chi phí cá nhân ngoài chương trình ✖️ Các trò chơi tự chọn tại đảo ✖️ Thuế VAT"
     }
   ],
-  "departure": "Biên Hòa / TP.HCM"
+  "hidden": true
 }
