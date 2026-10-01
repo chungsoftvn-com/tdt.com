@@ -85,10 +85,6 @@
       ]
     },
     {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 6 – TRANG CANVA 11</strong> Nhà thờ gỗ Kon Tum · Mô tả ảnh: Nhà thờ gỗ Kon Tum – tour Tây Nguyên 3N3Đ Today Tourist"
-    },
-    {
       "type": "list",
       "items": [
         "Cầu treo Kon Klor – bắc qua dòng sông Đăk Bla huyền thoại chảy ngược về hướng Tây"
@@ -99,8 +95,8 @@
       "text": "💡 <em>Bạn có biết: Sông Đăk Bla là một trong số ít dòng sông ở Việt Nam chảy ngược về hướng Tây thay vì đổ ra biển ở phía Đông.</em>"
     },
     {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 6 – TRANG CANVA 12</strong> Cầu treo Kon Klor · Mô tả ảnh: Cầu treo Kon Klor Kon Tum – tour Tây Nguyên 3N3Đ Today Tourist"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790847034895-0.jpg\" alt=\"Cầu treo Kon Klor Kon Tum – tour Tây Nguyên 3N3Đ Today Tourist\"></figure>"
     },
     {
       "type": "p",
@@ -123,8 +119,8 @@
       ]
     },
     {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 6 – TRANG CANVA 13</strong> Thác Pa Sỹ · Mô tả ảnh: Thác Pa Sỹ Măng Đen – tour Tây Nguyên 3N3Đ Today Tourist"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790847034896-1.jpg\" alt=\"Thác Pa Sỹ Măng Đen – tour Tây Nguyên 3N3Đ Today Tourist\"></figure>"
     },
     {
       "type": "p",
@@ -149,8 +145,8 @@
       "text": "Đến Pleiku, đoàn tham quan <strong>Biển Hồ T'Nưng</strong> – miệng núi lửa ngưng hoạt động hàng triệu năm, được ví như \"đôi mắt Pleiku\" với mặt nước trong xanh giữa rừng thông bạt ngàn"
     },
     {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 6 – TRANG CANVA 14</strong> Biển Hồ T'Nưng · Mô tả ảnh: Biển Hồ T'Nưng Pleiku – tour Tây Nguyên 3N3Đ Today Tourist"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790847034896-2.jpg\" alt=\"Biển Hồ T'Nưng Pleiku – tour Tây Nguyên 3N3Đ Today Tourist\"></figure>"
     },
     {
       "type": "p",
@@ -195,8 +191,8 @@
       ]
     },
     {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 6 – TRANG CANVA 15</strong> Buôn Đôn · Mô tả ảnh: Thuyền độc mộc trên sông Sêrêpôk, Buôn Đôn – tour Tây Nguyên 3N3Đ Today Tourist"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790847034896-3.jpg\" alt=\" Thuyền độc mộc trên sông Sêrêpôk, Buôn Đôn – tour Tây Nguyên 3N3Đ Today Tourist\"></figure>"
     },
     {
       "type": "p",
@@ -244,7 +240,15 @@
     },
     {
       "type": "p",
-      "text": "✅ Hướng dẫn viên chuyên nghiệp, nhiệt tình <br>✅ Bảo hiểm du lịch theo quy định <br>✅ Nón du lịch, nước suối, khăn lạnh phục vụ đoàn"
+      "text": "✅ Hướng dẫn viên chuyên nghiệp, nhiệt tình"
+    },
+    {
+      "type": "p",
+      "text": "✅ Bảo hiểm du lịch theo quy định"
+    },
+    {
+      "type": "p",
+      "text": "✅ Nón du lịch, nước suối, khăn lạnh phục vụ đoàn"
     },
     {
       "type": "h3",
@@ -252,7 +256,11 @@
     },
     {
       "type": "p",
-      "text": "❌ Chi phí cá nhân, ăn uống ngoài chương trình <br>❌ Thuế VAT (nếu xuất hóa đơn)"
+      "text": "❌ Chi phí cá nhân, ăn uống ngoài chương trình"
+    },
+    {
+      "type": "p",
+      "text": "❌ Thuế VAT (nếu xuất hóa đơn)"
     },
     {
       "type": "h3",
@@ -284,7 +292,11 @@
     },
     {
       "type": "p",
-      "text": "📌 Quý khách tự bảo quản tài sản cá nhân <br>📌 Trường hợp bất khả kháng, công ty sẽ sắp xếp phương án phù hợp"
+      "text": "📌 Quý khách tự bảo quản tài sản cá nhân"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trường hợp bất khả kháng, công ty sẽ sắp xếp phương án phù hợp"
     },
     {
       "type": "h3",
@@ -304,7 +316,11 @@
     },
     {
       "type": "p",
-      "text": "✅ <strong>Trải nghiệm văn hóa Tây Nguyên</strong> cho đoàn học sinh – sinh viên <br>✅ <strong>Tùy chọn</strong> tiêu chuẩn khách sạn, thực đơn"
+      "text": "✅ <strong>Trải nghiệm văn hóa Tây Nguyên</strong> cho đoàn học sinh – sinh viên"
+    },
+    {
+      "type": "p",
+      "text": "✅ <strong>Tùy chọn</strong> tiêu chuẩn khách sạn, thực đơn"
     },
     {
       "type": "p",
@@ -340,15 +356,23 @@
     },
     {
       "type": "p",
-      "text": "📍 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai <br>📞 Mr. Anh Văn – 0902 898 726 <br>☎️ Hotline: 0913 78 76 47 (Lê Sang)"
+      "text": "📍 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai"
     },
     {
       "type": "p",
-      "text": "✉️ lesangtravel@gmail.com <br>🌐 todaytourist.com"
+      "text": "📞 Mr. Anh Văn – Phòng Kinh Doanh: 0902 898 726"
     },
     {
       "type": "p",
-      "text": "👉 <strong>Tour ghép đoàn hàng tuần, số chỗ có hạn – nhắn Zalo 0902 898 726 để giữ chỗ sớm!</strong>"
+      "text": "☎️ Hotline: 0913 78 76 47 (Lê Sang)"
+    },
+    {
+      "type": "p",
+      "text": "✉️ lesangtravel@gmail.com"
+    },
+    {
+      "type": "p",
+      "text": "🌐 todaytourist.com"
     }
   ],
   "hidden": false
