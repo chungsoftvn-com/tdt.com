@@ -81,8 +81,8 @@
       ]
     },
     {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 5 – TRANG CANVA 20</strong> Chùa Linh Sơn · Mô tả ảnh: Chùa Linh Sơn Long An, tượng Quan Thế Âm – tour 10 Cảnh Chùa Miền Tây Today Tourist"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790844403193-0.jpg\" alt=\"Chùa Linh Sơn Long An, tượng Quan Thế Âm – tour 10 Cảnh Chùa Miền Tây Today Tourist\"></figure>"
     },
     {
       "type": "p",
@@ -100,8 +100,8 @@
       "text": "💡 <em>Bạn có biết: Thiền viện Trúc Lâm Chánh Giác là nơi tái hiện đầy đủ 4 địa điểm gắn với cuộc đời Đức Phật.</em>"
     },
     {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 5 – TRANG CANVA 21</strong> Trúc Lâm Chánh Giác · Mô tả ảnh: Thiền viện Trúc Lâm Chánh Giác Tiền Giang – tour 10 Cảnh Chùa Miền Tây Today Tourist"
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/pasted-1790844403193-1.jpg\" alt=\"Thiền viện Trúc Lâm Chánh Giác Tiền Giang – tour 10 Cảnh Chùa Miền Tây Today Tourist\"></figure>"
     },
     {
       "type": "p",
@@ -116,10 +116,6 @@
       "items": [
         "Chùa Vĩnh Tràng – kiến trúc kết hợp hài hòa giữa Á và Âu, xếp hạng di tích quốc gia"
       ]
-    },
-    {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 4 – TRANG CANVA 14</strong> Chùa Vĩnh Tràng · Mô tả ảnh: Chùa Vĩnh Tràng Mỹ Tho kiến trúc Á – Âu – tour 10 Cảnh Chùa Miền Tây Today Tourist"
     },
     {
       "type": "list",
@@ -156,7 +152,27 @@
     },
     {
       "type": "p",
-      "text": "✅ Xe du lịch đưa đón tận nơi · ✅ 01 bữa sáng, 01 bữa trưa (set menu 150.000đ/khách) · ✅ Vé tham quan theo chương trình · ✅ Hướng dẫn viên chuyên nghiệp · ✅ Bảo hiểm du lịch · ✅ Nón du lịch, nước suối, khăn lạnh"
+      "text": "✅ Xe du lịch đưa đón tận nơi"
+    },
+    {
+      "type": "p",
+      "text": "✅ 01 bữa sáng, 01 bữa trưa (set menu 150.000đ/khách)"
+    },
+    {
+      "type": "p",
+      "text": "✅ Vé tham quan theo chương trình"
+    },
+    {
+      "type": "p",
+      "text": "✅ Hướng dẫn viên chuyên nghiệp"
+    },
+    {
+      "type": "p",
+      "text": "✅ Bảo hiểm du lịch"
+    },
+    {
+      "type": "p",
+      "text": "✅ Nón du lịch, nước suối, khăn lạnh"
     },
     {
       "type": "h3",
@@ -164,7 +180,11 @@
     },
     {
       "type": "p",
-      "text": "❌ Chi phí cá nhân · ❌ Thuế VAT (nếu xuất hóa đơn)"
+      "text": "❌ Chi phí cá nhân"
+    },
+    {
+      "type": "p",
+      "text": "❌ Thuế VAT (nếu xuất hóa đơn)"
     },
     {
       "type": "h3",
@@ -172,7 +192,27 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết · 📌 Đặt cọc 30–50% khi đăng ký · 📌 Trẻ dưới 5 tuổi ngồi cùng bố mẹ tính vào tổng số người trên xe theo Luật Trật tự 2024 · 📌 Lịch trình có thể điều chỉnh theo điều kiện thực tế · 📌 Quý khách vui lòng ăn mặc kín đáo khi vào chánh điện · 📌 Trường hợp bất khả kháng, công ty sẽ sắp xếp phương án phù hợp"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+    },
+    {
+      "type": "p",
+      "text": "📌 Đặt cọc 30–50% khi đăng ký"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trẻ dưới 5 tuổi ngồi cùng bố mẹ tính vào tổng số người trên xe theo Luật Trật tự 2024"
+    },
+    {
+      "type": "p",
+      "text": "📌 Lịch trình có thể điều chỉnh theo điều kiện thực tế"
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách vui lòng ăn mặc kín đáo khi vào chánh điện"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trường hợp bất khả kháng, công ty sẽ sắp xếp phương án phù hợp"
     },
     {
       "type": "h3",
@@ -208,7 +248,27 @@
     },
     {
       "type": "p",
-      "text": "<strong>Công ty TNHH Du Lịch Ngày Hôm Nay (Today Tourist)</strong> · 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai · Mr. Anh Văn – 0902 898 726 · Hotline: 0913 78 76 47 (Lê Sang) · lesangtravel@gmail.com · todaytourist.com"
+      "text": "<strong>Công ty TNHH Du Lịch Ngày Hôm Nay (Today Tourist)</strong>"
+    },
+    {
+      "type": "p",
+      "text": "📍 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai"
+    },
+    {
+      "type": "p",
+      "text": "📞 Mr. Anh Văn – Phòng Kinh Doanh: 0902 898 726"
+    },
+    {
+      "type": "p",
+      "text": "☎️ Hotline: 0913 78 76 47 (Lê Sang)"
+    },
+    {
+      "type": "p",
+      "text": "✉️ lesangtravel@gmail.com"
+    },
+    {
+      "type": "p",
+      "text": "🌐 todaytourist.com"
     },
     {
       "type": "p",
