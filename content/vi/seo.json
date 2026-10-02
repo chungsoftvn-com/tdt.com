@@ -2,7 +2,7 @@
   "_comment": "SEO metadata theo từng trang (title/description hiển thị trên Google). Key = slug trên URL; 'home' áp cho cả '/' và '/vi/'. Trang chi tiết (tour, tin tức) tự sinh title/description từ chính nội dung của bài nên KHÔNG khai báo ở đây. File này được biên soạn thủ công cho cả 2 ngôn ngữ (xem MANUAL_EN trong site/scripts/translate.py) nên sửa content/en/seo.json trực tiếp.",
   "home": {
     "title": "Công ty du lịch Đồng Nai – Tour trọn gói từ Biên Hòa · TodayTourist",
-    "description": "TodayTourist – công ty du lịch tại Đồng Nai, chuyên tour trong nước, quốc tế, tour đoàn, teambuilding và gala dinner. Đón khách khu vực Biên Hòa, tư vấn và báo giá nhanh."
+    "description": "TodayTourist – công ty du lịch tại Đồng Nai, chuyên tour trong nước, quốc tế, tour đoàn, teambuilding và gala dinner. Đón khách khu vực Biên Hòa. Tư vấn tour: 0902 898 726."
   },
   "about": {
     "title": "Giới thiệu TodayTourist – Công ty du lịch Đồng Nai",
@@ -14,15 +14,15 @@
   },
   "contact": {
     "title": "Liên hệ TodayTourist – Công ty du lịch Đồng Nai",
-    "description": "Liên hệ TodayTourist tại số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai. Tư vấn tour, teambuilding, gala, thuê xe và vé máy bay. Hotline 0913.78.76.47."
+    "description": "Liên hệ TodayTourist tại số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai. Tư vấn tour, teambuilding, gala, thuê xe và vé máy bay: 0902 898 726."
   },
   "ve-may-bay": {
     "title": "Vé máy bay Đồng Nai – Nội địa & quốc tế · TodayTourist",
-    "description": "Đại lý vé máy bay tại Đồng Nai, hỗ trợ khách khu vực Biên Hòa đặt vé nội địa và quốc tế, kiểm tra giá, hành lý, đổi vé và hoàn vé. Hotline 0913.78.76.47."
+    "description": "Đại lý vé máy bay tại Đồng Nai, hỗ trợ khách khu vực Biên Hòa đặt vé nội địa và quốc tế, kiểm tra giá, hành lý, đổi vé và hoàn vé. Liên hệ 0902 898 726."
   },
   "cho-thue-xe": {
     "title": "Cho thuê xe du lịch Đồng Nai 4–45 chỗ · TodayTourist",
-    "description": "Cho thuê xe du lịch tại Đồng Nai: xe 4, 7, 16, 29, 45 chỗ và xe giường nằm. Đón khu vực Biên Hòa đi TP.HCM, sân bay và các tỉnh. Báo giá theo lộ trình."
+    "description": "Cho thuê xe du lịch tại Đồng Nai: xe 4, 7, 16, 29, 45 chỗ và xe giường nằm. Đón khu vực Biên Hòa đi TP.HCM, sân bay và các tỉnh. Báo giá: 0902 898 726."
   },
   "y-kien-khach-hang": {
     "title": "Khách hàng TodayTourist – Hình ảnh đoàn thực tế",
@@ -34,11 +34,11 @@
   },
   "dat-tour": {
     "title": "Đặt tour du lịch – Tư vấn & báo giá · TodayTourist",
-    "description": "Gửi yêu cầu đặt tour cho TodayTourist theo điểm đến, thời gian và số lượng khách. Tư vấn chương trình phù hợp cho khách lẻ, gia đình, nhóm và doanh nghiệp."
+    "description": "Gửi yêu cầu đặt tour cho TodayTourist theo điểm đến, thời gian và số lượng khách. Tư vấn chương trình cho khách lẻ, gia đình, nhóm và doanh nghiệp: 0902 898 726."
   },
   "tim-tour": {
     "title": "Tìm tour du lịch theo điểm đến · TodayTourist",
-    "description": "Tìm tour TodayTourist theo điểm đến, vùng miền và thời gian để lựa chọn hành trình phù hợp: tour biển, Đà Lạt, miền Tây, miền Trung, miền Bắc và tour quốc tế."
+    "description": "Tìm tour TodayTourist theo điểm đến, vùng miền và thời gian: tour biển, Đà Lạt, miền Tây, miền Trung, miền Bắc và tour quốc tế."
   },
   "tin-tuc": {
     "title": "Tin du lịch & hành trình đoàn thực tế · TodayTourist",
@@ -50,6 +50,6 @@
   },
   "chi-duong": {
     "title": "Chỉ đường đến TodayTourist tại Đồng Nai",
-    "description": "Hướng dẫn đường đến văn phòng TodayTourist tại số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai. Xem vị trí văn phòng và thông tin liên hệ."
+    "description": "Hướng dẫn đường đến văn phòng TodayTourist tại số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai. Tư vấn và hỗ trợ: 0902 898 726."
   }
 }
