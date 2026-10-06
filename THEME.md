@@ -85,8 +85,18 @@ dùng `text-[var(--color-hot)]` hoặc khai báo class riêng trong `theme.css`.
 
 - Tải ảnh: `node dev/fb-download.mjs` (dán URL `scontent...` mới — URL Facebook CDN
   hết hạn sau vài ngày, phải lấy lại qua trình duyệt đã đăng nhập).
-- Bản EN: `python site/scripts/translate.py --files content/vi/facebook.json`
-  (CI cũng tự dịch khi file đổi).
+
+## 5b. Ngôn ngữ: CHỈ tiếng Việt
+
+Website đã bỏ bản tiếng Anh (2026-10):
+
+- `LANGS` trong `site/src/lib/content.js` chỉ còn `['vi']` → router `[lang]`,
+  hreflang và sitemap chỉ còn `/vi/…`.
+- Nút chuyển VI|EN trên header đã bỏ; `content/en/**`, `overrides.en.json`,
+  `site/scripts/translate.py` và bước dịch Argos trong CI đã **xoá hoàn toàn**
+  (build nhanh hơn ~10 phút). Muốn có lại tiếng Anh thì xem lịch sử git.
+- URL `/en/…` cũ đang được Google index vẫn trả 200 + canonical về bản `/vi/…`
+  tương ứng (`site/scripts/build-en-redirects.mjs`, chạy sau khi build).
 
 ## 6. Ghi chú hạ tầng
 
@@ -109,7 +119,6 @@ Admin có thể **ẩn một bài khỏi website** mà không xoá — bài vẫ
   - Bài đang ẩn hiện nhãn vàng **“Đang ẩn”** trong danh sách.
 - **Lưu ở đâu**: thêm `"hidden": true` vào chính file nội dung
   (`content/vi/tours/<slug>.json` hoặc `content/vi/news/<slug>.json`).
-  `translate.py` giữ nguyên boolean khi dịch → bản EN cũng bị ẩn theo.
 - **Ẩn có tác dụng gì**: `isVisible()` trong `site/src/lib/content.js` lọc ở
   `getTours()/getNews()/getTour()/getNewsItem()` → bài ẩn KHÔNG xuất hiện ở:
   trang chủ, danh sách tour/tin, trang khu vực (`/tours/khu-vuc/...`), tìm tour,

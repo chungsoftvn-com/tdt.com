@@ -7,7 +7,15 @@ import path from 'node:path';
  * that content, so no text is ever hard-coded in Astro.
  */
 
-export const LANGS = ['vi', 'en'];
+/**
+ * Ngôn ngữ của website — CHỈ tiếng Việt.
+ *
+ * Bản tiếng Anh đã bị bỏ (2026-10): `/en/**` không còn được build, các URL /en/…
+ * cũ được `site/scripts/build-en-redirects.mjs` sinh trang chuyển hướng về bản
+ * /vi/ tương ứng. Vì vậy KHÔNG còn bước dịch Argos trong CI và `content/en` đã xoá.
+ * Đây là nguồn duy nhất quyết định số ngôn ngữ (router `[lang]`, hreflang, sitemap).
+ */
+export const LANGS = ['vi'];
 export const DEFAULT_LANG = 'vi';
 /** Static sub-page slugs rendered by `[lang]/[page].astro`. */
 export const PAGE_SLUGS = [

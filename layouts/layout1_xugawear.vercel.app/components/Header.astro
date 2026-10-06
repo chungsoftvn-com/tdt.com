@@ -1,5 +1,5 @@
 ---
-import { getContent, href, langHref } from '@/lib/content.js';
+import { getContent, href } from '@/lib/content.js';
 import Icon from './Icon.astro';
 
 interface Props {
@@ -8,7 +8,6 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = getContent(lang, 'common');
-const alt = lang === 'vi' ? 'en' : 'vi';
 const current = Astro.url.pathname;
 
 const nav = [
@@ -31,21 +30,17 @@ const isActive = (url: string) => {
       current === '/' ||
       current === url ||
       current === `${url}/` ||
-      current === '/vi' ||
-      current === '/en'
+      current === '/vi'
     );
   }
-  // href()/langHref() luôn trả URL có '/' cuối (build format: 'directory'),
+  // href() luôn trả URL có '/' cuối (build format: 'directory'),
   // nên chỉ cần so tiền tố — nhờ vậy trang chi tiết vẫn sáng đúng mục menu.
   return current === url || current.startsWith(url);
 };
-
-const viLink = langHref('vi', current);
-const enLink = langHref('en', current);
 ---
 
 <header class="sticky top-0 z-50 bg-sand/90 backdrop-blur-md">
-  <!-- Hàng 1: chỉ còn brand + nút VI/EN + nút menu mobile -->
+  <!-- Hàng 1: chỉ còn brand + nút menu mobile -->
   <div class="border-b border-ink/10">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3">
       <a href={href(lang)} class="group flex shrink-0 items-center gap-2.5" aria-label={t.brand_name}>
@@ -69,34 +64,6 @@ const enLink = langHref('en', current);
       </a>
 
       <div class="flex items-center gap-2">
-        <!-- Language switcher (keeps you on the same page) -->
-        <div class="flex items-center rounded-full border border-ink/10 bg-paper p-1 text-xs font-bold">
-          <a
-            href={viLink}
-            lang="vi"
-            title={t.lang_vi}
-            class={
-              lang === 'vi'
-                ? 'rounded-full bg-sea px-2.5 py-1 text-white'
-                : 'rounded-full px-2.5 py-1 text-ink-soft transition-colors hover:text-ink'
-            }
-          >
-            {t.lang_code_vi}
-          </a>
-          <a
-            href={enLink}
-            lang="en"
-            title={t.lang_en}
-            class={
-              lang === 'en'
-                ? 'rounded-full bg-sea px-2.5 py-1 text-white'
-                : 'rounded-full px-2.5 py-1 text-ink-soft transition-colors hover:text-ink'
-            }
-          >
-            {t.lang_code_en}
-          </a>
-        </div>
-
         <!-- Mobile menu button -->
         <button
           type="button"

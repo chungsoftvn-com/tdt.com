@@ -1,11 +1,12 @@
 ---
 /**
  * Header (theme layout2 — "DatViet")
- * 3 tầng: thanh trên (hotline/email/social + VI|EN) → logo + ô tìm kiếm + hotline
+ * 3 tầng: thanh trên (hotline/email/social) → logo + ô tìm kiếm
  * → thanh menu xanh có mega menu (gom tour theo khu vực, tự sinh từ dữ liệu tour).
  * Menu 1 hàng: item nào tràn thì tự gom vào nút "•••" (giống layout1).
+ * Hotline chỉ xuất hiện 1 lần (thanh trên cùng) — không lặp lại ở tầng logo.
  */
-import { getContent, getTours, href, langHref, slugifyVi } from '@/lib/content.js';
+import { getContent, getTours, href, slugifyVi } from '@/lib/content.js';
 import Icon from './Icon.astro';
 
 interface Props {
@@ -71,8 +72,11 @@ const navItems: NavItem[] = [
       },
     ],
   },
-  { label: t.nav_find_tour, url: href(lang, 'tim-tour') },
-  { label: t.nav_book, url: href(lang, 'dat-tour') },
+  // Trang ĐẶT TOUR / TÌM TOUR không còn là mục menu (2026-10): khách xem tour rồi
+  // bấm CTA "Đặt tour" ở cuối thanh menu, còn 2 chỗ trước đây dành cho Thuê xe &
+  // Vé máy bay (trang đã có sẵn: /vi/cho-thue-xe/, /vi/ve-may-bay/).
+  { label: t.nav_car, url: href(lang, 'cho-thue-xe') },
+  { label: t.nav_tickets, url: href(lang, 've-may-bay') },
   { label: t.nav_news, url: href(lang, 'tin-tuc') },
   { label: t.nav_testimonials, url: href(lang, 'y-kien-khach-hang') },
   { label: t.nav_partners, url: href(lang, 'doi-tac') },
@@ -88,16 +92,13 @@ const isActive = (url: string) => {
       current === '/' ||
       current === url ||
       current === `${url}/` ||
-      current === '/vi' ||
-      current === '/en'
+      current === '/vi'
     );
   }
   return current === url || current.startsWith(url);
 };
 
 const tel = String(t.hotline || '').replace(/[^0-9+]/g, '');
-const viLink = langHref('vi', current);
-const enLink = langHref('en', current);
 /**
  * Link mạng xã hội: `social_*` là URL thật; `footer_*` chỉ là NHÃN ("Facebook").
  * Kiểm tra phải bắt đầu bằng http(s) nếu không thì bỏ — tránh lỗi trước đây
@@ -142,25 +143,11 @@ const searchPlaceholder =
             </a>
           ))
         }
-        <span class="dv-topbar-sep">|</span>
-        <span class="flex items-center gap-1">
-          <a
-            href={viLink}
-            lang="vi"
-            aria-current={lang === 'vi' ? 'page' : undefined}
-            class={lang === 'vi' ? 'font-bold underline' : ''}>{t.lang_code_vi}</a>
-          <span class="dv-topbar-sep">/</span>
-          <a
-            href={enLink}
-            lang="en"
-            aria-current={lang === 'en' ? 'page' : undefined}
-            class={lang === 'en' ? 'font-bold underline' : ''}>{t.lang_code_en}</a>
-        </span>
       </div>
     </div>
   </div>
 
-  {/* Tầng 2 — logo + tìm kiếm + hotline */}
+  {/* Tầng 2 — logo + tìm kiếm */}
   <div class="border-b border-black/5 bg-white">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
       <a href={href(lang)} class="flex shrink-0 items-center gap-2.5" aria-label={t.brand_name}>
@@ -200,24 +187,7 @@ const searchPlaceholder =
       </form>
 
       <div class="flex items-center gap-3">
-        <div class="dv-hotline-box hidden pl-4 text-right leading-tight sm:block">
-          <span class="block text-[0.68rem] uppercase text-ink-soft">{t.hotline_label}</span>
-          <strong><a href={`tel:${tel}`}>{t.hotline}</a></strong>
-        </div>
-        <div class="flex items-center gap-1 lg:hidden">
-          <a
-            href={viLink}
-            lang="vi"
-            class={`rounded border border-black/10 px-2 py-1 text-xs font-bold ${
-              lang === 'vi' ? 'bg-sea text-white' : 'text-ink-soft'
-            }`}>{t.lang_code_vi}</a>
-          <a
-            href={enLink}
-            lang="en"
-            class={`rounded border border-black/10 px-2 py-1 text-xs font-bold ${
-              lang === 'en' ? 'bg-sea text-white' : 'text-ink-soft'
-            }`}>{t.lang_code_en}</a>
-        </div>
+        {/* Hotline chỉ hiển thị 1 lần ở thanh trên cùng (tầng 1) — bỏ ô lặp lại ở đây. */}
         <button
           type="button"
           data-mobile-toggle

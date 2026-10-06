@@ -102,15 +102,6 @@
 .dv-search-btn:hover {
   background: var(--color-sea-deep);
 }
-.dv-hotline-box {
-  border-left: 1px solid rgb(0 0 0 / 0.08);
-}
-.dv-hotline-box strong {
-  color: var(--color-hot);
-  font-size: 1.05rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
 
 /* ============================== MENU ==================================== */
 .dv-nav {

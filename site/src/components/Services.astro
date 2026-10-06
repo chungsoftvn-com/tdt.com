@@ -1,9 +1,12 @@
 ---
 /**
  * Services (theme layout2 — "DatViet")
- * 4 thẻ DỊCH VỤ có ẢNH (khối chữ trước đây bị khách chê "toàn chữ").
- * Ảnh lấy từ bìa các bài tin gần đây (ảnh thật của các chuyến đi) — tự sinh,
- * không cần admin nhập thêm; thiếu ảnh thì rơi về ảnh tour rồi placeholder.
+ * 4 thẻ DỊCH VỤ có ẢNH.
+ *
+ * Ảnh lấy từ `home.json` (`service_ticket_image`, `service_car_image`,
+ * `service_team_image`, `service_custom_image`) để MỖI thẻ đúng với mô tả của nó
+ * (máy bay / xe / teambuilding / tour riêng) — admin sửa được ở /admin/pages.
+ * Thẻ nào chưa đặt ảnh thì lùi về ảnh tự động như trước (bìa tin gần đây + bìa tour).
  */
 import { getContent, getNews, getTours } from '@/lib/content.js';
 import Icon from './Icon.astro';
@@ -22,6 +25,7 @@ const imgOf = (name?: string) =>
       ? name
       : `/content/vi/images/${name}`;
 
+/** Dự phòng khi thẻ dịch vụ chưa được đặt ảnh riêng. */
 const photoPool = [
   ...getNews(lang)
     .filter((n) => n && n.image)
@@ -34,10 +38,10 @@ const photoPool = [
 ];
 
 const services = [
-  { icon: 'plane', title: t.service_ticket_title, text: t.service_ticket_text },
-  { icon: 'car', title: t.service_car_title, text: t.service_car_text },
-  { icon: 'users', title: t.service_team_title, text: t.service_team_text },
-  { icon: 'sparkles', title: t.service_custom_title, text: t.service_custom_text },
+  { icon: 'plane', title: t.service_ticket_title, text: t.service_ticket_text, image: t.service_ticket_image },
+  { icon: 'car', title: t.service_car_title, text: t.service_car_text, image: t.service_car_image },
+  { icon: 'users', title: t.service_team_title, text: t.service_team_text, image: t.service_team_image },
+  { icon: 'sparkles', title: t.service_custom_title, text: t.service_custom_text, image: t.service_custom_image },
 ];
 ---
 
@@ -50,7 +54,7 @@ const services = [
       {
         services.map((s, i) => (
           <article class="dv-svc" data-reveal style={`--reveal-delay:${i * 0.06}s`}>
-            <img src={imgOf(photoPool[i])} alt={s.title} loading="lazy" decoding="async" />
+            <img src={imgOf(s.image || photoPool[i])} alt={s.title} loading="lazy" decoding="async" />
             <div class="dv-svc-body">
               <span class="dv-svc-icon">
                 <Icon name={s.icon} class="h-5 w-5" />

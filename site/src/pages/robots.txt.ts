@@ -9,7 +9,7 @@ export const prerender = true;
 
 export const GET: APIRoute = () => {
   const body = [
-    '# robots.txt — tdt2.com',
+    '# robots.txt — todaytourist.com',
     '',
     'User-agent: *',
     'Allow: /',
@@ -23,7 +23,6 @@ export const GET: APIRoute = () => {
     '# Trang công cụ nội bộ của admin (nút "Đồng bộ lại nội dung")',
     'Disallow: /*__sync=1',
     'Disallow: /vi/home/generated/',
-    'Disallow: /en/home/generated/',
     '',
     '# /content/** được crawl bình thường (ảnh tour, tin tức)',
     '',
