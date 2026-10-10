@@ -20,7 +20,11 @@
   "content": [
     {
       "type": "p",
-      "text": "🌴 <strong>Nha Trang – Tắm bùn – Hòn Tằm 3 ngày 2 đêm: một ngày ra đảo xanh giữa vịnh, một buổi chiều ngâm mình trong bùn khoáng nóng.</strong>"
+      "text": "🌴"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Nha Trang – Tắm bùn – Hòn Tằm 3 ngày 2 đêm: một ngày ra đảo xanh giữa vịnh, một buổi chiều ngâm mình trong bùn khoáng nóng.</strong>"
     },
     {
       "type": "p",
@@ -85,6 +89,10 @@
       "text": "💡 <em>Bạn có biết: Tháp Bà Ponagar vẫn là nơi người Việt và người Chăm đến cúng bái mỗi dịp lễ hội Tháp Bà.</em>"
     },
     {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608613237-0.jpg\" alt=\"Tháp Bà Ponagar Nha Trang – tour Nha Trang – Tắm bùn khoáng nóng – Hòn Tằm 3N2Đ Today Tourist\" style=\"width:931px;height:582px\"></figure>"
+    },
+    {
       "type": "p",
       "text": "🌙 <strong>Buổi tối:</strong> Ăn tối tại nhà hàng, quý khách tự do dạo chợ đêm Nha Trang. Nghỉ đêm tại Nha Trang."
     },
@@ -107,6 +115,10 @@
       "text": "💡 <em>Bạn có biết: Hòn Tằm nằm trong vịnh Nha Trang, tên gọi bắt nguồn từ hình dáng hòn đảo giống con tằm nằm giữa biển.</em>"
     },
     {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608613238-1.jpg\" alt=\"Đảo Hòn Tằm Nha Trang – tour Nha Trang – Tắm bùn khoáng nóng – Hòn Tằm 3N2Đ Today Tourist\" style=\"width:931px;height:582px\"></figure>"
+    },
+    {
       "type": "p",
       "text": "🍽️ <strong>Buổi trưa:</strong> Dùng cơm trưa buffet ngay trên đảo."
     },
@@ -119,6 +131,10 @@
       "items": [
         "Tắm bùn khoáng nóng – ngâm mình trong bùn và nước khoáng nóng, thư giãn, tốt cho da sau một ngày biển"
       ]
+    },
+    {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608613238-2.jpg\" alt=\"Tắm bùn khoáng nóng Nha Trang – tour Nha Trang – Tắm bùn khoáng nóng – Hòn Tằm 3N2Đ Today Tourist\" style=\"width:931px;height:582px\"></figure>"
     },
     {
       "type": "p",
