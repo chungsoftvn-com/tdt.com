@@ -20,7 +20,11 @@
   "content": [
     {
       "type": "p",
-      "text": "🌵 <strong>Cà Ná – Mũi Dinh – Ninh Chữ 3 ngày 2 đêm: ngủ hai nơi, đi trọn vùng đất nắng gió Ninh Thuận.</strong>"
+      "text": "🌵"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Cà Ná – Mũi Dinh – Ninh Chữ 3 ngày 2 đêm: ngủ hai nơi, đi trọn vùng đất nắng gió Ninh Thuận.</strong>"
     },
     {
       "type": "p",
@@ -102,6 +106,10 @@
       "text": "💡 <em>Bạn có biết: Ninh Thuận là vùng khô hạn nhất cả nước, nên cừu và nho là hai thứ nuôi trồng hợp nhất ở đây.</em>"
     },
     {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608710001-0.jpg\" alt=\"Hang Rái Vĩnh Hải bãi đá san hô – tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3N2Đ Today Tourist\" style=\"width:931px;height:582px\"></figure>"
+    },
+    {
       "type": "p",
       "text": "🍽️ <strong>Buổi trưa:</strong> Dùng cơm trưa tại nhà hàng khu vực Vĩnh Hy."
     },
@@ -112,6 +120,10 @@
     {
       "type": "html",
       "html": "<figure><img src=\"/content/vi/images/pasted-1791601040995-0.jpg\" alt=\"Tàu đáy kính trên Vịnh Vĩnh Hy – tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3N2Đ Today Tourist\"></figure>"
+    },
+    {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608710002-1.jpg\" alt=\"Đồng cừu An Hòa Ninh Hải – tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3N2Đ Today Tourist\" style=\"width:931px;height:582px\"></figure>"
     },
     {
       "type": "p",
