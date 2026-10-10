@@ -20,7 +20,11 @@
   "content": [
     {
       "type": "p",
-      "text": "🌸 <strong>Quy Nhơn – Cù Lao Xanh 3 ngày 2 đêm: bay một chặng là đến, ra đảo ngọc còn hoang sơ của Bình Định.</strong>"
+      "text": "🌸"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Quy Nhơn – Cù Lao Xanh 3 ngày 2 đêm: bay một chặng là đến, ra đảo ngọc còn hoang sơ của Bình Định.</strong>"
     },
     {
       "type": "p",
@@ -90,6 +94,10 @@
       "html": "<figure><img src=\"/content/vi/images/pasted-1791601204298-0.jpg\" alt=\"Ghềnh Ráng Tiên Sa Quy Nhơn – tour Quy Nhơn – Cù Lao Xanh 3N2Đ Today Tourist\"></figure>"
     },
     {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608752107-0.jpg\" alt=\"Chùa Thiên Hưng Quy Nhơn – tour Quy Nhơn – Cù Lao Xanh 3N2Đ Today Tourist\" style=\"width:931px;height:582px\"></figure>"
+    },
+    {
       "type": "p",
       "text": "🌙 <strong>Buổi tối:</strong> Ăn tối tại nhà hàng, tự do khám phá TP. Quy Nhơn về đêm. Nghỉ đêm tại Quy Nhơn."
     },
@@ -115,6 +123,14 @@
     {
       "type": "p",
       "text": "💡 <em>Bạn có biết: Hải đăng Cù Lao Xanh thuộc nhóm hải đăng cổ nhất Việt Nam, vẫn dẫn đường cho tàu thuyền đến ngày nay.</em>"
+    },
+    {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608752107-1.jpg\" alt=\"Hải đăng Cù Lao Xanh Bình Định – tour Quy Nhơn – Cù Lao Xanh 3N2Đ Today Tourist\" style=\"width:931px;height:582px\"></figure>"
+    },
+    {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608752108-2.jpg\" alt=\"Bãi đá Thảo Nguyên Cù Lao Xanh – tour Quy Nhơn – Cù Lao Xanh 3N2Đ Today Tourist\" style=\"width:931px;height:582px\"></figure>"
     },
     {
       "type": "p",
