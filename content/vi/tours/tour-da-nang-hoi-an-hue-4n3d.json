@@ -20,7 +20,11 @@
   "content": [
     {
       "type": "p",
-      "text": "🌉 <strong>Đà Nẵng – Hội An – Huế 4 ngày 3 đêm: trọn bộ di sản miền Trung, từ Cầu Vàng trên mây đến cố đô Huế.</strong>"
+      "text": "🌉"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Đà Nẵng – Hội An – Huế 4 ngày 3 đêm: trọn bộ di sản miền Trung, từ Cầu Vàng trên mây đến cố đô Huế.</strong>"
     },
     {
       "type": "p",
@@ -82,6 +86,10 @@
       "text": "💡 <em>Bạn có biết: Ngũ Hành Sơn còn được gọi là núi Non Nước, nổi tiếng với nghề điêu khắc đá mỹ nghệ ở làng đá Non Nước dưới chân núi.</em>"
     },
     {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608978850-0.jpg\" alt=\"Ngũ Hành Sơn Đà Nẵng – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\" style=\"width:931px;height:582px\"></figure>"
+    },
+    {
       "type": "p",
       "text": "🍽️ <strong>Buổi trưa:</strong> Dùng cơm trưa tại nhà hàng."
     },
@@ -98,6 +106,10 @@
       "text": "💡 <em>Bạn có biết: Phố cổ Hội An được UNESCO công nhận là Di sản Văn hóa Thế giới từ năm 1999.</em>"
     },
     {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608978850-1.jpg\" alt=\"Phố cổ Hội An – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\" style=\"width:931px;height:582px\"></figure>"
+    },
+    {
       "type": "h3",
       "text": "🎢 NGÀY 02: BÀ NÀ HILLS – BIỂN MỸ KHÊ"
     },
@@ -111,6 +123,10 @@
         "Cầu Vàng – cây cầu có đôi bàn tay khổng lồ nâng đỡ, biểu tượng du lịch mới của Việt Nam",
         "Làng Pháp, Vườn Tình Yêu, Fantasy Park – khu vui chơi trong nhà và các tiểu cảnh trên đỉnh Bà Nà"
       ]
+    },
+    {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608978851-2.jpg\" alt=\"Cầu Vàng Bà Nà Hills – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\" style=\"width:931px;height:582px\"></figure>"
     },
     {
       "type": "p",
