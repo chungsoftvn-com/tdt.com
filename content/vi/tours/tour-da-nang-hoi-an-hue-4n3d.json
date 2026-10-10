@@ -5,9 +5,9 @@
   "region_name": "Miền Trung",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "4 ngày 3 đêm",
-  "price": "7.290.000đ/khách",
+  "price": "5.290.000đ/khách (chưa gồm vé máy bay)",
   "image": "dấu-ấn-miền-di-sản-9.webp",
-  "desc": "Tour Đà Nẵng – Hội An – Huế 4N3Đ bay từ TP.HCM, đón Biên Hòa: Bà Nà Hills, Cầu Vàng, Hội An, Đại Nội Huế. Giá 7.290.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Đà Nẵng – Hội An – Huế 4N3Đ bay từ TP.HCM, đón Biên Hòa: Bà Nà Hills, Cầu Vàng, Hội An, Đại Nội Huế. Giá 5.290.000đ (chưa gồm vé máy bay). Hotline 0902 898 726.",
   "highlights": [
     "Bay thẳng từ TP.HCM đến Đà Nẵng, xe đón tận nơi Biên Hòa ra sân bay Tân Sơn Nhất",
     "Lên cáp treo Bà Nà Hills, check-in Cầu Vàng và dùng buffet trưa trên đỉnh núi",
@@ -36,7 +36,7 @@
     },
     {
       "type": "p",
-      "text": "✈️ <strong>Phương tiện:</strong> máy bay khứ hồi TP.HCM – Đà Nẵng + xe du lịch đưa đón sân bay và suốt tuyến tham quan"
+      "text": "✈️ <strong>Phương tiện:</strong> máy bay TP.HCM – Đà Nẵng (khách mua vé riêng) + xe du lịch đưa đón sân bay và suốt tuyến tham quan"
     },
     {
       "type": "p",
@@ -87,7 +87,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791608978850-0.jpg\" alt=\"Ngũ Hành Sơn Đà Nẵng – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\"></figure>"
+      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791608978850-0.jpg\" alt=\"Ngũ Hành Sơn Đà Nẵng – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
     },
     {
       "type": "p",
@@ -107,7 +107,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791608978850-1.jpg\" alt=\"Phố cổ Hội An – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\"></figure>"
+      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791608978850-1.jpg\" alt=\"Phố cổ Hội An – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
     },
     {
       "type": "h3",
@@ -126,7 +126,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791608978851-2.jpg\" alt=\"Cầu Vàng Bà Nà Hills – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\"></figure>"
+      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791608978851-2.jpg\" alt=\"Cầu Vàng Bà Nà Hills – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
     },
     {
       "type": "p",
@@ -168,7 +168,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791609007726-0.jpg\" alt=\"Chùa Thiên Mụ Huế – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\"></figure>"
+      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609007726-0.jpg\" alt=\"Chùa Thiên Mụ Huế – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
     },
     {
       "type": "p",
@@ -195,11 +195,11 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791609007726-1.jpg\" alt=\"Đại Nội Huế Ngọ Môn – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\"></figure>"
+      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609007726-1.jpg\" alt=\"Đại Nội Huế Ngọ Môn – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791609007727-2.jpg\" alt=\"Lăng Khải Định Huế – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\"></figure>"
+      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609007727-2.jpg\" alt=\"Lăng Khải Định Huế – tour Đà Nẵng – Hội An – Huế 4 Ngày 3 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
     },
     {
       "type": "p",
@@ -215,11 +215,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 7.290.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 5.290.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 5.470.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 3.970.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
@@ -235,7 +235,7 @@
     },
     {
       "type": "p",
-      "text": "✅ Vé máy bay khứ hồi TP.HCM – Đà Nẵng (hạng phổ thông, kèm hành lý theo quy định hãng)"
+      "text": "✅ Xe đón đoàn tại sân bay Đà Nẵng, lo trọn phần mặt đất theo chương trình"
     },
     {
       "type": "p",
@@ -271,7 +271,7 @@
     },
     {
       "type": "p",
-      "text": "❌ Hành lý ký gửi vượt mức theo quy định hãng bay"
+      "text": "❌ Vé máy bay khứ hồi TP.HCM – Đà Nẵng (giá vé theo hãng bay, giờ bay và thời điểm đặt; Today Tourist báo giá vé cụ thể khi khách chốt ngày đi); hành lý ký gửi vượt mức theo quy định hãng bay"
     },
     {
       "type": "p",
@@ -291,11 +291,11 @@
     },
     {
       "type": "p",
-      "text": "📌 Đặt cọc 30–50% khi đăng ký; riêng vé máy bay xuất ngay khi có đủ thông tin, không hoàn không đổi theo quy định hãng"
+      "text": "📌 Đặt cọc 30–50% khi đăng ký; riêng vé máy bay (tính riêng ngoài giá tour) xuất ngay khi có đủ thông tin, không hoàn không đổi theo quy định hãng"
     },
     {
       "type": "p",
-      "text": "📌 Giá vé máy bay biến động theo ngày bay; giá tour có thể điều chỉnh theo thời điểm khởi hành, công ty báo giá cụ thể khi nhận đăng ký"
+      "text": "📌 Giá vé máy bay biến động theo ngày bay và được tính riêng ngoài giá tour; giá tour có thể điều chỉnh theo thời điểm khởi hành, công ty báo giá cụ thể khi nhận đăng ký"
     },
     {
       "type": "p",
@@ -359,7 +359,7 @@
     },
     {
       "type": "p",
-      "text": "<strong>Giá tour đã gồm vé máy bay chưa?</strong> Đã gồm vé máy bay khứ hồi hạng phổ thông. Hành lý ký gửi vượt mức theo quy định hãng là chi phí tự túc."
+      "text": "<strong>Giá tour đã gồm vé máy bay chưa?</strong> Chưa. Giá tour chưa gồm vé máy bay khứ hồi; vé tính riêng theo hãng bay, giờ bay và thời điểm đặt, Today Tourist báo giá vé cụ thể khi khách chốt ngày đi. Hành lý ký gửi vượt mức theo quy định hãng là chi phí tự túc."
     },
     {
       "type": "p",
