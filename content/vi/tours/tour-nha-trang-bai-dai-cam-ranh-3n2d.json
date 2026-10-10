@@ -20,7 +20,11 @@
   "content": [
     {
       "type": "p",
-      "text": "🏖️ <strong>Nha Trang – Bãi Dài – Cam Ranh 3 ngày 2 đêm: bãi cát trắng dài vắng người, rồi dạo một vòng Nha Trang đủ sâu để thấy hết nét đẹp của thành phố biển.</strong>"
+      "text": "🏖️"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Nha Trang – Bãi Dài – Cam Ranh 3 ngày 2 đêm: bãi cát trắng dài vắng người, rồi dạo một vòng Nha Trang đủ sâu để thấy hết nét đẹp của thành phố biển.</strong>"
     },
     {
       "type": "p",
@@ -85,6 +89,10 @@
       "text": "💡 <em>Bạn có biết: Bãi Dài dài khoảng 10km, nằm trên bán đảo Cam Ranh, nước biển thường lặng, hợp cho cả gia đình có trẻ nhỏ.</em>"
     },
     {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608643165-0.jpg\" alt=\"Bãi Dài Cam Ranh – tour Nha Trang – Bãi Dài Cam Ranh 3N2Đ Today Tourist\" style=\"width:931px;height:582px\"></figure>"
+    },
+    {
       "type": "p",
       "text": "🌙 <strong>Buổi tối:</strong> Xe đưa đoàn về trung tâm TP. Nha Trang, nhận phòng khách sạn, ăn tối tại nhà hàng. Nghỉ đêm tại Nha Trang."
     },
@@ -107,10 +115,18 @@
       "text": "💡 <em>Bạn có biết: Tháp Bà Ponagar vẫn là nơi người Việt và người Chăm đến cúng bái mỗi dịp lễ hội Tháp Bà.</em>"
     },
     {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608643166-1.jpg\" alt=\"Tháp Bà Ponagar Nha Trang – tour Nha Trang – Bãi Dài Cam Ranh 3N2Đ Today Tourist\" style=\"width:931px;height:582px\"></figure>"
+    },
+    {
       "type": "list",
       "items": [
         "Chùa Long Sơn – ngôi chùa nổi tiếng với tượng Phật trắng lớn trên đồi cao, nhìn bao quát thành phố biển"
       ]
+    },
+    {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608643167-2.jpg\" alt=\"Chùa Long Sơn Nha Trang Phật trắng – tour Nha Trang – Bãi Dài Cam Ranh 3N2Đ Today Tourist\" style=\"width:931px;height:582px\"></figure>"
     },
     {
       "type": "p",
