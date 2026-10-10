@@ -20,7 +20,11 @@
   "content": [
     {
       "type": "p",
-      "text": "🌊 <strong>Quy Nhơn 3 ngày 3 đêm: lên xe tối hôm trước, sáng ra đã đứng giữa miền đất võ, biển xanh cát trắng.</strong>"
+      "text": "🌊"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Quy Nhơn 3 ngày 3 đêm: lên xe tối hôm trước, sáng ra đã đứng giữa miền đất võ, biển xanh cát trắng.</strong>"
     },
     {
       "type": "p",
@@ -158,6 +162,10 @@
       "items": [
         "Tháp Đôi – công trình kiến trúc Chăm cổ nằm giữa lòng thành phố Quy Nhơn"
       ]
+    },
+    {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791611745670-0.jpg\" alt=\"Tháp Đôi Quy Nhơn – tour Quy Nhơn 3 Ngày 3 Đêm Today Tourist\" style=\"width:931px;height:582px\"></figure>"
     },
     {
       "type": "p",
