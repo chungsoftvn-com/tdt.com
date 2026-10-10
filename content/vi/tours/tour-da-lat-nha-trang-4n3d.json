@@ -7,7 +7,7 @@
   "duration": "4 ngày 3 đêm",
   "price": "4.190.000đ/khách",
   "image": "hồ-xuân-hương-vịnh-nha-trang-1.webp",
-  "desc": "Tour Đà Lạt – Nha Trang 4 ngày 3 đêm từ TP. Đồng Nai, đón tận nơi Biên Hòa, đi xe ban ngày: Fresh Garden, Langbiang, VinWonders. Giá 4.190.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Đà Lạt – Nha Trang 4N3Đ từ Đồng Nai, đón tận nơi Biên Hòa, đi ban ngày: Fresh Garden, Langbiang, VinWonders. Giá 4.190.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Check-in Quảng trường Lâm Viên và dạo chợ đêm Đà Lạt",
     "Tham quan Fresh Garden và Langbiang Land, giao lưu cồng chiêng buổi tối",
@@ -94,10 +94,6 @@
     },
     {
       "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 6 – TRANG CANVA 7</strong> Quảng trường Lâm Viên · Mô tả ảnh: Quảng trường Lâm Viên, hồ Xuân Hương – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist"
-    },
-    {
-      "type": "p",
       "text": "🌙 <strong>Buổi tối:</strong> Ăn tối tại nhà hàng. Tự do khám phá chợ đêm Đà Lạt, thưởng thức"
     },
     {
@@ -124,10 +120,6 @@
     },
     {
       "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 6 – TRANG CANVA 8</strong> Fresh Garden · Mô tả ảnh: Fresh Garden Đà Lạt – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist"
-    },
-    {
-      "type": "p",
       "text": "🍽️ <strong>Buổi trưa:</strong> Đoàn dùng cơm trưa ngay tại Fresh Garden."
     },
     {
@@ -143,10 +135,6 @@
     {
       "type": "html",
       "html": "<figure><img src=\"/content/vi/images/pasted-1791557372512-2.jpg\" alt=\"Langbiang Land – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist\"></figure>"
-    },
-    {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 6 – TRANG CANVA 9</strong> Langbiang Land · Mô tả ảnh: Langbiang Land – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist"
     },
     {
       "type": "p",
@@ -172,10 +160,6 @@
     },
     {
       "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 6 – TRANG CANVA 10</strong> Hoàng Long Ohayo · Mô tả ảnh: Hoàng Long Ohayo phong cách Nhật Bản, đèo Mimosa – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist"
-    },
-    {
-      "type": "p",
       "text": "🍽️ <strong>Buổi trưa:</strong> Ăn trưa trên đường xuống Nha Trang."
     },
     {
@@ -195,10 +179,6 @@
     {
       "type": "html",
       "html": "<figure><img src=\"/content/vi/images/pasted-1791557372513-4.jpg\" alt=\"Tháp Trầm Hương Nha Trang về đêm – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist\"></figure>"
-    },
-    {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 3 – TRANG CANVA 4</strong> Tháp Trầm Hương · Mô tả ảnh: Tháp Trầm Hương Nha Trang về đêm – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist"
     },
     {
       "type": "p",
@@ -222,10 +202,6 @@
     {
       "type": "html",
       "html": "<figure><img src=\"/content/vi/images/pasted-1791557372514-5.jpg\" alt=\"Khu vui chơi VinWonders Nha Trang – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist\"></figure>"
-    },
-    {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 3 – TRANG CANVA 6</strong> VinWonders Nha Trang · Mô tả ảnh: Khu vui chơi VinWonders Nha Trang – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist"
     },
     {
       "type": "p",
