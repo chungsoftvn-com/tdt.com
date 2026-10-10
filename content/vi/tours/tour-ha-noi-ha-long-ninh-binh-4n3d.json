@@ -5,9 +5,9 @@
   "region_name": "Miền Bắc",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "4 ngày 3 đêm",
-  "price": "7.890.000đ/khách",
+  "price": "5.490.000đ/khách (chưa gồm vé máy bay)",
   "image": "hạ-long-hà-nội-tràng-an-10.webp",
-  "desc": "Tour Hà Nội – Hạ Long – Ninh Bình 4N3Đ bay từ TP.HCM, đón tận nơi Biên Hòa: Vịnh Hạ Long, Tràng An, Chùa Bái Đính. Giá 7.890.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Hà Nội – Hạ Long – Ninh Bình 4N3Đ bay từ TP.HCM, đón tận nơi Biên Hòa: Vịnh Hạ Long, Tràng An, Chùa Bái Đính. Giá 5.490.000đ (chưa gồm vé máy bay). Hotline 0902 898 726.",
   "highlights": [
     "Bay thẳng từ TP.HCM ra Hà Nội, xe đón tận nơi Biên Hòa ra sân bay Tân Sơn Nhất",
     "Du thuyền Vịnh Hạ Long, kỳ quan thiên nhiên thế giới, thăm Động Thiên Cung và Hang Đầu Gỗ",
@@ -36,7 +36,7 @@
     },
     {
       "type": "p",
-      "text": "✈️ <strong>Phương tiện:</strong> máy bay khứ hồi TP.HCM – Hà Nội + xe du lịch suốt tuyến + tàu tham quan Vịnh Hạ Long"
+      "text": "✈️ <strong>Phương tiện:</strong> máy bay TP.HCM – Hà Nội (khách mua vé riêng) + xe du lịch suốt tuyến + tàu tham quan Vịnh Hạ Long"
     },
     {
       "type": "p",
@@ -200,11 +200,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 7.890.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 5.490.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 5.920.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 4.120.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
@@ -220,7 +220,7 @@
     },
     {
       "type": "p",
-      "text": "✅ Vé máy bay khứ hồi TP.HCM – Hà Nội (hạng phổ thông, kèm hành lý theo quy định hãng)"
+      "text": "✅ Xe đón đoàn tại sân bay Nội Bài, lo trọn phần mặt đất theo chương trình"
     },
     {
       "type": "p",
@@ -256,7 +256,7 @@
     },
     {
       "type": "p",
-      "text": "❌ Hành lý ký gửi vượt mức theo quy định hãng bay"
+      "text": "❌ Vé máy bay khứ hồi TP.HCM – Hà Nội (giá vé theo hãng bay, giờ bay và thời điểm đặt; Today Tourist báo giá vé cụ thể khi khách chốt ngày đi); hành lý ký gửi vượt mức theo quy định hãng bay"
     },
     {
       "type": "p",
@@ -276,11 +276,11 @@
     },
     {
       "type": "p",
-      "text": "📌 Đặt cọc 30–50% khi đăng ký; riêng vé máy bay xuất ngay khi có đủ thông tin, không hoàn không đổi theo quy định hãng"
+      "text": "📌 Đặt cọc 30–50% khi đăng ký; riêng vé máy bay (tính riêng ngoài giá tour) xuất ngay khi có đủ thông tin, không hoàn không đổi theo quy định hãng"
     },
     {
       "type": "p",
-      "text": "📌 Giá vé máy bay biến động theo ngày bay; giá tour có thể điều chỉnh theo thời điểm khởi hành, công ty báo giá cụ thể khi nhận đăng ký"
+      "text": "📌 Giá vé máy bay biến động theo ngày bay và được tính riêng ngoài giá tour; giá tour có thể điều chỉnh theo thời điểm khởi hành, công ty báo giá cụ thể khi nhận đăng ký"
     },
     {
       "type": "p",
@@ -348,7 +348,7 @@
     },
     {
       "type": "p",
-      "text": "<strong>Giá tour đã gồm vé máy bay chưa?</strong> Đã gồm vé máy bay khứ hồi hạng phổ thông. Hành lý ký gửi vượt mức theo quy định hãng là chi phí tự túc."
+      "text": "<strong>Giá tour đã gồm vé máy bay chưa?</strong> Chưa. Giá tour chưa gồm vé máy bay khứ hồi; vé tính riêng theo hãng bay, giờ bay và thời điểm đặt, Today Tourist báo giá vé cụ thể khi khách chốt ngày đi. Hành lý ký gửi vượt mức theo quy định hãng là chi phí tự túc."
     },
     {
       "type": "p",
