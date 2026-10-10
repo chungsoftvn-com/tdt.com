@@ -20,7 +20,11 @@
   "content": [
     {
       "type": "p",
-      "text": "🛳️ <strong>Hà Nội – Hạ Long – Ninh Bình 4 ngày 3 đêm: ba di sản miền Bắc trong một chuyến bay.</strong>"
+      "text": "🛳️"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Hà Nội – Hạ Long – Ninh Bình 4 ngày 3 đêm: ba di sản miền Bắc trong một chuyến bay.</strong>"
     },
     {
       "type": "p",
@@ -90,6 +94,14 @@
       "text": "💡 <em>Bạn có biết: Vịnh Hạ Long được UNESCO công nhận là Di sản Thiên nhiên Thế giới từ năm 1994, với gần 2.000 hòn đảo đá vôi.</em>"
     },
     {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791609050678-0.jpg\" alt=\"Vịnh Hạ Long Quảng Ninh – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\" style=\"width:931px;height:582px\"></figure>"
+    },
+    {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791609050678-1.jpg\" alt=\"Hang Thiên Cung Hạ Long – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\" style=\"width:931px;height:582px\"></figure>"
+    },
+    {
       "type": "p",
       "text": "🌙 <strong>Buổi tối:</strong> Ăn tối tại nhà hàng, tự do dạo phố biển Hạ Long. Nghỉ đêm tại Hạ Long."
     },
@@ -126,6 +138,10 @@
       "items": [
         "Chùa Bái Đính – quần thể chùa được xem là lớn nhất Đông Nam Á, nổi bật với tượng Phật bằng đồng và hành lang La Hán"
       ]
+    },
+    {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791609050678-2.jpg\" alt=\"Chùa Bái Đính Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\" style=\"width:931px;height:582px\"></figure>"
     },
     {
       "type": "p",
