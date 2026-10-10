@@ -5,9 +5,9 @@
   "region_name": "Miền Bắc",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "6 ngày 5 đêm",
-  "price": "9.790.000đ/khách",
+  "price": "7.390.000đ/khách (chưa gồm vé máy bay)",
   "image": "từ-vịnh-xanh-đến-mây-ngàn-4.webp",
-  "desc": "Tour Hà Nội – Hạ Long – Ninh Bình – Sapa 6 ngày 5 đêm bay từ TP.HCM: Fansipan, Vịnh Hạ Long, Tràng An, Bái Đính. Giá 9.790.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Hà Nội – Hạ Long – Ninh Bình – Sapa 6 ngày 5 đêm bay từ TP.HCM: Fansipan, Vịnh Hạ Long, Tràng An, Bái Đính. Giá 7.390.000đ (chưa gồm vé máy bay). Hotline 0902 898 726.",
   "highlights": [
     "Bay thẳng từ TP.HCM ra Hà Nội, xe đón tận nơi Biên Hòa ra sân bay Tân Sơn Nhất",
     "Chinh phục đỉnh Fansipan cao 3.143m bằng cáp treo, dạo Bản Cát Cát của người H'Mông",
@@ -32,7 +32,7 @@
     },
     {
       "type": "p",
-      "text": "✈️ <strong>Phương tiện:</strong> máy bay khứ hồi TP.HCM – Hà Nội + xe du lịch suốt tuyến + tàu tham quan Vịnh Hạ Long"
+      "text": "✈️ <strong>Phương tiện:</strong> máy bay TP.HCM – Hà Nội (khách mua vé riêng) + xe du lịch suốt tuyến + tàu tham quan Vịnh Hạ Long"
     },
     {
       "type": "p",
@@ -160,7 +160,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791609050678-0.jpg\" alt=\"Vịnh Hạ Long Quảng Ninh – tour Hà Nội – Hạ Long – Ninh Bình – Sapa 6N5Đ Today Tourist\"></figure>"
+      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609050678-0.jpg\" alt=\"Vịnh Hạ Long Quảng Ninh – tour Hà Nội – Hạ Long – Ninh Bình – Sapa 6N5Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
     },
     {
       "type": "p",
@@ -190,7 +190,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791609050678-2.jpg\" alt=\"Chùa Bái Đính Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình – Sapa 6N5Đ Today Tourist\"></figure>"
+      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609050678-2.jpg\" alt=\"Chùa Bái Đính Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình – Sapa 6N5Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
     },
     {
       "type": "p",
@@ -202,7 +202,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791609077596-0.jpg\" alt=\"Thuyền khám phá Tràng An Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình – Sapa 6N5Đ Today Tourist\"></figure>"
+      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609077596-0.jpg\" alt=\"Thuyền khám phá Tràng An Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình – Sapa 6N5Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
     },
     {
       "type": "p",
@@ -245,11 +245,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 9.790.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 7.390.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 7.340.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 5.540.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
@@ -265,7 +265,7 @@
     },
     {
       "type": "p",
-      "text": "✅ Vé máy bay khứ hồi TP.HCM – Hà Nội (hạng phổ thông, kèm hành lý theo quy định hãng)"
+      "text": "✅ Xe đón đoàn tại sân bay Nội Bài, lo trọn phần mặt đất theo chương trình"
     },
     {
       "type": "p",
@@ -301,7 +301,7 @@
     },
     {
       "type": "p",
-      "text": "❌ Hành lý ký gửi vượt mức theo quy định hãng bay"
+      "text": "❌ Vé máy bay khứ hồi TP.HCM – Hà Nội (giá vé theo hãng bay, giờ bay và thời điểm đặt; Today Tourist báo giá vé cụ thể khi khách chốt ngày đi); hành lý ký gửi vượt mức theo quy định hãng bay"
     },
     {
       "type": "p",
@@ -325,11 +325,11 @@
     },
     {
       "type": "p",
-      "text": "📌 Đặt cọc 30–50% khi đăng ký; riêng vé máy bay xuất ngay khi có đủ thông tin, không hoàn không đổi theo quy định hãng"
+      "text": "📌 Đặt cọc 30–50% khi đăng ký; riêng vé máy bay (tính riêng ngoài giá tour) xuất ngay khi có đủ thông tin, không hoàn không đổi theo quy định hãng"
     },
     {
       "type": "p",
-      "text": "📌 Giá vé máy bay biến động theo ngày bay; giá tour có thể điều chỉnh theo thời điểm khởi hành, công ty báo giá cụ thể khi nhận đăng ký"
+      "text": "📌 Giá vé máy bay biến động theo ngày bay và được tính riêng ngoài giá tour; giá tour có thể điều chỉnh theo thời điểm khởi hành, công ty báo giá cụ thể khi nhận đăng ký"
     },
     {
       "type": "p",
@@ -397,7 +397,7 @@
     },
     {
       "type": "p",
-      "text": "<strong>Giá tour đã gồm vé máy bay và cáp treo Fansipan chưa?</strong> Đã gồm vé máy bay khứ hồi hạng phổ thông và cáp treo Fansipan. Hành lý ký gửi vượt mức theo quy định hãng và tàu hỏa leo núi Mường Hoa là chi phí tự túc."
+      "text": "<strong>Giá tour đã gồm vé máy bay và cáp treo Fansipan chưa?</strong> Giá tour chưa gồm vé máy bay (vé tính riêng theo hãng bay, giờ bay và thời điểm đặt; Today Tourist báo giá vé cụ thể khi khách chốt ngày đi), đã gồm cáp treo Fansipan. Hành lý ký gửi vượt mức theo quy định hãng và tàu hỏa leo núi Mường Hoa là chi phí tự túc."
     },
     {
       "type": "p",
