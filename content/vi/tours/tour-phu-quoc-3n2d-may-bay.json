@@ -5,9 +5,9 @@
   "region_name": "Biển đảo",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "3 ngày 2 đêm",
-  "price": "5.590.000đ/khách",
+  "price": "3.590.000đ/khách (chưa gồm vé máy bay)",
   "image": "đảo-ngọc-phú-quốc-3n2đ-2.webp",
-  "desc": "Tour Phú Quốc 3 ngày 2 đêm đi máy bay từ TP. Đồng Nai, đưa đón tận nơi Biên Hòa ra sân bay: Nhà tù Phú Quốc, Bãi Sao, vườn tiêu. Giá 5.590.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Phú Quốc 3 ngày 2 đêm đi máy bay từ TP. Đồng Nai, đưa đón tận nơi Biên Hòa ra sân bay: Nhà tù Phú Quốc, Bãi Sao, vườn tiêu. Giá 3.590.000đ (chưa gồm vé máy bay). Hotline 0902 898 726.",
   "highlights": [
     "Bay thẳng ra đảo ngọc Phú Quốc, tiết kiệm thời gian",
     "Tham quan cơ sở nuôi cấy ngọc trai",
@@ -32,7 +32,7 @@
     },
     {
       "type": "p",
-      "text": "✈️ <strong>Phương tiện:</strong> xe đưa đón ra sân bay Tân Sơn Nhất + vé máy bay khứ hồi TP.HCM – Phú Quốc"
+      "text": "✈️ <strong>Phương tiện:</strong> xe đưa đón ra sân bay Tân Sơn Nhất + máy bay TP.HCM – Phú Quốc (khách mua vé riêng)"
     },
     {
       "type": "p",
@@ -183,11 +183,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 5.590.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 3.590.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 4.190.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 2.690.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
@@ -199,7 +199,7 @@
     },
     {
       "type": "p",
-      "text": "✅ Vé máy bay khứ hồi TP.HCM – Phú Quốc (hành lý theo quy định hãng bay)"
+      "text": "✅ Xe đón đoàn tại sân bay Phú Quốc, lo trọn phần mặt đất theo chương trình"
     },
     {
       "type": "p",
@@ -247,7 +247,7 @@
     },
     {
       "type": "p",
-      "text": "❌ Chi phí cá nhân, giặt ủi, hành lý ký gửi vượt mức quy định"
+      "text": "❌ Vé máy bay khứ hồi TP.HCM – Phú Quốc (giá vé theo hãng bay, giờ bay và thời điểm đặt; Today Tourist báo giá vé cụ thể khi khách chốt ngày đi); chi phí cá nhân, giặt ủi, hành lý ký gửi vượt mức quy định"
     },
     {
       "type": "p",
@@ -263,7 +263,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Đặt cọc 30–50% khi đăng ký; riêng <strong>vé máy bay xuất ngay khi có đủ thông tin</strong>, không hoàn/hủy linh hoạt như vé xe"
+      "text": "📌 Đặt cọc 30–50% khi đăng ký; riêng <strong>vé máy bay (tính riêng ngoài giá tour) xuất ngay khi có đủ thông tin</strong>, không hoàn/hủy linh hoạt như vé xe"
     },
     {
       "type": "p",
