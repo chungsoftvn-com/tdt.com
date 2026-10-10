@@ -1,13 +1,13 @@
 {
   "slug": "tour-ca-na-mui-dinh-ninh-chu-3n2d",
-  "name": "Tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3 Ngày 2 Đêm từ Đồng Nai – Ngủ Cà Ná, Ngủ Ninh Chữ, Đồng Cừu An Hòa",
+  "name": "Tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3 Ngày 2 Đêm từ Đồng Nai – Ngủ Cà Ná, Ngủ Ninh Chữ",
   "region": "domestic",
   "region_name": "Nam Trung Bộ",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "3 ngày 2 đêm",
   "price": "3.290.000đ/khách",
   "image": "",
-  "desc": "Tour Cà Ná – Ninh Chữ 3 ngày 2 đêm từ TP. Đồng Nai, đón tận nơi Biên Hòa: ngủ Cà Ná 1 đêm, ngủ Ninh Chữ 1 đêm, Mũi Dinh, Hang Rái, Vĩnh Hy, Đồng Cừu An Hòa. Giá 3.290.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Cà Ná – Ninh Chữ 3N2Đ từ Đồng Nai, đón tận nơi Biên Hòa: Mũi Dinh, Hang Rái, Vĩnh Hy, Đồng Cừu. Giá 3.290.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Nghỉ 1 đêm tại Cà Ná, biển cát trắng sát đèo, 1 đêm tại Ninh Chữ",
     "Tham quan Hải đăng và đồi cát Mũi Dinh, tiểu sa mạc ven biển Ninh Thuận",
@@ -103,10 +103,6 @@
     },
     {
       "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 13 – TRANG CANVA 2 (ảnh mới)</strong> Hang Rái · Mô tả ảnh: Bãi đá san hô cổ Hang Rái – tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3N2Đ Today Tourist"
-    },
-    {
-      "type": "p",
       "text": "🍽️ <strong>Buổi trưa:</strong> Dùng cơm trưa tại nhà hàng khu vực Vĩnh Hy."
     },
     {
@@ -119,23 +115,11 @@
     },
     {
       "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 2 – TRANG CANVA 7 (dùng lại)</strong> Vịnh Vĩnh Hy · Mô tả ảnh: Tàu đáy kính trên Vịnh Vĩnh Hy – tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3N2Đ Today Tourist"
-    },
-    {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 13 – TRANG CANVA 1 (ảnh mới)</strong> Đồng Cừu An Hòa · Mô tả ảnh: Đồng Cừu An Hòa Ninh Thuận – tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3N2Đ Today Tourist"
-    },
-    {
-      "type": "p",
       "text": "🌙 <strong>Buổi tối:</strong> Về Ninh Chữ nhận phòng, ăn tối tại nhà hàng, tự do dạo biển. Nghỉ đêm tại Ninh Chữ."
     },
     {
       "type": "html",
       "html": "<figure><img src=\"/content/vi/images/pasted-1791601040995-1.jpg\" alt=\"Bãi biển Ninh Chữ cát trắng – tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3N2Đ Today Tourist\"></figure>"
-    },
-    {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 2 – TRANG CANVA 6 (dùng lại)</strong> Biển Ninh Chữ · Mô tả ảnh: Bãi biển Ninh Chữ cát trắng – tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3N2Đ Today Tourist"
     },
     {
       "type": "h3",
@@ -161,16 +145,8 @@
       "html": "<figure><img src=\"/content/vi/images/pasted-1791601040996-2.jpg\" alt=\"Tháp Chăm Pô Klông Garai Phan Rang – tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3N2Đ Today Tourist\"></figure>"
     },
     {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 2 – TRANG CANVA 5 (dùng lại)</strong> Tháp Pô Klông Garai · Mô tả ảnh: Tháp Chăm Pô Klông Garai Phan Rang – tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3N2Đ Today Tourist"
-    },
-    {
       "type": "html",
       "html": "<figure><img src=\"/content/vi/images/pasted-1791601040996-3.jpg\" alt=\"Chùa Trùng Sơn Cổ Tự trên núi Đá Chồng – tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3N2Đ Today Tourist\"></figure>"
-    },
-    {
-      "type": "p",
-      "text": "<strong>🖼️ ẢNH LƯỢT 2 – TRANG CANVA 9 (dùng lại)</strong> Chùa Trùng Sơn Cổ Tự · Mô tả ảnh: Chùa Trùng Sơn Cổ Tự trên núi Đá Chồng – tour Cà Ná – Mũi Dinh – Hang Rái – Ninh Chữ 3N2Đ Today Tourist"
     },
     {
       "type": "p",
