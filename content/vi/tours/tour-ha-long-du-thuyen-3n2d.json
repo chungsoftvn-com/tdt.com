@@ -5,9 +5,9 @@
   "region_name": "Miền Bắc",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "3 ngày 2 đêm",
-  "price": "8.990.000đ/khách",
+  "price": "6.590.000đ/khách (chưa gồm vé máy bay)",
   "image": "đêm-êm-giữa-vịnh-xanh-6.webp",
-  "desc": "Tour Hạ Long du thuyền ngủ đêm 3 ngày 2 đêm bay từ TP.HCM: chèo kayak, đảo Ti Tốp, BBQ hải sản. Giá 8.990.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Hạ Long du thuyền ngủ đêm 3 ngày 2 đêm bay từ TP.HCM: chèo kayak, đảo Ti Tốp, BBQ hải sản. Giá 6.590.000đ (chưa gồm vé máy bay). Hotline 0902 898 726.",
   "highlights": [
     "Bay thẳng từ TP.HCM ra Hà Nội, xe đón tận nơi Biên Hòa ra sân bay Tân Sơn Nhất",
     "Ngủ đêm trên du thuyền 4 sao giữa Vịnh Hạ Long, kỳ quan thiên nhiên thế giới",
@@ -32,7 +32,7 @@
     },
     {
       "type": "p",
-      "text": "✈️ <strong>Phương tiện:</strong> máy bay khứ hồi TP.HCM – Hà Nội + xe du lịch suốt tuyến + du thuyền"
+      "text": "✈️ <strong>Phương tiện:</strong> máy bay TP.HCM – Hà Nội (khách mua vé riêng) + xe du lịch suốt tuyến + du thuyền"
     },
     {
       "type": "p",
@@ -167,11 +167,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 8.990.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 6.590.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 6.740.000đ/khách (ngủ chung cabin với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 4.940.000đ/khách (ngủ chung cabin với bố mẹ)"
     },
     {
       "type": "p",
@@ -187,7 +187,7 @@
     },
     {
       "type": "p",
-      "text": "✅ Vé máy bay khứ hồi TP.HCM – Hà Nội (hạng phổ thông, kèm hành lý theo quy định hãng)"
+      "text": "✅ Xe đón đoàn tại sân bay Nội Bài, lo trọn phần mặt đất theo chương trình"
     },
     {
       "type": "p",
@@ -223,7 +223,7 @@
     },
     {
       "type": "p",
-      "text": "❌ Hành lý ký gửi vượt mức theo quy định hãng bay"
+      "text": "❌ Vé máy bay khứ hồi TP.HCM – Hà Nội (giá vé theo hãng bay, giờ bay và thời điểm đặt; Today Tourist báo giá vé cụ thể khi khách chốt ngày đi); hành lý ký gửi vượt mức theo quy định hãng bay"
     },
     {
       "type": "p",
@@ -247,11 +247,11 @@
     },
     {
       "type": "p",
-      "text": "📌 Đặt cọc 30–50% khi đăng ký; riêng vé máy bay và du thuyền xuất ngay khi có đủ thông tin do giới hạn số cabin, không hoàn không đổi theo quy định"
+      "text": "📌 Đặt cọc 30–50% khi đăng ký; riêng vé máy bay (tính riêng ngoài giá tour) và du thuyền xuất ngay khi có đủ thông tin do giới hạn số cabin, không hoàn không đổi theo quy định"
     },
     {
       "type": "p",
-      "text": "📌 Giá vé máy bay và giá du thuyền biến động theo ngày; giá tour có thể điều chỉnh theo thời điểm khởi hành, công ty báo giá cụ thể khi nhận đăng ký"
+      "text": "📌 Giá vé máy bay và giá du thuyền biến động theo ngày, vé máy bay được tính riêng ngoài giá tour; giá tour có thể điều chỉnh theo thời điểm khởi hành, công ty báo giá cụ thể khi nhận đăng ký"
     },
     {
       "type": "p",
