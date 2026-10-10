@@ -20,7 +20,11 @@
   "content": [
     {
       "type": "p",
-      "text": "🌊 <strong>Vũng Tàu – Hồ Mây – Long Sơn 1 ngày: sáng trên làng bè hải sản, chiều lên cáp treo ngắm biển từ núi Lớn.</strong>"
+      "text": "🌊"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Vũng Tàu – Hồ Mây – Long Sơn 1 ngày: sáng trên làng bè hải sản, chiều lên cáp treo ngắm biển từ núi Lớn.</strong>"
     },
     {
       "type": "p",
@@ -79,6 +83,10 @@
     {
       "type": "p",
       "text": "💡 <em>Bạn có biết: Hàu nuôi trên bè phải mất khoảng vài tháng mới đủ lớn để thu hoạch, và độ ngon phụ thuộc vào nước sông pha mặn nơi con nước lên xuống.</em>"
+    },
+    {
+      "type": "html",
+      "html": "<figure style=\"width:931px\"><img src=\"/content/vi/images/pasted-1791608910915-0.jpg\" alt=\"Làng bè nuôi hàu Long Sơn Vũng Tàu – tour Vũng Tàu – Hồ Mây – Đảo Long Sơn 1 Ngày Today Tourist\" style=\"width:931px;height:582px\"></figure>"
     },
     {
       "type": "p",
