@@ -70,7 +70,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:950px\"><img src=\"/content/vi/images/pasted-1792219999764-0.jpg\" alt=\"Angkor Wat phản chiếu trên mặt nước tại Siem Reap\" style=\"max-width:100%;height:auto;width:950px\"></figure>"
+      "html": "<figure style=\"width:950px\"> <img src=\"/content/vi/images/pasted-1792219999764-0.jpg\" alt=\"Angkor Wat phản chiếu trên mặt nước tại Siem Reap\" style=\"max-width:100%;height:auto;width:950px\"> </figure>"
     },
     {
       "type": "p",
@@ -82,7 +82,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:600px\"><img src=\"/content/vi/images/pasted-1792219999764-1.jpg\" alt=\"Không gian đền Ta Prohm tại Siem Reap\" style=\"width:600px;height:900px\"></figure>"
+      "html": "<figure style=\"width:600px\"> <img src=\"/content/vi/images/pasted-1792219999764-1.jpg\" alt=\"Không gian đền Ta Prohm tại Siem Reap\" style=\"width:600px;height:900px\"> </figure>"
     },
     {
       "type": "p",
@@ -102,7 +102,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1000px\"><img src=\"/content/vi/images/pasted-1792219999764-2.jpg\" alt=\"Toàn cảnh thành phố Phnom Penh bên sông\" style=\"width:1000px;height:667px\"></figure>"
+      "html": "<figure style=\"width:1000px\"> <img src=\"/content/vi/images/pasted-1792219999764-2.jpg\" alt=\"Toàn cảnh thành phố Phnom Penh bên sông\" style=\"width:1000px;height:667px\"> </figure>"
     },
     {
       "type": "p",
@@ -144,6 +144,30 @@
     {
       "type": "p",
       "text": "TodayTourist gửi xác nhận lịch, điểm đón, dịch vụ, tổng tiền và điều kiện cọc, thanh toán, đổi hủy của chuyến đã chọn trước khi khách đặt cọc. Thứ tự điểm đến có thể điều chỉnh theo điều kiện thực tế và xác nhận của đơn vị tổ chức."
+    },
+    {
+      "type": "h3",
+      "text": "Câu hỏi thường gặp về tour Campuchia"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Tham quan Angkor có được tính trong giá không?</strong><br>Chương trình có phương án lựa chọn Angkor. Cần xác nhận gói tham quan, vé và bữa ăn tương ứng trong báo giá trước khi đăng ký."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Khách Biên Hòa lên xe ở đâu?</strong><br>Khách ghép chủ động đến điểm hẹn TP.HCM. Đoàn riêng có nhu cầu đón tại địa phương được tư vấn phương án và chi phí riêng."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Cần chuẩn bị gì cho hành trình đường bộ?</strong><br>Kiểm tra giấy tờ theo quốc tịch và hướng dẫn của chuyến đã chọn; báo trước nhu cầu hỗ trợ di chuyển, ăn uống vì tour có các chặng ngồi xe dài."
+    },
+    {
+      "type": "h3",
+      "text": "Liên hệ tư vấn tour Campuchia"
+    },
+    {
+      "type": "p",
+      "text": "Mr Anh Văn – Phòng Kinh doanh TodayTourist<br><a href=\"tel:0902898726\" target=\"_blank\" rel=\"noopener nofollow\">Gọi 0902 898 726</a> · <a href=\"https://zalo.me/0902898726\" target=\"_blank\" rel=\"noopener nofollow\">Nhắn Zalo nhận lịch trình và báo giá</a>"
     }
   ],
   "hidden": false
