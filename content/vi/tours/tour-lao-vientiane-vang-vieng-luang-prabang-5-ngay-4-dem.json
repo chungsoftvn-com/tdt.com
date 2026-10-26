@@ -65,7 +65,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792220163684-0.jpg\" alt=\"Phong cảnh núi đá và thung lũng xanh ở Vang Vieng\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792220163684-0.jpg\" alt=\"Phong cảnh núi đá và thung lũng xanh ở Vang Vieng\"> </figure>"
     },
     {
       "type": "p",
@@ -85,7 +85,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792220163692-1.jpg\" alt=\"Thác Kuang Si giữa rừng xanh tại Luang Prabang\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792220163692-1.jpg\" alt=\"Thác Kuang Si giữa rừng xanh tại Luang Prabang\"> </figure>"
     },
     {
       "type": "p",
@@ -105,7 +105,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:950px\"><img src=\"/content/vi/images/pasted-1792220163692-2.jpg\" alt=\"Chùa Wat Xieng Thong tại Luang Prabang, Lào\" style=\"max-width:100%;height:auto;width:950px\"></figure>"
+      "html": "<figure style=\"width:950px\"> <img src=\"/content/vi/images/pasted-1792220163692-2.jpg\" alt=\"Chùa Wat Xieng Thong tại Luang Prabang, Lào\" style=\"max-width:100%;height:auto;width:950px\"> </figure>"
     },
     {
       "type": "p",
@@ -152,6 +152,30 @@
     {
       "type": "p",
       "text": "Vui lòng gửi ngày đi, số khách, tuổi trẻ em và nhu cầu phòng để nhận tổng báo giá. TodayTourist xác nhận lịch, giấy tờ, điều kiện cọc, thanh toán và đổi hủy trước khi nhận tiền. Thứ tự điểm đến có thể điều chỉnh theo vận hành thực tế."
+    },
+    {
+      "type": "h3",
+      "text": "Câu hỏi thường gặp về tour Lào"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Hành lý khi đi tàu cao tốc có giống máy bay không?</strong><br>Quy định hành lý tàu được hướng dẫn riêng khi xác nhận chuyến; không áp dụng mặc định hạn mức của hãng bay."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Khách Biên Hòa tập trung ở đâu?</strong><br>Khách ghép chủ động đến sân bay. Đoàn riêng từ 20 khách được tư vấn xe Biên Hòa – Tân Sơn Nhất theo báo giá đoàn."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Giá trẻ em và phòng đơn được tính thế nào?</strong><br>Vui lòng gửi tuổi trẻ em và nhu cầu phòng để kiểm tra mức áp dụng của chuyến đã chọn. Phòng đơn và các khoản ngoài chương trình được xác nhận trong tổng báo giá."
+    },
+    {
+      "type": "h3",
+      "text": "Liên hệ tư vấn tour Lào"
+    },
+    {
+      "type": "p",
+      "text": "Mr Anh Văn – Phòng Kinh doanh TodayTourist<br><a href=\"tel:0902898726\" target=\"_blank\" rel=\"noopener nofollow\">Gọi 0902 898 726</a> · <a href=\"https://zalo.me/0902898726\" target=\"_blank\" rel=\"noopener nofollow\">Nhắn Zalo nhận lịch trình và báo giá</a>"
     }
   ],
   "hidden": false
