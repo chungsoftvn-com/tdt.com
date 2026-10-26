@@ -98,7 +98,8 @@ const filters = [
       });
       grids.forEach((grid) => grid.classList.toggle('hidden', grid.dataset.region !== selected));
       document.querySelectorAll<HTMLElement>('[data-tour-types]').forEach((link) => {
-        link.classList.toggle('hidden', selected !== 'all' && !link.dataset.tourTypes?.split(' ').includes(selected));
+        const visible = selected === 'all' || link.dataset.tourTypes?.split(' ').includes(selected);
+        link.style.display = visible ? '' : 'none';
       });
       document.querySelectorAll<HTMLAnchorElement>('header a[href*="?region="]').forEach((link) => {
         const active = new URL(link.href).searchParams.get('region') === selected;
