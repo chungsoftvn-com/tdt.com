@@ -1,12 +1,6 @@
 ---
-/**
- * Footer (theme layout2 — "DatViet")
- * 4 cột: thương hiệu + liên hệ · DỊCH VỤ · THÔNG TIN · đăng ký nhận tin + social.
- * Bên dưới vẫn giữ nguyên các khối HTML admin soạn bằng SunEditor
- * (footer_quick_body / footer_contact_body / footer_social_body) để không mất dữ liệu.
- */
+/** Single footer: contact, services, information and official social links. */
 import { getContent, href } from '@/lib/content.js';
-import { richDoc } from '@/lib/rich.js';
 
 interface Props {
   lang: string;
@@ -17,7 +11,8 @@ const t = getContent(lang, 'common');
 const tel = String(t.hotline || '').replace(/[^0-9+]/g, '');
 
 const services = [
-  { label: t.nav_tours, url: href(lang, 'tours') },
+  { label: t.region_domestic, url: `${href(lang, 'tours')}?region=domestic` },
+  { label: t.region_international, url: `${href(lang, 'tours')}?region=international` },
   { label: t.nav_find_tour, url: href(lang, 'tim-tour') },
   { label: t.nav_book, url: href(lang, 'dat-tour') },
   { label: t.nav_tickets, url: href(lang, 've-may-bay') },
@@ -58,7 +53,7 @@ const socials = [
   },
 ].filter((s) => s.url);
 
-const hasExtraBodies = !!(t.footer_quick_body || t.footer_contact_body || t.footer_social_body);
+
 ---
 
 <footer class="dv-footer mt-16">
@@ -101,7 +96,7 @@ const hasExtraBodies = !!(t.footer_quick_body || t.footer_contact_body || t.foot
 
     <!-- Cột 2: dịch vụ -->
     <div>
-      <h3>{t.footer_quick_title || 'Dịch vụ'}</h3>
+      <h3>Dịch vụ du lịch</h3>
       <ul class="grid gap-1.5">
         {
           services.map((s) => (
@@ -115,7 +110,7 @@ const hasExtraBodies = !!(t.footer_quick_body || t.footer_contact_body || t.foot
 
     <!-- Cột 3: thông tin -->
     <div>
-      <h3>{t.footer_contact_title || 'Thông tin'}</h3>
+      <h3>Về TodayTourist</h3>
       <ul class="grid gap-1.5">
         {
           infos.map((s) => (
@@ -129,32 +124,19 @@ const hasExtraBodies = !!(t.footer_quick_body || t.footer_contact_body || t.foot
 
     <!-- Cột 4: nhận tin + social -->
     <div>
-      <h3>{t.footer_offer || (lang === 'vi' ? 'Đăng ký nhận tin khuyến mãi' : 'Get our newsletter')}</h3>
-      <form data-newsletter class="dv-newsletter flex" novalidate>
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder={lang === 'vi' ? 'Email của bạn' : 'Your email'}
-          aria-label={lang === 'vi' ? 'Email của bạn' : 'Your email'}
-        />
-        <button type="submit">{lang === 'vi' ? 'Gửi' : 'Send'}</button>
-      </form>
-      <p data-newsletter-note class="mt-2 hidden text-xs text-sea-deep">
-        {lang === 'vi' ? 'Cảm ơn bạn! Vui lòng kiểm tra email để hoàn tất.' : 'Thanks! Please check your email.'}
-      </p>
-
+      <p class="mb-4 text-sm text-ink-soft">Nhắn Zalo để được tư vấn lịch trình và báo giá; theo dõi Facebook, TikTok để xem hành trình thực tế.</p>
       {
         socials.length > 0 && (
           <>
             <h3 class="mt-5">{t.footer_social_title}</h3>
-            <div class="flex items-center gap-2">
+            <div class="flex flex-wrap items-center gap-2">
               {socials.map((s) => (
                 <a
                   href={s.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="rounded px-3 py-1.5 text-xs font-semibold text-white"
+                  class="inline-flex min-h-11 items-center justify-center rounded px-4 py-2 text-sm font-semibold text-white"
+                  aria-label={`${s.label} của TodayTourist (mở tab mới)`}
                   style={`background:${s.color}`}
                 >
                   {s.label}
@@ -175,45 +157,13 @@ const hasExtraBodies = !!(t.footer_quick_body || t.footer_contact_body || t.foot
     </div>
   </div>
 
-  {
-    hasExtraBodies && (
-      <div class="border-t border-black/5">
-        <div class="mx-auto grid max-w-6xl gap-6 px-5 py-8 sm:grid-cols-3">
-          {t.footer_quick_body && (
-            <div class="rich-doc text-sm" set:html={richDoc(t.footer_quick_body)} />
-          )}
-          {t.footer_contact_body && (
-            <div class="rich-doc text-sm" set:html={richDoc(t.footer_contact_body)} />
-          )}
-          {t.footer_social_body && (
-            <div class="rich-doc text-sm" set:html={richDoc(t.footer_social_body)} />
-          )}
-        </div>
-      </div>
-    )
-  }
-
   <div class="dv-copyright">
     <div
       class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-1 px-5 py-3 text-center sm:flex-row sm:text-left"
     >
       <p>© {new Date().getFullYear()} {t.brand_name}. {t.rights}</p>
-      {t.footer_credit && <p class="opacity-80">{t.footer_credit}</p>}
+
     </div>
   </div>
 </footer>
 
-<script>
-  const form = document.querySelector('[data-newsletter]') as HTMLFormElement | null;
-  const note = document.querySelector('[data-newsletter-note]');
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const input = form.querySelector('input[name="email"]') as HTMLInputElement | null;
-    const email = (input?.value || '').trim();
-    if (!email) return;
-    const to = form.dataset.mailto || 'admin@todaytourist.com';
-    window.location.href = `mailto:${to}?subject=${encodeURIComponent('Đăng ký nhận tin khuyến mãi')}&body=${encodeURIComponent(email)}`;
-    note?.classList.remove('hidden');
-    form.reset();
-  });
-</script>
