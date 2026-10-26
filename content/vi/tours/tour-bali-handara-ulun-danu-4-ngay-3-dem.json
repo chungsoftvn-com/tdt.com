@@ -58,7 +58,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:600px\"><img src=\"/content/vi/images/pasted-1792220222714-0.jpg\" alt=\"Đền Uluwatu trên vách đá nhìn ra biển Bali\" style=\"max-width:100%;height:auto;width:600px\"></figure>"
+      "html": "<figure style=\"width:600px\"> <img src=\"/content/vi/images/pasted-1792220222714-0.jpg\" alt=\"Đền Uluwatu trên vách đá nhìn ra biển Bali\" style=\"max-width:100%;height:auto;width:600px\"> </figure>"
     },
     {
       "type": "p",
@@ -90,7 +90,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:720px\"><img src=\"/content/vi/images/pasted-1792220222714-1.jpg\" alt=\"Cổng trời Handara tại Bali, Indonesia\" style=\"max-width:100%;height:auto;width:720px\"></figure>"
+      "html": "<figure style=\"width:720px\"> <img src=\"/content/vi/images/pasted-1792220222714-1.jpg\" alt=\"Cổng trời Handara tại Bali, Indonesia\" style=\"max-width:100%;height:auto;width:720px\"> </figure>"
     },
     {
       "type": "p",
@@ -102,7 +102,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:950px\"><img src=\"/content/vi/images/pasted-1792220222714-2.jpg\" alt=\"Đền Ulun Danu Beratan bên hồ tại Bali\" style=\"max-width:100%;height:auto;width:950px\"></figure>"
+      "html": "<figure style=\"width:950px\"> <img src=\"/content/vi/images/pasted-1792220222714-2.jpg\" alt=\"Đền Ulun Danu Beratan bên hồ tại Bali\" style=\"max-width:100%;height:auto;width:950px\"> </figure>"
     },
     {
       "type": "p",
@@ -150,6 +150,30 @@
     {
       "type": "p",
       "text": "Gửi TodayTourist ngày dự kiến, số khách và nhu cầu phòng để nhận báo giá đầy đủ. Lịch, giấy tờ, điều kiện cọc, thanh toán, đổi hủy và phương án tự chọn được xác nhận trước khi nhận tiền. Lịch trình có thể điều chỉnh theo thời tiết và vận hành thực tế."
+    },
+    {
+      "type": "h3",
+      "text": "Câu hỏi thường gặp về tour Bali"
+    },
+    {
+      "type": "p",
+      "text": "<strong>Nusa Penida có nằm trong giá tour không?</strong><br>Phương án Nusa Penida được tính riêng. Vui lòng xác nhận chi phí và lịch thay thế trước khi đăng ký."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Khách Biên Hòa có xe đưa ra sân bay không?</strong><br>Khách ghép chủ động đến sân bay. Đoàn riêng từ 20 khách được tư vấn xe Biên Hòa – Tân Sơn Nhất theo báo giá riêng."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Cần gửi thông tin gì để nhận báo giá?</strong><br>Ngày dự kiến, số người lớn, tuổi trẻ em, nhu cầu phòng và hoạt động tự chọn. TodayTourist xác nhận tổng tiền, giấy tờ và điều kiện thanh toán, đổi hủy trước khi nhận cọc."
+    },
+    {
+      "type": "h3",
+      "text": "Liên hệ tư vấn tour Bali"
+    },
+    {
+      "type": "p",
+      "text": "Mr Anh Văn – Phòng Kinh doanh TodayTourist<br><a href=\"tel:0902898726\" target=\"_blank\" rel=\"noopener nofollow\">Gọi 0902 898 726</a> · <a href=\"https://zalo.me/0902898726\" target=\"_blank\" rel=\"noopener nofollow\">Nhắn Zalo nhận lịch trình và báo giá</a>"
     }
   ],
   "hidden": false
