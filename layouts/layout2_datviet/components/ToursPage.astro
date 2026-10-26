@@ -21,6 +21,7 @@ const international = tours.filter((x) => x.region === 'international');
 const regions = getTourRegions().map((r) => ({
   ...r,
   count: tours.filter((x) => r.tourSlugs.includes(x.slug)).length,
+  types: [...new Set(tours.filter((x) => r.tourSlugs.includes(x.slug)).map((x) => x.region))].join(' '),
 }));
 
 const filters = [
@@ -41,6 +42,7 @@ const filters = [
           regions.map((r) => (
             <a
               href={href(lang, `tours/khu-vuc/${r.slug}`)}
+              data-tour-types={r.types}
               class="inline-flex min-h-10 items-center rounded-full border border-ink/15 bg-paper px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-sea hover:text-sea"
             >
               {r.name}
@@ -83,18 +85,44 @@ const filters = [
   </section>
 
   <script>
-    const btns = document.querySelectorAll('[data-tour-filters] [data-filter]');
-    const grids = document.querySelectorAll('[data-tour-grids] [data-region]');
+    const btns = document.querySelectorAll<HTMLButtonElement>('[data-tour-filters] [data-filter]');
+    const grids = document.querySelectorAll<HTMLElement>('[data-tour-grids] [data-region]');
+    const allowed = new Set(['all', 'domestic', 'international']);
+
+    function applyFilter(key: string) {
+      const selected = allowed.has(key) ? key : 'all';
+      btns.forEach((btn) => {
+        const active = btn.dataset.filter === selected;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-selected', String(active));
+      });
+      grids.forEach((grid) => grid.classList.toggle('hidden', grid.dataset.region !== selected));
+      document.querySelectorAll<HTMLElement>('[data-tour-types]').forEach((link) => {
+        link.classList.toggle('hidden', selected !== 'all' && !link.dataset.tourTypes?.split(' ').includes(selected));
+      });
+      document.querySelectorAll<HTMLAnchorElement>('header a[href*="?region="]').forEach((link) => {
+        const active = new URL(link.href).searchParams.get('region') === selected;
+        if (active) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+        link.closest<HTMLElement>('[data-active]')?.setAttribute('data-active', String(active));
+      });
+    }
+
+    function filterFromUrl() {
+      applyFilter(new URL(window.location.href).searchParams.get('region') || 'all');
+    }
+
     btns.forEach((btn) => {
       btn.addEventListener('click', () => {
-        const key = btn.dataset.filter;
-        btns.forEach((b) => {
-          const active = b === btn;
-          b.classList.toggle('is-active', active);
-          b.setAttribute('aria-selected', String(active));
-        });
-        grids.forEach((g) => g.classList.toggle('hidden', g.dataset.region !== key));
+        const key = btn.dataset.filter || 'all';
+        const url = new URL(window.location.href);
+        if (key === 'all') url.searchParams.delete('region');
+        else url.searchParams.set('region', key);
+        window.history.pushState(null, '', url);
+        applyFilter(key);
       });
     });
+    window.addEventListener('popstate', filterFromUrl);
+    filterFromUrl();
   </script>
 </BaseLayout>
