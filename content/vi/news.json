@@ -1,5 +1,5 @@
 {
-  "count": 687,
+  "count": 688,
   "order": [
     "thue-xe-45-cho-bien-hoa-dong-nai-tphcm",
     "thue-nguyen-xe-dua-cong-nhan-ve-que-va-don-lai-dip-tet",
@@ -687,7 +687,8 @@
     "doc-bao-gia-ve-may-bay-tong-chi-phi",
     "dat-ve-may-bay-cho-doan-cong-ty",
     "mua-them-hanh-ly-ky-gui-truoc-chuyen-bay",
-    "cach-doc-ve-may-bay-dien-tu"
+    "cach-doc-ve-may-bay-dien-tu",
+    "di-may-bay-lan-dau-chuan-bi-va-lam-thu-tuc"
   ],
   "list_title": "Tin tức",
   "list_text": "Cập nhật tin tức du lịch, cẩm nang và ưu đãi mới nhất từ TodayTourist.",
