@@ -1,20 +1,29 @@
 {
   "title": "Vé máy bay Đồng Nai: đặt vé nội địa, quốc tế cho khách lẻ và đoàn",
   "hero_kicker": "Vé máy bay",
-  "hero_title": "Đặt vé máy bay tại Biên Hòa, Đồng Nai",
-  "hero_text": "Vé nội địa, quốc tế cho khách lẻ, gia đình, doanh nghiệp và đoàn. Gọi 0902 898 726 để nhận phương án.",
+  "hero_title": "Đặt vé máy bay tại thành phố Đồng Nai",
+  "hero_text": "Bay nội địa, khám phá quốc tế — tư vấn chuyến bay, hành lý và điều kiện vé cho khách lẻ, gia đình và đoàn doanh nghiệp.",
   "content": [
     {
       "type": "h2",
-      "text": "Đặt vé máy bay tại Biên Hòa, Đồng Nai"
+      "text": "<span style=\"color:#075778;font-weight:700\">Chọn chuyến bay phù hợp, an tâm trước mỗi hành trình</span>"
     },
     {
       "type": "p",
-      "text": "Today Tourist nhận đặt vé máy bay nội địa và quốc tế cho khách lẻ, gia đình, doanh nghiệp và đoàn công tác. Anh chị ở Biên Hòa, TP. Đồng Nai, TP.HCM chỉ cần gửi chặng bay, ngày đi và số khách qua điện thoại hoặc Zalo. Chúng tôi kiểm tra chuyến, giờ bay, hành lý rồi báo phương án để anh chị chọn."
+      "text": "<strong>TodayTourist hỗ trợ đặt vé máy bay nội địa và quốc tế</strong> cho khách lẻ, gia đình, doanh nghiệp và đoàn công tác tại <strong>thành phố Đồng Nai và TP.HCM</strong>. Anh chị ở phường Biên Hòa hoặc các phường, xã khác có thể gửi yêu cầu trực tuyến; chúng tôi kiểm tra chuyến bay, hành lý và điều kiện vé trước khi anh chị quyết định."
+    },
+    {
+      "type": "html",
+      "html": "<div style=\"background-color:#edf6fb;border-left:5px solid #086b91;border-radius:12px;padding:24px;margin:20px 0;color:#12384b\"><p style=\"font-size:22px;font-weight:700;margin:0 0 10px\">Một tin nhắn — đủ thông tin để chọn chuyến bay</p><p>Gửi <strong>điểm đi • điểm đến • ngày đi/về • số khách</strong>. TodayTourist tư vấn giờ bay, hành lý và điều kiện đổi hoàn theo từng phương án.</p><p><a href=\"https://zalo.me/0937001448\" style=\"display:inline-block;background-color:#075778;color:#ffffff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:700;margin:8px 12px 0 0\">Nhắn Zalo Ms. Thanh Thúy</a> <a href=\"tel:0902898726\" style=\"display:inline-block;color:#8b2635;padding:12px 0;font-weight:700\">Gọi Mr Anh Văn: 0902 898 726</a></p><p><em>Giá và tình trạng chỗ được kiểm tra theo thời điểm yêu cầu; xác nhận đầy đủ điều kiện trước khi xuất vé.</em></p></div>"
+    },
+    {
+      "type": "img",
+      "src": "/content/vi/images/ve-may-bay.webp",
+      "alt": "Dịch vụ đặt vé máy bay nội địa và quốc tế của TodayTourist tại thành phố Đồng Nai"
     },
     {
       "type": "h2",
-      "text": "Chúng tôi hỗ trợ những gì"
+      "text": "<span style=\"color:#075778;font-weight:700\">Chúng tôi hỗ trợ những gì</span>"
     },
     {
       "type": "list",
@@ -28,7 +37,7 @@
     },
     {
       "type": "h2",
-      "text": "Cách đặt vé"
+      "text": "<span style=\"color:#075778;font-weight:700\">Cách đặt vé</span>"
     },
     {
       "type": "list",
@@ -41,29 +50,29 @@
     },
     {
       "type": "h2",
-      "text": "Từ Biên Hòa đi sân bay nào?"
+      "text": "<span style=\"color:#075778;font-weight:700\">Khách tại Đồng Nai lựa chọn sân bay như thế nào?</span>"
     },
     {
       "type": "p",
-      "text": "Khách Biên Hòa hiện đi chủ yếu qua sân bay Tân Sơn Nhất (TP.HCM). Nếu anh chị cần xe ra sân bay, xem <a href=\"https://todaytourist.com/vi/tin-tuc/thue-xe-dua-don-doan-tai-san-bay-tan-son-nhat/\">Thuê xe đưa đón đoàn sân bay Tân Sơn Nhất từ Biên Hòa, Đồng Nai, TP.HCM</a> hoặc bảng <a href=\"https://todaytourist.com/vi/cho-thue-xe/\">giá thuê xe</a>. Sân bay Long Thành (Đồng Nai) đã khánh thành, khi có chuyến phù hợp chúng tôi sẽ tư vấn thêm cho anh chị chọn điểm bay thuận tiện hơn."
+      "text": "Điểm khởi hành trên vé là <strong>sân bay cụ thể</strong>, không phải địa chỉ nơi đặt vé. Anh chị gửi nơi xuất phát tại thành phố Đồng Nai để được tư vấn hành trình và thời gian di chuyển phù hợp với chuyến bay. Có thể kết hợp <a href=\"/vi/tin-tuc/thue-xe-dua-don-doan-tai-san-bay-tan-son-nhat/\">xe đưa đón sân bay Tân Sơn Nhất</a> hoặc <a href=\"/vi/cho-thue-xe/\">dịch vụ thuê xe du lịch</a>. <em>Sân bay khai thác và lịch bay được kiểm tra theo ngày đi thực tế.</em>"
     },
     {
       "type": "h2",
-      "text": "Lưu ý trước khi đặt vé"
+      "text": "<span style=\"color:#075778;font-weight:700\">Lưu ý trước khi đặt vé</span>"
     },
     {
       "type": "list",
       "items": [
-        "Tên trên vé phải trùng giấy tờ tùy thân, sai tên có thể không lên được máy bay hoặc phải trả phí sửa.",
-        "Hành lý xách tay và ký gửi khác nhau theo hãng và hạng vé, hỏi rõ trước khi chốt.",
-        "Điều kiện đổi và hoàn vé khác nhau theo từng hạng vé, đọc kỹ trước khi thanh toán.",
+        "<strong>Tên trên vé phải trùng</strong> giấy tờ tùy thân, sai tên có thể không lên được máy bay hoặc phải trả phí sửa.",
+        "<strong>Hành lý xách tay và ký gửi</strong> khác nhau theo hãng và hạng vé, hỏi rõ trước khi chốt.",
+        "<strong>Điều kiện đổi và hoàn vé</strong> khác nhau theo từng hạng vé, đọc kỹ trước khi thanh toán.",
         "Chuyến quốc tế cần hộ chiếu còn hạn theo yêu cầu của nước đến, kiểm tra thêm visa nếu cần.",
         "Giá vé thay đổi theo ngày bay, giờ bay và thời điểm đặt. Chúng tôi báo giá theo từng yêu cầu, không có giá cố định."
       ]
     },
     {
       "type": "h2",
-      "text": "Tour đi máy bay từ Đồng Nai"
+      "text": "<span style=\"color:#075778;font-weight:700\">Tour đi máy bay từ Đồng Nai</span>"
     },
     {
       "type": "list",
@@ -76,7 +85,7 @@
     },
     {
       "type": "h2",
-      "text": "Bài tham khảo trước khi chọn vé"
+      "text": "<span style=\"color:#075778;font-weight:700\">Bài tham khảo trước khi chọn vé</span>"
     },
     {
       "type": "list",
@@ -91,7 +100,7 @@
     },
     {
       "type": "h2",
-      "text": "Câu hỏi thường gặp"
+      "text": "<span style=\"color:#075778;font-weight:700\">Câu hỏi thường gặp</span>"
     },
     {
       "type": "h3",
@@ -127,16 +136,11 @@
     },
     {
       "type": "h2",
-      "text": "Liên hệ đặt vé"
+      "text": "<span style=\"color:#075778;font-weight:700\">Liên hệ đặt vé</span>"
     },
     {
       "type": "p",
       "text": "CÔNG TY TNHH DU LỊCH NGÀY HÔM NAY (TODAYTOURIST)<br>Địa chỉ: Số 80 Đặng Nguyên, Khu phố 29, Phường Long Bình, TP. Đồng Nai<br>Tư vấn: 0902 898 726 (Mr Anh Văn – Phòng Kinh doanh)<br>Vé máy bay, thuê xe: 0937 001 448 (Ms. Thanh Thúy) | 0913 78 76 47 (Lê Sang)<br>Email: lesangtravel@gmail.com"
-    },
-    {
-      "type": "img",
-      "src": "/content/vi/images/ve-may-bay.webp",
-      "alt": "Đặt vé máy bay tại Today Tourist, Biên Hòa, Đồng Nai"
     }
   ]
 }
