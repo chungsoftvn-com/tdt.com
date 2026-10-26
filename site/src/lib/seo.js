@@ -147,7 +147,7 @@ export function seoKey(pathname) {
   // Trang chi tiết không khai báo trong seo.json — tự sinh từ nội dung bài.
   // ('tour' giữ lại cho URL cũ nếu có ngày nào còn sót.)
   if (seg.length > 1 && ['tour', 'tours', 'tin-tuc', 'y-kien-khach-hang'].includes(seg[0])) {
-    return `${seg[0]}-detail`;
+    return seg.join('/');
   }
   if (seg[0] === 'home') return 'home'; // /vi/home/generated/ (đã noindex)
   return seg[0];
@@ -163,9 +163,12 @@ export function pageSeo(lang, pathname) {
   const table = safeContent(lang, 'seo') || safeContent(DEFAULT_LANG, 'seo') || {};
   const key = seoKey(pathname);
   const entry = table[key] && typeof table[key] === 'object' ? table[key] : {};
+  // Detail pages may have centrally managed titles; per-article edits take priority.
+  const detail = key.includes('/') && !key.includes('/khu-vuc/')
+    ? safeContent(lang, key.replace(/^tin-tuc\//, 'news/')) : null;
   return {
     key,
-    title: typeof entry.title === 'string' ? entry.title : '',
+    title: String(detail?.seo_title || '').trim() || (typeof entry.title === 'string' ? entry.title : ''),
     description: typeof entry.description === 'string' ? entry.description : '',
     brand: c.brand_name || BRAND_FALLBACK,
     metaTitle: c.meta_title || BRAND_FALLBACK,
