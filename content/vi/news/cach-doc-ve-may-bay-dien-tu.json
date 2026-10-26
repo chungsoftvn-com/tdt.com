@@ -2,7 +2,7 @@
   "slug": "cach-doc-ve-may-bay-dien-tu",
   "title": "Cách đọc vé máy bay điện tử: 8 mục cần kiểm tra",
   "category": "Vé máy bay – Cẩm nang đặt vé",
-  "image": "",
+  "image": "pasted-1793024227059-0.webp",
   "summary": "Phân biệt mã đặt chỗ, vé điện tử và thẻ lên máy bay; kiểm tra tên, sân bay, giờ bay, hành lý và hãng khai thác.",
   "body": "",
   "published_at": "2026-10-26",
@@ -136,5 +136,6 @@
       "text": "Đối chiếu ngày 26/10/2026: <a href=\"https://www.vietnamairlines.com/vn/vi/help-desk\" target=\"_blank\" rel=\"noopener nofollow\">Vietnam Airlines – tra cứu và hỗ trợ vé</a>. Điều kiện cụ thể cần kiểm tra lại theo hãng khai thác, hành trình, hạng vé và thời điểm đặt."
     }
   ],
-  "hidden": true
+  "hidden": false,
+  "seo_title": "Cách đọc vé máy bay điện tử: 8 mục cần kiểm tra"
 }
