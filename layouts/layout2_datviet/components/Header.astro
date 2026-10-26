@@ -44,11 +44,11 @@ const navItems: NavItem[] = [
   { label: t.nav_home, url: href(lang) },
   {
     label: t.region_domestic,
-    url: href(lang, 'tours'),
+    url: `${href(lang, 'tours')}?region=domestic`,
     mega: [
       {
         title: t.region_domestic,
-        all: href(lang, 'tours'),
+        all: `${href(lang, 'tours')}?region=domestic`,
         items: domestic.map((r) => ({
           name: r.name,
           url: href(lang, `tours/khu-vuc/${r.slug}`),
@@ -59,11 +59,11 @@ const navItems: NavItem[] = [
   },
   {
     label: t.region_international,
-    url: href(lang, 'tours'),
+    url: `${href(lang, 'tours')}?region=international`,
     mega: [
       {
         title: t.region_international,
-        all: href(lang, 'tours'),
+        all: `${href(lang, 'tours')}?region=international`,
         items: intl.map((r) => ({
           name: r.name,
           url: href(lang, `tours/khu-vuc/${r.slug}`),
