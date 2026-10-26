@@ -139,8 +139,8 @@
       "text": "<span style=\"color:#075778;font-weight:700\">Liên hệ đặt vé</span>"
     },
     {
-      "type": "p",
-      "text": "CÔNG TY TNHH DU LỊCH NGÀY HÔM NAY (TODAYTOURIST)<br>Địa chỉ: Số 80 Đặng Nguyên, Khu phố 29, Phường Long Bình, TP. Đồng Nai<br>Tư vấn: 0902 898 726 (Mr Anh Văn – Phòng Kinh doanh)<br>Vé máy bay, thuê xe: 0937 001 448 (Ms. Thanh Thúy) | 0913 78 76 47 (Lê Sang)<br>Email: lesangtravel@gmail.com"
+      "type": "html",
+      "html": "<div style=\"background-color:#edf6fb;border:1px solid #c8e0ec;border-left:5px solid #086b91;border-radius:12px;padding:24px;color:#173c4e;line-height:1.8\"><p style=\"color:#075778;font-size:21px;font-weight:700;margin:0 0 6px\">CÔNG TY TNHH DU LỊCH NGÀY HÔM NAY</p><p style=\"color:#8b2635;font-weight:700;margin:0 0 18px\">TODAYTOURIST – CÙNG BẠN ĐI KHẮP NĂM CHÂU</p><p>📍 <strong>Địa chỉ:</strong> Số 80 Đặng Nguyên, Khu phố 29, Phường Long Bình, TP. Đồng Nai</p><p>✈️ <strong>Vé máy bay – Ms. Thanh Thúy:</strong><br><a href=\"tel:0937001448\" style=\"color:#075778;font-weight:700\">0937 001 448</a> · <a href=\"https://zalo.me/0937001448\">Nhắn Zalo</a></p><p>📞 <strong>Tư vấn – Mr Anh Văn, Phòng Kinh doanh:</strong><br><a href=\"tel:0902898726\" style=\"color:#075778;font-weight:700\">0902 898 726</a> · <a href=\"https://zalo.me/0902898726\">Nhắn Zalo</a></p><p>☎️ <strong>Hotline – Lê Sang:</strong> <a href=\"tel:0913787647\" style=\"color:#075778;font-weight:700\">0913 78 76 47</a></p><p>✉️ <strong>Email:</strong> <a href=\"mailto:lesangtravel@gmail.com\">lesangtravel@gmail.com</a></p><p style=\"color:#075778;margin:16px 0 0\"><em>Gửi chặng bay, ngày đi/về và số khách để được tư vấn phương án phù hợp.</em></p></div>"
     }
   ]
 }
