@@ -99,6 +99,21 @@
       ]
     },
     {
+      "type": "h3",
+      "text": "Cẩm nang đặt vé máy bay"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"/vi/tin-tuc/mua-ve-may-bay-qua-app-hay-don-vi-tu-van/\" style=\"color:#00695c;font-weight:700;text-decoration:underline\">Mua vé máy bay qua app hay đơn vị tư vấn: chọn thế nào?</a>",
+        "<a href=\"/vi/tin-tuc/doc-bao-gia-ve-may-bay-tong-chi-phi/\" style=\"color:#00695c;font-weight:700;text-decoration:underline\">Đọc báo giá vé máy bay: so tổng tiền và điều kiện vé</a>",
+        "<a href=\"/vi/tin-tuc/dat-ve-may-bay-cho-doan-cong-ty/\" style=\"color:#00695c;font-weight:700;text-decoration:underline\">Đặt vé máy bay cho đoàn công ty: chốt gì trước khi mua?</a>",
+        "<a href=\"/vi/tin-tuc/mua-them-hanh-ly-ky-gui-truoc-chuyen-bay/\" style=\"color:#00695c;font-weight:700;text-decoration:underline\">Mua thêm hành lý ký gửi: kiểm tra gì để tránh phát sinh?</a>",
+        "<a href=\"/vi/tin-tuc/cach-doc-ve-may-bay-dien-tu/\" style=\"color:#00695c;font-weight:700;text-decoration:underline\">Cách đọc vé máy bay điện tử: 8 mục cần kiểm tra</a>",
+        "<a href=\"/vi/tin-tuc/di-may-bay-lan-dau-chuan-bi-va-lam-thu-tuc/\" style=\"color:#00695c;font-weight:700;text-decoration:underline\">Đi máy bay lần đầu: chuẩn bị và làm thủ tục từng bước</a>"
+      ]
+    },
+    {
       "type": "h2",
       "text": "<span style=\"color:#075778;font-weight:700\">Câu hỏi thường gặp</span>"
     },
