@@ -100,8 +100,7 @@ const chipLinks = [...domesticGroups, ...intlGroups].map((g) => ({
 }));
 
 const heroImage = hotTours[0]?.image ? `/content/vi/images/${hotTours[0].image}` : '';
-const searchPlaceholder =
-  lang === 'vi' ? 'Bạn muốn đi đâu? Nhập tên tour / điểm đến…' : 'Where to? Tour or destination…';
+const searchPlaceholder = c.home_search_placeholder;
 
 /** Dữ liệu lấy từ Facebook Page (content/vi/facebook.json) — bản EN chưa có thì dùng VI. */
 const readFb = (l: string): any => {
@@ -215,7 +214,7 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
               <section class="bg-white px-5 py-8 sm:py-10">
                 <div class="mx-auto max-w-6xl">
                   <div class="dv-head">
-                    <h2>{lang === 'vi' ? 'Điểm đến nổi bật' : 'Featured destinations'}</h2>
+                    <h2>{t.featured_destinations_title}</h2>
                     <a href={href(lang, 'tours')}>{t.view_all_tours}</a>
                   </div>
                   <div class="dv-mosaic">
@@ -321,7 +320,7 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
       <section class="bg-sand px-5 py-12">
         <div class="mx-auto max-w-6xl">
           <div class="dv-head">
-            <h2>{lang === 'vi' ? 'Khoảnh khắc hành trình' : 'Trip moments'}</h2>
+            <h2>{t.trip_moments_title}</h2>
             <a href={href(lang, 'tin-tuc')}>{c.nav_news}</a>
           </div>
           <div class="dv-strip">
@@ -362,12 +361,14 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
       <section class="border-t border-black/5 bg-sea-pale/70 px-5 py-12">
         <div class="mx-auto max-w-6xl">
           <div class="dv-head">
-            <h2>{fb.section_title || 'Facebook'}</h2>
+            <h2>{t.facebook_section_title ?? fb.section_title ?? 'Facebook'}</h2>
             <a href={fb.page_url} target="_blank" rel="noopener noreferrer">
-              {fb.cta_label || 'Facebook'}
+              {t.facebook_cta_label ?? fb.cta_label ?? 'Facebook'}
             </a>
           </div>
-          {fb.section_text && <p class="dv-head-sub">{fb.section_text}</p>}
+          {(t.facebook_section_text ?? fb.section_text) && (
+            <p class="dv-head-sub">{t.facebook_section_text ?? fb.section_text}</p>
+          )}
           <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {fbPhotos.map((p) => (
               <a
@@ -393,14 +394,19 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
               target="_blank"
               rel="noopener noreferrer"
             >
-              {fb.cta_label || 'Facebook'}
+              {t.facebook_cta_label ?? fb.cta_label ?? 'Facebook'}
             </a>
-            {fb.followers && (
+            {(t.facebook_followers ?? fb.followers) && (
               <span class="text-sm text-ink-soft">
-                <strong class="text-sea-deep">{fb.followers}</strong> {fb.followers_label}
+                <strong class="text-sea-deep">{t.facebook_followers ?? fb.followers}</strong>{' '}
+                {t.facebook_followers_label ?? fb.followers_label}
               </span>
             )}
-            {fb.bio && <span class="max-w-2xl text-sm leading-relaxed text-ink-soft">{fb.bio}</span>}
+            {(t.facebook_bio ?? fb.bio) && (
+              <span class="max-w-2xl text-sm leading-relaxed text-ink-soft">
+                {t.facebook_bio ?? fb.bio}
+              </span>
+            )}
           </div>
         </div>
       </section>

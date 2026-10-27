@@ -43,7 +43,7 @@ const priceOld = (tour as { price_old?: string }).price_old;
       height="506"
     />
     {tour.regionName && <span class="dv-badge-region">{tour.regionName}</span>}
-    {hot && <span class="dv-badge-hot">HOT</span>}
+    {hot && <span class="dv-badge-hot">{t.tour_hot_label ?? 'HOT'}</span>}
   </a>
 
   <div class="dv-card-body">
@@ -64,7 +64,7 @@ const priceOld = (tour as { price_old?: string }).price_old;
         tour.departure && (
           <li>
             <Icon name="arrow-right" class="h-3.5 w-3.5 text-sea" />
-            <span>{lang === 'vi' ? 'Khởi hành' : 'Departure'}: <strong class="font-semibold text-ink">{tour.departure}</strong></span>
+            <span>{t.departure_label ?? (lang === 'vi' ? 'Khởi hành' : 'Departure')}: <strong class="font-semibold text-ink">{tour.departure}</strong></span>
           </li>
         )
       }

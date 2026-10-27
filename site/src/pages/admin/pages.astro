@@ -288,6 +288,43 @@ import AdminLayout from '@/components/AdminLayout.astro';
     }
   }
 
+  function appendFields(sec, fields, hasBody = false) {
+    if (!fields?.length) return;
+    const grid = document.createElement('div');
+    grid.className = `${hasBody ? 'mt-6 ' : ''}grid gap-2 sm:grid-cols-2`;
+    for (const f of fields) {
+      const cell = document.createElement('div');
+      cell.className = 'flex flex-wrap items-center gap-x-2 gap-y-1 rounded-xl border border-ink/10 bg-sand/50 px-3 py-2';
+      if (f.type === 'textarea') cell.classList.add('sm:col-span-2');
+      const lab = document.createElement('label');
+      lab.className = 'w-44 shrink-0 text-sm font-medium text-ink-soft';
+      lab.textContent = f.label;
+      lab.htmlFor = `f-${f.key}`;
+      cell.appendChild(lab);
+      const dash = document.createElement('span');
+      dash.className = 'text-ink/30';
+      dash.textContent = '–';
+      cell.appendChild(dash);
+      const cls = 'min-w-0 flex-1 rounded-lg border border-ink/15 bg-sand px-2.5 py-1.5 text-sm text-ink outline-none focus:border-sea';
+      if (f.type === 'textarea') {
+        const ta = document.createElement('textarea');
+        ta.id = `f-${f.key}`;
+        ta.rows = 1;
+        ta.className = cls + ' resize-y';
+        ta.value = data[f.key] ?? '';
+        cell.appendChild(ta);
+      } else {
+        const inp = document.createElement('input');
+        inp.id = `f-${f.key}`;
+        inp.className = cls;
+        inp.value = data[f.key] ?? '';
+        cell.appendChild(inp);
+      }
+      grid.appendChild(cell);
+    }
+    sec.appendChild(grid);
+  }
+
   /* ==================== Trang chủ: quản lý khối (block) ==================== */
 
   /* Render toàn bộ form trang chủ: quản lý khối + nội dung từng khối + tour hot + html. */
@@ -351,6 +388,17 @@ import AdminLayout from '@/components/AdminLayout.astro';
     content.className = 'space-y-6';
     wrap.appendChild(content);
     homeBlocks.forEach((b) => appendBlockContent(b));
+
+    for (const section of current.sections || []) {
+      const sec = document.createElement('div');
+      sec.className = 'rounded-2xl border border-ink/10 bg-sand/40 p-4';
+      const h = document.createElement('h2');
+      h.className = 'mb-3 font-display text-lg font-semibold text-ink';
+      h.textContent = section.title;
+      sec.appendChild(h);
+      appendFields(sec, section.fields);
+      wrap.appendChild(sec);
+    }
 
     // --- 3) Tour hot: tickbox chọn tour ---
     if (current.hotTours) await renderHotToursSection();
@@ -574,42 +622,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
         bIdx++;
       }
 
-      if (section.fields && section.fields.length) {
-        const grid = document.createElement('div');
-        grid.className = (section.body ? 'mt-6 ' : '') + 'grid gap-2 sm:grid-cols-2';
-        for (const f of section.fields) {
-          // Cặp [nhãn – nội dung] trên cùng 1 dòng
-          const cell = document.createElement('div');
-          cell.className = 'flex flex-wrap items-center gap-x-2 gap-y-1 rounded-xl border border-ink/10 bg-sand/50 px-3 py-2';
-          if (f.type === 'textarea') cell.classList.add('sm:col-span-2');
-          const lab = document.createElement('label');
-          lab.className = 'w-44 shrink-0 text-sm font-medium text-ink-soft';
-          lab.textContent = f.label;
-          lab.htmlFor = `f-${f.key}`;
-          cell.appendChild(lab);
-          const dash = document.createElement('span');
-          dash.className = 'text-ink/30';
-          dash.textContent = '–';
-          cell.appendChild(dash);
-          const cls = 'min-w-0 flex-1 rounded-lg border border-ink/15 bg-sand px-2.5 py-1.5 text-sm text-ink outline-none focus:border-sea';
-          if (f.type === 'textarea') {
-            const ta = document.createElement('textarea');
-            ta.id = `f-${f.key}`;
-            ta.rows = 1;
-            ta.className = cls + ' resize-y';
-            ta.value = data[f.key] ?? '';
-            cell.appendChild(ta);
-          } else {
-            const inp = document.createElement('input');
-            inp.id = `f-${f.key}`;
-            inp.className = cls;
-            inp.value = data[f.key] ?? '';
-            cell.appendChild(inp);
-          }
-          grid.appendChild(cell);
-        }
-        sec.appendChild(grid);
-      }
+      appendFields(sec, section.fields, Boolean(section.body));
       wrap.appendChild(sec);
     }
     // Tour hot: tickbox chọn tour (trang chủ)

@@ -101,7 +101,7 @@ const hasExtraBodies = !!(t.footer_quick_body || t.footer_contact_body || t.foot
 
     <!-- Cột 2: dịch vụ -->
     <div>
-      <h3>{t.footer_quick_title || 'Dịch vụ'}</h3>
+      <h3>{t.footer_quick_title ?? 'Dịch vụ'}</h3>
       <ul class="grid gap-1.5">
         {
           services.map((s) => (
@@ -115,7 +115,7 @@ const hasExtraBodies = !!(t.footer_quick_body || t.footer_contact_body || t.foot
 
     <!-- Cột 3: thông tin -->
     <div>
-      <h3>{t.footer_contact_title || 'Thông tin'}</h3>
+      <h3>{t.footer_contact_title ?? 'Thông tin'}</h3>
       <ul class="grid gap-1.5">
         {
           infos.map((s) => (
@@ -129,25 +129,25 @@ const hasExtraBodies = !!(t.footer_quick_body || t.footer_contact_body || t.foot
 
     <!-- Cột 4: nhận tin + social -->
     <div>
-      <h3>{t.footer_offer || (lang === 'vi' ? 'Đăng ký nhận tin khuyến mãi' : 'Get our newsletter')}</h3>
+      <h3>{t.footer_offer ?? (lang === 'vi' ? 'Đăng ký nhận tin khuyến mãi' : 'Get our newsletter')}</h3>
       <form data-newsletter class="dv-newsletter flex" novalidate>
         <input
           type="email"
           name="email"
           required
-          placeholder={lang === 'vi' ? 'Email của bạn' : 'Your email'}
-          aria-label={lang === 'vi' ? 'Email của bạn' : 'Your email'}
+          placeholder={t.footer_email_placeholder ?? (lang === 'vi' ? 'Email của bạn' : 'Your email')}
+          aria-label={t.footer_email_placeholder ?? (lang === 'vi' ? 'Email của bạn' : 'Your email')}
         />
-        <button type="submit">{lang === 'vi' ? 'Gửi' : 'Send'}</button>
+        <button type="submit">{t.footer_newsletter_submit ?? (lang === 'vi' ? 'Gửi' : 'Send')}</button>
       </form>
       <p data-newsletter-note class="mt-2 hidden text-xs text-sea-deep">
-        {lang === 'vi' ? 'Cảm ơn bạn! Vui lòng kiểm tra email để hoàn tất.' : 'Thanks! Please check your email.'}
+        {t.footer_newsletter_success ?? (lang === 'vi' ? 'Cảm ơn bạn! Vui lòng kiểm tra email để hoàn tất.' : 'Thanks! Please check your email.')}
       </p>
 
       {
         socials.length > 0 && (
           <>
-            <h3 class="mt-5">{t.footer_social_title}</h3>
+            <h3 class="mt-5">{t.footer_social_title ?? ''}</h3>
             <div class="flex items-center gap-2">
               {socials.map((s) => (
                 <a
