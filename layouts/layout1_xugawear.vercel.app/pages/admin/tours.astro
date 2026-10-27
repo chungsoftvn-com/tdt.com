@@ -133,7 +133,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
     if (!tour) return;
     setBusy(btn, true, 'Đang lưu...');
     try {
-      const r = await api('PUT', `/tours/${slug}`, { ...tour, hidden: !tour.hidden });
+      const r = await api('PUT', `/tours/${slug}`, { hidden: !tour.hidden });
       if (!r.data?.ok) {
         alert(describeSaveError(r));
         return;

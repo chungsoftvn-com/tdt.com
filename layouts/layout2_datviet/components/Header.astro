@@ -122,8 +122,7 @@ const socials = [
       `https://zalo.me/${String(t.zalo || t.hotline || '').replace(/[^0-9]/g, '')}`,
   },
 ].filter((s) => s.url);
-const searchPlaceholder =
-  lang === 'vi' ? 'Tìm tour, điểm đến, khách sạn…' : 'Search tours, destinations…';
+const searchPlaceholder = t.header_search_placeholder;
 ---
 
 <header class="dv-header sticky top-0 z-50">
@@ -205,7 +204,7 @@ const searchPlaceholder =
   {/* Tầng 3 — thanh menu xanh (desktop) */}
   <div class="dv-nav hidden lg:block">
     <div class="mx-auto flex max-w-6xl items-center gap-2 px-5">
-      <nav data-nav aria-label="Primary" class="min-w-0 flex-1">
+      <nav data-nav aria-label={t.nav_primary_label} class="min-w-0 flex-1">
         <ul data-nav-list class="flex items-center">
           {
             navItems.map((item) => (
@@ -237,7 +236,7 @@ const searchPlaceholder =
             <button
               type="button"
               data-nav-more
-              aria-label="Xem thêm menu"
+              aria-label={t.nav_more_label}
               aria-expanded="false"
               class="tt-hidden block px-3 py-3 text-sm font-bold tracking-widest text-white"
             >
@@ -269,7 +268,7 @@ const searchPlaceholder =
       />
       <button type="submit" class="dv-search-btn">{t.nav_find_tour}</button>
     </form>
-    <nav aria-label="Mobile">
+    <nav aria-label={t.nav_mobile_label}>
       <ul class="space-y-0.5">
         {
           navItems.map((item) => (

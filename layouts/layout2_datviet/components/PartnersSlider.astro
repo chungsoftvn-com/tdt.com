@@ -29,8 +29,8 @@ const initial = (name = '') => (name.trim() || '?').charAt(0);
             <button
               type="button"
               data-tt-partners-prev
-              aria-label="Trước"
-              title="Trước"
+              aria-label={c.partners_prev}
+              title={c.partners_prev}
               class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-sand text-lg text-ink-soft transition-colors hover:border-sea hover:text-sea-deep"
             >
               ‹
@@ -38,8 +38,8 @@ const initial = (name = '') => (name.trim() || '?').charAt(0);
             <button
               type="button"
               data-tt-partners-next
-              aria-label="Tiếp"
-              title="Tiếp"
+              aria-label={c.partners_next}
+              title={c.partners_next}
               class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 bg-sand text-lg text-ink-soft transition-colors hover:border-sea hover:text-sea-deep"
             >
               ›

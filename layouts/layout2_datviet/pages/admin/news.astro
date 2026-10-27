@@ -124,7 +124,8 @@ import AdminLayout from '@/components/AdminLayout.astro';
     if (!item) return;
     setBusy(btn, true, 'Đang lưu...');
     try {
-      const r = await api('PUT', `/news/${slug}`, { ...item, hidden: !item.hidden });
+      // Chỉ gửi đúng trường cần đổi (danh sách là bản rút gọn, không có body/content).
+      const r = await api('PUT', `/news/${slug}`, { hidden: !item.hidden });
       if (!r.data?.ok) {
         alert(describeSaveError(r));
         return;
