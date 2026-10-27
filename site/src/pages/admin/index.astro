@@ -227,8 +227,9 @@ import AdminLayout from '@/components/AdminLayout.astro';
     working: 'dep-badge-running dep-pulse',
     finishing: 'dep-badge-running dep-pulse',
   };
-  let depTimer = null; // poll dữ liệu từ hệ thống mỗi 5 giây
-  let depClock = null; // đồng hồ làm mới thời gian/ETA mỗi giây
+  let depTimer = null; // nhịp poll dữ liệu từ hệ thống (5s khi đang build, 60s khi rảnh)
+  let depFastUntil = 0; // mốc thời gian còn poll dày sau khi vừa mở dashboard
+  let depClock = null; // đồng hồ làm mới thời gian/ETA mỗi giây (chỉ vẽ lại, không gọi mạng)
   let depByRun = new Map();
 
   function depFmtDur(sec) {
@@ -313,7 +314,7 @@ import AdminLayout from '@/components/AdminLayout.astro';
   async function refreshDeployments() {
     try {
       const r = await api('GET', '/deployments');
-      if (!r.data?.ok) return;
+      if (!r.data?.ok) return false;
       const list = Array.isArray(r.data.deployments) ? r.data.deployments : [];
       depByRun = new Map();
       for (const d of list) {
@@ -327,9 +328,35 @@ import AdminLayout from '@/components/AdminLayout.astro';
       }
       renderDeployList();
       $('deploy-meta').textContent = list.length ? 'Cập nhật mỗi vài giây' : 'Đã kết nối';
+      return list.some((d) => RUNNING_PHASES.has(d.phase));
     } catch {
       // Lỗi mạng không kết nối được: giữ nguyên bảng đang hiển thị.
+      return false;
     }
+  }
+
+  /**
+   * Nhịp poll THÍCH ỨNG: đang build thì 5 giây/lần, xong rồi thì 60 giây/lần.
+   * Tab bị ẩn (chuyển tab / thu nhỏ) thì gần như không gọi, quay lại tab thì
+   * làm mới ngay. Lý do: mỗi lần poll là 1 lần Worker chạy (tốn CPU quota),
+   * poll 5 giây liên tục cả ngày làm Worker vượt hạn mức CPU của gói Free.
+   */
+  function scheduleDeployPoll(ms) {
+    if (depTimer) clearTimeout(depTimer);
+    depTimer = setTimeout(pollDeployments, ms);
+  }
+
+  async function pollDeployments() {
+    depTimer = null;
+    if (document.visibilityState !== 'visible') {
+      scheduleDeployPoll(60000);
+      return;
+    }
+    const running = await refreshDeployments();
+    // 2 phút đầu sau khi mở dashboard poll dày (5 giây) để bắt kịp lần build vừa
+    // kích hoạt; sau đó chỉ poll dày khi thật sự có build đang chạy.
+    const warmingUp = Date.now() < depFastUntil;
+    scheduleDeployPoll(running || warmingUp ? 5000 : 60000);
   }
 
   function startDeployPolling() {
@@ -338,14 +365,21 @@ import AdminLayout from '@/components/AdminLayout.astro';
     if (!panel) return;
     panel.classList.remove('hidden');
     $('deploy-meta').textContent = 'Đang kết nối…';
-    refreshDeployments();
-    depTimer = setInterval(refreshDeployments, 5000);
+    depFastUntil = Date.now() + 120000;
+    pollDeployments();
     depClock = setInterval(renderDeployList, 1000);
+    document.addEventListener('visibilitychange', onDeployVisibility);
+  }
+
+  function onDeployVisibility() {
+    // Quay lại tab: kiểm tra lại ngay thay vì chờ hết chu kỳ.
+    if (document.visibilityState === 'visible' && depTimer) scheduleDeployPoll(2000);
   }
 
   function stopDeployPolling() {
+    document.removeEventListener('visibilitychange', onDeployVisibility);
     if (depTimer) {
-      clearInterval(depTimer);
+      clearTimeout(depTimer);
       depTimer = null;
     }
     if (depClock) {
