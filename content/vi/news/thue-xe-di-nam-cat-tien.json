@@ -25,7 +25,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792203772573-0.jpg\" alt=\"Thuê xe đi Nam Cát Tiên từ Biên Hòa, Đồng Nai, TP.HCM\"></figure>"
+      "html": "<figure style=\"width:1200px\"><img src=\"/content/vi/images/pasted-1792203772573-0.jpg\" alt=\"Thuê xe đi Nam Cát Tiên từ Biên Hòa, Đồng Nai, TP.HCM\" style=\"width:1200px;height:675px\"></figure>"
     },
     {
       "type": "h2",
@@ -90,7 +90,7 @@
     },
     {
       "type": "h3",
-      "text": "<strong><span style=\"color:#263238;font-size:20px\">Cát Tiên cách TP.HCM bao xa?</span></strong>"
+      "text": "<strong><span style=\"color:#263238;font-size:20px\">Nam Cát Tiên cách TP.HCM bao xa?</span></strong>"
     },
     {
       "type": "p",
