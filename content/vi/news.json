@@ -1,5 +1,5 @@
 {
-  "count": 689,
+  "count": 690,
   "order": [
     "thue-xe-45-cho-bien-hoa-dong-nai-tphcm",
     "thue-nguyen-xe-dua-cong-nhan-ve-que-va-don-lai-dip-tet",
@@ -689,7 +689,8 @@
     "mua-them-hanh-ly-ky-gui-truoc-chuyen-bay",
     "cach-doc-ve-may-bay-dien-tu",
     "di-may-bay-lan-dau-chuan-bi-va-lam-thu-tuc",
-    "di-san-bay-tan-son-nhat-tu-bien-hoa-dong-nai"
+    "di-san-bay-tan-son-nhat-tu-bien-hoa-dong-nai",
+    "chuyen-bay-bi-delay-huy-chuyen-quyen-loi-hanh-khach"
   ],
   "list_title": "Tin tức",
   "list_text": "Cập nhật tin tức du lịch, cẩm nang và ưu đãi mới nhất từ TodayTourist.",
