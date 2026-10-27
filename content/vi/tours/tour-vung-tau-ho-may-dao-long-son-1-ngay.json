@@ -7,7 +7,7 @@
   "duration": "1 ngày",
   "price": "1.190.000đ/khách",
   "image": "vũng-tàu_-núi-lớn-và-nhà-lớn-8.webp",
-  "desc": "Tour Vũng Tàu – Hồ Mây – Đảo Long Sơn 1 ngày từ Đồng Nai, đón tận nơi Biên Hòa: cáp treo Hồ Mây, làng bè hải sản. Giá 1.190.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Vũng Tàu – Hồ Mây – Đảo Long Sơn 1 ngày từ Đồng Nai, đón Biên Hòa, TP.HCM: cáp treo Hồ Mây, làng bè hải sản. Giá 1.190.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Ghé làng bè Long Sơn, tìm hiểu nghề nuôi hàu và đời sống ngư dân trên sông",
     "Thưởng thức bữa trưa hải sản tươi ngay tại làng bè (hàu, cá tươi)",
@@ -52,15 +52,35 @@
     },
     {
       "type": "h3",
-      "text": "🚐 PHƯƠNG ÁN ĐƯA ĐÓN KHÁCH LINH HOẠT – TIỆN LỢI"
+      "text": "🚐 ĐIỂM ĐÓN KHÁCH TẠI BIÊN HÒA (TP. ĐỒNG NAI) VÀ TP.HCM"
     },
     {
       "type": "p",
-      "text": "Xe du lịch TodayTourist đưa đón tận nơi trong nội ô trung tâm Biên Hòa (TP. Đồng Nai), đón quý khách về điểm tập kết tại trụ sở công ty (80 Đặng Nguyên, KP 29, P. Long Bình) trước khi khởi hành."
+      "text": "<strong>📍 Khu vực Biên Hòa – TP. Đồng Nai:</strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Điểm tập kết chính: trụ sở TodayTourist – 80 Đặng Nguyên, KP 29, P. Long Bình",
+        "Bưu điện Đồng Nai",
+        "KCN Amata",
+        "Đón tận nơi trong nội ô khu vực Biên Hòa"
+      ]
     },
     {
       "type": "p",
-      "text": "📌 Quý khách ở dọc tuyến đường đoàn đi qua sẽ được đón ngay trên đường, không cần về điểm tập kết."
+      "text": "<strong>📍 Khu vực TP.HCM:</strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ngã tư Hàng Xanh",
+        "Khu vực Suối Tiên (Xa lộ Hà Nội)"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách ở dọc tuyến đường đoàn đi qua được đón ngay trên đường. Vui lòng báo điểm đón khi đặt tour, hướng dẫn viên sẽ báo giờ đón cụ thể trước ngày khởi hành."
     },
     {
       "type": "h3",
