@@ -28,11 +28,28 @@
     },
     {
       "type": "h3",
-      "text": "🚌 Phương án đưa đón khách linh hoạt"
+      "text": "🚐 ĐIỂM ĐÓN KHÁCH TẠI BIÊN HÒA (TP. ĐỒNG NAI) VÀ TP.HCM"
     },
     {
       "type": "p",
-      "text": "Xe công ty đưa đón khách từ khu vực Biên Hòa – TP. Đồng Nai đến sân bay Tân Sơn Nhất và đưa về sau chuyến bay. Khách ở TP.HCM có thể tự đến sân bay theo giờ hẹn."
+      "text": "<strong>📍 Khu vực Biên Hòa – TP. Đồng Nai:</strong> xe TodayTourist đón khách và đưa ra sân bay Tân Sơn Nhất, đưa về lại sau chuyến bay."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Điểm tập kết chính: trụ sở TodayTourist – 80 Đặng Nguyên, KP 29, P. Long Bình",
+        "Bưu điện Đồng Nai",
+        "KCN Amata",
+        "Đón tận nơi trong nội ô khu vực Biên Hòa"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "<strong>📍 Khu vực TP.HCM:</strong> quý khách hẹn trực tiếp tại sân bay Tân Sơn Nhất (ga quốc nội) theo giờ hướng dẫn viên báo."
+    },
+    {
+      "type": "p",
+      "text": "📌 Vui lòng báo điểm đón khi đặt tour, hướng dẫn viên sẽ báo giờ đón cụ thể trước ngày khởi hành."
     },
     {
       "type": "h3",
