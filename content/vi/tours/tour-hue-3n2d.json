@@ -5,9 +5,9 @@
   "region_name": "Miền Trung",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "3 ngày 2 đêm",
-  "price": "4.090.000đ/khách",
+  "price": "3.490.000đ/khách",
   "image": "bia-tour-hue-3n2d-todaytourist.jpg",
-  "desc": "Tour Huế 3 ngày 2 đêm bay từ TP.HCM: Đại Nội, chùa Thiên Mụ, lăng Khải Định, lăng Minh Mạng, thuyền rồng sông Hương. Giá 4.090.000đ (chưa gồm vé máy bay).",
+  "desc": "Tour Huế 3 ngày 2 đêm bay từ TP.HCM: Đại Nội, chùa Thiên Mụ, lăng Khải Định, lăng Minh Mạng, thuyền rồng sông Hương. Giá 3.490.000đ (chưa gồm vé máy bay).",
   "highlights": [
     "Bay thẳng từ TP.HCM ra Huế, xe đón tận nơi Biên Hòa ra sân bay Tân Sơn Nhất",
     "Tham quan Đại Nội Huế, kinh thành của triều Nguyễn với Ngọ Môn, Điện Thái Hòa, Tử Cấm Thành",
@@ -28,7 +28,7 @@
     },
     {
       "type": "p",
-      "text": "📅 <strong>Thời gian:</strong> 3 ngày 2 đêm<br>✈️ <strong>Phương tiện:</strong> máy bay TP.HCM – Huế (khách mua vé riêng) + xe du lịch suốt tuyến + thuyền rồng sông Hương<br>🏨 <strong>Lưu trú:</strong> khách sạn 3 sao tại Huế (2 đêm)<br>📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn, từ 10 khách<br>📞 <strong>Tư vấn:</strong> Mr. Anh Văn (Phòng Kinh Doanh) – 0902 898 726"
+      "text": "📅 <strong>Thời gian:</strong> 3 ngày 2 đêm<br>✈️ <strong>Phương tiện:</strong> máy bay TP.HCM – Huế (khách mua vé riêng) + xe du lịch suốt tuyến + thuyền rồng sông Hương<br>🏨 <strong>Lưu trú:</strong> khách sạn 3 sao tại Huế (2 đêm)<br>📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn, ghép từ 20 khách<br>📞 <strong>Tư vấn:</strong> Mr. Anh Văn (Phòng Kinh Doanh) – 0902 898 726. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "h3",
@@ -60,7 +60,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609007726-0.jpg\" alt=\"Chùa Thiên Mụ Huế – tour Huế 3 Ngày 2 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609007726-0.jpg\" alt=\"Chùa Thiên Mụ Huế – tour Huế 3 Ngày 2 Đêm Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -68,7 +68,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791987588570-0.jpg\" alt=\"Du thuyền rồng sông Hương – tour Huế 3 Ngày 2 Đêm Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791987588570-0.jpg\" alt=\"Du thuyền rồng sông Hương – tour Huế 3 Ngày 2 Đêm Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -88,7 +88,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609007726-1.jpg\" alt=\"Đại Nội Huế Ngọ Môn – tour Huế 3 Ngày 2 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609007726-1.jpg\" alt=\"Đại Nội Huế Ngọ Môn – tour Huế 3 Ngày 2 Đêm Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -107,11 +107,11 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609007727-2.jpg\" alt=\"Lăng Khải Định Huế – tour Huế 3 Ngày 2 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609007727-2.jpg\" alt=\"Lăng Khải Định Huế – tour Huế 3 Ngày 2 Đêm Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791987588570-1.jpg\" alt=\"Lăng Minh Mạng Huế – tour Huế 3 Ngày 2 Đêm Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791987588570-1.jpg\" alt=\"Lăng Minh Mạng Huế – tour Huế 3 Ngày 2 Đêm Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -144,8 +144,8 @@
     {
       "type": "list",
       "items": [
-        "💵 Người lớn (từ 10 tuổi): 4.090.000đ/khách (chưa gồm vé máy bay)",
-        "🧒 Trẻ em 5 đến dưới 10 tuổi: 3.070.000đ/khách (ngủ chung với bố mẹ)",
+        "💵 Người lớn (từ 10 tuổi): 3.490.000đ/khách (chưa gồm vé máy bay)",
+        "🧒 Trẻ em 5 đến dưới 10 tuổi: 2.620.000đ/khách (ngủ chung với bố mẹ)",
         "👶 Trẻ dưới 5 tuổi: theo chính sách hãng bay + phụ thu mặt đất (liên hệ)",
         "🛏️ Phụ thu phòng đơn: 450.000đ/khách/đêm"
       ]
@@ -186,7 +186,7 @@
     {
       "type": "list",
       "items": [
-        "Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết",
+        "Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết",
         "Đặt cọc 30–50% khi đăng ký; riêng vé máy bay xuất ngay khi có đủ thông tin, không hoàn không đổi theo quy định hãng",
         "Giá vé máy bay biến động theo ngày bay và được tính riêng ngoài giá tour; giá tour có thể điều chỉnh theo thời điểm khởi hành, công ty báo giá cụ thể khi nhận đăng ký",
         "Trẻ dưới 5 tuổi: vui lòng liên hệ để được báo giá theo chính sách hãng bay",
