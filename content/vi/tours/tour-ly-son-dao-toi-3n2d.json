@@ -5,9 +5,9 @@
   "region_name": "Miền Trung",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "3 ngày 2 đêm",
-  "price": "3.690.000đ/khách",
+  "price": "3.190.000đ/khách",
   "image": "ly-son-3-ngay-2-dem.jpg",
-  "desc": "Bay Chu Lai, tàu cao tốc ra Lý Sơn: Cổng Tò Vò, Chùa Hang, núi Thới Lới, cánh đồng tỏi, Đảo Bé. Xe đón Biên Hòa. Giá 3.690.000đ (chưa gồm vé máy bay).",
+  "desc": "Bay Chu Lai, tàu cao tốc ra Lý Sơn: Cổng Tò Vò, Chùa Hang, núi Thới Lới, cánh đồng tỏi, Đảo Bé. Xe đón Biên Hòa. Giá 3.190.000đ (chưa gồm vé máy bay).",
   "highlights": [
     "Bay thẳng TP.HCM – Chu Lai, vé máy bay tính riêng theo giờ bay",
     "Tàu cao tốc Sa Kỳ – Lý Sơn, khoảng 35 phút",
@@ -48,7 +48,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791982925021-0.jpg\" alt=\"Chùa Hang và Âm Linh Tự Lý Sơn – tour Lý Sơn 3 Ngày 2 Đêm Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791982925021-0.jpg\" alt=\"Chùa Hang và Âm Linh Tự Lý Sơn – tour Lý Sơn 3 Ngày 2 Đêm Today Tourist\"> </figure>"
     },
     {
       "type": "h3",
@@ -60,11 +60,11 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791982925022-1.jpg\" alt=\"Cổng Tò Vò Lý Sơn – tour Lý Sơn 3 Ngày 2 Đêm Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791982925022-1.jpg\" alt=\"Cổng Tò Vò Lý Sơn – tour Lý Sơn 3 Ngày 2 Đêm Today Tourist\"> </figure>"
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791982925022-2.jpg\" alt=\"Hang Câu Lý Sơn – tour Lý Sơn 3 Ngày 2 Đêm Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791982925022-2.jpg\" alt=\"Hang Câu Lý Sơn – tour Lý Sơn 3 Ngày 2 Đêm Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -72,7 +72,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791982925023-3.jpg\" alt=\"Núi Thới Lới và ruộng tỏi Lý Sơn – tour Lý Sơn 3 Ngày 2 Đêm Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791982925023-3.jpg\" alt=\"Núi Thới Lới và ruộng tỏi Lý Sơn – tour Lý Sơn 3 Ngày 2 Đêm Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -80,7 +80,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791982925024-4.jpg\" alt=\"Đảo Bé Lý Sơn – tour Lý Sơn 3 Ngày 2 Đêm Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791982925024-4.jpg\" alt=\"Đảo Bé Lý Sơn – tour Lý Sơn 3 Ngày 2 Đêm Today Tourist\"> </figure>"
     },
     {
       "type": "h3",
@@ -97,8 +97,8 @@
     {
       "type": "list",
       "items": [
-        "Người lớn: 3.690.000đ/khách (chưa gồm vé máy bay)",
-        "Trẻ em 5 đến dưới 10 tuổi: 2.770.000đ (75%)",
+        "Người lớn: 3.190.000đ/khách (chưa gồm vé máy bay)",
+        "Trẻ em 5 đến dưới 10 tuổi: 2.395.000đ (75%)",
         "Trẻ em dưới 5 tuổi: theo chính sách của hãng hàng không và tàu, báo giá khi đặt",
         "Phụ thu phòng đơn: 250.000đ/khách/đêm"
       ]
