@@ -5,9 +5,9 @@
   "region_name": "Miền Tây",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "2 ngày 1 đêm",
-  "price": "2.170.000đ/khách",
+  "price": "1.890.000đ/khách",
   "image": "20.jpg",
-  "desc": "Tour Tiền Giang – Bến Tre – Cần Thơ 2 ngày 1 đêm từ TP. Đồng Nai: cù lao Thới Sơn, du thuyền sông Hậu, chợ nổi Cái Răng. Giá 2.170.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Tiền Giang – Bến Tre – Cần Thơ 2 ngày 1 đêm từ TP. Đồng Nai: cù lao Thới Sơn, du thuyền sông Hậu, chợ nổi Cái Răng. Giá 1.890.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Du ngoạn sông Tiền, khám phá cù lao Thới Sơn",
     "Ngồi xuồng ba lá len lỏi rạch dừa nước",
@@ -40,7 +40,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -84,7 +84,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790522223378-0.jpg\" alt=\"Xuồng ba lá trong rạch dừa Cù lao Thới Sơn – tour Miền Tây 2N1Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790522223378-0.jpg\" alt=\"Xuồng ba lá trong rạch dừa Cù lao Thới Sơn – tour Miền Tây 2N1Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -100,7 +100,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790522223378-1.jpg\" alt=\"Bến Ninh Kiều Cần Thơ về đêm – tour Miền Tây 2N1Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790522223378-1.jpg\" alt=\"Bến Ninh Kiều Cần Thơ về đêm – tour Miền Tây 2N1Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -126,7 +126,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790522223379-2.jpg\" alt=\"Chợ nổi Cái Răng Cần Thơ – tour Miền Tây 2N1Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790522223379-2.jpg\" alt=\"Chợ nổi Cái Răng Cần Thơ – tour Miền Tây 2N1Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -140,7 +140,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790522223379-3.jpg\" alt=\"Khu du lịch Mỹ Khánh Cần Thơ – tour Miền Tây 2N1Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790522223379-3.jpg\" alt=\"Khu du lịch Mỹ Khánh Cần Thơ – tour Miền Tây 2N1Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -156,15 +156,15 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 2.170.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 1.890.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 1.630.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 1.420.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
-      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 1.085.000đ nếu có ghế riêng"
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 945.000đ nếu có ghế riêng"
     },
     {
       "type": "h3",
@@ -220,7 +220,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
