@@ -15,16 +15,23 @@ function validDate(value, today) {
 export function normalizeReviews(records, slug, today = reviewToday()) {
   if (!Array.isArray(records)) return [];
   const ids = new Set();
+  const recordsSeen = new Set();
   return records.flatMap((r) => {
     if (!r || r.tourSlug !== slug || r.status !== 'published'
       || r.source !== 'direct' || r.verified !== true || r.consent !== true
-      || typeof r.id !== 'string' || !/^[a-z0-9-]{1,100}$/.test(r.id) || ids.has(r.id)
+      || typeof r.id !== 'string' || !/^[a-z0-9-]{1,100}$/.test(r.id)
       || !Number.isInteger(r.rating) || r.rating < 1 || r.rating > 5
       || typeof r.author !== 'string' || r.author.trim().length < 2 || r.author.trim().length > 80
       || typeof r.body !== 'string' || r.body.trim().length < 10 || r.body.trim().length > 2000
       || !validDate(r.datePublished, today)) return [];
-    ids.add(r.id);
-    return [{ id: r.id, author: r.author.trim(), body: r.body.trim(),
+    const fingerprint = JSON.stringify([r.author.trim(), r.body.trim(), r.rating, r.datePublished]);
+    if (recordsSeen.has(fingerprint)) return [];
+    recordsSeen.add(fingerprint);
+    let id = r.id;
+    let suffix = 2;
+    while (ids.has(id)) id = `${r.id}-${suffix++}`;
+    ids.add(id);
+    return [{ id, author: r.author.trim(), body: r.body.trim(),
       rating: r.rating, datePublished: r.datePublished }];
   }).sort((a, b) => b.datePublished.localeCompare(a.datePublished));
 }
