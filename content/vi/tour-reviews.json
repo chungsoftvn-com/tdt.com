@@ -20,5 +20,7 @@
   "email_consent": "Tôi đồng ý công bố tên hiển thị, số sao và nhận xét; không công khai email.",
   "maps_label": "Xem đánh giá công ty trên Google Maps",
   "maps_note": "Đánh giá trên Google Maps dành cho công ty TodayTourist, được hiển thị riêng với đánh giá của tour này.",
+  "author_error": "Vui lòng nhập tên hiển thị từ 2 đến 80 ký tự, không chỉ gồm dấu cách.",
+  "body_error": "Vui lòng nhập nhận xét từ 10 đến 1000 ký tự, không chỉ gồm dấu cách.",
   "reviews": []
 }
