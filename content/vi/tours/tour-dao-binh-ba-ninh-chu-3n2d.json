@@ -5,9 +5,9 @@
   "region_name": "Biển đảo",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "3 ngày 2 đêm",
-  "price": "3.950.000đ/khách",
+  "price": "3.390.000đ/khách",
   "image": "bình-ba-ninh-chữ-hương-biển-2.webp",
-  "desc": "Tour Đảo Bình Ba – Ninh Chữ 3 ngày 2 đêm từ TP. Đồng Nai, đón tận nơi Biên Hòa: BBQ tôm hùm, Bãi Nồm, Vĩnh Hy. Giá 3.950.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Đảo Bình Ba – Ninh Chữ 3 ngày 2 đêm từ TP. Đồng Nai, đón tận nơi Biên Hòa: BBQ tôm hùm, Bãi Nồm, Vĩnh Hy. Giá 3.390.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Lên tàu ra đảo Bình Ba, nghỉ đêm giữa biển xanh",
     "Tắm biển Bãi Nồm, check-in Bãi Chưởng hoang sơ",
@@ -40,7 +40,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -86,7 +86,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791541643496-0.jpg\" alt=\"Bãi Nồm đảo Bình Ba – tour Đảo Bình Ba – Ninh Chữ 3N2Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791541643496-0.jpg\" alt=\"Bãi Nồm đảo Bình Ba – tour Đảo Bình Ba – Ninh Chữ 3N2Đ Today Tourist\"> </figure>"
     },
     {
       "type": "list",
@@ -96,7 +96,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791541643496-1.jpg\" alt=\"Bãi Chưởng đảo Bình Ba – tour Đảo Bình Ba – Ninh Chữ 3N2Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791541643496-1.jpg\" alt=\"Bãi Chưởng đảo Bình Ba – tour Đảo Bình Ba – Ninh Chữ 3N2Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -127,11 +127,11 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791541643497-2.jpg\" alt=\"Tàu đáy kính trên Vịnh Vĩnh Hy – tour Đảo Bình Ba – Ninh Chữ 3N2Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791541643497-2.jpg\" alt=\"Tàu đáy kính trên Vịnh Vĩnh Hy – tour Đảo Bình Ba – Ninh Chữ 3N2Đ Today Tourist\"> </figure>"
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791541643497-3.jpg\" alt=\"Bãi biển Ninh Chữ cát trắng – tour Đảo Bình Ba – Ninh Chữ 3N2Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791541643497-3.jpg\" alt=\"Bãi biển Ninh Chữ cát trắng – tour Đảo Bình Ba – Ninh Chữ 3N2Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -153,7 +153,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791541643498-4.jpg\" alt=\"Tháp Chăm Pô Klông Garai – tour Đảo Bình Ba – Ninh Chữ 3N2Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791541643498-4.jpg\" alt=\"Tháp Chăm Pô Klông Garai – tour Đảo Bình Ba – Ninh Chữ 3N2Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -173,15 +173,15 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 3.950.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 3.390.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 2.965.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 2.545.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
-      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 1.975.000đ nếu có ghế riêng (vé tàu trẻ em theo chính sách hãng tàu)"
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 1.695.000đ nếu có ghế riêng (vé tàu trẻ em theo chính sách hãng tàu)"
     },
     {
       "type": "h3",
@@ -237,7 +237,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
