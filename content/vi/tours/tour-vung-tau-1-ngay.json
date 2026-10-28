@@ -5,9 +5,9 @@
   "region_name": "Đông Nam Bộ",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "1 ngày",
-  "price": "770.000đ/khách",
+  "price": "650.000đ/khách",
   "image": "25.jpg",
-  "desc": "Tour Vũng Tàu 1 ngày từ TP. Đồng Nai, đón Biên Hòa, TP.HCM: tắm biển Bãi Sau, Tháp Tam Thắng, Thích Ca Phật Đài. Giá 770.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Vũng Tàu 1 ngày từ TP. Đồng Nai, đón Biên Hòa, TP.HCM: tắm biển Bãi Sau, Tháp Tam Thắng, Thích Ca Phật Đài. Giá 650.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Check-in Giáo xứ Song Vĩnh kiến trúc Gothic",
     "Chụp ảnh cùng những cánh buồm Tháp Tam Thắng",
@@ -40,7 +40,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -114,7 +114,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790496045190-0.jpg\" alt=\"Bãi Sau Vũng Tàu – tour Vũng Tàu 1 ngày Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790496045190-0.jpg\" alt=\"Bãi Sau Vũng Tàu – tour Vũng Tàu 1 ngày Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -136,7 +136,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790496045191-1.jpg\" alt=\"Thích Ca Phật Đài Vũng Tàu – tour Vũng Tàu 1 ngày Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790496045191-1.jpg\" alt=\"Thích Ca Phật Đài Vũng Tàu – tour Vũng Tàu 1 ngày Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -152,11 +152,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn và trẻ em từ 5 tuổi:</strong> 770.000đ/khách"
+      "text": "💵 <strong>Người lớn và trẻ em từ 5 tuổi:</strong> 650.000đ/khách"
     },
     {
       "type": "p",
-      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 385.000đ nếu có ghế riêng"
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 325.000đ nếu có ghế riêng"
     },
     {
       "type": "h3",
@@ -204,7 +204,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
