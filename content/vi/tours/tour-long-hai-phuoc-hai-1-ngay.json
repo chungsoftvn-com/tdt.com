@@ -5,9 +5,9 @@
   "region_name": "Đông Nam Bộ",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "1 ngày",
-  "price": "750.000đ/khách",
+  "price": "690.000đ/khách",
   "image": "tour-long-hai-phuoc-hai-1-ngay-todaytourist.webp",
-  "desc": "Tour Long Hải / Phước Hải 1 ngày từ TP. Đồng Nai, đón tận nơi Biên Hòa: nhà thờ Song Vĩnh, tắm biển, Dinh Cô. Giá 750.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Long Hải / Phước Hải 1 ngày từ TP. Đồng Nai, đón tận nơi Biên Hòa: nhà thờ Song Vĩnh, tắm biển, Dinh Cô. Giá 690.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Check-in Giáo xứ Song Vĩnh kiến trúc Gothic",
     "Tắm biển Long Hải / Phước Hải thỏa thích, ăn trưa tại nhà hàng địa phương",
@@ -38,7 +38,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -82,7 +82,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790853032470-0.jpg\" alt=\"Bãi biển Long Hải / Phước Hải – tour Long Hải / Phước Hải 1 ngày Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790853032470-0.jpg\" alt=\"Bãi biển Long Hải / Phước Hải – tour Long Hải / Phước Hải 1 ngày Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -105,7 +105,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790853032471-1.jpg\" alt=\" Dinh Cô Long Hải – tour Long Hải / Phước Hải 1 ngày Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790853032471-1.jpg\" alt=\" Dinh Cô Long Hải – tour Long Hải / Phước Hải 1 ngày Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -121,11 +121,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn và trẻ em từ 5 tuổi:</strong> 750.000đ/khách"
+      "text": "💵 <strong>Người lớn và trẻ em từ 5 tuổi:</strong> 690.000đ/khách"
     },
     {
       "type": "p",
-      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 375.000đ nếu có ghế riêng"
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 345.000đ nếu có ghế riêng"
     },
     {
       "type": "h3",
@@ -173,7 +173,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
