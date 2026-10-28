@@ -5,9 +5,9 @@
   "region_name": "Miền Trung",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "3 ngày 2 đêm",
-  "price": "4.190.000đ/khách",
+  "price": "3.490.000đ/khách",
   "image": "bia-tour-hue-la-vang-quang-tri-todaytourist.jpg",
-  "desc": "Bay Huế, hành hương La Vang, Nhà thờ Phủ Cam, chùa Thiên Mụ, Đại Nội, lăng Khải Định. Khách sạn 3 sao, xe đón Biên Hòa. Giá 4.190.000đ (chưa gồm vé máy bay).",
+  "desc": "Bay Huế, hành hương La Vang, Nhà thờ Phủ Cam, chùa Thiên Mụ, Đại Nội, lăng Khải Định. Khách sạn 3 sao, xe đón Biên Hòa. Giá 3.490.000đ (chưa gồm vé máy bay).",
   "highlights": [
     "Bay thẳng TP.HCM – Huế, vé máy bay tính riêng theo giờ bay",
     "Hành hương Thánh địa La Vang, Quảng Trị",
@@ -44,7 +44,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609007726-0.jpg\" alt=\"Chùa Thiên Mụ Huế – tour Huế – La Vang – Quảng Trị 3 Ngày 2 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609007726-0.jpg\" alt=\"Chùa Thiên Mụ Huế – tour Huế – La Vang – Quảng Trị 3 Ngày 2 Đêm Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "h3",
@@ -60,7 +60,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609007726-1.jpg\" alt=\"Đại Nội Huế Ngọ Môn – tour Huế – La Vang – Quảng Trị 3 Ngày 2 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609007726-1.jpg\" alt=\"Đại Nội Huế Ngọ Môn – tour Huế – La Vang – Quảng Trị 3 Ngày 2 Đêm Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "h3",
@@ -72,7 +72,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609007727-2.jpg\" alt=\"Lăng Khải Định Huế – tour Huế – La Vang – Quảng Trị 3 Ngày 2 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609007727-2.jpg\" alt=\"Lăng Khải Định Huế – tour Huế – La Vang – Quảng Trị 3 Ngày 2 Đêm Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "h3",
@@ -81,8 +81,8 @@
     {
       "type": "list",
       "items": [
-        "Người lớn: 4.190.000đ/khách (chưa gồm vé máy bay)",
-        "Trẻ em 5 đến dưới 10 tuổi: 3.140.000đ (75%)",
+        "Người lớn: 3.490.000đ/khách (chưa gồm vé máy bay)",
+        "Trẻ em 5 đến dưới 10 tuổi: 2.615.000đ (75%)",
         "Trẻ em dưới 5 tuổi: theo chính sách của hãng hàng không, báo giá khi đặt",
         "Phụ thu phòng đơn: 450.000đ/khách/đêm"
       ]
