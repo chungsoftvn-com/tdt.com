@@ -5,9 +5,9 @@
   "region_name": "Nam Trung Bộ",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "1 ngày",
-  "price": "1.180.000đ/khách",
+  "price": "850.000đ/khách",
   "image": "tour-phan-thiet-1-ngay-todaytourist.webp",
-  "desc": "Tour Phan Thiết 1 ngày từ TP. Đồng Nai, đón Biên Hòa, TP.HCM: tắm biển Hòn Rơm, Mũi Né. Giá 1.180.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Phan Thiết 1 ngày từ TP. Đồng Nai, đón Biên Hòa, TP.HCM: tắm biển Hòn Rơm, Mũi Né. Giá 850.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Tắm biển Hòn Rơm, nước trong, sóng êm, không đá ngầm",
     "Nghỉ chân trên ghế dù, chụp ảnh cùng đoàn tại bãi biển Mũi Né",
@@ -38,7 +38,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -101,7 +101,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790853487927-0.jpg\" alt=\"Bãi biển Hòn Rơm, Mũi Né – tour Phan Thiết 1 ngày Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790853487927-0.jpg\" alt=\"Bãi biển Hòn Rơm, Mũi Né – tour Phan Thiết 1 ngày Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -121,11 +121,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn và trẻ em từ 5 tuổi:</strong> 1.180.000đ/khách"
+      "text": "💵 <strong>Người lớn và trẻ em từ 5 tuổi:</strong> 850.000đ/khách"
     },
     {
       "type": "p",
-      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 590.000đ nếu có ghế riêng"
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 425.000đ nếu có ghế riêng"
     },
     {
       "type": "h3",
@@ -173,7 +173,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
