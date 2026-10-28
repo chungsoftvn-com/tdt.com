@@ -23,6 +23,8 @@ import {
   viOnlyRootSlug,
 } from './content.js';
 
+import { getTourReviews, reviewsLd } from './reviews.js';
+
 export { DEFAULT_LANG, LANGS, viOnlyRootSlug };
 
 /** Domain chính — phải khớp `site` trong astro.config.mjs và file CNAME. */
@@ -392,6 +394,7 @@ export function tourLd(lang, tour) {
     category: tour.regionName || undefined,
     brand: { '@type': 'Brand', name: c.brand_name || BRAND_FALLBACK },
     additionalType: 'https://schema.org/TouristTrip',
+    ...reviewsLd(getTourReviews(lang, tour.slug), url),
     ...(image ? { image: [image] } : {}),
     ...(price
       ? {

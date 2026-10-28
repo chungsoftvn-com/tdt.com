@@ -145,7 +145,7 @@ const graph = [travelAgencyLd(lang), websiteLd(lang), breadcrumbLd(crumbs), ...j
     <script
       type="application/ld+json"
       is:inline
-      set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })}
+      set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c')}
     />
   </head>
   <body class="flex min-h-dvh flex-col bg-sand text-ink antialiased" style="--dv-support-bottom: 1.25rem">

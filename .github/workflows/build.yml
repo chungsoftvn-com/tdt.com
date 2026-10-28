@@ -101,6 +101,15 @@ jobs:
           const pageNames = { testimonials: 'y-kien-khach-hang', partners: 'doi-tac', news: 'tin-tuc' };
           for (const file of readFileSync(join(process.env.RUNNER_TEMP, 'indexnow-files.txt'), 'utf8').split(/\r?\n/)) {
             if (file.split('/').includes('images')) continue;
+            // Review data changes affect tour pages, not a /tour-reviews/ page.
+            if (file === 'content/vi/tour-reviews.json') {
+              const index = JSON.parse(readFileSync('content/vi/tours.json', 'utf8'));
+              for (const slug of index.order || []) {
+                const tour = JSON.parse(readFileSync('content/vi/tours/' + slug + '.json', 'utf8'));
+                if (!tour.hidden) urls.add('https://todaytourist.com/vi/tours/' + slug + '/');
+              }
+              continue;
+            }
             let match;
             let path = null;
             if ((match = file.match(/^content\/vi\/news\/([^/]+)\.json$/))) {
