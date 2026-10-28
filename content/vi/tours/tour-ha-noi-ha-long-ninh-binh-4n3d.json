@@ -5,9 +5,9 @@
   "region_name": "Miền Bắc",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "4 ngày 3 đêm",
-  "price": "5.490.000đ/khách (chưa gồm vé máy bay)",
+  "price": "4.990.000đ/khách (chưa gồm vé máy bay)",
   "image": "hạ-long-hà-nội-tràng-an-10.webp",
-  "desc": "Tour Hà Nội – Hạ Long – Ninh Bình 4N3Đ bay từ TP.HCM, đón tận nơi Biên Hòa: Vịnh Hạ Long, Tràng An, Chùa Bái Đính. Giá 5.490.000đ (chưa gồm vé máy bay).",
+  "desc": "Tour Hà Nội – Hạ Long – Ninh Bình 4N3Đ bay từ TP.HCM, đón tận nơi Biên Hòa: Vịnh Hạ Long, Tràng An, Chùa Bái Đính. Giá 4.990.000đ (chưa gồm vé máy bay).",
   "highlights": [
     "Bay thẳng từ TP.HCM ra Hà Nội, xe đón tận nơi Biên Hòa ra sân bay Tân Sơn Nhất",
     "Du thuyền Vịnh Hạ Long, kỳ quan thiên nhiên thế giới, thăm Động Thiên Cung và Hang Đầu Gỗ",
@@ -44,7 +44,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -95,11 +95,11 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791609050678-0.jpg\" alt=\"Vịnh Hạ Long Quảng Ninh – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791609050678-0.jpg\" alt=\"Vịnh Hạ Long Quảng Ninh – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\"> </figure>"
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791609050678-1.jpg\" alt=\"Hang Thiên Cung Hạ Long – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791609050678-1.jpg\" alt=\"Hang Thiên Cung Hạ Long – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -141,7 +141,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791609050678-2.jpg\" alt=\"Chùa Bái Đính Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791609050678-2.jpg\" alt=\"Chùa Bái Đính Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -153,7 +153,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791609077596-0.jpg\" alt=\"Tràng An Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791609077596-0.jpg\" alt=\"Tràng An Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -180,11 +180,11 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609077597-1.jpg\" alt=\"Văn Miếu – Quốc Tử Giám Hà Nội – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609077597-1.jpg\" alt=\"Văn Miếu – Quốc Tử Giám Hà Nội – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609077597-2.jpg\" alt=\"Hồ Hoàn Kiếm Hà Nội – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609077597-2.jpg\" alt=\"Hồ Hoàn Kiếm Hà Nội – tour Hà Nội – Hạ Long – Ninh Bình 4 Ngày 3 Đêm Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -200,11 +200,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 5.490.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 4.990.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 4.120.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 3.745.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
@@ -272,7 +272,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
