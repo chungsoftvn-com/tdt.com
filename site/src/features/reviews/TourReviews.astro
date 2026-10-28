@@ -41,6 +41,7 @@ const url = `https://todaytourist.com/vi/tours/${tour.slug}/`;
       <summary class="cursor-pointer text-lg font-semibold text-sea-deep">{copy.form_title}</summary>
       <p class="mt-4 text-sm leading-relaxed text-ink-soft">{copy.form_intro}</p>
       <form method="post" action={`mailto:${email}`} enctype="text/plain" data-tour-review data-email={email} data-tour={tour.name} data-url={url}
+        data-error-author={copy.author_error} data-error-body={copy.body_error}
         data-subject={copy.email_subject} data-email-consent={copy.email_consent} class="mt-5 space-y-4">
         <div class="grid gap-4 sm:grid-cols-2">
           <div>
@@ -93,8 +94,15 @@ const url = `https://todaytourist.com/vi/tours/${tour.slug}/`;
   document.querySelectorAll<HTMLFormElement>('[data-tour-review]').forEach((form) => {
     const trip = form.elements.namedItem('tripDate') as HTMLInputElement;
     trip.max = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(new Date());
+    const author = form.elements.namedItem('author') as HTMLInputElement;
+    const body = form.elements.namedItem('body') as HTMLTextAreaElement;
+    [author, body].forEach((field) => field.addEventListener('input', () => field.setCustomValidity('')));
     form.addEventListener('submit', (event) => {
       event.preventDefault();
+      const nameLength = author.value.trim().length;
+      const bodyLength = body.value.trim().length;
+      author.setCustomValidity(nameLength < 2 || nameLength > 80 ? form.dataset.errorAuthor || '' : '');
+      body.setCustomValidity(bodyLength < 10 || bodyLength > 1000 ? form.dataset.errorBody || '' : '');
       if (!form.reportValidity()) return;
       const fields = new FormData(form);
       const draft = buildReviewEmail({
