@@ -5,9 +5,9 @@
   "region_name": "Tây Nguyên",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "4 ngày 4 đêm",
-  "price": "4.990.000đ/khách",
+  "price": "4.690.000đ/khách",
   "image": "theo-dấu-đại-ngàn-tây-nguyên-1.webp",
-  "desc": "Tour Tây Nguyên 4 ngày 4 đêm từ TP. Đồng Nai, đón tận nơi Biên Hòa: Măng Đen, Biển Hồ, Buôn Đôn, hồ Tà Đùng. Giá 4.990.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Tây Nguyên 4 ngày 4 đêm từ TP. Đồng Nai, đón tận nơi Biên Hòa: Măng Đen, Biển Hồ, Buôn Đôn, hồ Tà Đùng. Giá 4.690.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Tham quan Nhà thờ gỗ Kon Tum hơn 100 năm tuổi, đi qua Cầu treo Kon Klor",
     "Check-in Măng Đen, ngắm Thác Pa Sỹ và Làng văn hóa Kon Pring",
@@ -40,7 +40,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 15 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -111,7 +111,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790909473258-0.jpg\" alt=\"Thác Pa Sỹ Măng Đen – tour Tây Nguyên 4N4Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790909473258-0.jpg\" alt=\"Thác Pa Sỹ Măng Đen – tour Tây Nguyên 4N4Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -137,7 +137,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790909473258-1.jpg\" alt=\" Biển Hồ T'Nưng Pleiku – tour Tây Nguyên 4N4Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790909473258-1.jpg\" alt=\" Biển Hồ T'Nưng Pleiku – tour Tây Nguyên 4N4Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -173,7 +173,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790909473259-2.jpg\" alt=\"Thuyền độc mộc trên sông Sêrêpôk, Buôn Đôn – tour Tây Nguyên 4N4Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790909473259-2.jpg\" alt=\"Thuyền độc mộc trên sông Sêrêpôk, Buôn Đôn – tour Tây Nguyên 4N4Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -208,7 +208,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790909473259-3.jpg\" alt=\"Hồ Tà Đùng, Vịnh Hạ Long của Tây Nguyên – tour Tây Nguyên 4N4Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790909473259-3.jpg\" alt=\"Hồ Tà Đùng, Vịnh Hạ Long của Tây Nguyên – tour Tây Nguyên 4N4Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -224,15 +224,15 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 4.990.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 4.690.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 3.745.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 3.520.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
-      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 2.495.000đ nếu có ghế riêng"
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 2.345.000đ nếu có ghế riêng"
     },
     {
       "type": "h3",
@@ -284,7 +284,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 15 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
