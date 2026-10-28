@@ -56,3 +56,17 @@ test('email draft safely encodes customer text and identifies the precise tour',
   assert.ok(draft.body.includes(review.url));
   assert.throws(() => buildReviewEmail({ ...review, rating: '' }));
 });
+
+
+test('different verified customers sharing an import ID retain unique review anchors', () => {
+  const reviews = read([valid, { ...valid, author: 'Khách kiểm thử khác', rating: 1 }]);
+  assert.equal(reviews.length, 2);
+  assert.equal(new Set(reviews.map(r => r.id)).size, 2);
+  assert.equal(reviewSummary(reviews).ratingValue, 3);
+});
+
+test('email helper rejects whitespace and trimmed values below form limits', () => {
+  for (const patch of [{ author: '   ' }, { author: ' A ' }, { body: '     ' }, { body: ' short ' }]) {
+    assert.throws(() => buildReviewEmail({ author: 'Khách thử', rating: '4', body: 'Nhận xét hợp lệ đủ độ dài', ...patch }));
+  }
+});
