@@ -5,9 +5,9 @@
   "region_name": "Miền Bắc",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "3 ngày 2 đêm",
-  "price": "3.990.000đ/khách",
+  "price": "3.490.000đ/khách",
   "image": "ninh-bình-miền-non-nước-5.webp",
-  "desc": "Tour Ninh Bình 3 ngày 2 đêm bay từ TP.HCM: Tràng An, Chùa Bái Đính, Hang Múa, Tam Cốc, Cố đô Hoa Lư. Giá 3.990.000đ (chưa gồm vé máy bay). Hotline 0902 898 726.",
+  "desc": "Tour Ninh Bình 3 ngày 2 đêm bay từ TP.HCM: Tràng An, Chùa Bái Đính, Hang Múa, Tam Cốc, Cố đô Hoa Lư. Giá 3.490.000đ (chưa gồm vé máy bay). Hotline 0902 898 726.",
   "highlights": [
     "Bay thẳng từ TP.HCM ra Hà Nội, xe đón tận nơi Biên Hòa ra sân bay Tân Sơn Nhất",
     "Ngồi thuyền khám phá Tràng An, di sản thế giới UNESCO",
@@ -40,7 +40,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -84,7 +84,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791619940873-0.jpg\" alt=\"Cố đô Hoa Lư Ninh Bình – tour Ninh Bình 3N2Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791619940873-0.jpg\" alt=\"Cố đô Hoa Lư Ninh Bình – tour Ninh Bình 3N2Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -100,7 +100,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609077596-0.jpg\" alt=\"Thuyền khám phá Tràng An Ninh Bình – tour Ninh Bình 3N2Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609077596-0.jpg\" alt=\"Thuyền khám phá Tràng An Ninh Bình – tour Ninh Bình 3N2Đ Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -112,7 +112,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609050678-2.jpg\" alt=\"Chùa Bái Đính Ninh Bình – tour Ninh Bình 3N2Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609050678-2.jpg\" alt=\"Chùa Bái Đính Ninh Bình – tour Ninh Bình 3N2Đ Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -128,7 +128,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791619940874-1.jpg\" alt=\"Hang Múa Ninh Bình – tour Ninh Bình 3N2Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791619940874-1.jpg\" alt=\"Hang Múa Ninh Bình – tour Ninh Bình 3N2Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -136,7 +136,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791619940874-2.jpg\" alt=\"Đò Tam Cốc Ninh Bình – tour Ninh Bình 3N2Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791619940874-2.jpg\" alt=\"Đò Tam Cốc Ninh Bình – tour Ninh Bình 3N2Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -156,11 +156,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 3.990.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 3.490.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 2.990.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 2.615.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
@@ -228,7 +228,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
