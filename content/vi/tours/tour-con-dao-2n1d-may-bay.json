@@ -5,9 +5,9 @@
   "region_name": "Biển đảo",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "2 ngày 1 đêm",
-  "price": "3.690.000đ/khách",
+  "price": "2.490.000đ/khách",
   "image": "bia-tour-con-dao-may-bay-todaytourist.jpg",
-  "desc": "Bay Côn Đảo, viếng Nghĩa trang Hàng Dương, Trại Phú Hải, Chuồng Cọp, Chùa Núi Một. Xe đón Biên Hòa, khách sạn 3 sao. Giá 3.690.000đ (chưa gồm vé máy bay).",
+  "desc": "Bay Côn Đảo, viếng Nghĩa trang Hàng Dương, Trại Phú Hải, Chuồng Cọp, Chùa Núi Một. Xe đón Biên Hòa, khách sạn 3 sao. Giá 2.490.000đ (chưa gồm vé máy bay).",
   "highlights": [
     "Bay thẳng TP.HCM – Côn Đảo, vé máy bay tính riêng theo giờ bay",
     "Viếng Nghĩa trang Hàng Dương, nơi an nghỉ của chị Võ Thị Sáu",
@@ -65,11 +65,11 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1790353668122-4.jpg\" alt=\"Chuồng Cọp – tour Côn Đảo 2 Ngày 1 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1790353668122-4.jpg\" alt=\"Chuồng Cọp – tour Côn Đảo 2 Ngày 1 Đêm Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1790429931969-0.jpg\" alt=\"Miếu Bà Phi Yến – tour Côn Đảo 2 Ngày 1 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1790429931969-0.jpg\" alt=\"Miếu Bà Phi Yến – tour Côn Đảo 2 Ngày 1 Đêm Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -77,7 +77,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1790353668122-3.jpg\" alt=\"Hàng Dương – tour Côn Đảo 2 Ngày 1 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1790353668122-3.jpg\" alt=\"Hàng Dương – tour Côn Đảo 2 Ngày 1 Đêm Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "h3",
@@ -89,7 +89,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1790353668122-1.jpg\" alt=\"Chùa Núi Một – tour Côn Đảo 2 Ngày 1 Đêm Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1790353668122-1.jpg\" alt=\"Chùa Núi Một – tour Côn Đảo 2 Ngày 1 Đêm Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "h3",
@@ -98,8 +98,8 @@
     {
       "type": "list",
       "items": [
-        "Người lớn: 3.690.000đ/khách (chưa gồm vé máy bay)",
-        "Trẻ em 5 đến dưới 10 tuổi: 2.770.000đ (75%)",
+        "Người lớn: 2.490.000đ/khách (chưa gồm vé máy bay)",
+        "Trẻ em 5 đến dưới 10 tuổi: 1.869.000đ (75%)",
         "Trẻ em dưới 5 tuổi: theo chính sách của hãng hàng không, báo giá khi đặt",
         "Phụ thu phòng đơn: 450.000đ/khách/đêm"
       ]
