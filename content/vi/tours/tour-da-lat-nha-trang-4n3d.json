@@ -5,9 +5,9 @@
   "region_name": "Liên tuyến",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "4 ngày 3 đêm",
-  "price": "5.710.000đ/khách",
+  "price": "5.190.000đ/khách",
   "image": "hồ-xuân-hương-vịnh-nha-trang-1.webp",
-  "desc": "Tour Đà Lạt – Nha Trang 4N3Đ từ Đồng Nai, đón tận nơi Biên Hòa, đi ban ngày: Thác Prenn, Thiền viện Trúc Lâm, Hoàng Long Ohayo, VinWonders. Giá 5.710.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Đà Lạt – Nha Trang 4N3Đ từ Đồng Nai, đón tận nơi Biên Hòa, đi ban ngày: Thác Prenn, Thiền viện Trúc Lâm, Hoàng Long Ohayo, VinWonders. Giá 5.190.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Check-in Quảng trường Lâm Viên và dạo chợ đêm Đà Lạt",
     "Dạo thác Prenn giữa rừng thông, Thiền viện Trúc Lâm bên hồ Tuyền Lâm",
@@ -44,7 +44,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -90,7 +90,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791557372511-0.jpg\" alt=\"Quảng trường Lâm Viên, hồ Xuân Hương – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791557372511-0.jpg\" alt=\"Quảng trường Lâm Viên, hồ Xuân Hương – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -148,7 +148,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791557372513-3.jpg\" alt=\"Hoàng Long Ohayo phong cách Nhật Bản, đèo Mimosa – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791557372513-3.jpg\" alt=\"Hoàng Long Ohayo phong cách Nhật Bản, đèo Mimosa – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -170,7 +170,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791557372513-4.jpg\" alt=\"Tháp Trầm Hương Nha Trang về đêm – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791557372513-4.jpg\" alt=\"Tháp Trầm Hương Nha Trang về đêm – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -193,7 +193,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791557372514-5.jpg\" alt=\"Khu vui chơi VinWonders Nha Trang – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791557372514-5.jpg\" alt=\"Khu vui chơi VinWonders Nha Trang – tour Đà Lạt – Nha Trang 4N3Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -213,15 +213,15 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 5.710.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 5.190.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 4.285.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 3.895.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
-      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 2.855.000đ nếu có ghế riêng (vé tham quan trẻ em theo chính sách khu vui chơi)"
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 2.595.000đ nếu có ghế riêng (vé tham quan trẻ em theo chính sách khu vui chơi)"
     },
     {
       "type": "p",
@@ -277,7 +277,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
