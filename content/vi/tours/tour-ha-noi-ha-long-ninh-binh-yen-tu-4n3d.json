@@ -5,9 +5,9 @@
   "region_name": "Miền Bắc",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "4 ngày 3 đêm",
-  "price": "5.790.000đ/khách",
+  "price": "5.390.000đ/khách",
   "image": "non-nước-chốn-thiền-bắc-việt-3.webp",
-  "desc": "Tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4 ngày 3 đêm bay từ TP.HCM: Vịnh Hạ Long, Yên Tử, Tràng An, Bái Đính. Giá 5.790.000đ (chưa gồm vé máy bay).",
+  "desc": "Tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4 ngày 3 đêm bay từ TP.HCM: Vịnh Hạ Long, Yên Tử, Tràng An, Bái Đính. Giá 5.390.000đ (chưa gồm vé máy bay).",
   "highlights": [
     "Bay thẳng từ TP.HCM ra Hà Nội, xe đón tận nơi Biên Hòa ra sân bay Tân Sơn Nhất",
     "Du thuyền Vịnh Hạ Long, kỳ quan thiên nhiên thế giới, thăm Động Thiên Cung, Hang Đầu Gỗ và Hang Sửng Sốt",
@@ -40,7 +40,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -91,11 +91,11 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609050678-0.jpg\" alt=\"Vịnh Hạ Long Quảng Ninh – tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4N3Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609050678-0.jpg\" alt=\"Vịnh Hạ Long Quảng Ninh – tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4N3Đ Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609050678-1.jpg\" alt=\"Động Thiên Cung Vịnh Hạ Long – tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4N3Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609050678-1.jpg\" alt=\"Động Thiên Cung Vịnh Hạ Long – tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4N3Đ Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -123,7 +123,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791619754258-0.jpg\" alt=\"Cáp treo Yên Tử Quảng Ninh – tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4N3Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791619754258-0.jpg\" alt=\"Cáp treo Yên Tử Quảng Ninh – tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4N3Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -145,7 +145,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609050678-2.jpg\" alt=\"Chùa Bái Đính Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4N3Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609050678-2.jpg\" alt=\"Chùa Bái Đính Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4N3Đ Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -157,7 +157,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609077596-0.jpg\" alt=\"Thuyền khám phá Tràng An Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4N3Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609077596-0.jpg\" alt=\"Thuyền khám phá Tràng An Ninh Bình – tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4N3Đ Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -185,7 +185,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609077597-1.jpg\" alt=\"Văn Miếu Quốc Tử Giám Hà Nội – tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4N3Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609077597-1.jpg\" alt=\"Văn Miếu Quốc Tử Giám Hà Nội – tour Hà Nội – Hạ Long – Ninh Bình – Yên Tử 4N3Đ Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -205,11 +205,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 5.790.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 5.390.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 4.340.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 4.040.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
@@ -281,7 +281,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
