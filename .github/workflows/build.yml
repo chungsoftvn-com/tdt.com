@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -36,6 +38,10 @@ jobs:
       - name: Copy layout
         working-directory: site
         run: node scripts/copy-layout.mjs
+
+      - name: Sinh lastmod cho sitemap
+        working-directory: site
+        run: node scripts/gen-lastmod.mjs
 
       - name: Build Astro
         working-directory: site
@@ -76,3 +82,53 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Báo IndexNow (Bing)
+        continue-on-error: true
+        env:
+          BEFORE: ${{ github.event.before }}
+        shell: bash
+        run: |
+          if [[ -z "$BEFORE" || "$BEFORE" =~ ^0+$ ]]; then
+            echo "Không có commit trước để so sánh; bỏ qua IndexNow."
+            exit 0
+          fi
+          git diff --name-only "$BEFORE" "$GITHUB_SHA" -- content/vi > "$RUNNER_TEMP/indexnow-files.txt"
+          node --input-type=module <<'NODE'
+          import { readFileSync, writeFileSync } from 'node:fs';
+          import { join } from 'node:path';
+          const urls = new Set();
+          const pageNames = { testimonials: 'y-kien-khach-hang', partners: 'doi-tac', news: 'tin-tuc' };
+          for (const file of readFileSync(join(process.env.RUNNER_TEMP, 'indexnow-files.txt'), 'utf8').split(/\r?\n/)) {
+            if (file.split('/').includes('images')) continue;
+            let match;
+            let path = null;
+            if ((match = file.match(/^content\/vi\/news\/([^/]+)\.json$/))) {
+              path = '/vi/tin-tuc/' + match[1] + '/';
+            } else if ((match = file.match(/^content\/vi\/tours\/([^/]+)\.json$/))) {
+              if (match[1] !== 'khu-vuc') path = '/vi/tours/' + match[1] + '/';
+            } else if ((match = file.match(/^content\/vi\/([^/]+)\.json$/))) {
+              const slug = match[1];
+              path = slug === 'home' ? '/vi/' : '/vi/' + (pageNames[slug] || slug) + '/';
+            }
+            if (path) urls.add('https://todaytourist.com' + path);
+            if (urls.size >= 10000) break;
+          }
+          if (urls.size) {
+            writeFileSync(join(process.env.RUNNER_TEMP, 'indexnow-payload.json'), JSON.stringify({
+              host: 'todaytourist.com',
+              key: '87d131c0969c9dc7ed9c16f4ca6460fc',
+              keyLocation: 'https://todaytourist.com/87d131c0969c9dc7ed9c16f4ca6460fc.txt',
+              urlList: [...urls],
+            }));
+          }
+          console.log('IndexNow: ' + urls.size + ' URL.');
+          NODE
+          if [[ ! -s "$RUNNER_TEMP/indexnow-payload.json" ]]; then
+            echo "Không có URL content thay đổi; bỏ qua IndexNow."
+            exit 0
+          fi
+          curl --silent --show-error --output "$RUNNER_TEMP/indexnow-response.txt" --write-out 'IndexNow HTTP: %{http_code}\n' \
+            --request POST 'https://api.indexnow.org/indexnow' \
+            --header 'Content-Type: application/json; charset=utf-8' \
+            --data-binary "@$RUNNER_TEMP/indexnow-payload.json"
