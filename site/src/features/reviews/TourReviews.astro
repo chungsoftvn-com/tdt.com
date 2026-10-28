@@ -1,0 +1,113 @@
+---
+import { getContent } from '@/lib/content.js';
+import { getReviewContent, getTourReviews, reviewSummary, reviewToday } from '@/lib/reviews.js';
+
+const { lang, tour } = Astro.props;
+const copy = getReviewContent(lang);
+const common = getContent(lang, 'common');
+const directions = getContent(lang, 'chi-duong');
+const reviews = getTourReviews(lang, tour.slug);
+const summary = reviewSummary(reviews);
+const email = common.email;
+const url = `https://todaytourist.com/vi/tours/${tour.slug}/`;
+---
+
+<section id="danh-gia-tour" class="scroll-mt-24 border-t border-ink/10 bg-sand px-5 py-12 sm:py-16" aria-labelledby="tour-reviews-title">
+  <div class="mx-auto max-w-4xl">
+    <h2 id="tour-reviews-title" class="font-display text-2xl text-ink sm:text-3xl">{copy.title}</h2>
+    {summary ? (
+      <div class="mt-4 flex flex-wrap items-baseline gap-3">
+        <strong class="text-3xl text-sea-deep">{summary.ratingValue.toLocaleString('vi-VN')}/5</strong>
+        <span class="text-ink-soft">{summary.reviewCount} {copy.count_label}</span>
+      </div>
+    ) : <p class="mt-4 leading-relaxed text-ink-soft">{copy.empty}</p>}
+
+    {reviews.length > 0 && <ul class="mt-6 grid gap-4 sm:grid-cols-2">
+      {reviews.map((review) => (
+        <li class="rounded-2xl border border-ink/10 bg-paper p-5">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <strong class="text-ink">{review.author}</strong>
+            <span aria-label={`${review.rating}/5`} class="text-lg tracking-wide text-amber-600">
+              <span aria-hidden="true">{'★'.repeat(review.rating)}{'☆'.repeat(5 - review.rating)}</span>
+            </span>
+          </div>
+          <time datetime={review.datePublished} class="mt-1 block text-xs text-ink-soft">{review.datePublished.split('-').reverse().join('/')}</time>
+          <p class="mt-3 whitespace-pre-wrap break-words leading-relaxed text-ink-soft">{review.body}</p>
+        </li>
+      ))}
+    </ul>}
+
+    <details class="mt-7 rounded-2xl border border-ink/15 bg-paper p-5 sm:p-6">
+      <summary class="cursor-pointer text-lg font-semibold text-sea-deep">{copy.form_title}</summary>
+      <p class="mt-4 text-sm leading-relaxed text-ink-soft">{copy.form_intro}</p>
+      <form method="post" action={`mailto:${email}`} enctype="text/plain" data-tour-review data-email={email} data-tour={tour.name} data-url={url}
+        data-subject={copy.email_subject} data-email-consent={copy.email_consent} class="mt-5 space-y-4">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label for="review-author" class="mb-2 block text-sm font-medium text-ink">{copy.author_label}</label>
+            <input id="review-author" name="author" required minlength="2" maxlength="80" autocomplete="name"
+              class="w-full rounded-xl border border-ink/20 bg-white px-3 py-3 text-base text-ink" />
+          </div>
+          <div>
+            <label for="review-rating" class="mb-2 block text-sm font-medium text-ink">{copy.rating_label}</label>
+            <select id="review-rating" name="rating" required class="w-full rounded-xl border border-ink/20 bg-white px-3 py-3 text-base text-ink">
+              <option value="">{copy.rating_placeholder}</option>
+              {copy.rating_options.map((label, index) => <option value={index + 1}>{label}</option>)}
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="review-trip" class="mb-2 block text-sm font-medium text-ink">{copy.trip_label}</label>
+          <input id="review-trip" name="tripDate" type="date" required max={reviewToday()}
+            class="w-full rounded-xl border border-ink/20 bg-white px-3 py-3 text-base text-ink" />
+        </div>
+        <div>
+          <label for="review-body" class="mb-2 block text-sm font-medium text-ink">{copy.body_label}</label>
+          <textarea id="review-body" name="body" required minlength="10" maxlength="1000" rows="4" placeholder={copy.body_placeholder}
+            class="w-full rounded-xl border border-ink/20 bg-white px-3 py-3 text-base text-ink"></textarea>
+        </div>
+        <label class="flex items-start gap-3 text-sm leading-relaxed text-ink-soft">
+          <input name="consent" type="checkbox" required class="mt-1 h-5 w-5 shrink-0" />
+          <span>{copy.consent_label}</span>
+        </label>
+        <p class="text-sm leading-relaxed text-ink-soft">{copy.email_note}</p>
+        <button type="submit" class="min-h-12 rounded-full bg-sea px-6 py-3 text-sm font-semibold text-white hover:bg-sea-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sea">{copy.submit_label}</button>
+        <div data-review-draft hidden>
+          <p role="status" class="mb-3 text-sm leading-relaxed text-ink-soft">{copy.draft_note} <a href={`mailto:${email}`} class="font-semibold text-sea-deep underline">{email}</a>.</p>
+          <label for="review-draft" class="mb-2 block text-sm font-medium text-ink">{copy.draft_label}</label>
+          <textarea id="review-draft" data-review-email readonly rows="8" class="w-full rounded-xl border border-ink/20 bg-white p-3 text-sm text-ink"></textarea>
+        </div>
+      </form>
+    </details>
+
+    {directions.map_url && <div class="mt-6 border-t border-ink/10 pt-5 text-sm">
+      <a href={directions.map_url} target="_blank" rel="noopener noreferrer" class="font-semibold text-sea-deep underline underline-offset-4">{copy.maps_label}</a>
+      <p class="mt-2 leading-relaxed text-ink-soft">{copy.maps_note}</p>
+    </div>}
+  </div>
+</section>
+
+<script>
+  import { buildReviewEmail } from './review-email.js';
+
+  document.querySelectorAll<HTMLFormElement>('[data-tour-review]').forEach((form) => {
+    const trip = form.elements.namedItem('tripDate') as HTMLInputElement;
+    trip.max = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Ho_Chi_Minh' }).format(new Date());
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const fields = new FormData(form);
+      const draft = buildReviewEmail({
+        email: form.dataset.email, tour: form.dataset.tour, url: form.dataset.url,
+        subject: form.dataset.subject, consent: form.dataset.emailConsent,
+        author: fields.get('author'), rating: fields.get('rating'),
+        tripDate: fields.get('tripDate'), body: fields.get('body'),
+      });
+      const output = form.querySelector<HTMLTextAreaElement>('[data-review-email]');
+      const panel = form.querySelector<HTMLElement>('[data-review-draft]');
+      if (output) output.value = draft.body;
+      if (panel) panel.hidden = false;
+      window.location.href = draft.href;
+    });
+  });
+</script>
