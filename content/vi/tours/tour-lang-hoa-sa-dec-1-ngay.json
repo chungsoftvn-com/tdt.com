@@ -5,9 +5,9 @@
   "region_name": "Miền Tây",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "1 ngày",
-  "price": "1.060.000đ/khách",
+  "price": "850.000đ/khách",
   "image": "tour-sa-dec-today-tourist.webp",
-  "desc": "Tour Làng Hoa Sa Đéc 1 ngày từ TP. Đồng Nai, đón tận nơi Biên Hòa: vườn quýt hồng Lai Vung, làng hoa trăm năm, Chùa Lá Sen. Giá 1.060.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Làng Hoa Sa Đéc 1 ngày từ TP. Đồng Nai, đón tận nơi Biên Hòa: vườn quýt hồng Lai Vung, làng hoa trăm năm, Chùa Lá Sen. Giá 850.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Tham quan làng hoa Sa Đéc hơn 100 năm tuổi",
     "Dạo vườn quýt hồng Lai Vung trĩu quả (theo mùa)",
@@ -40,7 +40,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -83,11 +83,11 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790416391617-0.jpg\" alt=\"Vườn quýt hồng Lai Vung trĩu quả – tour Làng Hoa Sa Đéc 1 ngày\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790416391617-0.jpg\" alt=\"Vườn quýt hồng Lai Vung trĩu quả – tour Làng Hoa Sa Đéc 1 ngày\"> </figure>"
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790416391617-1.jpg\" alt=\"Làng hoa Sa Đéc với giàn hoa trên kênh rạch – tour Làng Hoa Sa Đéc 1 ngày\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790416391617-1.jpg\" alt=\"Làng hoa Sa Đéc với giàn hoa trên kênh rạch – tour Làng Hoa Sa Đéc 1 ngày\"> </figure>"
     },
     {
       "type": "p",
@@ -110,7 +110,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790416391618-2.jpg\" alt=\" Ao sen lá khổng lồ tại Chùa Lá Sen – tour Làng Hoa Sa Đéc 1 ngày\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790416391618-2.jpg\" alt=\" Ao sen lá khổng lồ tại Chùa Lá Sen – tour Làng Hoa Sa Đéc 1 ngày\"> </figure>"
     },
     {
       "type": "p",
@@ -122,11 +122,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn và trẻ em từ 5 tuổi:</strong> 1.060.000đ/khách"
+      "text": "💵 <strong>Người lớn và trẻ em từ 5 tuổi:</strong> 850.000đ/khách"
     },
     {
       "type": "p",
-      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 530.000đ nếu có ghế riêng"
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 425.000đ nếu có ghế riêng"
     },
     {
       "type": "h3",
@@ -178,7 +178,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
