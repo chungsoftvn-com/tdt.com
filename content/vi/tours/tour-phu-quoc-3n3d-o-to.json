@@ -5,9 +5,9 @@
   "region_name": "Biển đảo",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "3 ngày 3 đêm",
-  "price": "4.990.000đ/khách",
+  "price": "4.290.000đ/khách",
   "image": "đảo-ngọc-biển-xanh-phú-quốc-3.webp",
-  "desc": "Tour Phú Quốc 3 ngày 3 đêm bằng ô tô và tàu cao tốc từ Đồng Nai, đón tại Biên Hòa: Nhà tù Phú Quốc, Bãi Sao, câu cá trên tàu. Giá 4.990.000đ.",
+  "desc": "Tour Phú Quốc 3 ngày 3 đêm bằng ô tô và tàu cao tốc từ Đồng Nai, đón tại Biên Hòa: Nhà tù Phú Quốc, Bãi Sao, câu cá trên tàu. Giá 4.290.000đ.",
   "highlights": [
     "Tàu cao tốc từ Hà Tiên ra đảo ngọc Phú Quốc",
     "Tham quan cơ sở nuôi cấy ngọc trai, tìm hiểu quy trình tách ngọc",
@@ -40,7 +40,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 15 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -86,7 +86,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790846593676-0.jpg\" alt=\" Cơ sở nuôi cấy ngọc trai Phú Quốc – tour Phú Quốc 3N3Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790846593676-0.jpg\" alt=\" Cơ sở nuôi cấy ngọc trai Phú Quốc – tour Phú Quốc 3N3Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -129,7 +129,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790846593677-1.jpg\" alt=\"Bãi Sao Phú Quốc cát trắng – tour Phú Quốc 3N3Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790846593677-1.jpg\" alt=\"Bãi Sao Phú Quốc cát trắng – tour Phú Quốc 3N3Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -148,7 +148,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790846593677-2.jpg\" alt=\"Cầu Hôn (Kiss Bridge), thị trấn Địa Trung Hải – tour Phú Quốc 3N3Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790846593677-2.jpg\" alt=\"Cầu Hôn (Kiss Bridge), thị trấn Địa Trung Hải – tour Phú Quốc 3N3Đ Today Tourist\"> </figure>"
     },
     {
       "type": "h3",
@@ -180,15 +180,15 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 4.990.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 4.290.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 3.745.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 3.220.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
-      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 2.495.000đ nếu có ghế riêng"
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 2.145.000đ nếu có ghế riêng"
     },
     {
       "type": "p",
@@ -260,7 +260,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 15 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
