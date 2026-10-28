@@ -5,9 +5,9 @@
   "region_name": "Miền Trung",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "5 ngày 4 đêm",
-  "price": "6.590.000đ/khách",
+  "price": "5.890.000đ/khách",
   "image": "hành-trình-kỳ-quan-miền-trung-2.webp",
-  "desc": "Tour Đà Nẵng – Hội An – Huế – Phong Nha 5 ngày 4 đêm bay từ TP.HCM: Bà Nà Hills, Đại Nội Huế, động Phong Nha. Giá 6.590.000đ (chưa gồm vé máy bay).",
+  "desc": "Tour Đà Nẵng – Hội An – Huế – Phong Nha 5 ngày 4 đêm bay từ TP.HCM: Bà Nà Hills, Đại Nội Huế, động Phong Nha. Giá 5.890.000đ (chưa gồm vé máy bay).",
   "highlights": [
     "Bay từ TP.HCM đi Đà Nẵng, bay về từ Đồng Hới, xe đón tận nơi Biên Hòa ra sân bay Tân Sơn Nhất",
     "Tham quan Ngũ Hành Sơn, dạo phố cổ Hội An và thả hoa đăng trên sông Hoài về đêm",
@@ -44,7 +44,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -87,7 +87,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791608978850-0.jpg\" alt=\"Ngũ Hành Sơn Đà Nẵng – tour Đà Nẵng – Hội An – Huế – Phong Nha 5N4Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791608978850-0.jpg\" alt=\"Ngũ Hành Sơn Đà Nẵng – tour Đà Nẵng – Hội An – Huế – Phong Nha 5N4Đ Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -107,7 +107,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791608978850-1.jpg\" alt=\"Phố cổ Hội An về đêm – tour Đà Nẵng – Hội An – Huế – Phong Nha 5N4Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791608978850-1.jpg\" alt=\"Phố cổ Hội An về đêm – tour Đà Nẵng – Hội An – Huế – Phong Nha 5N4Đ Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "h3",
@@ -123,7 +123,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791608978851-2.jpg\" alt=\"Cầu Vàng Bà Nà Hills Đà Nẵng – tour Đà Nẵng – Hội An – Huế – Phong Nha 5N4Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791608978851-2.jpg\" alt=\"Cầu Vàng Bà Nà Hills Đà Nẵng – tour Đà Nẵng – Hội An – Huế – Phong Nha 5N4Đ Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -159,7 +159,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609007726-0.jpg\" alt=\"Chùa Thiên Mụ bên sông Hương Huế – tour Đà Nẵng – Hội An – Huế – Phong Nha 5N4Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609007726-0.jpg\" alt=\"Chùa Thiên Mụ bên sông Hương Huế – tour Đà Nẵng – Hội An – Huế – Phong Nha 5N4Đ Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -186,7 +186,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1586px\"><img src=\"/content/vi/images/pasted-1791609007726-1.jpg\" alt=\"Ngọ Môn Đại Nội Huế – tour Đà Nẵng – Hội An – Huế – Phong Nha 5N4Đ Today Tourist\" style=\"width:1586px;height:992px\"></figure>"
+      "html": "<figure style=\"width:1586px\"> <img src=\"/content/vi/images/pasted-1791609007726-1.jpg\" alt=\"Ngọ Môn Đại Nội Huế – tour Đà Nẵng – Hội An – Huế – Phong Nha 5N4Đ Today Tourist\" style=\"width:1586px;height:992px\"> </figure>"
     },
     {
       "type": "p",
@@ -214,7 +214,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791619564217-0.jpg\" alt=\"Động Phong Nha Quảng Bình – tour Đà Nẵng – Hội An – Huế – Phong Nha 5N4Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791619564217-0.jpg\" alt=\"Động Phong Nha Quảng Bình – tour Đà Nẵng – Hội An – Huế – Phong Nha 5N4Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -234,11 +234,11 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 6.590.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 5.890.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 4.940.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 4.415.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
@@ -314,7 +314,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
