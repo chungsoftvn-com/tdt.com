@@ -5,9 +5,9 @@
   "region_name": "Nam Trung Bộ",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "3 ngày 2 đêm",
-  "price": "4.080.000đ/khách",
+  "price": "3.390.000đ/khách",
   "image": "lối-cát-giữa-biển-xanh-2.webp",
-  "desc": "Tour Nha Trang 3N2Đ từ Đồng Nai, đón tận nơi Biên Hòa: đảo Điệp Sơn, Dốc Lết, Tháp Bà Ponagar. Giá 4.080.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Nha Trang 3N2Đ từ Đồng Nai, đón tận nơi Biên Hòa: đảo Điệp Sơn, Dốc Lết, Tháp Bà Ponagar. Giá 3.390.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Ngồi ca nô ra đảo Điệp Sơn, đi bộ trên thủy đạo giữa biển dài gần 700m",
     "Tắm biển Dốc Lết, bãi biển được nhiều du khách đánh giá đẹp bậc nhất Khánh Hòa",
@@ -40,7 +40,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -90,7 +90,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791608554566-0.jpg\" alt=\"Tháp Bà Ponagar Nha Trang – tour Nha Trang – Điệp Sơn – Dốc Lết 3N2Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791608554566-0.jpg\" alt=\"Tháp Bà Ponagar Nha Trang – tour Nha Trang – Điệp Sơn – Dốc Lết 3N2Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -116,7 +116,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791608554566-1.jpg\" alt=\"Đảo Điệp Sơn thủy đạo Vạn Ninh – tour Nha Trang – Điệp Sơn – Dốc Lết 3N2Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791608554566-1.jpg\" alt=\"Đảo Điệp Sơn thủy đạo Vạn Ninh – tour Nha Trang – Điệp Sơn – Dốc Lết 3N2Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -134,7 +134,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791608554567-2.jpg\" alt=\"Bãi biển Dốc Lết Ninh Hòa – tour Nha Trang – Điệp Sơn – Dốc Lết 3N2Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791608554567-2.jpg\" alt=\"Bãi biển Dốc Lết Ninh Hòa – tour Nha Trang – Điệp Sơn – Dốc Lết 3N2Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -162,15 +162,15 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 4.080.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 3.390.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 3.060.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 2.543.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
-      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 2.040.000đ nếu có ghế riêng"
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 1.695.000đ nếu có ghế riêng"
     },
     {
       "type": "p",
@@ -230,7 +230,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
