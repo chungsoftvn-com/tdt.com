@@ -5,9 +5,9 @@
   "region_name": "Biển đảo",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "2 ngày 2 đêm",
-  "price": "3.600.000đ/khách",
+  "price": "2.590.000đ/khách",
   "image": "tour-nam-du-2n2d-todaytourist.jpg",
-  "desc": "Tour Nam Du 2 ngày 2 đêm từ TP. Đồng Nai, đón tận nơi Biên Hòa: đảo Củ Tron, Hòn Mậu, BBQ hải sản. Giá 3.600.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Nam Du 2 ngày 2 đêm từ TP. Đồng Nai, đón tận nơi Biên Hòa: đảo Củ Tron, Hòn Mậu, BBQ hải sản. Giá 2.590.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Tắm biển Bãi Cây Mến – bãi biển đẹp nhất Nam Du",
     "Tàu tham quan Hòn Mậu – Hai Bờ Đập, lặn ngắm san hô",
@@ -40,7 +40,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 15 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -134,7 +134,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790844579788-0.jpg\" alt=\"Bãi Cây Mến đảo Nam Du – tour Nam Du 2N2Đ Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790844579788-0.jpg\" alt=\"Bãi Cây Mến đảo Nam Du – tour Nam Du 2N2Đ Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -158,15 +158,15 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 3.600.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 2.590.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 2.700.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 1.943.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
-      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 1.800.000đ nếu có ghế riêng"
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 1.295.000đ nếu có ghế riêng"
     },
     {
       "type": "h3",
@@ -230,7 +230,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 15 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
