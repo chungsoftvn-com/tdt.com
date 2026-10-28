@@ -9,9 +9,9 @@
 // Đưa URL không phải canonical vào sitemap là tự mâu thuẫn với chính canonical
 // (Google báo "Duplicate, Google chose different canonical").
 //
-// Không phát <lastmod>: CI checkout ghi mọi file cùng một mtime nên lastmod sẽ
-// SAI (Google bỏ qua hoặc giảm tin cậy nếu lastmod không chính xác).
+// lastmod lấy từ ngày commit git của file content (scripts/gen-lastmod.mjs), không dùng mtime.
 import type { APIRoute } from 'astro';
+import lastmod from '../data/lastmod.json';
 import {
   LANGS,
   PAGE_SLUGS,
@@ -86,9 +86,39 @@ function collectPaths() {
   return [...paths].sort();
 }
 
+function contentFileFor(path: string): string | null {
+  if (path === '/vi/') return 'content/vi/home.json';
+  let relative: string;
+  if (path.startsWith('/vi/')) {
+    relative = path.slice(4);
+  } else {
+    const rootSlug = path.replace(/^\/|\/$/g, '');
+    const equivalent = (ROOT_PAGE_EQUIV as Record<string, string>)[rootSlug];
+    if (!equivalent) return null;
+    relative = equivalent + '/';
+  }
+  let match = relative.match(/^tin-tuc\/([^/]+)\/$/);
+  if (match) return 'content/vi/news/' + match[1] + '.json';
+  match = relative.match(/^tours\/([^/]+)\/$/);
+  if (match && match[1] !== 'khu-vuc') return 'content/vi/tours/' + match[1] + '.json';
+  match = relative.match(/^([^/]+)\/$/);
+  if (match) {
+    const names: Record<string, string> = {
+      'y-kien-khach-hang': 'testimonials',
+      'doi-tac': 'partners',
+      'tin-tuc': 'news',
+    };
+    return 'content/vi/' + (names[match[1]] || match[1]) + '.json';
+  }
+  return null;
+}
+
 export const GET: APIRoute = () => {
   const urls = collectPaths().map((path) => {
     const lines = [`    <loc>${escapeXml(absUrl(path))}</loc>`];
+    const contentFile = contentFileFor(path);
+    const modified = contentFile ? (lastmod as Record<string, string>)[contentFile] : undefined;
+    if (modified) lines.push(`    <lastmod>${escapeXml(modified)}</lastmod>`);
     // Chỉ phát alternate cho bản ngôn ngữ THỰC SỰ tồn tại: trang VI-only ở cấp gốc
     // không có '/en/<slug>/' → phát vào sẽ khiến Google nhận 404 từ sitemap.
     for (const a of alternates(path)) {
