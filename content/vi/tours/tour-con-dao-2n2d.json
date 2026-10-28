@@ -5,9 +5,9 @@
   "region_name": "Biển đảo",
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "2 ngày 2 đêm",
-  "price": "3.860.000đ/khách",
+  "price": "3.390.000đ/khách",
   "image": "con-dao-2n2d-todaytourist.webp",
-  "desc": "Tour Côn Đảo 2 ngày 2 đêm từ TP. Đồng Nai, đón Biên Hòa, TP.HCM: tàu cao tốc, viếng mộ Cô Sáu, nhà tù Côn Đảo. Giá 3.860.000đ. Hotline 0902 898 726.",
+  "desc": "Tour Côn Đảo 2 ngày 2 đêm từ TP. Đồng Nai, đón Biên Hòa, TP.HCM: tàu cao tốc, viếng mộ Cô Sáu, nhà tù Côn Đảo. Giá 3.390.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Viếng Nghĩa trang Hàng Dương, thắp hương mộ Cô Sáu về đêm",
     "Tham quan nhà tù Côn Đảo: Chuồng Cọp Pháp, Chuồng Cọp Mỹ",
@@ -40,7 +40,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, từ 10 khách"
+      "text": "📍 <strong>Khởi hành:</strong> TP. Đồng Nai / TP.HCM – ghép đoàn hàng tuần, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
     },
     {
       "type": "p",
@@ -111,11 +111,11 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790429931969-0.jpg\" alt=\"Miếu Bà Phi Yến (An Sơn Miếu) – tour Côn Đảo 2N2Đ\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790429931969-0.jpg\" alt=\"Miếu Bà Phi Yến (An Sơn Miếu) – tour Côn Đảo 2N2Đ\"> </figure>"
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790353668122-1.jpg\" alt=\"Chùa Núi Một (Vân Sơn Tự) nhìn ra vịnh Côn Sơn – tour Côn Đảo 2N2Đ\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790353668122-1.jpg\" alt=\"Chùa Núi Một (Vân Sơn Tự) nhìn ra vịnh Côn Sơn – tour Côn Đảo 2N2Đ\"> </figure>"
     },
     {
       "type": "p",
@@ -138,7 +138,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790353668122-2.jpg\" alt=\"Bãi biển Đầm Trầu hoang sơ – tour Côn Đảo 2N2Đ\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790353668122-2.jpg\" alt=\"Bãi biển Đầm Trầu hoang sơ – tour Côn Đảo 2N2Đ\"> </figure>"
     },
     {
       "type": "p",
@@ -150,7 +150,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790353668122-3.jpg\" alt=\"Viếng mộ Cô Sáu tại Nghĩa trang Hàng Dương – tour Côn Đảo 2N2Đ\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790353668122-3.jpg\" alt=\"Viếng mộ Cô Sáu tại Nghĩa trang Hàng Dương – tour Côn Đảo 2N2Đ\"> </figure>"
     },
     {
       "type": "h3",
@@ -175,7 +175,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1790353668122-4.jpg\" alt=\"Chuồng Cọp, nhà tù Côn Đảo – tour Côn Đảo 2N2Đ\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1790353668122-4.jpg\" alt=\"Chuồng Cọp, nhà tù Côn Đảo – tour Côn Đảo 2N2Đ\"> </figure>"
     },
     {
       "type": "p",
@@ -195,15 +195,15 @@
     },
     {
       "type": "p",
-      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 3.860.000đ/khách"
+      "text": "💵 <strong>Người lớn (từ 10 tuổi):</strong> 3.390.000đ/khách"
     },
     {
       "type": "p",
-      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 2.895.000đ/khách (ngủ chung với bố mẹ)"
+      "text": "🧒 <strong>Trẻ em 5 đến dưới 10 tuổi:</strong> 2.543.000đ/khách (ngủ chung với bố mẹ)"
     },
     {
       "type": "p",
-      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 1.930.000đ nếu có ghế riêng"
+      "text": "👶 <strong>Trẻ dưới 5 tuổi:</strong> miễn phí nếu ngồi cùng bố mẹ · 1.695.000đ nếu có ghế riêng"
     },
     {
       "type": "p",
@@ -267,7 +267,7 @@
     },
     {
       "type": "p",
-      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 10 khách, không áp dụng dịp Lễ – Tết"
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn từ 20 khách, không áp dụng dịp Lễ – Tết"
     },
     {
       "type": "p",
