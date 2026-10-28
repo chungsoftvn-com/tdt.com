@@ -1,5 +1,5 @@
 {
-  "count": 700,
+  "count": 701,
   "order": [
     "thue-xe-45-cho-bien-hoa-dong-nai-tphcm",
     "thue-nguyen-xe-dua-cong-nhan-ve-que-va-don-lai-dip-tet",
@@ -700,7 +700,8 @@
     "check-in-online-chon-cho-ngoi-may-bay",
     "sai-ten-tren-ve-may-bay-cach-xu-ly",
     "nguoi-cao-tuoi-di-may-bay-uu-dai-luu-y",
-    "xuat-hoa-don-vat-ve-may-bay-doanh-nghiep"
+    "xuat-hoa-don-vat-ve-may-bay-doanh-nghiep",
+    "that-lac-hanh-ly-san-bay-tan-son-nhat"
   ],
   "list_title": "Tin tức",
   "list_text": "Cập nhật tin tức du lịch, cẩm nang và ưu đãi mới nhất từ TodayTourist.",
