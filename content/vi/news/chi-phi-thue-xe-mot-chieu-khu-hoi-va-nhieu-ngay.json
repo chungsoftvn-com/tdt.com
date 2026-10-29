@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\"><strong>Chi phí thuê xe một chiều, khứ hồi và nhiều ngày khác nhau ở thời gian sử dụng, hành trình và việc xe chờ hay quay lại đón.</strong></span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\"><strong>Chi phí thuê xe một chiều, khứ hồi và nhiều ngày khác nhau ở thời gian sử dụng, hành trình và việc xe chờ hay quay lại đón.</strong></span></p></blockquote>"
     },
     {
       "type": "p",
@@ -25,7 +25,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792203451853-0.jpg\" alt=\"Chi phí thuê xe một chiều, khứ hồi và nhiều ngày\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792203451853-0.jpg\" alt=\"Chi phí thuê xe một chiều, khứ hồi và nhiều ngày\"> </figure>"
     },
     {
       "type": "h2",
@@ -179,6 +179,10 @@
     {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\">📍 <strong>Công ty TNHH Du lịch Ngày Hôm Nay (Today Tourist)</strong><br>🏠 Số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai.</span>"
+    },
+    {
+      "type": "p",
+      "text": "Khách cần phương án xe theo lịch trình thực tế có thể xem <a href=\"/vi/cho-thue-xe/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>báo giá thuê xe du lịch</u></strong></a>. Lịch đi, điểm đón và dịch vụ được xác nhận theo chương trình đã chọn."
     }
   ],
   "hidden": false
