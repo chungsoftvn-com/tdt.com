@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Khách đã mua vé hoặc đang ở Phú Quốc có thể cần phần xe, phòng, bữa ăn và tham quan. Gói đón tại đảo phải nêu rõ phạm vi để không bị hiểu là đã bao gồm hành trình từ đất liền.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Khách đã mua vé hoặc đang ở Phú Quốc có thể cần phần xe, phòng, bữa ăn và tham quan. Gói đón tại đảo phải nêu rõ phạm vi để không bị hiểu là đã bao gồm hành trình từ đất liền.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792216485129-0.jpg\" alt=\"Tour Phú Quốc đón tại đảo: dành cho khách đã có vé máy bay hoặc tàu\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792216485129-0.jpg\" alt=\"Tour Phú Quốc đón tại đảo: dành cho khách đã có vé máy bay hoặc tàu\"> </figure>"
     },
     {
       "type": "h2",
@@ -102,6 +102,10 @@
     {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\">📍 <strong>Công ty TNHH Du lịch Ngày Hôm Nay (Today Tourist)</strong><br>🏠 Số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai.</span>"
+    },
+    {
+      "type": "p",
+      "text": "Khách cần kiểm tra chặng bay, hành lý và điều kiện vé có thể xem <a href=\"/vi/ve-may-bay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>đặt vé máy bay kết hợp tour</u></strong></a>. Lịch đi, điểm đón và dịch vụ được xác nhận theo chương trình đã chọn."
     }
   ],
   "hidden": false
