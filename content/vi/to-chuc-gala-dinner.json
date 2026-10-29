@@ -14,6 +14,51 @@
     },
     {
       "type": "h2",
+      "text": "Chọn phạm vi gala theo mục tiêu doanh nghiệp"
+    },
+    {
+      "type": "p",
+      "text": "Ba hướng dưới đây giúp xác định phạm vi yêu cầu. Đây không phải gói có giá hoặc quyền lợi cố định; chỉ hạng mục được xác nhận trong báo giá/hợp đồng mới được bao gồm."
+    },
+    {
+      "type": "html",
+      "html": "<table><caption>Đối chiếu phạm vi chương trình</caption><thead><tr><th scope=\"col\">Nhu cầu</th><th scope=\"col\">Cách bố trí</th><th scope=\"col\">Hạng mục cần làm rõ</th></tr></thead><tbody><tr><td>Tiệc giao lưu nội bộ</td><td>Dùng tiệc, giao lưu và trò chơi trong thời lượng gọn.</td><td>Thực đơn, đồ uống, không gian riêng, MC, âm thanh và giờ kết thúc.</td></tr><tr><td>Gala vinh danh – tổng kết</td><td>Có phát biểu, trao thưởng, nội dung thương hiệu và trình chiếu.</td><td>Danh sách vinh danh, kịch bản, màn hình/sân khấu, thiết kế và người duyệt nội dung.</td></tr><tr><td>Hội nghị kết hợp nghỉ dưỡng</td><td>Phần hội họp tách với tiệc tối; có thể thêm Team Building trong tour.</td><td>Phòng họp, thiết bị, lưu trú, xe; thời gian bàn giao giữa hội nghị, team và gala.</td></tr></tbody></table>"
+    },
+    {
+      "type": "h2",
+      "text": "Đoàn khu công nghiệp: chốt ca làm, cổng đón và đầu mối"
+    },
+    {
+      "type": "p",
+      "text": "Với doanh nghiệp tại khu vực Amata, Long Bình, Nhơn Trạch hoặc Trảng Bom, cần gửi vị trí cổng đón thực tế, giờ tan ca, số người theo từng điểm và giờ phải trở lại. Đoàn nhiều xe nên có một đầu mối tổng và người phụ trách từng xe; điểm tập kết phải được doanh nghiệp và đơn vị vận chuyển thống nhất trước."
+    },
+    {
+      "type": "p",
+      "text": "Nếu tổ chức trong khuôn viên công ty, cần làm rõ thủ tục ra vào cho nhân sự và thiết bị, khu vực được sử dụng, giới hạn âm thanh và vị trí trú mưa. Nếu tổ chức ngoài công ty, điểm đón, trung chuyển và phụ phí được xác nhận riêng; không mặc định mọi địa điểm đều đón tận cửa miễn phí."
+    },
+    {
+      "type": "h2",
+      "text": "Tư liệu hành trình và thông tin gửi để nhận phương án"
+    },
+    {
+      "type": "p",
+      "text": "Xem tư liệu đã công bố: <a href=\"https://todaytourist.com/vi/y-kien-khach-hang/hanh-trinh-phan-thiet-2n1d-08-08/\"><strong><u>Hành trình Phan Thiết 2 ngày 1 đêm</u></strong></a> · <a href=\"https://todaytourist.com/vi/y-kien-khach-hang/hanh-trinh-long-hai-07-26/\"><strong><u>Hành trình Long Hải</u></strong></a>. Tư liệu giúp xem cách TodayTourist giới thiệu đoàn đã phục vụ; dịch vụ của đoàn mới được xác nhận theo yêu cầu riêng."
+    },
+    {
+      "type": "list",
+      "items": [
+        "<strong>Ngày đi và giờ trở lại:</strong> thời lượng trong ngày hoặc số ngày, thời gian không thể thay đổi.",
+        "<strong>Số người và điểm đón:</strong> số khách dự kiến, các nhóm tuổi, số điểm và vị trí cổng đón.",
+        "<strong>Mục tiêu và ngân sách:</strong> gắn kết, hội nghị, tri ân hay vinh danh; ngân sách tổng hoặc mỗi khách, đã gồm thuế hay chưa.",
+        "<strong>Phạm vi mong muốn:</strong> xe, ăn, phòng, địa điểm, MC, thiết bị, thiết kế, quay/chụp và quà; hạng mục doanh nghiệp tự chuẩn bị."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "<a href=\"https://todaytourist.com/vi/dat-tour/\"><strong><u>Gửi yêu cầu tư vấn chương trình doanh nghiệp</u></strong></a> · <a href=\"https://todaytourist.com/vi/tin-tuc/tour-cong-ty-ket-hop-team-building-gala-dinner-chon-lich-vua-suc/\"><strong><u>Chọn lịch tour công ty kết hợp Team Building – Gala</u></strong></a>. Tư vấn trực tiếp: <a href=\"https://zalo.me/0902898726\"><strong><u>Zalo Mr. Anh Văn – 0902 898 726</u></strong></a>."
+    },
+    {
+      "type": "h2",
       "text": "Chương trình gala dinner gồm những hạng mục nào?"
     },
     {
