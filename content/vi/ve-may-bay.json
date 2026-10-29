@@ -54,7 +54,7 @@
     },
     {
       "type": "p",
-      "text": "Điểm khởi hành trên vé là <strong>sân bay cụ thể</strong>, không phải địa chỉ nơi đặt vé. Anh chị gửi nơi xuất phát tại thành phố Đồng Nai để được tư vấn hành trình và thời gian di chuyển phù hợp với chuyến bay. Có thể kết hợp <a href=\"/vi/tin-tuc/thue-xe-dua-don-doan-tai-san-bay-tan-son-nhat/\">xe đưa đón sân bay Tân Sơn Nhất</a> hoặc <a href=\"/vi/cho-thue-xe/\">dịch vụ thuê xe du lịch</a>. <em>Sân bay khai thác và lịch bay được kiểm tra theo ngày đi thực tế.</em>"
+      "text": "Điểm khởi hành trên vé là <strong>sân bay cụ thể</strong>, không phải địa chỉ nơi đặt vé. Anh chị gửi nơi xuất phát tại thành phố Đồng Nai để được tư vấn hành trình và thời gian di chuyển phù hợp với chuyến bay. Có thể kết hợp <a href=\"/vi/tin-tuc/thue-xe-dua-don-doan-tai-san-bay-tan-son-nhat/\"><strong><u>xe đưa đón sân bay Tân Sơn Nhất</u></strong></a> hoặc <a href=\"/vi/cho-thue-xe/\"><strong><u>dịch vụ thuê xe du lịch</u></strong></a>. <em>Sân bay khai thác và lịch bay được kiểm tra theo ngày đi thực tế.</em>"
     },
     {
       "type": "h2",
@@ -115,39 +115,51 @@
     },
     {
       "type": "h2",
-      "text": "<span style=\"color:#075778;font-weight:700\">Câu hỏi thường gặp</span>"
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
     },
     {
       "type": "h3",
-      "text": "Đặt vé máy bay cho đoàn được không?"
+      "text": "Giá vé máy bay và combo được xác nhận khi nào?"
     },
     {
       "type": "p",
-      "text": "Được. Gửi số khách, chặng bay và ngày đi, chúng tôi kiểm tra chỗ và báo phương án. Đoàn có thể kết hợp thêm xe đưa đón và tour trọn gói."
+      "text": "Giá phụ thuộc chặng bay, ngày giờ, hạng vé, tình trạng chỗ và dịch vụ kèm theo. Cần xác nhận tổng tiền, thời hạn báo giá, thuế phí, hành lý và phụ thu trước khi thanh toán; giá được chốt theo xác nhận đặt hoặc xuất vé."
     },
     {
       "type": "h3",
-      "text": "Giá vé máy bay là bao nhiêu?"
+      "text": "Đã có vé máy bay thì có đặt land tour tại điểm đến không?"
     },
     {
       "type": "p",
-      "text": "Giá thay đổi theo ngày bay, giờ bay, hạng vé và thời điểm đặt. Anh chị gửi yêu cầu, chúng tôi báo giá cụ thể cho đúng chuyến."
+      "text": "TodayTourist có thể tư vấn chương trình đón tại điểm đến với một số tuyến, tùy dịch vụ thực tế. Land tour không mặc định gồm vé máy bay hoặc chặng di chuyển từ nơi ở của khách; cần xác nhận lịch và phạm vi phục vụ của từng gói."
     },
     {
       "type": "h3",
-      "text": "Tôi chưa đặt tour, chỉ cần mua vé có được không?"
+      "text": "Mua vé có bao gồm xe đón từ Đồng Nai hoặc TP.HCM không?"
     },
     {
       "type": "p",
-      "text": "Được. Anh chị có thể đặt riêng vé máy bay, hoặc kết hợp thêm khách sạn, xe và tour nếu cần."
+      "text": "Mua riêng vé máy bay không mặc định gồm xe. Khách tại khu vực Biên Hòa, TP. Đồng Nai hoặc TP.HCM gửi địa chỉ, số người, hành lý và giờ bay để nhận phương án, báo giá đưa đón riêng nếu cần."
     },
     {
       "type": "h3",
-      "text": "Đã có vé, có đặt tour đón tại điểm đến được không?"
+      "text": "Vé hoặc combo bao gồm những dịch vụ nào?"
     },
     {
       "type": "p",
-      "text": "Được với một số điểm. Xem <a href=\"https://todaytourist.com/vi/tin-tuc/tour-phu-quoc-don-tai-dao-danh-cho-khach-da-co-ve-may-bay-hoac-tau/\">Tour Phú Quốc đón tại đảo: dành cho khách đã có vé máy bay hoặc tàu</a>."
+      "text": "Cần kiểm tra hạng vé, hành lý xách tay và ký gửi, thuế phí, bữa ăn hoặc chọn chỗ nếu có. Với combo, xác nhận thêm loại phòng, số đêm, xe và vé tham quan. Chỉ dịch vụ ghi trong xác nhận mới được tính trong gói."
+    },
+    {
+      "type": "h3",
+      "text": "Vé, combo có được hoàn hủy hoặc đổi tên không?"
+    },
+    {
+      "type": "p",
+      "text": "Điều kiện hoàn, hủy, đổi ngày, đổi tên và phí dịch vụ phụ thuộc hạng vé, hãng bay và nhà cung cấp. Một số sản phẩm không hoàn hoặc không đổi. Khách cần nhận điều kiện bằng văn bản trước khi cọc hoặc thanh toán."
+    },
+    {
+      "type": "p",
+      "text": "Tham khảo thêm: <a href=\"https://todaytourist.com/vi/tin-tuc/tour-phu-quoc-don-tai-dao-danh-cho-khach-da-co-ve-may-bay-hoac-tau/\"><strong><u>Tour Phú Quốc đón tại đảo: dành cho khách đã có vé máy bay hoặc tàu</u></strong></a>."
     },
     {
       "type": "h2",
