@@ -55,6 +55,22 @@
     },
     {
       "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Chốt phạm vi giữa nhà hàng và đơn vị chương trình</span></strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Nhà hàng xác nhận thực đơn, số bàn, giờ phục vụ và thiết bị đã có; đơn vị chương trình xác nhận thiết bị bổ sung để tránh tính hai lần.",
+        "Thống nhất một người duyệt kịch bản, danh sách tên vinh danh và thời hạn bàn giao nội dung trình chiếu.",
+        "Ghi thời gian lắp đặt, tổng duyệt, bắt đầu/kết thúc, giới hạn âm thanh và phụ thu kéo dài nếu có."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Ngân sách nên được duyệt theo tổng phần tiệc và phần chương trình, cùng điều kiện phát sinh bằng văn bản. Tham khảo <a href=\"/vi/to-chuc-gala-dinner/\"><strong><u>dịch vụ Gala Dinner TodayTourist</u></strong></a> để xác nhận phạm vi cần tổ chức."
+    },
+    {
+      "type": "h2",
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
     },
     {
