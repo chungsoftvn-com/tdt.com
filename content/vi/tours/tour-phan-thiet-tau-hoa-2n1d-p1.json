@@ -134,12 +134,8 @@
       "text": "Chuẩn bị trước chuyến đi"
     },
     {
-      "type": "list",
-      "items": [
-        "Lịch SPT1/SPT2",
-        "Hướng dẫn đón tàu",
-        "Cẩm nang Phan Thiết 2N1Đ"
-      ]
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/lich-tau-spt-phan-thiet/\" target=\"_blank\" rel=\"noopener nofollow\">Lịch SPT1/SPT2</a><br><a href=\"/vi/tin-tuc/di-tau-tu-bien-hoa-di-phan-thiet/\" target=\"_blank\" rel=\"noopener nofollow\">Hướng dẫn đón tàu</a><br><a href=\"/vi/tin-tuc/du-lich-phan-thiet-2-ngay-1-dem/\" target=\"_blank\" rel=\"noopener nofollow\">Cẩm nang Phan Thiết 2N1Đ</a><br>"
     },
     {
       "type": "p",
