@@ -3,13 +3,13 @@
   "title": "Thuê xe cho gia đình, nhóm bạn đi du lịch tại Biên Hòa, Đồng Nai, TP.HCM",
   "category": "Cẩm nang thuê xe",
   "image": "thue-xe-cho-gia-dinh-nhom-ban-di-du-lich-v2.jpg",
-  "summary": "Thuê xe cho gia đình, nhóm bạn đi du lịch tại Biên Hòa, Đồng Nai, TP.HCM: chọn xe nhỏ gọn, chốt điểm đón và lịch trình linh hoạt. Mr Anh Văn 0902 898 726.",
+  "summary": "Thuê xe 16, 29, 45 chỗ cho gia đình, nhóm bạn từ Đồng Nai, TP.HCM: tính người và hành lý, chốt điểm đón, lịch phục vụ và chi phí.",
   "body": "",
   "published_at": "2026-10-11",
   "content": [
     {
       "type": "html",
-      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\"><strong>Gia đình hoặc nhóm bạn đi chung thường chỉ cần một chiếc xe nhỏ gọn, nhưng lịch đi phải linh hoạt vì có trẻ em và người lớn tuổi. TodayTourist (Biên Hòa, Đồng Nai) nhận phục vụ đoàn xuất phát từ Biên Hòa, Đồng Nai và TP.HCM.</strong></span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\"><strong>Gia đình hoặc nhóm bạn nên chọn xe theo tổng số người, hành lý và lịch di chuyển. TodayTourist tư vấn xe 16, 29, 45 chỗ và xe giường nằm cho đoàn từ Biên Hòa, TP. Đồng Nai và TP.HCM.</strong></span></p></blockquote>"
     },
     {
       "type": "p",
@@ -21,7 +21,7 @@
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\">Gia đình hoặc nhóm bạn thường từ 7–15 người, có trẻ nhỏ và người lớn tuổi. Xe 16 chỗ thường đủ cho nhóm đến khoảng 12 người; nhóm đông hơn nên cân nhắc xe 29 chỗ để có thêm chỗ để đồ và nghỉ ngơi.</span>"
+      "text": "<span style=\"font-size:16px;color:#374151\">Cần tính đủ người lớn, trẻ em và hành lý trước khi chọn xe 16 hoặc 29 chỗ. Với đoàn đông hơn, có thể trao đổi xe 45 chỗ; phương án cuối cùng phụ thuộc xe cụ thể và khả năng tiếp cận điểm đón.</span>"
     },
     {
       "type": "html",
@@ -41,7 +41,7 @@
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\">Các điểm gần như Vũng Tàu, Long Hải, Hồ Tràm, Mũi Né phù hợp đi 1–2 ngày. Điểm xa như Đà Lạt, Nha Trang, miền Tây nên đi 3 ngày trở lên.</span>"
+      "text": "<span style=\"font-size:16px;color:#374151\">Vũng Tàu, Long Hải và Hồ Tràm có thể xây dựng lịch trong ngày hoặc nghỉ lại. Phan Thiết, Đà Lạt, Nha Trang và các tuyến miền Tây cần xem từng điểm đến, giờ đi/về và thời gian nghỉ thay vì áp một số ngày chung cho cả khu vực.</span>"
     },
     {
       "type": "h2",
@@ -49,7 +49,7 @@
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\">Nhóm 8–14 người đi xe 16 chỗ thường vướng khoang hành lý, nên chia bớt vali lớn lên cốp, mang balo nhỏ lên xe. Xếp người dễ say xe và người lớn tuổi ở hàng ghế gần phía trước; nhóm trẻ con ngồi gần người lớn. Thống nhất sớm giờ đón, giờ nghỉ và điểm ăn trưa để cả nhóm không phải cãi nhau giữa chuyến đi.</span>"
+      "text": "<span style=\"font-size:16px;color:#374151\">Đoàn nên gửi số vali lớn và vật dụng cồng kềnh để kiểm tra khoang hành lý của xe cụ thể. Không để đồ chắn lối đi; thống nhất giờ đón, điểm dừng và cách bố trí chỗ ngồi với người phụ trách trước chuyến đi.</span>"
     },
     {
       "type": "h2",
@@ -84,6 +84,22 @@
     },
     {
       "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Chốt hành lý và phạm vi phục vụ trước khi giữ xe</span></strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Gửi tổng số người, tính cả trẻ em, cùng số vali lớn, xe đẩy hoặc vật dụng cồng kềnh. Không suy rằng xe còn ghế là chắc chắn đủ chỗ hành lý.",
+        "Ghi rõ xe chỉ đưa đón hai chặng hay phục vụ tham quan tại điểm đến; giờ kết thúc, chờ đoàn và đổi tuyến cần được xác nhận.",
+        "Đối chiếu các khoản gồm/chưa gồm trong báo giá: xe, nhiên liệu, tài xế, cầu đường, ăn nghỉ tài xế, bến bãi và VAT."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Xem <a href=\"/vi/cho-thue-xe/\"><strong><u>bảng giá thuê xe 16, 29, 45 chỗ và giường nằm</u></strong></a>; báo giá chính thức theo ngày đi, tuyến đường và phạm vi sử dụng xe."
+    },
+    {
+      "type": "h2",
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
     },
     {
@@ -100,7 +116,7 @@
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\">Thường không có ghế trẻ em chuyên dụng; nên mang theo nếu cần và hỏi nhà xe.</span>"
+      "text": "<span style=\"font-size:16px;color:#374151\">Cần hỏi loại ghế phù hợp và khả năng bố trí trên xe cụ thể trước khi đặt; không mặc định xe có sẵn.</span>"
     },
     {
       "type": "h3",
@@ -116,7 +132,7 @@
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\">Nên hỏi trực tiếp, phụ thuộc vào nhà xe còn xe hay không.</span>"
+      "text": "<span style=\"font-size:16px;color:#374151\">TodayTourist tập trung xe 16, 29, 45 chỗ và xe giường nằm. Nếu cần xe 7 chỗ, phải kiểm tra khả năng bố trí và xác nhận riêng trước khi đặt.</span>"
     },
     {
       "type": "p",
