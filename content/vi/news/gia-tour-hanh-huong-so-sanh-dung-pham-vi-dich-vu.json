@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Giá tour hành hương phụ thuộc tuyến, ngày đi, số khách và dịch vụ lựa chọn. Để so sánh hai chương trình, nên đặt chúng trên cùng điểm đón, thời lượng và phạm vi phục vụ. Một mức giá thấp hơn chưa cho biết đoàn sẽ nhận được những gì.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Giá tour hành hương phụ thuộc tuyến, ngày đi, số khách và dịch vụ lựa chọn. Để so sánh hai chương trình, nên đặt chúng trên cùng điểm đón, thời lượng và phạm vi phục vụ. Một mức giá thấp hơn chưa cho biết đoàn sẽ nhận được những gì.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792213916757-0.jpg\" alt=\"Giá tour hành hương: so sánh đúng phạm vi dịch vụ\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792213916757-0.jpg\" alt=\"Giá tour hành hương: so sánh đúng phạm vi dịch vụ\"> </figure>"
     },
     {
       "type": "h2",
@@ -106,6 +106,10 @@
     {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\">📍 <strong>Công ty TNHH Du lịch Ngày Hôm Nay (Today Tourist)</strong><br>🏠 Số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai.</span>"
+    },
+    {
+      "type": "p",
+      "text": "Nếu đoàn muốn tham khảo thêm tuyến hành hương Tây Ninh, xem <a href=\"/vi/tours/tour-nui-ba-den-tay-ninh-1-ngay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour Tây Ninh 1 ngày</u></strong></a>. Lịch đi, điểm đón và dịch vụ được xác nhận theo chương trình đã chọn."
     }
   ],
   "hidden": false
