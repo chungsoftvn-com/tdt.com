@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Cùng là đi Phan Thiết, thuê xe và đặt tour trọn gói là hai cách tổ chức khác nhau. Chọn đúng giúp đoàn rõ ai làm gì và tổng chi phí có hợp lý không.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Cùng là đi Phan Thiết, thuê xe và đặt tour trọn gói là hai cách tổ chức khác nhau. Chọn đúng giúp đoàn rõ ai làm gì và tổng chi phí có hợp lý không.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792222506967-0.jpg\" alt=\"A picturesque road in Phan Thiet, Vietnam, bordered by trees and leadi\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792222506967-0.jpg\" alt=\"A picturesque road in Phan Thiet, Vietnam, bordered by trees and leadi\"> </figure>"
     },
     {
       "type": "h2",
@@ -108,6 +108,10 @@
     {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\">📍 <strong>Công ty TNHH Du lịch Ngày Hôm Nay (Today Tourist)</strong><br>🏠 Số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai.</span>"
+    },
+    {
+      "type": "p",
+      "text": "Khách cần phương án xe theo lịch trình thực tế có thể xem <a href=\"/vi/cho-thue-xe/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>thuê xe du lịch theo đoàn</u></strong></a>. Lịch đi, điểm đón và dịch vụ được xác nhận theo chương trình đã chọn."
     }
   ],
   "hidden": false
