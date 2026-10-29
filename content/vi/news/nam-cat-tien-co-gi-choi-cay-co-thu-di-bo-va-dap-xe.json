@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Không chọn Bàu Sấu vẫn có thể xây chuyến trải nghiệm Nam Cát Tiên phù hợp. Người đặt tour nên bắt đầu từ tuyến cây cổ thụ, đường đi được phép và hình thức di chuyển, thay vì chọn tất cả điểm trên ảnh.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Không chọn Bàu Sấu vẫn có thể xây chuyến trải nghiệm Nam Cát Tiên phù hợp. Người đặt tour nên bắt đầu từ tuyến cây cổ thụ, đường đi được phép và hình thức di chuyển, thay vì chọn tất cả điểm trên ảnh.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792214846022-0.jpg\" alt=\"Nam Cát Tiên có gì chơi: cây cổ thụ, đi bộ và đạp xe\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792214846022-0.jpg\" alt=\"Nam Cát Tiên có gì chơi: cây cổ thụ, đi bộ và đạp xe\"> </figure>"
     },
     {
       "type": "h2",
@@ -106,6 +106,10 @@
     {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\">📍 <strong>Công ty TNHH Du lịch Ngày Hôm Nay (Today Tourist)</strong><br>🏠 Số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai.</span>"
+    },
+    {
+      "type": "p",
+      "text": "Để chọn hành trình rừng có một đêm nghỉ, tham khảo <a href=\"/vi/tours/tour-nam-cat-tien-2n1d/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour Nam Cát Tiên</u></strong></a>. Lịch đi, điểm đón và dịch vụ được xác nhận theo chương trình đã chọn."
     }
   ],
   "hidden": false
