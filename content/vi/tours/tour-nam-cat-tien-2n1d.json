@@ -7,7 +7,7 @@
   "duration": "2 ngày 1 đêm",
   "price": "2.590.000đ/khách",
   "image": "nam-cat-tien-2-ngay-1-dem.jpg",
-  "desc": "Tour Nam Cát Tiên 2 ngày 1 đêm từ TP. Đồng Nai / TP.HCM: làng bè La Ngà, vườn quốc gia Nam Cát Tiên, cây Tùng 400 năm, Gõ Bác Đồng, nghỉ resort. Giá 2.590.000đ.",
+  "desc": "Trải nghiệm thiên nhiên Nam Cát Tiên 2 ngày 1 đêm. Gọi/Zalo 0902 898 726 để nhận lịch trình, báo giá và tư vấn hoạt động phù hợp.",
   "highlights": [
     "Xe đón tận nơi khu vực Biên Hòa, đi về gọn trong 2 ngày 1 đêm",
     "Ghé làng bè La Ngà, đá Ba Chồng và Suối Mơ trên đường đi",
@@ -213,18 +213,52 @@
       "text": "📞 Nhận báo giá đoàn: <strong>Mr. Anh Văn – 0902 898 726</strong>"
     },
     {
-      "type": "h3",
-      "text": "❓ Câu hỏi thường gặp"
+      "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
     },
     {
-      "type": "list",
-      "items": [
-        "Tour đón khách ở đâu? Xe đón tận nơi trong nội ô trung tâm Biên Hòa. Khách ở dọc tuyến đường được đón ngay trên đường.",
-        "Giá tour đã gồm vé vào vườn quốc gia và xem thú đêm chưa? Đã gồm vé vào cửa vườn và phà qua sông theo chương trình. Xem thú đêm là hoạt động tự túc, cần đặt trước theo quy định của vườn.",
-        "Muốn nhìn thấy thú rừng có dễ không? Nam Cát Tiên là rừng tự nhiên nên việc gặp thú hoang dã phụ thuộc may mắn và thời điểm. Chương trình tập trung vào cảnh quan, cây cổ thụ và trải nghiệm rừng.",
-        "Trẻ nhỏ đi tour này thế nào? Bé dưới 5 tuổi miễn phí nếu ngồi chung ghế và ngủ chung với bố mẹ. Bé 5 đến dưới 10 tuổi tính 75% giá tour. Quý khách liên hệ để được tư vấn.",
-        "Công ty có xuất hóa đơn VAT không? Có. Giá tour chưa bao gồm VAT, quý khách cần hóa đơn vui lòng báo khi đăng ký."
-      ]
+      "type": "p",
+      "text": "<strong>Tour Nam Cát Tiên 2 ngày 1 đêm có giá bao nhiêu?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Giá người lớn đang niêm yết là 2.590.000đ/khách, áp dụng đoàn từ 20 khách, không áp dụng lễ, Tết. Phòng đơn phụ thu 450.000đ/khách/đêm. Đoàn 10–19 khách nhận báo giá riêng; cần xác nhận giá theo ngày đi."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Lịch trình Nam Cát Tiên 2 ngày 1 đêm có đi bộ nhiều không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Ngày đầu tham quan các điểm trên tuyến La Ngà và vào rừng Nam Cát Tiên bằng phà, kết hợp đi bộ và xe theo chương trình. Ngày hai nghỉ tại resort rồi về. Khách nên báo thể lực để được tư vấn; không bảo đảm gặp thú hoang dã."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Tour Nam Cát Tiên đón trả khách ở đâu?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Khách có thể đăng ký điểm đón tại khu vực Biên Hòa, TP. Đồng Nai hoặc các điểm TP.HCM được nêu trong chương trình. Gửi địa chỉ khi đặt để xác nhận giờ đón, điểm trả, điểm tập kết và khả năng đón dọc tuyến."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Giá tour đã gồm vé vườn quốc gia và xem thú đêm chưa?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Giá gồm xe, resort 01 đêm, 02 bữa sáng, 03 bữa chính, vé vườn quốc gia và phà, xe và hướng dẫn trong rừng theo chương trình, hướng dẫn viên suốt tuyến, bảo hiểm và quà tặng. Xem thú đêm, xe đạp, kayak và VAT chưa bao gồm."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Cọc, hủy hoặc đổi tour Nam Cát Tiên khi trời mưa thế nào?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Chương trình quy định cọc 30–50%, thanh toán đủ trước ngày đi. Phí đổi hủy cần xác nhận bằng văn bản trước khi đặt. Hoạt động rừng và phà phụ thuộc quy định của vườn, thời tiết; phương án thay thế được thống nhất theo điều kiện thực tế."
+    },
+    {
+      "type": "p",
+      "text": "Nhà trường có thể tham khảo <a href=\"/vi/tour-hoc-sinh/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour học sinh Đồng Nai</u></strong></a>; doanh nghiệp xem <a href=\"/vi/to-chuc-team-building/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>dịch vụ team building</u></strong></a> để bổ sung hoạt động phù hợp địa điểm."
     },
     {
       "type": "h3",
