@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Tour Vũng Tàu 1 ngày phù hợp với đoàn có quỹ thời gian ngắn. Muốn chuyến đi dễ chịu, hãy chọn một hoạt động chính và một điểm tham quan bổ trợ, thay vì biến cả ngày thành chuỗi lên xuống xe.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Tour Vũng Tàu 1 ngày phù hợp với đoàn có quỹ thời gian ngắn. Muốn chuyến đi dễ chịu, hãy chọn một hoạt động chính và một điểm tham quan bổ trợ, thay vì biến cả ngày thành chuỗi lên xuống xe.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792220320280-0.jpg\" alt=\"Tranquil seascape with boats at sunset in Vũng Tàu, Vietnam.\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792220320280-0.jpg\" alt=\"Tranquil seascape with boats at sunset in Vũng Tàu, Vietnam.\"> </figure>"
     },
     {
       "type": "h2",
@@ -89,7 +89,7 @@
     },
     {
       "type": "p",
-      "text": "<a href=\"https://todaytourist.com/vi/tours/tour-vung-tau-1-ngay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c;font-size:16px\">Tour Vũng Tàu 1 ngày</span></u></strong></a>"
+      "text": "<a href=\"https://todaytourist.com/vi/tours/tour-vung-tau-1-ngay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour Vũng Tàu 1 ngày</u></strong></a>"
     },
     {
       "type": "p",
