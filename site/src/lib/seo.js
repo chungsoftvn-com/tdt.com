@@ -403,7 +403,6 @@ export function tourLd(lang, tour) {
             url,
             price,
             priceCurrency: 'VND',
-            availability: 'https://schema.org/InStock',
             seller: { '@id': ORG_ID },
           },
         }
@@ -426,7 +425,7 @@ export function newsLd(lang, item) {
     articleSection: item.category || undefined,
     inLanguage: lang,
     isAccessibleForFree: true,
-    author: { '@id': ORG_ID },
+    author: { '@type': 'Organization', '@id': ORG_ID, name: commonOf(lang).brand_name || BRAND_FALLBACK, url: absUrl(`/${lang}/about/`) },
     publisher: { '@id': ORG_ID },
     ...(image ? { image: [image] } : {}),
     ...(published ? { datePublished: published } : {}),
