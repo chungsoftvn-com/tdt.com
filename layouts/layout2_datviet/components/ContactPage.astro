@@ -71,7 +71,7 @@ const body = bodyFor('contact', t);
         <p data-form-required class="hidden text-sm text-red-600 sm:col-span-2">
           {t.form_required}
         </p>
-        <p data-form-success class="hidden text-sm font-medium text-sea-deep sm:col-span-2">
+        <p data-form-success role="status" class="hidden text-sm font-medium text-sea-deep sm:col-span-2">
           {t.form_success}
         </p>
 
@@ -95,10 +95,11 @@ const body = bodyFor('contact', t);
   const success = document.querySelector('[data-form-success]');
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = form.name?.value?.trim();
-    const phone = form.phone?.value?.trim();
-    const email = form.email?.value?.trim();
-    const message = form.message?.value?.trim();
+    const fields = new FormData(form);
+    const name = String(fields.get('name') || '').trim();
+    const phone = String(fields.get('phone') || '').trim();
+    const email = String(fields.get('email') || '').trim();
+    const message = String(fields.get('message') || '').trim();
     required?.classList.toggle('hidden', Boolean(name && phone));
     if (!name || !phone) return;
 
@@ -116,8 +117,7 @@ const body = bodyFor('contact', t);
     window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     success?.classList.remove('hidden');
-    form.reset();
-    setTimeout(() => success?.classList.add('hidden'), 6000);
+    // Opening an email draft does not confirm delivery; preserve the customer's input.
   });
 </script>
 
