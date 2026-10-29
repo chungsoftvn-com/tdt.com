@@ -134,12 +134,8 @@
       "text": "Chuẩn bị trước chuyến đi"
     },
     {
-      "type": "list",
-      "items": [
-        "Lịch SPT1/SPT2",
-        "Tour cho gia đình",
-        "Tour cho công ty"
-      ]
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/lich-tau-spt-phan-thiet/\" target=\"_blank\" rel=\"noopener nofollow\">Lịch SPT1/SPT2</a><br><a href=\"/vi/tin-tuc/tour-tau-hoa-phan-thiet/\" target=\"_blank\" rel=\"noopener nofollow\">Tour cho gia đình</a><br><a href=\"/vi/tin-tuc/tour-tau-hoa-cho-cong-ty/\" target=\"_blank\" rel=\"noopener nofollow\">Tour cho công ty</a><br>"
     },
     {
       "type": "p",
