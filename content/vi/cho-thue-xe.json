@@ -208,55 +208,59 @@
     },
     {
       "type": "h2",
-      "text": "Câu hỏi thường gặp"
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Kinh nghiệm và lựa chọn chương trình</span></strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<a href=\"/vi/tin-tuc/thue-xe-cho-gia-dinh-nhom-ban-di-du-lich/\"><strong><u>Thuê xe cho gia đình, nhóm bạn đi du lịch tại Biên Hòa, Đồng Nai, TP.HCM</u></strong></a>",
+        "<a href=\"/vi/tin-tuc/chi-phi-thue-xe-mot-chieu-khu-hoi-va-nhieu-ngay/\"><strong><u>Chi phí thuê xe một chiều, khứ hồi và nhiều ngày</u></strong></a>",
+        "<a href=\"/vi/tin-tuc/thue-xe-di-phan-thiet-hay-dat-tour-tron-goi-cach-chon-cho-doan-rieng/\"><strong><u>Thuê xe đi Phan Thiết hay đặt tour trọn gói: cách chọn cho đoàn riêng</u></strong></a>"
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
     },
     {
       "type": "h3",
-      "text": "Có thể thuê xe theo ngày ở Biên Hòa không?"
+      "text": "Giá thuê xe du lịch Đồng Nai được tính thế nào?"
     },
     {
       "type": "p",
-      "text": "TodayTourist nhận thuê xe trong ngày và nhiều ngày tại Biên Hòa. Khách gửi ngày đi, giờ đón, giờ kết thúc dự kiến và các điểm di chuyển để được tư vấn loại xe, báo giá và thống nhất phạm vi phục vụ trong hợp đồng."
+      "text": "Giá dựa trên loại xe, ngày đi, số ngày, tuyến đường, giờ phục vụ và điểm đón trả. Khách gửi số người, lượng hành lý và lịch trình để nhận báo giá chính thức bằng văn bản."
     },
     {
       "type": "h3",
-      "text": "Có thể thuê xe giường nằm từ Biên Hòa đi Đà Lạt không?"
+      "text": "Nên chọn xe 4, 7, 16, 29 hay 45 chỗ?"
     },
     {
       "type": "p",
-      "text": "TodayTourist nhận thuê xe giường nằm từ Biên Hòa đi Đà Lạt cho đoàn riêng, không ghép khách. Khách cung cấp ngày đi, số người, giờ xuất phát và nhu cầu sử dụng xe tham quan tại Đà Lạt để được tư vấn phương án, báo giá theo lịch trình."
+      "text": "Chọn xe theo số người, hành lý và điều kiện đường vào điểm đến. Xe 16, 29, 45 chỗ và giường nằm là các phương án nêu trên trang; nhu cầu xe 4 hoặc 7 chỗ cần kiểm tra khả năng bố trí trước khi đặt."
     },
     {
       "type": "h3",
-      "text": "Nên đặt xe trước bao lâu?"
+      "text": "Xe đón trả tại Biên Hòa, Đồng Nai và TP.HCM ở đâu?"
     },
     {
       "type": "p",
-      "text": "Khách nên đặt xe sớm khi đã xác định ngày đi và số người dự kiến; vào mùa lễ, Tết và cuối tuần nên chủ động đặt trước nhiều hơn để thuận tiện lựa chọn xe và sắp xếp lịch trình. Đoàn cần gửi danh sách hành khách chậm nhất 03 ngày trước ngày đi."
+      "text": "Điểm đón trả được thống nhất theo địa chỉ và khả năng xe tiếp cận. Nhiều điểm đón, đón ngoài tuyến, chờ lâu hoặc đổi nơi trả có thể làm thay đổi giá và cần xác nhận trước."
     },
     {
       "type": "h3",
-      "text": "Giá thuê xe bao gồm những khoản nào?"
+      "text": "Giá thuê xe đã gồm tài xế, cầu đường và VAT chưa?"
     },
     {
       "type": "p",
-      "text": "Giá trọn gói gồm xe, nhiên liệu, lương lái xe và phí cầu đường. Khách tự chi ăn nghỉ của lái xe theo đoàn, phí đỗ xe và bến bãi kể cả tại khách sạn, resort, cùng vé vào điểm tham quan. Giá chưa gồm VAT; phụ thu quá giờ, quá km hoặc đổi lộ trình được hai bên thống nhất trước bằng văn bản."
+      "text": "Giá tham khảo trên trang gồm xe, nhiên liệu, lương lái xe và phí cầu đường; chưa gồm VAT. Ăn nghỉ tài xế theo đoàn, phí đỗ xe, bến bãi và vé tham quan do đoàn tự chi. Phụ thu quá giờ, quá km hoặc đổi tuyến phải được thống nhất trước bằng văn bản."
     },
     {
       "type": "h3",
-      "text": "Thuê xe có được xuất hóa đơn VAT không?"
+      "text": "Đặt cọc, đổi lịch hoặc hủy xe áp dụng thế nào?"
     },
     {
       "type": "p",
-      "text": "Có. Khách cần hóa đơn vui lòng cung cấp thông tin xuất hóa đơn khi đặt xe. Giá thuê chưa gồm VAT và được tính thêm VAT theo thuế suất hiện hành; TodayTourist xuất hóa đơn điện tử trong 07 ngày làm việc sau khi nhận đủ thanh toán."
-    },
-    {
-      "type": "h3",
-      "text": "Có thuê xe kèm hướng dẫn viên hoặc MC không?"
-    },
-    {
-      "type": "p",
-      "text": "Có. Today Tourist cung cấp hướng dẫn viên, MC cho team building, gala dinner, lửa trại nếu quý khách cần. Báo giá riêng theo chương trình."
+      "text": "Điều kiện giữ xe, mức cọc và phí đổi hủy theo xác nhận hoặc hợp đồng. Nếu đổi tuyến, số ngày hoặc loại xe, giá cần xác nhận lại; dịp cao điểm phụ thuộc khả năng bố trí xe."
     },
     {
       "type": "h2",
