@@ -8,7 +8,7 @@
  * (máy bay / xe / teambuilding / tour riêng) — admin sửa được ở /admin/pages.
  * Thẻ nào chưa đặt ảnh thì lùi về ảnh tự động như trước (bìa tin gần đây + bìa tour).
  */
-import { getContent, getNews, getTours } from '@/lib/content.js';
+import { getContent, getNews, getTours, href } from '@/lib/content.js';
 import Icon from './Icon.astro';
 
 interface Props {
@@ -38,10 +38,10 @@ const photoPool = [
 ];
 
 const services = [
-  { icon: 'plane', title: t.service_ticket_title, text: t.service_ticket_text, image: t.service_ticket_image },
-  { icon: 'car', title: t.service_car_title, text: t.service_car_text, image: t.service_car_image },
-  { icon: 'users', title: t.service_team_title, text: t.service_team_text, image: t.service_team_image },
-  { icon: 'sparkles', title: t.service_custom_title, text: t.service_custom_text, image: t.service_custom_image },
+  { icon: 'plane', title: t.service_ticket_title, text: t.service_ticket_text, image: t.service_ticket_image, url: href(lang, 've-may-bay') },
+  { icon: 'car', title: t.service_car_title, text: t.service_car_text, image: t.service_car_image, url: href(lang, 'cho-thue-xe') },
+  { icon: 'users', title: t.service_team_title, text: t.service_team_text, image: t.service_team_image, url: href(lang, 'to-chuc-team-building') },
+  { icon: 'sparkles', title: t.service_custom_title, text: t.service_custom_text, image: t.service_custom_image, url: href(lang, 'dat-tour') },
 ];
 ---
 
@@ -59,8 +59,9 @@ const services = [
               <span class="dv-svc-icon">
                 <Icon name={s.icon} class="h-5 w-5" />
               </span>
-              <h3>{s.title}</h3>
+              <h3><a href={s.url} class="hover:underline focus-visible:underline">{s.title}</a></h3>
               <p>{s.text}</p>
+              <a href={s.url} class="mt-3 inline-flex min-h-11 items-center font-semibold text-sea-deep underline underline-offset-4" aria-label={`${lang === 'vi' ? 'Xem' : 'View'} ${s.title}`}>{lang === 'vi' ? 'Xem dịch vụ →' : 'View service →'}</a>
             </div>
           </article>
         ))
