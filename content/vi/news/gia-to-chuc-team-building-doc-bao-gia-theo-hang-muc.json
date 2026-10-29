@@ -56,6 +56,23 @@
     },
     {
       "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bảng đối chiếu nhanh trước khi duyệt ngân sách</span></strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<strong>Quy mô:</strong> cùng số người, số đội và thời lượng; ghi giới hạn phục vụ nếu đoàn tăng khách.",
+        "<strong>Nhân sự:</strong> tách MC/quản trò, điều phối và kỹ thuật; ghi thời gian có mặt, lắp đặt và thu dọn.",
+        "<strong>Địa điểm:</strong> xác nhận phí sân, điện, vận chuyển đạo cụ và phương án trong nhà khi mưa.",
+        "<strong>Quyết toán:</strong> ghi khoản tính theo người, khoản tính theo chương trình, VAT và cách duyệt phát sinh."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Dùng cùng bảng yêu cầu khi hỏi các đơn vị để so sánh tương đương. Xem <a href=\"/vi/to-chuc-team-building/\"><strong><u>dịch vụ Team Building TodayTourist</u></strong></a> để trao đổi phương án theo mục tiêu của doanh nghiệp."
+    },
+    {
+      "type": "h2",
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
     },
     {
