@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Tour Đà Lạt 3 ngày 2 đêm và 3 ngày 3 đêm có thể cùng có ba ngày tham quan, nhưng cách khởi hành và thời gian nghỉ khác nhau. Điểm cần kiểm tra là từng đêm diễn ra ở đâu. Đêm trên xe không tương đương một đêm nhận phòng khách sạn.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Tour Đà Lạt 3 ngày 2 đêm và 3 ngày 3 đêm có thể cùng có ba ngày tham quan, nhưng cách khởi hành và thời gian nghỉ khác nhau. Điểm cần kiểm tra là từng đêm diễn ra ở đâu. Đêm trên xe không tương đương một đêm nhận phòng khách sạn.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1200px\"><img src=\"/content/vi/images/pasted-1792215130401-0.jpg\" alt=\"Đà Lạt 3 ngày 2 đêm và 3 ngày 3 đêm khác nhau thế nào?\" style=\"width:1200px;height:675px\"></figure>"
+      "html": "<figure style=\"width:1200px\"> <img src=\"/content/vi/images/pasted-1792215130401-0.jpg\" alt=\"Đà Lạt 3 ngày 2 đêm và 3 ngày 3 đêm khác nhau thế nào?\" style=\"width:1200px;height:675px\"> </figure>"
     },
     {
       "type": "h2",
@@ -101,7 +101,7 @@
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-da-lat-3n2d/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Tour Đà Lạt 3 ngày 2 đêm của TodayTourist</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-da-lat-3n2d/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour Đà Lạt 3 ngày 2 đêm</u></strong></a></span>"
     },
     {
       "type": "p",
