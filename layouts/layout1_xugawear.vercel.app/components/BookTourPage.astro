@@ -127,6 +127,7 @@ const label = (k) => t[k] || k;
           </button>
         </div>
       </form>
+      <p class="mt-4 text-sm text-ink-soft">Cần tư vấn trực tiếp? <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="font-semibold text-sea underline">Nhắn Zalo 0902 898 726</a> hoặc <a href="tel:0902898726" class="font-semibold text-sea underline">gọi Mr. Anh Văn</a>.</p>
     </div>
   </section>
 </BaseLayout>
@@ -135,7 +136,12 @@ const label = (k) => t[k] || k;
   const form = document.getElementById('booking-form');
   const msg = document.getElementById('booking-msg');
   const btn = form.querySelector('button[type="submit"]');
-  const noiDen = form.noi_den;
+  const tourSelect = form.querySelector('[name="tour_slug"]');
+  const requestedTour = new URLSearchParams(window.location.search).get('tour');
+  if (requestedTour && Array.from(tourSelect.options).some((option) => option.value === requestedTour)) {
+    tourSelect.value = requestedTour;
+  }
+  const noiDen = form.querySelector('[name="noi_den"]');
   const noiDenKhacWrap = document.querySelector('[data-noi-den-khac-wrap]');
   const ORIGIN = import.meta.env.DEV
     ? 'http://localhost:8787'
@@ -153,29 +159,31 @@ const label = (k) => t[k] || k;
     btn.disabled = true;
     btn.textContent = '…';
     try {
+      const fields = new FormData(form);
+      const field = (name) => String(fields.get(name) || '').trim();
       const res = await fetch(URL, {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: form.name.value.trim(),
-          phone: form.phone.value.trim(),
-          email: form.email.value.trim(),
-          dia_chi: form.dia_chi.value.trim(),
-          tour_slug: form.tour_slug.value,
-          tour_name: form.tour_slug.selectedOptions[0]?.text || '',
-          noi_khoi_hanh: form.noi_khoi_hanh.value,
-          loai_diem_den: form.loai_diem_den.value,
-          khu_vuc: form.khu_vuc.value,
-          noi_den: form.noi_den.value,
-          noi_den_khac: form.noi_den_khac.value.trim(),
-          loai_tour: form.loai_tour.value,
-          ngay_khoi_hanh: form.ngay_khoi_hanh.value,
-          ngay_ve: form.ngay_ve.value,
-          nguoi_lon: form.nguoi_lon.value,
-          tre_em: form.tre_em.value,
-          em_be: form.em_be.value,
-          yeu_cau_khac: form.yeu_cau_khac.value.trim(),
+          name: field('name'),
+          phone: field('phone'),
+          email: field('email'),
+          dia_chi: field('dia_chi'),
+          tour_slug: field('tour_slug'),
+          tour_name: tourSelect.selectedOptions[0]?.text || '',
+          noi_khoi_hanh: field('noi_khoi_hanh'),
+          loai_diem_den: field('loai_diem_den'),
+          khu_vuc: field('khu_vuc'),
+          noi_den: field('noi_den'),
+          noi_den_khac: field('noi_den_khac'),
+          loai_tour: field('loai_tour'),
+          ngay_khoi_hanh: field('ngay_khoi_hanh'),
+          ngay_ve: field('ngay_ve'),
+          nguoi_lon: field('nguoi_lon'),
+          tre_em: field('tre_em'),
+          em_be: field('em_be'),
+          yeu_cau_khac: field('yeu_cau_khac'),
         }),
       });
       const data = await res.json().catch(() => ({}));
@@ -184,6 +192,14 @@ const label = (k) => t[k] || k;
         msg.classList.remove('text-red-600');
         msg.classList.add('text-sea-deep');
         msg.textContent = form.dataset.success || 'Đã gửi yêu cầu. TodayTourist sẽ liên hệ lại sớm nhất.';
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', {
+            form_id: 'booking-form',
+            method: 'booking_form',
+            tour_slug: field('tour_slug') || 'custom',
+            page_path: window.location.pathname,
+          });
+        }
         form.reset();
       } else {
         msg.classList.remove('hidden');
