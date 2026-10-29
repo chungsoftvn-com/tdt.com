@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Đặt tour hành hương theo đoàn giúp trao đổi trực tiếp về tuyến, thời gian chiêm bái và dịch vụ cần dùng. Để nhận phương án sát nhu cầu, người đại diện nên gửi một bản yêu cầu chung thay vì mỗi thành viên đề nghị lịch khác nhau.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Đặt tour hành hương theo đoàn giúp trao đổi trực tiếp về tuyến, thời gian chiêm bái và dịch vụ cần dùng. Để nhận phương án sát nhu cầu, người đại diện nên gửi một bản yêu cầu chung thay vì mỗi thành viên đề nghị lịch khác nhau.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792214373118-0.jpg\" alt=\"Đặt tour hành hương đoàn riêng: gửi yêu cầu và chốt dịch vụ\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792214373118-0.jpg\" alt=\"Đặt tour hành hương đoàn riêng: gửi yêu cầu và chốt dịch vụ\"> </figure>"
     },
     {
       "type": "h2",
@@ -106,6 +106,10 @@
     {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\">📍 <strong>Công ty TNHH Du lịch Ngày Hôm Nay (Today Tourist)</strong><br>🏠 Số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai.</span>"
+    },
+    {
+      "type": "p",
+      "text": "Nếu đoàn muốn tham khảo thêm tuyến hành hương Tây Ninh, xem <a href=\"/vi/tours/tour-nui-ba-den-tay-ninh-1-ngay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour Núi Bà Đen từ Đồng Nai</u></strong></a>. Lịch đi, điểm đón và dịch vụ được xác nhận theo chương trình đã chọn."
     }
   ],
   "hidden": false
