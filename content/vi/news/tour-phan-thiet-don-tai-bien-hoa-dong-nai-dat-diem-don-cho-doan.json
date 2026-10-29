@@ -49,6 +49,22 @@
     },
     {
       "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Mẫu chốt điểm đón gửi cho người điều phối</span></strong>"
+    },
+    {
+      "type": "p",
+      "text": "Người phụ trách có thể tổng hợp theo mẫu: <strong>Ngày đi – số xe/số khách – tên cổng – địa chỉ hoặc ghim vị trí – giờ tập trung – đầu mối tại từng xe – điểm trả dự kiến</strong>. Không cần gửi danh sách cá nhân của cả đoàn khi mới hỏi phương án."
+    },
+    {
+      "type": "p",
+      "text": "Nếu đoàn có người ở cả Đồng Nai và TP.HCM, nên hỏi hai phương án: cùng tập trung tại một điểm hoặc dùng xe gom riêng. Cần xác nhận thời gian chờ và chi phí xe gom; không mặc định nhiều điểm đón vẫn giữ nguyên giờ đến Phan Thiết."
+    },
+    {
+      "type": "p",
+      "text": "Tham khảo <a href=\"/vi/y-kien-khach-hang/hanh-trinh-phan-thiet-2n1d-08-08/\"><strong><u>tư liệu hành trình Phan Thiết 2 ngày 1 đêm</u></strong></a> và <a href=\"/vi/tours/tour-phan-thiet-2n1d/\"><strong><u>chương trình Phan Thiết 2 ngày 1 đêm hiện tại</u></strong></a>."
+    },
+    {
+      "type": "h2",
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
     },
     {
