@@ -23,7 +23,7 @@ if (!tour) {
 const others = getTours(lang).filter((x) => x.slug !== slug).slice(0, 3);
 const phoneHref = `tel:${c.hotline.replace(/[^0-9]/g, '')}`;
 const zaloHref = `https://zalo.me/${c.zalo.replace(/[^0-9]/g, '')}`;
-const bookLink = href(lang, 'dat-tour');
+const bookLink = `${href(lang, 'dat-tour')}?tour=${encodeURIComponent(slug)}`;
 ---
 
 <BaseLayout
@@ -65,6 +65,7 @@ const bookLink = href(lang, 'dat-tour');
           {c.price}: <strong class="text-accent-pale">{tour.price}</strong>
         </span>
       </div>
+      <p class="mt-3 text-sm text-sand/90">Giá hiển thị là mức tham khảo; báo giá chính thức được xác nhận theo ngày đi, số khách, điểm đón và dịch vụ.</p>
       <div data-reveal style="--reveal-delay:0.18s" class="mt-8 flex flex-wrap items-center justify-center gap-3">
         <a
           href={bookLink}
