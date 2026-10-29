@@ -1,15 +1,35 @@
 {
   "slug": "tour-mien-tay-cho-cong-ty",
-  "title": "Tour Miền Tây cho công ty: chuẩn bị yêu cầu để nhận báo giá đúng",
+  "title": "Tour Miền Tây cho doanh nghiệp: chọn lịch 1 ngày hay 2 ngày 1 đêm",
   "category": "Tour Miền Tây – Tư vấn đoàn",
   "image": "anh-bia-tour-mien-tay-cho-cong-ty-v2.jpg",
-  "summary": "Tổ chức tour Miền Tây cho công ty: chuẩn bị số khách, ngày đi, ngân sách, điểm đón và yêu cầu dịch vụ để nhận báo giá phù hợp.",
+  "summary": "Tour Miền Tây cho công ty từ Đồng Nai: so sánh lịch 1 ngày và 2 ngày 1 đêm, tuyến Cồn Phụng, Cần Thơ và yêu cầu báo giá đoàn riêng.",
   "body": "",
   "published_at": "2026-10-19",
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Một tour Miền Tây cho công ty cần phù hợp số ngày nghỉ, ngân sách và mục tiêu gắn kết của đơn vị. Người phụ trách sẽ dễ so phương án hơn khi đưa cùng một bộ yêu cầu cho các nhà cung cấp. Điểm tham quan nên được chọn sau khi thống nhất nhu cầu của cả đoàn.</span></p></blockquote>"
+      "html": "<p><strong>Tour Miền Tây cho doanh nghiệp nên bắt đầu từ số ngày nghỉ và mục tiêu chuyến đi.</strong> Đoàn muốn tham quan, ăn trưa và về trong ngày có thể cân nhắc Mỹ Tho–Bến Tre; đoàn cần thêm một đêm nghỉ và tiệc giao lưu có thể tham khảo tuyến Cần Thơ. TodayTourist tiếp nhận yêu cầu từ công ty tại Đồng Nai, tư vấn tuyến và báo giá theo điểm đón, số người và dịch vụ được xác nhận.</p>"
+    },
+    {
+      "type": "h2",
+      "text": "Tour Miền Tây 1 ngày hay 2 ngày 1 đêm phù hợp công ty?"
+    },
+    {
+      "type": "html",
+      "html": "<table><caption>Gợi ý chọn thời lượng cho đoàn doanh nghiệp</caption><thead><tr><th scope=\"col\">Nhu cầu đoàn</th><th scope=\"col\">Phương án tham khảo</th><th scope=\"col\">Cần xác nhận</th></tr></thead><tbody><tr><td>Nghỉ trong ngày, ưu tiên tham quan và dùng bữa</td><td><a href=\"/vi/tours/tour-con-phung-ben-tre-1-ngay/\">Cồn Phụng – Bến Tre 1 ngày</a></td><td>Giờ đón tại Đồng Nai, thời gian đi thuyền, giờ về</td></tr><tr><td>Muốn nghỉ qua đêm và có thời gian giao lưu</td><td><a href=\"/vi/tours/tour-tien-giang-ben-tre-can-tho-2n1d/\">Tiền Giang – Bến Tre – Cần Thơ 2 ngày 1 đêm</a></td><td>Tiêu chuẩn phòng, thực đơn và không gian tiệc</td></tr><tr><td>Có Team Building hoặc Gala Dinner riêng</td><td>Chọn tuyến trước, bổ sung hoạt động theo mục tiêu</td><td>Khu chơi, thời lượng, thiết bị, nhân sự và ngân sách riêng</td></tr></tbody></table>"
+    },
+    {
+      "type": "p",
+      "text": "Các tuyến trên là chương trình tham khảo. Team Building, Gala Dinner hoặc đón nhiều điểm chỉ nằm trong gói khi được ghi rõ trong báo giá; không mặc định đi kèm mọi tour."
+    },
+    {
+      "type": "h2",
+      "text": "Gửi yêu cầu tour đoàn từ Đồng Nai"
+    },
+    {
+      "type": "p",
+      "text": "Anh/chị có thể gửi: “Công ty cần tour Miền Tây, ngày đi…, … người lớn và … trẻ em, đón tại…, đi … ngày, ngân sách dự kiến…, cần/không cần Team Building hoặc tiệc tối”. Mr Anh Văn tiếp nhận qua <a href=\"https://zalo.me/0902898726\">Zalo 0902 898 726</a> để tư vấn lịch và phạm vi dịch vụ."
     },
     {
       "type": "h2",
@@ -81,15 +101,15 @@
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tin-tuc/tour-cong-doan-mien-tay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Tour công đoàn, công nhân đi Miền Tây: cân bằng lịch ca và ngân sách</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tin-tuc/tour-cong-doan-mien-tay/\"><strong><u><span style=\"color:#00695c\">Tour công đoàn, công nhân đi Miền Tây: cân bằng lịch ca và ngân sách</span></u></strong></a></span>"
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tin-tuc/team-building-mien-tay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Team Building Miền Tây: chọn khu chơi và kịch bản phù hợp đoàn</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tin-tuc/team-building-mien-tay/\"><strong><u><span style=\"color:#00695c\">Team Building Miền Tây: chọn khu chơi và kịch bản phù hợp đoàn</span></u></strong></a></span>"
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tin-tuc/gala-dinner-mien-tay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Gala Dinner Miền Tây: chọn tiệc riêng hay bữa tối trên du thuyền</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tin-tuc/gala-dinner-mien-tay/\"><strong><u><span style=\"color:#00695c\">Gala Dinner Miền Tây: chọn tiệc riêng hay bữa tối trên du thuyền</span></u></strong></a></span>"
     },
     {
       "type": "h2",
@@ -101,15 +121,15 @@
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-con-phung-ben-tre-1-ngay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Tour Cồn Phụng – Bến Tre 1 ngày</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-con-phung-ben-tre-1-ngay/\"><strong><u><span style=\"color:#00695c\">Tour Cồn Phụng – Bến Tre 1 ngày</span></u></strong></a></span>"
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-tien-giang-ben-tre-can-tho-2n1d/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Tour Tiền Giang – Cần Thơ 2 ngày 1 đêm</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-tien-giang-ben-tre-can-tho-2n1d/\"><strong><u><span style=\"color:#00695c\">Tour Tiền Giang – Cần Thơ 2 ngày 1 đêm</span></u></strong></a></span>"
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-luc-tinh-mien-tay-3n3d/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Tour Lục tỉnh Miền Tây 3 ngày 3 đêm</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-luc-tinh-mien-tay-3n3d/\"><strong><u><span style=\"color:#00695c\">Tour Lục tỉnh Miền Tây 3 ngày 3 đêm</span></u></strong></a></span>"
     }
   ],
   "hidden": false
