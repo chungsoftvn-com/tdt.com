@@ -68,12 +68,8 @@
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài liên quan</span></strong>"
     },
     {
-      "type": "list",
-      "items": [
-        "Chuẩn bị đi tàu đêm",
-        "Hiểu đúng tour 4N3Đ",
-        "Kinh nghiệm đi tàu"
-      ]
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/di-tau-dem-den-nha-trang/\" target=\"_blank\" rel=\"noopener nofollow\">Chuẩn bị đi tàu đêm</a><br><a href=\"/vi/tin-tuc/tour-tau-hoa-nha-trang/\" target=\"_blank\" rel=\"noopener nofollow\">Hiểu đúng tour 4N3Đ</a><br><a href=\"/vi/tin-tuc/kinh-nghiem-di-tour-tau-hoa/\" target=\"_blank\" rel=\"noopener nofollow\">Kinh nghiệm đi tàu</a><br>"
     },
     {
       "type": "h2",
