@@ -20,6 +20,45 @@ interface Props {
 const { content = [] } = Astro.props;
 const blocks = Array.isArray(content) ? content : [];
 
+/** FAQ JSON-LD follows the visible question/answer blocks on selected landing pages. */
+const faqPaths = new Set([
+  '/vi/tours/tour-vung-tau-1-ngay',
+  '/vi/tours/tour-nam-cat-tien-2n1d',
+  '/vi/tours/tour-nui-ba-den-tay-ninh-1-ngay',
+  '/vi/tours/tour-da-lat-3n2d',
+  '/vi/tour-hoc-sinh',
+  '/vi/to-chuc-team-building',
+  '/vi/to-chuc-gala-dinner',
+  '/vi/cho-thue-xe',
+  '/vi/ve-may-bay',
+]);
+const faqEntities = [];
+if (faqPaths.has(Astro.url.pathname.replace(/\/+$/, ''))) {
+  let active = false;
+  let question = '';
+  for (const block of blocks) {
+    if (!block) continue;
+    const plain = sanitizeHtml(block.text || '', { allowedTags: [], allowedAttributes: {} }).trim();
+    if (!active) {
+      if ((block.type === 'h2' || block.type === 'h3') && /câu hỏi thường gặp/i.test(plain)) active = true;
+      continue;
+    }
+    const isQuestion = (block.type === 'h3' || (block.type === 'p' && /^<strong>[\s\S]*<\/strong>$/.test((block.text || '').trim()))) && plain.endsWith('?');
+    if (isQuestion) {
+      question = plain;
+    } else if (question && block.type === 'p' && plain) {
+      faqEntities.push({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: plain } });
+      question = '';
+    } else if (block.type === 'h2' || block.type === 'h3') {
+      break;
+    }
+  }
+}
+const faqJson = faqEntities.length === 5
+  ? JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqEntities }).replace(/</g, '\\u003c')
+  : '';
+
+
 /** Render text an toàn (inline HTML allowlist) — hỗ trợ đậm/nghiêng/link trong đoạn. */
 const rich = (html) =>
   normalizeInternalLinks(
@@ -124,6 +163,8 @@ const richHtml = (html) =>
     }),
   );
 ---
+
+{faqJson && <script is:inline type="application/ld+json" set:html={faqJson} />}
 
 <div class="rich-content">
   {
