@@ -60,12 +60,8 @@
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài liên quan</span></strong>"
     },
     {
-      "type": "list",
-      "items": [
-        "Đi Phan Thiết bằng tàu",
-        "Đi tàu đêm Nha Trang",
-        "Đi SE4 đến Quy Nhơn"
-      ]
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/di-tau-tu-bien-hoa-di-phan-thiet/\" target=\"_blank\" rel=\"noopener nofollow\">Đi Phan Thiết bằng tàu</a><br><a href=\"/vi/tin-tuc/di-tau-dem-den-nha-trang/\" target=\"_blank\" rel=\"noopener nofollow\">Đi tàu đêm Nha Trang</a><br><a href=\"/vi/tin-tuc/di-tau-se4-di-quy-nhon/\" target=\"_blank\" rel=\"noopener nofollow\">Đi SE4 đến Quy Nhơn</a><br>"
     },
     {
       "type": "h2",
