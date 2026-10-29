@@ -1,5 +1,5 @@
 {
-  "count": 704,
+  "count": 705,
   "order": [
     "thue-xe-45-cho-bien-hoa-dong-nai-tphcm",
     "thue-nguyen-xe-dua-cong-nhan-ve-que-va-don-lai-dip-tet",
@@ -704,7 +704,8 @@
     "that-lac-hanh-ly-san-bay-tan-son-nhat",
     "di-tau-tu-bien-hoa-di-phan-thiet",
     "du-lich-phan-thiet-2-ngay-1-dem",
-    "tour-tau-hoa-hoc-sinh"
+    "tour-tau-hoa-hoc-sinh",
+    "tour-tau-hoa-phan-thiet"
   ],
   "list_title": "Tin tức",
   "list_text": "Cập nhật tin tức du lịch, cẩm nang và ưu đãi mới nhất từ TodayTourist.",
