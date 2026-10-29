@@ -68,12 +68,8 @@
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài liên quan</span></strong>"
     },
     {
-      "type": "list",
-      "items": [
-        "Chọn điểm liên tuyến",
-        "Lịch trình tàu hỏa",
-        "Kinh nghiệm chung"
-      ]
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/du-lich-quy-nhon-phu-yen/\" target=\"_blank\" rel=\"noopener nofollow\">Chọn điểm liên tuyến</a><br><a href=\"/vi/tin-tuc/tour-tau-hoa-quy-nhon/\" target=\"_blank\" rel=\"noopener nofollow\">Lịch trình tàu hỏa</a><br><a href=\"/vi/tin-tuc/kinh-nghiem-di-tour-tau-hoa/\" target=\"_blank\" rel=\"noopener nofollow\">Kinh nghiệm chung</a><br>"
     },
     {
       "type": "h2",
