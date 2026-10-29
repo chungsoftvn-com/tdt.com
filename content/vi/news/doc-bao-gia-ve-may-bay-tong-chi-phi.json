@@ -4,13 +4,12 @@
   "category": "Vé máy bay – Cẩm nang đặt vé",
   "image": "pasted-1793023348859-0.webp",
   "summary": "Cách đọc báo giá vé máy bay, tách hành lý và dịch vụ tự chọn, so giờ bay và điều kiện đổi hoàn trước khi quyết định.",
-  "seo_title": "Đọc báo giá vé máy bay: so tổng tiền và điều kiện vé",
   "body": "",
   "published_at": "2026-10-26",
   "content": [
     {
       "type": "html",
-      "html": "<figure style=\"width:100%\"><img src=\"/content/vi/images/pasted-1793023348859-0.webp\" alt=\"Đọc báo giá vé máy bay: so tổng tiền và điều kiện vé\" style=\"width:100%;height:auto\"></figure>"
+      "html": "<figure style=\"width:100%\"> <img src=\"/content/vi/images/pasted-1793023348859-0.webp\" alt=\"Đọc báo giá vé máy bay: so tổng tiền và điều kiện vé\" style=\"width:100%;height:auto\"> </figure>"
     },
     {
       "type": "p",
@@ -94,7 +93,7 @@
     },
     {
       "type": "p",
-      "text": "Xem <a href=\"/vi/ve-may-bay/\" target=\"_blank\" rel=\"noopener nofollow\">dịch vụ đặt vé máy bay nội địa và quốc tế của TodayTourist</a>. Gửi điểm đi, điểm đến, ngày đi/về và số khách để được kiểm tra phương án phù hợp."
+      "text": "Xem <a href=\"/vi/ve-may-bay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tư vấn vé máy bay</u></strong></a>. Gửi điểm đi, điểm đến, ngày đi/về và số khách để được kiểm tra phương án phù hợp."
     },
     {
       "type": "p",
