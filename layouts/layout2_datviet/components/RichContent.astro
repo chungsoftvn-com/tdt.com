@@ -258,21 +258,37 @@ const richHtml = (html) =>
     margin: 1rem 0;
     overflow-x: auto;
   }
-  .rich-html table {
+  .rich-html :global(table) {
     width: 100%;
+    min-width: 36rem;
     border-collapse: collapse;
     font-size: 0.95rem;
   }
-  .rich-html th,
-  .rich-html td {
+  .rich-html :global(th),
+  .rich-html :global(td) {
     border: 1px solid color-mix(in srgb, var(--color-ink) 15%, transparent);
     padding: 0.5rem 0.65rem;
     text-align: left;
     vertical-align: top;
   }
-  .rich-html th {
+  .rich-html :global(th) {
     background: var(--color-sea-pale);
     color: var(--color-sea-deep);
+  }
+  .rich-html :global(caption) {
+    text-align: left;
+    font-weight: 700;
+    color: var(--color-sea-deep);
+    margin-bottom: 0.75rem;
+  }
+  @media (max-width: 640px) {
+    .rich-html:has(:global(table))::before {
+      content: 'Vuốt ngang để xem đủ bảng →';
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--color-sea-deep);
+    }
   }
   .rich-html iframe {
     max-width: 100%;
