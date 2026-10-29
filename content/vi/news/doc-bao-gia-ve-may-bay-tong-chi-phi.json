@@ -65,6 +65,22 @@
     },
     {
       "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Mẫu đối chiếu hai phương án vé trước khi thanh toán</span></strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Ghi cùng chặng, ngày, số người và nhóm tuổi; so cả sân bay, giờ bay và hãng khai thác thực tế.",
+        "Đặt tổng tiền phải trả cạnh hành lý cần dùng, phí dịch vụ và các lựa chọn thêm; phân biệt khoản bắt buộc với khoản tự chọn.",
+        "Ghi thời điểm báo, hạn giữ chỗ/giữ giá nếu có và điều kiện đổi hoàn bằng văn bản; kiểm tra lại tình trạng trước khi xuất vé."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Khi mới hỏi giá, chỉ cần gửi nhu cầu hành trình; giấy tờ hành khách được cung cấp qua kênh tư vấn phù hợp khi cần đặt vé. Xem <a href=\"/vi/ve-may-bay/\"><strong><u>dịch vụ tư vấn vé máy bay TodayTourist</u></strong></a> để trao đổi phương án."
+    },
+    {
+      "type": "h2",
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
     },
     {
@@ -81,11 +97,11 @@
     },
     {
       "type": "p",
-      "text": "Đọc thêm: <a href=\"/vi/tin-tuc/dat-ve-may-bay-cho-doan-cong-ty/\" target=\"_blank\" rel=\"noopener nofollow\">Đặt vé máy bay cho đoàn công ty: chốt gì trước khi mua?</a> · <a href=\"/vi/tin-tuc/mua-them-hanh-ly-ky-gui-truoc-chuyen-bay/\" target=\"_blank\" rel=\"noopener nofollow\">Mua thêm hành lý ký gửi: kiểm tra gì để tránh phát sinh?</a>"
+      "text": "Gửi chặng bay, ngày đi/về, số người theo nhóm tuổi, hành lý dự kiến và mức linh hoạt về giờ. Có thể gửi thêm ngân sách và yêu cầu xe đưa đón."
     },
     {
       "type": "p",
-      "text": "Gửi chặng bay, ngày đi/về, số người theo nhóm tuổi, hành lý dự kiến và mức linh hoạt về giờ. Có thể gửi thêm ngân sách và yêu cầu xe đưa đón."
+      "text": "Đọc thêm: <a href=\"/vi/tin-tuc/dat-ve-may-bay-cho-doan-cong-ty/\" target=\"_blank\" rel=\"noopener nofollow\">Đặt vé máy bay cho đoàn công ty: chốt gì trước khi mua?</a> · <a href=\"/vi/tin-tuc/mua-them-hanh-ly-ky-gui-truoc-chuyen-bay/\" target=\"_blank\" rel=\"noopener nofollow\">Mua thêm hành lý ký gửi: kiểm tra gì để tránh phát sinh?</a>"
     },
     {
       "type": "h2",
