@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Doanh nghiệp tìm đơn vị tổ chức Team Building thường cần nhiều hơn một danh sách trò chơi. Chương trình phải khớp số người, mục tiêu và quỹ thời gian của công ty. TodayTourist tiếp nhận yêu cầu tại Đồng Nai và TP.HCM, tư vấn phương án tổ chức riêng hoặc kết hợp trong chuyến du lịch của đoàn.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Doanh nghiệp tìm đơn vị tổ chức Team Building thường cần nhiều hơn một danh sách trò chơi. Chương trình phải khớp số người, mục tiêu và quỹ thời gian của công ty. TodayTourist tiếp nhận yêu cầu tại Đồng Nai và TP.HCM, tư vấn phương án tổ chức riêng hoặc kết hợp trong chuyến du lịch của đoàn.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792213070710-0.jpg\" alt=\"Tổ chức Team Building cho doanh nghiệp tại Đồng Nai và TP.HCM\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792213070710-0.jpg\" alt=\"Tổ chức Team Building cho doanh nghiệp tại Đồng Nai và TP.HCM\"> </figure>"
     },
     {
       "type": "h2",
@@ -135,8 +135,8 @@
       "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/contact/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Gửi yêu cầu tư vấn cho TodayTourist</span></u></strong></a> · <a href=\"https://todaytourist.com/vi/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Các dịch vụ du lịch, sự kiện khác</span></u></strong></a></span>"
     },
     {
-      "type": "html",
-      "html": "<p>Cần ý tưởng trò chơi cụ thể? Xem <a href=\"/vi/tin-tuc/top-10-tro-choi-team-building-cho-cong-ty-luat-choi-va-cach-to-chuc/\">Top 10 trò chơi team building cho công ty: luật chơi và cách tổ chức</a>.</p>"
+      "type": "p",
+      "text": "Cần ý tưởng trò chơi cụ thể? Xem <a href=\"/vi/tin-tuc/top-10-tro-choi-team-building-cho-cong-ty-luat-choi-va-cach-to-chuc/\" target=\"_blank\" rel=\"noopener nofollow\">Top 10 trò chơi team building cho công ty: luật chơi và cách tổ chức</a>."
     },
     {
       "type": "p",
@@ -145,6 +145,10 @@
     {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\">📍 <strong>Công ty TNHH Du lịch Ngày Hôm Nay (Today Tourist)</strong><br>🏠 Số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai.</span>"
+    },
+    {
+      "type": "p",
+      "text": "Doanh nghiệp cần hoạt động theo mục tiêu và ngân sách có thể xem <a href=\"/vi/to-chuc-team-building/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tổ chức team building Đồng Nai</u></strong></a>. Lịch đi, điểm đón và dịch vụ được xác nhận theo chương trình đã chọn."
     }
   ],
   "hidden": false
