@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Tour thập tự hay 10 cảnh chùa Vũng Tàu cần có danh sách cụ thể, thứ tự đi và thời gian tại từng nơi. Đoàn khởi hành từ Đồng Nai hoặc TP.HCM nên đọc kỹ lịch để biết chương trình ưu tiên chiêm bái hay tham quan, thay vì chỉ nhìn con số điểm đến.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Tour thập tự hay 10 cảnh chùa Vũng Tàu cần có danh sách cụ thể, thứ tự đi và thời gian tại từng nơi. Đoàn khởi hành từ Đồng Nai hoặc TP.HCM nên đọc kỹ lịch để biết chương trình ưu tiên chiêm bái hay tham quan, thay vì chỉ nhìn con số điểm đến.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792214205101-0.jpg\" alt=\"Tour 10 cảnh chùa Vũng Tàu: chọn danh sách và lịch chiêm bái\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792214205101-0.jpg\" alt=\"Tour 10 cảnh chùa Vũng Tàu: chọn danh sách và lịch chiêm bái\"> </figure>"
     },
     {
       "type": "h2",
@@ -106,6 +106,10 @@
     {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\">📍 <strong>Công ty TNHH Du lịch Ngày Hôm Nay (Today Tourist)</strong><br>🏠 Số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai.</span>"
+    },
+    {
+      "type": "p",
+      "text": "Nếu đoàn muốn tham khảo thêm tuyến hành hương Tây Ninh, xem <a href=\"/vi/tours/tour-nui-ba-den-tay-ninh-1-ngay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour Núi Bà Đen – Tây Ninh</u></strong></a>. Lịch đi, điểm đón và dịch vụ được xác nhận theo chương trình đã chọn."
     }
   ],
   "hidden": false
