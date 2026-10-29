@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Chọn thời điểm cho Bảo Lộc–Nam Cát Tiên nên dựa trên trải nghiệm đoàn muốn có và điều kiện ở ngày đi. Một mùa được nhiều người giới thiệu không bảo đảm trời đẹp hoặc mọi tuyến đều hoạt động.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Chọn thời điểm cho Bảo Lộc–Nam Cát Tiên nên dựa trên trải nghiệm đoàn muốn có và điều kiện ở ngày đi. Một mùa được nhiều người giới thiệu không bảo đảm trời đẹp hoặc mọi tuyến đều hoạt động.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792214902358-0.jpg\" alt=\"Đi Bảo Lộc, Nam Cát Tiên mùa nào: chuẩn bị theo thời tiết\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792214902358-0.jpg\" alt=\"Đi Bảo Lộc, Nam Cát Tiên mùa nào: chuẩn bị theo thời tiết\"> </figure>"
     },
     {
       "type": "h2",
@@ -106,6 +106,10 @@
     {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\">📍 <strong>Công ty TNHH Du lịch Ngày Hôm Nay (Today Tourist)</strong><br>🏠 Số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai.</span>"
+    },
+    {
+      "type": "p",
+      "text": "Để chọn hành trình rừng có một đêm nghỉ, tham khảo <a href=\"/vi/tours/tour-nam-cat-tien-2n1d/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour Nam Cát Tiên từ Đồng Nai</u></strong></a>. Lịch đi, điểm đón và dịch vụ được xác nhận theo chương trình đã chọn."
     }
   ],
   "hidden": false
