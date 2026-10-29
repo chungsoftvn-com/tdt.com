@@ -60,13 +60,8 @@
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài liên quan</span></strong>"
     },
     {
-      "type": "list",
-      "items": [
-        "Lịch SPT1/SPT2",
-        "Hướng dẫn đón SPT2",
-        "Tour cho gia đình",
-        "Lịch trình 2N1Đ"
-      ]
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/lich-tau-spt-phan-thiet/\" target=\"_blank\" rel=\"noopener nofollow\">Lịch SPT1/SPT2</a><br><a href=\"/vi/tin-tuc/di-tau-tu-bien-hoa-di-phan-thiet/\" target=\"_blank\" rel=\"noopener nofollow\">Hướng dẫn đón SPT2</a><br><a href=\"/vi/tin-tuc/tour-tau-hoa-phan-thiet/\" target=\"_blank\" rel=\"noopener nofollow\">Tour cho gia đình</a><br><a href=\"/vi/tin-tuc/du-lich-phan-thiet-2-ngay-1-dem/\" target=\"_blank\" rel=\"noopener nofollow\">Lịch trình 2N1Đ</a><br>"
     },
     {
       "type": "h2",
