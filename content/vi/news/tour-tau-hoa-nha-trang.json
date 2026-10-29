@@ -60,12 +60,8 @@
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài liên quan</span></strong>"
     },
     {
-      "type": "list",
-      "items": [
-        "Lịch SNT1/SNT2",
-        "Chuẩn bị đi tàu đêm",
-        "Kinh nghiệm đi tàu"
-      ]
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/lich-tau-snt-nha-trang/\" target=\"_blank\" rel=\"noopener nofollow\">Lịch SNT1/SNT2</a><br><a href=\"/vi/tin-tuc/di-tau-dem-den-nha-trang/\" target=\"_blank\" rel=\"noopener nofollow\">Chuẩn bị đi tàu đêm</a><br><a href=\"/vi/tin-tuc/kinh-nghiem-di-tour-tau-hoa/\" target=\"_blank\" rel=\"noopener nofollow\">Kinh nghiệm đi tàu</a><br>"
     },
     {
       "type": "h2",
