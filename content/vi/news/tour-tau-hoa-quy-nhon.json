@@ -60,12 +60,8 @@
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài liên quan</span></strong>"
     },
     {
-      "type": "list",
-      "items": [
-        "Đi SE4 đến Diêu Trì",
-        "Chọn điểm liên tuyến",
-        "Kinh nghiệm chung"
-      ]
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/di-tau-se4-di-quy-nhon/\" target=\"_blank\" rel=\"noopener nofollow\">Đi SE4 đến Diêu Trì</a><br><a href=\"/vi/tin-tuc/du-lich-quy-nhon-phu-yen/\" target=\"_blank\" rel=\"noopener nofollow\">Chọn điểm liên tuyến</a><br><a href=\"/vi/tin-tuc/kinh-nghiem-di-tour-tau-hoa/\" target=\"_blank\" rel=\"noopener nofollow\">Kinh nghiệm chung</a><br>"
     },
     {
       "type": "h2",
