@@ -7,7 +7,7 @@
   "duration": "1 ngày",
   "price": "650.000đ/khách",
   "image": "25.jpg",
-  "desc": "Tour Vũng Tàu 1 ngày từ TP. Đồng Nai, đón Biên Hòa, TP.HCM: tắm biển Bãi Sau, Tháp Tam Thắng, Thích Ca Phật Đài. Giá 650.000đ. Hotline 0902 898 726.",
+  "desc": "Đi Vũng Tàu 1 ngày từ Đồng Nai: nghỉ biển, tham quan theo chương trình. Gọi/Zalo 0902 898 726 để xác nhận lịch đi, điểm đón và giá.",
   "highlights": [
     "Check-in Giáo xứ Song Vĩnh kiến trúc Gothic",
     "Chụp ảnh cùng những cánh buồm Tháp Tam Thắng",
@@ -259,40 +259,52 @@
       "text": "📞 Nhận báo giá đoàn: <strong>Mr. Anh Văn – 0902 898 726</strong>"
     },
     {
-      "type": "h3",
-      "text": "❓ CÂU HỎI THƯỜNG GẶP"
+      "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
     },
     {
       "type": "p",
-      "text": "<strong>Tour Vũng Tàu 1 ngày khởi hành lúc mấy giờ?</strong>"
+      "text": "<strong>Tour Vũng Tàu 1 ngày từ Đồng Nai giá bao nhiêu?</strong>"
     },
     {
       "type": "p",
-      "text": "Dự kiến 05h00 sáng, đoàn về đến điểm tập kết vào buổi tối cùng ngày."
+      "text": "Giá đang niêm yết là 650.000đ/khách cho người lớn và trẻ em từ 5 tuổi, áp dụng đoàn từ 20 khách, không áp dụng lễ, Tết. Đoàn 10–19 khách nhận báo giá riêng. Giá chưa gồm VAT; cần xác nhận lại theo ngày đi."
     },
     {
       "type": "p",
-      "text": "<strong>Có chỗ tắm tráng, thay đồ sau khi tắm biển không?</strong>"
+      "text": "<strong>Tour Vũng Tàu 1 ngày đi những đâu, về lúc mấy giờ?</strong>"
     },
     {
       "type": "p",
-      "text": "Có. Đoàn tắm tráng nước ngọt và thay đồ trước bữa trưa. Quý khách nhớ mang theo đồ bơi và quần áo thay."
+      "text": "Chương trình dự kiến xuất phát 05h00, tham quan Giáo xứ Song Vĩnh, Tháp Tam Thắng, tắm biển Bãi Sau và viếng Thích Ca Phật Đài, về điểm tập kết buổi tối cùng ngày. Thứ tự điểm có thể điều chỉnh theo thực tế."
     },
     {
       "type": "p",
-      "text": "<strong>Bé dưới 5 tuổi có cần mua vé không?</strong>"
+      "text": "<strong>Tour đón trả khách tại Biên Hòa, Đồng Nai và TP.HCM ở đâu?</strong>"
     },
     {
       "type": "p",
-      "text": "Không bắt buộc. Bé ngồi cùng bố mẹ được miễn phí; nếu muốn bé có ghế riêng, phụ thu 50% giá người lớn."
+      "text": "Các điểm đón được nêu trong chương trình gồm trụ sở TodayTourist tại 80 Đặng Nguyên, khu vực Bưu điện Đồng Nai, KCN Amata, Hàng Xanh và Suối Tiên. Khách cần đăng ký vị trí để xác nhận giờ đón, điểm trả và khả năng đón dọc tuyến."
     },
     {
       "type": "p",
-      "text": "<strong>Công ty có xuất hóa đơn VAT không?</strong>"
+      "text": "<strong>Giá tour Vũng Tàu 1 ngày đã bao gồm những gì?</strong>"
     },
     {
       "type": "p",
-      "text": "Có. Giá tour chưa bao gồm VAT, quý khách cần hóa đơn vui lòng báo khi đăng ký."
+      "text": "Giá gồm xe, 01 bữa sáng tô/ly, 01 bữa trưa set menu 150.000đ/khách, vé tham quan theo lịch trình, hướng dẫn viên, bảo hiểm, nón, nước suối và khăn lạnh. Chi phí cá nhân, ăn uống ngoài chương trình và VAT chưa bao gồm."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Đặt cọc và hủy tour Vũng Tàu 1 ngày áp dụng thế nào?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Theo chương trình, khách đặt cọc 30–50% khi đăng ký và thanh toán trước ngày khởi hành. Điều kiện đổi ngày, hủy tour và phí phát sinh cần được xác nhận bằng văn bản trước khi cọc; không mặc định khoản cọc được hoàn."
+    },
+    {
+      "type": "p",
+      "text": "Tham khảo thêm <a href=\"/vi/tours/tour-vung-tau-2n1d/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour Vũng Tàu 2 ngày 1 đêm</u></strong></a> nếu đoàn muốn nghỉ qua đêm; xem <a href=\"/vi/to-chuc-team-building/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>dịch vụ team building</u></strong></a> khi cần bổ sung hoạt động tập thể."
     },
     {
       "type": "h3",
