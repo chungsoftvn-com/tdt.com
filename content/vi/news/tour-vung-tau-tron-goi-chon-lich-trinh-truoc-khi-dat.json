@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Tìm tour Vũng Tàu, khách thường muốn biết đi đâu, ở đâu và tổng chi phí ra sao. Với đoàn công ty, câu hỏi còn là chương trình có đủ thời gian gắn kết tập thể hay chỉ ghé nhiều điểm để chụp ảnh.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Tìm tour Vũng Tàu, khách thường muốn biết đi đâu, ở đâu và tổng chi phí ra sao. Với đoàn công ty, câu hỏi còn là chương trình có đủ thời gian gắn kết tập thể hay chỉ ghé nhiều điểm để chụp ảnh.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792220312776-0.jpg\" alt=\"Rustic beach scene with an overturned boat on Ba Ria's shore, Vietnam.\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792220312776-0.jpg\" alt=\"Rustic beach scene with an overturned boat on Ba Ria's shore, Vietnam.\"> </figure>"
     },
     {
       "type": "h2",
@@ -93,7 +93,7 @@
     },
     {
       "type": "p",
-      "text": "<a href=\"https://todaytourist.com/vi/tours/tour-vung-tau-1-ngay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c;font-size:16px\">Tour Vũng Tàu 1 ngày</span></u></strong></a>"
+      "text": "<a href=\"https://todaytourist.com/vi/tours/tour-vung-tau-1-ngay/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour Vũng Tàu từ Đồng Nai</u></strong></a>"
     },
     {
       "type": "p",
