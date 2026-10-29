@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\"><strong>Gia đình hoặc nhóm bạn đi chung thường chỉ cần một chiếc xe nhỏ gọn, nhưng lịch đi phải linh hoạt vì có trẻ em và người lớn tuổi. TodayTourist (Biên Hòa, Đồng Nai) nhận phục vụ đoàn xuất phát từ Biên Hòa, Đồng Nai và TP.HCM.</strong></span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\"><strong>Gia đình hoặc nhóm bạn đi chung thường chỉ cần một chiếc xe nhỏ gọn, nhưng lịch đi phải linh hoạt vì có trẻ em và người lớn tuổi. TodayTourist (Biên Hòa, Đồng Nai) nhận phục vụ đoàn xuất phát từ Biên Hòa, Đồng Nai và TP.HCM.</strong></span></p></blockquote>"
     },
     {
       "type": "p",
@@ -25,7 +25,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792203460963-0.jpg\" alt=\"Thuê xe cho gia đình, nhóm bạn đi du lịch tại Biên Hòa, Đồng Nai, TP.HCM\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792203460963-0.jpg\" alt=\"Thuê xe cho gia đình, nhóm bạn đi du lịch tại Biên Hòa, Đồng Nai, TP.HCM\"> </figure>"
     },
     {
       "type": "h2",
@@ -124,7 +124,7 @@
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\">🚌 Xem dịch vụ <a href=\"/vi/cho-thue-xe/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">cho thuê xe du lịch 4–45 chỗ TodayTourist</span></u></strong></a>. Tư vấn: Hotline <strong>0913 78 76 47</strong> – Mr Anh Văn <strong>0902 898 726</strong>.</span>"
+      "text": "<span style=\"font-size:16px;color:#374151\">🚌 Xem dịch vụ <a href=\"/vi/cho-thue-xe/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>thuê xe du lịch Đồng Nai</u></strong></a>. Tư vấn: Hotline <strong>0913 78 76 47</strong> – Mr Anh Văn <strong>0902 898 726</strong>.</span>"
     },
     {
       "type": "p",
