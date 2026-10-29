@@ -27,9 +27,17 @@ const label = (k) => t[k] || k;
   <section class="px-5 py-14 sm:py-16">
     <div class="mx-auto max-w-4xl rounded-2xl bg-paper p-6 shadow-[var(--shadow-lift-1)] sm:p-8">
       <form id="booking-form" class="grid gap-4 sm:grid-cols-2">
-        <h2 class="font-display text-xl text-ink sm:col-span-2">{label('sec_tour')}</h2>
-
-        <div>
+        <h2 class="font-display text-xl text-ink sm:col-span-2">Yêu cầu tư vấn nhanh</h2>
+        <p class="text-sm text-ink-soft sm:col-span-2">Chỉ bắt buộc họ tên và số điện thoại. Các thông tin khác giúp TodayTourist tư vấn sát nhu cầu; đây là yêu cầu tư vấn, chưa phải xác nhận đặt dịch vụ.</p>
+<div>
+          <label for="bk-name" class="mb-1 block text-sm font-medium text-ink-soft">{label('name')}</label>
+          <input id="bk-name" name="name" type="text" required class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
+        </div>
+<div>
+          <label for="bk-phone" class="mb-1 block text-sm font-medium text-ink-soft">{label('phone')}</label>
+          <input id="bk-phone" name="phone" type="tel" required class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
+        </div>
+<div>
           <label for="bk-tour" class="mb-1 block text-sm font-medium text-ink-soft">{label('tour_label')}</label>
           <select id="bk-tour" name="tour_slug" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea">
             <option value="">{label('tour_placeholder')}</option>
@@ -37,21 +45,36 @@ const label = (k) => t[k] || k;
             <option value="custom">{label('tour_custom')}</option>
           </select>
         </div>
-        <div>
+<div>
+          <label for="bk-ngaydi" class="mb-1 block text-sm font-medium text-ink-soft">{label('ngay_khoi_hanh')}</label>
+          <input id="bk-ngaydi" name="ngay_khoi_hanh" type="date" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
+        </div>
+<div>
+          <label for="bk-nguoilon" class="mb-1 block text-sm font-medium text-ink-soft">{label('nguoi_lon')}</label>
+          <input id="bk-nguoilon" name="nguoi_lon" type="number" min="0" value="1" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
+        </div>
+<div class="sm:col-span-2">
+          <label for="bk-note" class="mb-1 block text-sm font-medium text-ink-soft">{label('yeu_cau_khac')}</label>
+          <textarea id="bk-note" name="yeu_cau_khac" rows="3" class="w-full resize-y rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea"></textarea>
+        </div>
+        <details class="rounded-xl border border-ink/15 p-4 sm:col-span-2">
+          <summary class="cursor-pointer font-semibold text-sea">Bổ sung chi tiết chuyến đi (không bắt buộc)</summary>
+          <div class="mt-4 grid gap-4 sm:grid-cols-2">
+<div>
           <label class="mb-1 block text-sm font-medium text-ink-soft">{label('loai_diem_den')}</label>
           <div class="flex flex-wrap gap-3 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm">
             <label class="flex items-center gap-1.5"><input type="radio" name="loai_diem_den" value="Tour trong nước" checked class="accent-sea" /> {label('kind_domestic')}</label>
             <label class="flex items-center gap-1.5"><input type="radio" name="loai_diem_den" value="Tour nước ngoài" class="accent-sea" /> {label('kind_international')}</label>
           </div>
         </div>
-        <div>
+<div>
           <label for="bk-khuvuc" class="mb-1 block text-sm font-medium text-ink-soft">{label('khu_vuc')}</label>
           <select id="bk-khuvuc" name="khu_vuc" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea">
             <option value="">{label('choose')}</option>
             {['Miền Bắc', 'Miền Trung - Tây Nguyên', 'Miền Nam', 'Châu Á', 'Châu Âu', 'Châu Mỹ', 'Châu Úc', 'Châu Phi'].map((x) => <option value={x}>{x}</option>)}
           </select>
         </div>
-        <div>
+<div>
           <label for="bk-noikhoihanh" class="mb-1 block text-sm font-medium text-ink-soft">{label('noi_khoi_hanh')}</label>
           <select id="bk-noikhoihanh" name="noi_khoi_hanh" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea">
             <option value="">{label('choose')}</option>
@@ -59,18 +82,18 @@ const label = (k) => t[k] || k;
             <option>TP. HCM</option>
           </select>
         </div>
-        <div>
+<div>
           <label for="bk-noiden" class="mb-1 block text-sm font-medium text-ink-soft">{label('noi_den')}</label>
           <select id="bk-noiden" name="noi_den" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea">
             <option value="">{label('choose')}</option>
             {['Hạ Long', 'Hà Nội', 'Lào Cai - Sapa', 'Nghệ An', 'Ninh Bình', 'Khác'].map((x) => <option value={x}>{x}</option>)}
           </select>
         </div>
-        <div data-noi-den-khac-wrap class="hidden">
+<div data-noi-den-khac-wrap class="hidden">
           <label for="bk-noidenkhac" class="mb-1 block text-sm font-medium text-ink-soft">{label('noi_den_khac')}</label>
           <input id="bk-noidenkhac" name="noi_den_khac" type="text" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
         </div>
-        <div>
+<div>
           <label class="mb-1 block text-sm font-medium text-ink-soft">{label('loai_tour')}</label>
           <div class="flex flex-wrap gap-3 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm">
             {['Tour phổ thông', 'Tour trung bình', 'Tour VIP'].map((x, i) => (
@@ -78,50 +101,30 @@ const label = (k) => t[k] || k;
             ))}
           </div>
         </div>
-        <div>
-          <label for="bk-ngaydi" class="mb-1 block text-sm font-medium text-ink-soft">{label('ngay_khoi_hanh')}</label>
-          <input id="bk-ngaydi" name="ngay_khoi_hanh" type="date" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
-        </div>
-        <div>
+<div>
           <label for="bk-ngayve" class="mb-1 block text-sm font-medium text-ink-soft">{label('ngay_ve')}</label>
           <input id="bk-ngayve" name="ngay_ve" type="date" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
         </div>
-        <div>
-          <label for="bk-nguoilon" class="mb-1 block text-sm font-medium text-ink-soft">{label('nguoi_lon')}</label>
-          <input id="bk-nguoilon" name="nguoi_lon" type="number" min="0" value="1" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
-        </div>
-        <div>
+<div>
           <label for="bk-treem" class="mb-1 block text-sm font-medium text-ink-soft">{label('tre_em')}</label>
           <input id="bk-treem" name="tre_em" type="number" min="0" value="0" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
         </div>
-        <div>
+<div>
           <label for="bk-embe" class="mb-1 block text-sm font-medium text-ink-soft">{label('em_be')}</label>
           <input id="bk-embe" name="em_be" type="number" min="0" value="0" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
         </div>
-
-        <h2 class="mt-2 font-display text-xl text-ink sm:col-span-2">{label('sec_contact')}</h2>
-        <div>
-          <label for="bk-name" class="mb-1 block text-sm font-medium text-ink-soft">{label('name')}</label>
-          <input id="bk-name" name="name" type="text" required class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
-        </div>
-        <div>
-          <label for="bk-phone" class="mb-1 block text-sm font-medium text-ink-soft">{label('phone')}</label>
-          <input id="bk-phone" name="phone" type="tel" required class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
-        </div>
-        <div>
+<div>
           <label for="bk-address" class="mb-1 block text-sm font-medium text-ink-soft">{label('dia_chi')}</label>
           <input id="bk-address" name="dia_chi" type="text" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
         </div>
-        <div>
+<div>
           <label for="bk-email" class="mb-1 block text-sm font-medium text-ink-soft">{label('email')}</label>
           <input id="bk-email" name="email" type="email" class="w-full rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
         </div>
-        <div class="sm:col-span-2">
-          <label for="bk-note" class="mb-1 block text-sm font-medium text-ink-soft">{label('yeu_cau_khac')}</label>
-          <textarea id="bk-note" name="yeu_cau_khac" rows="3" class="w-full resize-y rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea"></textarea>
-        </div>
-        <p id="booking-msg" class="hidden text-sm font-medium text-ink-soft sm:col-span-2"></p>
-        <div class="sm:col-span-2">
+          </div>
+        </details>
+        <p id="booking-msg" role="status" aria-live="polite" class="hidden text-sm font-medium text-ink-soft sm:col-span-2"></p>
+<div class="sm:col-span-2">
           <button type="submit" class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-sea px-7 py-3 text-sm font-semibold text-white transition-transform duration-200 hover:scale-[1.02]">
             {label('submit')}
           </button>
