@@ -49,6 +49,22 @@
     },
     {
       "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">So sánh phương án trên cùng nhu cầu của đoàn</span></strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<strong>Đoàn cần nghỉ dưỡng:</strong> ưu tiên giờ di chuyển, vị trí khách sạn và khoảng nghỉ; không chọn chỉ theo tổng số điểm tham quan.",
+        "<strong>Đoàn cần gắn kết:</strong> xác nhận sân chơi hoặc phòng tiệc, giờ kết thúc chương trình và quãng đường về nơi lưu trú.",
+        "<strong>Đoàn có nhiều độ tuổi:</strong> hỏi cự ly đi bộ, bậc thang và hoạt động thay thế; thống nhất trước những điểm tự chọn."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Có thể xem <a href=\"/vi/y-kien-khach-hang/da-lat-3n2d-08-08/\"><strong><u>tư liệu đoàn Đà Lạt 3 ngày 2 đêm</u></strong></a> để hình dung hành trình. Dịch vụ của đoàn sắp đi vẫn cần đối chiếu với <a href=\"/vi/tours/tour-da-lat-3n2d/\"><strong><u>chương trình Đà Lạt hiện tại</u></strong></a> và báo giá được xác nhận."
+    },
+    {
+      "type": "h2",
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
     },
     {
