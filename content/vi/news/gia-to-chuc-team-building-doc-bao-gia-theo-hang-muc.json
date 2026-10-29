@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Giá tổ chức Team Building phụ thuộc quy mô, thời lượng, địa điểm và phạm vi phục vụ. Hai báo giá cùng số người có thể khác ở nhân sự, dụng cụ hoặc phần ăn, xe. Doanh nghiệp nên so sánh cùng một yêu cầu, thay vì chỉ nhìn tổng tiền hoặc giá trên mỗi khách.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Giá tổ chức Team Building phụ thuộc quy mô, thời lượng, địa điểm và phạm vi phục vụ. Hai báo giá cùng số người có thể khác ở nhân sự, dụng cụ hoặc phần ăn, xe. Doanh nghiệp nên so sánh cùng một yêu cầu, thay vì chỉ nhìn tổng tiền hoặc giá trên mỗi khách.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792213093105-0.jpg\" alt=\"Giá tổ chức Team Building: đọc báo giá theo hạng mục\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792213093105-0.jpg\" alt=\"Giá tổ chức Team Building: đọc báo giá theo hạng mục\"> </figure>"
     },
     {
       "type": "h2",
@@ -113,6 +113,10 @@
     {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\">📍 <strong>Công ty TNHH Du lịch Ngày Hôm Nay (Today Tourist)</strong><br>🏠 Số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai.</span>"
+    },
+    {
+      "type": "p",
+      "text": "Doanh nghiệp cần hoạt động theo mục tiêu và ngân sách có thể xem <a href=\"/vi/to-chuc-team-building/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>dịch vụ team building</u></strong></a>. Lịch đi, điểm đón và dịch vụ được xác nhận theo chương trình đã chọn."
     }
   ],
   "hidden": false
