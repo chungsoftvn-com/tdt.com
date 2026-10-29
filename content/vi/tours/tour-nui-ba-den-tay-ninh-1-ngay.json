@@ -7,7 +7,7 @@
   "duration": "1 ngày",
   "price": "890.000đ/khách",
   "image": "nui-ba-den-tay-ninh-1-ngay.jpg",
-  "desc": "Tour Núi Bà Đen – Tây Ninh 1 ngày từ Đồng Nai / TP.HCM: Tòa Thánh Cao Đài, Chùa Gò Kén, Linh Sơn Tiên Thạch, đặc sản Trảng Bàng. Giá 890.000đ.",
+  "desc": "Tham quan Núi Bà Đen, Tòa Thánh theo chương trình Tây Ninh 1 ngày. Gọi/Zalo 0902 898 726 để kiểm tra lịch đi, vé cáp treo và báo giá.",
   "highlights": [
     "Đi về trong ngày, xe đón tận nơi khu vực Biên Hòa",
     "Chinh phục khu vực núi Bà Đen, ngọn núi cao nhất Nam Bộ cao 986m",
@@ -63,7 +63,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791983246674-0.jpg\" alt=\"Chùa Linh Sơn Tiên Thạch và Tây Bổ Đà Sơn – tour Núi Bà Đen Tây Ninh 1 Ngày Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791983246674-0.jpg\" alt=\"Chùa Linh Sơn Tiên Thạch và Tây Bổ Đà Sơn – tour Núi Bà Đen Tây Ninh 1 Ngày Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -71,7 +71,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791983246675-1.jpg\" alt=\"Núi Bà Đen Tây Ninh – tour Núi Bà Đen Tây Ninh 1 Ngày Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791983246675-1.jpg\" alt=\"Núi Bà Đen Tây Ninh – tour Núi Bà Đen Tây Ninh 1 Ngày Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -90,11 +90,11 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791983246676-2.jpg\" alt=\"Tòa Thánh Cao Đài Tây Ninh – tour Núi Bà Đen Tây Ninh 1 Ngày Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791983246676-2.jpg\" alt=\"Tòa Thánh Cao Đài Tây Ninh – tour Núi Bà Đen Tây Ninh 1 Ngày Today Tourist\"> </figure>"
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1791983246676-3.jpg\" alt=\"Chùa Gò Kén Tây Ninh – tour Núi Bà Đen Tây Ninh 1 Ngày Today Tourist\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1791983246676-3.jpg\" alt=\"Chùa Gò Kén Tây Ninh – tour Núi Bà Đen Tây Ninh 1 Ngày Today Tourist\"> </figure>"
     },
     {
       "type": "p",
@@ -176,18 +176,52 @@
       "text": "📞 Nhận báo giá đoàn: <strong>Mr. Anh Văn – 0902 898 726</strong>"
     },
     {
-      "type": "h3",
-      "text": "❓ Câu hỏi thường gặp"
+      "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
     },
     {
-      "type": "list",
-      "items": [
-        "Tour có bắt buộc leo núi Bà Đen không? Không. Chương trình tham quan các điểm dưới chân núi và Tòa Thánh, quý khách tự chọn đi cáp treo lên cao nếu muốn.",
-        "Vé cáp treo khoảng bao nhiêu? Tùy tuyến cáp treo và thời điểm, tuyến lên chùa Bà tham khảo từ 250.000đ/khách đi khứ hồi. Quý khách hỏi hướng dẫn viên để có giá chính xác ngày đi.",
-        "Tour đón khách ở đâu? Xe đón tận nơi trong nội ô trung tâm Biên Hòa. Khách ở dọc tuyến đường được đón ngay trên đường.",
-        "Có xem được lễ ở Tòa Thánh không? Tùy giờ đoàn đến. Tòa Thánh có các buổi lễ trong ngày, hướng dẫn viên sẽ sắp xếp thời gian để đoàn xem nếu kịp.",
-        "Công ty có xuất hóa đơn VAT không? Có. Giá tour chưa bao gồm VAT, quý khách cần hóa đơn vui lòng báo khi đăng ký."
-      ]
+      "type": "p",
+      "text": "<strong>Tour Núi Bà Đen – Tây Ninh 1 ngày giá bao nhiêu?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Giá đang niêm yết là 890.000đ/khách, áp dụng khách Việt Nam, đoàn từ 10 khách và không áp dụng lễ, Tết. Vé cáp treo và VAT tính riêng. Khách cần xác nhận giá, lịch khởi hành theo ngày đi."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Lịch trình Tây Ninh 1 ngày có bắt buộc leo núi không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Không bắt buộc leo núi. Hành trình kết hợp khu vực Núi Bà Đen, Tòa Thánh Cao Đài và Chùa Gò Kén theo chương trình; cáp treo là lựa chọn tính riêng. Khả năng xem nghi lễ ở Tòa Thánh phụ thuộc giờ đoàn đến."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Tour Tây Ninh đón trả tại Đồng Nai và TP.HCM thế nào?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Chương trình có phương án đón trong khu vực Biên Hòa, TP. Đồng Nai và đón dọc tuyến khi phù hợp. Khách từ TP.HCM cần gửi địa chỉ để xác nhận điểm tập trung, giờ đón và điểm trả trước khi đặt."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Giá tour đã gồm cáp treo Núi Bà Đen chưa?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Chưa gồm vé cáp treo. Giá tour gồm xe, 01 bữa sáng, 01 bữa trưa, vé tham quan theo chương trình, hướng dẫn viên, bảo hiểm, nước suối và khăn lạnh. Đồ uống, chi phí cá nhân, tiền tip và VAT chưa bao gồm."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Cọc, đổi ngày và hủy tour Tây Ninh được xử lý ra sao?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Chương trình quy định cọc 30–50%, thanh toán đủ trước ngày đi. Mức phí đổi ngày, hủy tour hoặc vé đã đặt cần được xác nhận bằng văn bản trước khi cọc. Cáp treo có thể tạm ngưng do thời tiết hoặc bảo trì."
+    },
+    {
+      "type": "p",
+      "text": "Đoàn cần phương tiện riêng có thể xem <a href=\"/vi/cho-thue-xe/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>thuê xe du lịch Đồng Nai</u></strong></a>; nhà trường tham khảo <a href=\"/vi/tour-hoc-sinh/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour học sinh theo cấp học</u></strong></a> để xây dựng chương trình phù hợp."
     },
     {
       "type": "h3",
