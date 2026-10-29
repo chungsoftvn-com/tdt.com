@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Đi Đà Lạt bằng xe ghế ngồi hay xe giường nằm nên được quyết định cùng giờ khởi hành và quy mô đoàn. Xe phù hợp giúp khách nghỉ ngơi thuận tiện hơn, nhưng không có một lựa chọn chung cho mọi chuyến. Công ty cần xem cả số người, hành lý và cách sử dụng xe tại điểm đến.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Đi Đà Lạt bằng xe ghế ngồi hay xe giường nằm nên được quyết định cùng giờ khởi hành và quy mô đoàn. Xe phù hợp giúp khách nghỉ ngơi thuận tiện hơn, nhưng không có một lựa chọn chung cho mọi chuyến. Công ty cần xem cả số người, hành lý và cách sử dụng xe tại điểm đến.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792215521325-0.jpg\" alt=\"Đi Đà Lạt bằng xe ghế ngồi hay xe giường nằm?\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792215521325-0.jpg\" alt=\"Đi Đà Lạt bằng xe ghế ngồi hay xe giường nằm?\"> </figure>"
     },
     {
       "type": "h2",
@@ -101,7 +101,7 @@
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-da-lat-3n2d/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Tour Đà Lạt 3 ngày 2 đêm của TodayTourist</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-da-lat-3n2d/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour Đà Lạt từ Đồng Nai</u></strong></a></span>"
     },
     {
       "type": "p",
