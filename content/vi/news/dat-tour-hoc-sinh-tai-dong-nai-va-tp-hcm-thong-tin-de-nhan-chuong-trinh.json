@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Nhà trường chưa cần chốt hết điểm đến trước khi hỏi tour. Một yêu cầu rõ về khối lớp, mục tiêu và thời gian sẽ giúp TodayTourist tư vấn chương trình sát nhu cầu, từ đó trường có cơ sở trao đổi nội bộ và so sánh báo giá.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Nhà trường chưa cần chốt hết điểm đến trước khi hỏi tour. Một yêu cầu rõ về khối lớp, mục tiêu và thời gian sẽ giúp TodayTourist tư vấn chương trình sát nhu cầu, từ đó trường có cơ sở trao đổi nội bộ và so sánh báo giá.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -98,6 +98,10 @@
     {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/contact/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Liên hệ TodayTourist để thiết kế chương trình cho trường</span></u></strong></a></span>"
+    },
+    {
+      "type": "p",
+      "text": "Nhà trường cần chương trình theo độ tuổi và ngân sách có thể xem <a href=\"/vi/tour-hoc-sinh/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>tour học sinh Đồng Nai</u></strong></a>. Lịch đi, điểm đón và dịch vụ được xác nhận theo chương trình đã chọn."
     }
   ],
   "hidden": false
