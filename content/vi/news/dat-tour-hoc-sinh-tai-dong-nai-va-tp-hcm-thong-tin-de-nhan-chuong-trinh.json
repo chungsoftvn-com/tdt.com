@@ -37,6 +37,23 @@
     },
     {
       "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Mẫu yêu cầu để nhà trường so sánh hai phương án</span></strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "<strong>Quy mô:</strong> khối lớp, số lớp, số học sinh và số người lớn đi kèm dự kiến; chưa cần gửi danh sách định danh học sinh ở bước hỏi giá.",
+        "<strong>Mục tiêu:</strong> nêu một trọng tâm học tập/trải nghiệm, giờ phải có mặt tại trường và khoảng ngân sách cho mỗi học sinh.",
+        "<strong>Vận hành:</strong> địa chỉ cổng đón, đầu mối giáo viên theo xe, điểm bàn giao và cách cập nhật thay đổi sĩ số.",
+        "<strong>Đối chiếu:</strong> cùng số người, suất ăn, vé hoạt động, nhân sự, bảo hiểm và phương án mưa trước khi so tổng giá."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Xem <a href=\"/vi/tour-hoc-sinh/\"><strong><u>dịch vụ tour học sinh TodayTourist</u></strong></a>; tư liệu <a href=\"/vi/y-kien-khach-hang/hanh-trinh-hoc-tap-trai-nghiem-07-15/\"><strong><u>hành trình học tập và trải nghiệm</u></strong></a> giúp tham khảo cách tổ chức, không thay thế chương trình đã xác nhận với trường."
+    },
+    {
+      "type": "h2",
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
     },
     {
