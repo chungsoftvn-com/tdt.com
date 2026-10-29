@@ -282,7 +282,7 @@ const richHtml = (html) =>
     margin-bottom: 0.75rem;
   }
   @media (max-width: 640px) {
-    .rich-html:has(:global(table))::before {
+    .rich-html :global(caption)::after {
       content: 'Vuốt ngang để xem đủ bảng →';
       display: block;
       margin-bottom: 0.5rem;
