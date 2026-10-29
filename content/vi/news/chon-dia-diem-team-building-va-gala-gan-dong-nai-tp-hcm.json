@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Địa điểm đẹp chưa chắc phù hợp với số người, hoạt động và lịch di chuyển của doanh nghiệp. Khi chọn nơi tổ chức Team Building và Gala Dinner gần Đồng Nai hoặc TP.HCM, nên kiểm tra khả năng sử dụng thực tế trước khi quyết định.</span></p></blockquote>"
+      "html": "<blockquote> <p><span style=\"font-size:16px;color:#374151\">Địa điểm đẹp chưa chắc phù hợp với số người, hoạt động và lịch di chuyển của doanh nghiệp. Khi chọn nơi tổ chức Team Building và Gala Dinner gần Đồng Nai hoặc TP.HCM, nên kiểm tra khả năng sử dụng thực tế trước khi quyết định.</span></p></blockquote>"
     },
     {
       "type": "h2",
@@ -21,7 +21,7 @@
     },
     {
       "type": "html",
-      "html": "<figure><img src=\"/content/vi/images/pasted-1792213351433-0.jpg\" alt=\"Chọn địa điểm Team Building và Gala gần Đồng Nai, TP.HCM\"></figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792213351433-0.jpg\" alt=\"Chọn địa điểm Team Building và Gala gần Đồng Nai, TP.HCM\"> </figure>"
     },
     {
       "type": "h2",
@@ -111,6 +111,10 @@
     {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\">📍 <strong>Công ty TNHH Du lịch Ngày Hôm Nay (Today Tourist)</strong><br>🏠 Số 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai.</span>"
+    },
+    {
+      "type": "p",
+      "text": "Doanh nghiệp cần hoạt động theo mục tiêu và ngân sách có thể xem <a href=\"/vi/to-chuc-team-building/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u>team building cho doanh nghiệp</u></strong></a>. Lịch đi, điểm đón và dịch vụ được xác nhận theo chương trình đã chọn."
     }
   ],
   "hidden": false
