@@ -89,6 +89,14 @@
     },
     {
       "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài cùng chủ đề</span></strong>"
+    },
+    {
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/tour-phu-quoc-le-tet-he-va-cuoi-tuan-dat-dich-vu-theo-dung-ngay/\">Tour Phú Quốc lễ Tết, hè và cuối tuần: đặt dịch vụ theo đúng ngày</a><br><a href=\"/vi/tin-tuc/chua-ho-quoc-dinh-cau-va-dinh-ba-chon-phan-tham-quan-van-hoa/\">Chùa Hộ Quốc, Dinh Cậu và Dinh Bà: chọn phần tham quan văn hóa</a><br><a href=\"/vi/tin-tuc/bai-sao-hay-bai-truong-chon-bien-trong-lich-phu-quoc/\">Bãi Sao hay Bãi Trường: chọn biển trong lịch Phú Quốc</a>"
+    },
+    {
+      "type": "h2",
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Chương trình tour tham khảo</span></strong>"
     },
     {
