@@ -96,6 +96,14 @@
       "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/\"><strong><u><span style=\"color:#00695c\">Xem các chương trình tour TodayTourist</span></u></strong></a></span>"
     },
     {
+      "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài cùng chủ đề</span></strong>"
+    },
+    {
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/dat-tour-hoc-sinh-tai-dong-nai-va-tp-hcm-thong-tin-de-nhan-chuong-trinh/\">Đặt tour học sinh tại Đồng Nai và TP.HCM: thông tin để nhận chương trình</a><br><a href=\"/vi/tin-tuc/tour-dia-dao-cu-chi-cho-hoc-sinh-chon-khu-tham-quan-va-muc-tieu-ve-nguon/\">Tour Địa đạo Củ Chi cho học sinh: chọn khu tham quan và mục tiêu về nguồn</a><br><a href=\"/vi/tin-tuc/tour-thao-cam-vien-cho-hoc-sinh-chon-tham-quan-hay-chuyen-de-trai-nghiem/\">Tour Thảo Cầm Viên cho học sinh: chọn tham quan hay chuyên đề trải nghiệm</a>"
+    },
+    {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/contact/\"><strong><u><span style=\"color:#00695c\">Liên hệ TodayTourist để thiết kế chương trình cho trường</span></u></strong></a></span>"
     }
