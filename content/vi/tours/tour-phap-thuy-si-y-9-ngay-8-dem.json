@@ -56,7 +56,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:100%\"><img src=\"/content/vi/images/pasted-1792201600454-0.jpg\" alt=\"Tháp Eiffel tại Paris – TodayTourist\" style=\"width:100%;height:auto\"><figcaption>Tháp Eiffel tại Paris. Ảnh minh họa điểm đến.</figcaption></figure>"
+      "html": "<figure><img src=\"/content/vi/images/pasted-1792201600454-0.jpg\" alt=\"Tháp Eiffel tại Paris – TodayTourist\"><figcaption>Tháp Eiffel tại Paris. Ảnh minh họa điểm đến.</figcaption></figure>"
     },
     {
       "type": "h3",
@@ -76,7 +76,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:100%\"><img src=\"/content/vi/images/pasted-1792201600457-1.jpg\" alt=\"Phố cổ Colmar, Pháp – TodayTourist\" style=\"width:100%;height:auto\"><figcaption>Phố cổ Colmar, Pháp. Ảnh minh họa điểm đến.</figcaption></figure>"
+      "html": "<figure><img src=\"/content/vi/images/pasted-1792201600457-1.jpg\" alt=\"Phố cổ Colmar, Pháp – TodayTourist\"><figcaption>Phố cổ Colmar, Pháp. Ảnh minh họa điểm đến.</figcaption></figure>"
     },
     {
       "type": "h3",
@@ -112,11 +112,11 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:100%\"><img src=\"/content/vi/images/pasted-1792201600457-4.jpg\" alt=\"Đấu trường Colosseum tại Rome – TodayTourist\" style=\"width:100%;height:auto\"><figcaption>Đấu trường Colosseum tại Rome. Ảnh minh họa điểm đến.</figcaption></figure>"
+      "html": "<figure><img src=\"/content/vi/images/pasted-1792201600457-4.jpg\" alt=\"Đấu trường Colosseum tại Rome – TodayTourist\"><figcaption>Đấu trường Colosseum tại Rome. Ảnh minh họa điểm đến.</figcaption></figure>"
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:100%\"><img src=\"/content/vi/images/pasted-1792201600458-5.jpg\" alt=\"Quảng trường Thánh Phêrô, Vatican – TodayTourist\" style=\"width:100%;height:auto\"><figcaption>Quảng trường Thánh Phêrô, Vatican. Ảnh minh họa điểm đến.</figcaption></figure>"
+      "html": "<figure><img src=\"/content/vi/images/pasted-1792201600458-5.jpg\" alt=\"Quảng trường Thánh Phêrô, Vatican – TodayTourist\"><figcaption>Quảng trường Thánh Phêrô, Vatican. Ảnh minh họa điểm đến.</figcaption></figure>"
     },
     {
       "type": "h3",
