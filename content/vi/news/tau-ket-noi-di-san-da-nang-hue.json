@@ -65,6 +65,14 @@
     },
     {
       "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài cùng chủ đề</span></strong>"
+    },
+    {
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/tour-tau-hoa-phan-rang/\">Đi tàu Phan Rang từ Biên Hòa: chọn P1 hay P2?</a><br><a href=\"/vi/tin-tuc/di-tau-tu-ga-bien-hoa/\">Đi tàu từ ga Biên Hòa: quy trình cho khách Đồng Nai</a><br><a href=\"/vi/tin-tuc/tour-tau-hoa-cho-cong-ty/\">Tour tàu hỏa công ty từ Biên Hòa đi Mũi Né</a>"
+    },
+    {
+      "type": "h2",
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Tham khảo chương trình TodayTourist</span></strong>"
     },
     {
