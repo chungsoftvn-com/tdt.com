@@ -1,13 +1,13 @@
 {
   "slug": "tour-phan-rang-tau-hoa-4n3d-p2",
-  "name": "Tour Phan Rang Tàu Hỏa 4 Ngày 3 Đêm từ Đồng Nai, Biên Hòa – Ninh Chữ, Vĩnh Hy, Đi Về Bằng Tàu",
+  "name": "Tour Phan Rang Tàu Hỏa 3 Ngày 3 Đêm từ Đồng Nai, Biên Hòa – Ninh Chữ, Vĩnh Hy, Đi Về Bằng Tàu",
   "region": "domestic",
   "region_name": "Nam Trung Bộ",
   "departure": "Ga Biên Hòa – TP. Đồng Nai",
-  "duration": "4 ngày 3 đêm",
+  "duration": "3 ngày 3 đêm",
   "price": "2.090.000đ/khách (chưa gồm vé tàu)",
   "image": "tour-phan-rang-tau-hoa-4n3d-p2-v2.jpg",
-  "desc": "Tour Phan Rang tàu hỏa 4 ngày 3 đêm từ ga Biên Hòa: đi tàu SNT2, về SNT1, Vĩnh Hy, Ninh Chữ, Tháp Po Klong Garai. Giá 2.090.000đ chưa gồm vé tàu. Hotline 0902 898 726.",
+  "desc": "Tour Phan Rang tàu hỏa 3 ngày 3 đêm từ ga Biên Hòa: đi tàu SNT2, về SNT1, Vĩnh Hy, Ninh Chữ, Tháp Po Klong Garai. Giá 2.090.000đ chưa gồm vé tàu. Hotline 0902 898 726.",
   "highlights": [
     "Đi và về bằng tàu, đón trả tại ga Biên Hòa",
     "Tham quan vịnh Vĩnh Hy và bờ biển Hang Rái",
@@ -28,7 +28,7 @@
     },
     {
       "type": "p",
-      "text": "📅 <strong>Thời gian:</strong> 4 ngày 3 đêm (02 đêm trên tàu, 01 đêm khách sạn/resort tại Ninh Chữ)"
+      "text": "📅 <strong>Thời gian:</strong> 3 ngày 3 đêm (02 đêm trên tàu, 01 đêm khách sạn/resort tại Ninh Chữ)"
     },
     {
       "type": "p",
@@ -80,7 +80,7 @@
     },
     {
       "type": "h3",
-      "text": "☀️ NGÀY 02: THÁP CHÀM – VĨNH HY – HANG RÁI – NINH CHỮ"
+      "text": "☀️ NGÀY 01: THÁP CHÀM – VĨNH HY – HANG RÁI – NINH CHỮ"
     },
     {
       "type": "p",
@@ -116,7 +116,7 @@
     },
     {
       "type": "h3",
-      "text": "🏛️ NGÀY 03: PHAN RANG – THÁP PO KLONG GARAI – LÀNG GỐM BÀU TRÚC – GA THÁP CHÀM"
+      "text": "🏛️ NGÀY 02: PHAN RANG – THÁP PO KLONG GARAI – LÀNG GỐM BÀU TRÚC – GA THÁP CHÀM"
     },
     {
       "type": "p",
@@ -140,7 +140,7 @@
     },
     {
       "type": "h3",
-      "text": "🏠 NGÀY 04: GA BIÊN HÒA"
+      "text": "🌙 ĐÊM 03: TÀU VỀ – GA BIÊN HÒA"
     },
     {
       "type": "p",
@@ -304,19 +304,27 @@
     },
     {
       "type": "p",
-      "text": "<strong>Tour Phan Rang 4N3Đ đi và về bằng tàu nào?</strong>"
+      "text": "<strong>Tour Phan Rang gồm những điểm nào?</strong>"
     },
     {
       "type": "p",
-      "text": "Đoàn đi tàu SNT2 từ ga Biên Hòa đến Tháp Chàm, về tàu SNT1 từ Tháp Chàm và kết thúc tại ga Biên Hòa."
+      "text": "Tour gồm vịnh Vĩnh Hy, bờ biển Hang Rái, biển Ninh Chữ (nghỉ đêm), Tháp Po Klong Garai và làng gốm Bàu Trúc; theo nhu cầu đoàn có thể thay làng gốm bằng điểm vườn nho trên tuyến."
     },
     {
       "type": "p",
-      "text": "<strong>Tính 4 ngày 3 đêm như thế nào?</strong>"
+      "text": "<strong>Tour Phan Rang 3N3Đ đi và về bằng tàu nào?</strong>"
     },
     {
       "type": "p",
-      "text": "Gồm 02 đêm trên tàu và 01 đêm khách sạn/resort tại Ninh Chữ."
+      "text": "Đoàn đi tàu SNT2 từ ga Biên Hòa đến Tháp Chàm, về tàu SNT1 từ Tháp Chàm và kết thúc tại ga Biên Hòa sáng sớm hôm sau."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Tính 3 ngày 3 đêm như thế nào?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Khởi hành buổi tối nên số ngày bằng số đêm: 02 đêm trên tàu và 01 đêm khách sạn/resort tại Ninh Chữ."
     },
     {
       "type": "p",
