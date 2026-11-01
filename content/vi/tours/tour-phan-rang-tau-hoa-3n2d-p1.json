@@ -1,143 +1,354 @@
 {
   "slug": "tour-phan-rang-tau-hoa-3n2d-p1",
-  "name": "Tour Phan Rang tàu hỏa 3N2Đ từ ga Biên Hòa – Về xe",
+  "name": "Tour Phan Rang Tàu Hỏa 3 Ngày 2 Đêm từ Đồng Nai, Biên Hòa – Ninh Chữ, Vĩnh Hy, Về Xe",
   "region": "domestic",
   "region_name": "Nam Trung Bộ",
   "departure": "Ga Biên Hòa – TP. Đồng Nai",
   "duration": "3 ngày 2 đêm",
-  "price": "Liên hệ báo giá theo đoàn",
+  "price": "2.590.000đ/khách (chưa gồm vé tàu)",
   "image": "tour-phan-rang-tau-hoa-3n2d-p1-v2.jpg",
-  "desc": "Tour Phan Rang – Ninh Chữ – Vĩnh Hy 3N2Đ từ ga Biên Hòa, đi SNT2 và về xe. Một đêm lưu trú; báo giá theo đoàn.",
+  "desc": "Tour Phan Rang tàu hỏa 3 ngày 2 đêm từ ga Biên Hòa: đi tàu SNT2, Vĩnh Hy, Hang Rái, Ninh Chữ, Tháp Po Klong Garai, về xe. Giá 2.590.000đ chưa gồm vé tàu. Hotline 0902 898 726.",
   "highlights": [
-    "Đón trả tại ga Biên Hòa",
-    "Ninh Chữ – Vĩnh Hy; một đêm lưu trú",
-    "Loại chỗ tàu và dịch vụ theo xác nhận"
+    "Đón tại ga Biên Hòa, nghỉ đêm trên tàu SNT2 đến Tháp Chàm",
+    "Tham quan vịnh Vĩnh Hy và bờ biển Hang Rái",
+    "Nghỉ đêm khách sạn/resort Ninh Chữ, tắm biển chiều nắng",
+    "Viếng Tháp Po Klong Garai, tháp Chăm gạch đỏ trên đồi",
+    "Ghé làng gốm Bàu Trúc, xem nghề nặn gốm thủ công",
+    "Xe TodayTourist đưa đoàn về lại ga Biên Hòa"
   ],
   "itinerary": [],
   "content": [
     {
       "type": "p",
-      "text": "<strong>Trải nghiệm Ninh Chữ – Vĩnh Hy với một chặng tàu đêm, đón tại ga Biên Hòa. Về xe linh hoạt theo chương trình đoàn.</strong>"
+      "text": "<strong>🌊 Nằm ngủ trên tàu, mở mắt ra đã là nắng gió Ninh Thuận.</strong>"
     },
     {
       "type": "p",
-      "text": "<strong>Đón và trả tại ga Biên Hòa, TP. Đồng Nai.</strong> Chương trình cho đoàn từ 10 khách, phục vụ khách TP. Đồng Nai, Biên Hòa, TP.HCM. Gia đình, doanh nghiệp, trường học và đoàn thể có thể đặt thiết kế riêng, kết hợp Team Building/Gala theo nhu cầu và báo giá."
-    },
-    {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Phương án đưa đón</span></strong>"
+      "text": "Ninh Chữ – Vĩnh Hy phù hợp quanh năm, đẹp nhất vào những ngày nắng ráo khi biển xanh và vịnh trong. Hành trình dành cho gia đình, nhóm bạn và đoàn công ty muốn đổi gió bằng một đêm tàu: nằm ngủ trên tàu, sáng ra đã đến vùng biển nắng gió miền Nam Trung Bộ."
     },
     {
       "type": "p",
-      "text": "Đi SNT2 từ Biên Hòa đến Tháp Chàm, xe du lịch TodayTourist trung chuyển và tham quan. Lượt về xe đưa về ga Biên Hòa / TP. Đồng Nai."
+      "text": "📅 <strong>Thời gian:</strong> 3 ngày 2 đêm (01 đêm trên tàu, 01 đêm khách sạn/resort tại Ninh Chữ)"
+    },
+    {
+      "type": "p",
+      "text": "🚍 <strong>Phương tiện:</strong> tàu hỏa SNT2 chặng đi + xe du lịch TodayTourist, về bằng xe"
+    },
+    {
+      "type": "p",
+      "text": "🏨 <strong>Lưu trú:</strong> khách sạn/resort 3–4 sao tại Ninh Chữ"
+    },
+    {
+      "type": "p",
+      "text": "📍 <strong>Khởi hành:</strong> Ga Biên Hòa (TP. Đồng Nai) – ghép đoàn theo lịch tàu, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
+    },
+    {
+      "type": "p",
+      "text": "📞 <strong>Tư vấn:</strong> Mr. Anh Văn (Phòng Kinh Doanh) – 0902 898 726"
+    },
+    {
+      "type": "p",
+      "text": "🏢 Đoàn riêng, gia đình, cơ quan, doanh nghiệp, trường học, đoàn thể có nhu cầu thiết kế chương trình theo yêu cầu — kết hợp Team Building, Gala Dinner, đốt lửa trại hoặc tham quan học tập cho học sinh – sinh viên"
+    },
+    {
+      "type": "h3",
+      "text": "🚆 ĐIỂM ĐÓN – TRẢ KHÁCH TẠI GA BIÊN HÒA"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Điểm đón và trả: Ga Biên Hòa (TP. Đồng Nai) – quý khách có mặt trước giờ tàu khoảng 60 phút",
+        "Hướng dẫn viên TodayTourist hỗ trợ kiểm tra giấy tờ, tìm đúng toa và chỗ ngồi",
+        "Khách ở TP.HCM hoặc dọc tuyến có thể tự đến ga Biên Hòa; cần hỗ trợ đưa đón vui lòng báo trước để được báo giá riêng"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "🚐 Xe du lịch TodayTourist phục vụ đoàn trọn chương trình tại Phan Rang – Ninh Chữ – Vĩnh Hy."
+    },
+    {
+      "type": "p",
+      "text": "⏱️ Giờ tàu tham khảo: SNT2 đến ga Biên Hòa 22:31, rời ga 22:34, đến ga Tháp Chàm khoảng 03:50 hôm sau. Giờ tàu theo biểu đồ hiện hành của Đường sắt Việt Nam, được xác nhận lại theo vé khi chốt đoàn."
+    },
+    {
+      "type": "h3",
+      "text": "🌙 ĐÊM 01: GA BIÊN HÒA – TÀU SNT2 ĐI THÁP CHÀM"
+    },
+    {
+      "type": "p",
+      "text": "🕘 <strong>Khoảng 21:30:</strong> Tập trung tại ga Biên Hòa. Hướng dẫn viên kiểm tra giấy tờ, hỗ trợ đoàn tìm đúng toa và chỗ. Tàu SNT2 rời ga lúc 22:34; quý khách nghỉ đêm trên tàu, loại ghế hoặc giường nằm theo xác nhận vé."
+    },
+    {
+      "type": "h3",
+      "text": "☀️ NGÀY 02: THÁP CHÀM – VĨNH HY – HANG RÁI – NINH CHỮ"
+    },
+    {
+      "type": "p",
+      "text": "🌅 <strong>Sáng sớm:</strong> Tàu đến ga Tháp Chàm khoảng 03:50. Xe đón đoàn, đưa đến điểm dừng chân để nghỉ, vệ sinh cá nhân và ăn sáng; công ty không đưa đoàn thẳng vào các điểm chưa đến giờ đón khách."
+    },
+    {
+      "type": "p",
+      "text": "📍 <strong>Buổi sáng:</strong> Tham quan vùng biển Vĩnh Hy:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Vịnh Vĩnh Hy – vịnh biển nước trong, được bao quanh bởi núi đá; đoàn ngắm cảnh và chụp ảnh theo điều kiện khai thác",
+        "Hang Rái – vùng bờ biển có đá, cây xương rồng và cảnh sắc khô nắng rất riêng của Ninh Thuận",
+        "Dịch vụ tàu/ca nô ở vịnh, loại vé và hoạt động cụ thể được thống nhất trước khi chốt; không mặc định có lặn ngắm san hô"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "💡 <em>Bạn có biết:</em> Ninh Thuận là một trong những vùng nắng nhiều và khô nhất cả nước, nên bờ biển ở đây có khung cảnh khác hẳn các điểm biển miền Nam."
+    },
+    {
+      "type": "p",
+      "text": "🍽️ <strong>Buổi trưa:</strong> Ăn trưa tại nhà hàng, về nơi lưu trú nhận phòng sau 14:00 (phòng sẵn sàng sớm thì nhận sớm, chưa thì gửi hành lý và nghỉ khu vực chung)."
+    },
+    {
+      "type": "p",
+      "text": "🏖️ <strong>Buổi chiều:</strong> Nghỉ ngơi, tắm biển Ninh Chữ."
+    },
+    {
+      "type": "p",
+      "text": "🍽️ <strong>Buổi tối:</strong> Ăn tối tại nhà hàng, tự do nghỉ ngơi hoặc dạo biển."
+    },
+    {
+      "type": "h3",
+      "text": "🏛️ NGÀY 03: PHAN RANG – THÁP PO KLONG GARAI – LÀNG GỐM BÀU TRÚC – XE VỀ GA BIÊN HÒA"
+    },
+    {
+      "type": "p",
+      "text": "🍳 <strong>Buổi sáng:</strong> Ăn sáng, trả phòng rồi tham quan nhóm điểm thuận tuyến về Tháp Chàm:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Tháp Po Klong Garai – cụm tháp Chăm gạch đỏ nổi bật trên đồi, nơi gắn với đời sống văn hóa của người Chăm Ninh Thuận",
+        "Làng gốm Bàu Trúc – làng nghề gốm của người Chăm, sản phẩm được nặn tay và nung lộ thiên, không dùng bàn xoay",
+        "Theo nhu cầu đoàn, có thể thay Bàu Trúc bằng điểm vườn nho trên tuyến đã thống nhất"
+      ]
+    },
+    {
+      "type": "p",
+      "text": "💡 <em>Bạn có biết:</em> Gốm Bàu Trúc được xem là một trong những làng gốm cổ của vùng; người thợ nặn gốm bằng tay, đi vòng quanh sản phẩm thay vì dùng bàn xoay."
+    },
+    {
+      "type": "p",
+      "text": "🍽️ <strong>Buổi trưa:</strong> Ăn trưa tại nhà hàng ở Phan Rang."
+    },
+    {
+      "type": "p",
+      "text": "🏠 <strong>Buổi chiều:</strong> Xe đưa đoàn về ga Biên Hòa, dự kiến đến khoảng 18:30–19:30 tùy giao thông. HDV chia tay đoàn, kết thúc chương trình."
+    },
+    {
+      "type": "h3",
+      "text": "💰 GIÁ TOUR"
+    },
+    {
+      "type": "p",
+      "text": "💵 Người lớn (từ 10 tuổi): 2.590.000đ/khách (chưa gồm vé tàu)"
+    },
+    {
+      "type": "p",
+      "text": "🧒 Trẻ em 5 đến dưới 10 tuổi: 1.943.000đ/khách (ngủ chung với bố mẹ, chưa gồm vé tàu)"
+    },
+    {
+      "type": "p",
+      "text": "👶 Trẻ dưới 5 tuổi: miễn phí nếu ngồi cùng bố mẹ · 1.295.000đ nếu có chỗ riêng (chưa gồm vé tàu)"
+    },
+    {
+      "type": "p",
+      "text": "🚆 Vé tàu được báo riêng theo hạng chỗ (ghế ngồi hoặc giường nằm) tại thời điểm đặt; vé trẻ em theo chính sách của ngành đường sắt. Công ty tư vấn chọn toa phù hợp khi chốt ngày đi."
+    },
+    {
+      "type": "h3",
+      "text": "✅ GIÁ TOUR BAO GỒM"
+    },
+    {
+      "type": "p",
+      "text": "✅ Xe du lịch TodayTourist trung chuyển và tham quan tại Phan Rang – Ninh Chữ – Vĩnh Hy"
+    },
+    {
+      "type": "p",
+      "text": "✅ Khách sạn/resort 3–4 sao tại Ninh Chữ (2–3 khách/phòng)"
+    },
+    {
+      "type": "p",
+      "text": "✅ Ăn uống theo chương trình: 02 bữa sáng, 02 bữa trưa, 01 bữa tối (bữa chính set menu 150.000đ/khách)"
+    },
+    {
+      "type": "p",
+      "text": "✅ Vé tham quan các điểm theo chương trình tiêu chuẩn"
+    },
+    {
+      "type": "p",
+      "text": "✅ Hướng dẫn viên du lịch chuyên nghiệp đi suốt tuyến"
+    },
+    {
+      "type": "p",
+      "text": "✅ Bảo hiểm du lịch nội địa theo quy định"
+    },
+    {
+      "type": "p",
+      "text": "✅ Nón du lịch, khăn lạnh, nước suối phục vụ đoàn"
+    },
+    {
+      "type": "h3",
+      "text": "❌ GIÁ TOUR KHÔNG BAO GỒM"
+    },
+    {
+      "type": "p",
+      "text": "❌ Vé tàu/ca nô và hoạt động biển tại vịnh Vĩnh Hy, Hang Rái (thống nhất cụ thể trước khi chốt)"
+    },
+    {
+      "type": "p",
+      "text": "❌ Phụ thu nâng hạng chỗ trên tàu"
+    },
+    {
+      "type": "p",
+      "text": "❌ Vé tàu hỏa (báo riêng theo hạng chỗ và giá tại thời điểm đặt)"
+    },
+    {
+      "type": "p",
+      "text": "❌ Chi phí cá nhân, mua sắm ngoài chương trình"
+    },
+    {
+      "type": "p",
+      "text": "❌ Thuế VAT (nếu xuất hóa đơn)"
+    },
+    {
+      "type": "h3",
+      "text": "📌 ĐIỀU KHOẢN & LƯU Ý"
+    },
+    {
+      "type": "p",
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn ghép từ 20 khách, không áp dụng dịp Lễ – Tết"
+    },
+    {
+      "type": "p",
+      "text": "📌 Chỉ nhận lịch có tàu và còn chỗ; giá vé tàu thay đổi theo hạng chỗ và thời điểm đặt"
+    },
+    {
+      "type": "p",
+      "text": "📌 Đặt cọc 30–50% khi đăng ký, thanh toán trước ngày khởi hành"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trẻ dưới 5 tuổi ngồi cùng bố mẹ: mỗi người lớn kèm tối đa 1 bé, bé thứ 2 trở lên mua chỗ riêng"
+    },
+    {
+      "type": "p",
+      "text": "📌 Bé ngồi cùng bố mẹ trên xe vẫn được tính vào tổng số người trên xe theo Luật Trật tự, an toàn giao thông đường bộ 2024, công ty chỉ nhận khi xe còn đủ chỗ"
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách mang theo CCCD bản gốc (trẻ em mang giấy khai sinh), thông tin phải khớp với vé tàu"
+    },
+    {
+      "type": "p",
+      "text": "📌 Lịch trình, thứ tự tham quan có thể điều chỉnh theo điều kiện thực tế nhưng đảm bảo đầy đủ điểm"
+    },
+    {
+      "type": "p",
+      "text": "📌 Tàu SNT2/SNT1 xác nhận theo ngày đi; công ty chỉ nhận lịch có tàu và còn chỗ"
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách tự bảo quản tài sản cá nhân"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trường hợp bất khả kháng (thời tiết xấu, tàu trễ hoặc tạm ngưng chạy), công ty sẽ sắp xếp phương án phù hợp và hỗ trợ bữa ăn cho đoàn"
+    },
+    {
+      "type": "h3",
+      "text": "📚 KINH NGHIỆM CHUẨN BỊ"
     },
     {
       "type": "p",
       "text": "Giờ tham khảo tra ngày 30/10/2026 tại <a href=\"https://giotaugiave.dsvn.vn/giotau/diaphuong?option=3&tuyen=1\" target=\"_blank\" rel=\"noopener nofollow\">hệ thống Đường sắt Việt Nam</a>: SNT2 đến Biên Hòa 22:31, đi 22:34, đến Tháp Chàm 03:50 hôm sau. Xác nhận lại giờ trên vé theo ngày khởi hành."
     },
     {
-      "type": "p",
-      "text": "<strong>Cách tính thời lượng:</strong> 3 ngày 2 đêm, gồm 01 đêm tàu và 01 đêm khách sạn/resort."
+      "type": "h3",
+      "text": "🏢 ĐI ĐOÀN RIÊNG – GIA ĐÌNH, CƠ QUAN, DOANH NGHIỆP, TRƯỜNG HỌC"
     },
     {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Chương trình chi tiết</span></strong>"
+      "type": "p",
+      "text": "Ninh Chữ – Vĩnh Hy có biển đẹp, nắng nhiều và dễ kết hợp sinh hoạt tập thể. TodayTourist thiết kế riêng theo mục tiêu và ngân sách của từng đoàn:"
+    },
+    {
+      "type": "p",
+      "text": "✅ Tùy chỉnh giờ tàu, hạng chỗ, tiêu chuẩn khách sạn và thực đơn theo ngân sách"
+    },
+    {
+      "type": "p",
+      "text": "✅ Kết hợp Team Building, Gala Dinner, đốt lửa trại: MC, hoạt náo, gắn kết tập thể"
+    },
+    {
+      "type": "p",
+      "text": "✅ Chương trình tham quan học tập cho học sinh – sinh viên"
+    },
+    {
+      "type": "p",
+      "text": "📞 Nhận báo giá đoàn: Mr. Anh Văn – 0902 898 726"
     },
     {
       "type": "h3",
-      "text": "Ngày 1: Ga Biên Hòa – SNT2"
+      "text": "❓ CÂU HỎI THƯỜNG GẶP"
     },
     {
       "type": "p",
-      "text": "Buổi tối, tập trung khoảng 21:30 tại ga. Hướng dẫn viên kiểm tra giấy tờ và toa/chỗ, hỗ trợ đoàn lên tàu. Loại ghế hoặc giường nằm theo xác nhận; nghỉ đêm trên tàu."
+      "text": "<strong>Tour Phan Rang 3N2Đ đón khách ở đâu và về thế nào?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Đoàn tập trung tại ga Biên Hòa, đi tàu SNT2 đến Tháp Chàm. Xe TodayTourist phục vụ tham quan tại Phan Rang và đưa đoàn về lại ga Biên Hòa ở ngày cuối."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Tàu đến Tháp Chàm lúc 03:50 thì đoàn làm gì?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Xe đón đoàn tại ga, đưa đến điểm dừng chân để nghỉ, vệ sinh và ăn sáng trước giờ tham quan."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Giá tour đã gồm vé tàu chưa?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Giá niêm yết chưa gồm vé tàu. Vé tàu báo riêng theo hạng chỗ và giá tại thời điểm đặt."
     },
     {
       "type": "h3",
-      "text": "Ngày 2: Tháp Chàm – Vĩnh Hy – Hang Rái – Ninh Chữ"
+      "text": "📞 THÔNG TIN LIÊN HỆ ĐẶT TOUR"
     },
     {
       "type": "p",
-      "text": "Sáng sớm, xe đón tại ga Tháp Chàm. Vì tàu đến khoảng 03:50, công ty cần bố trí điểm dừng chân để đoàn nghỉ, vệ sinh và ăn sáng trước giờ tham quan; dịch vụ này được xác nhận trong gói. Không đưa đoàn thẳng vào các điểm chưa tới giờ đón khách."
+      "text": "<strong>CÔNG TY DU LỊCH TODAYTOURIST</strong>"
     },
     {
       "type": "p",
-      "text": "Buổi sáng tham quan khu vực Vĩnh Hy và Hang Rái theo điều kiện khai thác. Dịch vụ tàu/ca nô ở vịnh, loại vé và hoạt động cụ thể được thống nhất trước khi chốt; không mặc định có lặn ngắm san hô. Dùng cơm trưa, về nơi lưu trú nhận phòng sau 14:00. Chiều nghỉ biển Ninh Chữ, tối ăn tại nhà hàng và tự do nghỉ ngơi."
-    },
-    {
-      "type": "h3",
-      "text": "Ngày 3: Phan Rang – Tháp Chàm – Xe về Biên Hòa"
+      "text": "📍 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai"
     },
     {
       "type": "p",
-      "text": "Ăn sáng, trả phòng rồi chọn nhóm điểm thuận tuyến: Tháp Po Klong Garai kết hợp làng gốm Bàu Trúc, hoặc vườn nho theo nhu cầu đoàn. Không cộng tất cả điểm và Đồi cát Nam Cương vào buổi sáng. Ăn trưa, lên xe trở về ga Biên Hòa / TP. Đồng Nai; giờ về dự kiến theo lịch xe và giao thông được xác nhận trước chuyến."
-    },
-    {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Giá bao gồm</span></strong>"
+      "text": "📞 Mr Anh Văn – Phòng Kinh Doanh: 0902 898 726"
     },
     {
       "type": "p",
-      "text": "Vé tàu theo phương án đã chọn, đúng loại chỗ xác nhận; xe trung chuyển, tham quan và lượt xe về đối với P1. Một đêm khách sạn/resort Ninh Chữ theo gói 3–4 sao, 2–3 khách/phòng. Hai bữa sáng tại điểm đến, hai bữa trưa và một bữa tối; loại điểm tâm theo xác nhận. Vé tham quan, hướng dẫn viên, bảo hiểm du lịch nội địa, nước uống và nón theo báo giá."
-    },
-    {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Giá không bao gồm</span></strong>"
+      "text": "☎️ Hotline: 0913 78 76 47 (Lê Sang)"
     },
     {
       "type": "p",
-      "text": "Thuế VAT theo báo giá; chi phí cá nhân, đồ uống, phụ thu phòng đơn/nâng hạng chỗ, hoạt động biển và dịch vụ ngoài gói; Team Building, Gala, lửa trại nếu chưa đặt thêm; tip tự nguyện."
-    },
-    {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Kinh nghiệm chuẩn bị</span></strong>"
+      "text": "✉️ lesangtravel@gmail.com"
     },
     {
       "type": "p",
-      "text": "<a href=\"/vi/tin-tuc/tour-tau-hoa-phan-rang/\" target=\"_blank\" rel=\"noopener nofollow\">Kinh nghiệm đi tàu Phan Rang</a> · <a href=\"/vi/tin-tuc/kinh-nghiem-di-tour-tau-hoa/\" target=\"_blank\" rel=\"noopener nofollow\">Chuẩn bị đi tour tàu hỏa</a> · <a href=\"/vi/tin-tuc/di-tau-tu-ga-bien-hoa/\" target=\"_blank\" rel=\"noopener nofollow\">Quy trình tại ga Biên Hòa</a>"
-    },
-    {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Điều khoản và lưu ý</span></strong>"
-    },
-    {
-      "type": "p",
-      "text": "📌 Chương trình dành cho khách Việt Nam, đoàn từ 10 khách; dịp Lễ – Tết nhận báo giá riêng.<br>📌 Đặt cọc 30–50% theo xác nhận, thanh toán trước khởi hành; điều kiện đổi/hủy vé và dịch vụ được thông báo trước đặt cọc.<br>📌 Nhận phòng sau 14:00, trả phòng trước 12:00. Nếu tới sớm, nhận khi có phòng sẵn; nếu chưa có, gửi hành lý và nghỉ khu vực chung.<br>📌 Có mặt tại ga trước khoảng 60 phút, giữ giấy tờ và hành lý gọn; thông tin phải khớp vé.<br>📌 Thứ tự tham quan có thể điều chỉnh theo điều kiện thực tế; thay đổi dịch vụ được trao đổi với đoàn. Quý khách tự bảo quản tài sản cá nhân; trường hợp bất khả kháng, công ty trao đổi phương án phù hợp."
-    },
-    {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
-    },
-    {
-      "type": "h3",
-      "text": "Tour Phan Rang – Ninh Chữ 3N2Đ đón khách ở đâu và đi về thế nào?"
-    },
-    {
-      "type": "p",
-      "text": "TodayTourist đón và trả đoàn tại ga Biên Hòa, TP. Đồng Nai. Đoàn đi tàu SNT2 từ Biên Hòa đến Tháp Chàm; xe du lịch TodayTourist trung chuyển và tham quan, lượt về xe đưa đoàn về ga Biên Hòa / TP. Đồng Nai."
-    },
-    {
-      "type": "h3",
-      "text": "Tour 3N2Đ tính đêm tàu và đêm khách sạn thế nào?"
-    },
-    {
-      "type": "p",
-      "text": "Thời lượng 3 ngày 2 đêm gồm 01 đêm tàu và 01 đêm khách sạn/resort."
-    },
-    {
-      "type": "h3",
-      "text": "Giá tour được tính thế nào?"
-    },
-    {
-      "type": "p",
-      "text": "Tour báo giá theo đoàn từ 10 khách; giá theo ngày đi, loại chỗ tàu, số khách và tiêu chuẩn lưu trú. Liên hệ Mr. Anh Văn – 0902 898 726 để nhận chương trình và báo giá chi tiết."
-    },
-    {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Thông tin liên hệ đặt tour</span></strong>"
-    },
-    {
-      "type": "p",
-      "text": "Giá theo ngày đi, loại chỗ tàu, số khách và tiêu chuẩn lưu trú. <strong>CÔNG TY DU LỊCH TODAYTOURIST</strong><br>📍 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai<br>📞 Mr. Anh Văn – Phòng Kinh Doanh: <a href=\"tel:0902898726\" target=\"_blank\" rel=\"noopener nofollow\">0902 898 726</a><br>☎️ 0913 78 76 47 (Lê Sang)<br>✉️ lesangtravel@gmail.com"
+      "text": "🌐 todaytourist.com"
     }
   ],
   "hidden": false
