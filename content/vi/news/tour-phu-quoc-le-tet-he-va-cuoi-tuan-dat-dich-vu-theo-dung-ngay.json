@@ -89,6 +89,14 @@
     },
     {
       "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài cùng chủ đề</span></strong>"
+    },
+    {
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/phu-quoc-mua-gi-chon-qua-va-kiem-tra-dieu-kien-mang-ve/\">Phú Quốc mua gì: chọn quà và kiểm tra điều kiện mang về</a><br><a href=\"/vi/tin-tuc/tour-ghep-hay-doan-rieng-phu-quoc-chon-theo-quy-mo-va-nhu-cau/\">Tour ghép hay đoàn riêng Phú Quốc: chọn theo quy mô và nhu cầu</a><br><a href=\"/vi/tin-tuc/phu-quoc-2-ngay-1-dem-khi-nao-lich-ngan-phu-hop/\">Phú Quốc 2 ngày 1 đêm: khi nào lịch ngắn phù hợp?</a>"
+    },
+    {
+      "type": "h2",
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Chương trình tour tham khảo</span></strong>"
     },
     {
