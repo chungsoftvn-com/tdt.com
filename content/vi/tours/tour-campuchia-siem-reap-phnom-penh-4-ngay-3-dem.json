@@ -70,7 +70,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:950px\"> <img src=\"/content/vi/images/pasted-1792219999764-0.jpg\" alt=\"Angkor Wat phản chiếu trên mặt nước tại Siem Reap\" style=\"max-width:100%;height:auto;width:950px\"> </figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792219999764-0.jpg\" alt=\"Angkor Wat phản chiếu trên mặt nước tại Siem Reap\"> </figure>"
     },
     {
       "type": "p",
@@ -82,7 +82,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:600px\"> <img src=\"/content/vi/images/pasted-1792219999764-1.jpg\" alt=\"Không gian đền Ta Prohm tại Siem Reap\" style=\"width:600px;height:900px\"> </figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792219999764-1.jpg\" alt=\"Không gian đền Ta Prohm tại Siem Reap\"> </figure>"
     },
     {
       "type": "p",
@@ -102,7 +102,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:1000px\"> <img src=\"/content/vi/images/pasted-1792219999764-2.jpg\" alt=\"Toàn cảnh thành phố Phnom Penh bên sông\" style=\"width:1000px;height:667px\"> </figure>"
+      "html": "<figure> <img src=\"/content/vi/images/pasted-1792219999764-2.jpg\" alt=\"Toàn cảnh thành phố Phnom Penh bên sông\"> </figure>"
     },
     {
       "type": "p",
