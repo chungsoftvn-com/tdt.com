@@ -96,6 +96,14 @@
       "text": "<span style=\"font-size:16px;color:#374151\">Xem lịch dưới đây và trao đổi cùng Mr Anh Văn. Giá, vé, phòng, điểm đón và ngày phục vụ phải xác nhận trước khi đặt; yêu cầu bổ sung chưa mặc nhiên nằm trong giá.</span>"
     },
     {
+      "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài cùng chủ đề</span></strong>"
+    },
+    {
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/tour-sapa/\">Tour Sapa–Fansipan: chọn hành trình phù hợp với đoàn</a>"
+    },
+    {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-ha-noi-sapa-4n3d/\"><strong><u><span style=\"color:#00695c\">Tour Hà Nội – Sapa 4N3Đ</span></u></strong></a></span>"
     }
