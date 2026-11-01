@@ -1,173 +1,325 @@
 {
   "slug": "tour-phan-thiet-tau-hoa-2n1d-p2",
-  "name": "Tour Phan Thiết tàu hỏa 2N1Đ từ ga Biên Hòa – Đi và về tàu",
+  "name": "Tour Phan Thiết Tàu Hỏa 2 Ngày 1 Đêm từ Đồng Nai, Biên Hòa – Đi Tàu, Về Tàu",
   "region": "domestic",
   "region_name": "Nam Trung Bộ",
   "departure": "Ga Biên Hòa – TP. Đồng Nai",
   "duration": "2 ngày 1 đêm",
-  "price": "Liên hệ báo giá theo đoàn",
+  "price": "1.390.000đ/khách (chưa gồm vé tàu)",
   "image": "tour-phan-thiet-tau-hoa-2n1d-p2-v2.jpg",
-  "desc": "Tour Phan Thiết 2N1Đ đi SPT2, về SPT1 tại ga Biên Hòa. Nghỉ biển Mũi Né, tham quan Bàu Trắng; kiểm tra lịch tàu cả hai chiều trước khi đặt.",
+  "desc": "Tour Phan Thiết tàu hỏa 2 ngày 1 đêm từ ga Biên Hòa: đi tàu SPT2, về tàu SPT1, nghỉ biển Mũi Né, Bàu Trắng. Giá 1.390.000đ chưa gồm vé tàu. Hotline 0902 898 726.",
   "highlights": [
-    "01 đêm khách sạn/resort tại Mũi Né; hai chặng tàu đều đi ban ngày.",
-    "TodayTourist đón và trả tại ga Biên Hòa. Đi SPT2 đến ga Phan Thiết, về SPT1; xe du lịch TodayTourist chỉ trung chuyển và tham quan tại điểm đến.",
-    "Chương trình theo đoàn, báo giá theo ngày và loại chỗ tàu"
+    "Đi và về bằng tàu hỏa ban ngày, đón trả tại ga Biên Hòa",
+    "Ghé Silk Road Mũi Né, điểm check-in ven biển",
+    "Ngắm Bàu Trắng với đồi cát và hồ nước lúc chiều dịu nắng",
+    "Nghỉ đêm resort Mũi Né, tắm biển thư giãn",
+    "Mua sắm đặc sản Phan Thiết trước giờ ra ga",
+    "Ăn trưa thong thả gần ga trước chuyến tàu về"
   ],
   "itinerary": [],
   "content": [
     {
       "type": "p",
-      "text": "<strong>Đi và về bằng đường sắt, nghỉ một đêm bên biển Mũi Né. Phương án này phù hợp khách thích trải nghiệm tàu ban ngày và chấp nhận ngày về gọn hơn để kịp chuyến SPT1.</strong>"
+      "text": "<strong>🚆 Đi tàu, ngủ biển, rồi về tàu – cả chuyến không phải ngồi xe đường dài.</strong>"
     },
     {
       "type": "p",
-      "text": "Khởi hành từ ga Biên Hòa, phục vụ khách TP. Đồng Nai, Biên Hòa và TP.HCM. 🏢 Đoàn riêng, gia đình, cơ quan, doanh nghiệp, trường học, đoàn thể có nhu cầu thiết kế chương trình theo yêu cầu — kết hợp Team Building, Gala Dinner, đốt lửa trại hoặc tham quan học tập cho học sinh – sinh viên. Các hoạt động bổ sung báo giá riêng."
+      "text": "Phương án đi và về bằng tàu ban ngày dành cho khách thích trải nghiệm đường sắt, chấp nhận ngày về gọn hơn để kịp chuyến SPT1. Hợp với gia đình, nhóm bạn và đoàn công ty đi cuối tuần; vì chỉ có tàu vào những ngày nhà ga mở bán nên cần chốt lịch sớm."
     },
     {
       "type": "p",
-      "text": "<strong>Thời lượng:</strong> 2 ngày 1 đêm — 01 đêm khách sạn/resort tại Mũi Né; hai chặng tàu đều đi ban ngày.<br><strong>Điều kiện:</strong> đoàn từ 10 khách, lịch khởi hành phụ thuộc vé và xác nhận dịch vụ. Không phải lịch ghép cố định đã mở bán mọi ngày."
-    },
-    {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Phương án đưa đón</span></strong>"
+      "text": "📅 <strong>Thời gian:</strong> 2 ngày 1 đêm (01 đêm khách sạn/resort tại Mũi Né; cả hai chặng tàu đều đi ban ngày)"
     },
     {
       "type": "p",
-      "text": "TodayTourist đón và trả tại ga Biên Hòa. Đi SPT2 đến ga Phan Thiết, về SPT1; xe du lịch TodayTourist chỉ trung chuyển và tham quan tại điểm đến."
+      "text": "🚍 <strong>Phương tiện:</strong> tàu hỏa SPT2 chặng đi, SPT1 chặng về + xe du lịch TodayTourist tại điểm đến"
     },
     {
       "type": "p",
-      "text": "SPT2: Biên Hòa đến 07:31, đi 07:34; Phan Thiết đến 10:42. SPT1: Phan Thiết đi 13:30; Biên Hòa đến 16:55, đi 16:58. Giai đoạn 11/9–30/12/2026, tàu chỉ mở bán thứ Sáu, thứ Bảy, Chủ nhật; cần có tàu cả ngày đi lẫn ngày về. Một số ngày hệ thống giờ tàu còn hiển thị SPT3 rời Phan Thiết 15:10, đến Biên Hòa 18:19 (rời 18:49); chỉ dùng khi ngày đó có bán vé, vì thông báo mở bán giai đoạn này chỉ nêu SPT1/SPT2."
+      "text": "🏨 <strong>Lưu trú:</strong> khách sạn/resort 3–4 sao tại Mũi Né"
     },
     {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Chương trình chi tiết</span></strong>"
+      "type": "p",
+      "text": "📍 <strong>Khởi hành:</strong> Ga Biên Hòa (TP. Đồng Nai) – ghép đoàn theo lịch tàu, ghép từ 20 khách. Đoàn 10–19 khách vui lòng liên hệ 0902 898 726 để nhận báo giá riêng."
+    },
+    {
+      "type": "p",
+      "text": "📞 <strong>Tư vấn:</strong> Mr. Anh Văn (Phòng Kinh Doanh) – 0902 898 726"
+    },
+    {
+      "type": "p",
+      "text": "🏢 Đoàn riêng, gia đình, cơ quan, doanh nghiệp, trường học, đoàn thể có nhu cầu thiết kế chương trình theo yêu cầu — kết hợp Team Building, Gala Dinner, đốt lửa trại hoặc tham quan học tập cho học sinh – sinh viên"
     },
     {
       "type": "h3",
-      "text": "Ngày 1: Ga Biên Hòa – Silk Road – Bàu Trắng – Mũi Né"
+      "text": "🚆 ĐIỂM ĐÓN – TRẢ KHÁCH TẠI GA BIÊN HÒA"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Điểm đón và trả: Ga Biên Hòa (TP. Đồng Nai) – quý khách có mặt trước giờ tàu khoảng 60 phút",
+        "Hướng dẫn viên TodayTourist hỗ trợ kiểm tra giấy tờ, tìm đúng toa và chỗ ngồi",
+        "Khách ở TP.HCM hoặc dọc tuyến có thể tự đến ga Biên Hòa; cần hỗ trợ đưa đón vui lòng báo trước để được báo giá riêng"
+      ]
     },
     {
       "type": "p",
-      "text": "<strong>Buổi sáng và trưa:</strong> Tập trung tại ga khoảng 06:30, đi SPT2 đến Phan Thiết. Xe đón đoàn tham quan Silk Road nếu đủ thời gian, dùng cơm trưa rồi về nơi lưu trú."
+      "text": "🚐 Xe du lịch TodayTourist phục vụ đoàn trọn chương trình tại Phan Thiết – Mũi Né, đưa đoàn ra ga Phan Thiết ở ngày về."
     },
     {
       "type": "p",
-      "text": "<strong>Buổi chiều và tối:</strong> Nhận phòng sau 14:00, nghỉ ngơi ngắn rồi đi Bàu Trắng ngắm đồi cát và hồ nước lúc chiều dịu nắng; xe Jeep, mô tô địa hình là dịch vụ tự túc. Về lại Mũi Né, tắm biển, ăn tối tại nhà hàng, tự do dạo biển hoặc tham gia hoạt động đặt thêm đã thỏa thuận. Nếu đoàn mệt sau chặng tàu sáng hoặc thời tiết không thuận, công ty đề xuất điểm thay thế gần nơi lưu trú."
+      "text": "⏱️ Giờ tàu tham khảo: SPT2 đến ga Biên Hòa 07:31, rời ga 07:34, đến ga Phan Thiết khoảng 10:42. SPT1 rời ga Phan Thiết 13:30, đến ga Biên Hòa 16:55. Giờ tàu theo biểu đồ hiện hành của Đường sắt Việt Nam, được xác nhận lại theo vé khi chốt đoàn."
     },
     {
       "type": "h3",
-      "text": "Ngày 2: Mũi Né – Mua sắm đặc sản – Ga Phan Thiết – Ga Biên Hòa"
+      "text": "☀️ NGÀY 01: GA BIÊN HÒA – GA PHAN THIẾT – SILK ROAD – BÀU TRẮNG – MŨI NÉ"
     },
     {
       "type": "p",
-      "text": "<strong>Buổi sáng:</strong> Ăn sáng, tự do tắm biển hoặc nghỉ ngơi tại nơi lưu trú; trả phòng khoảng 10:00. Xe đưa đoàn đi mua sắm đặc sản Phan Thiết như nước mắm, hải sản khô, bánh tráng; có thể ghé Làng Chài Xưa hoặc Bảo tàng nước mắm theo gói vé đã xác nhận."
+      "text": "🚆 <strong>Buổi sáng:</strong> Tập trung tại ga Biên Hòa khoảng 06:30. Hướng dẫn viên hỗ trợ làm thủ tục, đoàn lên tàu SPT2 lúc 07:34 và đến ga Phan Thiết khoảng 10:42."
     },
     {
       "type": "p",
-      "text": "<strong>Buổi trưa:</strong> Ăn trưa tại nhà hàng gần ga Phan Thiết, có mặt tại ga trước giờ tàu khoảng 60 phút. SPT1 dự kiến khởi hành 13:30. Nếu ngày đi có bán vé SPT3 (rời Phan Thiết 15:10), đoàn có thêm khoảng hai tiếng để ăn trưa thong thả và mua sắm, ra ga khoảng 14:10."
+      "text": "📍 <strong>Buổi trưa:</strong> Xe đón đoàn tại ga, ghé Silk Road Mũi Né nếu đủ thời gian rồi ăn trưa tại nhà hàng. Về nơi lưu trú nhận phòng sau 14:00 (phòng sẵn sàng sớm thì nhận sớm, chưa thì gửi hành lý và nghỉ khu vực chung)."
     },
     {
       "type": "p",
-      "text": "<strong>Buổi chiều:</strong> Tàu SPT1 dự kiến đến ga Biên Hòa 16:55 (SPT3: 18:19). Quý khách kiểm tra hành lý và xuống đúng ga; kết thúc chương trình tại ga Biên Hòa."
-    },
-    {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Giá bao gồm</span></strong>"
+      "text": "🏜️ <strong>Buổi chiều:</strong> Nghỉ ngắn rồi đi Bàu Trắng:"
     },
     {
       "type": "list",
       "items": [
-        "Vé SPT2 và SPT1 khứ hồi, hạng chỗ theo xác nhận; xe trung chuyển và tham quan tại Phan Thiết.",
-        "01 bữa sáng, 02 bữa trưa và 01 bữa tối theo chương trình; bữa sáng ngày đầu theo báo giá.",
-        "Khách sạn/resort 3–4 sao theo gói được chọn; số đêm như chương trình, 2–3 khách/phòng theo xác nhận.",
-        "Vé vào cửa các điểm trong chương trình tiêu chuẩn theo báo giá; không bao gồm mọi hoạt động tự chọn.",
-        "Hướng dẫn viên, bảo hiểm du lịch nội địa, nước uống và nón TodayTourist theo xác nhận dịch vụ."
+        "Bàu Trắng – hồ nước ngọt nằm giữa đồi cát vàng và cát trắng, ngắm cảnh lúc chiều dịu nắng; xe Jeep, mô tô địa hình là dịch vụ tự túc",
+        "Về Mũi Né tắm biển, thư giãn tại khách sạn/resort"
       ]
     },
     {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Giá không bao gồm</span></strong>"
+      "type": "p",
+      "text": "🍽️ <strong>Buổi tối:</strong> Ăn tối tại nhà hàng, tự do dạo biển. Nếu đoàn mệt sau chặng tàu sáng hoặc thời tiết không thuận, công ty đề xuất điểm thay thế gần nơi lưu trú."
     },
     {
-      "type": "list",
-      "items": [
-        "Thuế VAT theo báo giá; chi phí cá nhân, đồ uống riêng, dịch vụ ngoài gói.",
-        "Phụ thu phòng đơn, nâng hạng tàu/phòng và hoạt động tự chọn nếu chưa có trong báo giá.",
-        "Team Building, Gala, lửa trại; tiền tip tự nguyện."
-      ]
+      "type": "h3",
+      "text": "🚆 NGÀY 02: MŨI NÉ – MUA SẮM ĐẶC SẢN – GA PHAN THIẾT – GA BIÊN HÒA"
     },
     {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Điều khoản và lưu ý</span></strong>"
+      "type": "p",
+      "text": "🍳 <strong>Buổi sáng:</strong> Ăn sáng, tự do tắm biển hoặc nghỉ ngơi, trả phòng khoảng 10:00. Xe đưa đoàn đi mua sắm đặc sản Phan Thiết như nước mắm, hải sản khô, bánh tráng; có thể ghé Làng Chài Xưa – bảo tàng nước mắm."
     },
     {
-      "type": "list",
-      "items": [
-        "📌 Chương trình tham khảo dành cho khách Việt Nam, đoàn từ 10 khách; báo giá theo ngày đi, hạng chỗ tàu và dịch vụ. Dịp Lễ – Tết nhận phương án riêng.",
-        "📌 Đặt cọc 30–50% theo xác nhận dịch vụ; thanh toán số còn lại trước ngày khởi hành. Điều kiện đổi/hủy vé tàu và dịch vụ phải được thông báo trước khi đặt cọc.",
-        "📌 Giờ tàu dưới đây được tra cứu trên hệ thống chính thức cho lịch 30/10/2026; có thể thay đổi theo ngày khai thác. TodayTourist xác nhận lại khi chốt vé.",
-        "📌 Có mặt tại ga trước giờ tàu đến khoảng 60 phút; giấy tờ phải khớp thông tin hành khách. Trẻ em và người cần hỗ trợ đi cùng người phụ trách.",
-        "📌 Nhận phòng sau 14:00, trả phòng trước 12:00. Nếu đến sớm: nhận phòng khi có sẵn; nếu chưa có phòng, gửi hành lý và nghỉ tại khu vực chung.",
-        "📌 Thứ tự tham quan có thể điều chỉnh theo thực tế; thay đổi điểm/dịch vụ được trao đổi với đoàn. Quý khách tự bảo quản tài sản cá nhân.",
-        "📌 Trường hợp bất khả kháng, công ty trao đổi phương án phù hợp; chi phí và điều kiện thay đổi theo xác nhận dịch vụ."
-      ]
+      "type": "p",
+      "text": "💡 <em>Bạn có biết:</em> Nước mắm là đặc sản làm nên tên tuổi Phan Thiết; nhiều gia đình ở đây giữ nghề ủ chượp truyền thống qua nhiều thế hệ."
+    },
+    {
+      "type": "p",
+      "text": "🍽️ <strong>Buổi trưa:</strong> Ăn trưa tại nhà hàng gần ga Phan Thiết, có mặt tại ga trước giờ tàu khoảng 60 phút. SPT1 dự kiến rời ga lúc 13:30. Nếu ngày đi có bán vé chuyến SPT3 (rời Phan Thiết 15:10), đoàn có thêm khoảng hai tiếng để ăn trưa thong thả và mua sắm, ra ga khoảng 14:10."
+    },
+    {
+      "type": "p",
+      "text": "🏠 <strong>Buổi chiều:</strong> Tàu SPT1 dự kiến đến ga Biên Hòa 16:55 (SPT3: 18:19). Quý khách kiểm tra hành lý và xuống đúng ga, kết thúc chương trình."
+    },
+    {
+      "type": "h3",
+      "text": "💰 GIÁ TOUR"
+    },
+    {
+      "type": "p",
+      "text": "💵 Người lớn (từ 10 tuổi): 1.390.000đ/khách (chưa gồm vé tàu)"
+    },
+    {
+      "type": "p",
+      "text": "🧒 Trẻ em 5 đến dưới 10 tuổi: 1.043.000đ/khách (ngủ chung với bố mẹ, chưa gồm vé tàu)"
+    },
+    {
+      "type": "p",
+      "text": "👶 Trẻ dưới 5 tuổi: miễn phí nếu ngồi cùng bố mẹ · 695.000đ nếu có chỗ riêng (chưa gồm vé tàu)"
+    },
+    {
+      "type": "p",
+      "text": "🚆 Vé tàu được báo riêng theo hạng chỗ (ghế ngồi hoặc giường nằm) tại thời điểm đặt; vé trẻ em theo chính sách của ngành đường sắt. Công ty tư vấn chọn toa phù hợp khi chốt ngày đi."
+    },
+    {
+      "type": "h3",
+      "text": "✅ GIÁ TOUR BAO GỒM"
+    },
+    {
+      "type": "p",
+      "text": "✅ Xe du lịch TodayTourist trung chuyển và tham quan tại Phan Thiết – Mũi Né"
+    },
+    {
+      "type": "p",
+      "text": "✅ Khách sạn/resort 3–4 sao tại Mũi Né (2–3 khách/phòng)"
+    },
+    {
+      "type": "p",
+      "text": "✅ Ăn uống theo chương trình: 01 bữa sáng, 02 bữa chính, 01 bữa tối (set menu 150.000đ/khách)"
+    },
+    {
+      "type": "p",
+      "text": "✅ Vé tham quan các điểm theo chương trình tiêu chuẩn"
+    },
+    {
+      "type": "p",
+      "text": "✅ Hướng dẫn viên du lịch chuyên nghiệp đi suốt tuyến"
+    },
+    {
+      "type": "p",
+      "text": "✅ Bảo hiểm du lịch nội địa theo quy định"
+    },
+    {
+      "type": "p",
+      "text": "✅ Nón du lịch, khăn lạnh, nước suối phục vụ đoàn"
+    },
+    {
+      "type": "h3",
+      "text": "❌ GIÁ TOUR KHÔNG BAO GỒM"
+    },
+    {
+      "type": "p",
+      "text": "❌ Xe Jeep, mô tô địa hình tại Bàu Trắng và các hoạt động tự chọn"
+    },
+    {
+      "type": "p",
+      "text": "❌ Vé tàu hỏa (báo riêng theo hạng chỗ và giá tại thời điểm đặt)"
+    },
+    {
+      "type": "p",
+      "text": "❌ Chi phí cá nhân, mua sắm ngoài chương trình"
+    },
+    {
+      "type": "p",
+      "text": "❌ Thuế VAT (nếu xuất hóa đơn)"
+    },
+    {
+      "type": "h3",
+      "text": "📌 ĐIỀU KHOẢN & LƯU Ý"
+    },
+    {
+      "type": "p",
+      "text": "📌 Giá áp dụng cho khách Việt Nam, đoàn ghép từ 20 khách, không áp dụng dịp Lễ – Tết"
+    },
+    {
+      "type": "p",
+      "text": "📌 Chỉ nhận lịch có tàu và còn chỗ; giá vé tàu thay đổi theo hạng chỗ và thời điểm đặt"
+    },
+    {
+      "type": "p",
+      "text": "📌 Đặt cọc 30–50% khi đăng ký, thanh toán trước ngày khởi hành"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trẻ dưới 5 tuổi ngồi cùng bố mẹ: mỗi người lớn kèm tối đa 1 bé, bé thứ 2 trở lên mua chỗ riêng"
+    },
+    {
+      "type": "p",
+      "text": "📌 Bé ngồi cùng bố mẹ trên xe vẫn được tính vào tổng số người trên xe theo Luật Trật tự, an toàn giao thông đường bộ 2024, công ty chỉ nhận khi xe còn đủ chỗ"
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách mang theo CCCD bản gốc (trẻ em mang giấy khai sinh), thông tin phải khớp với vé tàu"
+    },
+    {
+      "type": "p",
+      "text": "📌 Lịch trình, thứ tự tham quan có thể điều chỉnh theo điều kiện thực tế nhưng đảm bảo đầy đủ điểm"
+    },
+    {
+      "type": "p",
+      "text": "📌 Tàu SPT1/SPT2 chỉ mở bán một số ngày trong tuần (thứ Sáu, thứ Bảy, Chủ nhật trong giai đoạn công bố); công ty chỉ nhận lịch có tàu cả ngày đi lẫn ngày về"
+    },
+    {
+      "type": "p",
+      "text": "📌 Quý khách tự bảo quản tài sản cá nhân"
+    },
+    {
+      "type": "p",
+      "text": "📌 Trường hợp bất khả kháng (thời tiết xấu, tàu trễ hoặc tạm ngưng chạy), công ty sẽ sắp xếp phương án phù hợp và hỗ trợ bữa ăn cho đoàn"
+    },
+    {
+      "type": "h3",
+      "text": "📚 KINH NGHIỆM CHUẨN BỊ"
     },
     {
       "type": "p",
       "text": "Nguồn lịch tàu tham khảo: <a href=\"https://giotaugiave.dsvn.vn/giotau/diaphuong?option=3&tuyen=1\" target=\"_blank\" rel=\"noopener nofollow\">Hệ thống giờ tàu Đường sắt Việt Nam</a>, tra cứu ngày 30/10/2026. Cần chọn đúng mác tàu, ngày chạy và ga; phân biệt giờ đến với giờ đi. Giờ trả khách là dự kiến, không phải cam kết tàu luôn đúng giờ."
     },
     {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Câu hỏi thường gặp</span></strong>"
+      "type": "h3",
+      "text": "🏢 ĐI ĐOÀN RIÊNG – GIA ĐÌNH, CƠ QUAN, DOANH NGHIỆP, TRƯỜNG HỌC"
+    },
+    {
+      "type": "p",
+      "text": "Phan Thiết – Mũi Né là điểm đến dễ tổ chức cho đoàn gần Đồng Nai. TodayTourist thiết kế riêng theo mục tiêu và ngân sách của từng đoàn, bố trí tàu và hạng chỗ theo đúng số lượng khách:"
+    },
+    {
+      "type": "p",
+      "text": "✅ Tùy chỉnh giờ tàu, hạng chỗ, tiêu chuẩn khách sạn và thực đơn theo ngân sách"
+    },
+    {
+      "type": "p",
+      "text": "✅ Kết hợp Team Building, Gala Dinner, đốt lửa trại: MC, hoạt náo, gắn kết tập thể"
+    },
+    {
+      "type": "p",
+      "text": "✅ Chương trình tham quan học tập cho học sinh – sinh viên"
+    },
+    {
+      "type": "p",
+      "text": "📞 Nhận báo giá đoàn: Mr. Anh Văn – 0902 898 726"
     },
     {
       "type": "h3",
-      "text": "Tour Phan Thiết tàu hỏa 2N1Đ đi và về tàu khởi hành từ đâu?"
+      "text": "❓ CÂU HỎI THƯỜNG GẶP"
     },
     {
       "type": "p",
-      "text": "TodayTourist đón và trả đoàn tại ga Biên Hòa. Đi tàu SPT2 đến ga Phan Thiết, về tàu SPT1; xe du lịch TodayTourist chỉ trung chuyển và tham quan tại điểm đến."
+      "text": "<strong>Tour đi và về bằng tàu có thể đi ngày nào?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Tàu SPT1/SPT2 mở bán một số ngày trong tuần, nên công ty chỉ nhận lịch có tàu cả ngày đi lẫn ngày về. Quý khách báo ngày dự kiến để được kiểm tra chỗ."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Giá tour đã gồm vé tàu chưa?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Giá niêm yết chưa gồm vé tàu. Vé tàu báo riêng theo hạng chỗ và giá tại thời điểm đặt."
+    },
+    {
+      "type": "p",
+      "text": "<strong>Ngày về có kịp mua sắm, ăn trưa không?</strong>"
+    },
+    {
+      "type": "p",
+      "text": "Có. Đoàn ăn trưa gần ga Phan Thiết và mua đặc sản trước giờ tàu. Nếu ngày đi có chuyến tàu về muộn hơn, thời gian thư thả hơn."
     },
     {
       "type": "h3",
-      "text": "Tour có mấy đêm khách sạn, có ngủ trên tàu không?"
+      "text": "📞 THÔNG TIN LIÊN HỆ ĐẶT TOUR"
     },
     {
       "type": "p",
-      "text": "Tour 2 ngày 1 đêm có 01 đêm khách sạn/resort tại Mũi Né. Hai chặng tàu đều đi ban ngày nên không có đêm nghỉ trên tàu."
-    },
-    {
-      "type": "h3",
-      "text": "Giá tour được tính thế nào?"
+      "text": "<strong>CÔNG TY DU LỊCH TODAYTOURIST</strong>"
     },
     {
       "type": "p",
-      "text": "Tour báo giá theo đoàn từ 10 khách, tùy ngày đi, loại chỗ tàu, số lượng khách và tiêu chuẩn lưu trú. Liên hệ Mr. Anh Văn – 0902 898 726 để nhận chương trình và báo giá chi tiết."
-    },
-    {
-      "type": "h2",
-      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Thông tin liên hệ đặt tour</span></strong>"
+      "text": "📍 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai"
     },
     {
       "type": "p",
-      "text": "Giá phụ thuộc ngày đi, loại chỗ tàu, số lượng khách và tiêu chuẩn lưu trú. Vui lòng liên hệ <strong>Mr. Anh Văn – 0902 898 726</strong> để nhận chương trình và báo giá chi tiết trước khi đặt cọc."
+      "text": "📞 Mr Anh Văn – Phòng Kinh Doanh: 0902 898 726"
     },
     {
       "type": "p",
-      "text": "<strong>CÔNG TY DU LỊCH TODAYTOURIST</strong><br>📍 80 Đặng Nguyên, KP 29, P. Long Bình, TP. Đồng Nai<br>📞 Mr. Anh Văn – Phòng Kinh Doanh: <a href=\"tel:0902898726\" target=\"_blank\" rel=\"noopener nofollow\">0902 898 726</a><br>☎️ Hotline: 0913 78 76 47 (Lê Sang)<br>✉️ lesangtravel@gmail.com<br>🌐 todaytourist.com"
-    },
-    {
-      "type": "h2",
-      "text": "Chuẩn bị trước chuyến đi"
+      "text": "☎️ Hotline: 0913 78 76 47 (Lê Sang)"
     },
     {
       "type": "p",
-      "text": "<a href=\"/vi/tin-tuc/lich-tau-spt-phan-thiet/\" target=\"_blank\" rel=\"noopener nofollow\">Lịch SPT1/SPT2</a><br><a href=\"/vi/tin-tuc/tour-tau-hoa-phan-thiet/\" target=\"_blank\" rel=\"noopener nofollow\">Tour cho gia đình</a><br><a href=\"/vi/tin-tuc/tour-tau-hoa-cho-cong-ty/\" target=\"_blank\" rel=\"noopener nofollow\">Tour cho công ty</a><br>"
+      "text": "✉️ lesangtravel@gmail.com"
     },
     {
       "type": "p",
-      "text": "Tham khảo <a href=\"/vi/tours/tour-phan-thiet-tau-hoa-2n1d-p1/\" target=\"_blank\" rel=\"noopener nofollow\">Tour Phan Thiết tàu hỏa 2N1Đ từ ga Biên Hòa – Đi tàu, về xe</a> để so sánh phương án về xe và về tàu."
+      "text": "🌐 todaytourist.com"
     }
   ],
   "hidden": false
