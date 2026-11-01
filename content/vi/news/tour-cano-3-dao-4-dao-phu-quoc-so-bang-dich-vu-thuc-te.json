@@ -89,6 +89,14 @@
     },
     {
       "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài cùng chủ đề</span></strong>"
+    },
+    {
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/tour-cong-doan-cong-nhan-di-phu-quoc-can-bang-ngan-sach-va-lich-ca/\">Tour công đoàn, công nhân đi Phú Quốc: cân bằng ngân sách và lịch ca</a><br><a href=\"/vi/tin-tuc/tour-phu-quoc-chon-chuong-trinh-theo-muc-dich-va-phuong-tien/\">Tour Phú Quốc: chọn chương trình theo mục đích và phương tiện</a>"
+    },
+    {
+      "type": "h2",
       "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Chương trình tour tham khảo</span></strong>"
     },
     {
