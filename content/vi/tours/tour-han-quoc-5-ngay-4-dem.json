@@ -100,7 +100,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:100%\"><img src=\"https://transviet.com.vn/Media/Uploads/3360/3360-Nami-mua-dong.jpg\" alt=\"Đảo Nami – khung cảnh mùa đông, tùy thời tiết thực tế\" style=\"width:100%;height:auto\"><figcaption>Đảo Nami – khung cảnh mùa đông, tùy thời tiết thực tế · Ảnh minh họa: TransViet</figcaption></figure>"
+      "html": "<figure><img src=\"https://transviet.com.vn/Media/Uploads/3360/3360-Nami-mua-dong.jpg\" alt=\"Đảo Nami – khung cảnh mùa đông, tùy thời tiết thực tế\"><figcaption>Đảo Nami – khung cảnh mùa đông, tùy thời tiết thực tế · Ảnh minh họa: TransViet</figcaption></figure>"
     },
     {
       "type": "h3",
@@ -124,7 +124,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:100%\"><img src=\"https://transviet.com.vn/Media/Uploads/gallery/KR00304/KR00305-4-Thu-vien-Starfield-library-Seoul.jpg\" alt=\"Thư viện Starfield trong hành trình Seoul\" style=\"width:100%;height:auto\"><figcaption>Thư viện Starfield trong hành trình Seoul · Ảnh minh họa: TransViet</figcaption></figure>"
+      "html": "<figure><img src=\"https://transviet.com.vn/Media/Uploads/gallery/KR00304/KR00305-4-Thu-vien-Starfield-library-Seoul.jpg\" alt=\"Thư viện Starfield trong hành trình Seoul\"><figcaption>Thư viện Starfield trong hành trình Seoul · Ảnh minh họa: TransViet</figcaption></figure>"
     },
     {
       "type": "h3",
@@ -148,7 +148,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:100%\"><img src=\"https://transviet.com.vn/Media/Uploads/3360/3360-gangwon-do-ski-resorts.jpg\" alt=\"Khu hoạt động mùa đông Gangwon-do – hình ảnh minh họa\" style=\"width:100%;height:auto\"><figcaption>Khu hoạt động mùa đông Gangwon-do – hình ảnh minh họa · Ảnh minh họa: TransViet</figcaption></figure>"
+      "html": "<figure><img src=\"https://transviet.com.vn/Media/Uploads/3360/3360-gangwon-do-ski-resorts.jpg\" alt=\"Khu hoạt động mùa đông Gangwon-do – hình ảnh minh họa\"><figcaption>Khu hoạt động mùa đông Gangwon-do – hình ảnh minh họa · Ảnh minh họa: TransViet</figcaption></figure>"
     },
     {
       "type": "h3",
@@ -172,7 +172,7 @@
     },
     {
       "type": "html",
-      "html": "<figure style=\"width:100%\"><img src=\"/content/vi/images/han-quoc-anh-noi-dung-opt.jpg\" alt=\"Cung điện Gyeongbokgung – điểm tham quan văn hóa ở Seoul\" style=\"width:100%;height:auto\"><figcaption>Cung điện Gyeongbokgung – điểm tham quan văn hóa ở Seoul</figcaption></figure>"
+      "html": "<figure><img src=\"/content/vi/images/han-quoc-anh-noi-dung-opt.jpg\" alt=\"Cung điện Gyeongbokgung – điểm tham quan văn hóa ở Seoul\"><figcaption>Cung điện Gyeongbokgung – điểm tham quan văn hóa ở Seoul</figcaption></figure>"
     },
     {
       "type": "h3",
