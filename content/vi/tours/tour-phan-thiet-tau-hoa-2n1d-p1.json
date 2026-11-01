@@ -71,6 +71,10 @@
       "text": "⏱️ Giờ tàu tham khảo: SPT2 đến ga Biên Hòa 07:31, rời ga 07:34, đến ga Phan Thiết khoảng 10:42. Giờ tàu theo biểu đồ hiện hành của Đường sắt Việt Nam, được xác nhận lại theo vé khi chốt đoàn."
     },
     {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/tau-hoa-ven-bien-todaytourist.jpg\" alt=\"Tàu hỏa chạy ven biển miền Trung – tour tàu hỏa từ ga Biên Hòa Today Tourist\"></figure>"
+    },
+    {
       "type": "h3",
       "text": "☀️ NGÀY 01: GA BIÊN HÒA – GA PHAN THIẾT – SILK ROAD – MŨI NÉ"
     },
@@ -90,12 +94,20 @@
       ]
     },
     {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/silk-road-mui-ne-todaytourist.jpg\" alt=\"Silk Road Mũi Né – tour Phan Thiết tàu hỏa Today Tourist\"></figure>"
+    },
+    {
       "type": "p",
       "text": "🍽️ Ăn trưa tại nhà hàng, về nơi lưu trú nhận phòng sau 14:00 (phòng sẵn sàng sớm thì nhận sớm, chưa thì gửi hành lý và nghỉ khu vực chung)."
     },
     {
       "type": "p",
       "text": "🏖️ <strong>Buổi chiều:</strong> Nghỉ ngơi, tắm biển và tận hưởng tiện ích của khách sạn/resort. Ngày đầu không xếp Bàu Trắng để đoàn không bị dồn dập sau chặng tàu."
+    },
+    {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/bien-mui-ne-resort-todaytourist.jpg\" alt=\"Biển Mũi Né – tour Phan Thiết tàu hỏa Today Tourist\"></figure>"
     },
     {
       "type": "p",
@@ -117,12 +129,20 @@
       ]
     },
     {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/bau-trang-mui-ne-todaytourist.jpg\" alt=\"Bàu Trắng Mũi Né – tour Phan Thiết tàu hỏa Today Tourist\"></figure>"
+    },
+    {
       "type": "p",
       "text": "💡 <em>Bạn có biết:</em> Nước mắm là đặc sản làm nên tên tuổi Phan Thiết; nhiều gia đình ở đây giữ nghề ủ chượp truyền thống qua nhiều thế hệ."
     },
     {
       "type": "p",
       "text": "🛍️ Ghé mua đặc sản làm quà: nước mắm, hải sản khô, bánh tráng."
+    },
+    {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/lang-chai-xua-nuoc-mam-phan-thiet-todaytourist.jpg\" alt=\"Làng Chài Xưa, nghề nước mắm Phan Thiết – tour Phan Thiết tàu hỏa Today Tourist\"></figure>"
     },
     {
       "type": "p",
