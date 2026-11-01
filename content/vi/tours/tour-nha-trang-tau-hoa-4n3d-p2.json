@@ -1,13 +1,13 @@
 {
   "slug": "tour-nha-trang-tau-hoa-4n3d-p2",
-  "name": "Tour Nha Trang Tàu Hỏa 4 Ngày 3 Đêm từ Đồng Nai, Biên Hòa – Hai Đêm Tàu, Một Đêm Khách Sạn",
+  "name": "Tour Nha Trang Tàu Hỏa 3 Ngày 3 Đêm từ Đồng Nai, Biên Hòa – Hai Đêm Tàu, Một Đêm Khách Sạn",
   "region": "domestic",
   "region_name": "Nam Trung Bộ",
   "departure": "Ga Biên Hòa – TP. Đồng Nai",
-  "duration": "4 ngày 3 đêm",
+  "duration": "3 ngày 3 đêm",
   "price": "1.920.000đ/khách (chưa gồm vé tàu)",
   "image": "tour-nha-trang-tau-hoa-4n3d-p2-v2.jpg",
-  "desc": "Tour Nha Trang tàu hỏa 4 ngày 3 đêm từ ga Biên Hòa: đi tàu SNT2, về SNT1, Tháp Bà Ponagar, Hòn Chồng, Viện Hải dương học. Giá 1.920.000đ chưa gồm vé tàu. Hotline 0902 898 726.",
+  "desc": "Tour Nha Trang tàu hỏa 3 ngày 3 đêm từ ga Biên Hòa: đi tàu SNT2, về SNT1, Tháp Bà Ponagar, Hòn Chồng, Viện Hải dương học. Giá 1.920.000đ chưa gồm vé tàu. Hotline 0902 898 726.",
   "highlights": [
     "Đón trả tại ga Biên Hòa, đi tàu SNT2 và về tàu SNT1",
     "Tham quan Tháp Bà Ponagar, cụm tháp Chăm cổ bên sông Cái",
@@ -28,7 +28,7 @@
     },
     {
       "type": "p",
-      "text": "📅 <strong>Thời gian:</strong> 4 ngày 3 đêm (02 đêm trên tàu, 01 đêm khách sạn tại Nha Trang)"
+      "text": "📅 <strong>Thời gian:</strong> 3 ngày 3 đêm (02 đêm trên tàu, 01 đêm khách sạn tại Nha Trang)"
     },
     {
       "type": "p",
@@ -80,7 +80,7 @@
     },
     {
       "type": "h3",
-      "text": "☀️ NGÀY 02: NHA TRANG – THÁP BÀ PONAGAR – HÒN CHỒNG – BIỂN NHA TRANG"
+      "text": "☀️ NGÀY 01: NHA TRANG – THÁP BÀ PONAGAR – HÒN CHỒNG – BIỂN NHA TRANG"
     },
     {
       "type": "p",
@@ -111,7 +111,7 @@
     },
     {
       "type": "h3",
-      "text": "🏛️ NGÀY 03: NHA TRANG – VIỆN HẢI DƯƠNG HỌC – GA NHA TRANG – TÀU SNT1"
+      "text": "🏛️ NGÀY 02: NHA TRANG – VIỆN HẢI DƯƠNG HỌC – GA NHA TRANG – TÀU SNT1"
     },
     {
       "type": "p",
@@ -135,7 +135,7 @@
     },
     {
       "type": "h3",
-      "text": "🏠 NGÀY 04: GA BIÊN HÒA"
+      "text": "🌙 ĐÊM 03: TÀU VỀ – GA BIÊN HÒA"
     },
     {
       "type": "p",
@@ -299,11 +299,11 @@
     },
     {
       "type": "p",
-      "text": "<strong>Tour Nha Trang tàu hỏa 4N3Đ tính đêm như thế nào?</strong>"
+      "text": "<strong>Tour Nha Trang tàu hỏa 3N3Đ tính đêm như thế nào?</strong>"
     },
     {
       "type": "p",
-      "text": "Gồm 02 đêm trên tàu và 01 đêm khách sạn tại Nha Trang, với trọn ngày rưỡi tham quan và nghỉ biển."
+      "text": "Khởi hành buổi tối nên số ngày bằng số đêm: 02 đêm trên tàu và 01 đêm khách sạn tại Nha Trang, với trọn hai ngày tham quan và nghỉ biển."
     },
     {
       "type": "p",
