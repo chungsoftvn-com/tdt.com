@@ -96,6 +96,14 @@
       "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/\"><strong><u><span style=\"color:#00695c\">Xem các chương trình tour TodayTourist</span></u></strong></a></span>"
     },
     {
+      "type": "h2",
+      "text": "<strong><span style=\"color:#1b5e20;font-size:24px\">Bài cùng chủ đề</span></strong>"
+    },
+    {
+      "type": "p",
+      "text": "<a href=\"/vi/tin-tuc/tour-ngoai-khoa-mua-mua-chuan-bi-phuong-an-thay-doi-hoat-dong/\">Tour ngoại khóa mùa mưa: chuẩn bị phương án thay đổi hoạt động</a><br><a href=\"/vi/tin-tuc/tour-hoc-sinh-chon-ngoai-khoa-theo-do-tuoi-va-muc-tieu/\">Tour học sinh: chọn ngoại khóa theo độ tuổi và mục tiêu</a>"
+    },
+    {
       "type": "p",
       "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/contact/\"><strong><u><span style=\"color:#00695c\">Liên hệ TodayTourist để thiết kế chương trình cho trường</span></u></strong></a></span>"
     }
