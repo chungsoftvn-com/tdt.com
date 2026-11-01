@@ -119,6 +119,10 @@
       "text": "🏖️ <strong>Buổi chiều:</strong> Nghỉ ngơi, tắm biển Ninh Chữ."
     },
     {
+      "type": "html",
+      "html": "<figure><img src=\"/content/vi/images/bien-ninh-chu-todaytourist.jpg\" alt=\"Biển Ninh Chữ – tour Phan Rang tàu hỏa Today Tourist\"></figure>"
+    },
+    {
       "type": "p",
       "text": "🍽️ <strong>Buổi tối:</strong> Ăn tối tại nhà hàng, tự do nghỉ ngơi hoặc dạo biển."
     },
