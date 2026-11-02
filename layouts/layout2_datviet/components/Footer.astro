@@ -54,12 +54,12 @@ const socials = [
 
 ---
 
-<footer class="dv-footer mt-16">
-  <div class="dv-footer-contact mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-5 px-5 py-7">
-    <div><h2 class="text-xl font-bold sm:text-2xl">Chuyến đi đáng nhớ bắt đầu từ một cuộc trò chuyện</h2><p class="mt-2">Chia sẻ ngày đi, số khách và ngân sách — TodayTourist cùng bạn lên lịch trình.</p></div>
-    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn bg-white text-sea-deep">Zalo TodayTourist · 0902 898 726</a>
+<footer class="dv-footer mt-10">
+  <div class="dv-footer-contact mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-5">
+    <div><h2 class="text-base font-bold sm:text-lg">Chuyến đi đáng nhớ bắt đầu từ một cuộc trò chuyện</h2><p class="mt-2">Chia sẻ ngày đi, số khách và ngân sách — TodayTourist cùng bạn lên lịch trình.</p></div>
+    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn dv-btn-outline">Zalo Today Tourist · 0902 898 726</a>
   </div>
-  <div class="mx-auto grid max-w-6xl gap-8 px-5 py-9 sm:grid-cols-2 lg:grid-cols-4">
+  <div class="mx-auto grid max-w-6xl gap-6 px-5 py-6 sm:grid-cols-2 lg:grid-cols-4">
     <!-- Cột 1: thương hiệu + liên hệ -->
     <div>
       <div class="flex items-center gap-2.5">
@@ -86,8 +86,7 @@ const socials = [
           <span class="text-ink-soft">{t.address}</span>
         </li>
         <li>
-          <span class="font-semibold">{t.hotline_label}:</span>
-          <a class="font-bold text-[var(--color-hot)]" href={`tel:${tel}`}>{t.hotline}</a>
+          <a class="dv-btn dv-btn-accent dv-footer-hotline" href={`tel:${tel}`}>Hotline: 0913 787 647</a>
         </li>
         <li>
           <span class="font-semibold">{t.email_label}:</span>
@@ -169,3 +168,17 @@ const socials = [
   </div>
 </footer>
 
+
+<style>
+  .dv-footer { background: #fff; color: #263d30; font-size: .875rem; line-height: 1.6; border-top: 1px solid #e5e7eb; }
+  .dv-footer .text-ink-soft { color: #5b675f; }
+  .dv-footer .text-sea-deep { color: #1b5e20; }
+  .dv-footer h3 { color: #246b31; font-size: .875rem; margin-bottom: .6rem; }
+  .dv-footer a:hover { color: #27822a; }
+  .dv-footer-contact { border-bottom: 1px solid #e5e7eb; }
+  .dv-footer-contact .dv-btn { color: #1b5e20; }
+  .dv-footer .dv-copyright { background: #f5f7f4; color: #5b675f; font-size: .8rem; }
+  .dv-footer li a { display: inline-block; padding-block: .1rem; }
+  .dv-footer a.dv-footer-hotline { padding: .6rem 1rem; background: var(--color-accent); color: white; font-size: .875rem; }
+  .dv-footer a.dv-footer-hotline:hover { color: white; }
+</style>
