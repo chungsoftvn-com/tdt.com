@@ -1,8 +1,8 @@
 {
-  "hero_kicker": "Cùng bạn đi khắp năm châu",
-  "hero_title": "Công ty du lịch Đồng Nai – Tour trong nước, quốc tế & Teambuilding",
+  "hero_kicker": "",
+  "hero_title": "Today Tourist – Công ty du lịch tại Thành phố Đồng Nai – Tour trong nước, quốc tế & Teambuilding",
   "hero_text": "Hơn 15 năm tổ chức tour trọn gói, teambuilding – gala dinner cho khách lẻ, gia đình, doanh nghiệp, trường học, cơ quan và đoàn thể. Khởi hành từ Biên Hòa / TP. Đồng Nai – TP.HCM và các tỉnh, thiết kế chương trình theo yêu cầu, báo giá trong ngày.",
-  "hero_cta_primary": "Khám phá tour",
+  "hero_cta_primary": "Đặt tour ngay",
   "hero_cta_secondary": "Đặt tour ngay",
   "stats_years": "15+",
   "stats_years_label": "Năm kinh nghiệm",
@@ -171,6 +171,56 @@
       "text": "Hỗ trợ vé nội địa, quốc tế và phòng nghỉ theo nhu cầu chuyến đi.",
       "image": "xuat-hoa-don-vat-ve-may-bay-doanh-nghiep-v2.jpg",
       "path": "ve-may-bay"
+    }
+  ],
+  "hero_slides": [
+    {
+      "image": "news/hanh-trinh-quy-nhon-phu-yen-4n3d-06-06-1.jpg",
+      "alt": "Đoàn khách TodayTourist trong hành trình Quy Nhơn – Phú Yên"
+    },
+    {
+      "image": "news/hanh-trinh-phan-thiet-2n1d-08-08-1.jpg",
+      "alt": "Hành trình Phan Thiết cùng TodayTourist"
+    },
+    {
+      "image": "news/hanh-trinh-nha-trang-3n2d-06-17-1.jpg",
+      "alt": "Hành trình Nha Trang cùng TodayTourist"
+    },
+    {
+      "image": "news/hanh-trinh-ninh-chu-vinh-hy-06-21-1.jpg",
+      "alt": "Hành trình Ninh Chữ – Vĩnh Hy cùng TodayTourist"
+    },
+    {
+      "image": "news/hanh-trinh-binh-hung-2n2d-07-26-1.jpg",
+      "alt": "Hành trình Bình Hưng cùng TodayTourist"
+    },
+    {
+      "image": "news/hanh-trinh-da-lat-3n3d-05-31-1.jpg",
+      "alt": "Hành trình Đà Lạt cùng TodayTourist"
+    },
+    {
+      "image": "news/hanh-trinh-kham-pha-mien-bac-7n6d-04-20-1.jpg",
+      "alt": "Hành trình khám phá miền Bắc cùng TodayTourist"
+    },
+    {
+      "image": "news/hanh-trinh-kham-pha-mien-tay-can-tho-soc-trang-bac-lieu-ca-m-06-07-1.jpg",
+      "alt": "Hành trình khám phá miền Tây cùng TodayTourist"
+    },
+    {
+      "image": "news/hanh-trinh-happy-farm-06-25-1.jpg",
+      "alt": "Hoạt động trải nghiệm Happy Farm cùng TodayTourist"
+    },
+    {
+      "image": "news/hanh-trinh-hoc-tap-trai-nghiem-07-15-3.jpg",
+      "alt": "Hành trình học tập trải nghiệm cùng TodayTourist"
+    },
+    {
+      "image": "news/hanh-trinh-vung-tau-2n1d-06-28-1.jpg",
+      "alt": "Hành trình Vũng Tàu cùng TodayTourist"
+    },
+    {
+      "image": "news/together-we-win-03-18-1.jpg",
+      "alt": "Hoạt động gắn kết tập thể cùng TodayTourist"
     }
   ]
 }
