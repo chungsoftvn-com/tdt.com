@@ -35,10 +35,29 @@ async function download(value, hops = 0) {
 }
 const url = new URL(`https://graph.facebook.com/v21.0/${FB_PAGE_ID}/posts`);
 url.searchParams.set('fields', 'id,full_picture,permalink_url,message,created_time'); url.searchParams.set('limit', '25');
-const res = await fetch(url, { headers: { Authorization: `Bearer ${FB_PAGE_TOKEN}` }, signal: AbortSignal.timeout(20000) });
-if (!res.ok) throw new Error(`Facebook API returned ${res.status}; check Page permissions/token`);
-const payload = await res.json();
-const posts = (Array.isArray(payload.data) ? payload.data : []).filter(p => p.full_picture && p.permalink_url).slice(0, 5);
+// Rebuild each request on the trusted Graph origin; never follow a paging URL
+// containing credentials or forward the Page token to another host.
+const posts = []; const seenIds = new Set(); const seenCursors = new Set();
+for (let page = 0; page < 100; page++) {
+  const res = await fetch(url, {
+    headers: { Authorization: `Bearer ${FB_PAGE_TOKEN}` },
+    redirect: 'error', signal: AbortSignal.timeout(20000),
+  });
+  if (!res.ok) throw new Error(`Facebook API returned ${res.status}; check Page permissions/token`);
+  const payload = await res.json();
+  if (payload.error || !Array.isArray(payload.data)) throw new Error('Invalid Facebook API response; gallery preserved');
+  for (const post of payload.data) {
+    if (post?.full_picture && post.permalink_url && !seenIds.has(post.id)) {
+      posts.push(post); seenIds.add(post.id);
+      if (posts.length === 5) break;
+    }
+  }
+  if (posts.length === 5 || !payload.paging?.next) break;
+  const after = payload.paging?.cursors?.after;
+  if (typeof after !== 'string' || !after || seenCursors.has(after)) throw new Error('Invalid Facebook pagination; gallery preserved');
+  if (page === 99) throw new Error('Facebook pagination limit reached; gallery preserved');
+  seenCursors.add(after); url.searchParams.set('after', after);
+}
 if (!posts.length) throw new Error('No image posts returned; existing gallery preserved');
 const jsonPath = join(root, 'content/vi/facebook.json');
 const old = JSON.parse(await readFile(jsonPath, 'utf8'));
