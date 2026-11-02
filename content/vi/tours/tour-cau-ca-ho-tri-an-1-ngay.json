@@ -6,7 +6,7 @@
   "departure": "TP. Đồng Nai",
   "duration": "1 ngày",
   "price": "Liên hệ báo giá",
-  "image": "",
+  "image": "tour-cau-ca-ho-tri-an-1-ngay-cover.jpg",
   "desc": "Tour câu cá trải nghiệm hồ Trị An 1 ngày cho nhóm bạn, công ty, gia đình: không câu đêm, hướng dẫn viên đi cùng, bữa trưa ven hồ, về trong ngày.",
   "highlights": [
     "Câu cá trải nghiệm, người mới tham gia được",
@@ -178,5 +178,5 @@
       "text": "Mr. Anh Văn – Zalo/điện thoại 0902 898 726 – Email: lesangtravel@gmail.com"
     }
   ],
-  "hidden": true
+  "hidden": false
 }
