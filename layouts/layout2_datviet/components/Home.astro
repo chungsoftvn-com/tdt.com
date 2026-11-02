@@ -127,14 +127,14 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
         case 'hero':
           return (
             <>
-            <section class="dv-hero-photo overflow-hidden bg-sea-deep text-white">
+            <section class="dv-hero-photo dv-brand-hero overflow-hidden bg-sea-pale text-ink">
               <div class:list={["dv-hero-layout mx-auto max-w-6xl px-5 py-8 sm:py-12", { "dv-hero-text-only": !showHeroSlideshow }]}>
                 <div class="dv-hero-copy">
-                  <h1 class="font-display text-3xl font-bold leading-tight sm:text-4xl">{t.hero_title}</h1>
-                  <p class="mt-4 leading-relaxed text-white/90">{t.hero_text}</p>
+                  <h1 class="font-display text-3xl font-bold leading-tight text-sea-deep sm:text-4xl">{t.hero_title}</h1>
+                  <p class="mt-4 leading-relaxed text-ink-soft">{t.hero_text}</p>
                   <div class="mt-5 flex flex-wrap gap-3">
                     <a href="tel:0913787647" class="dv-btn dv-btn-accent">Hotline: 0913 78 76 47</a>
-                    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn border border-white/70 text-white hover:bg-white/15">Zalo Today Tourist</a>
+                    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn dv-btn-outline">Zalo Today Tourist</a>
                   </div>
                 </div>
                 {showHeroSlideshow && (
