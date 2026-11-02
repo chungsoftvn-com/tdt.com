@@ -37,7 +37,7 @@
         "Khởi hành: 05h00 ngày đầu, nhận đoàn riêng quanh năm theo lịch hẹn",
         "Phương tiện: xe du lịch 29 chỗ",
         "Quy mô: nhóm riêng 10–16 khách",
-        "Lưu trú: 2 đêm tại Đà Lạt, bố trí phòng theo nhóm bạn và sự đồng thuận của người ở chung",
+        "Lưu trú: 2 đêm tại khách sạn 3 sao ở Đà Lạt, bố trí phòng theo nhóm bạn và sự đồng thuận của người ở chung",
         "Điểm nhấn: cà phê, đi dạo, hoạt động nhóm tự nguyện, bữa tối thân mật",
         "Giờ về: dự kiến đến điểm đón khoảng 18h00–19h00 ngày thứ ba"
       ]
@@ -113,7 +113,7 @@
     {
       "type": "list",
       "items": [
-        "Ăn tối, về nơi lưu trú. Nhóm có thể chơi bài trò chuyện hoặc trò chơi bàn đơn giản nếu cơ sở cho phép.",
+        "Ăn tối, về khách sạn. Nhóm có thể chơi bài trò chuyện hoặc trò chơi bàn đơn giản nếu cơ sở cho phép.",
         "Hoạt động tự nguyện, không hỏi chuyện tình cảm, không ép uống rượu bia. Bạn có thể nghỉ sớm."
       ]
     },
@@ -175,7 +175,7 @@
     {
       "type": "list",
       "items": [
-        "07h00: ăn sáng tại nơi lưu trú.",
+        "07h00: ăn sáng tại khách sạn.",
         "07h45–08h30: khoảng tự do, chụp ảnh nhóm nếu mọi người đồng ý; ai không muốn xuất hiện trong ảnh được chủ động từ chối.",
         "08h30–09h30: thu xếp hành lý, trả phòng và khởi hành về."
       ]
