@@ -118,7 +118,7 @@
       "icon": "sparkles",
       "title": "Tour trong nước",
       "text": "Biển đảo, cao nguyên, hành hương và trải nghiệm từ Đồng Nai, TP.HCM.",
-      "image": "news/hanh-trinh-phan-thiet-2n1d-08-08-2.jpg",
+      "image": "anh-bia-tour-mien-tay-gia-dinh-v2.jpg",
       "path": "tours",
       "query": "domestic"
     },
@@ -134,21 +134,21 @@
       "icon": "users",
       "title": "Tour đoàn & theo yêu cầu",
       "text": "Thiết kế lịch trình riêng cho gia đình, doanh nghiệp và đoàn thể.",
-      "image": "news/hanh-trinh-nghi-duong-gia-dinh-da-lat-nha-trang-1.jpg",
+      "image": "family-day-ngay-hoi-gia-dinh-danh-cho-doanh-nghiep-v2.jpg",
       "path": "dat-tour"
     },
     {
       "icon": "users",
       "title": "Tour học sinh – sinh viên",
       "text": "Học qua trải nghiệm, tham quan và gắn kết tập thể theo lứa tuổi.",
-      "image": "news/hanh-trinh-hoc-tap-trai-nghiem-07-15-3.jpg",
+      "image": "anh-bia-tour-hoc-sinh-mien-tay-v2.jpg",
       "path": "tour-hoc-sinh"
     },
     {
       "icon": "users",
       "title": "Team Building",
       "text": "Chọn địa điểm, trò chơi và kịch bản phù hợp mục tiêu của đoàn.",
-      "image": "news/together-we-win-03-18-1.jpg",
+      "image": "anh-bia-team-building-mien-tay-v2.jpg",
       "path": "to-chuc-team-building"
     },
     {
@@ -162,7 +162,7 @@
       "icon": "car",
       "title": "Cho thuê xe du lịch",
       "text": "Xe 16, 29, 45 chỗ và giường nằm cho du lịch, công tác, đưa đón đoàn.",
-      "image": "xe-todaytourist-02.jpg",
+      "image": "chi-phi-thue-xe-mot-chieu-khu-hoi-va-nhieu-ngay-v2.jpg",
       "path": "cho-thue-xe"
     },
     {
