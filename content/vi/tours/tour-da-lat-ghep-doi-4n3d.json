@@ -11,7 +11,7 @@
   "highlights": [
     "Mỗi tuần một đoàn nhỏ 10 nam + 10 nữ, chọn ngẫu nhiên từ danh sách đăng ký",
     "Nam – nữ ở phòng riêng, khách sạn 3 sao, mỗi buổi chỉ một điểm tham quan",
-    "Minigame làm quen trên xe, dạo Vườn hoa Thành phố và tự do dạo Quảng trường Lâm Viên buổi tối",
+    "Minigame làm quen trên xe, check-in Quảng trường Lâm Viên chiều tà và dạo Vườn hoa Thành phố",
     "Giao lưu cồng chiêng Tây Nguyên cùng đồng bào bản địa ngay tại Langbiang Land",
     "Nhà thờ Domaine de Marie và một buổi chiều tự do bắt cặp – thuê xe máy hoặc xe đạp đôi tự khám phá Đà Lạt",
     "Tiệc tối thân mật như gala dinner, giao lưu văn nghệ – karaoke thoải mái, không bắt buộc hát"
@@ -80,7 +80,7 @@
     },
     {
       "type": "h3",
-      "text": "🌸 NGÀY 01: TP. ĐỒNG NAI – BẢO LỘC – ĐÀ LẠT – TỰ DO DẠO QUẢNG TRƯỜNG LÂM VIÊN"
+      "text": "🌸 NGÀY 01: TP. ĐỒNG NAI – BẢO LỘC – ĐÀ LẠT – CHECK-IN QUẢNG TRƯỜNG LÂM VIÊN"
     },
     {
       "type": "p",
@@ -100,11 +100,17 @@
     },
     {
       "type": "p",
-      "text": "🌆 <strong>Buổi chiều:</strong> Nghỉ ngơi tại khách sạn sau hành trình dài, nạp lại năng lượng cho buổi tối."
+      "text": "🌆 <strong>Buổi chiều:</strong> Nghỉ ngơi tại khách sạn, nạp lại năng lượng sau hành trình dài. Khoảng <strong>17h00</strong>, xe đưa đoàn đến Quảng trường Lâm Viên chụp hình check-in và dạo chơi khoảng 1 tiếng:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Quảng trường Lâm Viên – biểu tượng trung tâm thành phố Đà Lạt với kiến trúc tháp Đồi Cỏ độc đáo mô phỏng dãy núi Langbiang, không gian xanh khoáng đạt bên hồ Xuân Hương thơ mộng, lúc chiều tà rất hợp để chụp ảnh và làm quen"
+      ]
     },
     {
       "type": "p",
-      "text": "🌙 <strong>Buổi tối:</strong> Ăn tối tại nhà hàng. Sau đó quý khách tự đi dạo Quảng trường Lâm Viên – tháp Đồi Cỏ độc đáo mô phỏng dãy núi Langbiang, không gian bên hồ Xuân Hương về đêm – hoặc ghé chợ đêm Đà Lạt, thưởng thức sữa đậu nành nóng, bánh tráng nướng, ngô nướng, khoai lang nướng, đồ nướng; có thể thuê xe đạp đôi dạo quanh hồ. Nghỉ đêm tại Đà Lạt."
+      "text": "🌙 <strong>Buổi tối:</strong> Xe đưa đoàn đi ăn tối tại nhà hàng. Sau bữa tối, quý khách tự do dạo chợ đêm Đà Lạt, thưởng thức sữa đậu nành nóng, bánh tráng nướng, ngô nướng, khoai lang nướng, đồ nướng hoặc thuê xe đạp đôi dạo quanh hồ Xuân Hương. Nghỉ đêm tại Đà Lạt."
     },
     {
       "type": "h3",
