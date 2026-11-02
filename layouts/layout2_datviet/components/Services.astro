@@ -37,12 +37,9 @@ const photoPool = [
     .map((x) => x.image),
 ];
 
-const services = [
-  { icon: 'plane', title: t.service_ticket_title, text: t.service_ticket_text, image: t.service_ticket_image, url: href(lang, 've-may-bay') },
-  { icon: 'car', title: t.service_car_title, text: t.service_car_text, image: t.service_car_image, url: href(lang, 'cho-thue-xe') },
-  { icon: 'users', title: t.service_team_title, text: t.service_team_text, image: t.service_team_image, url: href(lang, 'to-chuc-team-building') },
-  { icon: 'sparkles', title: t.service_custom_title, text: t.service_custom_text, image: t.service_custom_image, url: href(lang, 'dat-tour') },
-];
+const services = (Array.isArray(t.service_cards) ? t.service_cards : []).map((s) => ({
+  ...s, url: s.query ? `${href(lang, 'tim-tour')}?region=${s.query}` : href(lang, s.path),
+}));
 ---
 
 <section class="bg-white px-5 py-12">
@@ -50,7 +47,7 @@ const services = [
     <div class="dv-head">
       <h2>{t.services_title}</h2>
     </div>
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {
         services.map((s, i) => (
           <article class="dv-svc" data-reveal style={`--reveal-delay:${i * 0.06}s`}>

@@ -106,6 +106,10 @@ const departures = [...new Set(tours.map((x) => x.departure || '').filter(Boolea
     }
 
     [q, dest, kindSel, regionSel, depSel].forEach((el) => el && el.addEventListener('input', apply));
+    const params = new URLSearchParams(window.location.search);
+    q.value = params.get('q') || '';
+    const initialKind = params.get('region') || params.get('kind') || '';
+    if (['domestic', 'international'].includes(initialKind)) kindSel.value = initialKind;
     apply();
   </script>
 </BaseLayout>

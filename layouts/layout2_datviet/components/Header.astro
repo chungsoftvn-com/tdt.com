@@ -33,6 +33,7 @@ const regionsOf = (type: string) => {
 
 const domestic = regionsOf('domestic');
 const intl = regionsOf('international');
+const railwayCount = tours.filter((x) => x.slug.includes('-tau-hoa-')).length;
 
 type NavItem = {
   label: string;
@@ -49,11 +50,11 @@ const navItems: NavItem[] = [
       {
         title: t.region_domestic,
         all: `${href(lang, 'tours')}?region=domestic`,
-        items: domestic.map((r) => ({
+        items: [{ name: 'Tour tàu hỏa / xe lửa', url: `${href(lang, 'tours')}?region=railway`, count: railwayCount }, ...domestic.map((r) => ({
           name: r.name,
           url: href(lang, `tours/khu-vuc/${r.slug}`),
           count: r.count,
-        })),
+        }))],
       },
     ],
   },
@@ -72,6 +73,7 @@ const navItems: NavItem[] = [
       },
     ],
   },
+  { label: 'Tour đặc biệt', url: `${href(lang, 'tours')}?region=special` },
   // Trang ĐẶT TOUR / TÌM TOUR không còn là mục menu (2026-10): khách xem tour rồi
   // bấm CTA "Đặt tour" ở cuối thanh menu, còn 2 chỗ trước đây dành cho Thuê xe &
   // Vé máy bay (trang đã có sẵn: /vi/cho-thue-xe/, /vi/ve-may-bay/).
@@ -79,11 +81,15 @@ const navItems: NavItem[] = [
   { label: t.nav_tickets, url: href(lang, 've-may-bay') },
   { label: t.nav_news, url: href(lang, 'tin-tuc') },
   { label: t.nav_testimonials, url: href(lang, 'y-kien-khach-hang') },
-  { label: t.nav_partners, url: href(lang, 'doi-tac') },
-  { label: t.nav_about, url: href(lang, 'about') },
-  { label: t.nav_contact, url: href(lang, 'contact') },
-  { label: t.nav_recruit, url: href(lang, 'tuyen-dung') },
-  { label: t.nav_directions, url: href(lang, 'chi-duong') },
+  { label: 'Về chúng tôi', url: href(lang, 'about'), mega: [{
+    title: 'Về TodayTourist', all: href(lang, 'about'), items: [
+      { name: t.nav_about, url: href(lang, 'about'), count: 0 },
+      { name: t.nav_partners, url: href(lang, 'doi-tac'), count: 0 },
+      { name: t.nav_contact, url: href(lang, 'contact'), count: 0 },
+      { name: t.nav_recruit, url: href(lang, 'tuyen-dung'), count: 0 },
+      { name: t.nav_directions, url: href(lang, 'chi-duong'), count: 0 },
+    ],
+  }] },
 ];
 
 const isActive = (url: string) => {
@@ -117,9 +123,7 @@ const socials = [
   { label: t.footer_tiktok || 'TikTok', url: asUrl(t.social_tiktok) },
   {
     label: t.footer_zalo || 'Zalo',
-    url:
-      asUrl(t.social_zalo) ||
-      `https://zalo.me/${String(t.zalo || t.hotline || '').replace(/[^0-9]/g, '')}`,
+    url: 'https://zalo.me/0902898726',
   },
 ].filter((s) => s.url);
 const searchPlaceholder = t.header_search_placeholder;
@@ -184,6 +188,7 @@ const searchPlaceholder = t.header_search_placeholder;
         />
         <button type="submit" class="dv-search-btn">{t.nav_find_tour}</button>
       </form>
+      <a href={href(lang, 'dat-tour')} class="dv-btn dv-btn-accent hidden shrink-0 !px-4 !py-2 md:inline-flex">{t.cta_book}</a>
 
       <div class="flex items-center gap-3">
         {/* Hotline chỉ hiển thị 1 lần ở thanh trên cùng (tầng 1) — bỏ ô lặp lại ở đây. */}
@@ -209,8 +214,8 @@ const searchPlaceholder = t.header_search_placeholder;
           {
             navItems.map((item) => (
               <li class="dv-nav-item shrink-0" data-active={isActive(item.url) ? 'true' : 'false'}>
-                <a href={item.url} aria-current={isActive(item.url) ? 'page' : undefined}>
-                  {item.label}
+                <a href={item.url} aria-label={item.url === href(lang) ? t.nav_home : undefined} title={item.url === href(lang) ? t.nav_home : undefined} aria-current={isActive(item.url) ? 'page' : undefined}>
+                  {item.url === href(lang) ? <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 10 9-7 9 7v10H7V10h10v10" /></svg> : item.label}
                 </a>
                 {item.mega && (
                   <div class="dv-mega">
@@ -222,7 +227,7 @@ const searchPlaceholder = t.header_search_placeholder;
                         {group.items.map((sub) => (
                           <a href={sub.url}>
                             <span>{sub.name}</span>
-                            <span class="dv-mega-count">({sub.count})</span>
+                            {sub.count > 0 && <span class="dv-mega-count">({sub.count})</span>}
                           </a>
                         ))}
                       </div>
@@ -240,7 +245,7 @@ const searchPlaceholder = t.header_search_placeholder;
               aria-expanded="false"
               class="tt-hidden block px-3 py-3 text-sm font-bold tracking-widest text-white"
             >
-              •••
+              Thêm ▾
             </button>
             <div
               data-nav-more-menu
@@ -250,9 +255,7 @@ const searchPlaceholder = t.header_search_placeholder;
           </li>
         </ul>
       </nav>
-      <a href={href(lang, 'dat-tour')} class="dv-btn dv-btn-accent my-1.5 shrink-0 !py-2">
-        {t.cta_book}
-      </a>
+
     </div>
   </div>
 
@@ -268,6 +271,7 @@ const searchPlaceholder = t.header_search_placeholder;
       />
       <button type="submit" class="dv-search-btn">{t.nav_find_tour}</button>
     </form>
+    <a href={href(lang, 'dat-tour')} class="dv-btn dv-btn-accent mb-3">{t.cta_book}</a>
     <nav aria-label={t.nav_mobile_label}>
       <ul class="space-y-0.5">
         {
@@ -286,7 +290,7 @@ const searchPlaceholder = t.header_search_placeholder;
                   {item.mega[0].items.map((sub) => (
                     <li>
                       <a href={sub.url} class="block py-1.5 text-xs text-white/90">
-                        {sub.name} ({sub.count})
+                        {sub.name} {sub.count > 0 ? `(${sub.count})` : ''}
                       </a>
                     </li>
                   ))}

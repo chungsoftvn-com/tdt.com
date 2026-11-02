@@ -20,6 +20,77 @@ interface Props {
 const { content = [] } = Astro.props;
 const blocks = Array.isArray(content) ? content : [];
 
+// Reuse existing route photographs only on railway tour pages.
+const railwayPage = Astro.url.pathname.includes('-tau-hoa-');
+const railwayPhotos = {
+  "/content/vi/images/thap-ba-ponagar-nha-trang-todaytourist.jpg": {
+    "src": "/content/vi/images/thap-ba-ponagar-nha-trang-1.jpg.webp",
+    "alt": "Tháp Bà Ponagar, Nha Trang"
+  },
+  "/content/vi/images/bien-nha-trang-todaytourist.jpg": {
+    "src": "/content/vi/images/pasted-1790521184515-0.jpg",
+    "alt": "Biển Nha Trang và Tháp Trầm Hương"
+  },
+  "/content/vi/images/vinh-hy-hang-rai-ninh-thuan-todaytourist.jpg": {
+    "src": "/content/vi/images/pasted-1790495590388-2.jpg",
+    "alt": "Trải nghiệm tham quan biển Vĩnh Hy"
+  },
+  "/content/vi/images/bien-ninh-chu-todaytourist.jpg": {
+    "src": "/content/vi/images/pasted-1790495590387-1.jpg",
+    "alt": "Biển Ninh Chữ trong hành trình Ninh Chữ – Vĩnh Hy"
+  },
+  "/content/vi/images/lang-gom-bau-truc-todaytourist.jpg": {
+    "src": "/content/vi/images/lang-gom-bau-truc-ivivu-1.jpg",
+    "alt": "Không gian làng gốm Bàu Trúc"
+  },
+  "/content/vi/images/ganh-da-dia-phu-yen-todaytourist.jpg": {
+    "src": "/content/vi/images/pasted-1791600322377-3.jpg",
+    "alt": "Gành Đá Đĩa, Phú Yên"
+  },
+  "/content/vi/images/pho-co-hoi-an-chua-cau-todaytourist.jpg": {
+    "src": "/content/vi/images/pasted-1791608978850-1.jpg",
+    "alt": "Chùa Cầu và phố cổ Hội An"
+  },
+  "/content/vi/images/dai-noi-hue-todaytourist.jpg": {
+    "src": "/content/vi/images/pasted-1791609007726-1.jpg",
+    "alt": "Đại Nội Huế"
+  },
+  "/content/vi/images/chua-thien-mu-hue-todaytourist.jpg": {
+    "src": "/content/vi/images/pasted-1791609007726-0.jpg",
+    "alt": "Chùa Thiên Mụ, Huế"
+  },
+  "/content/vi/images/bau-trang-mui-ne-todaytourist.jpg": {
+    "src": "/content/vi/images/pasted-1790428338266-1.jpg",
+    "alt": "Trải nghiệm xe Jeep tại đồi cát Bàu Trắng"
+  }
+};
+const railwayGroups = {
+  "phan-thiet": {
+    "src": "/content/vi/images/news/hanh-trinh-phan-thiet-2n1d-08-08-2.jpg",
+    "alt": "Đoàn TodayTourist trong một hành trình Phan Thiết"
+  },
+  "phan-rang": {
+    "src": "/content/vi/images/news/hanh-trinh-ninh-chu-vinh-hy-3n2d-1.jpg",
+    "alt": "Đoàn TodayTourist trong một hành trình Ninh Chữ – Vĩnh Hy"
+  },
+  "quy-nhon": {
+    "src": "/content/vi/images/news/hanh-trinh-quy-nhon-phu-yen-4n3d-06-06-1.jpg",
+    "alt": "Đoàn TodayTourist tham quan Kỳ Co, Quy Nhơn"
+  },
+  "nha-trang": {
+    "src": "/content/vi/images/news/hanh-trinh-nghi-duong-gia-dinh-da-lat-nha-trang-1.jpg",
+    "alt": "Khoảnh khắc khách hàng trong hành trình Đà Lạt – Nha Trang"
+  }
+};
+const railwayImage = (tagName, attribs) => {
+  if (!railwayPage) return { tagName, attribs };
+  const group = Object.entries(railwayGroups).find(([key]) => Astro.url.pathname.includes(key))?.[1];
+  const replacement = attribs.src === '/content/vi/images/tau-hoa-ven-bien-todaytourist.jpg'
+    ? group : railwayPhotos[attribs.src];
+  return { tagName, attribs: replacement ? { ...attribs, ...replacement } : attribs };
+};
+
+
 /** FAQ JSON-LD follows the visible question/answer blocks on selected landing pages. */
 const faqPaths = new Set([
   '/vi/tours/tour-vung-tau-1-ngay',
@@ -160,6 +231,7 @@ const richHtml = (html) =>
       allowedIframeHostnames: ['www.youtube.com', 'youtube.com', 'www.google.com', 'maps.google.com', 'player.vimeo.com'],
       transformTags: {
         a: linkTransform,
+        img: railwayImage,
       },
     }),
   );

@@ -17,6 +17,7 @@ interface Props {
 const { lang, item } = Astro.props;
 const t = getContent(lang, 'common');
 const url = href(lang, `tin-tuc/${item.slug}`);
+const imageUrl = !item.image ? '/content/vi/images/placeholder-tour.svg' : /^(https?:|\/)/.test(item.image) ? item.image : `/content/vi/images/${item.image}`;
 ---
 
 <article
@@ -27,7 +28,7 @@ const url = href(lang, `tin-tuc/${item.slug}`);
     {
       item.image ? (
         <img
-          src={item.image ? `/content/vi/images/${item.image}` : '/content/vi/images/placeholder-tour.svg'}
+          src={imageUrl}
           alt={item.title}
           loading="lazy"
           decoding="async"
