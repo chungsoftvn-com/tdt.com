@@ -1,0 +1,35 @@
+name: Sync Facebook feed
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Lấy ảnh mới từ Facebook
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: node site/scripts/sync-facebook.mjs
+      - name: Commit nếu có thay đổi và chạy build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add content/vi/facebook.json content/vi/images/facebook
+          if git diff --cached --quiet; then echo "Không có thay đổi."; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Đồng bộ ảnh mới từ Facebook"
+          git push
+          gh workflow run build.yml
