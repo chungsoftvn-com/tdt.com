@@ -356,7 +356,8 @@
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-hot);
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .dv-price-old {
   font-size: 0.8rem;
@@ -696,4 +697,13 @@
 }
 .dv-strip-item:hover .dv-strip-cap {
   opacity: 1;
+}
+
+/* V79: long price notes must wrap inside cards, including search results. */
+.dv-price-row > :first-child {
+  flex-shrink: 0;
+}
+.dv-price-row > :last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
