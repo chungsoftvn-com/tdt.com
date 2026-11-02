@@ -14,6 +14,9 @@ const c = getContent(lang, 'common');
 const tours = getTours(lang);
 const domestic = tours.filter((x) => x.region === 'domestic');
 const international = tours.filter((x) => x.region === 'international');
+const railway = tours.filter((x) => x.slug.includes('-tau-hoa-'));
+// Theme groups supplement geographical regions; future tours can set tour_theme.
+const special = tours.filter((x) => x.tour_theme === 'special' || /lgbt|chua-lanh|hen-ho|trekking|tham-nguoi-than/.test(x.slug));
 
 // KHU VỰC = các trang thật '/<lang>/tours/khu-vuc/<slug>/' (khác bộ lọc client-side
 // bên dưới chỉ lọc trong trang này). Slug lấy từ region_name bản VI — xem
@@ -28,6 +31,8 @@ const filters = [
   { key: 'all', label: c.region_all, list: tours },
   { key: 'domestic', label: c.region_domestic, list: domestic },
   { key: 'international', label: c.region_international, list: international },
+  { key: 'railway', label: 'Tour tàu hỏa / xe lửa', list: railway },
+  { key: 'special', label: 'Tour đặc biệt', list: special },
 ];
 ---
 
@@ -54,6 +59,7 @@ const filters = [
         }
       </nav>
 
+      <p class="mb-6 text-center text-ink-soft">Chọn tour theo điểm đến hoặc trải nghiệm. Tour đặc biệt hiện có LGBT+ và chữa lành; các hành trình mới sẽ được bổ sung khi sẵn sàng.</p>
       <!-- Region filter -->
       <div data-tour-filters class="mb-10 flex flex-wrap justify-center gap-2" role="tablist" aria-label={t.list_title}>
         {
@@ -87,7 +93,7 @@ const filters = [
   <script>
     const btns = document.querySelectorAll<HTMLButtonElement>('[data-tour-filters] [data-filter]');
     const grids = document.querySelectorAll<HTMLElement>('[data-tour-grids] [data-region]');
-    const allowed = new Set(['all', 'domestic', 'international']);
+    const allowed = new Set(['all', 'domestic', 'international', 'railway', 'special']);
 
     function applyFilter(key: string) {
       const selected = allowed.has(key) ? key : 'all';
@@ -98,7 +104,7 @@ const filters = [
       });
       grids.forEach((grid) => grid.classList.toggle('hidden', grid.dataset.region !== selected));
       document.querySelectorAll<HTMLElement>('[data-tour-types]').forEach((link) => {
-        const visible = selected === 'all' || link.dataset.tourTypes?.split(' ').includes(selected);
+        const visible = selected === 'all' || ((selected === 'domestic' || selected === 'international') && link.dataset.tourTypes?.split(' ').includes(selected));
         link.style.display = visible ? '' : 'none';
       });
       document.querySelectorAll<HTMLAnchorElement>('header a[href*="?region="]').forEach((link) => {
