@@ -134,7 +134,7 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
                   <p class="mt-4 leading-relaxed text-white/90">{t.hero_text}</p>
                   <div class="mt-5 flex flex-wrap gap-3">
                     <a href="tel:0913787647" class="dv-btn dv-btn-accent">Hotline: 0913 78 76 47</a>
-                    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn border border-white/70 text-white hover:bg-white/15">Zalo Todaytourist</a>
+                    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn border border-white/70 text-white hover:bg-white/15">Zalo Today Tourist</a>
                   </div>
                 </div>
                 {showHeroSlideshow && (
@@ -209,18 +209,18 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
               </div>
             </section>
 
-            {/* Mosaic "Điểm đến nổi bật" — khối ảnh lớn ngay đầu trang */}
+            {/* Điểm đến nổi bật: một hàng thẻ gọn, chú thích tách khỏi ảnh. */}
             {featuredTours.length > 0 && (
-              <section class="bg-white px-5 py-8 sm:py-10">
+              <section class="bg-white px-5 py-6 sm:py-8">
                 <div class="mx-auto max-w-6xl">
                   <div class="dv-head">
                     <h2>{t.featured_destinations_title}</h2>
                     <a href={href(lang, 'tours')}>{t.view_all_tours}</a>
                   </div>
-                  <div class="dv-mosaic">
-                    {featuredTours.map((tour, i) => (
+                  <div class="dv-featured-row" role="region" aria-label="Điểm đến nổi bật" tabindex="0">
+                    {featuredTours.slice(0, 4).map((tour, i) => (
                       <a
-                        class="dv-mosaic-item"
+                        class="dv-featured-card"
                         href={href(lang, `tours/${tour.slug}`)}
                       >
                         <img
@@ -229,7 +229,7 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
                           loading={i === 0 ? 'eager' : 'lazy'}
                           decoding="async"
                         />
-                        <span class="dv-mosaic-cap">
+                        <span class="dv-featured-caption">
                           <strong>{tour.name}</strong>
                           {tour.duration && <em>{tour.duration}</em>}
                         </span>
@@ -509,4 +509,15 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
   .dv-hero-controls button:hover { background: #ffffff20; }
   .dv-hero-controls button:focus-visible { outline: 2px solid white; outline-offset: 3px; }
   [data-hero-count] { min-width: 3.5rem; text-align: center; font-variant-numeric: tabular-nums; }
+
+  .dv-featured-row { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: .4rem; scrollbar-width: thin; }
+  .dv-featured-card { display: flex; flex: 0 0 80%; min-width: 0; flex-direction: column; scroll-snap-align: start; overflow: hidden; border: 1px solid #00000014; border-radius: var(--radius-card); background: white; color: var(--color-ink); }
+  .dv-featured-card img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #f5f5f5; }
+  .dv-featured-caption { display: flex; flex: 1; flex-direction: column; gap: .45rem; padding: .75rem; }
+  .dv-featured-caption strong { font-size: .86rem; line-height: 1.5; overflow-wrap: anywhere; }
+  .dv-featured-caption em { margin-top: auto; font-size: .8rem; font-style: normal; color: var(--color-ink-soft); }
+  .dv-featured-card:hover strong { color: var(--color-sea-deep); }
+  .dv-featured-row:focus-visible { outline: 2px solid var(--color-sea); outline-offset: 3px; }
+  @media (min-width: 640px) { .dv-featured-card { flex-basis: 45%; } }
+  @media (min-width: 1024px) { .dv-featured-card { flex-basis: calc((100% - 3rem) / 4); } }
 </style>
