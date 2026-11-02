@@ -29,10 +29,10 @@
   "services_text": "Đa dạng dịch vụ trọn gói, đáp ứng mọi nhu cầu của khách lẻ, gia đình, doanh nghiệp và đoàn thể.",
   "service_ticket_title": "Vé máy bay",
   "service_ticket_text": "Đại lý vé máy bay nội địa & quốc tế với giá cạnh tranh, đặt vé nhanh chóng.",
-  "service_ticket_image": "ve-may-bay.webp",
+  "service_ticket_image": "xuat-hoa-don-vat-ve-may-bay-doanh-nghiep-v2.jpg",
   "service_car_title": "Cho thuê xe",
-  "service_car_text": "Xe 4 – 7 – 16 – 29 – 45 chỗ và giường nằm, phục vụ du lịch, công tác, đưa đón.",
-  "service_car_image": "thue-xe.webp",
+  "service_car_text": "Xe 16, 29, 45 chỗ và giường nằm cho du lịch, công tác, đưa đón đoàn.",
+  "service_car_image": "xe-todaytourist-02.jpg",
   "service_team_title": "Teambuilding & sự kiện",
   "service_team_text": "Tổ chức teambuilding, gala dinner, sự kiện nội bộ cho doanh nghiệp và đoàn thể.",
   "service_team_image": "news/together-we-win-03-18-1.jpg",
@@ -54,10 +54,10 @@
   "value_3_text": "Giá cả rõ ràng, không phát sinh, luôn đảm bảo quyền lợi tốt nhất cho khách hàng.",
   "value_4_title": "Khách hàng là trung tâm",
   "value_4_text": "Nụ cười của khách hàng là nền tảng cho con đường phát triển bền vững.",
-  "cta_kicker": "Bắt đầu ngay",
-  "cta_title": "Sẵn sàng cho chuyến đi tiếp theo?",
-  "cta_text": "Liên hệ ngay với đội ngũ TodayTourist để được tư vấn miễn phí và nhận ưu đãi tốt nhất.",
-  "cta_button": "Liên hệ ngay",
+  "cta_kicker": "LÊN KẾ HOẠCH CHUYẾN ĐI",
+  "cta_title": "Chọn điểm đến, nhận lịch trình hợp ngân sách",
+  "cta_text": "Gửi ngày đi và số khách để TodayTourist tư vấn phương án phù hợp.",
+  "cta_button": "Nhận tư vấn lịch trình",
   "home_blocks": [
     {
       "id": "blk-hero",
@@ -110,5 +110,67 @@
   "facebook_followers": "2K",
   "facebook_followers_label": "người theo dõi",
   "facebook_bio": "TODAY TOURIST - Chuyên Tổ chức Tour Trong nước và Quốc tế - Thuê xe - Team Building",
-  "home_custom_custom-muga04l7": "<p><br></p>"
+  "home_custom_custom-muga04l7": "<p><br></p>",
+  "hero_image": "news/hanh-trinh-quy-nhon-phu-yen-4n3d-06-06-1.jpg",
+  "hero_image_alt": "Đoàn khách TodayTourist trong hành trình Quy Nhơn – Phú Yên",
+  "service_cards": [
+    {
+      "icon": "sparkles",
+      "title": "Tour trong nước",
+      "text": "Biển đảo, cao nguyên, hành hương và trải nghiệm từ Đồng Nai, TP.HCM.",
+      "image": "news/hanh-trinh-phan-thiet-2n1d-08-08-2.jpg",
+      "path": "tours",
+      "query": "domestic"
+    },
+    {
+      "icon": "plane",
+      "title": "Tour quốc tế",
+      "text": "Tư vấn hành trình, hồ sơ và dịch vụ theo từng chương trình.",
+      "image": "tour-han-quoc-5-ngay-4-dem-v2.jpg",
+      "path": "tours",
+      "query": "international"
+    },
+    {
+      "icon": "users",
+      "title": "Tour đoàn & theo yêu cầu",
+      "text": "Thiết kế lịch trình riêng cho gia đình, doanh nghiệp và đoàn thể.",
+      "image": "news/hanh-trinh-nghi-duong-gia-dinh-da-lat-nha-trang-1.jpg",
+      "path": "dat-tour"
+    },
+    {
+      "icon": "users",
+      "title": "Tour học sinh – sinh viên",
+      "text": "Học qua trải nghiệm, tham quan và gắn kết tập thể theo lứa tuổi.",
+      "image": "news/hanh-trinh-hoc-tap-trai-nghiem-07-15-3.jpg",
+      "path": "tour-hoc-sinh"
+    },
+    {
+      "icon": "users",
+      "title": "Team Building",
+      "text": "Chọn địa điểm, trò chơi và kịch bản phù hợp mục tiêu của đoàn.",
+      "image": "news/together-we-win-03-18-1.jpg",
+      "path": "to-chuc-team-building"
+    },
+    {
+      "icon": "sparkles",
+      "title": "Gala Dinner & sự kiện",
+      "text": "Kịch bản, MC và chương trình giao lưu cho doanh nghiệp, đoàn thể.",
+      "image": "gala-dinner-nha-trang-kich-ban-dia-diem-va-chi-phi-v2.jpg",
+      "path": "to-chuc-gala-dinner"
+    },
+    {
+      "icon": "car",
+      "title": "Cho thuê xe du lịch",
+      "text": "Xe 16, 29, 45 chỗ và giường nằm cho du lịch, công tác, đưa đón đoàn.",
+      "image": "xe-todaytourist-02.jpg",
+      "path": "cho-thue-xe"
+    },
+    {
+      "icon": "plane",
+      "title": "Vé máy bay & đặt phòng",
+      "text": "Hỗ trợ vé nội địa, quốc tế và phòng nghỉ theo nhu cầu chuyến đi.",
+      "image": "xuat-hoa-don-vat-ve-may-bay-doanh-nghiep-v2.jpg",
+      "path": "ve-may-bay"
+    }
+  ]
 }
