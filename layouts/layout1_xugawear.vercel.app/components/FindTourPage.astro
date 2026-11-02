@@ -31,30 +31,31 @@ const departures = [...new Set(tours.map((x) => x.departure || '').filter(Boolea
     <div class="mx-auto max-w-6xl">
       <!-- Bộ lọc -->
       <form data-find-form class="mb-10 grid gap-3 rounded-2xl bg-paper p-4 shadow-[var(--shadow-lift-1)] sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
-        <select data-find-kind class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea">
+        <select data-find-kind class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea">
           <option value="">{t.kind_all}</option>
           <option value="domestic">{t.kind_domestic}</option>
           <option value="international">{t.kind_international}</option>
         </select>
-        <select data-find-region class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea">
+        <select data-find-region class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea">
           <option value="">{t.region_all}</option>
           {regions.map((x) => <option value={x}>{x}</option>)}
         </select>
-        <select data-find-dep class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea">
+        <select data-find-dep class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea">
           <option value="">{t.departure_all}</option>
           {departures.map((x) => <option value={x}>{x}</option>)}
         </select>
-        <input data-find-dest type="text" placeholder={t.dest_placeholder} class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
-        <input data-find-q type="search" placeholder={t.search_placeholder} class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-sm text-ink outline-none focus:border-sea" />
+        <input data-find-dest type="text" placeholder={t.dest_placeholder} class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea" />
+        <input data-find-q type="search" placeholder={t.search_placeholder} class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea" />
       </form>
 
       <p data-find-count class="mb-4 text-sm text-ink-soft">
         <span class="font-semibold text-ink">{tours.length}</span> {t.result_count}
       </p>
 
-      <div data-find-grid class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div data-find-grid class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {tours.map((x) => (
           <div
+            class="min-w-0"
             data-tour
             data-name={(x.name || '').toLowerCase()}
             data-desc={(x.desc || '').toLowerCase()}

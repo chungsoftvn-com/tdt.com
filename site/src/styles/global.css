@@ -180,3 +180,12 @@
   .rich-doc table td, .rich-doc table th { @apply border border-ink/15 px-3 py-2; }
   .rich-doc blockquote { @apply my-3 border-l-4 border-sea px-4 py-2 text-ink-soft italic; }
 }
+
+/* V79: keep mobile form controls readable across both themes. */
+@media (max-width: 639px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="submit"]):not([type="button"]),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
