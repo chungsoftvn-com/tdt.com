@@ -12,30 +12,31 @@
    `var(--color-*)` nên ghi đè biến ở đây là đủ để đổi toàn bộ giao diện. */
 :root {
   /* --- Bảng màu --------------------------------------------------------- */
-  --color-sand: #fffaf0;
-  --color-sand-deep: #f5ebd2;
+  --color-sand: #fffdf4;
+  --color-sand-deep: #fff3c2;
   --color-paper: #ffffff;
 
   --color-ink: #283346;
   --color-ink-soft: #586574;
 
   /* Indigo + sky blue from the supplied brand artwork. */
-  --color-sea: #362a77;
-  --color-sea-deep: #28205d;
-  --color-sea-pale: #edf7fc;
-  --color-sea-soft: #3cbded;
+  --color-sea: #2f3093;
+  --color-sea-deep: #23266e;
+  --color-sea-pale: #eaf8fe;
+  --color-sea-soft: #0bafef;
 
   /* Burgundy: tour caps and 2027 guide uniform. */
-  --color-accent: #7b2437;
-  --color-accent-deep: #5b1828;
+  --color-accent: #5a1425;
+  --color-accent-deep: #3e0c19;
   --color-accent-pale: #f8edf0;
 
   /* Burgundy prices / HOT badges, gold highlights. */
-  --color-hot: #7b2437;
-  --color-hot-deep: #5b1828;
-  --color-gold: #e6b647;
-  --color-gold-pale: #fff3cf;
-  --color-gold-deep: #d3a13c;
+  --color-hot: #5a1425;
+  --color-hot-deep: #3e0c19;
+  --color-gold: #f9ca12;
+  --color-gold-pale: #fff7cc;
+  --color-gold-deep: #e9b90a;
+  --color-brand-red: #cc1422;
 
   /* --- Chữ ------------------------------------------------------------- */
   --font-display: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
@@ -283,7 +284,7 @@
   position: absolute;
   left: 0.6rem;
   top: 0.6rem;
-  background: rgb(54 42 119 / 0.96);
+  background: rgb(47 48 147 / 0.96);
   color: #fff;
   border-radius: var(--radius-pill);
   padding: 0.2rem 0.7rem;
@@ -706,7 +707,7 @@
 /* Home refresh: balanced image/text hero and equal destination cards. */
 .dv-hero-layout { display: grid; gap: 2rem; align-items: center; }
 .dv-hero-copy { min-width: 0; }
-.dv-hero-visual { margin: 0; overflow: hidden; border-radius: 1rem; background: #28205d; }
+.dv-hero-visual { margin: 0; overflow: hidden; border-radius: 1rem; background: #23266e; }
 .dv-hero-visual img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .dv-hero-visual figcaption { padding: .55rem 1rem; font-size: .8rem; color: #fff; }
 .dv-mosaic { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; gap: 1rem; }
@@ -750,12 +751,28 @@ h1, h2 { font-family: var(--font-display); }
    Warm pale gold avoids the glare of a saturated yellow page background. */
 .dv-topbar { background: var(--color-accent); }
 .dv-nav { border-bottom: 3px solid var(--color-gold); }
-.dv-brand-hero { background: linear-gradient(115deg, #fff9e9 0%, #f9edc8 55%, #fff7e0 100%); }
-.dv-hero-visual { background: var(--color-accent-deep); box-shadow: 0 0 0 2px var(--color-gold); }
+.dv-brand-hero { background: linear-gradient(115deg, #fffced 0%, #fff4b8 55%, #fff7cc 100%); }
+.dv-hero-visual { background: var(--color-sea); box-shadow: 0 0 0 2px var(--color-gold); }
 .dv-search-btn, .dv-btn-green { background: var(--color-gold); color: var(--color-sea-deep); }
 .dv-search-btn:hover, .dv-btn-green:hover { background: var(--color-gold-deep); color: var(--color-sea-deep); }
 .dv-tab[data-active='true'] { background: var(--color-gold); color: var(--color-sea-deep); }
-.dv-head { border-bottom-color: #e9d7a6; }
-.dv-svc-icon { background: var(--color-gold-pale); color: var(--color-sea-deep); }
+.dv-head { border-bottom-color: #bde8f9; }
+.dv-svc-icon { background: var(--color-sea-pale); color: var(--color-sea); }
 .dv-card-cta { border-color: var(--color-accent); color: var(--color-accent); }
 .dv-card-cta:hover { background: var(--color-accent); color: white; }
+
+/* Logo-led balance: sky blue on larger support surfaces, yellow highlights,
+   deeper burgundy conversion buttons, red matching the wordmark in small badges. */
+.dv-badge-hot { background: var(--color-brand-red); }
+.dv-hero-visual figcaption { background: var(--color-sea); }
+.dv-planning-band { background: linear-gradient(110deg, #eaf8fe, #d7f1fc); border: 1px solid #92d9f5; color: var(--color-ink); }
+.dv-planning-kicker { color: var(--color-brand-red); }
+.dv-planning-title { color: var(--color-sea-deep); }
+.dv-planning-text { color: var(--color-ink-soft); }
+.dv-planning-zalo { background: var(--color-sea); color: white; }
+.dv-planning-zalo:hover { background: var(--color-sea-deep); }
+.dv-planning-hotline { background: var(--color-accent); color: white; border-color: var(--color-accent); }
+.dv-planning-hotline:hover { background: var(--color-accent-deep); color: white; }
+.dv-planning-glow { background: var(--color-gold); opacity: .18; }
+.dv-badge-region { background: var(--color-sea-soft); color: var(--color-sea-deep); }
+.dv-fab-maps { background: var(--color-sea-soft); color: var(--color-sea-deep); }
