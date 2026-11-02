@@ -743,3 +743,6 @@
 .dv-footer .dv-copyright { background: #0b2a1e; font-size: .9rem; }
 .dv-footer li a { display: inline-block; padding-block: .2rem; }
 .dv-footer a[href^="tel:"] { color: #e2f8ae; font-size: 1.1rem; }
+/* Component display rules must not override the mobile hidden CTA. */
+.dv-header a.dv-btn.hidden { display: none; }
+@media (min-width: 768px) { .dv-header a.dv-btn.hidden { display: inline-flex; } }
