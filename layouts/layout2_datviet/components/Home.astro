@@ -46,7 +46,7 @@ const imgOf = (name?: string) =>
       : `/content/vi/images/${name}`;
 const newsWithImage = allNews.filter((n) => n && n.image);
 /** Bỏ 3 bài đã hiện ở khối tin tức để ảnh không trùng nhau trong trang. */
-const galleryItems = newsWithImage.slice(3, 11);
+const galleryItems = newsWithImage.slice(3, 7);
 
 const hotSlugs = Array.isArray(t.hot_tours) ? t.hot_tours : [];
 const hotTours = hotSlugs.length
@@ -323,8 +323,8 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
             <h2>{t.trip_moments_title}</h2>
             <a href={href(lang, 'tin-tuc')}>{c.nav_news}</a>
           </div>
-          <div class="dv-strip">
-            {galleryItems.slice(0, 8).map((n) => (
+          <div class="dv-moments-row">
+            {galleryItems.slice(0, 4).map((n) => (
               <a class="dv-strip-item" href={href(lang, `tin-tuc/${n.slug}`)}>
                 <img src={imgOf(n.image)} alt={n.title} loading="lazy" decoding="async" />
                 <span class="dv-strip-cap">{n.title}</span>
@@ -520,4 +520,9 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
   .dv-featured-row:focus-visible { outline: 2px solid var(--color-sea); outline-offset: 3px; }
   @media (min-width: 640px) { .dv-featured-card { flex-basis: 45%; } }
   @media (min-width: 1024px) { .dv-featured-card { flex-basis: calc((100% - 3rem) / 4); } }
+
+  .dv-moments-row { display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x proximity; padding-bottom: .3rem; }
+  .dv-moments-row .dv-strip-item { flex: 0 0 80%; min-width: 0; aspect-ratio: 16 / 10; scroll-snap-align: start; }
+  @media (min-width: 640px) { .dv-moments-row .dv-strip-item { flex-basis: 45%; } }
+  @media (min-width: 1024px) { .dv-moments-row .dv-strip-item { flex-basis: calc((100% - 2.25rem) / 4); } }
 </style>
