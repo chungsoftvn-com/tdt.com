@@ -133,9 +133,8 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
                   <h1 class="font-display text-3xl font-bold leading-tight sm:text-4xl">{t.hero_title}</h1>
                   <p class="mt-4 leading-relaxed text-white/90">{t.hero_text}</p>
                   <div class="mt-5 flex flex-wrap gap-3">
-                    <a href={href(lang, 'dat-tour')} class="dv-btn dv-btn-accent">{t.hero_cta_primary}</a>
-                    <a href="tel:0913787647" class="dv-btn bg-white text-sea-deep hover:bg-sand">Hotline: 0913 78 76 47</a>
-                    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn border border-white/70 text-white hover:bg-white/15">Zalo Anh Văn</a>
+                    <a href="tel:0913787647" class="dv-btn dv-btn-accent">Hotline: 0913 78 76 47</a>
+                    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn border border-white/70 text-white hover:bg-white/15">Zalo Todaytourist</a>
                   </div>
                 </div>
                 {showHeroSlideshow && (
@@ -502,7 +501,7 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
 <style>
   .dv-hero-layout.dv-hero-text-only { grid-template-columns: 1fr; }
   .dv-hero-stage { aspect-ratio: 3 / 2; overflow: hidden; }
-  .dv-hero-stage img { width: 100%; height: 100%; object-fit: cover; }
+  .dv-hero-stage img { width: 100%; height: 100%; object-fit: contain; }
   .dv-hero-stage img[hidden] { display: none; }
   .dv-hero-visual .dv-hero-caption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem; }
   .dv-hero-controls { display: flex; align-items: center; gap: .45rem; }
