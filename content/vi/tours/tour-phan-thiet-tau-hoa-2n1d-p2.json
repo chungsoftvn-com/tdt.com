@@ -84,7 +84,7 @@
     },
     {
       "type": "p",
-      "text": "📍 <strong>Buổi trưa:</strong> Xe đón đoàn tại ga, ghé Silk Road Mũi Né nếu đủ thời gian rồi ăn trưa tại nhà hàng. Về nơi lưu trú nhận phòng sau 14:00 (phòng sẵn sàng sớm thì nhận sớm, chưa thì gửi hành lý và nghỉ khu vực chung)."
+      "text": "📍 <strong>Buổi trưa:</strong> Xe đón đoàn tại ga, ghé Silk Road Mũi Né nếu đủ thời gian (điểm tự chọn, có thu vé vào cổng – xem mục Giá tour không bao gồm) rồi ăn trưa tại nhà hàng. Về nơi lưu trú nhận phòng sau 14:00 (phòng sẵn sàng sớm thì nhận sớm, chưa thì gửi hành lý và nghỉ khu vực chung)."
     },
     {
       "type": "html",
@@ -175,7 +175,7 @@
     },
     {
       "type": "p",
-      "text": "✅ Vé tham quan các điểm theo chương trình tiêu chuẩn"
+      "text": "✅ Vé tham quan các điểm theo chương trình tiêu chuẩn (trừ vé vào cổng Silk Road Mũi Né)"
     },
     {
       "type": "p",
@@ -192,6 +192,10 @@
     {
       "type": "h3",
       "text": "❌ GIÁ TOUR KHÔNG BAO GỒM"
+    },
+    {
+      "type": "p",
+      "text": "❌ Vé vào cổng Silk Road Mũi Né (điểm tự chọn): 149.000đ/người lớn; 109.000đ/trẻ cao từ 1,2–1,4m; trẻ dưới 1,2m miễn phí vào cửa; giá đã gồm 01 nước uống hoặc 01 cây kem (theo công bố của đơn vị, có thể thay đổi)"
     },
     {
       "type": "p",
