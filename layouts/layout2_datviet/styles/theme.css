@@ -12,8 +12,8 @@
    `var(--color-*)` nên ghi đè biến ở đây là đủ để đổi toàn bộ giao diện. */
 :root {
   /* --- Bảng màu --------------------------------------------------------- */
-  --color-sand: #f5f8fc;
-  --color-sand-deep: #e6edf5;
+  --color-sand: #fffaf0;
+  --color-sand-deep: #f5ebd2;
   --color-paper: #ffffff;
 
   --color-ink: #283346;
@@ -33,7 +33,9 @@
   /* Burgundy prices / HOT badges, gold highlights. */
   --color-hot: #7b2437;
   --color-hot-deep: #5b1828;
-  --color-gold: #f6b817;
+  --color-gold: #e6b647;
+  --color-gold-pale: #fff3cf;
+  --color-gold-deep: #d3a13c;
 
   /* --- Chữ ------------------------------------------------------------- */
   --font-display: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
@@ -743,3 +745,17 @@ h1, h2 { font-family: var(--font-display); }
 @media (prefers-reduced-motion: reduce) {
   .dv-card, .dv-svc, .dv-btn { transition: none; }
 }
+
+/* 03/11 refinement: warmer yellow surfaces and a clearer burgundy presence.
+   Warm pale gold avoids the glare of a saturated yellow page background. */
+.dv-topbar { background: var(--color-accent); }
+.dv-nav { border-bottom: 3px solid var(--color-gold); }
+.dv-brand-hero { background: linear-gradient(115deg, #fff9e9 0%, #f9edc8 55%, #fff7e0 100%); }
+.dv-hero-visual { background: var(--color-accent-deep); box-shadow: 0 0 0 2px var(--color-gold); }
+.dv-search-btn, .dv-btn-green { background: var(--color-gold); color: var(--color-sea-deep); }
+.dv-search-btn:hover, .dv-btn-green:hover { background: var(--color-gold-deep); color: var(--color-sea-deep); }
+.dv-tab[data-active='true'] { background: var(--color-gold); color: var(--color-sea-deep); }
+.dv-head { border-bottom-color: #e9d7a6; }
+.dv-svc-icon { background: var(--color-gold-pale); color: var(--color-sea-deep); }
+.dv-card-cta { border-color: var(--color-accent); color: var(--color-accent); }
+.dv-card-cta:hover { background: var(--color-accent); color: white; }
