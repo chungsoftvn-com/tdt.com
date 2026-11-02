@@ -1,16 +1,9 @@
-/* ============================================================================
-   Theme "DatViet" — layout2_datviet
-   ----------------------------------------------------------------------------
-   File này được nạp SAU `global.css` (xem BaseLayout.astro) nên mọi token khai
-   báo lại trong @theme dưới đây sẽ GHI ĐÈ token gốc của layout1.
-
-   Ngôn ngữ thiết kế (tham khảo bố cục các web du lịch Việt Nam, không sao chép
-   nội dung/hình ảnh của bên nào):
-     - Xanh lá là màu thương hiệu (menu, tiêu đề mục, nút chính).
-     - Nền xám nhạt #f4f2f3 + thẻ trắng bo góc 10px, đổ bóng nhẹ.
-     - Nút bo 4px, nhãn bo 30px (pill), font Open Sans.
-     - Hồng #da0b65 cho CTA phụ, đỏ cam #ff3c00 cho giá / nhãn HOT.
-   ========================================================================== */
+/* TodayTourist public theme — brand refresh approved 03/11/2026.
+   Preserve the original logo. Indigo and sky blue come from its artwork;
+   gold is an accent, burgundy follows the tour caps and 2027 guide uniform.
+   Display headings use locally installed Palatino with Georgia/serif fallback.
+   Body, navigation and controls retain Open Sans. No proprietary font is hosted.
+*/
 
 /* LƯU Ý KỸ THUẬT: khai báo bằng `:root` thường, KHÔNG dùng `@theme`.
    Tailwind v4 chỉ xử lý `@theme` trong file có `@import "tailwindcss"` (tức
@@ -19,31 +12,31 @@
    `var(--color-*)` nên ghi đè biến ở đây là đủ để đổi toàn bộ giao diện. */
 :root {
   /* --- Bảng màu --------------------------------------------------------- */
-  --color-sand: #f4f2f3;
-  --color-sand-deep: #e9e6e8;
+  --color-sand: #f5f8fc;
+  --color-sand-deep: #e6edf5;
   --color-paper: #ffffff;
 
-  --color-ink: #333333;
-  --color-ink-soft: #6d6d6d;
+  --color-ink: #283346;
+  --color-ink-soft: #586574;
 
-  /* Xanh lá thương hiệu */
-  --color-sea: #27822a;
-  --color-sea-deep: #1c6b1f;
-  --color-sea-pale: #eaf4ea;
-  --color-sea-soft: #6fae70;
+  /* Indigo + sky blue from the supplied brand artwork. */
+  --color-sea: #362a77;
+  --color-sea-deep: #28205d;
+  --color-sea-pale: #edf7fc;
+  --color-sea-soft: #3cbded;
 
-  /* CTA phụ (hồng) */
-  --color-accent: #da0b65;
-  --color-accent-deep: #a50849;
-  --color-accent-pale: #fde7f0;
+  /* Burgundy: tour caps and 2027 guide uniform. */
+  --color-accent: #7b2437;
+  --color-accent-deep: #5b1828;
+  --color-accent-pale: #f8edf0;
 
-  /* Giá / nhãn HOT (đỏ cam) + vàng cho huy hiệu/giải thưởng */
-  --color-hot: #ff3c00;
-  --color-hot-deep: #d92f00;
-  --color-gold: #f2a900;
+  /* Burgundy prices / HOT badges, gold highlights. */
+  --color-hot: #7b2437;
+  --color-hot-deep: #5b1828;
+  --color-gold: #f6b817;
 
   /* --- Chữ ------------------------------------------------------------- */
-  --font-display: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --font-body: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --font-hand: "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
@@ -288,7 +281,7 @@
   position: absolute;
   left: 0.6rem;
   top: 0.6rem;
-  background: rgb(39 130 42 / 0.92);
+  background: rgb(54 42 119 / 0.96);
   color: #fff;
   border-radius: var(--radius-pill);
   padding: 0.2rem 0.7rem;
@@ -711,7 +704,7 @@
 /* Home refresh: balanced image/text hero and equal destination cards. */
 .dv-hero-layout { display: grid; gap: 2rem; align-items: center; }
 .dv-hero-copy { min-width: 0; }
-.dv-hero-visual { margin: 0; overflow: hidden; border-radius: 1rem; background: #174c22; }
+.dv-hero-visual { margin: 0; overflow: hidden; border-radius: 1rem; background: #28205d; }
 .dv-hero-visual img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .dv-hero-visual figcaption { padding: .55rem 1rem; font-size: .8rem; color: #fff; }
 .dv-mosaic { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; gap: 1rem; }
@@ -733,16 +726,20 @@
 
 /* Clear navigation and a high-contrast, readable contact footer. */
 .dv-nav-item > a { padding-left: .65rem; padding-right: .65rem; font-size: .82rem; }
-.dv-footer { background: #123e2d; color: #f3faf5; font-size: 1rem; line-height: 1.65; }
-.dv-footer .text-ink-soft { color: #d5e8dc; }
-.dv-footer .text-sea-deep { color: #fff; }
-.dv-footer h3 { color: #c9ee94; font-size: 1rem; margin-bottom: .9rem; }
-.dv-footer a:hover { color: #d8f6a6; }
-.dv-footer-contact { border-bottom: 1px solid #ffffff25; }
-.dv-footer-contact .dv-btn { color: #164e32; }
-.dv-footer .dv-copyright { background: #0b2a1e; font-size: .9rem; }
-.dv-footer li a { display: inline-block; padding-block: .2rem; }
-.dv-footer a[href^="tel:"] { color: #e2f8ae; font-size: 1.1rem; }
 /* Component display rules must not override the mobile hidden CTA. */
 .dv-header a.dv-btn.hidden { display: none; }
 @media (min-width: 768px) { .dv-header a.dv-btn.hidden { display: inline-flex; } }
+
+/* Brand typography: readable headings without changing content or card layout. */
+h1, h2 { font-family: var(--font-display); }
+.dv-head h2 { font-size: 1.125rem; line-height: 1.4; letter-spacing: 0; }
+.dv-head h2::before { background: var(--color-gold); flex-shrink: 0; }
+.dv-card-title { font-family: var(--font-body); font-size: 1rem; line-height: 1.45; }
+.dv-svc h3 { font-family: var(--font-body); }
+.dv-svc p { font-size: .9rem; }
+.rich-doc { font-family: var(--font-body); font-size: 1rem; line-height: 1.75; }
+.dv-hero-copy h1 { font-size: clamp(1.75rem, 3vw, 2.25rem); line-height: 1.25; font-weight: 700; }
+.dv-btn:focus-visible, .dv-card-cta:focus-visible { outline-color: var(--color-sea); }
+@media (prefers-reduced-motion: reduce) {
+  .dv-card, .dv-svc, .dv-btn { transition: none; }
+}
