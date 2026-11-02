@@ -99,7 +99,10 @@ const chipLinks = [...domesticGroups, ...intlGroups].map((g) => ({
   url: href(lang, `tours/khu-vuc/${g.slug}`),
 }));
 
-const heroImage = imgOf(t.hero_image);
+const heroSlides = (Array.isArray(t.hero_slides) ? t.hero_slides : [])
+  .filter((slide) => slide && typeof slide.image === 'string' && slide.image)
+  .slice(0, 20);
+const showHeroSlideshow = heroSlides.length >= 10;
 const searchPlaceholder = c.home_search_placeholder;
 
 /** Dữ liệu lấy từ Facebook Page (content/vi/facebook.json) — bản EN chưa có thì dùng VI. */
@@ -125,20 +128,34 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
           return (
             <>
             <section class="dv-hero-photo overflow-hidden bg-sea-deep text-white">
-              <div class="dv-hero-layout mx-auto max-w-6xl px-5 py-8 sm:py-12">
+              <div class:list={["dv-hero-layout mx-auto max-w-6xl px-5 py-8 sm:py-12", { "dv-hero-text-only": !showHeroSlideshow }]}>
                 <div class="dv-hero-copy">
-                  <p class="text-xs font-bold uppercase tracking-[0.18em] text-white/85">{t.hero_kicker}</p>
-                  <h1 class="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">{t.hero_title}</h1>
+                  <h1 class="font-display text-3xl font-bold leading-tight sm:text-4xl">{t.hero_title}</h1>
                   <p class="mt-4 leading-relaxed text-white/90">{t.hero_text}</p>
                   <div class="mt-5 flex flex-wrap gap-3">
-                    <a href={href(lang, 'tours')} class="dv-btn bg-white text-sea-deep hover:bg-sand">{t.hero_cta_primary}</a>
-                    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn border border-white/70 text-white hover:bg-white/15">Tư vấn qua Zalo</a>
+                    <a href={href(lang, 'dat-tour')} class="dv-btn dv-btn-accent">{t.hero_cta_primary}</a>
+                    <a href="tel:0913787647" class="dv-btn bg-white text-sea-deep hover:bg-sand">Hotline: 0913 78 76 47</a>
+                    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn border border-white/70 text-white hover:bg-white/15">Zalo Anh Văn</a>
                   </div>
                 </div>
-                <figure class="dv-hero-visual">
-                  <img src={heroImage} alt={t.hero_image_alt || ''} width="900" height="600" loading="eager" decoding="async" />
-                  <figcaption>Những hành trình cùng TodayTourist</figcaption>
-                </figure>
+                {showHeroSlideshow && (
+                  <figure class="dv-hero-visual" data-hero-carousel role="region" aria-roledescription="trình chiếu" aria-label="Những hành trình cùng TodayTourist">
+                    <div class="dv-hero-stage">
+                      {heroSlides.map((slide, i) => (
+                        <img data-hero-slide src={i === 0 ? imgOf(slide.image) : undefined} data-src={imgOf(slide.image)} alt={slide.alt || 'Hành trình cùng TodayTourist'} width="900" height="600" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" hidden={i !== 0} />
+                      ))}
+                    </div>
+                    <figcaption class="dv-hero-caption">
+                      <span>Những hành trình cùng TodayTourist</span>
+                      <div class="dv-hero-controls">
+                        <button type="button" data-hero-prev aria-label="Ảnh trước">‹</button>
+                        <span data-hero-count aria-live="off">1 / {heroSlides.length}</span>
+                        <button type="button" data-hero-next aria-label="Ảnh tiếp theo">›</button>
+                        <button type="button" data-hero-pause aria-label="Tạm dừng trình chiếu">Ⅱ</button>
+                      </div>
+                    </figcaption>
+                  </figure>
+                )}
               </div>
 
               {/* Khối tìm tour 2 tab */}
@@ -425,4 +442,72 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
       if (regionInput) regionInput.value = key;
     });
   });
+
+  const carousel = document.querySelector<HTMLElement>('[data-hero-carousel]');
+  if (carousel) {
+    const slides = Array.from(carousel.querySelectorAll<HTMLImageElement>('[data-hero-slide]'));
+    const counter = carousel.querySelector<HTMLElement>('[data-hero-count]');
+    const pause = carousel.querySelector<HTMLButtonElement>('[data-hero-pause]');
+    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let index = 0;
+    let paused = motion.matches;
+    let hovered = false;
+    let focused = false;
+    let changing = false;
+    const loadImage = (image: HTMLImageElement) => {
+      if (!image.getAttribute('src') && image.dataset.src) {
+        image.loading = 'eager';
+        image.src = image.dataset.src;
+      }
+    };
+    const updatePause = () => {
+      if (!pause) return;
+      pause.textContent = paused ? '▶' : 'Ⅱ';
+      pause.setAttribute('aria-label', paused ? 'Tiếp tục trình chiếu' : 'Tạm dừng trình chiếu');
+    };
+    const show = async (step: number) => {
+      if (changing || slides.length < 2) return;
+      changing = true;
+      const next = (index + step + slides.length) % slides.length;
+      loadImage(slides[next]);
+      try {
+        await slides[next].decode();
+        slides[index].hidden = true;
+        slides[next].hidden = false;
+        index = next;
+        if (counter) counter.textContent = String(index + 1) + ' / ' + slides.length;
+        loadImage(slides[(index + 1) % slides.length]);
+      } catch {
+        // Leave the current photo visible if a request fails.
+      } finally { changing = false; }
+    };
+    carousel.querySelector('[data-hero-prev]')?.addEventListener('click', () => void show(-1));
+    carousel.querySelector('[data-hero-next]')?.addEventListener('click', () => void show(1));
+    pause?.addEventListener('click', () => { paused = !paused; updatePause(); });
+    carousel.addEventListener('mouseenter', () => { hovered = true; });
+    carousel.addEventListener('mouseleave', () => { hovered = false; });
+    carousel.addEventListener('focusin', () => { focused = true; });
+    carousel.addEventListener('focusout', (event) => {
+      focused = event.relatedTarget instanceof Node && carousel.contains(event.relatedTarget);
+    });
+    motion.addEventListener('change', () => { paused = motion.matches; updatePause(); });
+    window.setInterval(() => {
+      if (!paused && !hovered && !focused && !document.hidden) void show(1);
+    }, 5000);
+    updatePause();
+    if (slides[1]) loadImage(slides[1]);
+  }
 </script>
+
+<style>
+  .dv-hero-layout.dv-hero-text-only { grid-template-columns: 1fr; }
+  .dv-hero-stage { aspect-ratio: 3 / 2; overflow: hidden; }
+  .dv-hero-stage img { width: 100%; height: 100%; object-fit: cover; }
+  .dv-hero-stage img[hidden] { display: none; }
+  .dv-hero-visual .dv-hero-caption { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem; }
+  .dv-hero-controls { display: flex; align-items: center; gap: .45rem; }
+  .dv-hero-controls button { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border: 1px solid #ffffff70; border-radius: .3rem; color: white; font-size: 1rem; cursor: pointer; }
+  .dv-hero-controls button:hover { background: #ffffff20; }
+  .dv-hero-controls button:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+  [data-hero-count] { min-width: 3.5rem; text-align: center; font-variant-numeric: tabular-nums; }
+</style>
