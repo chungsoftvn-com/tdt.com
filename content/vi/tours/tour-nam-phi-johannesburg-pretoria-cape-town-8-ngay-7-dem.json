@@ -5,8 +5,8 @@
   "region_name": "Châu Phi",
   "departure": "TP.HCM – sân bay Tân Sơn Nhất",
   "duration": "8 ngày 7 đêm",
-  "price": "Liên hệ báo giá (visa đã gồm trong chương trình tham khảo)",
-  "image": "pasted-1792215009193-0.jpg",
+  "price": "Khoảng 80.500.000đ/khách (tham khảo)",
+  "image": "bia-tour-nam-phi-cape-town-pretoria-1600x900.jpg",
   "desc": "Tour Nam Phi 8 ngày 7 đêm: Johannesburg, Pretoria, safari và Cape Town. Bay từ TP.HCM, nối chuyến quốc tế; tư vấn khách Biên Hòa, Đồng Nai tại TodayTourist.",
   "highlights": [
     "Johannesburg và Pretoria",
@@ -32,7 +32,11 @@
     },
     {
       "type": "html",
-      "html": "<table><tbody><tr><th><div>Giá người lớn</div></th><td><div><strong>Liên hệ báo giá</strong></div></td></tr><tr><th><div>Lịch được công bố</div></th><td><div>Liên hệ để nhận lịch khởi hành mới; bay từ TP.HCM</div></td></tr><tr><th><div>Visa</div></th><td><div>Đã gồm trong giá tham khảo</div></td></tr><tr><th><div>Chưa gồm</div></th><td><div>Tip 64 USD/khách/tour, VAT, phòng đơn và chi tiêu cá nhân</div></td></tr></tbody></table>"
+      "html": "<table><tbody><tr><th><div>Giá người lớn</div></th><td><div><strong>Khoảng 80.500.000đ/khách (ngân sách tham khảo)</strong></div></td></tr><tr><th><div>Lịch được công bố</div></th><td><div>Liên hệ để nhận lịch khởi hành mới; bay từ TP.HCM</div></td></tr><tr><th><div>Visa</div></th><td><div>Đã gồm trong giá tham khảo</div></td></tr><tr><th><div>Chưa gồm</div></th><td><div>Tip 64 USD/khách/tour, VAT, phòng đơn và chi tiêu cá nhân</div></td></tr></tbody></table>"
+    },
+    {
+      "type": "p",
+      "text": "Mức 80.500.000đ/khách dùng để dự trù ngân sách, đối chiếu chương trình Nam Phi 8 ngày 7 đêm khởi hành từ Hà Nội của Vietrantour ngày 02/11/2026. Giá khởi hành từ TP.HCM được xác nhận riêng theo ngày đi, vé máy bay, phòng và hồ sơ visa; đây chưa phải báo giá giữ chỗ của TodayTourist."
     },
     {
       "type": "p",
@@ -160,7 +164,7 @@
     },
     {
       "type": "p",
-      "text": "Chưa. Giá hiển thị là giá tham khảo theo chương trình công khai được đối chiếu ngày 21/10/2026, không phải xác nhận giữ chỗ của TodayTourist. Tổng tiền phải trả được chốt sau khi kiểm tra các khoản chưa bao gồm, dịch vụ lựa chọn và tình trạng hồ sơ. Không thanh toán theo thông tin tham khảo khi chưa nhận báo giá xác nhận."
+      "text": "Chưa. Giá hiển thị là giá tham khảo theo chương trình công khai được đối chiếu ngày 02/11/2026, không phải xác nhận giữ chỗ của TodayTourist. Tổng tiền phải trả được chốt sau khi kiểm tra các khoản chưa bao gồm, dịch vụ lựa chọn và tình trạng hồ sơ. Không thanh toán theo thông tin tham khảo khi chưa nhận báo giá xác nhận."
     },
     {
       "type": "h3",
