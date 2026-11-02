@@ -53,7 +53,7 @@ const hotTours = hotSlugs.length
   ? tours.filter((x) => hotSlugs.includes(x.slug))
   : tours.slice(0, 12);
 /** Mosaic "Điểm đến nổi bật" = 4 tour đầu trong danh sách hot (admin chọn ở home.json). */
-const featuredTours = (hotTours.length ? hotTours : tours).slice(0, 4);
+const featuredTours = hotTours.length ? hotTours : tours.slice(0, 8);
 /** Lưới "Tour hot" bên dưới: các tour KHÁC mosaic (tránh lặp ảnh). */
 const featuredSlugs = new Set(featuredTours.map((x) => x.slug));
 const gridTours = tours.filter((x) => !featuredSlugs.has(x.slug)).slice(0, 8);
@@ -99,7 +99,7 @@ const chipLinks = [...domesticGroups, ...intlGroups].map((g) => ({
   url: href(lang, `tours/khu-vuc/${g.slug}`),
 }));
 
-const heroImage = hotTours[0]?.image ? `/content/vi/images/${hotTours[0].image}` : '';
+const heroImage = imgOf(t.hero_image);
 const searchPlaceholder = c.home_search_placeholder;
 
 /** Dữ liệu lấy từ Facebook Page (content/vi/facebook.json) — bản EN chưa có thì dùng VI. */
@@ -124,41 +124,25 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
         case 'hero':
           return (
             <>
-            <section class="dv-hero-photo relative isolate flex flex-col justify-end overflow-hidden bg-sea-deep">
-              {heroImage && (
-                <img
-                  src={heroImage}
-                  alt=""
-                  class="absolute inset-0 -z-10 h-full w-full object-cover"
-                  loading="eager"
-                  decoding="async"
-                />
-              )}
-              <div class="absolute inset-0 -z-10 bg-gradient-to-r from-sea-deep/95 via-sea-deep/75 to-sea-deep/30" />
-
-              <div class="dv-hero-cap mx-auto max-w-6xl px-5 pb-8 pt-20 text-white sm:pb-10 sm:pt-28">
-                <p class="text-xs font-bold uppercase tracking-[0.18em] text-white/85">
-                  {t.hero_kicker}
-                </p>
-                <h1 class="mt-3 max-w-3xl font-display text-3xl font-bold leading-tight sm:text-4xl">
-                  {t.hero_title}
-                </h1>
-                <p class="mt-3 max-w-2xl leading-relaxed text-white/90">{t.hero_text}</p>
-                <div class="mt-5 flex flex-wrap gap-3">
-                  <a href={href(lang, 'tours')} class="dv-btn dv-btn-green">
-                    {t.hero_cta_primary}
-                  </a>
-                  <a
-                    href={href(lang, 'contact')}
-                    class="dv-btn border border-white/70 text-white hover:bg-white/15"
-                  >
-                    {t.hero_cta_secondary}
-                  </a>
+            <section class="dv-hero-photo overflow-hidden bg-sea-deep text-white">
+              <div class="dv-hero-layout mx-auto max-w-6xl px-5 py-8 sm:py-12">
+                <div class="dv-hero-copy">
+                  <p class="text-xs font-bold uppercase tracking-[0.18em] text-white/85">{t.hero_kicker}</p>
+                  <h1 class="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">{t.hero_title}</h1>
+                  <p class="mt-4 leading-relaxed text-white/90">{t.hero_text}</p>
+                  <div class="mt-5 flex flex-wrap gap-3">
+                    <a href={href(lang, 'tours')} class="dv-btn bg-white text-sea-deep hover:bg-sand">{t.hero_cta_primary}</a>
+                    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn border border-white/70 text-white hover:bg-white/15">Tư vấn qua Zalo</a>
+                  </div>
                 </div>
+                <figure class="dv-hero-visual">
+                  <img src={heroImage} alt={t.hero_image_alt || ''} width="900" height="600" loading="eager" decoding="async" />
+                  <figcaption>Những hành trình cùng TodayTourist</figcaption>
+                </figure>
               </div>
 
               {/* Khối tìm tour 2 tab */}
-              <div class="mx-auto max-w-6xl px-5">
+              <div class="mx-auto w-full max-w-6xl px-5">
                 <div class="rounded-t-[var(--radius-card)] bg-white/95 p-3 shadow-[var(--shadow-lift-2)] sm:p-4">
                   <div class="flex gap-1">
                     <button type="button" class="dv-tab" data-tab="domestic" data-active="true">
@@ -220,7 +204,7 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
                   <div class="dv-mosaic">
                     {featuredTours.map((tour, i) => (
                       <a
-                        class={`dv-mosaic-item ${i === 0 ? 'dv-mosaic-big' : ''}`}
+                        class="dv-mosaic-item"
                         href={href(lang, `tours/${tour.slug}`)}
                       >
                         <img
