@@ -776,3 +776,16 @@ h1, h2 { font-family: var(--font-display); }
 .dv-planning-glow { background: var(--color-gold); opacity: .18; }
 .dv-badge-region { background: var(--color-sea-soft); color: var(--color-sea-deep); }
 .dv-fab-maps { background: var(--color-sea-soft); color: var(--color-sea-deep); }
+
+/* Trang chủ gọn hơn: giữ ảnh ngang, số liệu rõ và nhịp khoảng cách ngắn. */
+.dv-hero-zalo { background: #F9CA12; border: 1px solid #F9CA12; color: #23266E; }
+.dv-hero-zalo:hover { background: #e8b900; border-color: #e8b900; color: #23266E; }
+.dv-home-hot .dv-head, .dv-home-regions .dv-head { margin-bottom: 1rem; }
+.dv-about-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; min-width: 0; }
+.dv-about-photos img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: .6rem; }
+.dv-stat-card { min-width: 0; border: 1px solid #bcdcec; border-top: 3px solid #F9CA12; border-radius: .75rem; background: #edf7fc; padding: .65rem .5rem; }
+.dv-stat-number { font-family: var(--font-body); font-size: clamp(1.8rem, 3.2vw, 2.75rem); font-weight: 800; line-height: 1.1; color: #7B2437; font-variant-numeric: tabular-nums; }
+@media (max-width: 639px) {
+ .dv-about-photos { gap: .4rem; }
+ .dv-stat-card dd { font-size: .8rem; line-height: 1.35; }
+}
