@@ -134,7 +134,7 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
                   <p class="mt-4 leading-relaxed text-ink-soft">{t.hero_text}</p>
                   <div class="mt-5 flex flex-wrap gap-3">
                     <a href="tel:0913787647" class="dv-btn dv-btn-accent">Hotline: 0913 78 76 47</a>
-                    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn dv-btn-outline">Zalo Today Tourist</a>
+                    <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn dv-hero-zalo">Zalo Today Tourist</a>
                   </div>
                 </div>
                 {showHeroSlideshow && (
@@ -249,7 +249,7 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
           return <Stats lang={lang} />;
         case 'hot':
           return (
-            <section class="bg-sand px-5 py-12 sm:py-14">
+            <section class="dv-home-hot bg-sand px-5 py-6">
               <div class="mx-auto max-w-6xl">
                 <div class="dv-head">
                   <h2>{t.hot_tours_title}</h2>
@@ -257,7 +257,6 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
                     {t.view_all_tours}
                   </a>
                 </div>
-                {t.hot_tours_text && <p class="dv-head-sub">{t.hot_tours_text}</p>}
                 <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                   {gridTours.map((tour, i) => (
                     <TourCard lang={lang} tour={tour} hot={i < 2} />
@@ -292,10 +291,10 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
     ]
       .filter((sec) => sec.groups.length > 0)
       .map((sec) => (
-        <section class="bg-white px-5 py-12">
+        <section class="dv-home-regions bg-white px-5 py-4">
           <div class="mx-auto max-w-6xl">
             {sec.groups.map((g) => (
-              <div class="mb-10 last:mb-0">
+              <div class="mb-7 last:mb-0">
                 <div class="dv-head">
                   <h2>{g.name}</h2>
                   <a href={href(lang, `tours/khu-vuc/${g.slug}`)}>
