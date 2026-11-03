@@ -16,13 +16,13 @@ const stats = [
 ];
 ---
 
-<section class="border-b border-ink/5 bg-sand px-5 py-10">
-  <dl class="mx-auto grid max-w-6xl grid-cols-2 gap-6 text-center sm:grid-cols-4">
+<section class="dv-home-stats border-b border-ink/5 bg-sand px-5 py-4">
+  <dl class="mx-auto grid max-w-6xl grid-cols-2 gap-3 text-center sm:grid-cols-4">
     {
       stats.map((s, i) => (
-        <div data-reveal style={`--reveal-delay:${i * 0.06}s`}>
-          <dt class="font-display text-3xl font-semibold text-sea sm:text-4xl">{s.value}</dt>
-          <dd class="mx-auto mt-1 max-w-[12rem] text-sm text-ink-soft">{s.label}</dd>
+        <div class="dv-stat-card" data-reveal style={`--reveal-delay:${i * 0.06}s`}>
+          <dt class="dv-stat-number">{s.value}</dt>
+          <dd class="mx-auto mt-1 max-w-[12rem] text-sm font-semibold text-ink-soft">{s.label}</dd>
         </div>
       ))
     }
