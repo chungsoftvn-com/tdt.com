@@ -78,7 +78,7 @@ function renderBody(body: string): string {
   <section class="px-5 py-14 sm:py-16">
     <article class="mx-auto max-w-3xl">
       {item.content.length > 0 ? (
-        <RichContent content={item.content} />
+        <RichContent content={item.content} tourContact={!String(item.category || "").startsWith("Vé máy bay")} />
       ) : (
         <div class="news-body" set:html={renderBody(item.body)} />
       )}
