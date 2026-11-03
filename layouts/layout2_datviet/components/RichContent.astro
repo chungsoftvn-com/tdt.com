@@ -1,6 +1,7 @@
 ---
 import sanitizeHtml from 'sanitize-html';
 import { fixContentImages } from '@/features/contact/image-quality.js';
+import { articleContents } from '@/features/discovery/article-tools.js';
 import BookingContact from '@/features/contact/BookingContact.astro';
 import { withoutLegacyTourContact } from '@/features/contact/contact-blocks.js';
 import { normalizeInternalLinks, linkTransform } from '@/lib/rich.js';
@@ -16,6 +17,7 @@ interface Block {
   items?: string[];
   /** Khối HTML giàu (bảng, khung nổi bật, video...) do editor tạo ra. */
   html?: string;
+  id?: string;
 }
 interface Props {
   content?: Block[];
@@ -23,7 +25,7 @@ interface Props {
 }
 const { content = [], tourContact = false } = Astro.props;
 const sourceBlocks = Array.isArray(content) ? content : [];
-const blocks = tourContact ? withoutLegacyTourContact(sourceBlocks) : sourceBlocks;
+const { blocks, toc } = articleContents(tourContact ? withoutLegacyTourContact(sourceBlocks) : sourceBlocks);
 
 // Reuse existing route photographs only on railway tour pages.
 const railwayPage = Astro.url.pathname.includes('-tau-hoa-');
@@ -178,7 +180,7 @@ const richHtml = (html) =>
         'iframe',
       ],
       allowedAttributes: {
-        '*': ['style', 'class'],
+        '*': ['style', 'class', 'id'],
         a: ['href', 'target', 'rel'],
         img: ['src', 'alt', 'width', 'height', 'loading', 'style'],
         iframe: ['src', 'width', 'height', 'allow', 'allowfullscreen', 'frameborder', 'loading', 'title'],
@@ -245,6 +247,7 @@ const richHtml = (html) =>
 {faqJson && <script is:inline type="application/ld+json" set:html={faqJson} />}
 
 <div class="rich-content">
+  {toc.length >= 3 && <details class="reading-toc"><summary>Mục lục bài viết</summary><nav aria-label="Mục lục bài viết"><ol>{toc.map(entry => <li class:list={{'reading-sub': entry.level === 'h3'}}><a href={'#' + entry.id} set:html={entry.label} /></li>)}</ol></nav></details>}
   {
     blocks.map((b) => {
       if (!b) return null;
@@ -252,9 +255,9 @@ const richHtml = (html) =>
         case 'p':
           return <p class="rich-p" set:html={rich(b.text)} />;
         case 'h2':
-          return <h2 class="rich-h2" set:html={rich(b.text)} />;
+          return <h2 id={b.id} class="rich-h2" set:html={rich(b.text)} />;
         case 'h3':
-          return <h3 class="rich-h3" set:html={rich(b.text)} />;
+          return <h3 id={b.id} class:list={["rich-h3", {"reading-day": /^ngày\s*\d/iu.test(String(b.text || '').replace(/<[^>]*>/g, ''))}]} set:html={rich(b.text)} />;
         case 'img':
           return (
             <div class="rich-html" set:html={richHtml('<figure><img src="' + String(b.src || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;') + '" alt="' + String(b.alt || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;') + '" loading="lazy"></figure>')} />
@@ -279,6 +282,13 @@ const richHtml = (html) =>
 {tourContact && <BookingContact />}
 
 <style>
+  .reading-toc { margin-bottom: 1.25rem; padding: .85rem 1rem; border: 1px solid #bcdcec; border-left: 4px solid #246e91; border-radius: .6rem; background: #edf7fc; }
+  .reading-toc summary { cursor: pointer; font-weight: 700; color: #23266e; }
+  .reading-toc ol { margin-top: .65rem; display: grid; gap: .4rem; padding-left: 1.25rem; list-style: decimal; }
+  .reading-toc li { font-size: .9rem; line-height: 1.5; }
+  .reading-toc .reading-sub { margin-left: .6rem; }
+  .rich-h2, .rich-h3, .rich-html :global(h2[id]), .rich-html :global(h3[id]) { scroll-margin-top: 9rem; }
+  .rich-h3.reading-day { border-left: 4px solid #7b2437; padding-left: .85rem; }
   .rich-content {
     color: var(--color-ink-soft);
   }
