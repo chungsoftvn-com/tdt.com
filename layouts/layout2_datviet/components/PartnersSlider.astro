@@ -18,9 +18,9 @@ const initial = (name = '') => (name.trim() || '?').charAt(0);
 
 {
   partners.length > 0 && (
-    <section class="border-t border-ink/5 bg-paper px-5 py-12 sm:py-16">
+    <section class="border-t border-ink/5 bg-paper px-5 py-6">
       <div class="mx-auto max-w-6xl">
-        <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div class="mb-4 flex flex-wrap items-end justify-between gap-4">
           <div>
             <h2 class="font-display text-2xl text-ink sm:text-3xl">{title}</h2>
             {text && <p class="mt-1 text-sm text-ink-soft">{text}</p>}
@@ -57,7 +57,7 @@ const initial = (name = '') => (name.trim() || '?').charAt(0);
                   target={p.website ? '_blank' : undefined}
                   rel={p.website ? 'noopener noreferrer' : undefined}
                   title={p.name}
-                  class="tt-partners-item flex flex-col items-center justify-center gap-2 rounded-2xl border border-ink/10 bg-white px-3 py-4 text-center transition hover:-translate-y-0.5 hover:border-sea/40 hover:shadow-[var(--shadow-lift-1)]"
+                  class="tt-partners-item flex flex-col items-center justify-center gap-2 rounded-2xl border border-ink/10 bg-white px-3 py-3 text-center transition hover:-translate-y-0.5 hover:border-sea/40 hover:shadow-[var(--shadow-lift-1)]"
                 >
                   {p.image ? (
                     <img
