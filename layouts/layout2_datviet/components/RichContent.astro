@@ -1,5 +1,8 @@
 ---
 import sanitizeHtml from 'sanitize-html';
+import { fixContentImages } from '@/features/contact/image-quality.js';
+import BookingContact from '@/features/contact/BookingContact.astro';
+import { withoutLegacyTourContact } from '@/features/contact/contact-blocks.js';
 import { normalizeInternalLinks, linkTransform } from '@/lib/rich.js';
 /**
  * RichContent — render mảng khối nội dung phong phú (ảnh + chữ đan xen).
@@ -16,9 +19,11 @@ interface Block {
 }
 interface Props {
   content?: Block[];
+  tourContact?: boolean;
 }
-const { content = [] } = Astro.props;
-const blocks = Array.isArray(content) ? content : [];
+const { content = [], tourContact = false } = Astro.props;
+const sourceBlocks = Array.isArray(content) ? content : [];
+const blocks = tourContact ? withoutLegacyTourContact(sourceBlocks) : sourceBlocks;
 
 // Reuse existing route photographs only on railway tour pages.
 const railwayPage = Astro.url.pathname.includes('-tau-hoa-');
@@ -161,7 +166,7 @@ const rich = (html) =>
  */
 const richHtml = (html) =>
   normalizeInternalLinks(
-    sanitizeHtml(html || '', {
+    sanitizeHtml(fixContentImages(html || ''), {
       allowedTags: [
         'p', 'div', 'span', 'br', 'hr',
         'b', 'strong', 'i', 'em', 'u', 's', 'strike', 'sub', 'sup', 'mark', 'small',
@@ -252,9 +257,7 @@ const richHtml = (html) =>
           return <h3 class="rich-h3" set:html={rich(b.text)} />;
         case 'img':
           return (
-            <figure class="rich-figure">
-              <img src={b.src} alt={b.alt || ''} loading="lazy" decoding="async" />
-            </figure>
+            <div class="rich-html" set:html={richHtml('<figure><img src="' + String(b.src || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;') + '" alt="' + String(b.alt || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;') + '" loading="lazy"></figure>')} />
           );
         case 'list':
           return (
@@ -273,6 +276,7 @@ const richHtml = (html) =>
     })
   }
 </div>
+{tourContact && <BookingContact />}
 
 <style>
   .rich-content {
