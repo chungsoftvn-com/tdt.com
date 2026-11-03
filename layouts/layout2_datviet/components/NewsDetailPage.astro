@@ -1,6 +1,7 @@
 ---
 import { getContent, getNews, getNewsItem, href } from '@/lib/content.js';
 import { newsLd } from '@/lib/seo.js';
+import { relatedItems } from '@/features/discovery/article-tools.js';
 import BaseLayout from './BaseLayout.astro';
 import NewsCard from './NewsCard.astro';
 import RichContent from './RichContent.astro';
@@ -17,7 +18,7 @@ if (!item) {
   throw new Error(`[news] unknown slug "${slug}" for lang "${lang}"`);
 }
 const listUrl = href(lang, 'tin-tuc');
-const others = getNews(lang).filter((x) => x.slug !== slug).slice(0, 3);
+const others = relatedItems(item, getNews(lang));
 
 // Markdown-lite + escape (an toàn XSS) cho body do admin nhập.
 function esc(s: string): string {

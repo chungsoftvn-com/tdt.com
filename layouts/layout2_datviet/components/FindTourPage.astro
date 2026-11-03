@@ -1,6 +1,7 @@
 ---
 // /vi/tim-tour — Tìm tour theo Loại tour, Khu vực, Điểm khởi hành, Điểm đến, Từ khóa.
 import { getContent, getTours } from '@/lib/content.js';
+import { durationDays, priceVnd } from '@/features/discovery/tour-filters.js';
 import { richDoc } from '@/lib/rich.js';
 import BaseLayout from './BaseLayout.astro';
 import PageHero from './PageHero.astro';
@@ -30,22 +31,28 @@ const departures = [...new Set(tours.map((x) => x.departure || '').filter(Boolea
   <section class="px-5 py-14 sm:py-16">
     <div class="mx-auto max-w-6xl">
       <!-- Bộ lọc -->
-      <form data-find-form class="mb-10 grid gap-3 rounded-2xl bg-paper p-4 shadow-[var(--shadow-lift-1)] sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
-        <select data-find-kind class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea">
+      <form data-find-form class="mb-10 grid gap-3 rounded-2xl bg-paper p-4 shadow-[var(--shadow-lift-1)] sm:grid-cols-2 lg:grid-cols-3">
+        <select data-find-kind aria-label="Loại tour" class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea">
           <option value="">{t.kind_all}</option>
           <option value="domestic">{t.kind_domestic}</option>
           <option value="international">{t.kind_international}</option>
         </select>
-        <select data-find-region class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea">
+        <select data-find-region aria-label="Khu vực" class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea">
           <option value="">{t.region_all}</option>
           {regions.map((x) => <option value={x}>{x}</option>)}
         </select>
-        <select data-find-dep class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea">
+        <select data-find-dep aria-label="Điểm khởi hành" class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea">
           <option value="">{t.departure_all}</option>
           {departures.map((x) => <option value={x}>{x}</option>)}
         </select>
-        <input data-find-dest type="text" placeholder={t.dest_placeholder} class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea" />
-        <input data-find-q type="search" placeholder={t.search_placeholder} class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea" />
+        <input data-find-dest aria-label="Điểm đến" type="text" placeholder={t.dest_placeholder} class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea" />
+        <input data-find-q aria-label="Từ khóa" type="search" placeholder={t.search_placeholder} class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm text-ink outline-none focus:border-sea" />
+        <select data-find-days aria-label="Thời gian tour" class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm">
+          <option value="">Mọi thời gian</option><option value="1">1 ngày</option><option value="2-3">2–3 ngày</option><option value="4-5">4–5 ngày</option><option value="6+">Từ 6 ngày</option>
+        </select>
+        <select data-find-sort aria-label="Sắp xếp giá" class="min-w-0 rounded-xl border border-ink/15 bg-sand px-3 py-2.5 text-base sm:text-sm">
+          <option value="">Thứ tự mặc định</option><option value="asc">Giá thấp đến cao</option><option value="desc">Giá cao đến thấp</option>
+        </select>
       </form>
 
       <p data-find-count class="mb-4 text-sm text-ink-soft">
@@ -62,6 +69,8 @@ const departures = [...new Set(tours.map((x) => x.departure || '').filter(Boolea
             data-kind={x.region || ''}
             data-region={x.regionName || x.region_name || ''}
             data-dep={x.departure || ''}
+            data-days={durationDays(x.duration) || ''}
+            data-price={priceVnd(x.price) || ''}
           >
             <TourCard lang={lang} tour={x} />
           </div>
@@ -73,11 +82,15 @@ const departures = [...new Set(tours.map((x) => x.departure || '').filter(Boolea
   </section>
 
   <script>
+    import { matchesDays, comparePrices } from '@/features/discovery/tour-filters.js';
     const q = document.querySelector('[data-find-q]');
     const dest = document.querySelector('[data-find-dest]');
     const kindSel = document.querySelector('[data-find-kind]');
     const regionSel = document.querySelector('[data-find-region]');
     const depSel = document.querySelector('[data-find-dep]');
+    const daysSel = document.querySelector('[data-find-days]');
+    const sortSel = document.querySelector('[data-find-sort]');
+    const grid = document.querySelector('[data-find-grid]');
     const cards = Array.from(document.querySelectorAll('[data-tour]'));
     const count = document.querySelector('[data-find-count] span');
     const empty = document.querySelector('[data-find-empty]');
@@ -89,13 +102,16 @@ const departures = [...new Set(tours.map((x) => x.departure || '').filter(Boolea
       const rv = regionSel.value;
       const dp = depSel.value;
       let shown = 0;
-      cards.forEach((card) => {
+      const sorted = cards.map((card, index) => ({ card, index })).sort((a, b) => sortSel.value ? comparePrices(a.card.dataset.price, b.card.dataset.price, sortSel.value) || a.index - b.index : a.index - b.index);
+      sorted.forEach(({card}) => {
+        grid.appendChild(card);
         const name = card.dataset.name;
         const desc = card.dataset.desc;
         const ok =
           (!kv || card.dataset.kind === kv) &&
           (!rv || card.dataset.region === rv) &&
           (!dp || card.dataset.dep === dp) &&
+          matchesDays(Number(card.dataset.days), daysSel.value) &&
           (!qv || name.includes(qv) || desc.includes(qv)) &&
           (!dv || name.includes(dv) || desc.includes(dv));
         card.classList.toggle('hidden', !ok);
@@ -105,11 +121,13 @@ const departures = [...new Set(tours.map((x) => x.departure || '').filter(Boolea
       empty.classList.toggle('hidden', shown !== 0);
     }
 
-    [q, dest, kindSel, regionSel, depSel].forEach((el) => el && el.addEventListener('input', apply));
+    [q, dest, kindSel, regionSel, depSel, daysSel, sortSel].forEach((el) => el && el.addEventListener('input', apply));
     const params = new URLSearchParams(window.location.search);
     q.value = params.get('q') || '';
     const initialKind = params.get('region') || params.get('kind') || '';
     if (['domestic', 'international'].includes(initialKind)) kindSel.value = initialKind;
+    daysSel.value = params.get('days') || '';
+    sortSel.value = params.get('sort') || '';
     apply();
   </script>
 </BaseLayout>

@@ -3,6 +3,7 @@ import { getContent, getTour, getTours, href } from '@/lib/content.js';
 import { richDoc } from '@/lib/rich.js';
 import { tourLd } from '@/lib/seo.js';
 import TourReviews from '@/features/reviews/TourReviews.astro';
+import { relatedItems } from '@/features/discovery/article-tools.js';
 import BaseLayout from './BaseLayout.astro';
 import SectionHeading from './SectionHeading.astro';
 import ToursGrid from './ToursGrid.astro';
@@ -20,7 +21,7 @@ const tour = getTour(lang, slug);
 if (!tour) {
   throw new Error(`[tour] unknown slug "${slug}" for lang "${lang}"`);
 }
-const others = getTours(lang).filter((x) => x.slug !== slug).slice(0, 3);
+const others = relatedItems(tour, getTours(lang));
 const phoneHref = `tel:${c.hotline.replace(/[^0-9]/g, '')}`;
 const zaloHref = `https://zalo.me/${c.zalo.replace(/[^0-9]/g, '')}`;
 const bookLink = `${href(lang, 'dat-tour')}?tour=${encodeURIComponent(slug)}`;
