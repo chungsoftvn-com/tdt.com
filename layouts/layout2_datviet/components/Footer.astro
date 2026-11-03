@@ -59,7 +59,7 @@ const socials = [
     <div><h2 class="text-base font-bold sm:text-lg">Chuyến đi đáng nhớ bắt đầu từ một cuộc trò chuyện</h2><p class="mt-2">Chia sẻ ngày đi, số khách và ngân sách — TodayTourist cùng bạn lên lịch trình.</p></div>
     <a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer" class="dv-btn dv-btn-outline">Zalo Today Tourist · 0902 898 726</a>
   </div>
-  <div class="mx-auto grid max-w-6xl gap-6 px-5 py-6 sm:grid-cols-2 lg:grid-cols-4">
+  <div class="dv-footer-grid mx-auto grid max-w-6xl gap-6 px-5 py-6 sm:grid-cols-2 lg:grid-cols-4">
     <!-- Cột 1: thương hiệu + liên hệ -->
     <div>
       <div class="flex items-center gap-2.5">
@@ -169,8 +169,7 @@ const socials = [
 </footer>
 
 
-<style>
-  .dv-footer { background: #fff; color: var(--color-ink); font-size: .875rem; line-height: 1.6; border-top: 1px solid #e5e7eb; }
+<style>  .dv-footer { background: #fff; color: var(--color-ink); font-size: .875rem; line-height: 1.6; border-top: 1px solid #e5e7eb; }
   .dv-footer .text-ink-soft { color: var(--color-ink-soft); }
   .dv-footer .text-sea-deep { color: var(--color-sea-deep); }
   .dv-footer h3 { color: var(--color-sea-deep); font-size: .875rem; margin-bottom: .6rem; }
@@ -182,4 +181,25 @@ const socials = [
   .dv-footer a.dv-footer-hotline { padding: .6rem 1rem; background: var(--color-accent); color: white; font-size: .875rem; }
   .dv-footer a.dv-footer-hotline:hover { color: white; }
   .dv-footer-contact .dv-btn:hover { color: white; }
+
+  .dv-footer { border-top: 4px solid var(--color-gold); }
+  .dv-footer-grid { padding-top: 2rem; padding-bottom: 2rem; gap: 2rem; }
+  .dv-footer-grid > div { min-width: 0; }
+  .dv-footer h3 { font-weight: 800; color: var(--color-accent); letter-spacing: .035em; padding-bottom: .55rem; border-bottom: 1px solid #d6dee7; margin-bottom: .85rem; }
+  .dv-footer-grid li { line-height: 1.7; }
+  .dv-footer-grid a { overflow-wrap: anywhere; }
+  .dv-footer-grid li a:not(.dv-footer-hotline) { padding-block: .25rem; color: var(--color-ink); }
+  .dv-footer-contact { background: var(--color-sea-pale); border-radius: 0 0 12px 12px; gap: 1rem; }
+  .dv-footer-contact h2 { color: var(--color-sea-deep); line-height: 1.4; }
+  .dv-footer-contact p { color: var(--color-ink); }
+  .dv-footer-grid .text-ink-soft { color: #475569; }
+  .dv-footer-grid a:focus-visible { outline: 3px solid var(--color-sea-soft); outline-offset: 3px; }
+  @media (max-width: 639px) {
+    .dv-footer-grid { gap: 1.5rem; padding-right: 4.5rem; }
+    .dv-footer-grid > div + div { padding-top: 1rem; border-top: 1px solid #e2e8f0; }
+    .dv-footer-contact { margin-inline: .75rem; padding-inline: 1rem; }
+    .dv-footer-contact .dv-btn { width: 100%; white-space: normal; text-align: center; }
+  }
+
+
 </style>
