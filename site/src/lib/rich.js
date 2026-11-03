@@ -77,7 +77,7 @@ export function richDoc(html) {
       img: ['src', 'alt', 'style'],
       figure: ['class', 'style'],
       iframe: ['src', 'width', 'height', 'style', 'loading', 'title', 'frameborder', 'allowfullscreen'],
-      span: ['style'],
+      span: ['style', 'class'],
       div: ['style'],
       p: ['style'],
       ul: ['style'],
