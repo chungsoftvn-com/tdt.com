@@ -1,6 +1,5 @@
 ---
 import { getContent } from '@/lib/content.js';
-import SectionHeading from './SectionHeading.astro';
 import Icon from './Icon.astro';
 
 interface Props {
@@ -10,33 +9,40 @@ interface Props {
 const { lang } = Astro.props;
 const t = getContent(lang, 'home');
 
-const values = [
+const values = lang === 'vi' ? [
+  { icon: 'star', title: 'Dịch vụ chỉn chu', text: 'Lịch trình và dịch vụ được chuẩn bị kỹ trước chuyến đi.' },
+  { icon: 'users', title: 'Đồng hành tận tâm', text: 'Tư vấn rõ ràng, hỗ trợ khách trong suốt hành trình.' },
+  { icon: 'tag', title: 'Chi phí minh bạch', text: 'Hạng mục và chi phí được thống nhất trước khi đặt dịch vụ.' },
+  { icon: 'heart', title: 'Phù hợp nhu cầu', text: 'Lắng nghe mong muốn, cân đối lịch trình và ngân sách.' },
+] : [
   { icon: 'star', title: t.value_1_title, text: t.value_1_text },
   { icon: 'users', title: t.value_2_title, text: t.value_2_text },
   { icon: 'tag', title: t.value_3_title, text: t.value_3_text },
   { icon: 'heart', title: t.value_4_title, text: t.value_4_text },
 ];
 ---
-
-<section class="bg-sand-deep px-5 py-16 sm:py-20">
+<section class="dv-values px-5" aria-labelledby="dv-values-title">
   <div class="mx-auto max-w-6xl">
-    <SectionHeading kicker={t.values_kicker} title={t.values_title} text={t.values_text} />
-    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {
-        values.map((v, i) => (
-          <div
-            data-reveal
-            style={`--reveal-delay:${i * 0.07}s`}
-            class="rounded-2xl bg-paper p-6 shadow-[var(--shadow-lift-1)]"
-          >
-            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-sea text-sand">
-              <Icon name={v.icon} class="h-6 w-6" />
-            </span>
-            <h3 class="mt-4 font-display text-lg text-ink">{v.title}</h3>
-            <p class="mt-2 text-sm leading-relaxed text-ink-soft">{v.text}</p>
-          </div>
-        ))
-      }
+    <h2 id="dv-values-title">{t.values_title}</h2>
+    <div class="dv-values-grid">
+      {values.map((v) => (
+        <article class="dv-value-card">
+          <span class="dv-value-icon"><Icon name={v.icon} class="h-5 w-5" /></span>
+          <div><h3>{v.title}</h3><p>{v.text}</p></div>
+        </article>
+      ))}
     </div>
   </div>
 </section>
+
+<style>
+  .dv-values { padding-block: 1.75rem; background: #fff7dc; border-block: 1px solid #f2dfaa; }
+  .dv-values h2 { margin: 0 0 1rem; color: var(--color-sea-deep); font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.35; font-weight: 700; text-align: center; }
+  .dv-values-grid { display: grid; grid-template-columns: 1fr; gap: .75rem; }
+  .dv-value-card { display: flex; align-items: flex-start; gap: .75rem; min-width: 0; padding: 1rem; border: 1px solid #eadfca; border-radius: .65rem; background: #fff; }
+  .dv-value-icon { display: inline-flex; flex: 0 0 2.25rem; height: 2.25rem; align-items: center; justify-content: center; border-radius: .55rem; color: var(--color-accent); background: var(--color-accent-pale); }
+  .dv-value-card h3 { margin: 0; color: var(--color-accent); font-family: var(--font-body); font-size: .9375rem; line-height: 1.4; font-weight: 700; }
+  .dv-value-card p { margin: .35rem 0 0; color: #475569; font-size: .84375rem; line-height: 1.6; }
+  @media (min-width: 640px) { .dv-values-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (min-width: 1024px) { .dv-values-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+</style>
