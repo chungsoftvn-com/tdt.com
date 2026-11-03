@@ -21,7 +21,7 @@ test('image repairs preserve figures, captions and the original transparent logo
   const src = '/content/vi/images/han-quoc-anh-noi-dung-opt.jpg';
   const html = `<figure class="original"><img src="${src}" width="1200"><figcaption>Cung điện</figcaption></figure>`;
   const fixed = fixContentImages(html);
-  assert.match(fixed, /class="original content-photo-branded"/);
+  assert.match(fixed, /<figure class="original"><span class="content-photo-branded">/);
   assert.match(fixed, /width:auto;max-width:100%;height:auto/);
   assert.match(fixed, /<figcaption>Cung điện<\/figcaption>/);
   assert.match(richDoc(html), /content-photo-branded/);
@@ -36,4 +36,17 @@ test('the invalid event image is not rendered and every substitution asset exist
   for (const { src } of Object.values(manifest.replacements)) {
     assert.ok(existsSync(fileURLToPath(new URL(src.slice(1), root))), src);
   }
+});
+
+test('phone references in substantive paragraphs and mixed HTML are preserved', () => {
+  const story = {type:'p', text:'Khởi hành tại Đồng Nai; đoàn riêng liên hệ 0902 898 726.'};
+  const mixed = {type:'html', html:'<p>Ngày 1: tham quan.</p><p>Hotline: 0913 78 76 47</p>'};
+  const card = {type:'html', html:'<div><h3>Thông tin liên hệ đặt tour</h3><p>Mr Anh Văn: 0902 898 726</p><p>Hotline: 0913 78 76 47</p></div>'};
+  assert.deepEqual(withoutLegacyTourContact([story,mixed,card]),[story,mixed]);
+});
+test('standalone branded images retain one logo through the document sanitizer', () => {
+  const src='/content/vi/images/han-quoc-anh-noi-dung-opt.jpg';
+  const output=richDoc(`<img src="${src}" width="2000">`);
+  assert.equal((output.match(/content-photo-branded/g)||[]).length,1);
+  assert.match(output,/width:auto;max-width:100%;height:auto/);
 });
