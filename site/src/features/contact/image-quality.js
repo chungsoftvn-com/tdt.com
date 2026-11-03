@@ -9,13 +9,7 @@ const imageSource = (tag) => tag.match(/\bsrc=["']([^"']+)["']/i)?.[1] || '';
 export function fixContentImages(html = '') {
   let out = String(html).replace(/<figure\b[^>]*>[\s\S]*?<\/figure>/gi, (figure) => {
     if (blocked.has(canonical(imageSource(figure)))) return '';
-    const src = imageSource(figure);
-    if (!branded.has(src) && !branded.has(canonical(src))) return figure;
-    return figure.replace(/<figure\b([^>]*)>/i, (_, attrs) => {
-      const extra = /\bclass=["']([^"']*)["']/i.exec(attrs);
-      const updated = extra ? attrs.replace(extra[0], 'class="'+escape(extra[1]+' content-photo-branded')+'"') : attrs+' class="content-photo-branded"';
-      return '<figure'+updated+'>';
-    });
+    return figure;
   });
   return out.replace(/<img\b[^>]*>/gi, (tag) => {
     const src = imageSource(tag);
@@ -28,6 +22,8 @@ export function fixContentImages(html = '') {
     }
     // Intrinsic sizing prevents small/portrait photographs being stretched blurry.
     next = next.replace(/\s(?:width|height|style)=["'][^"']*["']/gi, '');
-    return next.replace(/\s*\/?\s*>$/, ' style="display:block;width:auto;max-width:100%;height:auto;margin-inline:auto">');
+    next = next.replace(/\s*\/?\s*>$/, ' style="display:block;width:auto;max-width:100%;height:auto;margin-inline:auto">');
+    return !replacement && (branded.has(src) || branded.has(canonical(src)))
+      ? '<span class="content-photo-branded">' + next + '</span>' : next;
   });
 }
