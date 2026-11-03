@@ -1,10 +1,9 @@
 ---
 /**
  * AboutTeaser (theme layout2 — "DatViet")
- * Bên phải thay 4 ô ghi chú chữ bằng COLLAGE 3 ẢNH thật (ảnh các chuyến đi),
- * phần chữ giữ ngắn — trang chủ bớt chữ, nhiều hình hơn.
+ * Giới thiệu ngắn cùng dải ba ảnh hành trình nằm ngang.
  */
-import { getContent, getNews, getTours, href } from '@/lib/content.js';
+import { getContent, href } from '@/lib/content.js';
 import Icon from './Icon.astro';
 
 interface Props {
@@ -21,31 +20,23 @@ const imgOf = (name?: string) =>
       ? name
       : `/content/vi/images/${name}`;
 
-const photos = [
-  ...getNews(lang)
-    .filter((n) => n && n.image)
-    .slice(7, 10)
-    .map((n) => n.image),
-  ...getTours(lang)
-    .filter((x) => x && x.image)
-    .slice(0, 3)
-    .map((x) => x.image),
-];
+const photos = (Array.isArray(t.hero_slides) ? t.hero_slides : []).slice(0, 3);
+
 
 const points = [t.value_1_title, t.value_2_title, t.value_3_title, t.value_4_title].filter(Boolean);
 ---
 
-<section class="bg-white px-5 py-12">
-  <div class="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-2">
+<section class="dv-home-about bg-white px-5 py-6">
+  <div class="mx-auto grid max-w-6xl items-center gap-5 lg:grid-cols-[1.1fr_1fr]">
     <div data-reveal>
-      <p class="font-hand text-xl text-accent-deep sm:text-2xl">{t.about_teaser_kicker}</p>
-      <h2 class="mt-1 font-display text-2xl leading-tight text-ink sm:text-3xl">
+      <p class="text-sm font-bold uppercase tracking-wide text-accent-deep">{t.about_teaser_kicker}</p>
+      <h2 class="mt-1 font-display text-2xl leading-tight text-ink">
         {t.about_teaser_title}
       </h2>
-      <p class="mt-3 leading-relaxed text-ink-soft">{t.about_teaser_text}</p>
+      <p class="mt-2 text-sm leading-relaxed text-ink-soft">{t.about_teaser_text}</p>
 
       {points.length > 0 && (
-        <ul class="mt-4 grid gap-1.5 sm:grid-cols-2">
+        <ul class="mt-3 grid gap-1 sm:grid-cols-2">
           {points.map((p) => (
             <li class="flex items-start gap-2 text-sm font-medium text-ink">
               <Icon name="check" class="mt-0.5 h-4 w-4 flex-none text-sea" />
@@ -57,20 +48,20 @@ const points = [t.value_1_title, t.value_2_title, t.value_3_title, t.value_4_tit
 
       <a
         href={href(lang, 'about')}
-        class="dv-btn dv-btn-outline mt-5"
+        class="dv-btn dv-btn-outline mt-3"
       >
         {t.about_teaser_cta}
         <Icon name="arrow-right" class="h-4 w-4" />
       </a>
     </div>
 
-    <div class="dv-collage" data-reveal>
+    <div class="dv-about-photos" data-reveal>
       {
         photos.slice(0, 3).map((p, i) => (
           <img
-            src={imgOf(p)}
-            alt={t.about_teaser_title || ''}
-            loading={i === 0 ? 'eager' : 'lazy'}
+            src={imgOf(p.image)}
+            alt={p.alt || t.about_teaser_title || ''}
+            loading="lazy"
             decoding="async"
           />
         ))
