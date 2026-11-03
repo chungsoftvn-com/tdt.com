@@ -180,7 +180,7 @@ const richHtml = (html) =>
       allowedAttributes: {
         '*': ['style', 'class'],
         a: ['href', 'target', 'rel'],
-        img: ['src', 'alt', 'width', 'height', 'loading'],
+        img: ['src', 'alt', 'width', 'height', 'loading', 'style'],
         iframe: ['src', 'width', 'height', 'allow', 'allowfullscreen', 'frameborder', 'loading', 'title'],
         td: ['colspan', 'rowspan', 'align', 'valign', 'width', 'height'],
         th: ['colspan', 'rowspan', 'align', 'valign', 'width', 'height', 'scope'],
@@ -335,6 +335,7 @@ const richHtml = (html) =>
     margin: 1rem 0;
     overflow-x: auto;
   }
+  .rich-html :global(img) { display: block; width: auto; max-width: 100%; height: auto; margin-inline: auto; }
   .rich-html :global(table) {
     width: 100%;
     min-width: 36rem;
