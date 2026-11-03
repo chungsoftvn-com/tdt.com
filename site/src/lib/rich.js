@@ -5,7 +5,7 @@
  * Module nằm trong src/lib/ nên KHÔNG bị copyLayout ghi đè (an toàn).
  */
 import sanitizeHtml from 'sanitize-html';
-import { fixContentImages } from '@/features/contact/image-quality.js';
+import { fixContentImages } from '../features/contact/image-quality.js';
 
 /**
  * Chuẩn hoá link nội bộ do admin nhập trong SunEditor: thêm '/' vào cuối.
