@@ -43,6 +43,7 @@ for (const file of files) {
     }
   }
 }
+await fs.rm(output, { recursive: true, force: true });
 await fs.mkdir(output, { recursive: true }); await fs.mkdir(cache, { recursive: true });
 let originalBytes = 0, mobileBytes = 0, generated = 0;
 const queue = [...candidates.entries()];
@@ -56,7 +57,7 @@ async function worker() {
     try { meta = await sharp(bytes).metadata(); } catch { console.warn('[images] Invalid image retained:', src); continue; }
     if (!meta.width || meta.width < 480 || (meta.pages || 1) > 1) continue;
     const digest = crypto.createHash('sha256').update(bytes).update('webp-v1-q80').digest('hex').slice(0, 20);
-    const widths = [...new Set([480, 960, Math.min(1600, meta.width)].filter(w => w <= meta.width))].sort((a,b) => a-b);
+    const widths = [...new Set([480, Math.min(768, meta.width)].filter(w => w <= meta.width))].sort((a,b) => a-b);
     let task = assetTasks.get(digest);
     if (!task) {
       task = (async () => {
@@ -74,6 +75,7 @@ async function worker() {
       assetTasks.set(digest, task);
     }
     item.variants = await task;
+    item.width = meta.width;
     originalBytes += bytes.length;
     mobileBytes += (await fs.stat(path.join(output, `${digest}-${widths[0]}.webp`))).size;
   }
@@ -88,12 +90,14 @@ for (const file of files) {
     const entry = candidates.get(src), lazy = candidates.get(deferred);
     let out = tag;
     if (entry?.variants && !readAttr(tag, 'srcset')) {
-      const srcset = entry.variants.map(v => `${v.url} ${v.width}w`).join(', ');
-      const sizes = readAttr(tag, 'sizes') ? '' : ' sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) 100vw, 900px"';
+      const choices = [...entry.variants];
+      if (entry.width > choices.at(-1).width) choices.push({url: new URL(src, 'https://todaytourist.com').pathname, width: entry.width});
+      const srcset = choices.map(v => `${v.url} ${v.width}w`).join(', ');
+      const sizes = readAttr(tag, 'sizes') ? '' : ' sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1023px) 100vw, 768px"';
       out = out.replace(/\s*\/?\s*>$/, ` srcset="${escape(srcset)}"${sizes}>`);
     }
     if (lazy?.variants) {
-      const v = lazy.variants.find(v => v.width >= 960) || lazy.variants.at(-1);
+      const v = lazy.variants.find(v => v.width >= 768) || lazy.variants.at(-1);
       out = out.replace(/\sdata-src=["'][^"']*["']/i, ` data-src="${v.url}"`);
     }
     return out;
