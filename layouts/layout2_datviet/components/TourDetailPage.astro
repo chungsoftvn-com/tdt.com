@@ -129,7 +129,7 @@ const bookLink = `${href(lang, 'dat-tour')}?tour=${encodeURIComponent(slug)}`;
         {
           tour.content.length > 0 && (
             <div data-reveal class="mt-10">
-              <RichContent content={tour.content} />
+              <RichContent content={tour.content} tourContact />
             </div>
           )
         }

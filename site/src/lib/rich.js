@@ -5,6 +5,7 @@
  * Module nằm trong src/lib/ nên KHÔNG bị copyLayout ghi đè (an toàn).
  */
 import sanitizeHtml from 'sanitize-html';
+import { fixContentImages } from '../features/contact/image-quality.js';
 
 /**
  * Chuẩn hoá link nội bộ do admin nhập trong SunEditor: thêm '/' vào cuối.
@@ -63,19 +64,20 @@ export function richText(html) {
  * h1-h6, blockquote, pre, hr, bảng, ảnh, màu chữ (span style), v.v.
  */
 export function richDoc(html) {
-  return normalizeInternalLinks(sanitizeHtml(html || '', {
+  return normalizeInternalLinks(sanitizeHtml(fixContentImages(html || ''), {
     allowedTags: [
       'p', 'br', 'b', 'strong', 'i', 'em', 'u', 's', 'sub', 'sup', 'span', 'a',
       'ul', 'ol', 'li', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
       'blockquote', 'pre', 'hr',
       'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td',
-      'img', 'div', 'iframe',
+      'img', 'div', 'iframe', 'figure', 'figcaption',
     ],
     allowedAttributes: {
       a: ['href', 'target', 'rel', 'style'],
       img: ['src', 'alt', 'style'],
+      figure: ['class', 'style'],
       iframe: ['src', 'width', 'height', 'style', 'loading', 'title', 'frameborder', 'allowfullscreen'],
-      span: ['style'],
+      span: ['style', 'class'],
       div: ['style'],
       p: ['style'],
       ul: ['style'],

@@ -1,0 +1,31 @@
+---
+/** One tour contact card, shared by tour details and travel articles. */
+---
+<section class="tour-contact" data-tour-contact aria-label="Thông tin liên hệ đặt tour">
+  <h2>Thông tin liên hệ đặt tour</h2>
+  <p class="tour-contact-company">CÔNG TY TNHH DU LỊCH NGÀY HÔM NAY</p>
+  <p class="tour-contact-slogan">TODAYTOURIST – CÙNG BẠN ĐI KHẮP NĂM CHÂU</p>
+  <ul>
+    <li><span aria-hidden="true">📍</span><span><strong>Địa chỉ:</strong> Số 80 Đặng Nguyên, Khu phố 29, Phường Long Bình, TP. Đồng Nai.</span></li>
+    <li><span aria-hidden="true">📞</span><span><strong>Mr. Anh Văn – Phòng Kinh doanh:</strong><br /><a href="tel:0902898726">0902 898 726</a><span class="tour-contact-separator"> · </span><a href="https://zalo.me/0902898726" target="_blank" rel="noopener noreferrer">Nhắn Zalo</a></span></li>
+    <li><span aria-hidden="true">☎️</span><span><strong>Hotline – Lê Sang:</strong><br /><a href="tel:0913787647">0913 78 76 47</a><span class="tour-contact-separator"> · </span><a href="https://zalo.me/0913787647" target="_blank" rel="noopener noreferrer">Nhắn Zalo</a></span></li>
+    <li><span aria-hidden="true">✉️</span><span><strong>Email:</strong> <a href="mailto:lesangtravel@gmail.com">lesangtravel@gmail.com</a></span></li>
+    <li><span aria-hidden="true">🌐</span><span><strong>Website:</strong> <a href="/vi/">todaytourist.com</a></span></li>
+  </ul>
+  <p class="tour-contact-note">Gửi ngày đi, số khách và điểm đón để nhận lịch trình, kiểm tra chỗ và báo giá phù hợp.</p>
+</section>
+<style>
+  .tour-contact { margin-block: 1.75rem 1rem; padding: 1.25rem 1.4rem; border: 1px solid #bcdcec; border-left: 5px solid #246e91; border-radius: .75rem; background: #edf7fc; color: #234759; font-family: var(--font-body); overflow-wrap: anywhere; }
+  .tour-contact h2 { margin: 0 0 .85rem; font-family: var(--font-body); font-size: 1.15rem; font-weight: 800; line-height: 1.4; color: #1e5c78; }
+  .tour-contact-company { margin: 0; font-size: 1rem; line-height: 1.5; font-weight: 800; color: #1e5c78; }
+  .tour-contact-slogan { margin: .35rem 0 1rem; color: #7b2437; font-size: .875rem; font-weight: 700; line-height: 1.5; }
+  .tour-contact ul { display: grid; gap: .75rem; padding: 0; margin: 0; list-style: none; }
+  .tour-contact li { display: flex; align-items: flex-start; gap: .6rem; font-size: .9375rem; line-height: 1.65; }
+  .tour-contact li > span:first-child { flex: 0 0 1.35rem; }
+  .tour-contact li > span:last-child { min-width: 0; }
+  .tour-contact a { color: #1e5c78; font-weight: 700; text-decoration: underline; text-underline-offset: .2em; }
+  .tour-contact a:hover { color: #7b2437; }
+  .tour-contact a:focus-visible { outline: 2px solid #246e91; outline-offset: 3px; }
+  .tour-contact-note { margin: 1rem 0 0; padding-top: .75rem; border-top: 1px solid #c7dce7; font-size: .875rem; line-height: 1.65; color: #475569; }
+  @media (max-width: 480px) { .tour-contact { padding: 1rem; } .tour-contact li { font-size: .875rem; } }
+</style>

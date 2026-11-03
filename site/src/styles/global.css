@@ -189,3 +189,7 @@
     font-size: 16px;
   }
 }
+
+/* Real transparent brand mark for the audited photographs that had none. */
+.content-photo-branded { display: block; position: relative; width: fit-content; max-width: 100%; margin-inline: auto; }
+.content-photo-branded::after { content: ''; position: absolute; top: .75rem; right: .75rem; width: clamp(42px, 9vw, 76px); aspect-ratio: 74 / 80; background: url('/content/vi/images/logo.webp') center / contain no-repeat; pointer-events: none; filter: drop-shadow(0 1px 2px #ffffffaa); }

@@ -1,5 +1,8 @@
 ---
 import sanitizeHtml from 'sanitize-html';
+import { fixContentImages } from '@/features/contact/image-quality.js';
+import BookingContact from '@/features/contact/BookingContact.astro';
+import { withoutLegacyTourContact } from '@/features/contact/contact-blocks.js';
 import { normalizeInternalLinks, linkTransform } from '@/lib/rich.js';
 /**
  * RichContent — render mảng khối nội dung phong phú (ảnh + chữ đan xen).
@@ -16,9 +19,11 @@ interface Block {
 }
 interface Props {
   content?: Block[];
+  tourContact?: boolean;
 }
-const { content = [] } = Astro.props;
-const blocks = Array.isArray(content) ? content : [];
+const { content = [], tourContact = false } = Astro.props;
+const sourceBlocks = Array.isArray(content) ? content : [];
+const blocks = tourContact ? withoutLegacyTourContact(sourceBlocks) : sourceBlocks;
 
 // Reuse existing route photographs only on railway tour pages.
 const railwayPage = Astro.url.pathname.includes('-tau-hoa-');
@@ -161,7 +166,7 @@ const rich = (html) =>
  */
 const richHtml = (html) =>
   normalizeInternalLinks(
-    sanitizeHtml(html || '', {
+    sanitizeHtml(fixContentImages(html || ''), {
       allowedTags: [
         'p', 'div', 'span', 'br', 'hr',
         'b', 'strong', 'i', 'em', 'u', 's', 'strike', 'sub', 'sup', 'mark', 'small',
@@ -175,7 +180,7 @@ const richHtml = (html) =>
       allowedAttributes: {
         '*': ['style', 'class'],
         a: ['href', 'target', 'rel'],
-        img: ['src', 'alt', 'width', 'height', 'loading'],
+        img: ['src', 'alt', 'width', 'height', 'loading', 'style'],
         iframe: ['src', 'width', 'height', 'allow', 'allowfullscreen', 'frameborder', 'loading', 'title'],
         td: ['colspan', 'rowspan', 'align', 'valign', 'width', 'height'],
         th: ['colspan', 'rowspan', 'align', 'valign', 'width', 'height', 'scope'],
@@ -252,9 +257,7 @@ const richHtml = (html) =>
           return <h3 class="rich-h3" set:html={rich(b.text)} />;
         case 'img':
           return (
-            <figure class="rich-figure">
-              <img src={b.src} alt={b.alt || ''} loading="lazy" decoding="async" />
-            </figure>
+            <div class="rich-html" set:html={richHtml('<figure><img src="' + String(b.src || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;') + '" alt="' + String(b.alt || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;') + '" loading="lazy"></figure>')} />
           );
         case 'list':
           return (
@@ -273,6 +276,7 @@ const richHtml = (html) =>
     })
   }
 </div>
+{tourContact && <BookingContact />}
 
 <style>
   .rich-content {
@@ -331,6 +335,7 @@ const richHtml = (html) =>
     margin: 1rem 0;
     overflow-x: auto;
   }
+  .rich-html :global(img) { display: block; width: auto; max-width: 100%; height: auto; margin-inline: auto; }
   .rich-html :global(table) {
     width: 100%;
     min-width: 36rem;
