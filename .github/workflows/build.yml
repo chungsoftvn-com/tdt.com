@@ -75,6 +75,10 @@ jobs:
           cp -r ../content .astro-dist/content
           cp -r ../layouts .astro-dist/layouts
 
+      - name: Optimize responsive images
+        working-directory: site
+        run: node scripts/optimize-responsive-images.mjs
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
