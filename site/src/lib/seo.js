@@ -315,6 +315,17 @@ export function travelAgencyLd(lang) {
     email: c.email || undefined,
     address: postalAddress(c) || undefined,
     areaServed: [{ '@type': 'Country', name: 'Vietnam' }],
+    // Dữ liệu thật từ Google Maps (anh Văn cung cấp 04/11/2026): toạ độ văn phòng, giờ làm việc T2–T7 08:00–17:00 (CN nghỉ).
+    geo: { '@type': 'GeoCoordinates', latitude: 10.9451586, longitude: 106.8720621 },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '08:00',
+        closes: '17:00',
+      },
+    ],
+    priceRange: '650.000 - 80.500.000 VND',
     sameAs: social.length ? social : undefined,
     ...(tel || c.email
       ? {
