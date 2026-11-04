@@ -384,8 +384,10 @@ export function tourLd(lang, tour) {
   const url = absUrl(`/${lang}/tours/${tour.slug}/`);
   const image = imageUrl(tour.image);
   const price = parsePrice(tour.price);
+  // Không có giá và không có đánh giá thật thì không khai báo Product (Google yêu cầu offers/review/aggregateRating).
+  const isProduct = Boolean(price) || (getTourReviews(lang, tour.slug) || []).length > 0;
   return {
-    '@type': 'Product',
+    '@type': isProduct ? 'Product' : 'TouristTrip',
     '@id': `${url}#tour`,
     name: tour.name,
     description: tour.desc || undefined,
