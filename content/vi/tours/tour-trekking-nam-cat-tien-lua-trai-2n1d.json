@@ -6,7 +6,7 @@
   "departure": "TP. Đồng Nai / TP.HCM",
   "duration": "2 ngày 1 đêm",
   "price": "1.990.000đ/khách",
-  "image": "",
+  "image": "tour-trekking-nam-cat-tien-lua-trai-2n1d.jpg",
   "desc": "Trekking rừng Nam Cát Tiên, ghé Bàu Sấu, tiệc nướng và lửa trại buổi tối, nghỉ đêm 1 đêm. Xe đón Biên Hòa. Giá 1.990.000đ. Hotline 0902 898 726.",
   "highlights": [
     "Trekking xuyên rừng nguyên sinh Nam Cát Tiên",
@@ -139,5 +139,5 @@
       "text": "<em>Giá và chương trình có thể thay đổi theo mùa và số lượng khách. Vui lòng liên hệ Mr. Anh Văn – 0902 898 726 để được tư vấn trước khi đặt.</em>"
     }
   ],
-  "hidden": true
+  "hidden": false
 }
