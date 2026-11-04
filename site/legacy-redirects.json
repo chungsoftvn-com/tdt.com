@@ -1,6 +1,19 @@
 {
   "_comment": "URL CŨ của todaytourist.com (site ASP.NET/CMS trước) -> đích MỚI. GitHub Pages không có 301 server-side nên site/scripts/build-legacy-redirects.mjs sinh 1 trang tĩnh tại mỗi path cũ: trả HTTP 200, có canonical + meta refresh + đếm giờ JS rồi location.replace() sang đích. Nguồn danh sách: Wayback CDX (86 path), dev/statics_old (97 URL), dev/google.manual.copy (SERP Google thật) — xem lịch sử commit để biết cách lập. Đích luôn là URL canonical '/vi/...' (xem docstring script).",
   "_comment_targets": "Trang có nội dung tương đương thì chuyển đến URL canonical cụ thể. Bài cũ đã mất và không có nội dung thay thế tương đương phải trả 404 thật; không đẩy mọi bài về danh sách tin tức để tránh soft 404.",
+  "_retired_without_replacement": [
+    "/10-khu-cho-am-thuc-o-madrid",
+    "/cam-on-ve-chuyen-di-tuyet-voi",
+    "/dao-thien-duong-santorini",
+    "/khu-pho-co-gamla-stan",
+    "/lan-dau-du-lich-thai-lan-an-gi-choi-gi-o-bangkok",
+    "/pho-co-barri-gotic",
+    "/sac-hong-tren-cao-nguyen-ha-giang",
+    "/tham-cau-song-kwai-huyen-thoai",
+    "/thi-tran-wernigerode-day-sac-mau",
+    "/thu-cam-on-cua-khach-hang-le-huynh-phuoc-dat",
+    "/vien-ngoc-vung-danube"
+  ],
   "/benh-vien-da-khoa-dong-nai": "/vi/y-kien-khach-hang/",
   "/chi-duong-todaytourist": "/vi/chi-duong/",
   "/chieu-tren-pha-tam-giang": "/vi/tin-tuc/",
@@ -114,18 +127,7 @@
   "/vi/tin-tuc/ngay-hoi-truyen-thong-buu-dien-dong-nai-08-15/": "/vi/y-kien-khach-hang/ngay-hoi-truyen-thong-buu-dien-dong-nai-08-15/",
   "/vi/tin-tuc/vung-tau-fukuvi-viet-nam-07-31/": "/vi/y-kien-khach-hang/vung-tau-fukuvi-viet-nam-07-31/",
   "/vi/tin-tuc/together-we-win-03-18/": "/vi/y-kien-khach-hang/together-we-win-03-18/",
-  "_retired_without_replacement": [
-    "/10-khu-cho-am-thuc-o-madrid",
-    "/cam-on-ve-chuyen-di-tuyet-voi",
-    "/dao-thien-duong-santorini",
-    "/khu-pho-co-gamla-stan",
-    "/lan-dau-du-lich-thai-lan-an-gi-choi-gi-o-bangkok",
-    "/pho-co-barri-gotic",
-    "/sac-hong-tren-cao-nguyen-ha-giang",
-    "/tham-cau-song-kwai-huyen-thoai",
-    "/thi-tran-wernigerode-day-sac-mau",
-    "/thu-cam-on-cua-khach-hang-le-huynh-phuoc-dat",
-    "/vien-ngoc-vung-danube"
-  ],
-  "/tours/khu-vuc/mien-nam": "/vi/tours/?region=domestic"
+  "/tours/khu-vuc/mien-nam": "/vi/tours/?region=domestic",
+  "/vi/tours/tour-dao-binh-hung-ninh-chu-2n2d/": "/vi/tours/tour-dao-binh-hung-ninh-chu-3n2d/",
+  "/vi/tours/tour-dao-binh-ba-ninh-chu-2n2d/": "/vi/tours/tour-dao-binh-ba-ninh-chu-3n2d/"
 }
