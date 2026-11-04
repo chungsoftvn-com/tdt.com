@@ -9,7 +9,7 @@
   "content": [
     {
       "type": "html",
-      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Chọn xe cho tour Ninh Chữ–Bình Hưng cần theo số người, hành lý và việc đi ban ngày hay ban đêm. TodayTourist ưu tiên tư vấn dòng 45 chỗ và giường nằm; nhóm nhỏ có thể cân nhắc 29 hoặc 16 chỗ. Cấu hình xe cụ thể phải được xác nhận, không suy ra từ tên chung của tour.</span></p></blockquote>"
+      "html": "<blockquote><p><span style=\"font-size:16px;color:#374151\">Chọn xe cho tour Ninh Chữ–Bình Hưng cần theo số người, hành lý và việc đi ban ngày hay ban đêm. TodayTourist ưu tiên tư vấn dòng 45 chỗ và giường nằm; nhóm nhỏ có thể cân nhắc 29 hoặc 16 chỗ. Cấu hình xe cụ thể phải được xác nhận, không suy ra từ tên chung của tour.</span></p><p>Cần thuê nguyên xe giường nằm cho đoàn? Xem thêm: <a href=\"/vi/tin-tuc/thue-nguyen-xe-giuong-nam-cho-khach-doan/\" target=\"_blank\" rel=\"noopener nofollow\">Thuê nguyên xe giường nằm cho khách đoàn</a>.</p></blockquote>"
     },
     {
       "type": "h2",
@@ -81,15 +81,15 @@
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tin-tuc/dat-tour-ninh-chu/\"><strong><u><span style=\"color:#00695c\">Đặt tour Ninh Chữ–Vĩnh Hy–Bình Hưng: kiểm tra trước khi cọc</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tin-tuc/dat-tour-ninh-chu/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Đặt tour Ninh Chữ–Vĩnh Hy–Bình Hưng: kiểm tra trước khi cọc</span></u></strong></a></span>"
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tin-tuc/tour-ninh-chu-vinh-hy/\"><strong><u><span style=\"color:#00695c\">Tour Ninh Chữ–Vĩnh Hy–Bình Hưng: chọn tuyến theo mục đích chuyến đi</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tin-tuc/tour-ninh-chu-vinh-hy/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Tour Ninh Chữ–Vĩnh Hy–Bình Hưng: chọn tuyến theo mục đích chuyến đi</span></u></strong></a></span>"
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tin-tuc/gia-tour-ninh-chu/\"><strong><u><span style=\"color:#00695c\">Giá tour Ninh Chữ–Vĩnh Hy–Bình Hưng: so đúng phần dịch vụ</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tin-tuc/gia-tour-ninh-chu/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Giá tour Ninh Chữ–Vĩnh Hy–Bình Hưng: so đúng phần dịch vụ</span></u></strong></a></span>"
     },
     {
       "type": "h2",
@@ -101,11 +101,11 @@
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-ninh-chu-vinh-hy-3n2d/\"><strong><u><span style=\"color:#00695c\">Tour Ninh Chữ – Vĩnh Hy 3 ngày 2 đêm</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-ninh-chu-vinh-hy-3n2d/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Tour Ninh Chữ – Vĩnh Hy 3 ngày 2 đêm</span></u></strong></a></span>"
     },
     {
       "type": "p",
-      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-dao-binh-hung-2n2d/\"><strong><u><span style=\"color:#00695c\">Tour đảo Bình Hưng 2 ngày 2 đêm</span></u></strong></a></span>"
+      "text": "<span style=\"font-size:16px;color:#374151\"><a href=\"https://todaytourist.com/vi/tours/tour-dao-binh-hung-2n2d/\" target=\"_blank\" rel=\"noopener nofollow\"><strong><u><span style=\"color:#00695c\">Tour đảo Bình Hưng 2 ngày 2 đêm</span></u></strong></a></span>"
     }
   ],
   "hidden": false
