@@ -138,10 +138,10 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
                   </div>
                 </div>
                 {showHeroSlideshow && (
-                  <figure class="dv-hero-visual" data-hero-carousel role="region" aria-roledescription="trình chiếu" aria-label="Những hành trình cùng TodayTourist">
+                  <figure class="dv-hero-visual" data-hero-carousel aria-roledescription="trình chiếu" aria-label="Những hành trình cùng TodayTourist">
                     <div class="dv-hero-stage">
                       {heroSlides.map((slide, i) => (
-                        <img data-hero-slide src={i === 0 ? imgOf(slide.image) : undefined} data-src={imgOf(slide.image)} alt={slide.alt || 'Hành trình cùng TodayTourist'} width="900" height="600" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" hidden={i !== 0} />
+                        <img data-hero-slide src={i === 0 ? imgOf(slide.image) : 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='} data-src={imgOf(slide.image)} alt={slide.alt || 'Hành trình cùng TodayTourist'} width="900" height="600" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" hidden={i !== 0} />
                       ))}
                     </div>
                     <figcaption class="dv-hero-caption">
@@ -453,7 +453,7 @@ const fbPhotos: any[] = Array.isArray(fb.photos) ? fb.photos : [];
     let focused = false;
     let changing = false;
     const loadImage = (image: HTMLImageElement) => {
-      if (!image.getAttribute('src') && image.dataset.src) {
+      if (image.dataset.src && image.getAttribute('src') !== image.dataset.src) {
         image.loading = 'eager';
         image.src = image.dataset.src;
       }
