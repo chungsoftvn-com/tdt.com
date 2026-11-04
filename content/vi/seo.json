@@ -1,8 +1,8 @@
 {
   "_comment": "SEO metadata theo từng trang (title/description hiển thị trên Google). Key = slug trên URL; 'home' áp cho cả '/' và '/vi/'. Trang chi tiết (tour, tin tức) tự sinh title/description từ chính nội dung của bài nên KHÔNG khai báo ở đây. File này được biên soạn thủ công cho cả 2 ngôn ngữ (xem MANUAL_EN trong site/scripts/translate.py) nên sửa content/en/seo.json trực tiếp.",
   "home": {
-    "title": "Công ty du lịch Đồng Nai – Tour trọn gói từ Biên Hòa · TodayTourist",
-    "description": "TodayTourist – công ty du lịch tại Đồng Nai, chuyên tour trong nước, quốc tế, tour đoàn, teambuilding và gala dinner. Đón khách khu vực Biên Hòa. Tư vấn tour: 0902 898 726."
+    "title": "Công ty du lịch Đồng Nai – Tour từ Biên Hòa · TodayTourist",
+    "description": "TodayTourist – công ty du lịch Đồng Nai: tour trong nước, quốc tế, tour đoàn, team building, gala dinner. Đón khách Biên Hòa, TP.HCM. Tư vấn 0902 898 726."
   },
   "about": {
     "title": "Giới thiệu TodayTourist – Công ty du lịch Đồng Nai",
