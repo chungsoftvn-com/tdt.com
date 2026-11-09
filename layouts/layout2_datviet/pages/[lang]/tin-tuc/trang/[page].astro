@@ -1,0 +1,19 @@
+---
+// /vi/tin-tuc/trang/2/, /3/... - cac trang tiep theo cua danh sach tin tuc (trang 1 la /vi/tin-tuc/).
+import { LANGS, getNews } from '@/lib/content.js';
+import NewsPage from '@/components/NewsPage.astro';
+
+export function getStaticPaths() {
+  const PER_PAGE = 24; // giu khop NEWS_PER_PAGE trong NewsPage.astro
+  return LANGS.flatMap((lang) => {
+    const total = Math.max(1, Math.ceil(getNews(lang).length / PER_PAGE));
+    return Array.from({ length: total - 1 }, (_, i) => ({
+      params: { lang, page: String(i + 2) },
+    }));
+  });
+}
+
+const { lang, page } = Astro.params;
+---
+
+<NewsPage lang={lang} page={Number(page)} />
