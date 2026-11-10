@@ -1,0 +1,16 @@
+{
+  "slug": "n8n-kiem-thu-test-10-11-kiem-dinh-v152-1-thu-album-2-anh-khong-dang-cong-khai-9674",
+  "title": "[KIEM THU N8N] [TEST 10/11 - kiểm định V152.1] Thử ALBUM 2 ảnh, KHÔNG đăng công khai.",
+  "category": "Tin tức",
+  "image": "",
+  "summary": "Dòng 2 cho bài website.",
+  "body": "Dòng 2 cho bài website.",
+  "published_at": "2026-11-10",
+  "content": [
+    {
+      "type": "p",
+      "text": "Dòng 2 cho bài website."
+    }
+  ],
+  "hidden": true
+}
