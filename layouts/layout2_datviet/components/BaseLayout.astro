@@ -89,7 +89,26 @@ const ogLocaleAlt = viOnlyRootSlug(pathname)
   ? []
   : LANGS.filter((l) => l !== lang).map((l) => OG_LOCALES[l]);
 
-const ogImage = image ? absUrl(imageUrl(image)) : absUrl(DEFAULT_OG_IMAGE);
+// Preview chia sẻ mạng xã hội (Facebook, Zalo, Threads…) cho trang tĩnh/landing:
+// content/<lang>/social-preview.json khai báo og_title, og_description, og_image
+// (ảnh 1200×630 trong content/vi/images), og_image_alt theo key của seo.json.
+// Chỉ ảnh hưởng thẻ og:/twitter:, KHÔNG đổi <title>/description trên Google.
+// Trang chi tiết (tour, tin tức) vẫn dùng ảnh bìa riêng truyền qua prop `image`.
+let socialEntry: Record<string, unknown> = {};
+try {
+  const socialTable = getContent(lang, 'social-preview') as Record<string, unknown>;
+  const entry = socialTable?.[seo.key];
+  if (entry && typeof entry === 'object') socialEntry = entry as Record<string, unknown>;
+} catch {
+  socialEntry = {};
+}
+const pickStr = (v: unknown) => (typeof v === 'string' ? v.trim() : '');
+const ogTitle = pickStr(socialEntry.og_title) || fullTitle;
+const ogDesc = pickStr(socialEntry.og_description) || desc;
+const ogImageName = image || pickStr(socialEntry.og_image);
+const ogImage = ogImageName ? absUrl(imageUrl(ogImageName)) : absUrl(DEFAULT_OG_IMAGE);
+// Ảnh mặc định và og_image trong social-preview.json đều chuẩn 1200×630.
+const ogImageAlt = pickStr(socialEntry.og_image_alt) || ogTitle;
 const hasCustomImage = Boolean(image);
 
 const crumbs = isHidden ? [] : breadcrumbs(lang, pathname, title || '');
@@ -155,11 +174,11 @@ const graph = [travelAgencyLd(lang), websiteLd(lang), breadcrumbLd(crumbs), ...j
     <meta property="og:site_name" content={seo.brand} />
     <meta property="og:locale" content={ogLocale} />
     {ogLocaleAlt.map((l) => <meta property="og:locale:alternate" content={l} />)}
-    <meta property="og:title" content={fullTitle} />
-    <meta property="og:description" content={desc} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDesc} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:alt" content={fullTitle} />
+    <meta property="og:image:alt" content={ogImageAlt} />
     {
       !hasCustomImage && (
         <>
@@ -171,9 +190,10 @@ const graph = [travelAgencyLd(lang), websiteLd(lang), breadcrumbLd(crumbs), ...j
     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={fullTitle} />
-    <meta name="twitter:description" content={desc} />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDesc} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <script
       type="application/ld+json"
