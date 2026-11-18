@@ -1,0 +1,9 @@
+{
+  "_comment": "Preview khi chia sẻ link lên Facebook, Zalo, Threads, LinkedIn… cho trang tĩnh/landing. Key = slug trên URL (giống seo.json, 'home' = trang chủ). Chỉ đổi thẻ og:/twitter:, KHÔNG đổi title/description trên Google. og_image: tên file trong content/vi/images, chuẩn 1200×630. Trang tour/tin tức tự dùng ảnh bìa riêng nên không khai báo ở đây. Tách riêng khỏi seo.json để trang Quản trị → SEO (chỉ lưu title/description) không làm mất dữ liệu này.",
+  "cho-thue-xe": {
+    "og_title": "Thuê xe du lịch Biên Hòa – Đồng Nai | Xe 4–45 chỗ, giường nằm",
+    "og_description": "TodayTourist cho thuê xe du lịch có tài xế đón tại Biên Hòa, TP. Đồng Nai, TP.HCM: xe gia đình, xe đoàn công ty, trường học, đưa đón sân bay. Báo giá nhanh qua Zalo 0902 898 726.",
+    "og_image": "og-cho-thue-xe.jpg",
+    "og_image_alt": "Đội xe du lịch 16, 29, 45 chỗ của TodayTourist – thuê xe Biên Hòa, Đồng Nai, TP.HCM"
+  }
+}
