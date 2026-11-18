@@ -37,8 +37,8 @@ const MAP_FILE = path.join(ROOT, 'legacy-redirects.json');
 
 /** Domain chính — phải khớp `site` trong astro.config.mjs + file CNAME + lib/seo.js. */
 const SITE_URL = 'https://todaytourist.com';
-/** Số giây đếm ngược trước khi tự chuyển hướng. */
-const DELAY = 8;
+/** Chuyển hướng tức thì (meta refresh 0 + location.replace) — Google coi như chuyển hướng vĩnh viễn; không còn trang đếm ngược 8 giây (khách thoát, Google báo soft 404). */
+const DELAY = 0;
 
 if (!fs.existsSync(DIST)) {
   console.error('[legacy] Không thấy .astro-dist — chạy `astro build` trước.');
@@ -70,93 +70,21 @@ const QUICK = [
   { href: '/vi/contact/', label: c.nav_contact },
 ].filter((x) => x.label);
 
-function html(from, to) {
-  const abs = SITE_URL + to;
-  const brand = c.brand_name || 'TODAYTOURIST';
+function html(from, to) {
+  const abs = SITE_URL + to;
+  const brand = c.brand_name || 'TODAYTOURIST';
   return `<!doctype html>
 <html lang="vi">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trang đã chuyển địa chỉ · ${esc(brand)}</title>
-<meta name="description" content="Địa chỉ cũ ${esc(from)} đã được chuyển sang ${esc(to)}.">
+<title>${esc(brand)}</title>
 <link rel="canonical" href="${esc(abs)}">
-<meta http-equiv="refresh" content="${DELAY}; url=${esc(abs)}">
-<style>
-  :root { --sea:#0f766e; --ink:#1b2a2a; --paper:#fffdf7; --sand:#f6efe3; }
-  * { box-sizing:border-box; }
-  body { margin:0; min-height:100dvh; display:flex; flex-direction:column;
-         font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-         color:var(--ink); background:var(--sand); }
-  header, footer { padding:18px 20px; text-align:center; }
-  header strong { letter-spacing:.08em; font-size:14px; }
-  main { flex:1; display:grid; place-items:center; padding:16px 20px 40px; }
-  .card { width:100%; max-width:660px; background:var(--paper); border-radius:18px;
-          padding:32px 26px; text-align:center;
-          box-shadow:0 18px 40px rgba(15,118,110,.14); }
-  .kicker { font-size:13px; text-transform:uppercase; letter-spacing:.12em;
-            color:var(--sea); font-weight:600; margin:0 0 10px; }
-  h1 { font-size:clamp(1.35rem,4vw,2rem); line-height:1.25; margin:0 0 12px; }
-  .old { display:inline-block; max-width:100%; overflow-wrap:anywhere; font-size:13px;
-         background:var(--sand); border-radius:8px; padding:4px 10px; color:#5b6b6b; }
-  .timer { font-size:15px; margin:18px 0 4px; }
-  .timer b { font-size:24px; color:var(--sea); font-variant-numeric:tabular-nums; }
-  .bar { height:6px; border-radius:99px; background:#e6ded1; overflow:hidden; margin:12px auto 22px; max-width:340px; }
-  .bar i { display:block; height:100%; width:0; background:var(--sea); transition:width 1s linear; }
-  .btn { display:inline-flex; align-items:center; justify-content:center; min-height:48px;
-         padding:12px 26px; border-radius:99px; background:var(--sea); color:#fff;
-         font-weight:600; text-decoration:none; }
-  .btn:hover { filter:brightness(1.08); }
-  .quick { margin:26px 0 0; padding:0; list-style:none; display:flex; flex-wrap:wrap;
-           gap:8px; justify-content:center; }
-  .quick a { display:inline-block; padding:7px 14px; border-radius:99px; font-size:14px;
-             color:var(--ink); text-decoration:none; border:1px solid rgba(27,42,42,.16); }
-  .quick a:hover { border-color:var(--sea); color:var(--sea); }
-  footer { font-size:13px; color:#5b6b6b; }
-  footer a { color:var(--sea); }
-</style>
+<meta http-equiv="refresh" content="0; url=${esc(abs)}">
+<script>location.replace(${JSON.stringify(to)});</script>
 </head>
 <body>
-<header><strong>${esc(brand)}</strong></header>
-<main>
-  <div class="card">
-    <p class="kicker">Địa chỉ cũ</p>
-    <h1>Trang này đã chuyển sang địa chỉ mới</h1>
-    <p class="old">${esc(from)}</p>
-    <p class="timer">Tự động chuyển sau <b id="cd">${DELAY}</b> giây…</p>
-    <div class="bar"><i id="bar"></i></div>
-    <p><a class="btn" id="go" href="${esc(to)}">Đi tới trang mới ngay</a></p>
-    <ul class="quick">
-${QUICK.map((q) => `      <li><a href="${esc(q.href)}">${esc(q.label)}</a></li>`).join('\n')}
-    </ul>
-  </div>
-</main>
-<footer>
-  ${esc(brand)} · Hotline <a href="tel:${esc(String(c.hotline || '').replace(/[^0-9+]/g, ''))}">${esc(c.hotline || '')}</a>
-</footer>
-<script>
-  (function () {
-    var TARGET = ${JSON.stringify(to)};
-    var left = ${DELAY};
-    var cd = document.getElementById('cd');
-    var bar = document.getElementById('bar');
-    var go = document.getElementById('go');
-    go.addEventListener('click', function (e) {
-      e.preventDefault();
-      window.location.replace(TARGET);
-    });
-    bar.style.width = (100 / ${DELAY}) + '%';
-    var t = setInterval(function () {
-      left -= 1;
-      if (cd) cd.textContent = left > 0 ? left : 0;
-      if (bar) bar.style.width = (100 * (${DELAY} - left) / ${DELAY}) + '%';
-      if (left <= 0) {
-        clearInterval(t);
-        window.location.replace(TARGET);
-      }
-    }, 1000);
-  })();
-</script>
+<p><a href="${esc(to)}">${esc(brand)} – mở trang</a></p>
 </body>
 </html>
 `;
