@@ -1,0 +1,46 @@
+name: Sync Facebook feed
+on:
+  repository_dispatch:
+    types: [facebook-page-feed]
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: facebook-gallery-main
+  cancel-in-progress: false
+jobs:
+  sync:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Download and validate Page images
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+        run: node site/scripts/sync-facebook.mjs
+      - name: Commit gallery and deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add content/vi/facebook.json content/vi/images/facebook
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Sync Facebook gallery after Page update"
+            pushed=0
+            for attempt in 1 2 3; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then pushed=1; break; fi
+            done
+            test "$pushed" = 1
+          fi
+          # Also redeploy unchanged data: a previous deployment may have failed.
+          gh workflow run build.yml --ref main
