@@ -18,12 +18,10 @@
     {
       "type": "list",
       "items": [
-        "Tour Đà Lạt 3N2Đ: khởi hành mùng 2 (07/02/2027), giá từ 3.290.000đ/khách. Xem Tour Đà Lạt 3N2Đ.",
-        "Tour Phan Thiết – Mũi Né 2N1Đ: khởi hành mùng 2 (07/02/2027), giá từ 2.890.000đ/khách. Xem Tour Phan Thiết 2N1Đ.",
-        "Tour hành hương Châu Đốc 1N1Đ: đi đêm mùng 2, về tối mùng 3, giá từ 1.490.000đ/khách. Xem Tour Châu Đốc – Rừng tràm Trà Sư.",
-        "Tour Quy Nhơn – Phú Yên 4N4Đ: đi tối mùng 2, giá từ 6.490.000đ/khách. Xem Tour Quy Nhơn – Phú Yên 4N4Đ.",
-        "Tour Đà Lạt – Nha Trang 4N3Đ: khởi hành mùng 2. Xem Tour Đà Lạt – Nha Trang 4N3Đ.",
-        "Tour chùa Bảo Lộc 2N1Đ (7 chùa, 3 cảnh): khởi hành mùng 2, giá từ 1.990.000đ/khách. Trên đường lên, xe dừng lễ Phật tại Chùa Linh Phú (Quốc lộ 20, Tân Phú, Đồng Nai); chương trình đang hoàn thiện."
+        "Tour Đà Lạt 3N2Đ: khởi hành mùng 2 (07/02/2027), giá từ 3.290.000đ/khách. Xem <a href=\"/vi/tours/tour-da-lat-3n2d/\">Tour Đà Lạt 3N2Đ</a>.",
+        "Tour Phan Thiết – Mũi Né 2N1Đ: khởi hành mùng 2 (07/02/2027), giá từ 2.890.000đ/khách. Xem <a href=\"/vi/tours/tour-phan-thiet-2n1d/\">Tour Phan Thiết 2N1Đ</a>.",
+        "Tour hành hương Châu Đốc 1N1Đ: đi đêm mùng 2, về tối mùng 3, giá từ 1.490.000đ/khách. Xem <a href=\"/vi/tours/tour-chau-doc-rung-tram-tra-su-1n1d/\">Tour Châu Đốc – Rừng tràm Trà Sư</a>.",
+        "Tour hành hương 10 cảnh chùa Bảo Lộc 1N1Đ: đi tối mùng 2, rạng sáng mùng 3 lễ chùa Linh Quy Pháp Ấn, về Biên Hòa ngay trong tối, giá từ 990.000đ/khách. Xem <a href=\"/vi/tours/tour-hanh-huong-10-canh-chua-bao-loc-1n1d/\">Tour 10 cảnh chùa Bảo Lộc 1N1Đ</a>."
       ]
     },
     {
@@ -37,8 +35,8 @@
     {
       "type": "list",
       "items": [
-        "Tour Đà Lạt 3N2Đ: đi sáng Thứ Sáu 01/01, về chiều Chủ nhật 03/01, giá từ 3.190.000đ/khách. Xem Tour Đà Lạt 3N2Đ.",
-        "Tour Phan Thiết – Mũi Né 2N1Đ: đi sáng Thứ Bảy 02/01, về tối Chủ nhật 03/01, giá từ 2.690.000đ/khách. Xem Tour Phan Thiết 2N1Đ."
+        "Tour Đà Lạt 3N2Đ: đi sáng Thứ Sáu 01/01, về chiều Chủ nhật 03/01, giá từ 3.190.000đ/khách. Xem <a href=\"/vi/tours/tour-da-lat-3n2d/\">Tour Đà Lạt 3N2Đ</a>.",
+        "Tour Phan Thiết – Mũi Né 2N1Đ: đi sáng Thứ Bảy 02/01, về tối Chủ nhật 03/01, giá từ 2.690.000đ/khách. Xem <a href=\"/vi/tours/tour-phan-thiet-2n1d/\">Tour Phan Thiết 2N1Đ</a>."
       ]
     },
     {
@@ -75,7 +73,7 @@
     },
     {
       "type": "p",
-      "text": "Có. Tour Châu Đốc đi đêm mùng 2 và tour Quy Nhơn – Phú Yên đi tối mùng 2."
+      "text": "Có. Tour Châu Đốc và tour 10 cảnh chùa Bảo Lộc đều đi tối mùng 2 và về lại Biên Hòa trong ngày mùng 3."
     },
     {
       "type": "h3",
