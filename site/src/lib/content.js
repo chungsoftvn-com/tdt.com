@@ -34,6 +34,7 @@ export const PAGE_SLUGS = [
   'to-chuc-team-building',
   'to-chuc-gala-dinner',
   'tour-hoc-sinh',
+  'tour-tet-2027',
 ];
 
 /**
