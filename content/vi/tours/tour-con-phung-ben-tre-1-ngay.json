@@ -68,6 +68,17 @@
     },
     {
       "type": "p",
+      "text": "🍜 <strong>Thực đơn ăn sáng</strong> – mỗi khách chọn <strong>1 món ăn + 1 thức uống</strong>:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Món ăn (chọn 1): Hủ tiếu Mỹ Tho · Hủ tiếu sa tế nạm · Phở nạm · Cơm gà rôti · Cơm sườn",
+        "Thức uống (chọn 1): Cà phê đen · Nước suối · Nước ngọt đóng chai · Trà đường"
+      ]
+    },
+    {
+      "type": "p",
       "text": "🚤 <strong>Buổi sáng:</strong> Đến bến tàu Mỹ Tho, đoàn lên tàu du ngoạn sông Tiền, ngắm cầu Rạch Miễu và vùng đất Tứ Linh (Long – Lân – Quy – Phụng). Đoàn tham quan:"
     },
     {
@@ -108,6 +119,23 @@
     {
       "type": "p",
       "text": "🍽️ <strong>Buổi trưa:</strong> Đoàn dùng cơm trưa với các món dân dã đặc trưng miền Tây."
+    },
+    {
+      "type": "p",
+      "text": "🍲 <strong>Thực đơn cơm trưa (8 món):</strong>"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Cá tai tượng chiên xù",
+        "Chả giò hương sen",
+        "Củ hủ dừa xào tép",
+        "Xôi chiên phồng",
+        "Lẩu chua cá hú",
+        "Trứng chiên hành",
+        "Thịt kho tiêu",
+        "Cơm trắng / Trà đá / Tráng miệng"
+      ]
     },
     {
       "type": "p",
