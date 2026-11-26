@@ -68,14 +68,63 @@
     },
     {
       "type": "p",
-      "text": "🍜 <strong>Thực đơn ăn sáng</strong> – mỗi khách chọn <strong>1 món ăn + 1 thức uống</strong>:"
+      "text": "🍜 Thực đơn ăn sáng"
     },
     {
-      "type": "list",
-      "items": [
-        "Món ăn (chọn 1): Hủ tiếu Mỹ Tho · Hủ tiếu sa tế nạm · Phở nạm · Cơm gà rôti · Cơm sườn",
-        "Thức uống (chọn 1): Cà phê đen · Nước suối · Nước ngọt đóng chai · Trà đường"
-      ]
+      "type": "p",
+      "text": "Mỗi khách chọn 1 món ăn + 1 thức uống"
+    },
+    {
+      "type": "p",
+      "text": "🍲 Món ăn"
+    },
+    {
+      "type": "p",
+      "text": "(chọn 1)"
+    },
+    {
+      "type": "p",
+      "text": "• Hủ tiếu Mỹ Tho"
+    },
+    {
+      "type": "p",
+      "text": "• Hủ tiếu sa tế nạm"
+    },
+    {
+      "type": "p",
+      "text": "• Phở nạm"
+    },
+    {
+      "type": "p",
+      "text": "• Cơm gà rôti"
+    },
+    {
+      "type": "p",
+      "text": "• Cơm sườn"
+    },
+    {
+      "type": "p",
+      "text": "🥤 Thức uống"
+    },
+    {
+      "type": "p",
+      "text": "(chọn 1)"
+    },
+    {
+      "type": "p",
+      "text": "• Cà phê đen"
+    },
+    {
+      "type": "p",
+      "text": "• Nước suối"
+    },
+    {
+      "type": "p",
+      "text": "• Nước ngọt đóng chai"
+    },
+    {
+      "type": "p",
+      "text": "• Trà đường"
     },
     {
       "type": "p",
@@ -122,20 +171,75 @@
     },
     {
       "type": "p",
-      "text": "🍲 <strong>Thực đơn cơm trưa (8 món):</strong>"
+      "text": "🍽️ Thực đơn cơm trưa"
     },
     {
-      "type": "list",
-      "items": [
-        "Cá tai tượng chiên xù",
-        "Chả giò hương sen",
-        "Củ hủ dừa xào tép",
-        "Xôi chiên phồng",
-        "Lẩu chua cá hú",
-        "Trứng chiên hành",
-        "Thịt kho tiêu",
-        "Cơm trắng / Trà đá / Tráng miệng"
-      ]
+      "type": "p",
+      "text": "Set menu miền Tây – 8 món"
+    },
+    {
+      "type": "p",
+      "text": "1"
+    },
+    {
+      "type": "p",
+      "text": "Cá tai tượng chiên xù"
+    },
+    {
+      "type": "p",
+      "text": "2"
+    },
+    {
+      "type": "p",
+      "text": "Chả giò hương sen"
+    },
+    {
+      "type": "p",
+      "text": "3"
+    },
+    {
+      "type": "p",
+      "text": "Củ hủ dừa xào tép"
+    },
+    {
+      "type": "p",
+      "text": "4"
+    },
+    {
+      "type": "p",
+      "text": "Xôi chiên phồng"
+    },
+    {
+      "type": "p",
+      "text": "5"
+    },
+    {
+      "type": "p",
+      "text": "Lẩu chua cá hú"
+    },
+    {
+      "type": "p",
+      "text": "6"
+    },
+    {
+      "type": "p",
+      "text": "Trứng chiên hành"
+    },
+    {
+      "type": "p",
+      "text": "7"
+    },
+    {
+      "type": "p",
+      "text": "Thịt kho tiêu"
+    },
+    {
+      "type": "p",
+      "text": "8"
+    },
+    {
+      "type": "p",
+      "text": "Cơm trắng / Trà đá / Tráng miệng"
     },
     {
       "type": "p",
