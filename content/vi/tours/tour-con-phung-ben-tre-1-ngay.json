@@ -67,64 +67,8 @@
       "text": "🕔 <strong>Dự kiến 05h00:</strong> Xe và hướng dẫn viên TodayTourist đón quý khách tại điểm tập kết, khởi hành đi Mỹ Tho. Đoàn dùng điểm tâm sáng (tô/ly) tại nhà hàng khu vực Trung Lương."
     },
     {
-      "type": "p",
-      "text": "🍜 Thực đơn ăn sáng"
-    },
-    {
-      "type": "p",
-      "text": "Mỗi khách chọn 1 món ăn + 1 thức uống"
-    },
-    {
-      "type": "p",
-      "text": "🍲 Món ăn"
-    },
-    {
-      "type": "p",
-      "text": "(chọn 1)"
-    },
-    {
-      "type": "p",
-      "text": "• Hủ tiếu Mỹ Tho"
-    },
-    {
-      "type": "p",
-      "text": "• Hủ tiếu sa tế nạm"
-    },
-    {
-      "type": "p",
-      "text": "• Phở nạm"
-    },
-    {
-      "type": "p",
-      "text": "• Cơm gà rôti"
-    },
-    {
-      "type": "p",
-      "text": "• Cơm sườn"
-    },
-    {
-      "type": "p",
-      "text": "🥤 Thức uống"
-    },
-    {
-      "type": "p",
-      "text": "(chọn 1)"
-    },
-    {
-      "type": "p",
-      "text": "• Cà phê đen"
-    },
-    {
-      "type": "p",
-      "text": "• Nước suối"
-    },
-    {
-      "type": "p",
-      "text": "• Nước ngọt đóng chai"
-    },
-    {
-      "type": "p",
-      "text": "• Trà đường"
+      "type": "html",
+      "html": "<table><tbody><tr><td><div>🍜 Thực đơn ăn sáng<br><span style=\"font-size:14px;color:#7B2437\">Mỗi khách chọn 1 món ăn + 1 thức uống</span></div></td></tr><tr><td><div style=\"background:#fff8ec;border-radius:10px;padding:10px 14px\"><div style=\"font-weight:700;color:#23266E;margin-bottom:2px\">🍲 Món ăn <span style=\"color:#7B2437\">(chọn 1)</span></div><div style=\"line-height:1.8;color:#3f4a57\">Hủ tiếu Mỹ Tho &nbsp;·&nbsp; Hủ tiếu sa tế nạm &nbsp;·&nbsp; Phở nạm &nbsp;·&nbsp; Cơm gà rôti &nbsp;·&nbsp; Cơm sườn</div></div></td></tr><tr><td><div style=\"background:#fff8ec;border-radius:10px;padding:10px 14px\"><div style=\"font-weight:700;color:#23266E;margin-bottom:2px\">🥤 Thức uống <span style=\"color:#7B2437\">(chọn 1)</span></div><div style=\"line-height:1.8;color:#3f4a57\">Cà phê đen &nbsp;·&nbsp; Nước suối &nbsp;·&nbsp; Nước ngọt đóng chai &nbsp;·&nbsp; Trà đường</div></div></td></tr></tbody></table>"
     },
     {
       "type": "p",
@@ -170,76 +114,8 @@
       "text": "🍽️ <strong>Buổi trưa:</strong> Đoàn dùng cơm trưa với các món dân dã đặc trưng miền Tây."
     },
     {
-      "type": "p",
-      "text": "🍽️ Thực đơn cơm trưa"
-    },
-    {
-      "type": "p",
-      "text": "Set menu miền Tây – 8 món"
-    },
-    {
-      "type": "p",
-      "text": "1"
-    },
-    {
-      "type": "p",
-      "text": "Cá tai tượng chiên xù"
-    },
-    {
-      "type": "p",
-      "text": "2"
-    },
-    {
-      "type": "p",
-      "text": "Chả giò hương sen"
-    },
-    {
-      "type": "p",
-      "text": "3"
-    },
-    {
-      "type": "p",
-      "text": "Củ hủ dừa xào tép"
-    },
-    {
-      "type": "p",
-      "text": "4"
-    },
-    {
-      "type": "p",
-      "text": "Xôi chiên phồng"
-    },
-    {
-      "type": "p",
-      "text": "5"
-    },
-    {
-      "type": "p",
-      "text": "Lẩu chua cá hú"
-    },
-    {
-      "type": "p",
-      "text": "6"
-    },
-    {
-      "type": "p",
-      "text": "Trứng chiên hành"
-    },
-    {
-      "type": "p",
-      "text": "7"
-    },
-    {
-      "type": "p",
-      "text": "Thịt kho tiêu"
-    },
-    {
-      "type": "p",
-      "text": "8"
-    },
-    {
-      "type": "p",
-      "text": "Cơm trắng / Trà đá / Tráng miệng"
+      "type": "html",
+      "html": "<table><tbody><tr><td><div>🍽️ Thực đơn cơm trưa<br><span style=\"font-size:14px;color:#7B2437\">Set menu miền Tây – 8 món</span></div></td></tr><tr><td><div><span style=\"color:#ffffff\">1</span>&nbsp; Cá tai tượng chiên xù</div></td></tr><tr><td><div><span style=\"color:#ffffff\">2</span>&nbsp; Chả giò hương sen</div></td></tr><tr><td><div><span style=\"color:#ffffff\">3</span>&nbsp; Củ hủ dừa xào tép</div></td></tr><tr><td><div><span style=\"color:#ffffff\">4</span>&nbsp; Xôi chiên phồng</div></td></tr><tr><td><div><span style=\"color:#ffffff\">5</span>&nbsp; Lẩu chua cá hú</div></td></tr><tr><td><div><span style=\"color:#ffffff\">6</span>&nbsp; Trứng chiên hành</div></td></tr><tr><td><div><span style=\"color:#ffffff\">7</span>&nbsp; Thịt kho tiêu</div></td></tr><tr><td><div><span style=\"color:#ffffff\">8</span>&nbsp; Cơm trắng / Trà đá / Tráng miệng</div></td></tr><tr><td><div><br></div></td></tr></tbody></table>"
     },
     {
       "type": "p",
